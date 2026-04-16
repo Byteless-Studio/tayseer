@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lectures</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background: #fff; color: #111; line-height: 1.6; }
+    a { color: inherit; text-decoration: none; }
+    .wrap { max-width: 680px; margin: 0 auto; padding: 48px 24px; }
+    header { margin-bottom: 40px; }
+    header h1 { font-size: 20px; font-weight: 600; letter-spacing: -.4px; }
+    header p  { font-size: 13px; color: #999; margin-top: 4px; }
+    .list { list-style: none; display: flex; flex-direction: column; gap: 1px;
+            border: 1px solid #eee; border-radius: 10px; overflow: hidden; }
+    .item { display: flex; gap: 14px; align-items: flex-start;
+            padding: 14px 16px; background: #fff; transition: background .1s; cursor: pointer; }
+    .item:hover { background: #fafafa; }
+    .item + .item { border-top: 1px solid #eee; }
+    .thumb { width: 88px; height: 50px; object-fit: cover; border-radius: 5px;
+             background: #f0f0f0; flex-shrink: 0; }
+    .meta { flex: 1; min-width: 0; }
+    .meta h2 { font-size: 13px; font-weight: 500; white-space: nowrap;
+               overflow: hidden; text-overflow: ellipsis; }
+    .meta p  { font-size: 12px; color: #999; margin-top: 3px;
+               white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
+    .tag  { font-size: 11px; background: #f2f2f2; border-radius: 4px; padding: 2px 7px; color: #666; }
+    .empty { color: #bbb; font-size: 14px; padding: 48px 0; text-align: center; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Lectures</h1>
+      <p id="count"></p>
+    </header>
+    <ul class="list" id="list"></ul>
+  </div>
+  <script>
+    async function load() {
+      const res = await fetch('/api/lectures');
+      if (!res.ok) { document.getElementById('list').innerHTML = '<p class="empty">Failed to load lectures.</p>'; return; }
+      const lectures = await res.json();
+      const el = document.getElementById('count');
+      el.textContent = `${lectures.length} lecture${lectures.length !== 1 ? 's' : ''}`;
+      const list = document.getElementById('list');
+      if (!lectures.length) {
+        list.innerHTML = '<p class="empty">No lectures yet.</p>';
+        return;
+      }
+      list.innerHTML = lectures.map(l => `
+        <li class="item" onclick="location.href='/lecture/${l.video_id}'">
+          ${l.thumbnail ? `<img class="thumb" src="${l.thumbnail}" alt="">` : '<div class="thumb"></div>'}
+          <div class="meta">
+            <h2>${l.title}</h2>
+            <p>${l.summary ? l.summary.slice(0, 100) + '…' : ''}</p>
+            <div class="tags">${(l.tags || []).slice(0, 4).map(t => `<span class="tag">${t}</span>`).join('')}</div>
+          </div>
+        </li>`).join('');
+    }
+    load();
+  </script>
+</body>
+</html>

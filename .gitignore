@@ -1,3 +1,19 @@
+# tanstack gitignore
+node_modules
+.DS_Store
+dist
+dist-ssr
+*.local
+.env
+.nitro
+.tanstack
+.wrangler
+.output
+.vinxi
+__unconfig*
+todos.json
+mcp-todos.json
+
 # Logs
 logs
 *.log
@@ -124,6 +140,9 @@ dist
 
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
+
+# ignores vscode settings, extensions, and launch configurations
+.vscode/
 
 # yarn v3
 .pnp.*
