@@ -1,87 +1,82 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute, Link } from '@tanstack/react-router'
+import { loadAll } from '#/lib/lectures'
+import type { Lecture } from '#/lib/lectures'
 
-export const Route = createFileRoute('/')({ component: App })
+export const Route = createFileRoute('/')({
+  loader: () => loadAll(),
+  head: () => ({ meta: [{ title: 'Lectures' }] }),
+  component: LecturesPage,
+})
 
-function App() {
+function LecturesPage() {
+  const lectures = Route.useLoaderData()
   return (
-    <main className="page-wrap px-4 pb-8 pt-14">
-      <section className="island-shell rise-in relative overflow-hidden rounded-[2rem] px-6 py-10 sm:px-10 sm:py-14">
-        <div className="pointer-events-none absolute -left-20 -top-24 h-56 w-56 rounded-full bg-[radial-gradient(circle,rgba(79,184,178,0.32),transparent_66%)]" />
-        <div className="pointer-events-none absolute -bottom-20 -right-20 h-56 w-56 rounded-full bg-[radial-gradient(circle,rgba(47,106,74,0.18),transparent_66%)]" />
-        <p className="island-kicker mb-3">TanStack Start Base Template</p>
-        <h1 className="display-title mb-5 max-w-3xl text-4xl leading-[1.02] font-bold tracking-tight text-[var(--sea-ink)] sm:text-6xl">
-          Start simple, ship quickly.
+    <main className="mx-auto max-w-[680px] px-6 py-12">
+      <header className="mb-10">
+        <h1 className="text-[20px] font-semibold tracking-[-0.4px] text-[#111]">
+          Lectures
         </h1>
-        <p className="mb-8 max-w-2xl text-base text-[var(--sea-ink-soft)] sm:text-lg">
-          This base starter intentionally keeps things light: two routes, clean
-          structure, and the essentials you need to build from scratch.
+        <p className="mt-1 text-[13px] text-[#999]">
+          {lectures.length} lecture{lectures.length !== 1 ? 's' : ''}
         </p>
-        <div className="flex flex-wrap gap-3">
-          <a
-            href="/about"
-            className="rounded-full border border-[rgba(50,143,151,0.3)] bg-[rgba(79,184,178,0.14)] px-5 py-2.5 text-sm font-semibold text-[var(--lagoon-deep)] no-underline transition hover:-translate-y-0.5 hover:bg-[rgba(79,184,178,0.24)]"
-          >
-            About This Starter
-          </a>
-          <a
-            href="https://tanstack.com/router"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full border border-[rgba(23,58,64,0.2)] bg-white/50 px-5 py-2.5 text-sm font-semibold text-[var(--sea-ink)] no-underline transition hover:-translate-y-0.5 hover:border-[rgba(23,58,64,0.35)]"
-          >
-            Router Guide
-          </a>
-        </div>
-      </section>
+      </header>
 
-      <section className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {[
-          [
-            'Type-Safe Routing',
-            'Routes and links stay in sync across every page.',
-          ],
-          [
-            'Server Functions',
-            'Call server code from your UI without creating API boilerplate.',
-          ],
-          [
-            'Streaming by Default',
-            'Ship progressively rendered responses for faster experiences.',
-          ],
-          [
-            'Tailwind Native',
-            'Design quickly with utility-first styling and reusable tokens.',
-          ],
-        ].map(([title, desc], index) => (
-          <article
-            key={title}
-            className="island-shell feature-card rise-in rounded-2xl p-5"
-            style={{ animationDelay: `${index * 90 + 80}ms` }}
-          >
-            <h2 className="mb-2 text-base font-semibold text-[var(--sea-ink)]">
-              {title}
-            </h2>
-            <p className="m-0 text-sm text-[var(--sea-ink-soft)]">{desc}</p>
-          </article>
-        ))}
-      </section>
-
-      <section className="island-shell mt-8 rounded-2xl p-6">
-        <p className="island-kicker mb-2">Quick Start</p>
-        <ul className="m-0 list-disc space-y-2 pl-5 text-sm text-[var(--sea-ink-soft)]">
-          <li>
-            Edit <code>src/routes/index.tsx</code> to customize the home page.
-          </li>
-          <li>
-            Update <code>src/components/Header.tsx</code> and{' '}
-            <code>src/components/Footer.tsx</code> for brand links.
-          </li>
-          <li>
-            Add routes in <code>src/routes</code> and tweak visual tokens in{' '}
-            <code>src/styles.css</code>.
-          </li>
+      {lectures.length === 0 ? (
+        <p className="py-12 text-center text-[14px] text-[#bbb]">
+          No lectures yet.
+        </p>
+      ) : (
+        <ul className="flex flex-col overflow-hidden rounded-[10px] border border-[#eee]">
+          {lectures.map((l) => (
+            <LectureItem key={l.video_id} lecture={l} />
+          ))}
         </ul>
-      </section>
+      )}
     </main>
+  )
+}
+
+function LectureItem({ lecture: l }: { lecture: Lecture }) {
+  return (
+    <li className="border-t border-[#eee] first:border-t-0">
+      <Link
+        to="/lecture/$videoId"
+        params={{ videoId: l.video_id }}
+        className="flex cursor-pointer items-start gap-[14px] bg-white px-4 py-[14px] transition-colors hover:bg-[#fafafa]"
+      >
+        {l.thumbnail ? (
+          <img
+            src={l.thumbnail}
+            alt=""
+            className="h-[50px] w-[88px] shrink-0 rounded-[5px] bg-[#f0f0f0] object-cover"
+          />
+        ) : (
+          <div className="h-[50px] w-[88px] shrink-0 rounded-[5px] bg-[#f0f0f0]" />
+        )}
+        <div className="min-w-0 flex-1">
+          <h2 className="truncate text-[13px] font-medium text-[#111]">
+            {l.title ?? l.video_id}
+          </h2>
+          {l.summary && (
+            <p className="mt-[3px] truncate text-[12px] text-[#999]">
+              {l.summary.slice(0, 100)}
+              {l.summary.length > 100 ? '…' : ''}
+            </p>
+          )}
+          {l.tags && l.tags.length > 0 && (
+            <div className="mt-1.5 flex flex-wrap gap-1">
+              {l.tags.slice(0, 4).map((tag) => (
+                <span
+                  key={tag}
+                  className="rounded px-[7px] py-[2px] text-[11px] bg-[#f2f2f2] text-[#666]"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
+        </div>
+      </Link>
+    </li>
   )
 }
