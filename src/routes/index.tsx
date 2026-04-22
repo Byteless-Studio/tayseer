@@ -1,82 +1,185 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
-import { loadAll } from '#/lib/lectures'
-import type { Lecture } from '#/lib/lectures'
+import { siteConfig, courses } from '#/config/site'
 
 export const Route = createFileRoute('/')({
-  loader: () => loadAll(),
-  head: () => ({ meta: [{ title: 'Lectures' }] }),
-  component: LecturesPage,
+  head: () => ({ meta: [{ title: 'Tayseer — Learn Arabic' }] }),
+  component: HomePage,
 })
 
-function LecturesPage() {
-  const lectures = Route.useLoaderData()
-  return (
-    <main className="mx-auto max-w-[680px] px-6 py-12">
-      <header className="mb-10">
-        <h1 className="text-[20px] font-semibold tracking-[-0.4px] text-[#111]">
-          Lectures
-        </h1>
-        <p className="mt-1 text-[13px] text-[#999]">
-          {lectures.length} lecture{lectures.length !== 1 ? 's' : ''}
-        </p>
-      </header>
+const arabic101 = courses['arabic-101']
 
-      {lectures.length === 0 ? (
-        <p className="py-12 text-center text-[14px] text-[#bbb]">
-          No lectures yet.
-        </p>
-      ) : (
-        <ul className="flex flex-col overflow-hidden rounded-[10px] border border-[#eee]">
-          {lectures.map((l) => (
-            <LectureItem key={l.video_id} lecture={l} />
-          ))}
-        </ul>
-      )}
-    </main>
+function HomePage() {
+  return (
+    <div className="rise-in">
+      {/* ── Hero ─────────────────────────────────────────────────────── */}
+      <section className="bg-black text-white">
+        <div className="mx-auto max-w-5xl px-6 py-24 sm:py-32">
+          <p className="section-label text-white/40 mb-5">{siteConfig.name}</p>
+          <h1 className="display-title text-5xl sm:text-6xl font-bold leading-tight mb-6 max-w-2xl">
+            {siteConfig.tagline}
+          </h1>
+          <p className="text-white/60 text-lg max-w-xl mb-10 leading-relaxed">
+            {siteConfig.description}
+          </p>
+      
+        </div>
+      </section>
+
+      {/* ── Courses ──────────────────────────────────────────────────── */}
+      <section className="mx-auto max-w-5xl px-6 py-20">
+        <div className="section-label mb-8">Courses Near You</div>
+
+        {/* Arabic 101 featured card */}
+        <div className="rounded-2xl border border-gray-200 overflow-hidden mb-6">
+          <div className="bg-[#f5f0e8] px-8 py-8 sm:py-10 border-b border-[#ede4d3]">
+            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-6">
+              <div className="flex-1">
+                <div className="inline-flex items-center gap-2 bg-[#009000]/10 text-[#007700] text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4">
+                  Active Course
+                </div>
+                <h2 className="text-2xl font-bold text-black mb-2">
+                  {arabic101.name}
+                </h2>
+                <p className="text-gray-600 text-sm max-w-lg leading-relaxed">
+                  {arabic101.description}
+                </p>
+              </div>
+              <Link
+                to="/arabic-101"
+                className="btn-primary shrink-0 self-start"
+              >
+                View Course →
+              </Link>
+            </div>
+          </div>
+
+          {/* Course details strip */}
+          <div className="bg-white divide-y divide-gray-100 sm:divide-y-0 sm:flex sm:divide-x sm:divide-gray-100">
+            <DetailCell label="Days">
+              {arabic101.schedule.days.join(' & ')}
+            </DetailCell>
+            <DetailCell label="Time">{arabic101.schedule.time}</DetailCell>
+            <DetailCell label="Location">
+              <a
+                href={arabic101.schedule.locationUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#009000] font-semibold hover:text-[#007700]"
+              >
+                {arabic101.schedule.location} ↗
+              </a>
+            </DetailCell>
+            <DetailCell label="Books">
+              <a
+                href={arabic101.resources.textbooks.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#009000] font-semibold hover:text-[#007700]"
+              >
+                Medina Series ↗
+              </a>
+            </DetailCell>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Tools ────────────────────────────────────────────────────── */}
+      <section className="bg-[#f5f0e8] border-y border-[#ede4d3]">
+        <div className="mx-auto max-w-5xl px-6 py-16">
+          <div className="section-label mb-8">Learning Tools</div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <ToolCard
+              to="/cognates"
+              title="Cognates"
+              description="Discover shared vocabulary between Arabic and other languages. Build a larger mental lexicon faster by leveraging words you already know."
+              badge="Coming Soon"
+            />
+            <ToolCard
+              to="/quizzes"
+              title="Quizzes"
+              description="Reinforce what you've learned with vocabulary drills, grammar exercises, and comprehension challenges drawn from course material."
+              badge="Coming Soon"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* ── Why Arabic ───────────────────────────────────────────────── */}
+      <section className="mx-auto max-w-5xl px-6 py-20">
+        <div className="section-label mb-8">Why Learn Arabic?</div>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <Reason
+            title="Understand the Quran"
+            body="Over 6,000 verses — accessing them directly in Arabic transforms how you connect with the text."
+          />
+          <Reason
+            title="Classical Literature"
+            body="Unlock centuries of scholarship in fiqh, tafseer, hadith, and poetry in their original language."
+          />
+          <Reason
+            title="Structured Learning"
+            body="The Medina Series is a time-tested, systematic curriculum used around the world."
+          />
+        </div>
+      </section>
+    </div>
   )
 }
 
-function LectureItem({ lecture: l }: { lecture: Lecture }) {
+// ── Sub-components ─────────────────────────────────────────────────────────────
+
+function DetailCell({
+  label,
+  children,
+}: {
+  label: string
+  children: React.ReactNode
+}) {
   return (
-    <li className="border-t border-[#eee] first:border-t-0">
-      <Link
-        to="/lecture/$videoId"
-        params={{ videoId: l.video_id }}
-        className="flex cursor-pointer items-start gap-[14px] bg-white px-4 py-[14px] transition-colors hover:bg-[#fafafa]"
-      >
-        {l.thumbnail ? (
-          <img
-            src={l.thumbnail}
-            alt=""
-            className="h-[50px] w-[88px] shrink-0 rounded-[5px] bg-[#f0f0f0] object-cover"
-          />
-        ) : (
-          <div className="h-[50px] w-[88px] shrink-0 rounded-[5px] bg-[#f0f0f0]" />
+    <div className="flex-1 px-6 py-4">
+      <div className="section-label mb-1">{label}</div>
+      <div className="text-sm font-medium text-black">{children}</div>
+    </div>
+  )
+}
+
+function ToolCard({
+  to,
+  title,
+  description,
+  badge,
+}: {
+  to: '/cognates' | '/quizzes'
+  title: string
+  description: string
+  badge?: string
+}) {
+  return (
+    <Link
+      to={to}
+      className="group rounded-xl border border-[#ede4d3] bg-white p-6 no-underline hover:border-black hover:shadow-sm transition-all"
+    >
+      <div className="flex items-start justify-between mb-3">
+        <h3 className="text-base font-bold text-black">{title}</h3>
+        {badge && (
+          <span className="text-xs font-semibold text-gray-400 bg-gray-100 px-2 py-0.5 rounded-full">
+            {badge}
+          </span>
         )}
-        <div className="min-w-0 flex-1">
-          <h2 className="truncate text-[13px] font-medium text-[#111]">
-            {l.title ?? l.video_id}
-          </h2>
-          {l.summary && (
-            <p className="mt-[3px] truncate text-[12px] text-[#999]">
-              {l.summary.slice(0, 100)}
-              {l.summary.length > 100 ? '…' : ''}
-            </p>
-          )}
-          {l.tags && l.tags.length > 0 && (
-            <div className="mt-1.5 flex flex-wrap gap-1">
-              {l.tags.slice(0, 4).map((tag) => (
-                <span
-                  key={tag}
-                  className="rounded px-[7px] py-[2px] text-[11px] bg-[#f2f2f2] text-[#666]"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-          )}
-        </div>
-      </Link>
-    </li>
+      </div>
+      <p className="text-sm text-gray-500 leading-relaxed">{description}</p>
+      <span className="mt-4 inline-block text-xs font-semibold text-gray-300 group-hover:text-[#009000] transition-colors">
+        Learn more →
+      </span>
+    </Link>
+  )
+}
+
+function Reason({ title, body }: { title: string; body: string }) {
+  return (
+    <div className="border-t-2 border-[#009000] pt-5">
+      <h3 className="text-base font-bold text-black mb-2">{title}</h3>
+      <p className="text-sm text-gray-500 leading-relaxed">{body}</p>
+    </div>
   )
 }

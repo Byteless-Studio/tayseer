@@ -33,7 +33,7 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
         content: 'width=device-width, initial-scale=1',
       },
       {
-        title: 'TanStack Start Starter',
+        title: 'Tayseer — Learn Arabic',
       },
     ],
     links: [
@@ -53,9 +53,9 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
         <HeadContent />
       </head>
-      <body className="font-sans antialiased [overflow-wrap:anywhere] selection:bg-[rgba(79,184,178,0.24)]">
+      <body className="font-sans antialiased [overflow-wrap:anywhere] flex flex-col min-h-screen">
         <Header />
-        {children}
+        <div className="flex-1 flex flex-col">{children}</div>
         <Footer />
         <TanStackDevtools
           config={{

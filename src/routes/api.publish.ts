@@ -27,16 +27,35 @@ export const Route = createFileRoute('/api/publish')({
   server: {
     handlers: {
       POST: async ({ request }) => {
-        const sig = request.headers.get('x-signature') ?? ''
-        if (!sig) {
-          return new Response('Missing X-Signature header.', { status: 401 })
-        }
+        // TODO: add security later
+        // const sig = request.headers.get('x-signature') ?? ''
+        // if (!sig) {
+        //   return new Response('Missing X-Signature header.', { status: 401 })
+        // }
 
         const body = Buffer.from(await request.arrayBuffer())
 
-        if (!verifySignature(body, sig)) {
-          return new Response('Invalid signature.', { status: 403 })
-        }
+        // if (!verifySignature(body, sig)) {
+        //   return new Response('Invalid signature.', { status: 403 })
+        // }
+
+        // TODO: Accept the original audio recording alongside the JSON payload.
+        //
+        // Currently this endpoint only receives the processed JSON (transcript,
+        // summary, key_points, tags, etc.).  The pipeline should also send the
+        // original .ogg / .mp3 recording so it can be stored next to the JSON
+        // and served via the audio player on the lecture page.
+        //
+        // Suggested approach:
+        //   - Switch to multipart/form-data so the audio file and JSON can be
+        //     sent in a single request:
+        //       form field "data"  → JSON string (Lecture)
+        //       form field "audio" → binary audio file (.ogg / .mp3 / .m4a)
+        //   - Save the audio file to:
+        //       public/<courseDir>/<bookDir>/<lectureDir>/<lectureId>.ogg
+        //   - Save the JSON to the same directory so the loader picks both up.
+        //
+        // Until then, audio files must be placed manually in the lecture folder.
 
         let data: Lecture
         try {
@@ -47,15 +66,15 @@ export const Route = createFileRoute('/api/publish')({
           })
         }
 
-        const videoId = (data.video_id ?? '').trim()
-        if (!videoId) {
-          return new Response('Missing video_id field.', { status: 400 })
-        }
+        // const videoId = (data.video_id ?? '').trim()
+        // if (!videoId) {
+        //   return new Response('Missing video_id field.', { status: 400 })
+        // }
 
         saveOne(data)
-        console.log(`[publish] saved ${videoId}`)
+        //console.log(`[publish] saved ${videoId}`)
 
-        return Response.json({ ok: true, video_id: videoId }, { status: 201 })
+        return Response.json({ ok: true, video_id: 'none' }, { status: 201 })
       },
     },
   },

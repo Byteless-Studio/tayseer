@@ -9,9 +9,13 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as QuizzesRouteImport } from './routes/quizzes'
 import { Route as McpRouteImport } from './routes/mcp'
+import { Route as CognatesRouteImport } from './routes/cognates'
+import { Route as Arabic101RouteImport } from './routes/arabic-101'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as Arabic101IndexRouteImport } from './routes/arabic-101.index'
 import { Route as LectureVideoIdRouteImport } from './routes/lecture.$videoId'
 import { Route as DemoTanstackQueryRouteImport } from './routes/demo/tanstack-query'
 import { Route as DemoStoreRouteImport } from './routes/demo/store'
@@ -25,6 +29,7 @@ import { Route as ApiLecturesRouteImport } from './routes/api.lectures'
 import { Route as DemoGuitarsIndexRouteImport } from './routes/demo/guitars/index'
 import { Route as DemoGuitarsGuitarIdRouteImport } from './routes/demo/guitars/$guitarId'
 import { Route as DemoApiMcpTodosRouteImport } from './routes/demo/api.mcp-todos'
+import { Route as Arabic101LectureLectureIdRouteImport } from './routes/arabic-101.lecture.$lectureId'
 import { Route as ApiLecturesVideoIdRouteImport } from './routes/api.lectures.$videoId'
 import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
 import { Route as DemoApiAiTtsRouteImport } from './routes/demo/api.ai.tts'
@@ -33,9 +38,24 @@ import { Route as DemoApiAiStructuredRouteImport } from './routes/demo/api.ai.st
 import { Route as DemoApiAiImageRouteImport } from './routes/demo/api.ai.image'
 import { Route as DemoApiAiChatRouteImport } from './routes/demo/api.ai.chat'
 
+const QuizzesRoute = QuizzesRouteImport.update({
+  id: '/quizzes',
+  path: '/quizzes',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const McpRoute = McpRouteImport.update({
   id: '/mcp',
   path: '/mcp',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CognatesRoute = CognatesRouteImport.update({
+  id: '/cognates',
+  path: '/cognates',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Arabic101Route = Arabic101RouteImport.update({
+  id: '/arabic-101',
+  path: '/arabic-101',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -47,6 +67,11 @@ const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
+} as any)
+const Arabic101IndexRoute = Arabic101IndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => Arabic101Route,
 } as any)
 const LectureVideoIdRoute = LectureVideoIdRouteImport.update({
   id: '/lecture/$videoId',
@@ -113,6 +138,12 @@ const DemoApiMcpTodosRoute = DemoApiMcpTodosRouteImport.update({
   path: '/demo/api/mcp-todos',
   getParentRoute: () => rootRouteImport,
 } as any)
+const Arabic101LectureLectureIdRoute =
+  Arabic101LectureLectureIdRouteImport.update({
+    id: '/lecture/$lectureId',
+    path: '/lecture/$lectureId',
+    getParentRoute: () => Arabic101Route,
+  } as any)
 const ApiLecturesVideoIdRoute = ApiLecturesVideoIdRouteImport.update({
   id: '/$videoId',
   path: '/$videoId',
@@ -152,7 +183,10 @@ const DemoApiAiChatRoute = DemoApiAiChatRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/arabic-101': typeof Arabic101RouteWithChildren
+  '/cognates': typeof CognatesRoute
   '/mcp': typeof McpRoute
+  '/quizzes': typeof QuizzesRoute
   '/api/lectures': typeof ApiLecturesRouteWithChildren
   '/api/publish': typeof ApiPublishRoute
   '/demo/ai-chat': typeof DemoAiChatRoute
@@ -163,8 +197,10 @@ export interface FileRoutesByFullPath {
   '/demo/store': typeof DemoStoreRoute
   '/demo/tanstack-query': typeof DemoTanstackQueryRoute
   '/lecture/$videoId': typeof LectureVideoIdRoute
+  '/arabic-101/': typeof Arabic101IndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
   '/api/lectures/$videoId': typeof ApiLecturesVideoIdRoute
+  '/arabic-101/lecture/$lectureId': typeof Arabic101LectureLectureIdRoute
   '/demo/api/mcp-todos': typeof DemoApiMcpTodosRoute
   '/demo/guitars/$guitarId': typeof DemoGuitarsGuitarIdRoute
   '/demo/guitars/': typeof DemoGuitarsIndexRoute
@@ -177,7 +213,9 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/cognates': typeof CognatesRoute
   '/mcp': typeof McpRoute
+  '/quizzes': typeof QuizzesRoute
   '/api/lectures': typeof ApiLecturesRouteWithChildren
   '/api/publish': typeof ApiPublishRoute
   '/demo/ai-chat': typeof DemoAiChatRoute
@@ -188,8 +226,10 @@ export interface FileRoutesByTo {
   '/demo/store': typeof DemoStoreRoute
   '/demo/tanstack-query': typeof DemoTanstackQueryRoute
   '/lecture/$videoId': typeof LectureVideoIdRoute
+  '/arabic-101': typeof Arabic101IndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
   '/api/lectures/$videoId': typeof ApiLecturesVideoIdRoute
+  '/arabic-101/lecture/$lectureId': typeof Arabic101LectureLectureIdRoute
   '/demo/api/mcp-todos': typeof DemoApiMcpTodosRoute
   '/demo/guitars/$guitarId': typeof DemoGuitarsGuitarIdRoute
   '/demo/guitars': typeof DemoGuitarsIndexRoute
@@ -203,7 +243,10 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/arabic-101': typeof Arabic101RouteWithChildren
+  '/cognates': typeof CognatesRoute
   '/mcp': typeof McpRoute
+  '/quizzes': typeof QuizzesRoute
   '/api/lectures': typeof ApiLecturesRouteWithChildren
   '/api/publish': typeof ApiPublishRoute
   '/demo/ai-chat': typeof DemoAiChatRoute
@@ -214,8 +257,10 @@ export interface FileRoutesById {
   '/demo/store': typeof DemoStoreRoute
   '/demo/tanstack-query': typeof DemoTanstackQueryRoute
   '/lecture/$videoId': typeof LectureVideoIdRoute
+  '/arabic-101/': typeof Arabic101IndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
   '/api/lectures/$videoId': typeof ApiLecturesVideoIdRoute
+  '/arabic-101/lecture/$lectureId': typeof Arabic101LectureLectureIdRoute
   '/demo/api/mcp-todos': typeof DemoApiMcpTodosRoute
   '/demo/guitars/$guitarId': typeof DemoGuitarsGuitarIdRoute
   '/demo/guitars/': typeof DemoGuitarsIndexRoute
@@ -230,7 +275,10 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/arabic-101'
+    | '/cognates'
     | '/mcp'
+    | '/quizzes'
     | '/api/lectures'
     | '/api/publish'
     | '/demo/ai-chat'
@@ -241,8 +289,10 @@ export interface FileRouteTypes {
     | '/demo/store'
     | '/demo/tanstack-query'
     | '/lecture/$videoId'
+    | '/arabic-101/'
     | '/api/auth/$'
     | '/api/lectures/$videoId'
+    | '/arabic-101/lecture/$lectureId'
     | '/demo/api/mcp-todos'
     | '/demo/guitars/$guitarId'
     | '/demo/guitars/'
@@ -255,7 +305,9 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/about'
+    | '/cognates'
     | '/mcp'
+    | '/quizzes'
     | '/api/lectures'
     | '/api/publish'
     | '/demo/ai-chat'
@@ -266,8 +318,10 @@ export interface FileRouteTypes {
     | '/demo/store'
     | '/demo/tanstack-query'
     | '/lecture/$videoId'
+    | '/arabic-101'
     | '/api/auth/$'
     | '/api/lectures/$videoId'
+    | '/arabic-101/lecture/$lectureId'
     | '/demo/api/mcp-todos'
     | '/demo/guitars/$guitarId'
     | '/demo/guitars'
@@ -280,7 +334,10 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/about'
+    | '/arabic-101'
+    | '/cognates'
     | '/mcp'
+    | '/quizzes'
     | '/api/lectures'
     | '/api/publish'
     | '/demo/ai-chat'
@@ -291,8 +348,10 @@ export interface FileRouteTypes {
     | '/demo/store'
     | '/demo/tanstack-query'
     | '/lecture/$videoId'
+    | '/arabic-101/'
     | '/api/auth/$'
     | '/api/lectures/$videoId'
+    | '/arabic-101/lecture/$lectureId'
     | '/demo/api/mcp-todos'
     | '/demo/guitars/$guitarId'
     | '/demo/guitars/'
@@ -306,7 +365,10 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  Arabic101Route: typeof Arabic101RouteWithChildren
+  CognatesRoute: typeof CognatesRoute
   McpRoute: typeof McpRoute
+  QuizzesRoute: typeof QuizzesRoute
   ApiLecturesRoute: typeof ApiLecturesRouteWithChildren
   ApiPublishRoute: typeof ApiPublishRoute
   DemoAiChatRoute: typeof DemoAiChatRoute
@@ -330,11 +392,32 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/quizzes': {
+      id: '/quizzes'
+      path: '/quizzes'
+      fullPath: '/quizzes'
+      preLoaderRoute: typeof QuizzesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/mcp': {
       id: '/mcp'
       path: '/mcp'
       fullPath: '/mcp'
       preLoaderRoute: typeof McpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cognates': {
+      id: '/cognates'
+      path: '/cognates'
+      fullPath: '/cognates'
+      preLoaderRoute: typeof CognatesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/arabic-101': {
+      id: '/arabic-101'
+      path: '/arabic-101'
+      fullPath: '/arabic-101'
+      preLoaderRoute: typeof Arabic101RouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -350,6 +433,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/arabic-101/': {
+      id: '/arabic-101/'
+      path: '/'
+      fullPath: '/arabic-101/'
+      preLoaderRoute: typeof Arabic101IndexRouteImport
+      parentRoute: typeof Arabic101Route
     }
     '/lecture/$videoId': {
       id: '/lecture/$videoId'
@@ -442,6 +532,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DemoApiMcpTodosRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/arabic-101/lecture/$lectureId': {
+      id: '/arabic-101/lecture/$lectureId'
+      path: '/lecture/$lectureId'
+      fullPath: '/arabic-101/lecture/$lectureId'
+      preLoaderRoute: typeof Arabic101LectureLectureIdRouteImport
+      parentRoute: typeof Arabic101Route
+    }
     '/api/lectures/$videoId': {
       id: '/api/lectures/$videoId'
       path: '/$videoId'
@@ -494,6 +591,20 @@ declare module '@tanstack/react-router' {
   }
 }
 
+interface Arabic101RouteChildren {
+  Arabic101IndexRoute: typeof Arabic101IndexRoute
+  Arabic101LectureLectureIdRoute: typeof Arabic101LectureLectureIdRoute
+}
+
+const Arabic101RouteChildren: Arabic101RouteChildren = {
+  Arabic101IndexRoute: Arabic101IndexRoute,
+  Arabic101LectureLectureIdRoute: Arabic101LectureLectureIdRoute,
+}
+
+const Arabic101RouteWithChildren = Arabic101Route._addFileChildren(
+  Arabic101RouteChildren,
+)
+
 interface ApiLecturesRouteChildren {
   ApiLecturesVideoIdRoute: typeof ApiLecturesVideoIdRoute
 }
@@ -509,7 +620,10 @@ const ApiLecturesRouteWithChildren = ApiLecturesRoute._addFileChildren(
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  Arabic101Route: Arabic101RouteWithChildren,
+  CognatesRoute: CognatesRoute,
   McpRoute: McpRoute,
+  QuizzesRoute: QuizzesRoute,
   ApiLecturesRoute: ApiLecturesRouteWithChildren,
   ApiPublishRoute: ApiPublishRoute,
   DemoAiChatRoute: DemoAiChatRoute,
