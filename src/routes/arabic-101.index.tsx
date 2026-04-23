@@ -20,6 +20,15 @@ function Arabic101Page() {
 
   return (
     <main className="mx-auto max-w-5xl px-6 py-12">
+      {/* Hero image */}
+      <div className="mb-10 rounded-2xl overflow-hidden shadow-md">
+        <img
+          src="/arabic-101-with-mufti-saim/medina university books sunlit.png"
+          alt="Medina University books in sunlit setting"
+          className="w-full h-112 object-cover object-center"
+        />
+      </div>
+
       {/* Course header */}
       <div className="mb-12 border-b border-gray-200 pb-10">
         <div className="mb-3 section-label">Course</div>

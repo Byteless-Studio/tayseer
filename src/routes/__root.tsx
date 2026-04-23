@@ -41,6 +41,11 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
         rel: 'stylesheet',
         href: appCss,
       },
+      {
+        rel: 'icon',
+        href: '/tayseer-logo.webp',
+        type: 'image/webp',
+      },
     ],
   }),
   shellComponent: RootDocument,
