@@ -141,9 +141,16 @@ function BookSection({ book }: { book: Book }) {
               </span>
 
               <div className="min-w-0 flex-1">
-                <h4 className="text-sm font-semibold text-black leading-snug mb-1">
-                  {lecture.title ?? lecture._lectureDir}
-                </h4>
+                <div className="flex items-baseline gap-2 mb-1">
+                  <h4 className="text-sm font-semibold text-black leading-snug">
+                    {lecture.title ?? lecture._lectureDir}
+                  </h4>
+                  {lecture.date && (
+                    <span className="shrink-0 text-xs text-gray-400 tabular-nums">
+                      {new Date(lecture.date + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+                    </span>
+                  )}
+                </div>
                 {lecture.summary && (
                   <p className="text-xs text-gray-500 line-clamp-2">
                     {lecture.summary}

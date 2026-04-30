@@ -6,6 +6,7 @@ import { courses } from '#/config/site'
 
 export interface Lecture {
   id: string
+  date?: string  // ISO date string YYYY-MM-DD
   title?: string
   summary?: string
   key_points?: string[]
@@ -88,7 +89,7 @@ export function loadAllBooks(): Book[] {
     try {
       const entries = readdirSync(bookDir).sort()
 
-      lectures = entries.flatMap((entry) => {
+      const rawLectures = entries.flatMap((entry) => {
         const entryPath = join(bookDir, entry)
 
         try {
@@ -104,6 +105,13 @@ export function loadAllBooks(): Book[] {
         } catch {}
 
         return []
+      })
+
+      lectures = rawLectures.sort((a, b) => {
+        if (a.date && b.date) return a.date < b.date ? -1 : a.date > b.date ? 1 : 0
+        if (a.date) return -1
+        if (b.date) return 1
+        return 0
       })
     } catch {
       // Book directory doesn't exist yet — return empty
