@@ -26,5 +26,111 @@
                  "Definiteness",
                  "Vocabulary Practice"
              ],
-    "date":  "2024-10-21"
+    "date":  "2024-10-21",
+    "quiz": [
+        {
+            "q": "Arabic words (كَلِمَة) are divided into how many categories?",
+            "options": ["Two: اِسْمٌ and فِعْلٌ", "Three: اِسْمٌ, فِعْلٌ, and حَرْفٌ", "Four: noun, verb, adjective, particle", "Two: definite and indefinite"],
+            "correctIndex": 1,
+            "a": "Every Arabic word belongs to one of three categories: اِسْمٌ (noun), فِعْلٌ (verb), or حَرْفٌ (particle)."
+        },
+        {
+            "q": "Which of the following best describes a فِعْلٌ (fiʿl)?",
+            "options": ["A person, place, or thing", "A word that indicates an action and a time period", "A word that connects other words in a sentence", "The name of a specific person or place"],
+            "correctIndex": 1,
+            "a": "A فِعْلٌ is a verb — it indicates an action and always carries a notion of time (past, present, or future)."
+        },
+        {
+            "q": "A جُمْلَةٌ اِسْمِيَّةٌ (nominal sentence) is defined as a sentence that:",
+            "options": ["Contains a verb as its main element", "Starts with a حَرْفٌ", "Starts with an اِسْمٌ", "Has no subject"],
+            "correctIndex": 2,
+            "a": "جُمْلَةٌ اِسْمِيَّةٌ literally relates back to اِسْمٌ — it is a sentence whose first word is a noun (اِسْمٌ)."
+        },
+        {
+            "q": "In the sentence اَلْقَلَمُ مَكْسُورٌ (The pen is broken), which word is the مُبْتَدَأٌ?",
+            "options": ["مَكْسُورٌ", "اَلْقَلَمُ", "Both words equally", "Neither — there is no مُبْتَدَأٌ here"],
+            "correctIndex": 1,
+            "a": "اَلْقَلَمُ is the مُبْتَدَأٌ (subject) — the thing being talked about. مَكْسُورٌ is the خَبَرٌ (predicate) giving information about it."
+        },
+        {
+            "q": "What does the خَبَرٌ do in a جُمْلَةٌ اِسْمِيَّةٌ?",
+            "options": ["It names the subject", "It provides new information (the predicate) about the مُبْتَدَأٌ", "It makes the sentence negative", "It replaces the verb"],
+            "correctIndex": 1,
+            "a": "خَبَرٌ means 'news/information'. It is the predicate that gives new, unknown information about the مُبْتَدَأٌ."
+        },
+        {
+            "q": "Adding اَلْ (al-) to a noun makes it:",
+            "options": ["نَكِرَةٌ (indefinite)", "مَعْرِفَةٌ (definite)", "A verb", "A particle (حَرْفٌ)"],
+            "correctIndex": 1,
+            "a": "اَلْ is the definite article in Arabic. It makes a noun مَعْرِفَةٌ — known/definite, equivalent to English 'the'."
+        },
+        {
+            "q": "تَنْوِين (tanwīn) on a noun signals that the noun is:",
+            "options": ["Definite (مَعْرِفَةٌ)", "A proper noun", "Indefinite (نَكِرَةٌ)", "Plural"],
+            "correctIndex": 2,
+            "a": "تَنْوِين (the double vowel ending: ـٌ / ـً / ـٍ) marks a noun as نَكِرَةٌ — indefinite/unknown, equivalent to English 'a/an'."
+        },
+        {
+            "q": "Which of the following is the 'golden rule' taught in this lesson?",
+            "options": ["Every sentence must begin with اَلْ", "اَلْ and تَنْوِين can never appear on the same word", "Proper nouns must always carry اَلْ", "A مُبْتَدَأٌ must always be indefinite"],
+            "correctIndex": 1,
+            "a": "It is impossible in Arabic grammar for a word to carry both اَلْ and تَنْوِين simultaneously — you will never find اَلْبَيْتُنٌ, for example."
+        },
+        {
+            "q": "Why are proper nouns (e.g., مُحَمَّدٌ) considered مَعْرِفَةٌ even without اَلْ?",
+            "options": ["Because they always end in sukūn", "Because they refer to a specific, known person or thing by name", "Because they are always plurals", "Because they come from verb roots"],
+            "correctIndex": 1,
+            "a": "A proper noun names a specific individual or place, making it inherently known (مَعْرِفَةٌ) without needing اَلْ. Many proper nouns still carry تَنْوِين but are not indefinite."
+        },
+        {
+            "q": "In the lecture, رَجُلٌ (with tanwīn) and اَلرَّجُلُ (with al-) were contrasted using examples from the Qur'ān. What do these two forms mean respectively?",
+            "options": ["The man / A man's friend", "A man (indefinite) / The man (definite)", "Two men / One man", "A young man / An old man"],
+            "correctIndex": 1,
+            "a": "رَجُلٌ has تَنْوِين → indefinite, meaning 'a man'. اَلرَّجُلُ has اَلْ → definite, meaning 'the man'. This is the اَلْ vs تَنْوِين contrast in action."
+        }
+    ],
+    "quran_examples": [
+        {
+            "arabic": "وَجَاءَ مِنْ أَقْصَى الْمَدِينَةِ رَجُلٌ يَسْعَىٰ",
+            "transliteration": "wa jāʾa min aqṣā al-madīnati rajulun yasʿā",
+            "translation": "And there came from the farthest end of the city a man, running.",
+            "reference": "Surah Yasin 36:20",
+            "note": "رَجُلٌ carries تَنْوِين — it is نَكِرَةٌ (indefinite), 'a man', because this person has not been introduced to the listener before. Illustrates how تَنْوِين marks an unknown, indefinite noun."
+        },
+        {
+            "arabic": "وَقَالَ رَجُلٌ مُّؤْمِنٌ مِّنْ آلِ فِرْعَوْنَ",
+            "transliteration": "wa qāla rajulun muʾminun min āli firʿawna",
+            "translation": "And a believing man from the family of Pharaoh said…",
+            "reference": "Surah Ghafir 40:28",
+            "note": "رَجُلٌ مُّؤْمِنٌ — both the noun and its adjective carry تَنْوِين, confirming they are indefinite (نَكِرَةٌ). Also shows that adjectives in Arabic are classified as اِسْمٌ, a key lecture point."
+        },
+        {
+            "arabic": "إِنَّا أَرْسَلْنَا إِلَيْكُمْ رَسُولًا شَاهِدًا عَلَيْكُمْ",
+            "transliteration": "innā arsalnā ilaykum rasūlan shāhidan ʿalaykum",
+            "translation": "Indeed, We have sent to you a messenger as a witness over you.",
+            "reference": "Surah al-Muzzammil 73:15",
+            "note": "رَسُولًا is indefinite (نَكِرَةٌ) — the first mention of 'a messenger' in this passage, consistent with the lecture's point that the first mention of رَسُولٌ in Surah al-Muzzammil is indefinite."
+        },
+        {
+            "arabic": "يَا أَيُّهَا الرَّسُولُ بَلِّغْ مَا أُنزِلَ إِلَيْكَ مِن رَّبِّكَ",
+            "transliteration": "yā ayyuhā al-rasūlu balligh mā unzila ilayka min rabbika",
+            "translation": "O Messenger, convey what has been revealed to you from your Lord.",
+            "reference": "Surah al-Ma'idah 5:67",
+            "note": "اَلرَّسُولُ carries اَلْ — it is مَعْرِفَةٌ (definite), 'the Messenger', referring to the Prophet ﷺ as a specific, known individual. Mirrors the lecture's contrast of رَسُولٌ (indefinite first mention) vs اَلرَّسُولُ (definite)."
+        },
+        {
+            "arabic": "الم ۚ ذَٰلِكَ الْكِتَابُ لَا رَيْبَ ۛ فِيهِ",
+            "transliteration": "alif lām mīm. dhālika al-kitābu lā rayba fīhi",
+            "translation": "Alif Lam Mim. That is the Book about which there is no doubt.",
+            "reference": "Surah al-Baqarah 2:1-2",
+            "note": "اَلْكِتَابُ has اَلْ and therefore no تَنْوِين — a perfect classroom example of the golden rule that اَلْ and تَنْوِين never co-occur. The word is مَعْرِفَةٌ (definite)."
+        },
+        {
+            "arabic": "اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ",
+            "transliteration": "iqraʾ bi-smi rabbika alladhī khalaqa",
+            "translation": "Read in the name of your Lord who created.",
+            "reference": "Surah al-ʿAlaq 96:1",
+            "note": "اِسْمِ (from اِسْمٌ) appears here, grounding the grammatical term اِسْمٌ directly in Qur'ānic language. The word اِسْمٌ itself — the first of the three word-types taught in this lecture — is Qur'ānic vocabulary."
+        }
+    ]
 }

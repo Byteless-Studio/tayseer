@@ -19,6 +19,7 @@
     "[00:02:00] Q: What does 'ya' mean? — A: Attached pronoun for possession ('my')",
     "[00:15:00] Q: Why is 'abwabuha' feminine? — A: Non-sentient plural treated as singular female"
   ],
+  "date": "2025-11-19",
   "tags": [
     "Arabic",
     "I‘rab",
@@ -27,5 +28,132 @@
     "Case Endings",
     "Grammar Rules",
     "Vocabulary"
+  ],
+  "quiz": [
+    {
+      "q": "When breaking down هَذِهِ مَدْرَسَتِي, the teacher asked students to explain هَذِهِ fully. What three things does هَذِهِ indicate?",
+      "options": [
+        "Masculine, plural, far",
+        "Feminine, singular, close",
+        "Feminine, dual, close",
+        "Masculine, singular, close"
+      ],
+      "correctIndex": 1,
+      "a": "A student correctly identified that هَذِهِ belongs to the اسْمُ الْإِشَارَة family and indicates three things: feminine, singular, and close proximity. This is contrasted with هَذَا (masculine singular close) and تِلْكَ (feminine singular far)."
+    },
+    {
+      "q": "In هَذِهِ مَدْرَسَتِي, what is the يَا (ya) at the end of مَدْرَسَتِي, and what does it indicate?",
+      "options": [
+        "It is a ẓarf indicating place",
+        "It is a detached pronoun (ḍamīr munfaṣil) indicating 'I'",
+        "It is an attached pronoun (ḍamīr muttaṣil) indicating possession — 'my'",
+        "It is a tanwīn indicating indefiniteness"
+      ],
+      "correctIndex": 2,
+      "a": "The teacher confirmed that the يَا at the end of مَدْرَسَتِي is an attached pronoun (ḍamīr muttaṣil) indicating first-person possession — 'my school.' Attached pronouns (الضَّمَائِرُ الْمُتَّصِلَة) were a key lesson in the book, and يَا specifically attaches to a noun to mean 'my.'"
+    },
+    {
+      "q": "In the sentence لَهَا ثَلَاثَةُ أَبْوَابٍ, what grammatical role does the لَـ (lam) play, and what does هَا refer to?",
+      "options": [
+        "لَـ is a negating particle; هَا refers to a male noun",
+        "لَـ is a ẓarf indicating place; هَا is a detached pronoun",
+        "لَـ is a ḥarf al-jār indicating possession; هَا is an attached feminine pronoun referring to the school (مَدْرَسَة)",
+        "لَـ is a connective particle; هَا refers to the doors"
+      ],
+      "correctIndex": 2,
+      "a": "The teacher explained that لَـ is a ḥarf al-jār indicating possession (milk) — 'it belongs to' or 'it has.' It makes the word after it kasrah. The هَا is an attached feminine pronoun referring back to the school (مَدْرَسَة), which is feminine. Together لَهَا means 'it has' (referring to the school)."
+    },
+    {
+      "q": "In أَبْوَابُهَا مَفْتُوحَةٌ الْآنَ, why is the adjective مَفْتُوحَةٌ feminine even though بَاب (door) is a masculine noun?",
+      "options": [
+        "Because مَدْرَسَة (school) is feminine and the doors belong to it",
+        "Because أَبْوَاب is a plural of a غَيْرُ عَاقِل noun, so it is treated as singular feminine",
+        "Because مَفْتُوحَة is always feminine regardless of what it describes",
+        "Because the sentence uses هَذِهِ which makes everything feminine"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher explained this step by step. أَبْوَاب is the plural of بَاب (masculine), but because doors lack intellect (غَيْرُ عَاقِل), the plural is treated as singular feminine. Therefore مَفْتُوحَةٌ carries tāʾ marbūṭah to agree with this grammatical feminine treatment."
+    },
+    {
+      "q": "What is الْآنَ (al-ān, now) grammatically, and what family does it belong to?",
+      "options": [
+        "It is an ismul ishārah (demonstrative pronoun) indicating time",
+        "It is a ẓarf (adverb of time or place), indicating time in this case",
+        "It is a ḥarf al-jār making the following word kasrah",
+        "It is an attached pronoun referring to the subject"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher confirmed that الْآنَ is a ẓarf — it indicates towards time or place, and in this case it indicates time (now). A ẓarf typically has fatḥah on it and is muḍāf to the word after it, or stands independently as here."
+    },
+    {
+      "q": "In the sentence فِيهِ نَافِذَتَانِ كَبِيرَتَانِ, what grammatical rule is being demonstrated between نَافِذَتَانِ and كَبِيرَتَانِ?",
+      "options": [
+        "They are both ghayr al-munsarif and therefore take fatḥah",
+        "They are mawṣūf and ṣifah agreeing in all four categories: gender, number, definiteness, and case",
+        "They are both muḍāf to the word after them",
+        "They are both ẓarf indicating place"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher confirmed that نَافِذَتَانِ (two windows) and كَبِيرَتَانِ (two big) demonstrate mawṣūf–ṣifah agreement. Both are dual (انِ), both feminine, both indefinite (no ال), and both in the same case — satisfying all four required agreement categories."
+    },
+    {
+      "q": "The teacher discussed the word لَٰكِنْ (lākin). What is it, and what important distinction about it was mentioned?",
+      "options": [
+        "It is an ismul mawṣūl (relative pronoun) meaning 'who'",
+        "It is a ḥarf meaning 'but'; it has two forms — لَٰكِنْ (with sukūn, lighter rule) and لَٰكِنَّ (with shaddah, which has a different grammatical rule covered in book two)",
+        "It is a ẓarf indicating contrast in time",
+        "It is a negating particle equivalent to مَا النَّافِيَة"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher explained that لَٰكِنْ is a ḥarf meaning 'but.' He noted two forms: لَٰكِنْ with sukūn (lighter, no special attached rule discussed yet) and لَٰكِنَّ with shaddah, which has a different grammatical effect on the word after it. The rule for لَٰكِنَّ will be covered at the beginning of book two."
+    },
+    {
+      "q": "During the review of sentence analysis, the teacher outlined what the test will emphasize. Which of the following best describes the test format?",
+      "options": [
+        "Memorizing all the ghayr al-munsarif patterns by name and writing them from memory",
+        "Identifying grammatical families, rules applied in sentences (e.g., mawṣūf–ṣifah, ghayr al-munsarif), and vocabulary; the verb chart is extra credit",
+        "Only translating long passages from Arabic to English",
+        "Reciting the entire verb conjugation chart from memory as the main question"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher explained that the test will include: identifying grammatical elements in sentences (e.g., what is this word, what rule applies), knowing the families (ismul ishārah, ḍamīr, etc.), understanding rules like mawṣūf–ṣifah and ghayr al-munsarif, and some vocabulary. Writing the entire verb chart correctly is extra credit."
+    }
+  ],
+  "quran_examples": [
+    {
+      "arabic": "هَٰذِهِ نَاقَةُ اللَّهِ لَكُمْ آيَةً فَذَرُوهَا تَأْكُلْ فِي أَرْضِ اللَّهِ",
+      "transliteration": "Hādhihi nāqatu Allāhi lakum āyatan fadhārahā taʾkul fī arḍi Allāh",
+      "translation": "This is the she-camel of Allāh عَزَّ وَجَلَّ as a sign for you, so leave her to graze in the land of Allāh عَزَّ وَجَلَّ.",
+      "reference": "Surah Al-A'raf 7:73",
+      "note": "Demonstrates هَٰذِهِ as an اسْمُ الْإِشَارَة indicating feminine, singular, and close — the three properties the teacher drilled when students analyzed هَٰذِهِ مَدْرَسَتِي. Here هَٰذِهِ refers to نَاقَة (she-camel), a feminine singular noun close to the speaker."
+    },
+    {
+      "arabic": "رَبَّنَا إِنَّنَا سَمِعْنَا مُنَادِيًا يُنَادِي لِلْإِيمَانِ أَنْ آمِنُوا بِرَبِّكُمْ فَآمَنَّا",
+      "transliteration": "Rabbanā innanā samiʿnā munādiyan yunādī lil-īmāni an āminū bi-rabbikum fa-āmannā",
+      "translation": "Our Lord, indeed we have heard a caller calling to faith, saying: 'Believe in your Lord,' and we have believed.",
+      "reference": "Surah Al-Imran 3:193",
+      "note": "Illustrates the attached pronoun نَا (nā) indicating 'our/we' — the teacher reviewed نَحْنُ as the detached pronoun for 'we' and نَا as its attached form. The phrase رَبَّنَا (our Lord) demonstrates exactly how نَا attaches to a noun to indicate first-person plural possession, parallel to the يَا ('my') discussed in the lesson."
+    },
+    {
+      "arabic": "لَهُ مَقَالِيدُ السَّمَاوَاتِ وَالْأَرْضِ",
+      "transliteration": "Lahū maqālīdu al-samāwāti wa-al-arḍ",
+      "translation": "To Him belong the keys of the heavens and the earth.",
+      "reference": "Surah Az-Zumar 39:63",
+      "note": "Illustrates the لَـ construction indicating possession (milk) as taught in the lesson — لَهُ means 'to Him' or 'He has,' parallel to لَهَا ثَلَاثَةُ أَبْوَابٍ ('it has three doors') analyzed in class. The لَـ is a ḥarf al-jār making the attached pronoun هُ its object, indicating that something belongs to Allāh عَزَّ وَجَلَّ."
+    },
+    {
+      "arabic": "إِنَّ الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ لَهُمْ جَنَّاتُ النَّعِيمِ",
+      "transliteration": "Inna alladhīna āmanū wa-ʿamilū al-ṣāliḥāti lahum jannātu al-naʿīm",
+      "translation": "Indeed, those who believe and do righteous deeds — for them are the Gardens of Bliss.",
+      "reference": "Surah Luqman 31:8",
+      "note": "Demonstrates لَهُمْ — the لَـ of possession combined with the plural masculine attached pronoun هُمْ ('them/their'), which the teacher reviewed. The teacher explained that هُمْ is the plural masculine detached pronoun and that it also attaches to words, as seen here in لَهُمْ."
+    },
+    {
+      "arabic": "وَلَهُ الْجَوَارِ الْمُنشَآتُ فِي الْبَحْرِ كَالْأَعْلَامِ",
+      "transliteration": "Wa-lahū al-jawāri al-munshāʾātu fī al-baḥri kal-aʿlām",
+      "translation": "And to Him belong the ships sailing through the sea like mountains.",
+      "reference": "Surah Ar-Rahman 55:24",
+      "note": "Illustrates the غَيْرُ عَاقِل plural rule in action. الْجَوَارِ (ships) is a plural of a non-intellect noun, and الْمُنشَآتُ is its feminine singular adjective — exactly the rule the teacher reinforced when explaining why أَبْوَاب takes feminine agreement in مَفْتُوحَةٌ even though بَاب is masculine."
+    }
   ]
 }

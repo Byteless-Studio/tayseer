@@ -26,5 +26,147 @@
                  "Nouns",
                  "Beginner Arabic"
              ],
-    "date":  "2024-10-14"
+    "date":  "2024-10-14",
+    "quiz": [
+        {
+            "q": "What are the three qualities indicated by the word هَذَا (hādhā)?",
+            "options": [
+                "A) Far, plural, feminine",
+                "B) Close, singular, masculine",
+                "C) Close, plural, masculine",
+                "D) Far, singular, masculine"
+            ],
+            "correctIndex": 1,
+            "a": "هَذَا specifically points to something that is (1) close/near (qarīb), (2) singular (mufrad), and (3) masculine (mudhakkar). Change any one of these and a different demonstrative pronoun is used."
+        },
+        {
+            "q": "Which grammatical family does هَذَا belong to?",
+            "options": [
+                "A) Adawāt al-istifhām (question words)",
+                "B) Asmāʾ al-ʾaʿdād (numbers)",
+                "C) Asmāʾ al-ʾishāra (demonstrative pronouns)",
+                "D) Asmāʾ al-mawṣūla (relative pronouns)"
+            ],
+            "correctIndex": 2,
+            "a": "هَذَا belongs to Asmāʾ al-ʾishāra — the family of demonstrative pronouns. These words 'point' toward people or things, hence the teacher's description of them as the 'pointing/judgmental family'."
+        },
+        {
+            "q": "مَا هَذَا (mā hādhā) is used to ask about which category of things?",
+            "options": [
+                "A) People only",
+                "B) Angels and prophets",
+                "C) Things that have no intellect (ghayr al-ʿāqil)",
+                "D) Both people and things equally"
+            ],
+            "correctIndex": 2,
+            "a": "مَا is used for asking 'what?' about things that lack intellect (non-humans, objects, animals in most contexts). It translates as 'what' in English. For those with intellect, مَنْ is used instead."
+        },
+        {
+            "q": "مَنْ هَذَا (man hādhā) is correctly used to ask about whom?",
+            "options": [
+                "A) A book left on a table",
+                "B) A mosque in the distance",
+                "C) A camel in the field",
+                "D) A person standing nearby"
+            ],
+            "correctIndex": 3,
+            "a": "مَنْ is reserved for those who possess intellect (ʿāqil), i.e., human beings. It translates as 'who?' in English. The teacher drilled this in class by asking مَنْ هَذَا about classmates sitting nearby."
+        },
+        {
+            "q": "What is the function of هَمْزَةُ الِاسْتِفْهَام — the ا (hamza) prefix added to a sentence?",
+            "options": [
+                "A) It negates the sentence",
+                "B) It turns a statement into a yes/no question",
+                "C) It indicates something far away",
+                "D) It makes a noun feminine"
+            ],
+            "correctIndex": 1,
+            "a": "Hamzat al-istifhām converts any declarative statement into a yes/no question. For example, هَذَا بَابٌ (this is a door) becomes أَهَذَا بَابٌ (is this a door?). The questioner expects either نَعَمْ (yes) or لَا (no)."
+        },
+        {
+            "q": "In Sūrat al-Aʿrāf 7:40, Allāh عَزَّ وَجَلَّ uses the image of a camel (جَمَل) to illustrate what point?",
+            "options": [
+                "A) The virtue of riding camels on the Day of Judgement",
+                "B) That arrogant rejectors of His signs will never enter Paradise — an impossibility like a camel passing through the eye of a needle",
+                "C) That camels are the best animals for trade",
+                "D) That the people of ʿĀd owned many camels"
+            ],
+            "correctIndex": 1,
+            "a": "Allāh عَزَّ وَجَلَّ uses extreme hyperbole: those who deny His āyāt out of arrogance will not enter Jannah until a camel passes through the eye of a needle — something physically impossible — emphasising their eternal exclusion."
+        },
+        {
+            "q": "In the Qur'ānic verse about Ādam عَلَيْهِ السَّلَام and Shayṭān, the phrase هَذَا عَدُوٌّ لَكَ is an example of هَذَا because Shayṭān was:",
+            "options": [
+                "A) Far away, plural, and feminine",
+                "B) Close, singular, and masculine",
+                "C) Far away, singular, and masculine",
+                "D) Close, plural, and masculine"
+            ],
+            "correctIndex": 1,
+            "a": "Allāh عَزَّ وَجَلَّ used هَذَا because Shayṭān was (1) close/present at that moment, (2) a single individual, and (3) masculine. All three conditions of هَذَا were satisfied."
+        },
+        {
+            "q": "Which vocabulary word means 'merchant' or 'businessman' in Arabic?",
+            "options": [
+                "A) مُدَرِّسٌ (mudarris)",
+                "B) طَبِيبٌ (ṭabīb)",
+                "C) تَاجِرٌ (tājir)",
+                "D) طَالِبٌ (ṭālib)"
+            ],
+            "correctIndex": 2,
+            "a": "تَاجِرٌ means a merchant or trader — someone engaged in buying and selling. طَبِيبٌ is doctor, مُدَرِّسٌ is teacher (from the root د-ر-س meaning 'to study/teach'), and طَالِبٌ is student."
+        },
+        {
+            "q": "The word كَلْبٌ (kalb, dog) appears in the Qur'ān in the story of:",
+            "options": [
+                "A) Nūḥ عَلَيْهِ السَّلَام and the flood",
+                "B) Aṣḥāb al-Kahf (the Companions of the Cave) in Sūrat al-Kahf",
+                "C) Ibrāhīm عَلَيْهِ السَّلَام and the fire",
+                "D) Mūsā عَلَيْهِ السَّلَام parting the sea"
+            ],
+            "correctIndex": 1,
+            "a": "وَكَلْبُهُمْ بَاسِطٌ ذِرَاعَيْهِ بِالْوَصِيدِ (Sūrat al-Kahf 18:18) describes the dog of the Companions of the Cave stretching its forelegs at the entrance. This is the Qur'ānic occurrence of كَلْب mentioned by the teacher."
+        },
+        {
+            "q": "What is the key difference between using مَنْ هَذَا and أَهَذَا وَلَدٌ when asking about a person?",
+            "options": [
+                "A) There is no difference; both are interchangeable",
+                "B) مَنْ هَذَا is used when you have no idea who the person is; أَهَذَا is used when you have a guess and want confirmation",
+                "C) أَهَذَا is only for animals",
+                "D) مَنْ هَذَا is rude and should be avoided"
+            ],
+            "correctIndex": 1,
+            "a": "مَنْ هَذَا is an open question — you have no idea of the identity. أَهَذَا (using hamzat al-istifhām) implies you already have a suspicion and are seeking confirmation, e.g. 'Is this so-and-so?' The teacher explained this distinction explicitly toward the end of the lecture."
+        }
+    ],
+    "quran_examples": [
+        {
+            "arabic": "هَٰذَا عَدُوٌّ لَّكَ وَلِزَوْجِكَ",
+            "transliteration": "hādhā ʿaduwwun laka wa-li-zawjika",
+            "translation": "This is an enemy to you and to your wife.",
+            "reference": "Surah Taha 20:117",
+            "note": "Allāh عَزَّ وَجَلَّ addresses Ādam عَلَيْهِ السَّلَام using هَذَا to refer to Shayṭān — demonstrating all three qualities of هَذَا: Shayṭān was present (close), singular, and masculine. A direct application of the first lesson on هَذَا."
+        },
+        {
+            "arabic": "حَتَّىٰ يَلِجَ الْجَمَلُ فِي سَمِّ الْخِيَاطِ",
+            "transliteration": "ḥattā yalijal-jamal fī samm il-khiyāṭ",
+            "translation": "…until the camel passes through the eye of the needle.",
+            "reference": "Surah Al-Aʿraf 7:40",
+            "note": "The word جَمَلٌ (camel) — taught as vocabulary in this lecture — appears here in a powerful image of impossibility. Allāh عَزَّ وَجَلَّ declares that arrogant rejectors of His signs will never enter Paradise, just as a camel can never fit through a needle's eye."
+        },
+        {
+            "arabic": "وَكَلْبُهُم بَاسِطٌ ذِرَاعَيْهِ بِالْوَصِيدِ",
+            "transliteration": "wa-kalbuhum bāsiṭun dhirāʿayhi bil-waṣīd",
+            "translation": "And their dog stretching its forelegs at the entrance.",
+            "reference": "Surah Al-Kahf 18:18",
+            "note": "The word كَلْبٌ (dog) — introduced as vocabulary in this lecture — occurs here in the story of Aṣḥāb al-Kahf. The teacher challenged students to recall this verse on the spot when the word كَلْب was introduced, reinforcing vocabulary through Qur'ānic context."
+        },
+        {
+            "arabic": "قَالَ فَمَا رَبُّ الْعَالَمِينَ",
+            "transliteration": "qāla fa-mā rabbu l-ʿālamīn",
+            "translation": "He [Firʿawn] said: 'And what is the Lord of the worlds?'",
+            "reference": "Surah Ash-Shuʿaraʾ 26:23",
+            "note": "Firʿawn's use of مَا — which is reserved for things without intellect — when asking about Allāh عَزَّ وَجَلَّ was deliberate condescension, as if dismissing the Lord of Mūsā عَلَيْهِ السَّلَام as a mere object. The teacher used this verse to show that knowing مَا vs مَنْ can unlock the rhetorical malice embedded in Firʿawn's question."
+        }
+    ]
 }

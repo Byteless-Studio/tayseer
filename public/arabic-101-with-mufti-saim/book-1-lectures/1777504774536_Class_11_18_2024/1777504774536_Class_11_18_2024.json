@@ -28,5 +28,147 @@
                  "Nouns",
                  "Beginner Level"
              ],
-    "date":  "2024-11-18"
+    "date":  "2024-11-18",
+    "quiz": [
+        {
+            "q": "In a مُضَافٌ وَمُضَافٌ إِلَيْهِ construction, which word comes first?",
+            "options": [
+                "A. The possessor (مُضَافٌ إِلَيْهِ)",
+                "B. The possessed (مُضَافٌ)",
+                "C. A preposition such as مِنْ",
+                "D. The definite article اَلـ"
+            ],
+            "correctIndex": 1,
+            "a": "Rule 1: The possessed (مُضَافٌ) always precedes the possessor (مُضَافٌ إِلَيْهِ). For example, كِتَابُ مُحَمَّدٍ — 'the book' comes before 'Muhammad'."
+        },
+        {
+            "q": "Which two things can the مُضَافٌ (possessed noun) NEVER carry?",
+            "options": [
+                "A. A ḍamma and a fatḥa",
+                "B. اَلـ (the definite article) and تَنْوِين (tanwīn)",
+                "C. A kasra and a ḍamma",
+                "D. A fatḥa and a kasra"
+            ],
+            "correctIndex": 1,
+            "a": "Rule 2: The مُضَافٌ never takes اَلـ nor tanwīn. That is why كِتَابُ مُحَمَّدٍ is correct while اَلْكِتَابُ مُحَمَّدٍ and كِتَابٌ مُحَمَّدٍ are both wrong."
+        },
+        {
+            "q": "What ending does the مُضَافٌ إِلَيْهِ (possessor) generally take?",
+            "options": [
+                "A. ḍamma (ُ)",
+                "B. fatḥa (َ)",
+                "C. kasra (ِ)",
+                "D. sukūn (ْ)"
+            ],
+            "correctIndex": 2,
+            "a": "Rule 3: The possessor (مُضَافٌ إِلَيْهِ) generally ends with kasra. For example, مُحَمَّدٍ in كِتَابُ مُحَمَّدٍ carries kasra (tanwīn kasra here because it has no اَلـ)."
+        },
+        {
+            "q": "In كِتَابَ اللَّهِ (from Sūrah Fāṭir 35:29), why does كِتَابَ carry a fatḥa instead of a ḍamma?",
+            "options": [
+                "A. Because it is not a مُضَافٌ in this verse",
+                "B. Because a word before it (يَتْلُونَ) acts upon it and gives it fatḥa",
+                "C. Because the مُضَافٌ always takes fatḥa",
+                "D. Because اَللَّهِ forces the word before it to take fatḥa"
+            ],
+            "correctIndex": 1,
+            "a": "The verb يَتْلُونَ makes كِتَابَ its direct object (maf'ūl bihi), so it takes fatḥa. The key point remains: it has no اَلـ and no tanwīn, confirming it is a مُضَافٌ."
+        },
+        {
+            "q": "What is يَا called in Arabic grammar, and how does it affect the word that follows it?",
+            "options": [
+                "A. حَرْفُ الْجَرِّ — it gives the following word kasra",
+                "B. حَرْفُ النِّدَاءِ — the word after it takes a single ḍamma (no tanwīn)",
+                "C. حَرْفُ الِاسْتِفْهَامِ — it turns the sentence into a question",
+                "D. حَرْفُ الْعَطْفِ — it means 'and' in Arabic"
+            ],
+            "correctIndex": 1,
+            "a": "يَا is ḥarf al-nidāʾ (the vocative particle). The noun being called takes a single ḍamma without tanwīn — so you say يَا يَاسِرُ, not يَا يَاسِرٌ."
+        },
+        {
+            "q": "In the lesson dialogue, Yasir says: هُوَ عَلَى الْمَكْتَبِ هُنَاكَ. What grammatical role does هُنَاكَ play?",
+            "options": [
+                "A. It is a verb meaning 'to be there'",
+                "B. It is a ظَرْفُ مَكَانٍ (adverb of place) meaning 'there'",
+                "C. It is a pronoun replacing the noun",
+                "D. It is a ḥarf al-jar meaning 'over'"
+            ],
+            "correctIndex": 1,
+            "a": "هُنَاكَ is a ẓarf al-makān (adverb of place) meaning 'there'. It indicates location without acting as a ḥarf al-jar."
+        },
+        {
+            "q": "مَالِكِ يَوْمِ الدِّينِ (Sūrah al-Fātiḥa 1:4) contains a double مُضَافٌ chain. Which analysis is correct?",
+            "options": [
+                "A. مَالِكِ is the مُضَافٌ إِلَيْهِ of يَوْمِ, and يَوْمِ is the مُضَافٌ إِلَيْهِ of الدِّينِ",
+                "B. مَالِكِ is the مُضَافٌ, يَوْمِ is the مُضَافٌ إِلَيْهِ of مَالِكِ and simultaneously the مُضَافٌ of الدِّينِ",
+                "C. All three words are مُضَافٌ إِلَيْهِ to each other",
+                "D. الدِّينِ is the مُضَافٌ and مَالِكِ is the مُضَافٌ إِلَيْهِ"
+            ],
+            "correctIndex": 1,
+            "a": "This is a chained iḍāfa: مَالِكِ possesses يَوْمِ (Master of the Day), and يَوْمِ in turn possesses الدِّينِ (the Day of Judgement). يَوْمِ functions as both مُضَافٌ إِلَيْهِ and مُضَافٌ simultaneously."
+        },
+        {
+            "q": "A student writes: اَلرَّسُولُ اللَّهِ intending to say 'the Messenger of Allah عَزَّ وَجَلَّ'. Why is this grammatically incorrect?",
+            "options": [
+                "A. اَللَّهِ should have a ḍamma, not a kasra",
+                "B. The مُضَافٌ (رَسُول) cannot carry اَلـ; the correct form is رَسُولُ اللَّهِ",
+                "C. يَا must precede رَسُول whenever اَللَّهِ follows",
+                "D. The possessor should come before the possessed"
+            ],
+            "correctIndex": 1,
+            "a": "Rule 2 forbids اَلـ on the مُضَافٌ. رَسُولُ اللَّهِ is correct; اَلرَّسُولُ اللَّهِ is wrong because رَسُول already 'belongs to' اَللَّهِ, making اَلـ redundant and grammatically impermissible."
+        },
+        {
+            "q": "Can any word ever appear between the مُضَافٌ and the مُضَافٌ إِلَيْهِ?",
+            "options": [
+                "A. Yes, a ḥarf al-jar may be inserted between them",
+                "B. Yes, an adjective describing the مُضَافٌ may come between them",
+                "C. No — Rule 4 states nothing may come between them",
+                "D. Only the word هُنَاكَ may come between them"
+            ],
+            "correctIndex": 2,
+            "a": "Rule 4 is absolute: nothing can come between the مُضَافٌ and مُضَافٌ إِلَيْهِ. They must be directly adjacent to each other."
+        },
+        {
+            "q": "In كِتَابُ الطَّالِبِ, what does the اَلـ on الطَّالِبِ indicate about the whole phrase?",
+            "options": [
+                "A. It makes the phrase indefinite — 'a book of a student'",
+                "B. It makes the whole phrase definite (مَعْرِفَة) — 'the book of the student'",
+                "C. It has no effect because the مُضَافٌ has no اَلـ",
+                "D. It turns كِتَابُ into a verb"
+            ],
+            "correctIndex": 1,
+            "a": "When the مُضَافٌ إِلَيْهِ is definite (carries اَلـ), the whole iḍāfa phrase becomes definite. So كِتَابُ الطَّالِبِ means 'the book of the student', a specific book."
+        }
+    ],
+    "quran_examples": [
+        {
+            "arabic": "إِنَّ الَّذِينَ يَتْلُونَ كِتَابَ اللَّهِ",
+            "transliteration": "inna lladhīna yatlūna kitāba llāhi",
+            "translation": "Indeed, those who recite the Book of Allah",
+            "reference": "Surah Fatir 35:29",
+            "note": "Classic مُضَافٌ وَمُضَافٌ إِلَيْهِ: كِتَابَ is the مُضَافٌ (no اَلـ, no tanwīn; fatḥa here because يَتْلُونَ makes it a direct object) and اَللَّهِ is the مُضَافٌ إِلَيْهِ with kasra — meaning 'the Book of Allah عَزَّ وَجَلَّ'."
+        },
+        {
+            "arabic": "فَقَالَ لَهُمْ رَسُولُ اللَّهِ",
+            "transliteration": "faqāla lahum rasūlu llāhi",
+            "translation": "And the Messenger of Allah said to them",
+            "reference": "Surah Al-Shams 91:13",
+            "note": "رَسُولُ is the مُضَافٌ — it carries ḍamma as the subject of the sentence and has neither اَلـ nor tanwīn. اَللَّهِ is the مُضَافٌ إِلَيْهِ with kasra. This directly illustrates why اَلرَّسُولُ اَللَّهِ is grammatically wrong."
+        },
+        {
+            "arabic": "مَالِكِ يَوْمِ الدِّينِ",
+            "transliteration": "māliki yawmi l-dīni",
+            "translation": "Master of the Day of Judgement",
+            "reference": "Surah Al-Fatihah 1:4",
+            "note": "A double (chained) iḍāfa: مَالِكِ → يَوْمِ → الدِّينِ. يَوْمِ serves simultaneously as مُضَافٌ إِلَيْهِ for مَالِكِ and as مُضَافٌ for الدِّينِ, demonstrating that iḍāfa chains can extend beyond two words."
+        },
+        {
+            "arabic": "يَا أَيُّهَا الَّذِينَ آمَنُوا",
+            "transliteration": "yā ayyuhā lladhīna āmanū",
+            "translation": "O you who have believed",
+            "reference": "Surah Al-Baqarah 2:153",
+            "note": "يَا is ḥarf al-nidāʾ (the vocative particle) as taught in this lesson. The addressed noun (أَيُّ) takes a single ḍamma without tanwīn, illustrating the rule that the word after يَا carries ḍamma munawwan-free."
+        }
+    ]
 }

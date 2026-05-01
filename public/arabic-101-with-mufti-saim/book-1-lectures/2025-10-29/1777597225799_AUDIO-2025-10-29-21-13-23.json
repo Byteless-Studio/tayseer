@@ -17,11 +17,157 @@
     "[00:19:01] Q: When is the test? — A: Monday, November 17th with prior review sessions on the 10th and 12th.",
     "[00:35:00] Q: Why are colors in Quran referring to human traits? — A: Colors symbolize states (e.g., dawn's white thread) not skin tones."
   ],
+  "date": "2025-10-29",
   "tags": [
     "Arabic Grammar",
     "Ghayrul Munsarif",
     "Colors in Arabic",
     "Proper Nouns",
     "fa' al Rule"
+  ],
+  "quiz": [
+    {
+      "q": "What is the core grammatical rule of غَيْرُ الْمُنْصَرِف (ghayr al-munsarif), as reviewed in the lesson?",
+      "options": [
+        "It never takes a ḍammah ending",
+        "Wherever it would normally receive a kasrah, it receives a fatḥah instead, and it does not take tanwīn",
+        "It is treated as a definite noun in all cases",
+        "It only applies to feminine proper nouns"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher stated the memorized rule: wherever a ghayr al-munsarif word would normally receive a kasrah, it receives a fatḥah instead, and it does not take tanwīn. This is also why it is called الْمَمْنُوعُ مِنَ الصَّرْف (al-mamnūʿ min al-ṣarf)."
+    },
+    {
+      "q": "غَيْرُ الْمُنْصَرِف has two names mentioned in the lecture. What are they?",
+      "options": [
+        "الْمَعْرِفَة and النَّكِرَة",
+        "الْمُضَاف and الْمُضَاف إِلَيْهِ",
+        "غَيْرُ الْمُنْصَرِف and الْمَمْنُوعُ مِنَ الصَّرْف",
+        "الْفَاعِل and الْمَفْعُول"
+      ],
+      "correctIndex": 2,
+      "a": "The teacher explicitly stated that this category has two names: غَيْرُ الْمُنْصَرِف (ghayr al-munsarif) and الْمَمْنُوعُ مِنَ الصَّرْف (al-mamnūʿ min al-ṣarf), and both refer to the same grammatical concept."
+    },
+    {
+      "q": "The colors أَحْمَر، أَزْرَق، أَخْضَر، أَسْوَد، أَصْفَر، أَبْيَض all follow what common Arabic pattern?",
+      "options": [
+        "فَاعِل (fāʿil)",
+        "فَعَّال (faʿʿāl)",
+        "أَفْعَل (afʿal)",
+        "مَفْعُول (mafʿūl)"
+      ],
+      "correctIndex": 2,
+      "a": "The teacher stated that all these colors follow the pattern أَفْعَل (afʿal) — e.g., أَحْمَر، أَزْرَق، أَخْضَر — and that this pattern is itself one of the reasons they are ghayr al-munsarif."
+    },
+    {
+      "q": "In a mawṣūf–ṣifah (noun–adjective) phrase, when one word has tanwīn and the other does not — as in قَلَمٌ أَحْمَرُ — why is this acceptable?",
+      "options": [
+        "The adjective and noun must always match in tanwīn",
+        "The noun and adjective only need to agree in being maʿrifah or nakirah (definite or indefinite), not necessarily in tanwīn",
+        "قَلَم is definite, so it cannot take tanwīn",
+        "أَحْمَر takes tanwīn because it is masculine"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher clarified that the noun and adjective must agree in definiteness (both maʿrifah or both nakirah), but since أَحْمَر is ghayr al-munsarif it does not take tanwīn even when indefinite, while قَلَمٌ does. This is not a mismatch in agreement — it is simply the rule of ghayr al-munsarif."
+    },
+    {
+      "q": "What does the verb قَالَ (qāla) mean, and what makes it significant in the Qurʾān?",
+      "options": [
+        "It means 'he wrote' and is rarely used in the Qurʾān",
+        "It means 'he said' and is one of the most frequently occurring verbs in the entire Qurʾān",
+        "It means 'he asked' and appears only in stories of the prophets",
+        "It means 'he commanded' and is used exclusively for Allāh عَزَّ وَجَلَّ"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher stated that قَالَ means 'he said' and described it as one of the most common words in the entire Qurʾān, appearing in its various conjugations — قَالَ، قَالُوا، قَالَتْ، قُلْنَ — throughout countless verses."
+    },
+    {
+      "q": "قُلْنَ (qulna) was cited in the lecture. What does it mean, and in which Sūrah and context does it appear?",
+      "options": [
+        "It means 'we said' (first person plural) and appears in Sūrat al-Baqarah regarding the cow",
+        "It means 'they said' (third person plural feminine) and appears in Sūrat Yūsuf, where the women gathered by the minister's wife marveled at Yūsuf عَلَيْهِ السَّلَام",
+        "It means 'she said' and appears in Sūrat Maryam",
+        "It means 'you all said' and appears in Sūrat al-Māʾidah"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher explained that قُلْنَ means 'they said' (multiple females, third person feminine plural). He cited its occurrence in Sūrat Yūsuf, where the women gathered by the minister's wife saw Yūsuf عَلَيْهِ السَّلَام and exclaimed in amazement: قُلْنَ حَاشَ لِلَّهِ — declaring he could not be a human being but must be a noble angel."
+    },
+    {
+      "q": "When قَالَ (qāla) is followed by the preposition لَـ (la), what does this construction convey?",
+      "options": [
+        "It indicates a question being asked",
+        "It means 'he said about' someone",
+        "It means 'he said to' a specific person, directing the speech toward them",
+        "It converts the verb into a command form"
+      ],
+      "correctIndex": 2,
+      "a": "The teacher explained that when قَالَ is followed by لَـ, it means 'he/she said to' that person — i.e., the speech is directly addressed to them. He noted this construction is very common in the Qurʾān, citing examples such as a companion saying to another and Mūsā عَلَيْهِ السَّلَام saying to the magicians."
+    },
+    {
+      "q": "Several male names in the lesson — such as طَلْحَة، حَمْزَة، أُسَامَة، مُعَاوِيَة — end with a tāʾ marbūṭah. What is the grammatical implication of this?",
+      "options": [
+        "These names are feminine and take feminine verb agreement",
+        "These are male names that exceptionally carry a tāʾ marbūṭah; they are still ghayr al-munsarif despite being masculine",
+        "The tāʾ marbūṭah on male names means they can take tanwīn",
+        "These names are treated as regular munsarif nouns because they are masculine"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher explained that while tāʾ marbūṭah normally marks feminine nouns, these are male names that exceptionally end with it — e.g., طَلْحَة، حَمْزَة، أُسَامَة. They remain ghayr al-munsarif and do not take tanwīn, as shown by طَلْحَةُ (without tanwīn) in the lesson."
+    },
+    {
+      "q": "What does الْفَاعِل (al-fāʿil) mean, and what case marker does it always carry?",
+      "options": [
+        "The object of the verb; it always carries a kasrah",
+        "The doer of the verb; it always carries a ḍammah",
+        "The adjective describing the verb; it always carries a fatḥah",
+        "The predicate of the sentence; it carries tanwīn"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher reviewed that الْفَاعِل is the doer of the verb and always carries a ḍammah. He stressed the importance of identifying the fāʿil when reading — particularly with قَالَ constructions — because the word order in Arabic can differ from English and the ḍammah on the fāʿil is the key marker."
+    }
+  ],
+  "quran_examples": [
+    {
+      "arabic": "قَالُوا يَا أَيُّهَا الْعَزِيزُ إِنَّ لَهُ أَبًا شَيْخًا كَبِيرًا",
+      "transliteration": "Qālū yā ayyuhā al-ʿazīzu inna lahū aban shaykhān kabīrā",
+      "translation": "They said: 'O ʿAzīz, indeed he has an aged father.'",
+      "reference": "Surah Yusuf 12:78",
+      "note": "Demonstrates قَالُوا (qālū) — 'they said,' the third person masculine plural past tense conjugation of قَالَ — directly taught in the lecture. The teacher explained that قَالُوا appears very frequently in the Qurʾān."
+    },
+    {
+      "arabic": "قُلْنَ حَاشَ لِلَّهِ مَا هَٰذَا بَشَرًا إِنْ هَٰذَا إِلَّا مَلَكٌ كَرِيمٌ",
+      "transliteration": "Qulna ḥāsha lillāhi mā hādhā basharān in hādhā illā malakun karīm",
+      "translation": "They said: 'Glory be to Allāh عَزَّ وَجَلَّ! This is not a human being; this is none but a noble angel.'",
+      "reference": "Surah Yusuf 12:31",
+      "note": "The exact verse the teacher cited when explaining قُلْنَ — the third person feminine plural past tense of قَالَ, meaning 'they [the women] said.' The teacher recounted how the minister's wife brought Yūsuf عَلَيْهِ السَّلَام before the gathered women, who then uttered this expression of astonishment."
+    },
+    {
+      "arabic": "وَكُلُوا وَاشْرَبُوا حَتَّىٰ يَتَبَيَّنَ لَكُمُ الْخَيْطُ الْأَبْيَضُ مِنَ الْخَيْطِ الْأَسْوَدِ مِنَ الْفَجْرِ",
+      "transliteration": "Wa-kulū wa-ishrabū ḥattā yatabayyana lakumu al-khayṭu al-abyaḍu min al-khayṭi al-aswadi min al-fajr",
+      "translation": "And eat and drink until the white thread of dawn becomes distinct from the black thread of night.",
+      "reference": "Surah Al-Baqarah 2:187",
+      "note": "Cited directly by the teacher to illustrate two colors taught in the lesson: أَبْيَض (abyaḍ, white) in الْخَيْطُ الْأَبْيَضُ and أَسْوَد (aswad, black) in الْخَيْطِ الْأَسْوَدِ. The teacher also used this verse to explain that color references in the Qurʾān — whiteness and blackness — describe brightness and darkness (e.g., dawn vs. night), not skin color."
+    },
+    {
+      "arabic": "إِنَّهَا بَقَرَةٌ صَفْرَاءُ فَاقِعٌ لَّوْنُهَا تَسُرُّ النَّاظِرِينَ",
+      "transliteration": "Innahā baqaratun ṣafrāʾu fāqiʿun lawnuhā tasurru al-nāẓirīn",
+      "translation": "Indeed it is a yellow cow, bright in color, pleasing to those who behold it.",
+      "reference": "Surah Al-Baqarah 2:69",
+      "note": "Cited by the teacher to illustrate صَفْرَاء (ṣafrāʾ) — the feminine form of the color أَصْفَر (aṣfar, yellow). The teacher explained that since بَقَرَة (baqarah, cow) is a feminine noun, the feminine color form صَفْرَاء is used. This demonstrates the gender-agreement rule for colors taught in the lesson."
+    },
+    {
+      "arabic": "قَالَ صَاحِبُهُ وَهُوَ يُحَاوِرُهُ أَكَفَرْتَ بِالَّذِي خَلَقَكَ مِن تُرَابٍ",
+      "transliteration": "Qāla ṣāḥibuhū wa-huwa yuḥāwiruhū akafarta bi-alladhī khalaqaka min turāb",
+      "translation": "His companion said to him, while conversing with him: 'Do you disbelieve in the One who created you from dust?'",
+      "reference": "Surah Al-Kahf 18:37",
+      "note": "Illustrates the construction قَالَ لَهُ صَاحِبُهُ — 'his companion said to him' — which the teacher used as a Qurʾānic example of قَالَ followed by the lām, directing speech toward a specific person. It also shows الْفَاعِل (al-fāʿil): صَاحِبُهُ is the doer of قَالَ and carries a ḍammah, as taught in the lesson."
+    },
+    {
+      "arabic": "وُجُوهٌ يَوْمَئِذٍ مُّسْفِرَةٌ ۝ ضَاحِكَةٌ مُّسْتَبْشِرَةٌ ۝ وَوُجُوهٌ يَوْمَئِذٍ عَلَيْهَا غَبَرَةٌ ۝ تَرْهَقُهَا قَتَرَةٌ",
+      "transliteration": "Wujūhun yawmaʾidhin musfiratun ḍāḥikatun mustabshiratun wa-wujūhun yawmaʾidhin ʿalayhā ghabaratun tarhaqquhā qatarah",
+      "translation": "Some faces on that Day will be bright, laughing and rejoicing. And other faces on that Day will be covered with dust, overwhelmed by darkness.",
+      "reference": "Surah Abasa 80:38-41",
+      "note": "Supports the teacher's explanation that Qurʾānic references to faces becoming bright or dark describe spiritual states — joy, sorrow, and moral condition — rather than skin color. The teacher explained this at length, noting that brightness and darkness of the face are metaphors well understood in Arabic speech."
+    }
   ]
 }

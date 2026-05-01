@@ -16,6 +16,7 @@
     "Relative pronoun الَّذِي introduces clauses for description (e.g., الرَّجُلُ الَّذِي جَاء 'the man who came').",
     "Verb forms like ذَهَبَ (past male) and ذَهَبْتُ (past female) demonstrate gender agreement."
   ],
+  "date": "2025-11-12",
   "questions": [],
   "tags": [
     "Arabic Grammar",
@@ -25,5 +26,161 @@
     "Plurals",
     "Relative Pronouns",
     "Beginner"
+  ],
+  "quiz": [
+    {
+      "q": "What is the difference between هَذَا كِتَابٌ and هَذَا الْكِتَابُ in Arabic?",
+      "options": [
+        "There is no difference; both mean 'this is a book'",
+        "هَذَا كِتَابٌ means 'this is a book,' while هَذَا الْكِتَابُ means 'this book' — requiring a khabar (predicate) to complete the sentence",
+        "هَذَا الْكِتَابُ means 'this is the book' and is a complete sentence on its own",
+        "هَذَا كِتَابٌ is used only for masculine nouns"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher explained that when the noun after هَذَا has ال, it becomes a noun phrase meaning 'this book' (incomplete — you are waiting for more information). Without ال, هَذَا كِتَابٌ is a complete sentence meaning 'this is a book.' The ال version requires a khabar to complete the meaning."
+    },
+    {
+      "q": "The mawṣūf (مَوْصُوف) and ṣifah (صِفَة) must agree in four elements. What are they?",
+      "options": [
+        "Case ending, root letters, number of syllables, and verb form",
+        "Definiteness, case ending (iʿrāb), number (singular/dual/plural), and gender",
+        "Definiteness, tanwīn pattern, being Arabic or non-Arabic, and verb tense",
+        "Gender, being muḍāf, case ending, and having ال"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher listed the four required agreements between mawṣūf and ṣifah: (1) definiteness — both definite or both indefinite; (2) iʿrāb — same case ending; (3) number — singular, dual, or plural must match; (4) gender — masculine or feminine must match. He gave الطُّلَّابُ الْجُدُدُ as a correct example and الطُّلَّابُ الْجَدِيدُ as an incorrect one."
+    },
+    {
+      "q": "In the phrase عَمَّارٌ طَالِبٌ كَسْلَانُ, why does كَسْلَانُ not have tanwīn even though it is indefinite like طَالِبٌ?",
+      "options": [
+        "Because كَسْلَان is a definite noun",
+        "Because كَسْلَان is on the pattern of فَعْلَان and is ghayr al-munsarif — tanwīn cannot appear on it even when indefinite",
+        "Because كَسْلَان is a verb, not an adjective",
+        "Because the mawṣūf طَالِبٌ causes the ṣifah to lose its tanwīn"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher addressed this directly. Both طَالِبٌ and كَسْلَانُ are indefinite, so they should both have tanwīn. However, كَسْلَان is on the pattern فَعْلَان — a ghayr al-munsarif pattern — so tanwīn cannot appear on it. It is still indefinite; the tanwīn just does not show."
+    },
+    {
+      "q": "What is the اسْمُ الْمَوْصُول (ism al-mawṣūl) family, and what does الَّذِي specifically do?",
+      "options": [
+        "It is the family of demonstrative pronouns; الَّذِي means 'that' for masculine singular",
+        "It is the connecting/relative pronoun family; الَّذِي means 'who' or 'which' and introduces a clause that further describes a person or thing",
+        "It is the family of interrogative pronouns; الَّذِي introduces a question",
+        "It is the family of negating particles; الَّذِي negates the sentence that follows"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher explained that الَّذِي belongs to the اسْمُ الْمَوْصُول (connecting pronoun) family. It translates as 'who,' 'which,' or 'that' and connects a descriptive sentence to the noun being described. Example: مَنْ ذَلِكَ الرَّجُلُ الطَّوِيلُ الَّذِي خَرَجَ الْآنَ مِنَ الْمَدْرَسَةِ — 'Who is that tall man who just left the school?'"
+    },
+    {
+      "q": "What is الظَّرْف (al-ẓarf), and what grammatical effect does it have on the word that follows it?",
+      "options": [
+        "It is a relative pronoun that introduces a clause; it makes the following word take ḍammah",
+        "It indicates time or place; it is muḍāf to the word after it, causing that word to take kasrah",
+        "It is an attached pronoun indicating possession; it causes the following word to take fatḥah",
+        "It is a conjunction meaning 'and'; it has no effect on the following word's vowel"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher explained that a ẓarf indicates time or place (e.g., أَمَامَ — in front of, خَلْفَ — behind). It is muḍāf to the word after it, causing that word to take kasrah. The ẓarf itself normally has fatḥah on it."
+    },
+    {
+      "q": "What are the two types of Arabic plurals introduced in the review, and how do they differ?",
+      "options": [
+        "Sound plural and broken plural — sound plurals are for non-Arabic words and broken plurals are for Arabic words",
+        "Qiyāsī and samāʿī — qiyāsī plurals follow a recognizable pattern (e.g., add وُن or ات) while samāʿī plurals are irregular and must be memorized individually",
+        "Masculine plural and feminine plural — masculine plurals end in ون and feminine plurals end in ات",
+        "Definite plural and indefinite plural — definite plurals have ال and indefinite ones have tanwīn"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher explained that qiyāsī (pattern-based) plurals follow a predictable rule — e.g., مُسْلِمٌ → مُسْلِمُونَ, مُسْلِمَةٌ → مُسْلِمَاتٌ — so they can be derived by knowing the pattern. Samāʿī (heard/irregular) plurals have no predictable form and must be learned individually — e.g., رَجُلٌ → رِجَالٌ, طَالِبٌ → طُلَّابٌ."
+    },
+    {
+      "q": "What is مَا النَّافِيَة (mā al-nāfiyah), and how does it differ from the other use of مَا already learned?",
+      "options": [
+        "مَا النَّافِيَة means 'what' (interrogative), the same as the previously learned مَا",
+        "مَا النَّافِيَة is used to negate a statement (meaning 'not' or 'I do not'), whereas the previously learned مَا means 'what' (interrogative)",
+        "مَا النَّافِيَة connects two nouns, whereas interrogative مَا begins a question",
+        "مَا النَّافِيَة intensifies an adjective, while interrogative مَا asks about a noun"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher distinguished two uses of مَا: the interrogative مَا meaning 'what?' (already learned), and مَا النَّافِيَة used for negation — meaning 'not' or 'I do not.' Example: مَا عِنْدِي سَيَّارَةٌ — 'I do not have a car'; مَا ذَهَبْتُ — 'I did not go.'"
+    },
+    {
+      "q": "What is the اَلِفُ الْمَقْصُورَة (alif maqṣūrah), and what is its effect on the ending vowel of a word?",
+      "options": [
+        "It is a long ā vowel written as a regular alif; it causes the word to take an extra tanwīn",
+        "It is an alif written in the shape of a yāʾ without dots at the end of a word; case vowels (fatḥah, kasrah, ḍammah) do not visibly appear on it regardless of the word's grammatical position",
+        "It is a silent alif that only appears in words preceded by ال",
+        "It is a shortened hamzah that makes the word ghayr al-munsarif"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher explained that the alif maqṣūrah looks like a yāʾ without dots (e.g., in مُسْتَشْفَى). It is actually an alif in a different shape, and it is read as a long ā sound. Because of its nature, no case vowel (fatḥah, kasrah, or ḍammah) appears on it — it looks the same whether the word is in the nominative, genitive, or accusative."
+    },
+    {
+      "q": "The teacher reviewed several forms of the verb ذَهَبَ (to go). Which of the following correctly matches the form with its meaning?",
+      "options": [
+        "ذَهَبَ = I went; ذَهَبْتُ = he went; ذَهَبَتْ = you went",
+        "ذَهَبَ = he went; ذَهَبَتْ = she went; ذَهَبْتُ = I went; ذَهَبْتَ = you (male) went; ذَهَبْتُمْ = all of you (male) went",
+        "ذَهَبَ = he went; ذَهَبَتْ = they (female) went; ذَهَبْنَا = you (female) went",
+        "ذَهَبَ = she went; ذَهَبْتَ = he went; ذَهَبْتُمْ = I went"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher reviewed these forms across lessons 10 and 14: ذَهَبَ (he went), ذَهَبَتْ (she went), ذَهَبْتَ (you, male, went), ذَهَبْتُ (I went), ذَهَبْتُمْ (all of you, male plural, went), ذَهَبْنَا (we went). These represent the past tense conjugation pattern applicable to any Arabic verb."
+    },
+    {
+      "q": "What is the context of the Qurʾānic āyah that lists مُسْلِمِينَ، مُسْلِمَاتٍ، مُؤْمِنِينَ، مُؤْمِنَاتٍ and other pairs of male and female categories, as mentioned in the lesson?",
+      "options": [
+        "It was revealed to describe the people of Jannah in detail",
+        "It was revealed after Umm Salamah رَضِيَ اللهُ عَنْهَا asked why men are always mentioned in the Qurʾān and not women, so Allāh عَزَّ وَجَلَّ revealed it explicitly naming both male and female categories",
+        "It was revealed to list the obligations of the believers at the time of Ḥajj",
+        "It was revealed to correct a grammatical misunderstanding among the Companions"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher recounted that Umm Salamah رَضِيَ اللهُ عَنْهَا, a wife of the Prophet ﷺ, asked why the Qurʾān seemed to address men but not women. In response, Allāh عَزَّ وَجَلَّ revealed an āyah explicitly listing paired male-female categories — مُسْلِمِينَ وَمُسْلِمَاتٍ، مُؤْمِنِينَ وَمُؤْمِنَاتٍ، قَانِتِينَ وَقَانِتَاتٍ — showing that both receive their reward equally."
+    }
+  ],
+  "quran_examples": [
+    {
+      "arabic": "مَنْ ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلَّا بِإِذْنِهِ",
+      "transliteration": "Man dhā alladhī yashfaʿu ʿindahū illā bi-idhnih",
+      "translation": "Who is there that can intercede with Him except by His permission?",
+      "reference": "Surah Al-Baqarah 2:255",
+      "note": "Demonstrates the relative pronoun الَّذِي (alladhī) connecting a descriptive clause to the noun it modifies — exactly as taught in the lesson. The phrase الَّذِي يَشْفَعُ عِنْدَهُ describes 'the one who intercedes with Him,' illustrating how الَّذِي introduces a ṣilat al-mawṣūl (the connecting clause)."
+    },
+    {
+      "arabic": "إِنَّ الْمُسْلِمِينَ وَالْمُسْلِمَاتِ وَالْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ وَالْقَانِتِينَ وَالْقَانِتَاتِ وَالصَّادِقِينَ وَالصَّادِقَاتِ",
+      "transliteration": "Inna al-muslimīna wa-al-muslimāti wa-al-muʾminīna wa-al-muʾmināti wa-al-qānitīna wa-al-qānitāti wa-al-ṣādiqīna wa-al-ṣādiqāt",
+      "translation": "Indeed, the Muslim men and Muslim women, the believing men and believing women, the obedient men and obedient women, the truthful men and truthful women…",
+      "reference": "Surah Al-Ahzab 33:35",
+      "note": "The very āyah the teacher cited when explaining the context of paired male-female plural forms. It was revealed after Umm Salamah رَضِيَ اللهُ عَنْهَا asked why women were not mentioned. It also illustrates qiyāsī (sound) masculine plural (مُسْلِمُونَ → مُسْلِمِينَ) and feminine plural (مُسْلِمَاتٌ) patterns taught in the plurals lesson."
+    },
+    {
+      "arabic": "وَكُلُوا وَاشْرَبُوا حَتَّىٰ يَتَبَيَّنَ لَكُمُ الْخَيْطُ الْأَبْيَضُ مِنَ الْخَيْطِ الْأَسْوَدِ مِنَ الْفَجْرِ",
+      "transliteration": "Wa-kulū wa-ishrabū ḥattā yatabayyana lakumu al-khayṭu al-abyaḍu min al-khayṭi al-aswadi min al-fajr",
+      "translation": "And eat and drink until the white thread becomes distinct from the black thread of dawn.",
+      "reference": "Surah Al-Baqarah 2:187",
+      "note": "Illustrates mawṣūf–ṣifah agreement with definite nouns, a central focus of lessons 8–9. الْخَيْطُ الْأَبْيَضُ (the white thread) and الْخَيْطِ الْأَسْوَدِ (the black thread) each show the ṣifah matching the mawṣūf in definiteness (both have ال), gender (both masculine), number (both singular), and case (nominative and genitive respectively)."
+    },
+    {
+      "arabic": "وَمَا أُبَرِّئُ نَفْسِي إِنَّ النَّفْسَ لَأَمَّارَةٌ بِالسُّوءِ إِلَّا مَا رَحِمَ رَبِّي",
+      "transliteration": "Wa-mā ubarriʾu nafsī inna al-nafsa la-ammāratun bil-sūʾi illā mā raḥima rabbī",
+      "translation": "And I do not acquit myself — indeed the soul is inclined toward evil, except what my Lord has mercy upon.",
+      "reference": "Surah Yusuf 12:53",
+      "note": "Demonstrates مَا النَّافِيَة (negating mā) in وَمَا أُبَرِّئُ — 'and I do not acquit' — directly illustrating the lesson point that مَا can negate a verb or statement. The teacher taught this as مَا النَّافِي, contrasting it with interrogative مَا meaning 'what.'"
+    },
+    {
+      "arabic": "أَيُّ الْفَرِيقَيْنِ خَيْرٌ مَّقَامًا وَأَحْسَنُ نَدِيًّا",
+      "transliteration": "Ayyu al-farīqayni khayrun maqāman wa-aḥsanu nadiyyā",
+      "translation": "Which of the two groups is better in position and finer in assembly?",
+      "reference": "Surah Maryam 19:73",
+      "note": "Illustrates أَيُّ (ayyu, 'which') used as muḍāf to the word after it — exactly as taught. The teacher explained that أَيُّ means 'which' and is almost always muḍāf to the following noun, as seen here: أَيُّ الْفَرِيقَيْنِ — 'which of the two groups.'"
+    },
+    {
+      "arabic": "أَيْنَ مَا كُنتُمْ يُدْرِككُّمُ الْمَوْتُ وَلَوْ كُنتُمْ فِي بُرُوجٍ مُّشَيَّدَةٍ",
+      "transliteration": "Aynamā kuntum yudrikkumu al-mawtu wa-law kuntum fī burūjin mushayyadah",
+      "translation": "Wherever you may be, death will overtake you, even if you are in lofty towers.",
+      "reference": "Surah An-Nisa 4:78",
+      "note": "Illustrates the attached pronoun كُمْ (kum) — the plural masculine 'you' — in يُدْرِككُّمُ ('will overtake you all'). The lesson covered how كُمْ attaches to words for the plural masculine 'your' or 'you,' e.g., مُدَرِّسُكُمْ (your teacher, to a group of males), directly paralleling this Qurʾānic usage."
+    }
   ]
 }

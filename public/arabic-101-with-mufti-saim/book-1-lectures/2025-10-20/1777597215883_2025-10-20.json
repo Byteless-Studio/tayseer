@@ -17,6 +17,7 @@
     "[00:03:00] Q: How many brothers do you have? — A: Use female numbers for male plural nouns (e.g., khamsatu ikhwatin).",
     "[00:19:00] Q: Why is 'arba'atu a'mamin' correct instead of 'arba'un'? — A: Plural feminine requires male number with kasrah."
   ],
+  "date": "2025-10-20",
   "tags": [
     "Arabic Grammar",
     "Numbers (A'dad)",
@@ -24,5 +25,129 @@
     "Gender Agreement",
     "Pluralization",
     "Beginner"
+  ],
+  "quiz": [
+    {
+      "q": "What is the key rule for numbers from 3 to 10 when counting nouns (maʿdūd) in the lesson?",
+      "options": [
+        "The number matches the gender of the noun",
+        "The number is always masculine regardless of noun",
+        "The number is the opposite gender of the noun",
+        "The number is always feminine"
+      ],
+      "correctIndex": 2,
+      "a": "The teacher explains that numbers 3–10 follow the 'opposite gender' rule: masculine number with feminine noun and vice versa."
+    },
+    {
+      "q": "When the maʿdūd is feminine, what form should the number take?",
+      "options": [
+        "Feminine form",
+        "Masculine form",
+        "Dual form",
+        "No change is needed"
+      ],
+      "correctIndex": 1,
+      "a": "The lesson repeatedly shows that when the noun is feminine, the number becomes masculine (e.g., thalāthatu ṭālibāt)."
+    },
+    {
+      "q": "What does the term 'baina al-qawsayn' mean in the instructions?",
+      "options": [
+        "Between sentences",
+        "Between brackets/parentheses",
+        "Between verbs",
+        "Between pages"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher explicitly explains 'baina al-qawsayn' means 'between the brackets' where numbers are given."
+    },
+    {
+      "q": "What is the plural of سُؤَال (suʾāl) used frequently in the lesson?",
+      "options": [
+        "Suʾūl",
+        "Asʾila",
+        "Suʾlān",
+        "Suʾāla"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher highlights that أَسْئِلَة (asʾila) is the plural form of suʾāl and appears in headings like 'ajib ʿan al-asʾila'."
+    },
+    {
+      "q": "What rule applies to a noun in a mudāf–mudāf ilayh construction regarding tanwīn?",
+      "options": [
+        "It always keeps tanwīn",
+        "It doubles tanwīn",
+        "It cannot take tanwīn",
+        "It becomes feminine"
+      ],
+      "correctIndex": 2,
+      "a": "The teacher states that when a word is mudāf, it cannot take tanwīn (e.g., abnāʾin becomes abnāʾ)."
+    },
+    {
+      "q": "What is the meaning of the adverb قَبْلَ (qabla) as used in the lesson?",
+      "options": [
+        "After",
+        "Before",
+        "During",
+        "Inside"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher explains qabla means 'before' and is used for time expressions like 'a month ago'."
+    },
+    {
+      "q": "What determines the verb form when context clues are missing in Arabic sentences?",
+      "options": [
+        "Random guessing",
+        "Context such as who is being addressed",
+        "English translation only",
+        "Word order only"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher emphasizes using context clues like gender and addressee to determine correct verb forms."
+    },
+    {
+      "q": "In the lesson, what does رُكْبَانًا (rukbānan) refer to?",
+      "options": [
+        "Walking people",
+        "People riding mounts",
+        "Sitting people",
+        "Sleeping people"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher explains rukbānan as riders, used in the Qur’ānic context of praying while riding in fear situations."
+    },
+    {
+      "q": "What is the main idea behind using opposite-gender agreement in Arabic numbers (3–10)?",
+      "options": [
+        "To make Arabic easier for English speakers",
+        "It is a stylistic choice",
+        "It is a fixed grammatical rule for number agreement",
+        "It applies only in Qur’ānic Arabic"
+      ],
+      "correctIndex": 2,
+      "a": "The lesson stresses this as a core grammatical rule: numbers 3–10 must oppose the gender of the counted noun."
+    }
+  ],
+  "quran_examples": [
+    {
+      "arabic": "وَلَبِثُوا فِي كَهْفِهِمْ ثَلَاثَ مِائَةٍ سِنِينَ وَازْدَادُوا تِسْعًا",
+      "transliteration": "wa labithū fī kahfihim thalātha miʾatin sinīna wa izdādū tisʿā",
+      "translation": "And they remained in their cave for three hundred years and added nine.",
+      "reference": "Al-Kahf 18:25",
+      "note": "Demonstrates numerical usage (thalātha, tisʿā) showing Arabic number agreement in context of counting."
+    },
+    {
+      "arabic": "فَإِنْ خِفْتُمْ فَرِجَالًا أَوْ رُكْبَانًا ۖ فَإِذَا أَمِنتُمْ فَاذْكُرُوا اللَّهَ كَمَا عَلَّمَكُمْ مَا لَمْ تَكُونُوا تَعْلَمُونَ",
+      "transliteration": "fa in khiftum fa-rijālan aw rukbānan fa idhā amintum fa-udhkurū Allāha kamā ʿallamakum mā lam takūnū taʿlamūn",
+      "translation": "And if you fear [an enemy], then pray on foot or riding. But when you are safe, remember Allah as He taught you what you did not know.",
+      "reference": "Al-Baqarah 2:239",
+      "note": "Directly matches the lesson’s discussion of praying while walking or riding (rukbān) under fear conditions."
+    },
+    {
+      "arabic": "يَسْأَلُونَكَ عَنِ الْخَمْرِ وَالْمَيْسِرِ ۖ قُلْ فِيهِمَا إِثْمٌ كَبِيرٌ وَمَنَافِعُ لِلنَّاسِ",
+      "transliteration": "yasʾalūnaka ʿani al-khamri wa al-maysir qul fīhimā ithmun kabīrun wa manāfiʿu lil-nās",
+      "translation": "They ask you about wine and gambling. Say: In them is great sin and benefit for people.",
+      "reference": "Al-Baqarah 2:219",
+      "note": "Illustrates the plural form 'yasʾalūnaka' and connects to the lesson’s focus on asʾila (questions)."
+    }
   ]
 }

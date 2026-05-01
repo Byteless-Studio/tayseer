@@ -1,10 +1,14 @@
 import { useState } from 'react'
 import { createFileRoute, Link, notFound } from '@tanstack/react-router'
-import { loadOne } from '#/lib/lectures'
+
+
 
 export const Route = createFileRoute('/lecture/$videoId')({
-  loader: ({ params }) => {
-    const lecture = loadOne(params.videoId)
+  loader: async ({ params }) => {
+    const lecture = await fetch(`/api/lectures/${params.videoId}`).then((res) => {
+      if (!res.ok) return null
+      return res.json()
+    }) 
     if (!lecture) throw notFound()
     return lecture
   },

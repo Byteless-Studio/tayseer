@@ -17,6 +17,7 @@
     "[00:26:00] Q: Why is 'hubbu' used without specifying what we love? — A: Because in Arabic, pronouns like 'him' must be explicitly mentioned. Without a specific object, it implies general love.",
     "[00:35:00] Q: How to translate 'we love him' when referring to Shaykh Bilal? — A: Use 'Uhubbu shaykh bilal,' with the verb conjugated in first plural and the pronoun included."
   ],
+  "date": "2025-10-27",
   "tags": [
     "Arabic",
     "Nouns",
@@ -25,5 +26,161 @@
     "Ghayr al-Munsarif",
     "Case Endings",
     "Beginner"
+  ],
+  "quiz": [
+    {
+      "q": "Why do مَكَاتِب (makātib) and كَرَاسِي (karāsī) not take tanwīn in the lesson?",
+      "options": [
+        "They are definite nouns with ال",
+        "They are ghayr al-munsarif (diptote) plurals",
+        "They are in the genitive case",
+        "They are dual forms"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher explicitly states that مَكَاتِب and كَرَاسِي are ghayr al-munsarif, and the rule for ghayr al-munsarif is that they cannot take tanwīn or kasrah — just as female proper names like Fāṭimah and ʿĀʾishah cannot."
+    },
+    {
+      "q": "In the sentence about the blackboard, why does the adjective كَبِيرَة (kabīrah) carry a tāʾ marbūṭah?",
+      "options": [
+        "Because سَبُّورَة (sabbūrah) is ghayr al-munsarif",
+        "Because the adjective is in the nominative case",
+        "Because سَبُّورَة (sabbūrah) is a grammatically feminine singular noun",
+        "Because it is part of an iḍāfah construction"
+      ],
+      "correctIndex": 2,
+      "a": "The teacher clarifies that سَبُّورَة is a singular feminine noun, so its adjective must agree in gender and therefore takes a tāʾ marbūṭah: كَبِيرَةٌ."
+    },
+    {
+      "q": "When the lecture uses تِلْكَ (tilka) to refer to الْمَكَاتِب (the desks, a plural), what grammatical rule is being applied?",
+      "options": [
+        "Plurals of rational beings use تِلْكَ",
+        "Plurals of non-sentient (ghayr ʿāqil) objects are treated as singular feminine",
+        "تِلْكَ can refer to any plural regardless of gender",
+        "Masculine plurals always use تِلْكَ at a distance"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher explains that plurals of objects lacking intellect (ghayr ʿāqil) — such as desks, chairs, and doors — are treated grammatically as singular feminine, which is why تِلْكَ is used rather than أُولَئِكَ."
+    },
+    {
+      "q": "In ذَٰلِكَ (dhālika), the كَ at the end is different from the كَ suffix added to كِتَابٌ to make كِتَابُكَ. What is the difference?",
+      "options": [
+        "The كَ in ذَٰلِكَ is a possessive pronoun added to the word",
+        "The كَ in ذَٰلِكَ is an integral part of the demonstrative word itself, not a separate pronoun",
+        "The كَ in ذَٰلِكَ indicates the feminine form of the demonstrative",
+        "Both كَ endings serve the same grammatical function"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher explains that in كِتَابُكَ, the كَ is a separate possessive pronoun attached to the word. In ذَٰلِكَ however, the كَ is part of the word itself — ذَٰلِكَ simply means 'that,' and nothing is being added to it."
+    },
+    {
+      "q": "Why does the adjective مُخْتَلِفَةٌ (mukhtalifah) appear in the feminine singular form when describing أَلْوَان (alwān, colors) — a plural noun?",
+      "options": [
+        "Because أَلْوَان is a broken plural of a feminine root",
+        "Because أَلْوَان is a plural of a non-sentient noun, so it takes feminine singular agreement",
+        "Because the adjective precedes the noun in this sentence",
+        "Because color words are always treated as feminine in Arabic"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher states that أَلْوَان, لُغَات, and بِلَاد are all plurals of non-sentient nouns (ghayr ʿāqil), so each takes feminine singular adjective agreement — hence مُخْتَلِفَةٌ, not مُخْتَلِفُونَ."
+    },
+    {
+      "q": "What does the particle لَٰكِنْ (lākin) express in Arabic grammar, as explained in the lecture?",
+      "options": [
+        "It expresses a condition (if/then)",
+        "It expresses cause and effect",
+        "It expresses istidrāk — correcting or contrasting what was previously said",
+        "It expresses a question"
+      ],
+      "correctIndex": 2,
+      "a": "The teacher explains that لَٰكِنْ conveys istidrāk: it negates or qualifies the preceding statement and introduces a contrasting fact, equivalent to 'but' or 'however' in English."
+    },
+    {
+      "q": "In the sentence قِبْلَتُهُمْ وَاحِدَةٌ (qiblatuhum wāḥidah), why is وَاحِدَةٌ (wāḥidah) used instead of وَاحِدٌ (wāḥid)?",
+      "options": [
+        "Because the sentence is about a group of people",
+        "Because قِبْلَة (qiblah) is a grammatically feminine noun",
+        "Because وَاحِدٌ is only used with masculine human nouns",
+        "Because the sentence is in the dual"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher points out that قِبْلَة is a feminine noun, so its predicate must agree in gender: وَاحِدَةٌ. Contrast this with رَبُّهُمْ وَاحِدٌ and نَبِيُّهُمْ وَاحِدٌ where the nouns are masculine."
+    },
+    {
+      "q": "When presenting a verb in Arabic, why do teachers typically mention two forms — e.g., أَحَبَّ يُحِبُّ (aḥabba yuḥibbu)?",
+      "options": [
+        "The two forms represent the singular and plural conjugations",
+        "The first is the command form and the second is the present tense",
+        "The first is the past tense (third person masculine singular) and the second is the present tense, serving as the dictionary entry for the verb",
+        "The two forms represent the active and passive voices"
+      ],
+      "correctIndex": 2,
+      "a": "The teacher explains that Arabic verbs are conventionally cited by their past tense third-person masculine singular form followed by the present tense form — e.g., أَحَبَّ يُحِبُّ — as the standard way to identify and look up a verb."
+    },
+    {
+      "q": "In the question exercise, why is كَبِيرٌ (kabīr, without tanwīn) incorrect for مَكْتَبُ الْمُدَرِّسِ كَبِيرٌ, and what correction applies?",
+      "options": [
+        "كَبِيرٌ must become كَبِيرَةٌ because مَكْتَب is feminine",
+        "كَبِيرٌ is correct as stated; no correction is needed",
+        "كَبِيرٌ requires ال because the subject has ال, making it الْكَبِيرُ",
+        "The adjective must carry tanwīn (كَبِيرٌ with tanwīn) since the noun has ال on it, not the adjective — and the 'million dollar rule' states that if a noun has ال, the adjective cannot also have tanwīn"
+      ],
+      "correctIndex": 3,
+      "a": "The teacher reminds students of the 'million dollar rule': a noun with ال cannot take tanwīn. Since مَكْتَبُ الْمُدَرِّسِ is definite via iḍāfah, the adjective كَبِيرٌ must not carry tanwīn if the subject itself is definite; additionally the teacher corrects a student who omitted tanwīn from an adjective that needed it."
+    },
+    {
+      "q": "What does the word لَوْن (lawn) mean, and what Qurʾānic story did the teacher use to illustrate it?",
+      "options": [
+        "لَوْن means 'shape'; illustrated by the story of Nūḥ عَلَيْهِ السَّلَام",
+        "لَوْن means 'color'; illustrated by the story of the cow in Sūrat al-Baqarah where Banū Isrāʾīl asked مَا لَوْنُهَا (what is its color?)",
+        "لَوْن means 'type'; illustrated by the creation of the heavens",
+        "لَوْن means 'size'; illustrated by the description of Jannah"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher explains that لَوْن means 'color' and cites the Qurʾānic story in Sūrat al-Baqarah in which Banū Isrāʾīl repeatedly questioned Mūsā عَلَيْهِ السَّلَام about the cow, including asking مَا لَوْنُهَا — 'what is its color?' — to which the answer was صَفْرَاء (yellow)."
+    }
+  ],
+  "quran_examples": [
+    {
+      "arabic": "قَالُوا ادْعُ لَنَا رَبَّكَ يُبَيِّنْ لَنَا مَا لَوْنُهَا قَالَ إِنَّهُ يَقُولُ إِنَّهَا بَقَرَةٌ صَفْرَاءُ فَاقِعٌ لَّوْنُهَا تَسُرُّ النَّاظِرِينَ",
+      "transliteration": "Qālū udʿu lanā rabbaka yubayyin lanā mā lawnuhā qāla innahū yaqūlu innahā baqaratun ṣafrāʾu fāqiʿun lawnuhā tasurru al-nāẓirīn",
+      "translation": "They said: 'Call upon your Lord for us that He may make clear to us what its color is.' He said: 'He says it is a yellow cow, bright in color, pleasing to those who behold it.'",
+      "reference": "Surah Al-Baqarah 2:69",
+      "note": "Directly illustrates the word لَوْن (lawn, color) as taught in the lecture. The teacher cited this very verse when explaining that لَوْن means color and that the Banū Isrāʾīl asked مَا لَوْنُهَا — 'what is its color?' — regarding the cow."
+    },
+    {
+      "arabic": "وَمِنَ الْجِبَالِ جُدَدٌ بِيضٌ وَحُمْرٌ مُّخْتَلِفٌ أَلْوَانُهَا وَغَرَابِيبُ سُودٌ",
+      "transliteration": "Wa-min al-jibāli judadun bīḍun wa-ḥumrun mukhtalifun alwānuhā wa-gharābību sūd",
+      "translation": "And among the mountains are streaks of white and red of varying colors, and others intensely black.",
+      "reference": "Surah Fatir 35:27",
+      "note": "Illustrates the plural أَلْوَان (alwān, colors) as discussed in the lecture. The teacher quoted this āyah directly when explaining that أَلْوَان appears in the Qurʾān, describing mountains of differing colors. It also demonstrates مُخْتَلِف (mukhtalif, varying/different) — the same root as مُخْتَلِفَة used in the lesson to describe the students' countries."
+    },
+    {
+      "arabic": "ذَٰلِكَ الْكِتَابُ لَا رَيْبَ فِيهِ هُدًى لِّلْمُتَّقِينَ",
+      "transliteration": "Dhālika al-kitābu lā rayba fīhi hudan lil-muttaqīn",
+      "translation": "That is the Book about which there is no doubt, a guidance for those conscious of Allāh عَزَّ وَجَلَّ.",
+      "reference": "Surah Al-Baqarah 2:2",
+      "note": "Demonstrates the demonstrative pronoun ذَٰلِكَ (dhālika, 'that') referring to a distant masculine singular noun — الْكِتَاب — as taught in the lecture. The teacher explained that the كَ in ذَٰلِكَ is an integral part of the word itself, not a suffixed possessive pronoun."
+    },
+    {
+      "arabic": "تِلْكَ الرُّسُلُ فَضَّلْنَا بَعْضَهُمْ عَلَىٰ بَعْضٍ",
+      "transliteration": "Tilka al-rusulu faḍḍalnā baʿḍahum ʿalā baʿḍ",
+      "translation": "Those messengers — We have favored some of them over others.",
+      "reference": "Surah Al-Baqarah 2:253",
+      "note": "Demonstrates the use of تِلْكَ (tilka) with a plural noun (الرُّسُل, the messengers). While the lecture's rule applies specifically to ghayr ʿāqil plurals, this āyah shows the same demonstrative form. It confirms that تِلْكَ can appear with plurals and invites students to contrast its usage — here with a rational plural (beings with intellect) — against the rule taught in class."
+    },
+    {
+      "arabic": "وَمِن كُلٍّ تَأْكُلُونَ لَحْمًا طَرِيًّا وَتَسْتَخْرِجُونَ حِلْيَةً تَلْبَسُونَهَا",
+      "transliteration": "Wa-min kullin taʾkulūna laḥman ṭariyyan wa-tastakhrijūna ḥilyatan talbasūnahā",
+      "translation": "From both of them you eat tender meat and extract ornaments which you wear.",
+      "reference": "Surah Fatir 35:12",
+      "note": "Provides a Qurʾānic example of a feminine singular adjective (طَرِيًّا, tariyyan — tender) agreeing with a masculine singular noun (لَحْم). This reinforces the gender-agreement principle drilled in the lecture, where students practised matching adjectives such as كَبِيرَةٌ to feminine nouns like سَبُّورَة."
+    },
+    {
+      "arabic": "قُلْ إِن كُنتُمْ تُحِبُّونَ اللَّهَ فَاتَّبِعُونِي يُحْبِبْكُمُ اللَّهُ",
+      "transliteration": "Qul in kuntum tuḥibbūna Allāha fattabiʿūnī yuḥbibkum Allāhu",
+      "translation": "Say: 'If you love Allāh عَزَّ وَجَلَّ, then follow me, and Allāh عَزَّ وَجَلَّ will love you.'",
+      "reference": "Surah Al-Imran 3:31",
+      "note": "Illustrates the verb حَبَّ / يُحِبُّ (to love) in its present tense conjugation تُحِبُّونَ (you [plural] love), directly related to the teacher's explanation of the verb أَحَبَّ يُحِبُّ and its conjugation paradigm. Note that the word Allāh عَزَّ وَجَلَّ is the object of the verb تُحِبُّونَ, and also the subject of يُحْبِبْكُمُ."
+    }
   ]
 }

@@ -33,31 +33,34 @@
         {
             "q": "What are the three grammatical characteristics of هَذَا (Hatha)?",
             "options": [
-                "Masculine, singular, near",
                 "Feminine, singular, near",
                 "Masculine, plural, near",
+                "Masculine, singular, near",
                 "Masculine, singular, far"
             ],
+            "correctIndex": 2,
             "a": "Masculine, singular, near. هَذَا is used for masculine singular nouns that are physically or contextually close to the speaker."
         },
         {
             "q": "What is the only difference between هَذَا (Hatha) and ذَٰلِكَ (Zalika)?",
             "options": [
-                "هَذَا is near, ذَٰلِكَ is far — all other properties (masculine, singular) are the same",
                 "هَذَا is masculine, ذَٰلِكَ is feminine",
+                "هَذَا is near, ذَٰلِكَ is far — all other properties (masculine, singular) are the same",
                 "هَذَا is singular, ذَٰلِكَ is plural",
                 "هَذَا is for intellect, ذَٰلِكَ is for non-intellect"
             ],
+            "correctIndex": 1,
             "a": "The only difference is proximity: هَذَا is for near objects, ذَٰلِكَ is for far objects. Both are masculine and singular."
         },
         {
             "q": "When is مَا used instead of مَنْ when asking a question?",
             "options": [
-                "مَا is for things without intellect (objects, animals); مَنْ is for things with intellect (people)",
                 "مَا is for singular; مَنْ is for plural",
+                "They are interchangeable",
                 "مَا is for masculine; مَنْ is for feminine",
-                "They are interchangeable"
+                "مَا is for things without intellect (objects, animals); مَنْ is for things with intellect (people)"
             ],
+            "correctIndex": 3,
             "a": "مَا is used to ask about things without intellect (e.g., objects, animals), while مَنْ is used to ask about things that have intellect (e.g., people)."
         },
         {
@@ -68,26 +71,29 @@
                 "Because مَا can always be used for Allah",
                 "Because the Prophet ﷺ is speaking, not Allah"
             ],
+            "correctIndex": 0,
             "a": "This is the rhetorical device called al-Mushakala (المشاكلة), a concept from Balagha (Arabic rhetoric). The word مَا was already used for the idols (which have no intellect), and to preserve the symmetry and beauty of the speech, مَا was used again. The Quran considers both meaning and sound."
         },
         {
             "q": "Surah Al-Baqarah 2:2 uses ذَٰلِكَ الْكِتَابُ for the Quran even though the Quran is right in front of the reader. Why?",
             "options": [
-                "To indicate the Quran's elevated status — it is so exalted it is as if it is far above us",
                 "Because the Quran was revealed far away in Makkah",
-                "It was a mistake by the scribes",
-                "ذَٰلِكَ can also mean 'this' in certain dialects"
+                "ذَٰلِكَ can also mean 'this' in certain dialects",
+                "To indicate the Quran's elevated status — it is so exalted it is as if it is far above us",
+                "It was a mistake by the scribes"
             ],
+            "correctIndex": 2,
             "a": "The scholars of Tafsir explain that ذَٰلِكَ here signals the Quran's lofty status — it is of such a high rank that it is as if it is above and beyond us, not merely 'in front of us.' This is a beautiful example of how proximity in Arabic can be metaphorical, not just physical."
         },
         {
             "q": "Can هَذَا and ذَٰلِكَ be used for things with intellect (like people) or only for objects?",
             "options": [
-                "Both can be used for anything — people, animals, or objects. The intellect rule only applies to مَا and مَنْ.",
                 "هَذَا is only for objects, ذَٰلِكَ is only for people",
+                "Both can be used for anything — people, animals, or objects. The intellect rule only applies to مَا and مَنْ.",
                 "Neither can be used for people",
                 "Only ذَٰلِكَ can be used for people"
             ],
+            "correctIndex": 1,
             "a": "هَذَا and ذَٰلِكَ can be used for anything — people, animals, or objects. The distinction between intellect (عاقل) and non-intellect (غير عاقل) only applies to مَنْ and مَا."
         }
     ],

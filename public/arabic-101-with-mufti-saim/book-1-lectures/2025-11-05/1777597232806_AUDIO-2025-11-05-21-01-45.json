@@ -17,6 +17,7 @@
     "[00:04:00] Q: Why is Makkah مakkah and not Makkatin? — A: It's a female city name, so fatha applies despite the rule. ",
     "[00:09:06] Q: Why is Masajid used with fathah in Min Musajidatun? — A: Due to being non-Arabic and ghayr munsarif."
   ],
+  "date": "2025-11-05",
   "tags": [
     "Arabic",
     "Nouns",
@@ -25,5 +26,143 @@
     "Ghayr Munsarif",
     "Proper Nouns",
     "Intermediate"
+  ],
+  "quiz": [
+    {
+      "q": "Why does مَكَّة (Makkah) take a fatḥah after a ḥarf al-jār rather than a kasrah?",
+      "options": [
+        "Because it is a non-Arabic word",
+        "Because it is a feminine proper noun (name of a city), making it ghayr al-munsarif",
+        "Because it is on the pattern of أَفْعَل",
+        "Because it has ال attached to it"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher explained that مَكَّة is a feminine proper noun — the name of a city — and that this makes it ghayr al-munsarif. It therefore takes fatḥah instead of kasrah wherever kasrah would normally be expected."
+    },
+    {
+      "q": "مَرْوَان (Marwān) is ghayr al-munsarif. From the eight categories reviewed in this series, which category does it belong to?",
+      "options": [
+        "Feminine proper noun",
+        "Non-Arabic proper noun",
+        "Masculine proper noun ending in ان (ān)",
+        "Adjective on the pattern of أَفْعَل"
+      ],
+      "correctIndex": 2,
+      "a": "A student correctly identified that مَرْوَان belongs to the category of masculine proper nouns ending in ان (ān). The teacher confirmed this, which is why it is ghayr al-munsarif and takes fatḥah instead of kasrah."
+    },
+    {
+      "q": "In the exercise, أُسَامَة (Usāmah) is identified as ghayr al-munsarif. Why?",
+      "options": [
+        "Because it is a non-Arabic name",
+        "Because it is a masculine proper noun ending in ان",
+        "Because it is a male name that carries a tāʾ marbūṭah",
+        "Because it is on the pattern of أَفْعَل"
+      ],
+      "correctIndex": 2,
+      "a": "The teacher confirmed that أُسَامَة is ghayr al-munsarif because it is a male name that unusually carries a tāʾ marbūṭah at the end. This is one of the eight categories reviewed — male names such as حَمْزَة، طَلْحَة، أُسَامَة that end with tāʾ marbūṭah despite being masculine."
+    },
+    {
+      "q": "In the counting exercise, why is the correct form سَبْعَةُ أَصْدِقَاءَ (sabʿatu aṣdiqāʾa) and not سَبْعَةُ أَصْدِقَاءٍ?",
+      "options": [
+        "Because numbers 3–10 never allow tanwīn on the maʿdūd",
+        "Because أَصْدِقَاء is on the broken plural pattern فُعَلَاء (fuʿalāʾ), which is ghayr al-munsarif",
+        "Because أَصْدِقَاء is a non-Arabic word",
+        "Because the number سَبْعَة makes the following word definite"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher explained that أَصْدِقَاء is on the broken plural pattern أَفْعِلَاء / فُعَلَاء — listed among the ghayr al-munsarif broken plural patterns. It therefore cannot take kasrah or tanwīn, and receives fatḥah instead."
+    },
+    {
+      "q": "In the sentence مِنْ مُعَاوِيَةَ, why does مُعَاوِيَة take fatḥah after the preposition مِنْ?",
+      "options": [
+        "Because مِنْ always causes the following word to take fatḥah",
+        "Because مُعَاوِيَة is a male name with a tāʾ marbūṭah and is therefore ghayr al-munsarif",
+        "Because مُعَاوِيَة is a non-Arabic name",
+        "Because مُعَاوِيَة is preceded by يَا"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher explained that مُعَاوِيَة is a male name with a tāʾ marbūṭah, making it ghayr al-munsarif. مِنْ is a ḥarf al-jār that would normally produce kasrah, but since the word is ghayr al-munsarif it receives fatḥah instead. The teacher noted this is a tricky case because students instinctively expect kasrah after ḥurūf al-jār."
+    },
+    {
+      "q": "When counting with the numbers 3–10, what gender rule must the number follow in relation to the noun being counted (maʿdūd)?",
+      "options": [
+        "The number must match the gender of the maʿdūd",
+        "The number must be the opposite gender of the maʿdūd",
+        "The number is always masculine regardless of the maʿdūd",
+        "The number agrees with the gender of the subject of the sentence"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher corrected a student who said عَشْرَةُ كَرَاسٍ when كُرْسِيّ is masculine — the number should be عَشْرُ (feminine form) because the numbers 3–10 take the opposite gender of the noun being counted. This rule of gender opposition (mukhālafah) was reviewed throughout the exercise."
+    },
+    {
+      "q": "مَسَاجِد (masājid) is ghayr al-munsarif, as confirmed in the exercise. What category makes it so?",
+      "options": [
+        "It is a non-Arabic proper noun",
+        "It is a broken plural on the pattern of مَفَاعِل (mafāʿil)",
+        "It is a feminine proper noun",
+        "It is a masculine proper noun on the pattern of أَفْعَل"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher confirmed across multiple sessions that مَسَاجِد is ghayr al-munsarif because it is a broken plural on the pattern مَفَاعِل. In the exercise, فِي إِسْطَنْبُولَ مَسَاجِدُ كَثِيرَةٌ was used, with مَسَاجِدُ carrying ḍammah rather than tanwīn because of this."
+    },
+    {
+      "q": "In the exercise phrase مَنَادِيلَ (manādīl, handkerchiefs) used with a number, why does it take fatḥah rather than kasrah?",
+      "options": [
+        "Because it is a feminine noun",
+        "Because it follows a ḥarf al-jār",
+        "Because it is a broken plural on the pattern مَفَاعِل, making it ghayr al-munsarif",
+        "Because it is a non-Arabic word"
+      ],
+      "correctIndex": 2,
+      "a": "The teacher confirmed that مَنَادِيل is on the pattern مَفَاعِل — one of the ghayr al-munsarif broken plural patterns. It therefore cannot receive kasrah; wherever kasrah is expected it takes fatḥah instead. The correct form is خَمْسَةُ مَنَادِيلَ, not مَنَادِيلٍ."
+    },
+    {
+      "q": "A student asked why إِسْطَنْبُول (Istanbul) in the exercise takes ḍammah without tanwīn. What is the reason?",
+      "options": [
+        "Because it is on the pattern of فَعْلَان",
+        "Because it has ال attached",
+        "Because it is a non-Arabic proper noun and therefore ghayr al-munsarif — it takes no tanwīn and fatḥah where kasrah is expected",
+        "Because it is a feminine city name with tāʾ marbūṭah"
+      ],
+      "correctIndex": 2,
+      "a": "The teacher confirmed that إِسْطَنْبُول is a non-Arabic proper noun and therefore ghayr al-munsarif. It carries ḍammah in the nominative position but no tanwīn, and would take fatḥah where kasrah is expected — consistent with the core rule reviewed throughout these sessions."
+    }
+  ],
+  "quran_examples": [
+    {
+      "arabic": "سُبْحَانَ الَّذِي أَسْرَىٰ بِعَبْدِهِ لَيْلًا مِّنَ الْمَسْجِدِ الْحَرَامِ إِلَى الْمَسْجِدِ الْأَقْصَى",
+      "transliteration": "Subḥāna alladhī asrā bi-ʿabdihi laylān min al-masjidi al-ḥarāmi ilā al-masjidi al-aqṣā",
+      "translation": "Glory be to the One who took His servant on a night journey from the Sacred Mosque to the Farthest Mosque.",
+      "reference": "Surah Al-Isra 17:1",
+      "note": "Illustrates مَسْجِد with ال attached (الْمَسْجِدِ), which removes the ghayr al-munsarif restriction — the teacher noted that whenever ال is present, the standard ghayr al-munsarif rules no longer apply and the word follows normal declension. Here الْمَسْجِدِ correctly takes kasrah because it has ال."
+    },
+    {
+      "arabic": "إِنَّ أَوَّلَ بَيْتٍ وُضِعَ لِلنَّاسِ لَلَّذِي بِبَكَّةَ مُبَارَكًا",
+      "transliteration": "Inna awwala baytin wuḍiʿa lil-nāsi la-alladhī bi-bakkata mubārakan",
+      "translation": "Indeed, the first House established for humanity is the one at Bakkah — blessed.",
+      "reference": "Surah Al-Imran 3:96",
+      "note": "Demonstrates a feminine place-name (بَكَّة, another name for Makkah) taking fatḥah after the preposition بِ rather than kasrah, because it is a feminine proper noun (city name) and therefore ghayr al-munsarif — directly parallel to the مَكَّة examples drilled throughout the exercise."
+    },
+    {
+      "arabic": "وَكَذَٰلِكَ مَكَّنَّا لِيُوسُفَ فِي الْأَرْضِ",
+      "transliteration": "Wa-kadhālika makkannā li-yūsufa fī al-arḍ",
+      "translation": "And thus did We establish Yūsuf عَلَيْهِ السَّلَام in the land.",
+      "reference": "Surah Yusuf 12:21",
+      "note": "Shows يُوسُف taking fatḥah after the preposition لِ — a ḥarf al-jār that would normally produce kasrah. Because يُوسُف is a non-Arabic proper noun and ghayr al-munsarif, it receives fatḥah instead, consistent with the rule practised throughout this session's exercises."
+    },
+    {
+      "arabic": "وَمَا أُبَرِّئُ نَفْسِي إِنَّ النَّفْسَ لَأَمَّارَةٌ بِالسُّوءِ إِلَّا مَا رَحِمَ رَبِّي",
+      "transliteration": "Wa-mā ubarriʾu nafsī inna al-nafsa la-ammāratun bil-sūʾi illā mā raḥima rabbī",
+      "translation": "And I do not acquit myself — indeed the soul is inclined to evil, except what my Lord has mercy upon.",
+      "reference": "Surah Yusuf 12:53",
+      "note": "Illustrates the pattern فَعَّالَة (ammārah), related to the ṣīghat al-mubālaghah (intensification) concept the teacher explained — where certain patterns convey an intensified meaning rather than just the base form. The teacher used this concept when explaining كَسْلَان (very lazy) vs كَسِل (lazy) and رَحْمَان (intensely merciful)."
+    },
+    {
+      "arabic": "وَإِذْ جَعَلْنَا الْبَيْتَ مَثَابَةً لِّلنَّاسِ وَأَمْنًا وَاتَّخِذُوا مِن مَّقَامِ إِبْرَاهِيمَ مُصَلًّى",
+      "transliteration": "Wa-idh jaʿalnā al-bayta mathābatan lil-nāsi wa-amnan wa-ittakhidhū min maqāmi Ibrāhīma muṣallā",
+      "translation": "And when We made the House a place of return for the people and a sanctuary. And take the standing place of Ibrāhīm عَلَيْهِ السَّلَام as a place of prayer.",
+      "reference": "Surah Al-Baqarah 2:125",
+      "note": "Demonstrates إِبْرَاهِيم taking fatḥah after the preposition مِن (in مَقَامِ إِبْرَاهِيمَ, where إِبْرَاهِيم is muḍāf ilayhi and would normally take kasrah). Because إِبْرَاهِيم is a non-Arabic proper noun and ghayr al-munsarif, it takes fatḥah — the same rule practised throughout this session."
+    }
   ]
 }

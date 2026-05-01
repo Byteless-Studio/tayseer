@@ -15,7 +15,7 @@
   ],
   "questions": [
     "[00:01:52] Q: How do you respond to من في هذه السيارة? — A: Using فيها for feminine objects and فيه for masculine, e.g., فيها أمي.",
-    "[00:06:38] Q: Why is the correct Quranic reading إبراهيم with a fatha? — A: To denote Ibrahim as the object (being tested), not the subject."
+    "[00:06:38] Q: Why is the correct Quranic reading إبراهيم with a fatha? — A: To denote the word Ibrahim as the object (being tested), not the subject."
   ],
   "tags": [
     "Arabic Grammar",
@@ -23,5 +23,101 @@
     "Case Endings (تحريك)",
     "Quranic Examples",
     "Beginner Arabic"
+  ],
+  "date": "2025-04-21",
+  "quiz": [
+    {
+      "q": "What is the definition of المفعول به (maf'ool bihi) in Arabic grammar?",
+      "options": [
+        "The doer of the action",
+        "The verb itself",
+        "The one or thing the action is done upon",
+        "A connecting word between sentences"
+      ],
+      "correctIndex": 2,
+      "a": "المفعول به is the object of the verb — the person or thing that the action is being done to."
+    },
+    {
+      "q": "What grammatical sign typically indicates the object (المفعول به) in Arabic?",
+      "options": [
+        "Damma (ـُ)",
+        "Kasra (ـِ)",
+        "Fatha (ـَ)",
+        "Sukun (ـْ)"
+      ],
+      "correctIndex": 2,
+      "a": "The object (المفعول به) is typically marked with a fatha (ـَ), indicating that the action is being done upon it."
+    },
+    {
+      "q": "Why does the verb 'خَرَجَ' (he exited) not require an object?",
+      "options": [
+        "Because it is always followed by a pronoun",
+        "Because it is a weak verb",
+        "Because its meaning does not require something to be acted upon",
+        "Because it is only used in the past tense"
+      ],
+      "correctIndex": 2,
+      "a": "The verb 'خَرَجَ' does not require an object because the action does not act upon something — it simply describes movement."
+    },
+    {
+      "q": "In the sentence 'أُحِبُّ أَبِي', why does 'أَبِي' not visibly show a fatha?",
+      "options": [
+        "Because it is not the object",
+        "Because it is a verb",
+        "Because the ya (ي) prevents the fatha from appearing clearly",
+        "Because it is plural"
+      ],
+      "correctIndex": 2,
+      "a": "Although 'أَبِي' is the object, the fatha is not ظاهر (visible) due to the presence of the ya (ي), but its grammatical role as the object is still understood."
+    },
+    {
+      "q": "Why is it important to apply correct case endings (like fatha and damma) in Arabic sentences?",
+      "options": [
+        "It only improves pronunciation slightly",
+        "It helps decorate the sentence",
+        "It determines the grammatical role and meaning of words in a sentence",
+        "It is only important in poetry"
+      ],
+      "correctIndex": 2,
+      "a": "Case endings determine the grammatical role (subject vs object), and changing them can change the meaning of the sentence."
+    },
+    {
+      "q": "In the sentence 'إِنَّمَا يَخْشَى اللَّهَ مِنْ عِبَادِهِ الْعُلَمَاءُ', who is described as having fear of Allah?",
+      "options": [
+        "The scholars",
+        "All people equally",
+        "Only angels",
+        "Only prophets"
+      ],
+      "correctIndex": 0,
+      "a": "The scholars (الْعُلَمَاءُ) are the ones who fear Allah, as indicated by the damma showing they are the doers of the action."
+    },
+    {
+      "q": "How do you respond to 'مَنْ فِي هَذِهِ الْغُرْفَةِ؟' (Who is in this room?)?",
+      "options": [
+        "فِيهِ أَبِي",
+        "فِيهَا أَبِي",
+        "فِيهِ أُمِّي",
+        "مَنْ أَبِي"
+      ],
+      "correctIndex": 1,
+      "a": "Since 'الْغُرْفَةُ' is feminine, the correct response uses 'فِيهَا' — for example: فِيهَا أَبِي."
+    }
+  ],
+  "quran_examples": [
+    {
+      "arabic": "وَإِذِ ابْتَلَىٰ إِبْرَاهِيمَ رَبُّهُ",
+      "transliteration": "Wa idh ibtalā Ibrāhīma rabbuhu",
+      "translation": "And [remember] when his Lord tested Ibrahim.",
+      "reference": "Surah Al-Baqarah 2:124",
+      "note": "إِبْرَاهِيمَ has a fatha because it is the object (المفعول به) — the one being tested. رَبُّهُ has a damma because it is the doer of the action."
+    },
+    {
+      "arabic": "إِنَّمَا يَخْشَى اللَّهَ مِنْ عِبَادِهِ الْعُلَمَاءُ",
+      "transliteration": "Innamā yakhshā Allāha min ʿibādihi al-ʿulamāʾ",
+      "translation": "Only those of His servants who have knowledge fear Allah.",
+      "reference": "Surah Fatir 35:28",
+      "note": "اللَّهَ has a fatha because He is the one being feared, while الْعُلَمَاءُ has a damma because they are the doers of the action (the ones fearing)."
+    }
   ]
 }

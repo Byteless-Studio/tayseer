@@ -27,5 +27,161 @@
                  "Tanwīn",
                  "Particles"
              ],
-    "date":  "2024-10-23"
+    "date":  "2024-10-23",
+    "quiz": [
+        {
+            "q": "What is the 'golden rule' regarding ال (al-) and tanwīn on a single word?",
+            "options": [
+                "A word can have both al- and tanwīn if it is a proper noun",
+                "A word can never have both al- and tanwīn at the same time",
+                "Tanwīn replaces al- only on adjectives",
+                "Al- and tanwīn are interchangeable markers"
+            ],
+            "correctIndex": 1,
+            "a": "Al- (the definite article) and tanwīn (the indefiniteness marker) are mutually exclusive — a correctly written Arabic word can never carry both simultaneously."
+        },
+        {
+            "q": "What does جَدِيدٌ (jadīdun) mean?",
+            "options": [
+                "Old",
+                "Clean",
+                "New",
+                "Far"
+            ],
+            "correctIndex": 2,
+            "a": "جَدِيدٌ means 'new'. It appears in the Qur'ān in the phrase خَلْقٍ جَدِيدٍ ('a new creation') in Sūrah Qāf (50:15)."
+        },
+        {
+            "q": "Which pair of adjectives means 'heavy' and 'light' respectively?",
+            "options": [
+                "كَبِيرٌ and صَغِيرٌ",
+                "ثَقِيلٌ and خَفِيفٌ",
+                "حَارٌّ and بَارِدٌ",
+                "قَرِيبٌ and بَعِيدٌ"
+            ],
+            "correctIndex": 1,
+            "a": "ثَقِيلٌ (thaqīl) means 'heavy' and خَفِيفٌ (khafīf) means 'light'. Both appear in the scales (mawāzīn) verse in Sūrah al-Aʿrāf (7:8–9)."
+        },
+        {
+            "q": "In Sūrah al-Maʿārij (70:6–7), what do the words بَعِيدًا and قَرِيبًا refer to?",
+            "options": [
+                "The disbelievers see the Day of Judgement as far, while Allāh عَزَّ وَجَلَّ knows it to be near",
+                "The Prophet ﷺ is described as close to Allāh عَزَّ وَجَلَّ and far from disbelievers",
+                "Jannah is far from sinners but close to the righteous",
+                "The Qur'ān is a light that is near to believers but far from those who reject it"
+            ],
+            "correctIndex": 0,
+            "a": "The disbelievers view the Resurrection as something distant (ba'īdan), but Allāh عَزَّ وَجَلَّ declares that He sees it as near (qarīban)."
+        },
+        {
+            "q": "In the verse وَإِذَا سَأَلَكَ عِبَادِي عَنِّي فَإِنِّي قَرِيبٌ (Sūrah al-Baqara 2:186), what does Allāh عَزَّ وَجَلَّ describe Himself as?",
+            "options": [
+                "Most Powerful (قَادِرٌ)",
+                "All-Knowing (عَلِيمٌ)",
+                "Close / Near (قَرِيبٌ)",
+                "All-Hearing (سَمِيعٌ)"
+            ],
+            "correctIndex": 2,
+            "a": "Allāh عَزَّ وَجَلَّ declares Himself قَرِيبٌ (close/near) — when His servants ask about Him, He is near and responds to the call of every supplicant."
+        },
+        {
+            "q": "What does بَارِدٌ (bāridun) mean, and in which context does لَا بَارِدٍ وَلَا كَرِيمٍ appear in the Qur'ān?",
+            "options": [
+                "Bārid means 'cold'; the verse describes the smoke of Jahannam as neither cold nor pleasant",
+                "Bārid means 'hot'; the verse praises the coolness of Jannah",
+                "Bārid means 'still'; the verse describes the stillness of the Day of Judgement",
+                "Bārid means 'light'; the verse describes the lightness of good deeds"
+            ],
+            "correctIndex": 0,
+            "a": "بَارِدٌ means 'cold'. In Sūrah al-Wāqiʿa (56:44), the smoke engulfing the people of the left hand is described as لَا بَارِدٍ وَلَا كَرِيمٍ — neither cooling nor honourable."
+        },
+        {
+            "q": "In the phrase لِلَّذِينَ أَحْسَنُوا الْحُسْنَىٰ وَزِيَادَةٌ (Sūrah Yūnus 10:26), why does الْحُسْنَى carry ال while وَزِيَادَةٌ carries tanwīn?",
+            "options": [
+                "الْحُسْنَى is a verb so it takes ال; وَزِيَادَةٌ is a noun so it takes tanwīn",
+                "الْحُسْنَى refers to a specific, known reward (Jannah); وَزِيَادَةٌ refers to unspecified, unknown extra bounties",
+                "Both words are definite; the tanwīn on وَزِيَادَةٌ is simply a spelling variant",
+                "ال on الْحُسْنَى shows it is a proper noun; tanwīn on وَزِيَادَةٌ is a grammatical accident"
+            ],
+            "correctIndex": 1,
+            "a": "الْحُسْنَى is definite because Jannah is a well-known, specific promise. وَزِيَادَةٌ is indefinite because the extra bounties Allāh عَزَّ وَجَلَّ will bestow are beyond human knowledge, consistent with the ḥadīth: what no eye has seen, no ear has heard, and no heart has imagined."
+        },
+        {
+            "q": "Which Arabic term means 'indefinite' (i.e., a word without ال that carries tanwīn)?",
+            "options": [
+                "مَعْرِفَة",
+                "مُبْتَدَأ",
+                "نَكِرَة",
+                "خَبَر"
+            ],
+            "correctIndex": 2,
+            "a": "نَكِرَة (nakirah) is the Arabic grammatical term for an indefinite noun — one that is unspecified and generally carries tanwīn. Its opposite, مَعْرِفَة (maʿrifah), refers to a definite noun."
+        },
+        {
+            "q": "Which of the following sentences is grammatically correct according to the al-/tanwīn rule?",
+            "options": [
+                "الْكِتَابُ جَدِيدٌ — The book is new",
+                "الْكِتَابٌ جَدِيدٌ — The book is new",
+                "الْكِتَابُ الْجَدِيدٌ — The book is new",
+                "كِتَابُ جَدِيدٌ — The book is new"
+            ],
+            "correctIndex": 0,
+            "a": "الْكِتَابُ جَدِيدٌ is correct: the subject (الْكِتَابُ) takes ال and ends with a single ḍammah; the predicate (جَدِيدٌ) takes tanwīn. The other options either combine ال with tanwīn or place ال on both words, turning it into a phrase rather than a complete sentence."
+        },
+        {
+            "q": "What does مَفْتُوحٌ (maftūḥun) mean?",
+            "options": [
+                "Broken",
+                "Dirty",
+                "Small",
+                "Open"
+            ],
+            "correctIndex": 3,
+            "a": "مَفْتُوحٌ means 'open'. It appeared in the classroom example الْبَابُ مَفْتُوحٌ — 'The door is open.'"
+        }
+    ],
+    "quran_examples": [
+        {
+            "arabic": "بَلْ هُمْ فِي لَبْسٍ مِّنْ خَلْقٍ جَدِيدٍ",
+            "transliteration": "Bal hum fī labsin min khalqin jadīdin",
+            "translation": "Rather, they are in confusion over a new creation.",
+            "reference": "Surah Qaf 50:15",
+            "note": "Illustrates the adjective جَدِيدٌ (new). The word خَلْقٍ جَدِيدٍ (a new creation) carries tanwīn on both words, showing they are both indefinite — the disbelievers are bewildered at the concept of being recreated after death."
+        },
+        {
+            "arabic": "فَمَن ثَقُلَتْ مَوَازِينُهُ فَأُولَٰئِكَ هُمُ الْمُفْلِحُونَ وَمَنْ خَفَّتْ مَوَازِينُهُ فَأُولَٰئِكَ الَّذِينَ خَسِرُوا أَنفُسَهُمْ",
+            "transliteration": "Fa-man thaqulat mawāzīnuhū fa-ūlāʾika humu l-mufliḥūn; wa-man khaffat mawāzīnuhū fa-ūlāʾika lladhīna khasirū anfusahum",
+            "translation": "Whoever's scales are heavy — those are the successful. And whoever's scales are light — those are the ones who have lost their souls.",
+            "reference": "Surah al-Aʿraf 7:8-9",
+            "note": "Demonstrates ثَقِيلٌ (heavy) and خَفِيفٌ (light). The verbs ثَقُلَتْ and خَفَّتْ derive from the same roots, showing students how Qur'ānic verbs share roots with the adjectives taught in this lesson."
+        },
+        {
+            "arabic": "إِنَّهُمْ يَرَوْنَهُ بَعِيدًا وَنَرَاهُ قَرِيبًا",
+            "transliteration": "Innahum yarawnahu baʿīdan wa-narāhu qarīban",
+            "translation": "Indeed, they see it as far off, but We see it as near.",
+            "reference": "Surah al-Maʿarij 70:6-7",
+            "note": "Juxtaposes بَعِيدٌ (far) and قَرِيبٌ (near) in a single passage, perfectly illustrating both adjectives from the lesson vocabulary. Both carry tanwīn (accusative) because they function as predicates of a verbal sentence."
+        },
+        {
+            "arabic": "وَإِذَا سَأَلَكَ عِبَادِي عَنِّي فَإِنِّي قَرِيبٌ ۖ أُجِيبُ دَعْوَةَ الدَّاعِ إِذَا دَعَانِ",
+            "transliteration": "Wa-idhā saʾalaka ʿibādī ʿannī fa-innī qarībun; ujību daʿwata l-dāʿi idhā daʿāni",
+            "translation": "And when My servants ask you about Me — indeed I am near. I respond to the call of the supplicant when he calls upon Me.",
+            "reference": "Surah al-Baqara 2:186",
+            "note": "Features قَرِيبٌ (near/close) as a predicate with tanwīn, reinforcing the vocabulary. It also models the pattern مُبْتَدَأ + خَبَر seen in the lesson: فَإِنِّي قَرِيبٌ — 'Indeed I am near.'"
+        },
+        {
+            "arabic": "فِي سَمُومٍ وَحَمِيمٍ وَظِلٍّ مِّن يَحْمُومٍ لَّا بَارِدٍ وَلَا كَرِيمٍ",
+            "transliteration": "Fī samūmin wa-ḥamīmin wa-ẓillin min yaḥmūmin lā bāridin wa-lā karīmin",
+            "translation": "In scorching wind and scalding water, and a shade of black smoke — neither cool nor noble.",
+            "reference": "Surah al-Waqi'a 56:42-44",
+            "note": "Introduces بَارِدٌ (cold/cool) in a powerful Qur'ānic context: the smoke of Jahannam offers no relief — it is لَا بَارِدٍ (not cold). This reinforces the adjective vocabulary while connecting it to a vivid description of the Hereafter."
+        },
+        {
+            "arabic": "لِّلَّذِينَ أَحْسَنُوا الْحُسْنَىٰ وَزِيَادَةٌ",
+            "transliteration": "Lilladhīna aḥsanū l-ḥusnā wa-ziyādatun",
+            "translation": "For those who have done good is the finest reward (al-ḥusnā) and more.",
+            "reference": "Surah Yunus 10:26",
+            "note": "Key example for the al- vs. tanwīn golden rule: الْحُسْنَى carries ال because Jannah is a definite, known reward, while وَزِيَادَةٌ carries tanwīn because the extra bounties Allāh عَزَّ وَجَلَّ will bestow are indefinite and beyond human imagination."
+        }
+    ]
 }

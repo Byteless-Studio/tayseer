@@ -8,11 +8,8 @@ export function QuranCarousel({ items }: { items: QuranExample[] }) {
   return (
     <div>
       {/* Slide */}
-      <div className="rounded-xl border border-gray-200 bg-[#f5f0e8] p-5 min-h-[180px] flex flex-col">
-        <p
-          className="text-right text-xl leading-loose text-gray-900 font-arabic mb-2"
-          dir="rtl"
-        >
+      <div className="rounded-xl border border-gray-200 bg-[#f5f0e8] p-5 min-h-[200px] flex flex-col">
+        <p className="text-right text-xl leading-loose text-gray-900 font-arabic mb-2" dir="rtl">
           {item.arabic}
         </p>
         {item.transliteration && (
@@ -31,35 +28,37 @@ export function QuranCarousel({ items }: { items: QuranExample[] }) {
       {/* Navigation */}
       <div className="flex items-center justify-between mt-3">
         <button
-          onClick={() => setCurrent((c) => c - 1)}
+          type="button"
+          onClick={() => setCurrent(current - 1)}
           disabled={current === 0}
-          className="rounded-lg border border-gray-200 px-3 py-1.5 text-xs text-gray-500 disabled:opacity-30 disabled:pointer-events-none hover:border-gray-400 hover:text-gray-700 transition-colors cursor-pointer"
+          className="rounded-lg border border-gray-200 px-3 py-1.5 text-xs text-gray-500 hover:border-gray-400 hover:text-gray-700 transition-colors cursor-pointer disabled:opacity-30"
         >
           ←
         </button>
 
-        <div className="flex gap-1.5 items-center">
-          {items.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setCurrent(i)}
-              className={`rounded-full transition-all cursor-pointer ${
-                i === current
-                  ? 'w-4 h-2 bg-[#009000]'
-                  : 'w-2 h-2 bg-gray-300 hover:bg-gray-400'
-              }`}
-            />
-          ))}
+        <div className="flex items-center gap-2">
+          <div className="flex gap-1.5 items-center">
+            {items.map((_, i) => (
+              <button
+                type="button"
+                key={i}
+                onClick={() => setCurrent(i)}
+                className={`rounded-full transition-all cursor-pointer ${
+                  i === current
+                    ? 'w-4 h-2 bg-[#009000]'
+                    : 'w-2 h-2 bg-gray-300 hover:bg-gray-400'
+                }`}
+              />
+            ))}
+          </div>
+          <span className="text-xs text-gray-400">{current + 1}/{items.length}</span>
         </div>
 
-        <span className="text-xs text-gray-400 min-w-[3rem] text-right">
-          {current + 1} / {items.length}
-        </span>
-
         <button
-          onClick={() => setCurrent((c) => c + 1)}
+          type="button"
+          onClick={() => setCurrent(current + 1)}
           disabled={current === items.length - 1}
-          className="rounded-lg border border-gray-200 px-3 py-1.5 text-xs text-gray-500 disabled:opacity-30 disabled:pointer-events-none hover:border-gray-400 hover:text-gray-700 transition-colors cursor-pointer"
+          className="rounded-lg border border-gray-200 px-3 py-1.5 text-xs text-gray-500 hover:border-gray-400 hover:text-gray-700 transition-colors cursor-pointer disabled:opacity-30"
         >
           →
         </button>

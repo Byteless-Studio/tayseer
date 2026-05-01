@@ -1,13 +1,17 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
-import { loadAllBooks } from '#/lib/arabic-101'
-import { encodeLectureId } from '#/lib/arabic-101'
+import { createServerFn } from '@tanstack/react-start'
+import { encodeLectureId, type Book } from '#/lib/arabic-101'
 import { courses } from '#/config/site'
-import type { Book } from '#/lib/arabic-101'
 
 const course = courses['arabic-101']
 
+const fetchAllBooks = createServerFn({ method: 'GET' }).handler(async () => {
+  const { loadAllBooks } = await import('#/lib/arabic-101.server')
+  return loadAllBooks()
+})
+
 export const Route = createFileRoute('/arabic-101/')({
-  loader: () => loadAllBooks(),
+  loader: () => fetchAllBooks(),
   head: () => ({
     meta: [{ title: 'Arabic With Mufti Saim — Tayseer' }],
   }),

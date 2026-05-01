@@ -19,6 +19,7 @@
     "[00:14:00] Q: How is Hamzat al-Wassl pronounced in plurals? — A: As Hamzat al-Qatar (pronounced), e.g., Ma'a asma'ukum.",
     "[00:29:00] Q: Why use Hadi for plural pens? — A: Rule explained next session; cliffhanger on周一."
   ],
+  "date": "2025-09-17",
   "tags": [
     "Arabic",
     "Nouns",
@@ -27,5 +28,118 @@
     "Verbs",
     "Grammar",
     "Intermediate"
+  ],
+  "quiz": [
+    {
+      "q": "In the lesson, why is the pronoun changed from masculine plural (ikhwān) to feminine plural (akhawāt)?",
+      "options": [
+        "Because verbs must always stay singular",
+        "Because gender agreement changes depending on who is being addressed",
+        "Because Arabic has no masculine forms",
+        "Because pronouns never change in Arabic"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher explains that pronouns must match the gender of the مخاطَب (those being addressed), so addressing females requires changing forms accordingly."
+    },
+    {
+      "q": "Which set correctly represents Arabic second-person pronouns mentioned in the lesson?",
+      "options": [
+        "Ana, Nahnu, Anta, Huwa",
+        "Anta, Anti, Antum, Antunna",
+        "Huwa, Hiya, Hum, Hunna",
+        "Ka, Ki, Kum, Kunn"
+      ],
+      "correctIndex": 1,
+      "a": "The lesson explicitly lists Anta (you masculine), Anti (you feminine), Antum (you plural masculine/mixed), and Antunna (you plural feminine)."
+    },
+    {
+      "q": "What is the difference between al-ḍamāʾir al-munfaṣila and al-ḍamāʾir al-muttaṣila?",
+      "options": [
+        "One is for verbs only and the other is for nouns only",
+        "One is attached pronouns and the other is detached pronouns",
+        "One is singular and the other is plural",
+        "One is for past tense and the other is for present tense"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher distinguishes between detached pronouns (munfaṣila) and attached pronouns (muttaṣila), used differently depending on sentence structure."
+    },
+    {
+      "q": "What does the word قَبْلَ (qabla) mean in the lesson?",
+      "options": [
+        "After",
+        "Before",
+        "During",
+        "Next to"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher explains that qabla means 'before' and is used for time expressions like 'a month ago'."
+    },
+    {
+      "q": "What does بَعْدَ (baʿda) mean?",
+      "options": [
+        "Before",
+        "After",
+        "Inside",
+        "Between"
+      ],
+      "correctIndex": 1,
+      "a": "Baʿda is explained as meaning 'after' and is part of the adverbs of time family (ẓurūf al-zamān)."
+    },
+    {
+      "q": "Why does the verb form change in sentences like ذَهَبْتُ and ذَهَبَ?",
+      "options": [
+        "Because verbs depend on the color of the sentence",
+        "Because verb endings change based on person (first, second, third)",
+        "Because Arabic has no fixed grammar rules",
+        "Because nouns control verb meaning"
+      ],
+      "correctIndex": 1,
+      "a": "The lesson emphasizes that verb forms change depending on person and context (e.g., first person 'I went' vs third person 'he went')."
+    },
+    {
+      "q": "What does the teacher say about the pronouns Ana (أنا) and Nahnu (نحن)?",
+      "options": [
+        "They change based on gender",
+        "They have separate masculine and feminine forms",
+        "They do not change based on gender",
+        "They are only used for females"
+      ],
+      "correctIndex": 2,
+      "a": "The teacher explains that first-person pronouns do not change for gender; both males and females use Ana and Nahnu."
+    },
+    {
+      "q": "What helps determine verb meaning when harakāt are missing in context?",
+      "options": [
+        "Guessing randomly",
+        "Context clues like who is being addressed",
+        "Ignoring the sentence structure",
+        "Using English translation only"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher stresses using context clues such as who is being addressed (e.g., male/female) to correctly identify verb forms."
+    }
+  ],
+  "quran_examples": [
+    {
+      "arabic": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
+      "transliteration": "Iyyāka naʿbudu wa iyyāka nastaʿīn",
+      "translation": "You alone we worship, and You alone we ask for help.",
+      "reference": "Al-Fatiha 1:5",
+      "note": "Demonstrates second-person pronoun usage (كَ) showing address forms similar to lesson discussion of pronoun agreement and مخاطَب (addressee)."
+    },
+    {
+      "arabic": "قُلْ هُوَ اللَّهُ أَحَدٌ",
+      "transliteration": "Qul huwa Allāhu aḥad",
+      "translation": "Say: He is Allah, One.",
+      "reference": "Al-Ikhlas 112:1",
+      "note": "Illustrates the third-person pronoun هُوَ (huwa), which connects to the lesson’s discussion of pronoun reference and context-based identification."
+    },
+    {
+      "arabic": "اللَّهُ الصَّمَدُ",
+      "transliteration": "Allāhu al-ṣamad",
+      "translation": "Allah, the Eternal Refuge.",
+      "reference": "Al-Ikhlas 112:2",
+      "note": "Shows nominal sentence structure where the subject (Allah عَزَّ وَجَلَّ) is clearly identified without pronoun ambiguity, reinforcing grammatical clarity discussed in the lesson."
+    }
   ]
 }

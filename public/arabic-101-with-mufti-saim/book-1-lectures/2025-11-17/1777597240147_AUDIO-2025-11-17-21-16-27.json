@@ -16,6 +16,7 @@
     "[00:15:08] Q: Does this rule apply only to plurals? — A: No, it also applies to singulars but doesn't affect rules for them.",
     "[00:34:06] Q: How do you say 'seven doors' in Arabic? — A: Seven doors are سبعٌ أبوابًا (sab'un abwaaban) as per Quranic usage."
   ],
+  "date": "2025-11-17",
   "tags": [
     "Arabic",
     "Nouns",
@@ -23,5 +24,150 @@
     "Dual Forms",
     "Gender Agreement",
     "Beginner"
+  ],
+  "quiz": [
+    {
+      "q": "When the plural of a non-intellect (غَيْرُ عَاقِل) noun is used, how is it grammatically treated?",
+      "options": [
+        "As a masculine plural, using هَؤُلَاءِ and masculine adjectives",
+        "As a singular feminine, using هَذِهِ and feminine adjectives",
+        "As a masculine singular, using هَذَا and masculine adjectives",
+        "As a feminine plural, using هَؤُلَاءِ and feminine adjectives"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher explained that the plural of any noun that is غَيْرُ عَاقِل — lacking intellect, including animals and all objects — is treated as a singular feminine. So هَذِهِ الْأَقْلَامُ uses the singular feminine هَذِهِ even though أَقْلَام is a masculine plural."
+    },
+    {
+      "q": "The teacher clarified that غَيْرُ عَاقِل is not simply 'inanimate objects.' What does it actually include?",
+      "options": [
+        "Only inanimate objects like rocks and furniture",
+        "All living things except human beings",
+        "Animals and all objects — anything that lacks intellect, including living animals",
+        "Only the plurals of broken plural nouns"
+      ],
+      "correctIndex": 2,
+      "a": "The teacher explicitly corrected the assumption that غَيْرُ عَاقِل means 'inanimate.' It includes animals — which are animate and living — because they lack intellect (عَقْل) in the relevant sense. عَاقِل includes humans, jinn, and angels; everything else is غَيْرُ عَاقِل."
+    },
+    {
+      "q": "In the Qurʾānic phrase فِيهَا كُتُبٌ قَيِّمَةٌ, why is the adjective قَيِّمَةٌ feminine singular even though كُتُبٌ is a plural?",
+      "options": [
+        "Because كِتَاب is originally a feminine noun",
+        "Because كُتُبٌ is a broken plural of a غَيْرُ عَاقِل noun, so it is treated as singular feminine, requiring a feminine singular adjective",
+        "Because قَيِّمَةٌ is only used with definite nouns",
+        "Because the plural adjective form of قَيِّم does not exist"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher cited this āyah directly to illustrate the rule. كُتُبٌ is a plural of كِتَاب — a غَيْرُ عَاقِل noun — so it is treated as singular feminine. The adjective قَيِّمَةٌ must therefore be feminine singular to agree with it, even though the noun is a masculine plural."
+    },
+    {
+      "q": "How is the dual form created in Arabic, and what does it indicate?",
+      "options": [
+        "By adding ُونَ to the end of the noun; indicates a group of males",
+        "By adding انِ (āni) to the end of the noun; indicates exactly two of something",
+        "By repeating the noun twice; indicates emphasis on plurality",
+        "By adding اتٌ to the end; indicates a group of females"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher explained that the dual is formed by adding انِ (āni) to the singular noun and that it indicates exactly two of something. He gave examples: أُخْتٌ → أُخْتَانِ (two sisters), عِيدٌ → عِيدَانِ (two Eids). He also noted this is a feature unique to Arabic not found in English."
+    },
+    {
+      "q": "What is the demonstrative pronoun used for two near masculine objects (dual of هَذَا), and where does it appear in the Qurʾān?",
+      "options": [
+        "هَؤُلَاءِ — appears in Sūrat al-Baqarah referring to angels",
+        "هَاتَانِ — appears in Sūrat al-Qaṣaṣ referring to the two miracles of Mūsā عَلَيْهِ السَّلَام",
+        "ذَانِكَ — appears in Sūrat al-Qaṣaṣ referring to the two miracles of Mūsā عَلَيْهِ السَّلَام",
+        "تِلْكَ — appears in Sūrat Āl ʿImrān"
+      ],
+      "correctIndex": 2,
+      "a": "The teacher cited the Qurʾānic example فَذَانِكَ بُرْهَانَانِ مِنْ رَبِّكَ from Sūrat al-Qaṣaṣ. ذَانِكَ is the dual of ذَلِكَ (far demonstrative), referring to the two proofs/miracles given to Mūsā عَلَيْهِ السَّلَام — his shining hand and the removal of fear before Firʿawn."
+    },
+    {
+      "q": "For numbers 3–10, what are the three rules governing how the number and the maʿdūd (thing counted) are used?",
+      "options": [
+        "The number matches the gender of the maʿdūd; the maʿdūd is indefinite singular; the maʿdūd comes first",
+        "The number is the opposite gender of the maʿdūd; the number is muḍāf to the maʿdūd; the maʿdūd is plural",
+        "The number always uses the masculine form; the maʿdūd is definite; the maʿdūd is singular",
+        "The number follows the maʿdūd; both are the same gender; the maʿdūd takes tanwīn"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher reviewed three rules for numbers 3–10: (1) the number (ʿadad) is the opposite gender of the maʿdūd — e.g., عَشَرَةُ طُلَّابٍ uses feminine عَشَرَةُ because طُلَّاب is masculine; (2) the ʿadad comes first and is muḍāf to the maʿdūd, so the maʿdūd takes kasrah; (3) the maʿdūd must be plural."
+    },
+    {
+      "q": "How do you say 'five female students are in our classroom' applying the number rules correctly?",
+      "options": [
+        "خَمْسَةُ طَالِبَاتٍ فِي فَصْلِنَا — using feminine خَمْسَة because the maʿdūd is feminine",
+        "خَمْسُ طَالِبَاتٍ فِي فَصْلِنَا — using masculine خَمْسُ because the maʿdūd طَالِبَات is feminine",
+        "خَمْسُونَ طَالِبَةً فِي فَصْلِنَا — using the plural number form",
+        "خَمْسَ طَالِبَاتٍ فِي فَصْلِنَا — using خَمْسَ with fatḥah throughout"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher gave this exact example. طَالِبَاتٍ is a feminine plural, so the number must be masculine (opposite gender rule): خَمْسُ, not خَمْسَةُ. The ʿadad خَمْسُ is muḍāf to the maʿdūd طَالِبَاتٍ, which therefore takes kasrah and no tanwīn on the number."
+    },
+    {
+      "q": "What are the three rules governing the word after كَمْ (kam, how many)?",
+      "options": [
+        "It must be definite, masculine, and plural",
+        "It must be indefinite (with tanwīn), singular, and take fatḥah",
+        "It must be plural, feminine, and take kasrah",
+        "It must be muḍāf, dual, and take ḍammah"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher stated that the noun following كَمْ must be: (1) indefinite — it carries tanwīn; (2) singular — not plural, unlike English 'how many students'; (3) take fatḥah. Example: كَمْ طَالِبًا فِي الْفَصْلِ — 'How many students are in the classroom?' — where طَالِبًا is singular, indefinite, with fatḥah."
+    },
+    {
+      "q": "If mawṣūf and ṣifah rules require agreement in number, what must change in a dual noun-adjective phrase?",
+      "options": [
+        "Only the mawṣūf becomes dual; the ṣifah remains singular",
+        "Both the mawṣūf and the ṣifah must be in the dual form",
+        "The ṣifah becomes plural when the mawṣūf is dual",
+        "The ṣifah drops its tanwīn but does not change its number form"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher explained that mawṣūf and ṣifah must agree in number — singular, dual, or plural. He gave the example مَتْجَرَانِ كَبِيرَانِ (two big stores) and مَسْجِدَانِ صَغِيرَانِ (two small masjids), where both the noun and adjective carry the dual انِ ending."
+    }
+  ],
+  "quran_examples": [
+    {
+      "arabic": "وَهَٰذِهِ الْأَنْهَارُ تَجْرِي مِن تَحْتِي",
+      "transliteration": "Wa-hādhihi al-anhāru tajrī min taḥtī",
+      "translation": "And these rivers flow beneath me.",
+      "reference": "Surah Az-Zukhruf 43:51",
+      "note": "Cited directly by the teacher as a Qurʾānic example of the غَيْرُ عَاقِل plural rule. الْأَنْهَارُ is a masculine plural (rivers), but because rivers lack intellect it is treated as singular feminine — hence هَٰذِهِ (singular feminine demonstrative) rather than هَؤُلَاءِ. Allāh عَزَّ وَجَلَّ quotes Firʿawn using this construction."
+    },
+    {
+      "arabic": "فِيهَا كُتُبٌ قَيِّمَةٌ",
+      "transliteration": "Fīhā kutubun qayyimah",
+      "translation": "In it are upright scriptures.",
+      "reference": "Surah Al-Bayyinah 98:3",
+      "note": "Cited by the teacher to illustrate mawṣūf–ṣifah agreement with the غَيْرُ عَاقِل plural rule. كُتُبٌ is the plural of كِتَاب (masculine), but as a غَيْرُ عَاقِل plural it is treated as singular feminine — so the adjective قَيِّمَةٌ is feminine singular rather than the masculine plural قَيِّمُونَ."
+    },
+    {
+      "arabic": "فَذَانِكَ بُرْهَانَانِ مِن رَّبِّكَ إِلَىٰ فِرْعَوْنَ وَمَلَئِهِ",
+      "transliteration": "Fadhānika burhānāni min rabbika ilā firʿawna wa-malaʾih",
+      "translation": "So those two are proofs from your Lord to Pharaoh and his people.",
+      "reference": "Surah Al-Qasas 28:32",
+      "note": "Cited directly by the teacher to illustrate ذَانِكَ — the dual far demonstrative (dual of ذَلِكَ). It refers to the two miracles given to Mūsā عَلَيْهِ السَّلَام. Note also that بُرْهَانَانِ is itself a dual noun carrying the انِ ending, and that إِلَى فِرْعَوْنَ demonstrates the ghayr al-munsarif rule (fatḥah instead of kasrah) reviewed in earlier sessions."
+    },
+    {
+      "arabic": "لَهَا سَبْعَةُ أَبْوَابٍ لِّكُلِّ بَابٍ مِّنْهُمْ جُزْءٌ مَّقْسُومٌ",
+      "transliteration": "Lahā sabʿatu abwābin li-kulli bābin minhum juzʾun maqsūm",
+      "translation": "It has seven gates; for each gate a portion of them is assigned.",
+      "reference": "Surah Al-Hijr 15:44",
+      "note": "The teacher asked students how to say 'seven doors' and a student recalled this verse from Sūrat al-Ḥijr. It perfectly illustrates the number rules: بَاب (door) is masculine, so the number سَبْعَةُ is feminine (opposite gender rule); سَبْعَةُ is muḍāf to أَبْوَابٍ which is plural and takes kasrah."
+    },
+    {
+      "arabic": "فِي جَنَّتَيْنِ عَظِيمَتَيْنِ",
+      "transliteration": "Fī jannatayni ʿaẓīmatayn",
+      "translation": "In two great gardens.",
+      "reference": "Surah Ar-Rahman 55:46",
+      "note": "Illustrates the dual form انِ (āni) that the teacher introduced in lesson 18, noting that Sūrat al-Raḥmān contains many dual forms. جَنَّتَانِ (two gardens) in the oblique becomes جَنَّتَيْنِ after the preposition فِي. The adjective عَظِيمَتَيْنِ is also dual, demonstrating that the ṣifah must match the mawṣūf in number — exactly the mawṣūf–ṣifah dual agreement point the teacher taught."
+    },
+    {
+      "arabic": "كَم مِّن فِئَةٍ قَلِيلَةٍ غَلَبَتْ فِئَةً كَثِيرَةً بِإِذْنِ اللَّهِ",
+      "transliteration": "Kam min fiʾatin qalīlatin ghalabat fiʾatan kathīratan bi-idhni Allāh",
+      "translation": "How many a small group has overcome a large group by the permission of Allāh عَزَّ وَجَلَّ.",
+      "reference": "Surah Al-Baqarah 2:249",
+      "note": "Illustrates كَمْ (how many/how much) as taught in the lesson. Here كَم is followed by مِنْ and a singular indefinite noun فِئَةٍ (a group), consistent with the rule that the noun after كَمْ is singular and indefinite. The verse also uses the singular form فِئَة rather than a plural, just as the teacher explained that Arabic uses singular after كَمْ unlike English."
+    }
   ]
 }

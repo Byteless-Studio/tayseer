@@ -26,5 +26,175 @@
                  "Quranic examples",
                  "Nahw"
              ],
-    "date":  "2024-11-20"
+    "date":  "2024-11-20",
+    "quiz": [
+        {
+            "q": "What is Rule 5 introduced in this lesson about the مُضَاف (muḍāf)?",
+            "options": [
+                "A) The muḍāf must always end with ḍamma (pesh)",
+                "B) The muḍāf can have any ḥaraka — fatḥa, kasra, or ḍamma",
+                "C) The muḍāf must always end with kasra",
+                "D) The muḍāf never changes its ending"
+            ],
+            "correctIndex": 1,
+            "a": "Rule 5 clarifies that the muḍāf is not restricted to ḍamma; it can carry fatḥa, kasra, or ḍamma depending on its grammatical role in the sentence."
+        },
+        {
+            "q": "Which of the following is NOT allowed on the مُضَاف (the first word in an iḍāfa construction)?",
+            "options": [
+                "A) Fatḥa (zabar)",
+                "B) Kasra (zer)",
+                "C) Tanwīn or أَل",
+                "D) Ḍamma (pesh)"
+            ],
+            "correctIndex": 2,
+            "a": "The muḍāf can never take tanwīn or the definite article أَل. This is one of the core rules of iḍāfa."
+        },
+        {
+            "q": "In مَالِكِ يَوْمِ الدِّينِ from Sūrah al-Fātiḥa, which word is the muḍāf إِلَيْهِ (second noun) of مَالِكِ?",
+            "options": [
+                "A) الدِّينِ",
+                "B) يَوْمِ",
+                "C) مَالِكِ",
+                "D) رَبِّ"
+            ],
+            "correctIndex": 1,
+            "a": "يَوْمِ is the muḍāf إِلَيْهِ of مَالِكِ, forming 'Master of the day.' يَوْمِ is itself then a muḍāf to الدِّينِ, making this a double iḍāfa."
+        },
+        {
+            "q": "Why does مُوسَى (Mūsā, عَلَيْهِ السَّلَام) not take kasra when it appears as the muḍāf إِلَيْهِ?",
+            "options": [
+                "A) Because it is a verb, not a noun",
+                "B) Because it has the definite article أَل",
+                "C) Because it is ghayr munṣarif — a word that does not change regardless of context",
+                "D) Because it already ends with kasra"
+            ],
+            "correctIndex": 2,
+            "a": "مُوسَى is ghayr munṣarif (a diptote/non-declinable word). Such words do not accept the regular case endings, so the expected kasra does not appear."
+        },
+        {
+            "q": "What is the teacher's preferred approach for translating a مُضَاف وَمُضَافٌ إِلَيْهِ construction into English?",
+            "options": [
+                "A) Always use 'possessor and possessed'",
+                "B) Use 'owned by' between the two words",
+                "C) Use 'blank of blank' — translate the first word, add 'of', then the second",
+                "D) Reverse the order and add 'has'"
+            ],
+            "correctIndex": 2,
+            "a": "The teacher recommends 'blank of blank' (e.g., نَصْرُ اللَّهِ = 'the help of Allāh عَزَّ وَجَلَّ') because 'possessor/possessed' breaks down with Qur'ānic examples like رَبِّ النَّاسِ."
+        },
+        {
+            "q": "In نَصْرُ اللَّهِ from Sūrah al-Naṣr, which rule does نَصْرُ satisfy that confirms it is the مُضَاف?",
+            "options": [
+                "A) It has tanwīn",
+                "B) It comes second and has kasra",
+                "C) It comes first and has neither أَل nor tanwīn",
+                "D) It is preceded by أَل"
+            ],
+            "correctIndex": 2,
+            "a": "نَصْرُ comes first, carries no أَل and no tanwīn — satisfying the defining rules of the muḍāf. اللَّهِ follows with kasra as the muḍāf إِلَيْهِ."
+        },
+        {
+            "q": "مَالِكِ يَوْمِ الدِّينِ is described in the lesson as 'like inception' because:",
+            "options": [
+                "A) It contains three separate sentences",
+                "B) يَوْمِ is simultaneously a muḍāf إِلَيْهِ to مَالِكِ and a muḍāf to الدِّينِ — a double iḍāfa",
+                "C) It uses two definite articles",
+                "D) The words can be rearranged freely"
+            ],
+            "correctIndex": 1,
+            "a": "يَوْمِ serves a dual role: it is the muḍāf إِلَيْهِ (second noun) for مَالِكِ, and at the same time it is the muḍāf (first noun) for الدِّينِ, creating a chained double iḍāfa."
+        },
+        {
+            "q": "Which example from the lesson demonstrates that the مُضَاف does NOT have to carry ḍamma?",
+            "options": [
+                "A) نَصْرُ اللَّهِ — naṣr carries ḍamma",
+                "B) هُوَ عَلَى مَكْتَبِ الْمُدَرِّسِ — maktabi carries kasra as the muḍāf",
+                "C) جَنَّاتُ عَدْنٍ — jannātu carries ḍamma",
+                "D) كِتَابُ مُحَمَّدٍ — kitābu carries ḍamma"
+            ],
+            "correctIndex": 1,
+            "a": "مَكْتَبِ in هُوَ عَلَى مَكْتَبِ الْمُدَرِّسِ carries kasra yet is the muḍāf, proving Rule 5 — the muḍāf is not locked to ḍamma."
+        },
+        {
+            "q": "In مَقَامُ إِبْرَاهِيمَ (the Station of Ibrāhīm, عَلَيْهِ السَّلَام), why does إِبْرَاهِيمَ end with fatḥa instead of kasra?",
+            "options": [
+                "A) Because إِبْرَاهِيمَ is a verb",
+                "B) Because it is ghayr munṣarif — a non-declinable foreign proper noun that substitutes fatḥa for kasra",
+                "C) Because it is the muḍāf, not the muḍāf إِلَيْهِ",
+                "D) Because it has the definite article أَل"
+            ],
+            "correctIndex": 1,
+            "a": "إِبْرَاهِيمَ is a ghayr munṣarif (non-declinable) foreign proper noun. Such words use fatḥa in place of the expected kasra in the genitive position."
+        },
+        {
+            "q": "Which statement correctly summarises all five rules of مُضَافٌ وَمُضَافٌ إِلَيْهِ as taught in this lesson?",
+            "options": [
+                "A) Muḍāf comes first; muḍāf has no أَل or tanwīn; muḍāf إِلَيْهِ generally has kasra; nothing comes between them; muḍāf can have any ḥaraka",
+                "B) Muḍāf comes second; muḍāf always has ḍamma; muḍāf إِلَيْهِ always has ḍamma; nothing comes between them; muḍāf can have tanwīn",
+                "C) Muḍāf comes first; muḍāf always has ḍamma; muḍāf إِلَيْهِ always has kasra; a verb can come between them; muḍāf cannot have fatḥa",
+                "D) Muḍāf comes second; muḍāf has no kasra; muḍāf إِلَيْهِ has no حَرَكَة; nothing comes between them; muḍāf can have أَل"
+            ],
+            "correctIndex": 0,
+            "a": "Option A accurately captures all five rules: (1) muḍāf first, (2) muḍāf has no أَل/tanwīn, (3) muḍāf إِلَيْهِ generally ends with kasra, (4) nothing intervenes between them, (5) muḍāf may carry any ḥaraka."
+        }
+    ],
+    "quran_examples": [
+        {
+            "arabic": "إِذَا جَاءَ نَصْرُ اللَّهِ وَالْفَتْحُ",
+            "transliteration": "idhā jāʾa naṣru llāhi wa-l-fatḥu",
+            "translation": "When the help of Allāh and the conquest comes",
+            "reference": "Surah al-Naṣr 110:1",
+            "note": "نَصْرُ اللَّهِ is the primary Qur'ānic iḍāfa example drilled in class. نَصْرُ is the muḍāf (no أَل, no tanwīn); اللَّهِ is the muḍāf إِلَيْهِ with kasra — satisfying all five rules."
+        },
+        {
+            "arabic": "جَنَّاتُ عَدْنٍ تَجْرِي مِنْ تَحْتِهَا الْأَنْهَارُ",
+            "transliteration": "jannātu ʿadnin tajrī min taḥtihā l-anhāru",
+            "translation": "Gardens of Eden beneath which rivers flow",
+            "reference": "Surah al-Tawba 9:72",
+            "note": "جَنَّاتُ عَدْنٍ was brought as a student example in class. جَنَّاتُ is the muḍāf; عَدْنٍ is the muḍāf إِلَيْهِ with kasra-tanwīn (no أَل on the first noun). The teacher also noted this is a descriptive iḍāfa, not a simple possession relationship."
+        },
+        {
+            "arabic": "اللَّهُ نُورُ السَّمَاوَاتِ وَالْأَرْضِ",
+            "transliteration": "allāhu nūru s-samāwāti wa-l-arḍi",
+            "translation": "Allāh is the Light of the heavens and the earth",
+            "reference": "Surah al-Nur 24:35",
+            "note": "نُورُ السَّمَاوَاتِ was cited as a student-found example. نُورُ carries ḍamma as the muḍāf; السَّمَاوَاتِ has kasra as the muḍāf إِلَيْهِ, checking all the boxes of the five rules."
+        },
+        {
+            "arabic": "مَالِكِ يَوْمِ الدِّينِ",
+            "transliteration": "māliki yawmi d-dīni",
+            "translation": "Master of the Day of Recompense",
+            "reference": "Surah al-Fatiha 1:4",
+            "note": "The teacher used this as the 'double iḍāfa' (inception) example: مَالِكِ is muḍāf to يَوْمِ, and يَوْمِ is simultaneously muḍāf to الدِّينِ. It also illustrates Rule 5 — مَالِكِ carries kasra yet is the muḍāf."
+        },
+        {
+            "arabic": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+            "transliteration": "al-ḥamdu lillāhi rabbi l-ʿālamīna",
+            "translation": "All praise is due to Allāh عَزَّ وَجَلَّ, Lord of all the worlds",
+            "reference": "Surah al-Fatiha 1:2",
+            "note": "رَبِّ الْعَالَمِينَ was raised by a student in class. رَبِّ carries kasra as the muḍāf (Rule 5 — muḍāf need not be ḍamma); الْعَالَمِينَ has kasra as the muḍāf إِلَيْهِ. The teacher noted الْعَالَمِينَ has kasra due to its own grammatical rule, to be covered later."
+        },
+        {
+            "arabic": "قُلْ أَعُوذُ بِرَبِّ النَّاسِ",
+            "transliteration": "qul aʿūdhu bi-rabbi n-nāsi",
+            "translation": "Say: I seek refuge with the Lord of mankind",
+            "reference": "Surah al-Nas 114:1",
+            "note": "رَبِّ النَّاسِ was used to illustrate why 'possessor/possessed' terminology breaks down — the people do not 'own' Allāh عَزَّ وَجَلَّ. This example reinforced the teacher's preferred 'blank of blank' translation method."
+        },
+        {
+            "arabic": "مُحَمَّدٌ رَسُولُ اللَّهِ",
+            "transliteration": "muḥammadun rasūlu llāhi",
+            "translation": "Muḥammad ﷺ is the Messenger of Allāh عَزَّ وَجَلَّ",
+            "reference": "Surah al-Fath 48:29",
+            "note": "رَسُولُ اللَّهِ was cited in class to show iḍāfa in a nominal sentence. رَسُولُ is the muḍāf (ḍamma, no tanwīn, no أَل); اللَّهِ is the muḍāf إِلَيْهِ with kasra — all five rules satisfied."
+        },
+        {
+            "arabic": "وَاتَّخَذَ اللَّهُ إِبْرَاهِيمَ خَلِيلًا ۞ وَلِلَّهِ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ وَكَانَ اللَّهُ بِكُلِّ شَيْءٍ مُحِيطًا",
+            "transliteration": "wa-ttakhadha llāhu ibrāhīma khalīlan … wa-kāna llāhu bi-kulli shayʾin muḥīṭan",
+            "translation": "…and Allāh عَزَّ وَجَلَّ took Ibrāhīm عَلَيْهِ السَّلَام as a close friend",
+            "reference": "Surah al-Nisa 4:125",
+            "note": "Cited to contextualise the مَقَامُ إِبْرَاهِيمَ discussion. إِبْرَاهِيمَ ends in fatḥa rather than kasra because it is ghayr munṣarif — a foreign proper noun that substitutes fatḥa for the expected kasra in the genitive position, as explained when discussing مَقَامُ إِبْرَاهِيمَ."
+        }
+    ]
 }

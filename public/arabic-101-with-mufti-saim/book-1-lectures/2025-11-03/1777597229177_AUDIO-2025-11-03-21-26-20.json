@@ -17,6 +17,7 @@
     "[00:17:04] Q: Why does Masjidu have a dhamma instead of kasra? — A: It's on the fa'lan pattern (Masajidu).",
     "[00:36:00] Q: How to use 'hati' for commands? — A: Singular command, e.g., 'hati' vs. plural 'hato'."
   ],
+  "date": "2025-11-03",
   "tags": [
     "Arabic Grammar",
     "Ghayr Munsarif",
@@ -24,5 +25,161 @@
     "Tanween Rules",
     "Nahw",
     "Beginner"
+  ],
+  "quiz": [
+    {
+      "q": "The lecture reviews three situations in which a noun loses its tanwīn before introducing ghayr al-munsarif. What are those three situations?",
+      "options": [
+        "When the noun is plural, feminine, or a verb",
+        "When the noun has ال, when it is muḍāf, or when it is preceded by يَا (yā)",
+        "When the noun is ghayr al-munsarif, non-Arabic, or on the pattern of أَفْعَل",
+        "When the noun is definite, in the genitive case, or a proper noun"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher listed the three already-known scenarios: (1) the noun has ال — the 'million dollar rule'; (2) the noun is muḍāf, e.g., كِتَابُ بِلَادٍ; (3) the noun follows يَا, e.g., يَا رَجُلُ. He then introduced ghayr al-munsarif as a fourth, separate category."
+    },
+    {
+      "q": "What is the practical effect of ghayr al-munsarif on a word when it is in a position that would normally require a kasrah?",
+      "options": [
+        "It receives a ḍammah instead of a kasrah",
+        "It receives a fatḥah instead of a kasrah, and it never takes tanwīn",
+        "It receives sukūn instead of a kasrah",
+        "It is left without any vowel marking"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher stated this as the core rule: wherever a ghayr al-munsarif word would normally receive a kasrah, it receives a fatḥah instead, and it never takes tanwīn. The entire final lesson of the book is dedicated to seeing this in practice."
+    },
+    {
+      "q": "In the phrase اذْهَبْ إِلَىٰ فِرْعَوْنَ, why does فِرْعَوْن carry a fatḥah after the preposition إِلَى rather than a kasrah?",
+      "options": [
+        "Because إِلَى is always followed by a fatḥah",
+        "Because فِرْعَوْن is a non-Arabic proper noun and is therefore ghayr al-munsarif",
+        "Because فِرْعَوْن is on the pattern of أَفْعَل",
+        "Because it is a muḍāf in this sentence"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher used this example directly. إِلَى is a ḥarf al-jār which should make the following word kasrah, but فِرْعَوْن is a non-Arabic proper noun, making it ghayr al-munsarif, so it takes fatḥah instead of kasrah."
+    },
+    {
+      "q": "In the Durūd Ibrāhīmī recited in every ṣalāh, why is it عَلَى إِبْرَاهِيمَ (with fatḥah) rather than عَلَى إِبْرَاهِيمٍ (with kasrah and tanwīn)?",
+      "options": [
+        "Because إِبْرَاهِيم is a feminine name",
+        "Because عَلَى always requires fatḥah on the word after it",
+        "Because إِبْرَاهِيم is a non-Arabic proper noun and is therefore ghayr al-munsarif",
+        "Because إِبْرَاهِيم is on the pattern of فَعْلَان"
+      ],
+      "correctIndex": 2,
+      "a": "The teacher highlighted this as a daily practical example. إِبْرَاهِيم is a non-Arabic name originating from Syriac, so it is ghayr al-munsarif: it takes fatḥah where kasrah is expected and never takes tanwīn."
+    },
+    {
+      "q": "The lecture lists eight categories of ghayr al-munsarif. Which of the following is NOT one of those categories?",
+      "options": [
+        "Feminine proper nouns (e.g., مَرْيَم، فَاطِمَة)",
+        "Adjectives on the pattern of فَعْلَان (e.g., كَسْلَان، عَطْشَان)",
+        "Nouns in the dual form (e.g., كِتَابَان)",
+        "Non-Arabic proper nouns (e.g., لَنْدَن، إِبْرَاهِيم)"
+      ],
+      "correctIndex": 2,
+      "a": "The eight categories listed in the lesson are: feminine proper nouns, male names with tāʾ marbūṭah, proper nouns ending in ان, adjectives on فَعْلَان, masculine proper nouns on the pattern of أَفْعَل, adjectives on the pattern of أَفْعَل (colors), non-Arabic proper nouns, and certain broken plural patterns. The dual form is not a category of ghayr al-munsarif."
+    },
+    {
+      "q": "The word كَسْلَان (kaslān, very lazy) is ghayr al-munsarif. What does this form indicate compared to the regular كَسِل (kasil, lazy)?",
+      "options": [
+        "كَسْلَان is the plural form of كَسِل",
+        "كَسْلَان is a ṣīghat al-mubālaghah form indicating greater intensity — extreme laziness rather than ordinary laziness",
+        "كَسْلَان is the feminine form of كَسِل",
+        "كَسْلَان is the past tense verb form"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher explained that the فَعْلَان pattern is a ṣīghat al-mubālaghah (form of exaggeration/intensity). كَسِل means simply lazy, while كَسْلَان conveys extreme or intense laziness. Similarly, مَلْآن means very full and عَطْشَان means intensely thirsty."
+    },
+    {
+      "q": "What does the pattern فَاعِل (fāʿil) indicate in Arabic, and what are the examples the teacher gave?",
+      "options": [
+        "It indicates the place where an action occurs; e.g., مَسْجِد (place of prostration)",
+        "It indicates the doer of the action; e.g., كَاتِبٌ (writer), جَالِسٌ (one who is sitting), وَاقِفٌ (one who is standing)",
+        "It indicates an action being done to someone; e.g., مَكْتُوب (something written)",
+        "It indicates an adjective describing intensity; e.g., رَحْمَان"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher explained that the فَاعِل pattern means the doer of the action. He gave three examples: كَتَبَ (to write) → كَاتِبٌ (writer); جَلَسَ (to sit) → جَالِسٌ (one sitting); وَقَفَ (to stand) → وَاقِفٌ (one standing). Any Arabic verb can be placed into this pattern to derive the word for its doer."
+    },
+    {
+      "q": "What does the imperative word هَاتِ (hāti) mean, and what is its plural form as cited from the Qurʾān?",
+      "options": [
+        "هَاتِ means 'take' (singular), and its plural is خُذُوا",
+        "هَاتِ means 'give/pass it to me' (singular command), and its plural is هَاتُوا — as in هَاتُوا بُرْهَانَكُمْ إِنْ كُنْتُمْ صَادِقِينَ",
+        "هَاتِ means 'go' (singular), and its plural is اذْهَبُوا",
+        "هَاتِ means 'read' (singular), and its plural is اقْرَؤُوا"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher explained that هَاتِ is a command meaning 'give me' or 'pass it over,' used for one person. Its plural form هَاتُوا is used when addressing a group. He cited the Qurʾānic example هَاتُوا بُرْهَانَكُمْ إِنْ كُنْتُمْ صَادِقِينَ — 'Bring your proof if you are truthful' — from Sūrat al-Baqarah."
+    },
+    {
+      "q": "In the sentence لَقَدْ كَانَ فِي يُوسُفَ وَإِخْوَتِهِ آيَاتٌ, why does يُوسُف carry a fatḥah after the preposition فِي?",
+      "options": [
+        "Because فِي is always followed by a fatḥah",
+        "Because يُوسُف is on the pattern of فَعْلَان",
+        "Because يُوسُف is a non-Arabic proper noun and is ghayr al-munsarif, so it takes fatḥah where kasrah is expected",
+        "Because يُوسُف is a feminine name"
+      ],
+      "correctIndex": 2,
+      "a": "The teacher cited this verse directly. فِي is a ḥarf al-jār that should produce kasrah, but يُوسُف is a non-Arabic proper noun and therefore ghayr al-munsarif. It takes fatḥah instead of kasrah, clearly demonstrating the rule."
+    },
+    {
+      "q": "The city of مَكَّة (Makkah) carries a fatḥah after بِ in the Qurʾānic phrase بِبَطْنِ مَكَّةَ. What makes مَكَّة ghayr al-munsarif?",
+      "options": [
+        "Because it is on the pattern of أَفْعَل",
+        "Because it has a tāʾ marbūṭah at the end, which makes any proper noun ghayr al-munsarif",
+        "Because it is on the pattern of فَعْلَان",
+        "Because all city names are ghayr al-munsarif"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher discussed this in class. مَكَّة is a proper noun with a tāʾ marbūṭah, which is one of the categories of ghayr al-munsarif proper nouns. Therefore, even though a ḥarf al-jār precedes it, it receives fatḥah rather than kasrah."
+    }
+  ],
+  "quran_examples": [
+    {
+      "arabic": "اذْهَبْ إِلَىٰ فِرْعَوْنَ إِنَّهُ طَغَىٰ",
+      "transliteration": "Idhhab ilā firʿawna innahū ṭaghā",
+      "translation": "Go to Pharaoh; indeed, he has transgressed.",
+      "reference": "Surah An-Naziat 79:17",
+      "note": "Cited directly by the teacher as the primary classroom example of ghayr al-munsarif in action. إِلَى is a ḥarf al-jār that should produce kasrah, but فِرْعَوْن is a non-Arabic proper noun and therefore ghayr al-munsarif — it receives fatḥah instead of kasrah."
+    },
+    {
+      "arabic": "لَقَدْ كَانَ فِي يُوسُفَ وَإِخْوَتِهِ آيَاتٌ لِّلسَّائِلِينَ",
+      "transliteration": "Laqad kāna fī yūsufa wa-ikhwatihi āyātun lil-sāʾilīn",
+      "translation": "Indeed in Yūsuf and his brothers were signs for those who ask.",
+      "reference": "Surah Yusuf 12:7",
+      "note": "Cited directly by the teacher to demonstrate that يُوسُف is ghayr al-munsarif. The preposition فِي should produce kasrah, but because يُوسُف is a non-Arabic proper noun, it takes fatḥah instead: فِي يُوسُفَ."
+    },
+    {
+      "arabic": "هَاتُوا بُرْهَانَكُمْ إِن كُنتُمْ صَادِقِينَ",
+      "transliteration": "Hātū burhānakum in kuntum ṣādiqīn",
+      "translation": "Bring your proof, if you are truthful.",
+      "reference": "Surah Al-Baqarah 2:111",
+      "note": "Cited by the teacher to illustrate the plural imperative هَاتُوا (hātū) — 'bring/give me,' addressed to a group. He explained that هَاتِ is used for a single person and هَاتُوا for a group, and used this verse as the Qurʾānic proof. بُرْهَان means proof."
+    },
+    {
+      "arabic": "وَهُوَ الَّذِي كَفَّ أَيْدِيَهُمْ عَنكُمْ وَأَيْدِيَكُمْ عَنْهُم بِبَطْنِ مَكَّةَ",
+      "transliteration": "Wa-huwa alladhī kaffa aydiyahum ʿankum wa-aydiyakum ʿanhum bi-baṭni makkata",
+      "translation": "And it is He who withheld their hands from you and your hands from them in the valley of Makkah.",
+      "reference": "Surah Al-Fath 48:24",
+      "note": "Cited by the teacher to show that مَكَّة is ghayr al-munsarif. The preposition بِ should produce kasrah, but مَكَّة — a proper noun with tāʾ marbūṭah — takes fatḥah instead: بِبَطْنِ مَكَّةَ."
+    },
+    {
+      "arabic": "اللَّهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَعَلَىٰ آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَىٰ إِبْرَاهِيمَ وَعَلَىٰ آلِ إِبْرَاهِيمَ",
+      "transliteration": "Allāhumma ṣalli ʿalā Muḥammadin wa-ʿalā āli Muḥammadin kamā ṣallayta ʿalā Ibrāhīma wa-ʿalā āli Ibrāhīm",
+      "translation": "O Allāh عَزَّ وَجَلَّ, send blessings upon Muḥammad ﷺ and upon the family of Muḥammad ﷺ, as You sent blessings upon Ibrāhīm عَلَيْهِ السَّلَام and upon the family of Ibrāhīm عَلَيْهِ السَّلَام.",
+      "reference": "Al-Durūd al-Ibrāhīmī (recited in Ṣalāh)",
+      "note": "Cited by the teacher as the most familiar daily example of ghayr al-munsarif. مُحَمَّد takes normal kasrah (عَلَى مُحَمَّدٍ) because it is Arabic, while إِبْرَاهِيم takes fatḥah (عَلَى إِبْرَاهِيمَ) because it is a non-Arabic proper noun and therefore ghayr al-munsarif."
+    },
+    {
+      "arabic": "قُلْ هَاتُوا بُرْهَانَكُمْ هَٰذَا ذِكْرُ مَن مَّعِيَ وَذِكْرُ مَن قَبْلِي",
+      "transliteration": "Qul hātū burhānakum hādhā dhikru man maʿiya wa-dhikru man qablī",
+      "translation": "Say: 'Bring your proof. This is the reminder of those with me and the reminder of those before me.'",
+      "reference": "Surah Al-Anbiya 21:24",
+      "note": "A second Qurʾānic instance of the plural imperative هَاتُوا, reinforcing the teacher's explanation of its usage when addressing a group. It also demonstrates قُلْ — the imperative of قَالَ — reviewed across this series of lessons."
+    }
   ]
 }
