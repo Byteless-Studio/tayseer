@@ -4,6 +4,20 @@ import { courses } from '#/config/site'
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
+export interface QuizItem {
+  q: string
+  a: string
+  options?: string[]
+}
+
+export interface QuranExample {
+  arabic: string
+  transliteration?: string
+  translation: string
+  reference?: string
+  note?: string
+}
+
 export interface Lecture {
   id: string
   date?: string  // ISO date string YYYY-MM-DD
@@ -13,6 +27,8 @@ export interface Lecture {
   tags?: string[]
   transcript?: string
   questions?: Array<{ q?: string; a?: string } | string>
+  quiz?: QuizItem[]
+  quran_examples?: QuranExample[]
   platform?: string
   ts?: number
   source?: Record<string, unknown>

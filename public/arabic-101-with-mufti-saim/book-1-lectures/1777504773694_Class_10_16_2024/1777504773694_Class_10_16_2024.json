@@ -28,5 +28,111 @@
                  "Balagha",
                  "Intermediate"
              ],
-    "date":  "2024-10-16"
+    "date":  "2024-10-16",
+    "quiz": [
+        {
+            "q": "What are the three grammatical characteristics of هَذَا (Hatha)?",
+            "options": [
+                "Masculine, singular, near",
+                "Feminine, singular, near",
+                "Masculine, plural, near",
+                "Masculine, singular, far"
+            ],
+            "a": "Masculine, singular, near. هَذَا is used for masculine singular nouns that are physically or contextually close to the speaker."
+        },
+        {
+            "q": "What is the only difference between هَذَا (Hatha) and ذَٰلِكَ (Zalika)?",
+            "options": [
+                "هَذَا is near, ذَٰلِكَ is far — all other properties (masculine, singular) are the same",
+                "هَذَا is masculine, ذَٰلِكَ is feminine",
+                "هَذَا is singular, ذَٰلِكَ is plural",
+                "هَذَا is for intellect, ذَٰلِكَ is for non-intellect"
+            ],
+            "a": "The only difference is proximity: هَذَا is for near objects, ذَٰلِكَ is for far objects. Both are masculine and singular."
+        },
+        {
+            "q": "When is مَا used instead of مَنْ when asking a question?",
+            "options": [
+                "مَا is for things without intellect (objects, animals); مَنْ is for things with intellect (people)",
+                "مَا is for singular; مَنْ is for plural",
+                "مَا is for masculine; مَنْ is for feminine",
+                "They are interchangeable"
+            ],
+            "a": "مَا is used to ask about things without intellect (e.g., objects, animals), while مَنْ is used to ask about things that have intellect (e.g., people)."
+        },
+        {
+            "q": "Why does Surah Al-Kafirun use مَا when referring to Allah, even though Allah has intellect?",
+            "options": [
+                "Because of the rhetorical device al-Mushakala — maintaining symmetry with the مَا used earlier for idols",
+                "It is a grammatical error in the Quran",
+                "Because مَا can always be used for Allah",
+                "Because the Prophet ﷺ is speaking, not Allah"
+            ],
+            "a": "This is the rhetorical device called al-Mushakala (المشاكلة), a concept from Balagha (Arabic rhetoric). The word مَا was already used for the idols (which have no intellect), and to preserve the symmetry and beauty of the speech, مَا was used again. The Quran considers both meaning and sound."
+        },
+        {
+            "q": "Surah Al-Baqarah 2:2 uses ذَٰلِكَ الْكِتَابُ for the Quran even though the Quran is right in front of the reader. Why?",
+            "options": [
+                "To indicate the Quran's elevated status — it is so exalted it is as if it is far above us",
+                "Because the Quran was revealed far away in Makkah",
+                "It was a mistake by the scribes",
+                "ذَٰلِكَ can also mean 'this' in certain dialects"
+            ],
+            "a": "The scholars of Tafsir explain that ذَٰلِكَ here signals the Quran's lofty status — it is of such a high rank that it is as if it is above and beyond us, not merely 'in front of us.' This is a beautiful example of how proximity in Arabic can be metaphorical, not just physical."
+        },
+        {
+            "q": "Can هَذَا and ذَٰلِكَ be used for things with intellect (like people) or only for objects?",
+            "options": [
+                "Both can be used for anything — people, animals, or objects. The intellect rule only applies to مَا and مَنْ.",
+                "هَذَا is only for objects, ذَٰلِكَ is only for people",
+                "Neither can be used for people",
+                "Only ذَٰلِكَ can be used for people"
+            ],
+            "a": "هَذَا and ذَٰلِكَ can be used for anything — people, animals, or objects. The distinction between intellect (عاقل) and non-intellect (غير عاقل) only applies to مَنْ and مَا."
+        }
+    ],
+    "quran_examples": [
+        {
+            "arabic": "فَلْيَعْبُدُوا رَبَّ هَٰذَا الْبَيْتِ",
+            "transliteration": "Falyaʿbudū rabba hādhā al-bayt",
+            "translation": "So let them worship the Lord of this House.",
+            "reference": "Surah Quraysh 106:3",
+            "note": "هَذَا is used because the Quraysh lived in Makkah — the Kaaba was literally right in front of them every day. This surah was revealed in Makkah (Makki), making the use of هَذَا (near) perfectly fitting."
+        },
+        {
+            "arabic": "رَبِّ اجْعَلْ هَٰذَا الْبَلَدَ آمِنًا",
+            "transliteration": "Rabbi ajʿal hādhā al-balada āminan",
+            "translation": "O my Lord, make this land a place of security.",
+            "reference": "Surah Ibrahim 14:35",
+            "note": "Ibrahim ﷺ made this dua while standing in the valley of Makkah, pointing to the very land beneath his feet. هَذَا fits perfectly: the land is masculine (بَلَد), singular, and physically near — he is literally standing in it."
+        },
+        {
+            "arabic": "وَهَٰذَا الْبَلَدِ الْأَمِينِ",
+            "transliteration": "Wa hādhā al-baladi al-amīn",
+            "translation": "And by this secure city.",
+            "reference": "Surah At-Tin 95:3",
+            "note": "Allah swears by Makkah using هَذَا because this is a Makki surah — it was revealed in Makkah, making the city contextually near. هَذَا الْبَلَدِ الْأَمِينِ is the answer to Ibrahim's dua: Allah did make it a secure land."
+        },
+        {
+            "arabic": "مَتَىٰ هَٰذَا الْوَعْدُ إِن كُنتُمْ صَادِقِينَ",
+            "transliteration": "Matā hādhā al-waʿdu in kuntum ṣādiqīn",
+            "translation": "When is this promise, if you are truthful?",
+            "reference": "Surah Ya-Sin 36:48",
+            "note": "The disbelievers use هَذَا for the Day of Judgment even though it hasn't happened yet — because the Prophet ﷺ was constantly warning them about it, making it psychologically close and present in their minds. Proximity in Arabic is not always physical."
+        },
+        {
+            "arabic": "ذَٰلِكَ الْكِتَابُ لَا رَيْبَ فِيهِ",
+            "transliteration": "Dhālika al-kitābu lā rayba fīh",
+            "translation": "That is the Book about which there is no doubt.",
+            "reference": "Surah Al-Baqarah 2:2",
+            "note": "Although the Quran is right in front of the reader, Allah uses ذَٰلِكَ (far) to indicate the Quran's exalted status — it is of such a lofty rank that it is as if it is far above us. This is one of the most discussed examples in Tafsir literature."
+        },
+        {
+            "arabic": "وَلَا أَنتُمْ عَابِدُونَ مَا أَعْبُدُ",
+            "transliteration": "Wa lā antum ʿābidūna mā aʿbud",
+            "translation": "Nor will you be worshippers of what I worship.",
+            "reference": "Surah Al-Kafirun 109:3",
+            "note": "The word مَا is used here for what the Prophet ﷺ worships, i.e. Allah — even though Allah has intellect (which normally calls for مَنْ). This is the rhetorical device al-Mushakala: مَا was used just before for the idols (correct usage), and is repeated here to maintain symmetry and beauty of sound in the verse."
+        }
+    ]
 }

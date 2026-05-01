@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { createFileRoute, Link, notFound } from '@tanstack/react-router'
 import { loadOne } from '#/lib/lectures'
 
@@ -22,6 +23,7 @@ function formatTranscript(text: string): string {
 
 function LecturePage() {
   const l = Route.useLoaderData()
+  const [transcriptOpen, setTranscriptOpen] = useState(false)
 
   const publishedDate = l.published
     ? new Date(l.published).toLocaleDateString('en-US', {
@@ -95,13 +97,21 @@ function LecturePage() {
 
       {l.transcript && (
         <section>
-          <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-gray-400">
-            Transcript
-          </p>
-          <div
-            className="whitespace-pre-wrap text-sm leading-loose text-gray-700"
-            dangerouslySetInnerHTML={{ __html: formatTranscript(l.transcript) }}
-          />
+          <button
+            onClick={() => setTranscriptOpen((o) => !o)}
+            className="mb-3 flex w-full items-center gap-2 text-left"
+          >
+            <span className="text-xs font-semibold uppercase tracking-widest text-gray-400">
+              Transcript
+            </span>
+            <span className="text-xs text-gray-300">{transcriptOpen ? '▲ hide' : '▼ show'}</span>
+          </button>
+          {transcriptOpen && (
+            <div
+              className="whitespace-pre-wrap text-sm leading-loose text-gray-700"
+              dangerouslySetInnerHTML={{ __html: formatTranscript(l.transcript) }}
+            />
+          )}
         </section>
       )}
     </main>
