@@ -26,5 +26,182 @@
                  "ه֑ت (ڪذ)",
                  "صڑۊیا (ړک)"
              ],
-    "date":  "2025-04-07"
+    "date":  "2025-04-07",
+  "quiz": [
+    {
+      "q": "What is the primary purpose of a pronoun in Arabic, as explained by the teacher?",
+      "options": [
+        "To indicate the tense of a verb",
+        "To avoid repeating a name or noun by referring back to it after it has been mentioned once",
+        "To mark the gender of a noun",
+        "To connect two sentences together"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher explained that a pronoun is used so you do not keep repeating a person's or object's name. You mention it once, and then use a pronoun (he, she, it, you, etc.) to refer back to it — making speech more concise, exactly as in English."
+    },
+    {
+      "q": "What is the difference between a detached pronoun (ضَمِير مُنْفَصِل) and an attached pronoun (ضَمِير مُتَّصِل)?",
+      "options": [
+        "Detached pronouns are only used for humans; attached pronouns are only for objects",
+        "Detached pronouns are standalone words; attached pronouns must be connected to another word",
+        "Detached pronouns indicate past tense; attached pronouns indicate present tense",
+        "There is no meaningful difference — they are interchangeable"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher defined detached pronouns (like هُوَ, هِيَ, أَنْتَ, أَنَا) as standalone words that are self-sufficient and do not need to be connected to anything. Attached pronouns (like ـكَ and ـي) must be joined to a noun or preposition to function — they cannot stand alone."
+    },
+    {
+      "q": "How do you say 'your name' using the attached pronoun كَ (ka)?",
+      "options": [
+        "اِسْمٌ كَ",
+        "كَاسْمٌ",
+        "اِسْمُكَ",
+        "أَنْتَ اسْمٌ"
+      ],
+      "correctIndex": 2,
+      "a": "The teacher taught that ـكَ (ka) attaches directly to the end of a noun to mean 'your'. اِسْمٌ means name, so اِسْمُكَ means 'your name'. He practiced this pattern with multiple nouns throughout the lesson: قَلَمُكَ (your pen), كِتَابُكَ (your book), سَيَّارَتُكَ (your car)."
+    },
+    {
+      "q": "How do you say 'my book' using the attached pronoun ـي (yā)?",
+      "options": [
+        "كِتَابٌ أَنَا",
+        "أَنَا كِتَابٌ",
+        "كِتَابِي",
+        "يَكِتَابٌ"
+      ],
+      "correctIndex": 2,
+      "a": "The teacher explained that ـي (yā) is attached to the end of a noun to mean 'my'. كِتَابٌ means book, so كِتَابِي means 'my book'. He gave numerous Qurʾānic and everyday examples: رَبِّي (my Lord), أَبِي (my father), صَدْرِي (my chest), يَدِي (my hand)."
+    },
+    {
+      "q": "What does the acronym 'DING' help students remember about مَوْصُوف and صِفَة?",
+      "options": [
+        "D = Detached, I = Indefinite, N = Noun, G = Gender",
+        "D = Definiteness, I = Iʿrāb (final ḥaraka/ending), N = Number, G = Gender — the four things mawṣūf and ṣifa must agree in",
+        "D = Dual, I = Iʿrāb, N = Nominative, G = Genitive",
+        "D = Damma, I = Indefinite, N = Nakirah, G = Grammar"
+      ],
+      "correctIndex": 1,
+      "a": "A student introduced the mnemonic 'DING' which the teacher confirmed and explained: D = Definiteness (definite or indefinite), I = Iʿrāb (the final ḥaraka must match), N = Number (singular, dual, or plural), G = Gender (masculine or feminine). All four must be the same for two words to qualify as a mawṣūf–ṣifa pair."
+    },
+    {
+      "q": "The teacher explained that هُوَ (huwa) and هِيَ (hiya) can mean 'it' in Arabic — why?",
+      "options": [
+        "Because Arabic has no word for 'it', so huwa and hiya are used randomly",
+        "Because all objects in Arabic have grammatical gender (masculine or feminine), so 'it' is expressed as 'he' or 'she' depending on the noun's gender",
+        "Because huwa and hiya are formal words and 'it' is informal",
+        "Because objects in Arabic are always considered masculine"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher explained that unlike English, Arabic assigns grammatical gender to all nouns — including inanimate objects. Therefore, when referring to an object, you use هُوَ if it is masculine or هِيَ if it is feminine. For example, لُغَةٌ (language) is feminine, so the teacher used هِيَ to refer to it: هِيَ لُغَةٌ سَهْلَةٌ (it is an easy language)."
+    },
+    {
+      "q": "Why does the lām (لِـ) of possession change from kasra to fatḥa in لَكَ (laka) and لَهُ (lahu)?",
+      "options": [
+        "Because kasra is only used with feminine nouns",
+        "Because the lām becomes a different letter when followed by pronouns",
+        "To make pronunciation easier on the tongue — saying لِكَ or لِهُ would be awkward",
+        "Because the pronoun كَ always causes the preceding vowel to change"
+      ],
+      "correctIndex": 2,
+      "a": "The teacher explained that the lām of possession normally carries a kasra (لِـ), but when followed by the pronouns كَ (ka), هُ (hu), or هَا (hā), the kasra changes to a fatḥa for ease of pronunciation. لِكَ would sound awkward, so the Arabs say لَكَ instead — the meaning remains identical."
+    },
+    {
+      "q": "The teacher pointed out that اَلْمَدِينَةُ الْمُنَوَّرَةُ (al-Madīnatu al-Munawwarah) is a mawṣūf–ṣifa pair. What does each word mean?",
+      "options": [
+        "al-Madīnah means 'mosque' and al-Munawwarah means 'beautiful'",
+        "al-Madīnah means 'city' and al-Munawwarah means 'enlightened' (from نُور, light)",
+        "al-Madīnah means 'the Prophet's city' and al-Munawwarah means 'holy'",
+        "al-Madīnah means 'settlement' and al-Munawwarah means 'blessed'"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher pointed out that اَلْمَدِينَةُ means 'city' and اَلْمُنَوَّرَةُ means 'enlightened' — derived from نُور (light). Together they mean 'the Enlightened City'. He noted this is a mawṣūf–ṣifa pair: both words are feminine, singular, definite (with اَلـ), and share the same case ending."
+    },
+    {
+      "q": "What is the difference between ذَهَبَ (dhahaba) and ذَهَبْتَ (dhahabta) in terms of grammatical person?",
+      "options": [
+        "ذَهَبَ is first person (I went) and ذَهَبْتَ is third person (he went)",
+        "ذَهَبَ is third person masculine singular (he went) and ذَهَبْتَ is second person masculine singular (you went)",
+        "Both mean the same thing — 'he went'",
+        "ذَهَبَ is past tense and ذَهَبْتَ is present tense"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher taught the verb conjugation chart: ذَهَبَ is the third person masculine singular past tense (he went), the form the class first learned. ذَهَبْتَ is the second person masculine singular (you went). He clarified: third person = talking about someone (he/she); second person = talking to someone (you); first person = talking about yourself (I)."
+    },
+    {
+      "q": "Why do male names like حَمْزَة (Ḥamza), طَلْحَة (Ṭalḥa), and أُسَامَة (Usāma) follow the same grammatical rules as feminine names?",
+      "options": [
+        "Because they are names of Companions and receive special treatment",
+        "Because they end in tāʾ marbūṭa (ة), which normally marks feminine words — so they do not take tanwīn, just like feminine names",
+        "Because they are foreign names borrowed from other languages",
+        "Because names beginning with a hamza are always treated as feminine"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher explained that the general rule is: if a word ends in tāʾ marbūṭa (ة), it is feminine. However, there are rare male names that also end in tāʾ marbūṭa — like حَمْزَة, طَلْحَة, and أُسَامَة. Because of this ending, they follow the same grammatical rules as feminine names and do not take the full tanwīn — they take a single ḍamma (e.g., حَمْزَةُ not حَمْزَةٌ)."
+    }
+  ],
+  "quran_examples": [
+    {
+      "arabic": "إِنَّ مَعِيَ رَبِّي سَيَهْدِينِ",
+      "transliteration": "Inna maʿiya rabbī sa-yahdīn",
+      "translation": "Indeed, my Lord is with me; He will guide me.",
+      "reference": "Surah al-Shuʿarāʾ 26:62",
+      "note": "Cited by the teacher to illustrate two attached pronouns simultaneously. مَعِيَ (maʿiya — with me) shows the ـي (yā) pronoun attached to the Ẓarf مَعَ (with). رَبِّي (rabbī — my Lord) shows the same ـي attached to a noun. The teacher used this as a live example of the ـي (my) pronoun appearing in the Qurʾān."
+    },
+    {
+      "arabic": "وَكَانَ أَبُوهُمَا صَالِحًا",
+      "transliteration": "Wa-kāna abūhumā ṣāliḥā",
+      "translation": "And their father had been righteous.",
+      "reference": "Surah al-Kahf 18:82",
+      "note": "Cited by the teacher to illustrate أَبُو (father) with the dual attached pronoun هُمَا (of the two of them), forming أَبُوهُمَا (their father — of the two boys). The teacher also used this to show the وَاو that appears in أَبُو when a pronoun is attached, a morphological feature he noted briefly without going into full detail."
+    },
+    {
+      "arabic": "رَبِّ اشْرَحْ لِي صَدْرِي",
+      "transliteration": "Rabbi ishraḥ lī ṣadrī",
+      "translation": "My Lord, expand for me my chest.",
+      "reference": "Surah Ṭā-Hā 20:25",
+      "note": "Cited during the discussion of the ـي (my) attached pronoun. رَبِّي (my Lord) and صَدْرِي (my chest) both demonstrate the ـي pronoun attached to different nouns in the same āyah. A student also cited لِي (for me) in this very āyah as a Qurʾānic example of the possessive lām combined with the first-person pronoun."
+    },
+    {
+      "arabic": "وَطَهِّرْ بَيْتِيَ لِلطَّائِفِينَ وَالْقَائِمِينَ وَالرُّكَّعِ السُّجُودِ",
+      "transliteration": "Wa-ṭahhir baytiya li-l-ṭāʾifīna wa-l-qāʾimīna wa-l-rukkaʿi al-sujūd",
+      "translation": "And purify My House for those who perform ṭawāf, those who stand in prayer, and those who bow and prostrate.",
+      "reference": "Surah al-Ḥajj 22:26",
+      "note": "Cited when a student mentioned بَيْتِيَ (My House) as an example of the ـي (my) pronoun in the Qurʾān. The teacher confirmed it, explaining that Allāh عَزَّ وَجَلَّ is referring to the Kaʿba as بَيْتِيَ (My House). This illustrates the ـي pronoun attached to a noun where the possessor is Allāh عَزَّ وَجَلَّ Himself."
+    },
+    {
+      "arabic": "وَرَفَعْنَا لَكَ ذِكْرَكَ",
+      "transliteration": "Wa-rafaʿnā laka dhikrak",
+      "translation": "And We raised for you your mention.",
+      "reference": "Surah al-Inshirāḥ 94:4",
+      "note": "Cited as a Qurʾānic example of لَكَ (laka — for you, belonging to you). The teacher used this to reinforce the rule that لِـ changes its kasra to fatḥa when followed by كَ, giving لَكَ. ذِكْرَكَ (your mention) additionally demonstrates the ـكَ pronoun attached directly to a noun."
+    },
+    {
+      "arabic": "لَهُ مُلْكُ السَّمَاوَاتِ وَالْأَرْضِ",
+      "transliteration": "Lahu mulku al-samāwāti wa-al-arḍ",
+      "translation": "To Him belongs the dominion of the heavens and the earth.",
+      "reference": "Surah al-Ḥadīd 57:2",
+      "note": "Cited as a Qurʾānic example of لَهُ (lahu — to Him/He has). The teacher noted that this phrase and similar constructions appear hundreds of times in the Qurʾān, always referring to Allāh عَزَّ وَجَلَّ. It demonstrates the lām with fatḥa (لَـ) followed by the third-person masculine pronoun هُ."
+    },
+    {
+      "arabic": "بِيَدِهِ مَلَكُوتُ كُلِّ شَيْءٍ",
+      "transliteration": "Bi-yadihi malakūtu kulli shayʾ",
+      "translation": "In His hand is the dominion of all things.",
+      "reference": "Surah Yā-Sīn 36:83",
+      "note": "Cited to illustrate بِيَدِهِ (bi-yadihi — in His hand): the ḥarf al-jarr بِـ followed by يَد (hand) with the attached pronoun هُ. The teacher used this to show that pronouns appear throughout the Qurʾān attached to nouns via prepositions, and urged students to begin identifying which noun or person each pronoun refers back to when reading."
+    },
+    {
+      "arabic": "لَئِن بَسَطتَ إِلَيَّ يَدَكَ لِتَقْتُلَنِي مَا أَنَا بِبَاسِطٍ يَدِيَ إِلَيْكَ",
+      "transliteration": "La-in basaṭta ilayya yadaka li-taqtulanī mā anā bi-bāsiṭin yadiya ilayk",
+      "translation": "If you should raise your hand against me to kill me, I shall not raise my hand against you.",
+      "reference": "Surah al-Māʾidah 5:28",
+      "note": "Cited to show يَدِيَ (yadiya — my hand) and يَدَكَ (yadaka — your hand) together in one āyah, demonstrating both the ـي (my) and ـكَ (your) attached pronouns on the same noun يَد (hand). The teacher attributed this to Hābīl (Abel) speaking to Qābīl (Cain), providing a narrative context for the pronouns."
+    },
+    {
+      "arabic": "إِنَّ مَعِيَ رَبِّي سَيَهْدِينِ",
+      "transliteration": "Inna maʿiya rabbī sa-yahdīn",
+      "translation": "Indeed, my Lord is with me; He will guide me.",
+      "reference": "Surah al-Shuʿarāʾ 26:62",
+      "note": "Also illustrates مَعِيَ (maʿiya — with me), demonstrating how the Ẓarf مَعَ (with) takes the ـي pronoun to become 'with me'. The teacher used this to show the connection between the lesson on مَعَ as a Ẓarf (making the word after it kasra) and the new lesson on attaching pronouns to form مَعِي (with me), مَعَكَ (with you), مَعَهُ (with him)."
+    }
+  ]
 }

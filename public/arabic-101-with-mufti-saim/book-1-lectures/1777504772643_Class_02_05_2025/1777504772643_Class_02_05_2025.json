@@ -27,5 +27,150 @@
                  "Sifah-Mausūkh Agreement",
                  "Beginner"
              ],
-    "date":  "2025-02-05"
+    "date":  "2025-02-05",
+  "quiz": [
+    {
+      "q": "What does the grammatical term صِفَة (ṣifa) mean?",
+      "options": [
+        "The described noun",
+        "The subject of the sentence",
+        "The description or adjective",
+        "The definite article"
+      ],
+      "correctIndex": 2,
+      "a": "The teacher explained that صِفَة (ṣifa) literally means 'description' and functions as the adjective in the noun-adjective construction. It is the word that describes the مَوْصُوف (mawṣūf)."
+    },
+    {
+      "q": "What does the grammatical term مَوْصُوف (mawṣūf) mean?",
+      "options": [
+        "The adjective",
+        "The described noun",
+        "The predicate",
+        "The verb"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher defined مَوْصُوف (mawṣūf) as 'the described' — that is, the noun which the صِفَة (ṣifa) is describing. For example, in تَاجِرٌ غَنِيٌّ (a rich merchant), تَاجِرٌ is the mawṣūf."
+    },
+    {
+      "q": "In Arabic, where does the adjective (صِفَة, ṣifa) appear relative to the noun it describes (مَوْصُوف, mawṣūf)?",
+      "options": [
+        "Before the noun, as in English",
+        "Either before or after — both are correct",
+        "After the noun",
+        "It is always separated by a verb"
+      ],
+      "correctIndex": 2,
+      "a": "The teacher emphasized that unlike English (where we say 'a beautiful woman'), Arabic places the adjective after the noun: اِمْرَأَةٌ جَمِيلَةٌ (imraʾatun jamīlatun). This is one of the key structural differences between the two languages."
+    },
+    {
+      "q": "Which of the following correctly expresses 'a beautiful woman' in Arabic?",
+      "options": [
+        "جَمِيلَةٌ اِمْرَأَةٌ",
+        "اِمْرَأَةٌ جَمِيلَةٌ",
+        "الْاِمْرَأَةُ الْجَمِيلُ",
+        "جَمِيلٌ اِمْرَأَةٌ"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher gave اِمْرَأَةٌ جَمِيلَةٌ (imraʾatun jamīlatun) as the example for 'a beautiful woman', demonstrating that the adjective جَمِيلَةٌ follows the noun اِمْرَأَةٌ and matches it in gender (feminine) and case (tanwīn ḍamma)."
+    },
+    {
+      "q": "How many things must the صِفَة (ṣifa) agree with the مَوْصُوف (mawṣūf) in?",
+      "options": [
+        "One: gender only",
+        "Two: gender and number",
+        "Three: gender, number, and case (iʿrāb)",
+        "Four: gender, number, case (iʿrāb), and definiteness"
+      ],
+      "correctIndex": 3,
+      "a": "The teacher explicitly listed four things in which the ṣifa and mawṣūf must agree: (1) case ending (iʿrāb), (2) gender (male or female), (3) number (singular, dual, or plural), and (4) definiteness (definite with اَلـ or indefinite with tanwīn)."
+    },
+    {
+      "q": "If the مَوْصُوف (mawṣūf) is indefinite (has tanwīn), what must the صِفَة (ṣifa) have?",
+      "options": [
+        "The definite article اَلـ",
+        "Tanwīn as well",
+        "A sukūn",
+        "No vowel ending"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher stated that if the mawṣūf is indefinite (carrying tanwīn), the ṣifa must also be indefinite (carrying tanwīn). Definiteness must match: تَاجِرٌ غَنِيٌّ (an indefinite rich merchant) vs. اَلتَّاجِرُ الْغَنِيُّ (the definite rich merchant)."
+    },
+    {
+      "q": "What is the new verb introduced in this lesson, and what does it mean?",
+      "options": [
+        "ذَهَبَ (dhahaba) — to go",
+        "جَلَسَ (jalasa) — to sit",
+        "كَتَبَ (kataba) — to write",
+        "قَرَأَ (qaraʾa) — to read"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher introduced جَلَسَ (jalasa) meaning 'he sat' as the third verb in the students' growing verb family. He connected it to the already-known word جَالِسٌ (jālisun — sitting), explaining that جَلَسَ is the verb form of that same root."
+    },
+    {
+      "q": "Why do words like مُوسَى (Mūsā) and أَمْرِيكَا (Amrīkā) not change their ending vowel even when grammatical rules would normally require a change?",
+      "options": [
+        "They are verbs, not nouns",
+        "They end in a long ā (alif maqṣūra or alif mamdūda), which does not change regardless of grammatical position",
+        "They always take a ḍamma",
+        "They are feminine, so they follow different rules"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher explained that words ending in alif maqṣūra (like مُوسَى) or alif mamdūda (like أَمْرِيكَا) are exceptions: their endings do not change based on their grammatical role in the sentence. This is a rule that will be covered in greater detail in the third volume."
+    },
+    {
+      "q": "In the Qurʾānic phrase describing 'a far place', which of the following correctly illustrates the ṣifa–mawṣūf agreement taught in this lesson?",
+      "options": [
+        "The adjective 'far' comes before the noun 'place'",
+        "The noun 'place' carries a different case ending than the adjective 'far'",
+        "Both the noun 'place' and the adjective 'far' agree in gender, number, case, and definiteness",
+        "The adjective 'far' takes the definite article while the noun does not"
+      ],
+      "correctIndex": 2,
+      "a": "The teacher used the Qurʾānic example of 'a far place' (مَكَانٌ بَعِيدٌ) to show that all four agreement criteria apply: both words are masculine singular, indefinite (with tanwīn), and carry the same case ending. He pointed this out as a clear Qurʾānic illustration of ṣifa–mawṣūf agreement."
+    }
+  ],
+  "quran_examples": [
+    {
+      "arabic": "وَأَعْتَدْنَا لَهَا رِزْقًا كَرِيمًا",
+      "transliteration": "Wa-aʿtadnā lahā rizqan karīmā",
+      "translation": "And We have prepared for her a generous provision.",
+      "reference": "Surah al-Aḥzāb 33:31",
+      "note": "Illustrates the ṣifa–mawṣūf construction: رِزْقًا (rizqan — provision) is the mawṣūf, and كَرِيمًا (karīman — generous) is the ṣifa following it. Both are indefinite (tanwīn) and in the accusative case (fatḥa), demonstrating the agreement in case and definiteness that the teacher introduced."
+    },
+    {
+      "arabic": "إِنَّ رَبَّكَ لَذُو مَغْفِرَةٍ وَاسِعَةٍ",
+      "transliteration": "Inna rabbaka la-dhū maghfiratin wāsiʿah",
+      "translation": "Indeed, your Lord is full of vast forgiveness.",
+      "reference": "Surah al-Najm 53:32",
+      "note": "Illustrates ṣifa–mawṣūf agreement in the genitive case: مَغْفِرَةٍ (maghfiratin — forgiveness) is feminine, indefinite, and in the genitive (kasra + tanwīn); وَاسِعَةٍ (wāsiʿatin — vast) follows it, matching in gender, indefiniteness, and case — exactly the four-way agreement rule the teacher taught."
+    },
+    {
+      "arabic": "وَنَادَوْا يَا مَالِكُ لِيَقْضِ عَلَيْنَا رَبُّكَ قَالَ إِنَّكُم مَّاكِثُونَ",
+      "transliteration": "Wa-nādaw yā Māliku li-yaqḍi ʿalaynā rabbuka qāla innakum mākhithūn",
+      "translation": "And they will call: O Mālik, let your Lord put an end to us! He will say: Indeed, you are to remain.",
+      "reference": "Surah al-Zukhruf 43:77",
+      "note": "Provides context for the verb جَلَسَ (jalasa) lesson: the teacher connected جَالِسٌ (jālisun — sitting/remaining) to its verb root, emphasising how Arabic nouns and verbs share roots. مَاكِثُونَ (mākhithūn — those who remain/stay) similarly demonstrates a participle (ism fāʿil) form derived from a verb, reinforcing the link between verbal and nominal forms."
+    },
+    {
+      "arabic": "إِنَّا أَعْتَدْنَا لِلظَّالِمِينَ نَارًا أَحَاطَ بِهِمْ سُرَادِقُهَا وَإِن يَسْتَغِيثُوا يُغَاثُوا بِمَاءٍ كَالْمُهْلِ يَشْوِي الْوُجُوهَ بِئْسَ الشَّرَابُ وَسَاءَتْ مُرْتَفَقًا",
+      "transliteration": "Innā aʿtadnā lil-ẓālimīna nāran aḥāṭa bihim surādiquhā wa-in yastaghīthū yughāthū bi-māʾin kal-muhli yashwī al-wujūha biʾsa al-sharābu wa-sāʾat murtafaqā",
+      "translation": "Indeed, We have prepared for the wrongdoers a Fire whose walls will surround them. And if they call for relief, they will be relieved with water like murky oil that scalds the faces. Wretched is the drink, and evil is the resting place.",
+      "reference": "Surah al-Kahf 18:29",
+      "note": "Illustrates مَكَانٌ بَعِيدٌ-type construction: the word مُرْتَفَقًا (murtafaqan — resting place) appears in similar Qurʾānic contexts describing places with adjectives. The teacher cited Qurʾānic phrases using 'a far place' (مَكَانٌ بَعِيدٌ) to show ṣifa–mawṣūf agreement; this āyah demonstrates how a place-noun is described by an adjective following it, with agreement in case and indefiniteness."
+    },
+    {
+      "arabic": "وَشَاهِدٍ وَمَشْهُودٍ",
+      "transliteration": "Wa-shāhidin wa-mashhūd",
+      "translation": "And the witness and the witnessed.",
+      "reference": "Surah al-Burūj 85:3",
+      "note": "Brief illustration of the Arabic pattern where a noun and its descriptive companion both carry tanwīn and agree in case — reinforcing the teacher's point that indefinite mawṣūf requires an indefinite ṣifa. Both words here are genitive (kasra + tanwīn), demonstrating consistent case marking across paired Arabic nouns."
+    },
+    {
+      "arabic": "وَإِنَّهُ لَحُبِّ الْخَيْرِ لَشَدِيدٌ",
+      "transliteration": "Wa-innahu li-ḥubbi al-khayri la-shadīd",
+      "translation": "And indeed, he is in love of wealth intensely fervent.",
+      "reference": "Surah al-ʿĀdiyāt 100:8",
+      "note": "Illustrates an adjective (شَدِيدٌ — shadīdun, intense/fervent) used as a predicate describing a noun, matching it in indefiniteness (tanwīn) and masculine gender. This connects to the teacher's lesson that the ṣifa must agree with its mawṣūf in all four categories, including definiteness and gender."
+    }
+  ]
 }

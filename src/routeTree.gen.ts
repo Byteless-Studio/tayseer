@@ -17,26 +17,11 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as Arabic101IndexRouteImport } from './routes/arabic-101.index'
 import { Route as LectureVideoIdRouteImport } from './routes/lecture.$videoId'
-import { Route as DemoTanstackQueryRouteImport } from './routes/demo/tanstack-query'
-import { Route as DemoStoreRouteImport } from './routes/demo/store'
-import { Route as DemoMcpTodosRouteImport } from './routes/demo/mcp-todos'
-import { Route as DemoBetterAuthRouteImport } from './routes/demo/better-auth'
-import { Route as DemoAiStructuredRouteImport } from './routes/demo/ai-structured'
-import { Route as DemoAiImageRouteImport } from './routes/demo/ai-image'
-import { Route as DemoAiChatRouteImport } from './routes/demo/ai-chat'
 import { Route as ApiPublishRouteImport } from './routes/api.publish'
 import { Route as ApiLecturesRouteImport } from './routes/api.lectures'
-import { Route as DemoGuitarsIndexRouteImport } from './routes/demo/guitars/index'
-import { Route as DemoGuitarsGuitarIdRouteImport } from './routes/demo/guitars/$guitarId'
-import { Route as DemoApiMcpTodosRouteImport } from './routes/demo/api.mcp-todos'
 import { Route as Arabic101LectureLectureIdRouteImport } from './routes/arabic-101.lecture.$lectureId'
 import { Route as ApiLecturesVideoIdRouteImport } from './routes/api.lectures.$videoId'
 import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
-import { Route as DemoApiAiTtsRouteImport } from './routes/demo/api.ai.tts'
-import { Route as DemoApiAiTranscriptionRouteImport } from './routes/demo/api.ai.transcription'
-import { Route as DemoApiAiStructuredRouteImport } from './routes/demo/api.ai.structured'
-import { Route as DemoApiAiImageRouteImport } from './routes/demo/api.ai.image'
-import { Route as DemoApiAiChatRouteImport } from './routes/demo/api.ai.chat'
 
 const QuizzesRoute = QuizzesRouteImport.update({
   id: '/quizzes',
@@ -78,41 +63,6 @@ const LectureVideoIdRoute = LectureVideoIdRouteImport.update({
   path: '/lecture/$videoId',
   getParentRoute: () => rootRouteImport,
 } as any)
-const DemoTanstackQueryRoute = DemoTanstackQueryRouteImport.update({
-  id: '/demo/tanstack-query',
-  path: '/demo/tanstack-query',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DemoStoreRoute = DemoStoreRouteImport.update({
-  id: '/demo/store',
-  path: '/demo/store',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DemoMcpTodosRoute = DemoMcpTodosRouteImport.update({
-  id: '/demo/mcp-todos',
-  path: '/demo/mcp-todos',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DemoBetterAuthRoute = DemoBetterAuthRouteImport.update({
-  id: '/demo/better-auth',
-  path: '/demo/better-auth',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DemoAiStructuredRoute = DemoAiStructuredRouteImport.update({
-  id: '/demo/ai-structured',
-  path: '/demo/ai-structured',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DemoAiImageRoute = DemoAiImageRouteImport.update({
-  id: '/demo/ai-image',
-  path: '/demo/ai-image',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DemoAiChatRoute = DemoAiChatRouteImport.update({
-  id: '/demo/ai-chat',
-  path: '/demo/ai-chat',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const ApiPublishRoute = ApiPublishRouteImport.update({
   id: '/api/publish',
   path: '/api/publish',
@@ -121,21 +71,6 @@ const ApiPublishRoute = ApiPublishRouteImport.update({
 const ApiLecturesRoute = ApiLecturesRouteImport.update({
   id: '/api/lectures',
   path: '/api/lectures',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DemoGuitarsIndexRoute = DemoGuitarsIndexRouteImport.update({
-  id: '/demo/guitars/',
-  path: '/demo/guitars/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DemoGuitarsGuitarIdRoute = DemoGuitarsGuitarIdRouteImport.update({
-  id: '/demo/guitars/$guitarId',
-  path: '/demo/guitars/$guitarId',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DemoApiMcpTodosRoute = DemoApiMcpTodosRouteImport.update({
-  id: '/demo/api/mcp-todos',
-  path: '/demo/api/mcp-todos',
   getParentRoute: () => rootRouteImport,
 } as any)
 const Arabic101LectureLectureIdRoute =
@@ -154,31 +89,6 @@ const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
   path: '/api/auth/$',
   getParentRoute: () => rootRouteImport,
 } as any)
-const DemoApiAiTtsRoute = DemoApiAiTtsRouteImport.update({
-  id: '/demo/api/ai/tts',
-  path: '/demo/api/ai/tts',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DemoApiAiTranscriptionRoute = DemoApiAiTranscriptionRouteImport.update({
-  id: '/demo/api/ai/transcription',
-  path: '/demo/api/ai/transcription',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DemoApiAiStructuredRoute = DemoApiAiStructuredRouteImport.update({
-  id: '/demo/api/ai/structured',
-  path: '/demo/api/ai/structured',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DemoApiAiImageRoute = DemoApiAiImageRouteImport.update({
-  id: '/demo/api/ai/image',
-  path: '/demo/api/ai/image',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DemoApiAiChatRoute = DemoApiAiChatRouteImport.update({
-  id: '/demo/api/ai/chat',
-  path: '/demo/api/ai/chat',
-  getParentRoute: () => rootRouteImport,
-} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -189,26 +99,11 @@ export interface FileRoutesByFullPath {
   '/quizzes': typeof QuizzesRoute
   '/api/lectures': typeof ApiLecturesRouteWithChildren
   '/api/publish': typeof ApiPublishRoute
-  '/demo/ai-chat': typeof DemoAiChatRoute
-  '/demo/ai-image': typeof DemoAiImageRoute
-  '/demo/ai-structured': typeof DemoAiStructuredRoute
-  '/demo/better-auth': typeof DemoBetterAuthRoute
-  '/demo/mcp-todos': typeof DemoMcpTodosRoute
-  '/demo/store': typeof DemoStoreRoute
-  '/demo/tanstack-query': typeof DemoTanstackQueryRoute
   '/lecture/$videoId': typeof LectureVideoIdRoute
   '/arabic-101/': typeof Arabic101IndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
   '/api/lectures/$videoId': typeof ApiLecturesVideoIdRoute
   '/arabic-101/lecture/$lectureId': typeof Arabic101LectureLectureIdRoute
-  '/demo/api/mcp-todos': typeof DemoApiMcpTodosRoute
-  '/demo/guitars/$guitarId': typeof DemoGuitarsGuitarIdRoute
-  '/demo/guitars/': typeof DemoGuitarsIndexRoute
-  '/demo/api/ai/chat': typeof DemoApiAiChatRoute
-  '/demo/api/ai/image': typeof DemoApiAiImageRoute
-  '/demo/api/ai/structured': typeof DemoApiAiStructuredRoute
-  '/demo/api/ai/transcription': typeof DemoApiAiTranscriptionRoute
-  '/demo/api/ai/tts': typeof DemoApiAiTtsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -218,26 +113,11 @@ export interface FileRoutesByTo {
   '/quizzes': typeof QuizzesRoute
   '/api/lectures': typeof ApiLecturesRouteWithChildren
   '/api/publish': typeof ApiPublishRoute
-  '/demo/ai-chat': typeof DemoAiChatRoute
-  '/demo/ai-image': typeof DemoAiImageRoute
-  '/demo/ai-structured': typeof DemoAiStructuredRoute
-  '/demo/better-auth': typeof DemoBetterAuthRoute
-  '/demo/mcp-todos': typeof DemoMcpTodosRoute
-  '/demo/store': typeof DemoStoreRoute
-  '/demo/tanstack-query': typeof DemoTanstackQueryRoute
   '/lecture/$videoId': typeof LectureVideoIdRoute
   '/arabic-101': typeof Arabic101IndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
   '/api/lectures/$videoId': typeof ApiLecturesVideoIdRoute
   '/arabic-101/lecture/$lectureId': typeof Arabic101LectureLectureIdRoute
-  '/demo/api/mcp-todos': typeof DemoApiMcpTodosRoute
-  '/demo/guitars/$guitarId': typeof DemoGuitarsGuitarIdRoute
-  '/demo/guitars': typeof DemoGuitarsIndexRoute
-  '/demo/api/ai/chat': typeof DemoApiAiChatRoute
-  '/demo/api/ai/image': typeof DemoApiAiImageRoute
-  '/demo/api/ai/structured': typeof DemoApiAiStructuredRoute
-  '/demo/api/ai/transcription': typeof DemoApiAiTranscriptionRoute
-  '/demo/api/ai/tts': typeof DemoApiAiTtsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -249,26 +129,11 @@ export interface FileRoutesById {
   '/quizzes': typeof QuizzesRoute
   '/api/lectures': typeof ApiLecturesRouteWithChildren
   '/api/publish': typeof ApiPublishRoute
-  '/demo/ai-chat': typeof DemoAiChatRoute
-  '/demo/ai-image': typeof DemoAiImageRoute
-  '/demo/ai-structured': typeof DemoAiStructuredRoute
-  '/demo/better-auth': typeof DemoBetterAuthRoute
-  '/demo/mcp-todos': typeof DemoMcpTodosRoute
-  '/demo/store': typeof DemoStoreRoute
-  '/demo/tanstack-query': typeof DemoTanstackQueryRoute
   '/lecture/$videoId': typeof LectureVideoIdRoute
   '/arabic-101/': typeof Arabic101IndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
   '/api/lectures/$videoId': typeof ApiLecturesVideoIdRoute
   '/arabic-101/lecture/$lectureId': typeof Arabic101LectureLectureIdRoute
-  '/demo/api/mcp-todos': typeof DemoApiMcpTodosRoute
-  '/demo/guitars/$guitarId': typeof DemoGuitarsGuitarIdRoute
-  '/demo/guitars/': typeof DemoGuitarsIndexRoute
-  '/demo/api/ai/chat': typeof DemoApiAiChatRoute
-  '/demo/api/ai/image': typeof DemoApiAiImageRoute
-  '/demo/api/ai/structured': typeof DemoApiAiStructuredRoute
-  '/demo/api/ai/transcription': typeof DemoApiAiTranscriptionRoute
-  '/demo/api/ai/tts': typeof DemoApiAiTtsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -281,26 +146,11 @@ export interface FileRouteTypes {
     | '/quizzes'
     | '/api/lectures'
     | '/api/publish'
-    | '/demo/ai-chat'
-    | '/demo/ai-image'
-    | '/demo/ai-structured'
-    | '/demo/better-auth'
-    | '/demo/mcp-todos'
-    | '/demo/store'
-    | '/demo/tanstack-query'
     | '/lecture/$videoId'
     | '/arabic-101/'
     | '/api/auth/$'
     | '/api/lectures/$videoId'
     | '/arabic-101/lecture/$lectureId'
-    | '/demo/api/mcp-todos'
-    | '/demo/guitars/$guitarId'
-    | '/demo/guitars/'
-    | '/demo/api/ai/chat'
-    | '/demo/api/ai/image'
-    | '/demo/api/ai/structured'
-    | '/demo/api/ai/transcription'
-    | '/demo/api/ai/tts'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -310,26 +160,11 @@ export interface FileRouteTypes {
     | '/quizzes'
     | '/api/lectures'
     | '/api/publish'
-    | '/demo/ai-chat'
-    | '/demo/ai-image'
-    | '/demo/ai-structured'
-    | '/demo/better-auth'
-    | '/demo/mcp-todos'
-    | '/demo/store'
-    | '/demo/tanstack-query'
     | '/lecture/$videoId'
     | '/arabic-101'
     | '/api/auth/$'
     | '/api/lectures/$videoId'
     | '/arabic-101/lecture/$lectureId'
-    | '/demo/api/mcp-todos'
-    | '/demo/guitars/$guitarId'
-    | '/demo/guitars'
-    | '/demo/api/ai/chat'
-    | '/demo/api/ai/image'
-    | '/demo/api/ai/structured'
-    | '/demo/api/ai/transcription'
-    | '/demo/api/ai/tts'
   id:
     | '__root__'
     | '/'
@@ -340,26 +175,11 @@ export interface FileRouteTypes {
     | '/quizzes'
     | '/api/lectures'
     | '/api/publish'
-    | '/demo/ai-chat'
-    | '/demo/ai-image'
-    | '/demo/ai-structured'
-    | '/demo/better-auth'
-    | '/demo/mcp-todos'
-    | '/demo/store'
-    | '/demo/tanstack-query'
     | '/lecture/$videoId'
     | '/arabic-101/'
     | '/api/auth/$'
     | '/api/lectures/$videoId'
     | '/arabic-101/lecture/$lectureId'
-    | '/demo/api/mcp-todos'
-    | '/demo/guitars/$guitarId'
-    | '/demo/guitars/'
-    | '/demo/api/ai/chat'
-    | '/demo/api/ai/image'
-    | '/demo/api/ai/structured'
-    | '/demo/api/ai/transcription'
-    | '/demo/api/ai/tts'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -371,23 +191,8 @@ export interface RootRouteChildren {
   QuizzesRoute: typeof QuizzesRoute
   ApiLecturesRoute: typeof ApiLecturesRouteWithChildren
   ApiPublishRoute: typeof ApiPublishRoute
-  DemoAiChatRoute: typeof DemoAiChatRoute
-  DemoAiImageRoute: typeof DemoAiImageRoute
-  DemoAiStructuredRoute: typeof DemoAiStructuredRoute
-  DemoBetterAuthRoute: typeof DemoBetterAuthRoute
-  DemoMcpTodosRoute: typeof DemoMcpTodosRoute
-  DemoStoreRoute: typeof DemoStoreRoute
-  DemoTanstackQueryRoute: typeof DemoTanstackQueryRoute
   LectureVideoIdRoute: typeof LectureVideoIdRoute
   ApiAuthSplatRoute: typeof ApiAuthSplatRoute
-  DemoApiMcpTodosRoute: typeof DemoApiMcpTodosRoute
-  DemoGuitarsGuitarIdRoute: typeof DemoGuitarsGuitarIdRoute
-  DemoGuitarsIndexRoute: typeof DemoGuitarsIndexRoute
-  DemoApiAiChatRoute: typeof DemoApiAiChatRoute
-  DemoApiAiImageRoute: typeof DemoApiAiImageRoute
-  DemoApiAiStructuredRoute: typeof DemoApiAiStructuredRoute
-  DemoApiAiTranscriptionRoute: typeof DemoApiAiTranscriptionRoute
-  DemoApiAiTtsRoute: typeof DemoApiAiTtsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -448,55 +253,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LectureVideoIdRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/demo/tanstack-query': {
-      id: '/demo/tanstack-query'
-      path: '/demo/tanstack-query'
-      fullPath: '/demo/tanstack-query'
-      preLoaderRoute: typeof DemoTanstackQueryRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/demo/store': {
-      id: '/demo/store'
-      path: '/demo/store'
-      fullPath: '/demo/store'
-      preLoaderRoute: typeof DemoStoreRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/demo/mcp-todos': {
-      id: '/demo/mcp-todos'
-      path: '/demo/mcp-todos'
-      fullPath: '/demo/mcp-todos'
-      preLoaderRoute: typeof DemoMcpTodosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/demo/better-auth': {
-      id: '/demo/better-auth'
-      path: '/demo/better-auth'
-      fullPath: '/demo/better-auth'
-      preLoaderRoute: typeof DemoBetterAuthRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/demo/ai-structured': {
-      id: '/demo/ai-structured'
-      path: '/demo/ai-structured'
-      fullPath: '/demo/ai-structured'
-      preLoaderRoute: typeof DemoAiStructuredRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/demo/ai-image': {
-      id: '/demo/ai-image'
-      path: '/demo/ai-image'
-      fullPath: '/demo/ai-image'
-      preLoaderRoute: typeof DemoAiImageRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/demo/ai-chat': {
-      id: '/demo/ai-chat'
-      path: '/demo/ai-chat'
-      fullPath: '/demo/ai-chat'
-      preLoaderRoute: typeof DemoAiChatRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/api/publish': {
       id: '/api/publish'
       path: '/api/publish'
@@ -509,27 +265,6 @@ declare module '@tanstack/react-router' {
       path: '/api/lectures'
       fullPath: '/api/lectures'
       preLoaderRoute: typeof ApiLecturesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/demo/guitars/': {
-      id: '/demo/guitars/'
-      path: '/demo/guitars'
-      fullPath: '/demo/guitars/'
-      preLoaderRoute: typeof DemoGuitarsIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/demo/guitars/$guitarId': {
-      id: '/demo/guitars/$guitarId'
-      path: '/demo/guitars/$guitarId'
-      fullPath: '/demo/guitars/$guitarId'
-      preLoaderRoute: typeof DemoGuitarsGuitarIdRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/demo/api/mcp-todos': {
-      id: '/demo/api/mcp-todos'
-      path: '/demo/api/mcp-todos'
-      fullPath: '/demo/api/mcp-todos'
-      preLoaderRoute: typeof DemoApiMcpTodosRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/arabic-101/lecture/$lectureId': {
@@ -551,41 +286,6 @@ declare module '@tanstack/react-router' {
       path: '/api/auth/$'
       fullPath: '/api/auth/$'
       preLoaderRoute: typeof ApiAuthSplatRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/demo/api/ai/tts': {
-      id: '/demo/api/ai/tts'
-      path: '/demo/api/ai/tts'
-      fullPath: '/demo/api/ai/tts'
-      preLoaderRoute: typeof DemoApiAiTtsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/demo/api/ai/transcription': {
-      id: '/demo/api/ai/transcription'
-      path: '/demo/api/ai/transcription'
-      fullPath: '/demo/api/ai/transcription'
-      preLoaderRoute: typeof DemoApiAiTranscriptionRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/demo/api/ai/structured': {
-      id: '/demo/api/ai/structured'
-      path: '/demo/api/ai/structured'
-      fullPath: '/demo/api/ai/structured'
-      preLoaderRoute: typeof DemoApiAiStructuredRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/demo/api/ai/image': {
-      id: '/demo/api/ai/image'
-      path: '/demo/api/ai/image'
-      fullPath: '/demo/api/ai/image'
-      preLoaderRoute: typeof DemoApiAiImageRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/demo/api/ai/chat': {
-      id: '/demo/api/ai/chat'
-      path: '/demo/api/ai/chat'
-      fullPath: '/demo/api/ai/chat'
-      preLoaderRoute: typeof DemoApiAiChatRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -626,23 +326,8 @@ const rootRouteChildren: RootRouteChildren = {
   QuizzesRoute: QuizzesRoute,
   ApiLecturesRoute: ApiLecturesRouteWithChildren,
   ApiPublishRoute: ApiPublishRoute,
-  DemoAiChatRoute: DemoAiChatRoute,
-  DemoAiImageRoute: DemoAiImageRoute,
-  DemoAiStructuredRoute: DemoAiStructuredRoute,
-  DemoBetterAuthRoute: DemoBetterAuthRoute,
-  DemoMcpTodosRoute: DemoMcpTodosRoute,
-  DemoStoreRoute: DemoStoreRoute,
-  DemoTanstackQueryRoute: DemoTanstackQueryRoute,
   LectureVideoIdRoute: LectureVideoIdRoute,
   ApiAuthSplatRoute: ApiAuthSplatRoute,
-  DemoApiMcpTodosRoute: DemoApiMcpTodosRoute,
-  DemoGuitarsGuitarIdRoute: DemoGuitarsGuitarIdRoute,
-  DemoGuitarsIndexRoute: DemoGuitarsIndexRoute,
-  DemoApiAiChatRoute: DemoApiAiChatRoute,
-  DemoApiAiImageRoute: DemoApiAiImageRoute,
-  DemoApiAiStructuredRoute: DemoApiAiStructuredRoute,
-  DemoApiAiTranscriptionRoute: DemoApiAiTranscriptionRoute,
-  DemoApiAiTtsRoute: DemoApiAiTtsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

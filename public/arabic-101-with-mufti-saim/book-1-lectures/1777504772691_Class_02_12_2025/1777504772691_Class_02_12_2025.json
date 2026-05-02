@@ -25,5 +25,189 @@
                  "Mausuf wa Sifah",
                  "Intermediate"
              ],
-    "date":  "2025-02-12"
+    "date":  "2025-02-12",
+  "quiz": [
+    {
+      "q": "What are the four things in which the مَوْصُوف (mawṣūf) and صِفَة (ṣifa) must agree?",
+      "options": [
+        "Gender, number, root letters, and sentence position",
+        "Gender, number, final ḥaraka (iʿrāb), and definiteness",
+        "Gender, case ending, verb tense, and definiteness",
+        "Number, definiteness, root letters, and gender"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher repeatedly drilled these four criteria throughout the class: (1) gender (male/female), (2) number (singular/dual/plural), (3) final ḥaraka (ḍamma, kasra, or fatḥa), and (4) definiteness (both carrying اَلـ or both carrying tanwīn)."
+    },
+    {
+      "q": "In the phrase أَجْرٌ كَرِيمٌ (ajrun karīmun), why is it a valid مَوْصُوف and صِفَة pair?",
+      "options": [
+        "Both words are feminine, plural, definite, and have kasra",
+        "Both words are masculine, singular, indefinite, and have ḍamma",
+        "Both words are masculine, singular, definite, and have fatḥa",
+        "Both words are feminine, singular, indefinite, and have ḍamma"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher tested this pair from Surah al-Ḥadīd against all four filters: both أَجْرٌ and كَرِيمٌ are masculine, singular, indefinite (carrying tanwīn), and end with ḍamma. All four criteria are met."
+    },
+    {
+      "q": "In the phrase آيَاتٌ بَيِّنَاتٌ (āyātun bayyinātun — clear signs), which two of the four criteria are most prominently illustrated?",
+      "options": [
+        "Both are definite and masculine",
+        "Both are feminine and plural",
+        "Both are singular and have fatḥa",
+        "Both are masculine and definite"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher highlighted that آيَاتٌ (āyāt — signs) is the plural of آيَة (āya), a feminine word, and بَيِّنَاتٌ (bayyināt — clear) is its feminine plural adjective. The pair is also indefinite and shares the same case ending, passing all four filters."
+    },
+    {
+      "q": "Why is جَنَّاتُ نَعِيمٍ (jannātu naʿīmin) NOT a مَوْصُوف and صِفَة construction?",
+      "options": [
+        "Because نَعِيمٌ is feminine while جَنَّاتُ is masculine",
+        "Because جَنَّاتُ is feminine plural while نَعِيمٌ is masculine — they fail the gender test — and it is a muḍāf–muḍāf ilayh construction",
+        "Because both words are definite and cannot form a ṣifa",
+        "Because adjectives cannot follow plural nouns in Arabic"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher walked through the four filters: جَنَّاتُ is a feminine plural (plural of جَنَّة), while نَعِيمٌ is masculine — so they fail the gender test immediately. He also clarified that this is a muḍāf–muḍāf ilayh (possessive) construction, not a mawṣūf–ṣifa pair."
+    },
+    {
+      "q": "What is the simplest way to determine whether a word is definite or indefinite in Arabic?",
+      "options": [
+        "If it ends in a long vowel, it is definite",
+        "If it has اَلـ it is definite; if it has tanwīn it is indefinite — with the exception of proper nouns",
+        "If it is a verb it is definite; if it is a noun it is indefinite",
+        "All feminine nouns are indefinite and all masculine nouns are definite"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher stated this rule clearly and repeatedly: اَلـ signals definiteness; tanwīn signals indefiniteness. The exception is proper nouns (names of people or places), which are definite even when they carry tanwīn, because they refer to specific individuals."
+    },
+    {
+      "q": "What grammatical family does the صِفَة (ṣifa) belong to, and why?",
+      "options": [
+        "The Ẓarf family, because it indicates place",
+        "The Muḍāf family, because it follows another noun",
+        "The Tawābiʿ (followers) family, because it follows the ḥaraka of the mawṣūf that precedes it",
+        "The Ḥurūf al-Jarr family, because it changes the case of the noun after it"
+      ],
+      "correctIndex": 2,
+      "a": "The teacher introduced the concept of اَلتَّوَابِع (al-tawābiʿ — the followers): grammatical elements that simply follow the ḥaraka of the word before them. The ṣifa is a member of this family because its case ending automatically mirrors that of its mawṣūf."
+    },
+    {
+      "q": "In the pair فِئَةٌ قَلِيلَةٌ (fiʾatun qalīlatun — a small group) from Surah al-Baqarah, which criterion does this pair especially illustrate?",
+      "options": [
+        "That the ṣifa must be definite when the mawṣūf is definite",
+        "That the ṣifa's case ending automatically follows the case ending of the mawṣūf",
+        "That the ṣifa always comes before the mawṣūf",
+        "That plural nouns can never take a ṣifa"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher chose this example specifically to show that the ṣifa's ḥaraka follows the mawṣūf's ḥaraka automatically. فِئَةٌ and قَلِيلَةٌ are both feminine, singular, indefinite, and share the same case ending — clearly demonstrating how the adjective 'follows' the noun in all four respects."
+    },
+    {
+      "q": "The word كَسْلَانُ (kaslānu — lazy) is described as an exception. What makes it exceptional in the context of مَوْصُوف and صِفَة?",
+      "options": [
+        "It is feminine and therefore cannot describe masculine nouns",
+        "It cannot accept tanwīn, so it carries only one ḍamma instead of the expected tanwīn ḍamma (ٌ)",
+        "It must always come before the noun it describes",
+        "It can only be used as a predicate (khabar), never as a ṣifa"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher noted that كَسْلَانُ belongs to a category of words that structurally cannot accept tanwīn (called ghayr munsarif). So while it should theoretically carry tanwīn ḍamma (ٌ) to match its indefinite mawṣūf طَالِبٌ, it can only carry a single ḍamma. It remains a valid mawṣūf–ṣifa pair despite this exception."
+    },
+    {
+      "q": "What does the phrase اَلْيَوْمُ الْآخِرُ (al-yawmu al-ākhiru) mean, and what confirms it is a مَوْصُوف and صِفَة pair?",
+      "options": [
+        "'The last night' — both words are feminine, definite, and have kasra",
+        "'The Last Day' — both words are masculine, singular, definite (with اَلـ), and have ḍamma",
+        "'A final day' — both words are masculine, singular, indefinite, and have ḍamma",
+        "'The great day' — both words are masculine, plural, definite, and have fatḥa"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher confirmed that اَلْيَوْمُ (the day) and الْآخِرُ (the last) are both masculine, singular, definite (both carry اَلـ), and end with ḍamma — passing all four filters. The phrase means 'the Last Day' and appears frequently in the Qurʾān."
+    },
+    {
+      "q": "The teacher explained that مُجْتَهِدٌ (mujtahidun — hardworking) shares a root with جِهَادٌ (jihād). What is the common meaning of this root?",
+      "options": [
+        "To remember and memorise",
+        "To strive, put in effort, and exert oneself",
+        "To recite and read aloud",
+        "To travel and seek knowledge"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher explained that مُجْتَهِدٌ, جُهْدٌ, and جِهَادٌ all derive from the same root conveying the idea of striving and expending effort. A مُجْتَهِد in fiqh terminology is a scholar who has exerted maximum effort to extract rulings directly from the Qurʾān and Sunnah — reflecting the same root meaning."
+    }
+  ],
+  "quran_examples": [
+    {
+      "arabic": "وَلَهُمْ أَجْرٌ كَرِيمٌ",
+      "transliteration": "Wa-lahum ajrun karīm",
+      "translation": "And for them is a noble reward.",
+      "reference": "Surah al-Ḥadīd 57:11",
+      "note": "Cited by a student as a mawṣūf–ṣifa example and confirmed by the teacher. أَجْرٌ (reward) is the mawṣūf and كَرِيمٌ (noble) is the ṣifa. Both are masculine, singular, indefinite (tanwīn ḍamma) — passing all four filters."
+    },
+    {
+      "arabic": "مَن ذَا الَّذِي يُقْرِضُ اللَّهَ قَرْضًا حَسَنًا فَيُضَاعِفَهُ لَهُ",
+      "transliteration": "Man dhā alladhī yuqriḍu Allāha qirḍan ḥasanan fa-yuḍāʿifahu lah",
+      "translation": "Who is it that will lend to Allāh عَزَّ وَجَلَّ a goodly loan so He may multiply it for him?",
+      "reference": "Surah al-Ḥadīd 57:11",
+      "note": "Cited as an example of قَرْضٌ حَسَنٌ (a good loan). قَرْضًا is the mawṣūf and حَسَنًا is the ṣifa. Both are masculine, singular, indefinite, and in the accusative (fatḥa tanwīn) — all four criteria met. The teacher used this to show how agreement follows case position."
+    },
+    {
+      "arabic": "وَلَقَدْ أَنزَلْنَا إِلَيْكَ آيَاتٍ بَيِّنَاتٍ",
+      "transliteration": "Wa-laqad anzalnā ilayka āyātin bayyināt",
+      "translation": "And We have certainly sent down to you clear signs.",
+      "reference": "Surah al-Baqarah 2:99",
+      "note": "Cited and confirmed in class. آيَاتٍ (signs) is the feminine plural mawṣūf and بَيِّنَاتٍ (clear) is the feminine plural ṣifa. Both are indefinite and share the same case ending (kasra tanwīn) — illustrating that the four-way agreement rule applies to plurals, not only singulars."
+    },
+    {
+      "arabic": "كَم مِّن فِئَةٍ قَلِيلَةٍ غَلَبَتْ فِئَةً كَثِيرَةً بِإِذْنِ اللَّهِ",
+      "transliteration": "Kam min fiʾatin qalīlatin ghalabat fiʾatan kathīratan bi-idhni Allāh",
+      "translation": "How many a small group has overcome a large group by the permission of Allāh عَزَّ وَجَلَّ.",
+      "reference": "Surah al-Baqarah 2:249",
+      "note": "The teacher chose this āyah specifically to show how the ṣifa's ḥaraka automatically follows the mawṣūf's ḥaraka across different case positions. فِئَةٍ قَلِيلَةٍ (genitive, kasra tanwīn) and فِئَةً كَثِيرَةً (accusative, fatḥa tanwīn) both demonstrate feminine singular indefinite pairs in which the adjective mirrors the noun's case ending exactly."
+    },
+    {
+      "arabic": "نَذِيرٌ مُّبِينٌ",
+      "transliteration": "Nadhīrun mubīn",
+      "translation": "A clear warner.",
+      "reference": "Surah al-Aḥqāf 46:9",
+      "note": "Cited as a student example and verified in class. نَذِيرٌ (warner) is the mawṣūf and مُبِينٌ (clear) is the ṣifa. Both are masculine, singular, indefinite (tanwīn ḍamma) — passing all four filters. The teacher noted that مُبِينٌ meaning 'clear' is the same adjective that appears in آيَاتٌ بَيِّنَاتٌ, from the same root."
+    },
+    {
+      "arabic": "ذَٰلِكَ هُوَ الْفَضْلُ الْكَبِيرُ",
+      "transliteration": "Dhālika huwa al-faḍlu al-kabīr",
+      "translation": "That is the great bounty.",
+      "reference": "Surah al-Shūrā 42:22",
+      "note": "Cited by a student and confirmed by the teacher. الْفَضْلُ (the bounty) is the mawṣūf and الْكَبِيرُ (the great) is the ṣifa. Both are masculine, singular, definite (carrying اَلـ), and end with ḍamma — illustrating that the four-way agreement rule applies equally to definite mawṣūf–ṣifa pairs."
+    },
+    {
+      "arabic": "وَالْيَوْمِ الْآخِرِ",
+      "transliteration": "Wa-al-yawmi al-ākhir",
+      "translation": "And the Last Day.",
+      "reference": "Surah al-Baqarah 2:177",
+      "note": "Cited by a student as a frequently recurring Qurʾānic pair. اَلْيَوْمِ (the day) is the mawṣūf and الْآخِرِ (the last) is the ṣifa. Both are masculine, singular, definite (aَلـ), and in the genitive (kasra) — all four criteria met. The teacher noted this phrase appears throughout the Qurʾān in the formula 'believing in Allāh عَزَّ وَجَلَّ and the Last Day'."
+    },
+    {
+      "arabic": "إِلَيْهِ يَصْعَدُ الْكَلِمُ الطَّيِّبُ وَالْعَمَلُ الصَّالِحُ يَرْفَعُهُ",
+      "transliteration": "Ilayhi yaṣʿadu al-kalimu al-ṭayyibu wa-al-ʿamalu al-ṣāliḥu yarfaʿuh",
+      "translation": "To Him ascends the pure word, and righteous action He raises.",
+      "reference": "Surah Fāṭir 35:10",
+      "note": "The teacher cited this āyah to illustrate two mawṣūf–ṣifa pairs simultaneously. الْكَلِمُ الطَّيِّبُ (the pure word): both masculine, singular, definite, ḍamma. الْعَمَلُ الصَّالِحُ (the righteous deed): both masculine, singular, definite, ḍamma. Demonstrating that a single āyah can contain multiple mawṣūf–ṣifa constructions."
+    },
+    {
+      "arabic": "وَلَهُمْ عَذَابٌ أَلِيمٌ",
+      "transliteration": "Wa-lahum ʿadhābun alīm",
+      "translation": "And for them is a painful punishment.",
+      "reference": "Surah al-Baqarah 2:10",
+      "note": "Used by the teacher to anchor a broader discussion of the many ṣifas of عَذَابٌ (punishment) in the Qurʾān. عَذَابٌ is the mawṣūf and أَلِيمٌ (painful) is the ṣifa — both masculine, singular, indefinite, ḍamma tanwīn. The teacher then enumerated other ṣifas of عَذَابٌ: عَظِيمٌ (great), شَدِيدٌ (severe), غَلِيظٌ (harsh), مُقِيمٌ (everlasting) — all following the same four-way agreement pattern."
+    },
+    {
+      "arabic": "وَنَجَّيْنَاهُم مِّنْ عَذَابٍ غَلِيظٍ",
+      "transliteration": "Wa-najjaynāhum min ʿadhābin ghalīẓ",
+      "translation": "And We saved them from a harsh punishment.",
+      "reference": "Surah Hūd 11:58",
+      "note": "Cited by the teacher to show the same mawṣūf عَذَابٌ with a different ṣifa, and in a different case. Here عَذَابٍ غَلِيظٍ are both masculine, singular, indefinite, and in the genitive (kasra tanwīn) — because they follow مِنْ. This illustrates how the ṣifa automatically mirrors the mawṣūf's case regardless of which case it appears in."
+    }
+  ]
 }

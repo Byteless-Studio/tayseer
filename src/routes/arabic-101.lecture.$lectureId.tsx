@@ -211,7 +211,7 @@ function QuizCarousel({ items }: { items: QuizItem[] }) {
 function QuranCarousel({ items }: { items: QuranExample[] }) {
   const [current, setCurrent] = useState(0)
   const item = items[current]
-  console.log(current, item)
+
   return (
     <div>
       <div className="rounded-xl border border-gray-200 bg-[#f5f0e8] p-5 min-h-[200px] flex flex-col">

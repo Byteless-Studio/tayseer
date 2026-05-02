@@ -27,5 +27,85 @@
                  "Verb Conjugation",
                  "Definiteness"
              ],
-    "date":  "2025-02-24"
+    "date":  "2025-02-24",
+  "quiz": [
+    {
+      "q": "What is the meaning of the word الْمُسْتَوْصَف (al-mustawṣaf) as discussed in the lecture?",
+      "options": ["The hospital", "The urgent care or clinic", "The pharmacy", "The laboratory"],
+      "correctIndex": 1,
+      "a": "The lecture clarifies that although it can mean a dispensary, it is best understood as a smaller clinic or urgent care."
+    },
+    {
+      "q": "In the concept of نَعْت (naʿat) and مَنْعُوت (manʿūt), in how many aspects must the two words match?",
+      "options": ["Two aspects", "Three aspects", "Four aspects", "Five aspects"],
+      "correctIndex": 2,
+      "a": "The adjective and noun must match in four things: definiteness, gender, number, and case ending (ḥarakah)."
+    },
+    {
+      "q": "What grammatical effect does the word خَلْفَ (khalfa) have on the noun that follows it?",
+      "options": ["It makes the following word have a fatḥa", "It makes the following word have a dhamma", "It makes the following word have a kasra", "It has no effect on the following word"],
+      "correctIndex": 2,
+      "a": "خَلْفَ (khalfa) is a ظَرْف (ẓarf) and acts as a مُضَاف (muḍāf), making the following word a مُضَاف إِلَيْه (muḍāf ilayh) with a kasra."
+    },
+    {
+      "q": "According to the speaker, what is an effective way to identify the main sentence structure when الَّذِي (alladhī) is used?",
+      "options": ["Translate word for word immediately", "Place the relative clause in parentheses and focus on the subject and predicate", "Ignore the first word of the sentence", "Assume the word after alladhī is the predicate"],
+      "correctIndex": 1,
+      "a": "The speaker suggests pretending the description (ṣilat al-mawṣūl) doesn't exist to easily find the مُبْتَدَأ (mubtadaʾ) and خَبَر (khabar)."
+    },
+    {
+      "q": "What does the term اِلْتِقَاءُ السَّاكِنَيْنِ (iltiqāʾ al-sākinayn) refer to?",
+      "options": ["The meeting of two vowels", "The meeting of two silent letters (sukūns)", "The meeting of a noon and a meem", "The start of a new sentence"],
+      "correctIndex": 1,
+      "a": "It refers to the 'meeting of two sukoons,' which is impermissible in pronunciation, requiring a change in the first letter's vowel for flow."
+    },
+    {
+      "q": "How is the تَنْوِين (tanwīn) treated when it meets a word starting with حَمْزَةُ الْوَصْل (hamzat al-waṣl) in continuous reading?",
+      "options": ["The tanwīn is dropped entirely", "A small fatḥa is added", "The hidden nūn of the tanwīn is given a kasra", "The following word is skipped"],
+      "correctIndex": 2,
+      "a": "Because tanwīn is actually a silent nūn, it follows the rule of iltiqāʾ al-sākinayn and takes a kasra to connect to the next word."
+    },
+    {
+      "q": "In the sentence 'The big house which is in that street belongs to the minister,' what is the خَبَر (khabar/predicate)?",
+      "options": ["The big house", "In that street", "Belongs to the minister", "The street"],
+      "correctIndex": 2,
+      "a": "The main point being told about the house (the subject) is that it belongs to the minister (لِلْوَزِيرِ)."
+    },
+    {
+      "q": "What does the word الْآنَ (al-ʾāna) mean?",
+      "options": ["Yesterday", "Tomorrow", "Right now", "Before"],
+      "correctIndex": 2,
+      "a": "الْآنَ (al-ʾāna) is a ظَرْف (ẓarf) of time meaning 'right now' or 'at this moment.'"
+    }
+  ],
+  "quran_examples": [
+    {
+      "arabic": "يَا أَيُّهَا النَّاسُ اعْبُدُوا رَبَّكُمُ الَّذِي خَلَقَكُمْ",
+      "transliteration": "yā ayyuhā n-nāsu ʿbudū rabbakumu lladhī khalaqakum",
+      "translation": "O mankind, worship your Lord, who created you",
+      "reference": "Al-Baqarah 2:21",
+      "note": "Demonstrates the use of الَّذِي (alladhī) to introduce a descriptive clause for the noun preceding it."
+    },
+    {
+      "arabic": "اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ",
+      "transliteration": "ihdinā ṣ-ṣirāṭa l-mustaqīma",
+      "translation": "Guide us to the straight path",
+      "reference": "Al-Fatihah 1:6",
+      "note": "Illustrates the concept of نَعْت (naʿat) and مَنْعُوت (manʿūt), where الْمُسْتَقِيمَ matches الصِّرَاطَ in definiteness, gender, and case."
+    },
+    {
+      "arabic": "يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ",
+      "transliteration": "yaʿlamu mā bayna aydīhim wa mā khalfahum",
+      "translation": "He knows what is [present] before them and what will be after them",
+      "reference": "Al-Baqarah 2:255",
+      "note": "Demonstrates the word خَلْفَ (khalfa) as a ظَرْف (ẓarf) indicating position/time."
+    },
+    {
+      "arabic": "قُلْ هُوَ اللَّهُ أَحَدٌ ۞ اللَّهُ الصَّمَدُ",
+      "transliteration": "qul huwa llāhu aḥadun illāhu ṣ-ṣamad",
+      "translation": "Say, 'He is Allah, [who is] One. Allah, the Eternal Refuge.'",
+      "reference": "Al-Ikhlas 112:1-2",
+      "note": "Illustrates اِلْتِقَاءُ السَّاكِنَيْنِ (iltiqāʾ al-sākinayn) in continuous recitation; the silent nūn in the tanwīn of أَحَدٌ takes a kasra to connect to the next word."
+    }
+  ]
 }

@@ -27,5 +27,168 @@
                  "Ism Al-Mawsul",
                  "Quranic Grammar"
              ],
-    "date":  "2025-02-19"
+    "date":  "2025-02-19",
+  "quiz": [
+    {
+      "q": "What is the defining characteristic of غَيْرُ الْمُنْصَرِفِ (ghayr al-munṣarif)?",
+      "options": [
+        "It always takes tanwīn",
+        "It never changes form",
+        "It does not accept tanwīn and does not take kasrah",
+        "It only applies to verbs"
+      ],
+      "correctIndex": 2,
+      "a": "The lecture explained that ghayr al-munṣarif words do not take tanwīn and also do not take kasrah."
+    },
+    {
+      "q": "Which of the following was given as an example of غَيْرُ الْمُنْصَرِفِ?",
+      "options": [
+        "يَحْيَىٰ (Yaḥyā)",
+        "إِبْرَاهِيمَ (Ibrāhīm)",
+        "لُوطًا (Lūṭan)",
+        "رَجُلٌ (rajulun)"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher explicitly mentioned إِبْرَاهِيمَ as an example of ghayr al-munṣarif."
+    },
+    {
+      "q": "Why do female names generally not take tanwīn?",
+      "options": [
+        "Because they are verbs",
+        "Because they are always plural",
+        "Because they fall under غَيْرُ الْمُنْصَرِفِ",
+        "Because they are always definite"
+      ],
+      "correctIndex": 2,
+      "a": "The lecture clarified that female names are part of the ghayr al-munṣarif category, so they do not take tanwīn."
+    },
+    {
+      "q": "What are the alternative terms for مَوْصُوف (mawṣūf) and صِفَة (ṣifah)?",
+      "options": [
+        "فِعْل and حَرْف",
+        "مُبْتَدَأ and خَبَر",
+        "نَعْت (naʿt) and مَنْعُوت (manʿūt)",
+        "مُضَاف and مُضَاف إِلَيْهِ"
+      ],
+      "correctIndex": 2,
+      "a": "The teacher explained that نَعْت and مَنْعُوت are simply alternative terms for صِفَة and مَوْصُوف."
+    },
+    {
+      "q": "What is the function of الِاسْمُ الْمَوْصُولُ (al-ism al-mawṣūl)?",
+      "options": [
+        "To show possession",
+        "To connect a noun to a descriptive clause",
+        "To indicate past tense",
+        "To replace verbs"
+      ],
+      "correctIndex": 1,
+      "a": "The lecture defined it as a connecting word used to link a noun to a descriptive sentence."
+    },
+    {
+      "q": "What does الَّذِي (al-ladhī) mean in context?",
+      "options": [
+        "This",
+        "That (pointing)",
+        "Who / that (relative)",
+        "Where"
+      ],
+      "correctIndex": 2,
+      "a": "The teacher explained that الَّذِي is a relative pronoun meaning 'who' or 'that' depending on context."
+    },
+    {
+      "q": "Which is the correct plural masculine form of الِاسْمُ الْمَوْصُولُ?",
+      "options": [
+        "الَّتِي",
+        "اللَّذَانِ",
+        "الَّذِينَ",
+        "اللَّاتِي"
+      ],
+      "correctIndex": 2,
+      "a": "The lecture stated that الَّذِينَ is the plural masculine form."
+    },
+    {
+      "q": "What is صِلَةُ الْمَوْصُولِ (ṣilat al-mawṣūl)?",
+      "options": [
+        "The noun before الِاسْمُ الْمَوْصُولُ",
+        "The verb of the sentence",
+        "The descriptive clause that comes after the relative pronoun",
+        "The object of the sentence"
+      ],
+      "correctIndex": 2,
+      "a": "It is the sentence that comes after الِاسْمُ الْمَوْصُولُ to describe the noun."
+    },
+    {
+      "q": "What happens when two سَاكِن (sukūn letters) meet (التقاء الساكنين)?",
+      "options": [
+        "Nothing changes",
+        "A fatḥah is always added",
+        "A kasrah is added to ease pronunciation",
+        "The word is حذف (deleted)"
+      ],
+      "correctIndex": 2,
+      "a": "The lecture explained that a kasrah is added to avoid difficulty in pronunciation and improve flow."
+    },
+    {
+      "q": "What is the meaning of عِنْدَ (ʿinda) as taught in the lesson?",
+      "options": [
+        "Always means ownership",
+        "Means only time",
+        "Means 'with' or indicates possession/being in someone's presence",
+        "Means 'before' only"
+      ],
+      "correctIndex": 2,
+      "a": "The teacher explained that عِنْدَ generally means 'with' and can imply possession or presence."
+    }
+  ],
+  "quran_examples": [
+    {
+      "arabic": "فَرَجَعَ مُوسَىٰ إِلَىٰ قَوْمِهِ غَضْبَانَ أَسِفًا",
+      "transliteration": "farajaʿa Mūsā ilā qawmihi ghaḍbāna asifan",
+      "translation": "So Mūsā عَلَيْهِ السَّلَام returned to his people angry and grieved.",
+      "reference": "Taha 20:86",
+      "note": "Demonstrates غَيْرُ الْمُنْصَرِفِ where غَضْبَانَ does not take tanwīn despite expectation."
+    },
+    {
+      "arabic": "وَمَرْيَمَ ابْنَتَ عِمْرَانَ",
+      "transliteration": "wa-maryama ibnata ʿimrān",
+      "translation": "And Maryam, daughter of ʿImrān.",
+      "reference": "At-Tahrim 66:12",
+      "note": "Shows a female name (مَرْيَمَ) which is غَيْرُ الْمُنْصَرِفِ and does not take tanwīn."
+    },
+    {
+      "arabic": "مَا عِندَكُمْ يَنفَدُ وَمَا عِندَ اللَّهِ بَاقٍ",
+      "transliteration": "mā ʿindakum yanfadu wa-mā ʿinda Allāh عَزَّ وَجَلَّ bāq",
+      "translation": "What is with you will perish, but what is with Allāh remains.",
+      "reference": "An-Nahl 16:96",
+      "note": "Illustrates the usage of عِنْدَ (ʿinda) meaning 'with' and indicating possession or presence."
+    },
+    {
+      "arabic": "عِندَ سِدْرَةِ الْمُنتَهَىٰ",
+      "transliteration": "ʿinda sidrati al-muntahā",
+      "translation": "At the Lote Tree of the utmost boundary.",
+      "reference": "An-Najm 53:14",
+      "note": "Shows عِنْدَ functioning as a ظرف (adverb of place) with the following noun in kasrah due to iḍāfah."
+    },
+    {
+      "arabic": "وَلَا تُقَاتِلُوهُمْ عِندَ الْمَسْجِدِ الْحَرَامِ",
+      "transliteration": "wa-lā tuqātilūhum ʿinda al-masjidi al-ḥarām",
+      "translation": "And do not fight them near al-Masjid al-Ḥarām.",
+      "reference": "Al-Baqarah 2:191",
+      "note": "Demonstrates عِنْدَ indicating location (vicinity) as taught in the lecture."
+    },
+    {
+      "arabic": "الَّذِينَ يُؤْمِنُونَ بِالْغَيْبِ",
+      "transliteration": "alladhīna yuʾminūna bil-ghayb",
+      "translation": "Those who believe in the unseen.",
+      "reference": "Al-Baqarah 2:3",
+      "note": "Illustrates الَّذِينَ (plural ism mawṣūl) connecting to a descriptive clause (ṣilat al-mawṣūl)."
+    },
+    {
+      "arabic": "نَارُ اللَّهِ الْمُوقَدَةُ الَّتِي تَطَّلِعُ عَلَى الْأَفْئِدَةِ",
+      "transliteration": "nāru Allāhi al-mūqadah allati taṭṭaliʿu ʿalā al-afʾidah",
+      "translation": "The fire of Allāh, kindled, which rises over the hearts.",
+      "reference": "Al-Humazah 104:6-7",
+      "note": "Demonstrates الَّتِي (feminine ism mawṣūl) correctly matching the feminine noun نَارُ."
+    }
+  ]
 }

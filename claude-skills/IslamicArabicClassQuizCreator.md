@@ -43,6 +43,7 @@ When referring to Allāh عَزَّ وَجَلَّ in grammatical examples, phra
 - Follow the Arabic with its transliteration in parentheses, using **IJMES** conventions.
   - Example: مَا (mā), مَنْ (man), هَٰذَا (hādhā), ذَٰلِكَ (dhālika)
 - Use IJMES consistently — long vowels marked with macrons (ā, ī, ū), emphatic consonants with sub-dots (ḥ, ṣ, ḍ, ṭ, ẓ), ʿayn as ʿ, hamza as ʾ.
+- For grammar concepts such as predicates, subjects, diptotes, wherever feasible use the arabic terminology and then in paranthesis use the english terminology. For example خبر (predicate) 
 
 ---
 

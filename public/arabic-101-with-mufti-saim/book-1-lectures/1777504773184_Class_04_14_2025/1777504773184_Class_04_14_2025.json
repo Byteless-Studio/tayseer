@@ -28,5 +28,102 @@
                  "Dialogue Translation",
                  "Beginner Arabic"
              ],
-    "date":  "2025-04-14"
+    "date":  "2025-04-14",
+  "quiz": [
+    {
+      "q": "What is the meaning of the Arabic word دَفْتَرٌ (daftarun) as discussed in the lecture?",
+      "options": ["Office", "Library", "Notebook", "Desk"],
+      "correctIndex": 2,
+      "a": "While the word refers to an 'office' in Urdu, in Arabic it means 'notebook,' as clarified by the teacher."
+    },
+    {
+      "q": "How should a student say 'my father' in Arabic to avoid saying 'your father'?",
+      "options": ["أَبُوكَ (abūka)", "أَبِي (abī)", "أَنَا أَبٌ (anā abun)", "أَبُوهُ (abūhu)"],
+      "correctIndex": 1,
+      "a": "The lecture clarifies that adding the ي (yāʾ) indicates 'my,' whereas كَ (ka) indicates 'your' (masculine singular)."
+    },
+    {
+      "q": "According to the lecture, which particle is preferred when expressing possession of a relative (e.g., 'I have a brother')?",
+      "options": ["عِنْدِي (ʿindī)", "مَعِي (maʿī)", "لِي (lī)", "بِي (bī)"],
+      "correctIndex": 2,
+      "a": "The teacher notes that لِ (li) is used for human relationships, whereas عِنْدَ (ʿinda) is generally used for objects."
+    },
+    {
+      "q": "What is the difference between عَمٌّ (ʿammun) and خَالٌ (khālun)?",
+      "options": [
+        "ʿAmmun is a paternal uncle; khālun is a maternal uncle",
+        "ʿAmmun is a maternal uncle; khālun is a paternal uncle",
+        "ʿAmmun is a grandfather; khālun is an uncle",
+        "There is no difference; they are synonyms"
+      ],
+      "correctIndex": 0,
+      "a": "The lecture defines عَمٌّ (ʿammun) specifically as the paternal uncle (father's side) and خَالٌ (khālun) as the maternal uncle."
+    },
+    {
+      "q": "How do you correctly say 'her name' in Arabic?",
+      "options": ["اِسْمُهُ (ismuhu)", "اِسْمُكَ (ismuka)", "اِسْمُهَا (ismuhā)", "اِسْمِي (ismī)"],
+      "correctIndex": 2,
+      "a": "The suffix هَا (hā) is the feminine singular pronoun used to indicate 'her,' as shown in the example 'her name is Aminah'."
+    },
+    {
+      "q": "What grammatical effect does the word مَعَ (maʿa) have on the noun that follows it?",
+      "options": [
+        "It makes it مَرْفُوع (marfūʿ) with a dhamma",
+        "It makes it مَنْصُوب (manṣūb) with a fatha",
+        "It makes it مَجْرُور (majrūr) with a kasra",
+        "It has no grammatical effect"
+      ],
+      "correctIndex": 2,
+      "a": "The lecture explains that مَعَ (maʿa) acts as a ظرف (adverb) and results in the following noun being in the genitive case (kasra)."
+    },
+    {
+      "q": "What is the meaning of the word زَمِيلٌ (zamīlun)?",
+      "options": ["Teacher", "Engineer", "Classmate", "Spouse"],
+      "correctIndex": 2,
+      "a": "The lecture identifies زَمِيلٌ (zamīlun) as a classmate or colleague."
+    },
+    {
+      "q": "Which of these is the feminine form for 'nurse' mentioned in the lecture?",
+      "options": ["مُمَرِّضٌ (mumarriḍun)", "مُمَرِّضَةٌ (mumarriḍatun)", "طَبِيبَةٌ (ṭabībatun)", "مُدَرِّسَةٌ (mudarrisatun)"],
+      "correctIndex": 1,
+      "a": "By adding the تاء مربوطة (tāʾ marbūṭa), the word مُمَرِّضٌ (male nurse) becomes مُمَرِّضَةٌ (female nurse)."
+    }
+  ],
+  "quran_examples": [
+    {
+      "arabic": "لِّلَّهِ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ",
+      "transliteration": "lillāhi mā fī as-samāwāti wa-mā fī al-arḍi",
+      "translation": "To Allāh عَزَّ وَجَلَّ belongs whatever is in the heavens and whatever is in the earth.",
+      "reference": "Al-Baqarah 2:284",
+      "note": "Demonstrates the use of the preposition لِ (li) to indicate possession or belonging to Allāh عَزَّ وَجَلَّ."
+    },
+    {
+      "arabic": "وَمُبَشِّرًا بِرَسُولٍ يَأْتِي مِن بَعْدِي اسْمُهُ أَحْمَدُ",
+      "transliteration": "wa-mubašširan bi-rasūlin yaʾtī min baʿdī ismuhu Aḥmadu",
+      "translation": "...and bringing good tidings of a messenger to come after me, whose name is Ahmad.",
+      "reference": "As-Saff 61:6",
+      "note": "Illustrates the attachment of the masculine third-person singular pronoun هُ (hu) to the noun اِسْمٌ (ismun) to mean 'his name,' as discussed in the lecture."
+    },
+    {
+      "arabic": "إِنَّ اللَّهَ مَعَ الصَّابِرِينَ",
+      "transliteration": "inna Allāha maʿa aṣ-ṣābirīna",
+      "translation": "Indeed, Allāh عَزَّ وَجَلَّ is with the patient.",
+      "reference": "Al-Baqarah 2:153",
+      "note": "Demonstrates the usage of مَعَ (maʿa) meaning 'with,' which was a primary vocabulary point in the lecture."
+    },
+    {
+      "arabic": "ذَٰلِكَ الْكِتَابُ لَا رَيْبَ ۛ فِيهِ",
+      "transliteration": "dhālika al-kitābu lā rayba fīhi",
+      "translation": "This is the Book about which there is no doubt, in it...",
+      "reference": "Al-Baqarah 2:2",
+      "note": "Shows the preposition فِي (fī) indicating 'in,' used in the lecture to describe locations (e.g., in the car, in the room)."
+    },
+    {
+      "arabic": "مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ",
+      "transliteration": "man dhā alladhī yašfaʿu ʿindahu illā bi-idhnihi",
+      "translation": "Who is it that can intercede with Him except by His permission?",
+      "reference": "Al-Baqarah 2:255",
+      "note": "Uses the word عِنْدَ (ʿinda) to mean 'with' or 'in the presence of' Allāh عَزَّ وَجَلَّ, distinguishing it from the 'with' of companionship (maʿa)."
+    }
+  ]
 }

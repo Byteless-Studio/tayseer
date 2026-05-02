@@ -27,5 +27,189 @@
                  "InterrogativeParticles",
                  "Quran"
              ],
-    "date":  "2025-04-09"
+    "date":  "2025-04-09",
+  "quiz": [
+    {
+      "q": "What are the two types of مَا (mā) introduced in this lesson?",
+      "options": [
+        "مَا الْمَوْصُولِيَّة (relative) and مَا النَّافِيَة (negative)",
+        "مَا الِاسْتِفْهَامِيَّة (interrogative) and مَا النَّافِيَة (negative)",
+        "مَا الِاسْتِفْهَامِيَّة (interrogative) and مَا الشَّرْطِيَّة (conditional)",
+        "مَا النَّافِيَة (negative) and مَا الزَّائِدَة (extra/emphatic)"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher explained that the class had already learned مَا الِاسْتِفْهَامِيَّة — the interrogative مَا used to ask questions (e.g., مَا هَٰذَا — 'what is this?'). This lesson introduced the second type: مَا النَّافِيَة — the negating مَا, used to say 'I do not have...' He noted there are more than five or six types of مَا total, to be learned gradually."
+    },
+    {
+      "q": "How do you say 'I do not have a car' using مَا النَّافِيَة?",
+      "options": [
+        "لَا عِنْدِي سَيَّارَةٌ",
+        "مَا سَيَّارَتِي",
+        "مَا لِي سَيَّارَةٌ",
+        "لَيْسَ لِي سَيَّارَةٌ"
+      ],
+      "correctIndex": 2,
+      "a": "The teacher taught that مَا لِي (mā lī) followed by the noun expresses 'I do not have...' using مَا النَّافِيَة. He noted that saying لَا عِنْدِي سَيَّارَةٌ is not how Arabs would phrase this negation in this context — each particle has its appropriate usage."
+    },
+    {
+      "q": "What is the difference between عِنْدِي (ʿindī) and لِي (lī) when expressing possession?",
+      "options": [
+        "عِنْدِي is for definite possession and لِي is for indefinite possession",
+        "عِنْدِي is used for objects and لِي is preferred when referring to people (e.g., family members)",
+        "عِنْدِي is formal and لِي is informal",
+        "They are completely interchangeable with no difference"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher explicitly taught this distinction: عِنْدِي (I have) is generally used for objects, while لِي (I have / for me) is preferred when referring to human beings such as relatives. He illustrated: لِي أَخٌ (I have a brother), and cautioned against saying عِنْدِي أَخٌ for a person."
+    },
+    {
+      "q": "When the lām (لِـ) of possession is attached to the pronouns كَ (ka), هُ (hu), or هَا (hā), what happens to its vowel and why?",
+      "options": [
+        "It keeps its kasra — لِكَ، لِهُ، لِهَا",
+        "It takes a ḍamma to mark emphasis",
+        "It changes from kasra to fatḥa — لَكَ، لَهُ، لَهَا — to make pronunciation easier",
+        "It is dropped entirely and the pronoun stands alone"
+      ],
+      "correctIndex": 2,
+      "a": "The teacher explained that while لِـ normally carries a kasra, attaching it to كَ, هُ, or هَا would produce awkward combinations (لِكَ, لِهُ, لِهَا). The Arabs therefore changed the kasra to a fatḥa for ease of pronunciation, resulting in لَكَ، لَهُ، لَهَا — all meaning 'for you/him/her' or 'belongs to you/him/her'."
+    },
+    {
+      "q": "How do you attach the pronoun 'my' (yāʾ al-mutakallim) to a noun in Arabic?",
+      "options": [
+        "Add ـهُ to the end of the noun",
+        "Add ـي (yā) to the end of the noun",
+        "Add ـكَ to the end of the noun",
+        "Place أَنَا before the noun"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher taught that ـي (yā) attached to the end of a noun makes it 'my'. Examples practiced in class: قَلَمِي (my pen), كِتَابِي (my book), سَيَّارَتِي (my car), يَدِي (my hand). He noted that even feminine nouns simply take ـي without changing gender: سَيَّارَتِي remains feminine regardless of the owner."
+    },
+    {
+      "q": "If a noun belongs to a female owner, does the noun itself become feminine in Arabic?",
+      "options": [
+        "Yes — any noun owned by a female must take a tāʾ marbūṭa",
+        "No — the noun keeps its own gender; only the possessive pronoun changes to reflect the owner's gender",
+        "Yes — but only for living things",
+        "No — nouns always remain masculine regardless of ownership"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher corrected this common student mistake multiple times. For example, سَرِيرُهَا (her bed) keeps سَرِير masculine — the bed does not become female just because its owner is female. Similarly, مِفْتَاحُهَا (her key) remains masculine. Only the pronoun suffix (ـهَا) reflects the female owner."
+    },
+    {
+      "q": "How do you say 'I have one sister' in Arabic, and what does وَاحِدَة (wāḥida) tell us?",
+      "options": [
+        "لِي أُخْتٌ وَاحِدَةٌ — وَاحِدَة is the feminine form of وَاحِد (one), agreeing with the feminine noun أُخْت",
+        "عِنْدِي أُخْتٌ وَاحِدٌ — وَاحِد is always masculine",
+        "لِي وَاحِدَةٌ أُخْتٌ — the number always precedes the noun in Arabic",
+        "أَنَا لِي أُخْتٌ وَاحِدَةٌ — أَنَا must always open the sentence"
+      ],
+      "correctIndex": 0,
+      "a": "The teacher taught that وَاحِدٌ means 'one' for masculine nouns and وَاحِدَةٌ for feminine nouns, functioning like a ṣifa agreeing with its mawṣūf. Example: لِي أُخْتٌ وَاحِدَةٌ (I have one sister) — both أُخْتٌ and وَاحِدَةٌ are feminine. He also gave: لِي ابْنٌ وَاحِدٌ (I have one son)."
+    },
+    {
+      "q": "What is the difference between the singular 'you' pronoun (كَ) and the plural 'you' (كُمْ) in Arabic, as illustrated by the greeting?",
+      "options": [
+        "كَ is used for males and كُمْ for females",
+        "كَ is singular (addressing one person) and كُمْ is plural (addressing a group) — as in عَلَيْكَ vs عَلَيْكُمْ in the greeting",
+        "كَ is formal and كُمْ is informal",
+        "They are interchangeable with no grammatical difference"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher used the Islamic greeting as a live example: اَلسَّلَامُ عَلَيْكُمْ uses كُمْ for plural, while اَلسَّلَامُ عَلَيْكَ uses كَ for singular — as said when addressing the Prophet ﷺ individually in al-Taḥiyyāt (اَلسَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ). He noted that using the plural form كُمْ to one person is also acceptable as a mark of respect."
+    },
+    {
+      "q": "What does the phrase أَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ illustrate grammatically?",
+      "options": [
+        "The pronoun هُ in عَبْدُهُ and رَسُولُهُ refers back to the Prophet ﷺ",
+        "The pronoun هُ in عَبْدُهُ and رَسُولُهُ refers back to Allāh عَزَّ وَجَلَّ, meaning 'His slave and His messenger'",
+        "The word عَبْد is always paired with رَسُول in Arabic grammar",
+        "هُ is a demonstrative pronoun meaning 'that'"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher used the Shahāda as a live grammar example: عَبْدُهُ (his slave) and رَسُولُهُ (his messenger) — the pronoun هُ in both words refers back to Allāh عَزَّ وَجَلَّ, not to the Prophet ﷺ. This illustrates how pronouns in Arabic always refer back to a previously mentioned noun (antecedent), a skill the teacher urged students to practice when reading the Qurʾān."
+    },
+    {
+      "q": "The word تِفْل (tifl) appears in the Qurʾān. What does it mean, and what is its plural?",
+      "options": [
+        "تِفْل means 'elder'; plural أَتْفَال",
+        "تِفْل means 'child/baby'; plural أَطْفَال",
+        "تِفْل means 'student'; plural طُلَّاب",
+        "تِفْل means 'orphan'; plural أَيْتَام"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher mentioned تِفْل (baby/small child) as a new vocabulary word and cited two Qurʾānic examples: the singular form in the phrase describing those children who have not yet become aware of women's private areas, and the plural أَطْفَال in the āyah about children reaching puberty (Surah al-Nūr). تِفْلَةٌ is the feminine form."
+    }
+  ],
+  "quran_examples": [
+    {
+      "arabic": "رَبِّ اشْرَحْ لِي صَدْرِي",
+      "transliteration": "Rabbi ishraḥ lī ṣadrī",
+      "translation": "My Lord, expand for me my breast.",
+      "reference": "Surah Ṭā-Hā 20:25",
+      "note": "Cited by a student as an example of لِي (lī — for me/I have) in the Qurʾān. Here لِي is the possessive lām attached to the first-person singular pronoun, meaning 'for me'. The teacher confirmed this and used it to reinforce that لِي in the Qurʾān appears frequently in prayers and supplications."
+    },
+    {
+      "arabic": "وَرَفَعْنَا لَكَ ذِكْرَكَ",
+      "transliteration": "Wa-rafaʿnā laka dhikrak",
+      "translation": "And We raised for you your mention.",
+      "reference": "Surah al-Inshirāḥ 94:4",
+      "note": "Cited as a Qurʾānic example of لَكَ (laka — for you, singular masculine). The teacher used this to demonstrate how the lām changes its vowel from kasra (لِـ) to fatḥa (لَـ) when followed by the pronoun كَ, for ease of pronunciation. لَكَ here refers to the Prophet ﷺ."
+    },
+    {
+      "arabic": "لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ",
+      "transliteration": "Lahu mā fī al-samāwāti wa-mā fī al-arḍ",
+      "translation": "To Him belongs whatever is in the heavens and whatever is on the earth.",
+      "reference": "Surah al-Baqarah 2:255 (Āyat al-Kursī)",
+      "note": "Cited as the primary Qurʾānic example of لَهُ (lahu — for him/belonging to Him). The teacher noted this phrase appears hundreds of times in the Qurʾān and always refers to Allāh عَزَّ وَجَلَّ. It demonstrates how the lām takes a fatḥa (لَهُ instead of لِهُ) when followed by the third-person masculine pronoun هُ, as taught in this lesson."
+    },
+    {
+      "arabic": "وَإِنَّ جَهَنَّمَ لَمَوْعِدُهُمْ أَجْمَعِينَ ۝ لَهَا سَبْعَةُ أَبْوَابٍ",
+      "transliteration": "Wa-inna jahannama la-mawʿiduhum ajmaʿīn. Lahā sabʿatu abwāb",
+      "translation": "And indeed, Hellfire is the promised place for them all. It has seven gates.",
+      "reference": "Surah al-Ḥijr 15:43–44",
+      "note": "Cited as a Qurʾānic example of لَهَا (lahā — for her/it has), illustrating the feminine possessive pronoun. The teacher pointed out that جَهَنَّم (Jahannam — Hellfire) is grammatically feminine in Arabic even though it has no tāʾ marbūṭa, which is why لَهَا is used. This was used to reinforce that a noun's gender governs the pronoun, not its outward form."
+    },
+    {
+      "arabic": "لَهَا مَا كَسَبَتْ وَعَلَيْهَا مَا اكْتَسَبَتْ",
+      "transliteration": "Lahā mā kasabat wa-ʿalayhā mā iktasabat",
+      "translation": "For it is what it has earned, and against it is what it has brought upon itself.",
+      "reference": "Surah al-Baqarah 2:286",
+      "note": "Cited by a student as another Qurʾānic example of لَهَا (lahā). The teacher confirmed it, noting that لَهَا here refers back to نَفْس (nafs — soul), which is feminine. This simultaneously illustrates لَهَا and demonstrates how pronouns in the Qurʾān always refer back to a specific antecedent — a skill the teacher urged students to practice."
+    },
+    {
+      "arabic": "وَلَهَا عَرْشٌ عَظِيمٌ",
+      "transliteration": "Wa-lahā ʿarshun ʿaẓīm",
+      "translation": "And she has a great throne.",
+      "reference": "Surah al-Naml 27:23",
+      "note": "Cited as an example of لَهَا (lahā) referring to a female human — Bilqīs, the Queen of Sheba. The teacher noted that the Hud-hud (hoopoe bird) is describing her to Sulaymān عَلَيْهِ السَّلَام. This also incidentally illustrates a mawṣūf–ṣifa pair: عَرْشٌ عَظِيمٌ (a great throne) — both masculine, singular, indefinite, and nominative."
+    },
+    {
+      "arabic": "بِيَدِهِ مَلَكُوتُ كُلِّ شَيْءٍ",
+      "transliteration": "Bi-yadihi malakūtu kulli shayʾ",
+      "translation": "In His hand is the dominion of all things.",
+      "reference": "Surah Yā-Sīn 36:83",
+      "note": "Cited by a student when the teacher asked where يَدِي (my hand) and its related pronoun forms appear in the Qurʾān. بِيَدِهِ (bi-yadihi — in His hand) demonstrates the third-person masculine pronoun هُ attached to يَد (hand) with the ḥarf al-jarr بِـ, referring to Allāh عَزَّ وَجَلَّ. The teacher used this to show that possessive pronouns on body-part nouns appear throughout the Qurʾān."
+    },
+    {
+      "arabic": "لَئِن بَسَطتَ إِلَيَّ يَدَكَ لِتَقْتُلَنِي مَا أَنَا بِبَاسِطٍ يَدِيَ إِلَيْكَ لِأَقْتُلَكَ",
+      "transliteration": "La-in basaṭta ilayya yadaka li-taqtulanī mā anā bi-bāsiṭin yadiya ilayka li-aqtulak",
+      "translation": "If you should raise your hand against me to kill me, I shall not raise my hand against you to kill you.",
+      "reference": "Surah al-Māʾidah 5:28",
+      "note": "Cited to illustrate يَدِيَ (yadiya — my hand) in the Qurʾān. The teacher attributed this to Hābīl (Abel) speaking to Qābīl (Cain), showing the first-person possessive ـي (yā al-mutakallim) attached to يَد. The verse also contains يَدَكَ (your hand — singular masculine) and إِلَيْكَ (to you), providing further examples of the possessive and prepositional pronouns taught in this lesson."
+    },
+    {
+      "arabic": "وَالطِّفْلِ الَّذِينَ لَمْ يَظْهَرُوا عَلَىٰ عَوْرَاتِ النِّسَاءِ",
+      "transliteration": "Wa-al-ṭifli alladhīna lam yaẓharū ʿalā ʿawrāti al-nisāʾ",
+      "translation": "And children who have not yet become aware of the private aspects of women.",
+      "reference": "Surah al-Nūr 24:31",
+      "note": "Cited by the teacher as a Qurʾānic occurrence of the word طِفْل (ṭifl — child), illustrating the vocabulary introduced in this lesson. The verse uses the plural form الطِّفْل in a collective sense referring to children who have not yet reached awareness of adult matters."
+    },
+    {
+      "arabic": "وَإِذَا بَلَغَ الْأَطْفَالُ مِنكُمُ الْحُلُمَ",
+      "transliteration": "Wa-idhā balagha al-aṭfālu minkumu al-ḥulum",
+      "translation": "And when the children among you reach puberty.",
+      "reference": "Surah al-Nūr 24:59",
+      "note": "Cited by the teacher to show أَطْفَال (aṭfāl — children), the broken plural of طِفْل (ṭifl). The teacher specifically mentioned both this āyah and the previous one to show students that the new vocabulary word طِفْل appears in the Qurʾān in both its singular and plural forms."
+    }
+  ]
 }

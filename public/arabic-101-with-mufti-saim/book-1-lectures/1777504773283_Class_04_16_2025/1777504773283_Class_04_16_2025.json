@@ -28,5 +28,143 @@
                  "Qur\u0026#x2019;an Examples",
                  "Beginner"
              ],
-    "date":  "2025-04-16"
+    "date":  "2025-04-16",
+  "quiz": [
+    {
+      "q": "Based on the text, what is the meaning of the word 'حَدِيقَة' (ḥadīqah)?",
+      "options": [
+        "Kitchen",
+        "Garden",
+        "Window",
+        "Library"
+      ],
+      "correctIndex": 1,
+      "a": "The speaker confirms that 'ḥadīqah' means garden when a student asks for a reminder."
+    },
+    {
+      "q": "Why is 'فِيهَا' (fīhā) used instead of 'فِيهِ' (fīhi) when referring to a room (ghurfah)?",
+      "options": [
+        "Because the speaker is a female.",
+        "Because 'ghurfah' is a feminine word.",
+        "Because the room is large.",
+        "Because it refers to more than one room."
+      ],
+      "correctIndex": 1,
+      "a": "In Arabic, pronouns must match the gender of the noun they refer to. Since 'ghurfah' (room) is feminine, 'fīhā' is used."
+    },
+    {
+      "q": "What is the meaning of the common Arabic word 'الْآنَ' (al-āna)?",
+      "options": [
+        "Yesterday",
+        "Tomorrow",
+        "Right now",
+        "Always"
+      ],
+      "correctIndex": 2,
+      "a": "The teacher identifies 'al-āna' as a very common word meaning 'right now'."
+    },
+    {
+      "q": "In the phrase 'مَا فِيهِ أَحَدٌ' (mā fīhi aḥadun), what is the function of the word 'مَا' (mā)?",
+      "options": [
+        "It is asking a question ('What').",
+        "It is a possessive pronoun ('My').",
+        "It is negating the sentence ('Not/No one').",
+        "It is a connector word ('And')."
+      ],
+      "correctIndex": 2,
+      "a": "The teacher explains that 'mā' can either be interrogative (what) or negative; in this context, it means 'there is nobody (not anyone) in it'."
+    },
+    {
+      "q": "Where is the sister's room (ghurfatu ukhtī) located according to the lesson's text?",
+      "options": [
+        "In front of the masjid",
+        "Behind the garden",
+        "In front of the kitchen",
+        "Under the desk"
+      ],
+      "correctIndex": 2,
+      "a": "The text states: 'ghurfatu ukhtī amāma al-maṭbakh' (My sister's room is in front of the kitchen)."
+    },
+    {
+      "q": "According to the new grammatical rule introduced, what vowel ending does the object of a verb (Maf'ool bihi) usually receive?",
+      "options": [
+        "Dhamma (u)",
+        "Fatha (a)",
+        "Kasra (i)",
+        "Sukun"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher explains that the object of a verb (the thing the action is being done upon) gets a fatha, such as in 'Uḥibbu Allāha'."
+    },
+    {
+      "q": "What does the word 'مِرْوَحَة' (mirwaḥah) mean?",
+      "options": [
+        "Window",
+        "Clock",
+        "Fan",
+        "Bag"
+      ],
+      "correctIndex": 2,
+      "a": "The teacher defines 'mirwaḥah' as a fan during the tour of the room."
+    },
+    {
+      "q": "What is the difference between 'Dhahaba' and 'Uḥibbu' as discussed in the class?",
+      "options": [
+        "Dhahaba is a noun, Uḥibbu is a verb.",
+        "Dhahaba is past tense, Uḥibbu is present tense.",
+        "Dhahaba is for females, Uḥibbu is for males.",
+        "There is no difference; they are synonyms."
+      ],
+      "correctIndex": 1,
+      "a": "The teacher notes that 'Uḥibbu' (I love) is the first present tense verb the class is learning, whereas 'Dhahaba' (he went) is past tense."
+    },
+    {
+      "q": "In the sentence 'Uḥibbu Allāha', who is the 'Fa'il' (doer)?",
+      "options": [
+        "Allah",
+        "The teacher",
+        "The speaker ('I')",
+        "The classmate"
+      ],
+      "correctIndex": 2,
+      "a": "The verb 'Uḥibbu' contains the hidden pronoun 'I' as the doer of the action."
+    }
+  ],
+  "quran_examples": [
+    {
+      "arabic": "ذَٰلِكَ الْكِتَابُ لَا رَيْبَ ۛ فِيهِ",
+      "transliteration": "dhālika al-kitābu lā rayba fīhi",
+      "translation": "This is the Book about which there is no doubt, in it (is guidance).",
+      "reference": "Al-Baqarah 2:2",
+      "note": "Demonstrates the use of 'fīhi' (in it) referring to the masculine noun 'al-kitāb'."
+    },
+    {
+      "arabic": "فِيهَا كُتُبٌ قَيِّمَةٌ",
+      "transliteration": "fīhā kutubun qayyimah",
+      "translation": "Within which are correct writings.",
+      "reference": "Al-Bayyinah 98:3",
+      "note": "Demonstrates the use of 'fīhā' (in it/them) referring to a feminine or plural context, as mentioned in the lecture."
+    },
+    {
+      "arabic": "قُلْ إِن كُنتُمْ تُحِبُّونَ اللَّهَ فَاتَّبِعُونِي",
+      "transliteration": "qul in kuntum tuḥibbūna Allāha fa-ittabi'ūnī",
+      "translation": "Say, [O Muhammad], 'If you should love Allah, then follow me...'",
+      "reference": "Āli 'Imrān 3:31",
+      "note": "Illustrates the verb 'to love' and the word 'Allāha' taking a fatha because it is the object (Maf'ool bihi) of the verb."
+    },
+    {
+      "arabic": "لَا يَمَسُّهُ إِلَّا الْمُطَهَّرُونَ",
+      "transliteration": "lā yamassuhu illā al-muṭahharūn",
+      "translation": "None touch it except the purified.",
+      "reference": "Al-Wāqi'ah 56:79",
+      "note": "Shows the use of 'lā' for negation, similar to the 'mā' negation discussed in class regarding 'there is nobody in it'."
+    },
+    {
+      "arabic": "وَمَا اللَّهُ بِغَافِلٍ عَمَّا تَعْمَلُونَ",
+      "transliteration": "wa mā Allāhu bi-ghāfilin 'ammā ta'malūn",
+      "translation": "And Allah is not unaware of what you do.",
+      "reference": "Al-Baqarah 2:74",
+      "note": "An example of 'mā' being used for negation (Allah is NOT unaware), as explained by the teacher."
+    }
+  ]
 }

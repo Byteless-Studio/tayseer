@@ -29,5 +29,168 @@
                  "Advanced Beginner",
                  "Nahw"
              ],
-    "date":  "2025-01-27"
+    "date":  "2025-01-27",
+  "quiz": [
+    {
+      "q": "Which of the following correctly completes the sentence: 'Al-mu'adhdhin _____ fī al-masjid'?",
+      "options": [
+        "jālis (without al-)",
+        "al-jālis",
+        "jālisun",
+        "jālisīn"
+      ],
+      "correctIndex": 2,
+      "a": "The predicate (khabar) in a nominal sentence takes tanwīn when indefinite. The teacher corrected a student's sentence to 'al-mu'adhdhinu jālisun fī al-masjid', showing the predicate carries tanwīn."
+    },
+    {
+      "q": "In Arabic sentence structure, which element must come first — the subject (mubtadaʾ) or the predicate (khabar)?",
+      "options": [
+        "The predicate always comes first",
+        "The subject (mubtadaʾ) comes first",
+        "Either order is equally correct",
+        "The verb always comes first"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher explicitly corrected a student who placed the predicate before the subject, explaining that Arabic flows differently from English: 'al-rajulu jālisun' (the man is sitting), not 'jālisun al-rajul'."
+    },
+    {
+      "q": "What does the word أَمَامَ (amāma) mean?",
+      "options": [
+        "Behind",
+        "Inside",
+        "In front of",
+        "Beside"
+      ],
+      "correctIndex": 2,
+      "a": "The teacher introduced أَمَامَ (amāma) as meaning 'in front of', contrasting it with خَلْفَ (khalfa) which means 'behind'."
+    },
+    {
+      "q": "What does the word خَلْفَ (khalfa) mean?",
+      "options": [
+        "In front of",
+        "Below",
+        "Between",
+        "Behind"
+      ],
+      "correctIndex": 3,
+      "a": "The teacher defined خَلْفَ (khalfa) as the opposite of أَمَامَ (amāma), meaning 'behind'. He also noted it appears in the Qurʾān and can carry a chronological sense ('after') in addition to a physical one."
+    },
+    {
+      "q": "To which grammatical family do أَمَامَ (amāma) and خَلْفَ (khalfa) belong?",
+      "options": [
+        "Ḥurūf al-Jarr (preposition particles)",
+        "Asmāʾ al-Ishāra (demonstratives)",
+        "Ẓarf (adverbs of time and place)",
+        "Asmāʾ al-Mawṣūla (relative pronouns)"
+      ],
+      "correctIndex": 2,
+      "a": "A student correctly identified these as part of the Ẓarf family. The teacher confirmed that Ẓarf indicates either time or place, and these words are therefore almost always manṣūb (carrying a fatḥa)."
+    },
+    {
+      "q": "When أَمَامَ (amāma) or خَلْفَ (khalfa) are used without a preceding ḥarf al-jarr (such as مِنْ), what vowel do they typically carry?",
+      "options": [
+        "Ḍamma (u)",
+        "Fatḥa (a)",
+        "Kasra (i)",
+        "Sukūn"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher explained that as Ẓarf words, أَمَامَ and خَلْفَ are generally manṣūb and therefore carry a fatḥa. When preceded by مِنْ, however, they take a kasra instead (e.g., مِنْ خَلْفِهِمْ)."
+    },
+    {
+      "q": "What does لِمَنْ (liman) mean, and how is it formed?",
+      "options": [
+        "'From whom' — formed from مِنْ + مَنْ",
+        "'To whom' — formed from لِ + مَنْ",
+        "'With whom' — formed from بِ + مَنْ",
+        "'About whom' — formed from عَنْ + مَنْ"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher explained that لِمَنْ is the ḥarf al-jarr لِ combined with the interrogative مَنْ, producing the question 'To whom?' — used to ask about ownership, e.g., 'لِمَنْ هَذِهِ السَّيَّارَةُ؟' (To whom does this car belong?)."
+    },
+    {
+      "q": "When an ism al-ishāra (demonstrative) like هَٰذَا (hādhā) is followed directly by a noun (rather than used as a standalone subject-predicate pair), what must that noun have?",
+      "options": [
+        "Tanwīn (nunation)",
+        "The definite article اَلـ",
+        "A fatḥa ending",
+        "No vowel marker"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher taught that when a demonstrative like هَٰذَا precedes a noun to form a demonstrative phrase (e.g., 'this house'), the noun must take اَلـ, making it definite. For example: هَٰذَا الْبَيْتُ means 'this house' (not a complete sentence), whereas هَٰذَا بَيْتٌ means 'this is a house'."
+    },
+    {
+      "q": "What is the Arabic expression for 'old man' as illustrated from the story of Yūsuf عَلَيْهِ السَّلَام in the Qurʾān?",
+      "options": [
+        "رَجُلٌ قَدِيمٌ (rajulun qadīmun)",
+        "شَيْخٌ كَبِيرٌ (shaykhun kabīrun)",
+        "رَجُلٌ كَبِيرٌ (rajulun kabīrun)",
+        "شَيْخٌ قَدِيمٌ (shaykhun qadīmun)"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher explained that شَيْخٌ كَبِيرٌ is the Qurʾānic expression for 'old man', citing the āyah where the brothers of Yūsuf عَلَيْهِ السَّلَام described their father to him as 'a father who is an old man' (أَبٌ شَيْخٌ كَبِيرٌ). قَدِيمٌ (qadīm), by contrast, typically refers to objects being old or a person having been somewhere for a long time."
+    },
+    {
+      "q": "In the sentence 'هَٰذَا الرَّجُلُ تَاجِرٌ' (hādhā al-rajulu tājirun), what role does هَٰذَا الرَّجُلُ play together?",
+      "options": [
+        "They are two separate sentences joined by a conjunction",
+        "هَٰذَا is the predicate and الرَّجُلُ is the subject",
+        "Together they form the subject (mubtadaʾ), meaning 'this man'",
+        "هَٰذَا is a ḥarf al-jarr modifying الرَّجُلُ"
+      ],
+      "correctIndex": 2,
+      "a": "The teacher explained that when هَٰذَا is followed by a definite noun (with اَلـ), the two words together function as the mubtadaʾ (subject), meaning 'this man'. The predicate تَاجِرٌ then completes the sentence: 'This man is a merchant.'"
+    }
+  ],
+  "quran_examples": [
+    {
+      "arabic": "فَجَعَلْنَا مِنْ بَيْنِ أَيْدِيهِمْ سَدًّا وَمِنْ خَلْفِهِمْ سَدًّا فَأَغْشَيْنَاهُمْ فَهُمْ لَا يُبْصِرُونَ",
+      "transliteration": "Fa-jaʿalnā min bayni aydīhim saddan wa-min khalfihim saddan fa-aghshaynāhum fa-hum lā yubṣirūn",
+      "translation": "And We have put before them a barrier and behind them a barrier and covered them, so they do not see.",
+      "reference": "Surah Yā-Sīn 36:9",
+      "note": "Illustrates خَلْفَ (khalfa) preceded by the ḥarf al-jarr مِنْ, which causes it to take a kasra (مِنْ خَلْفِهِمْ) rather than the default fatḥa. The teacher cited this exact āyah when explaining that the vowel on Ẓarf words changes depending on what precedes them."
+    },
+    {
+      "arabic": "فَالْيَوْمَ نُنَجِّيكَ بِبَدَنِكَ لِتَكُونَ لِمَنْ خَلْفَكَ آيَةً وَإِنَّ كَثِيرًا مِنَ النَّاسِ عَنْ آيَاتِنَا لَغَافِلُونَ",
+      "transliteration": "Fa-al-yawma nunajjīka bi-badanika li-takūna li-man khalfaka āyatan wa-inna kathīran min al-nāsi ʿan āyātinā la-ghāfilūn",
+      "translation": "So today We will save your body so that you may be a sign for those who come after you. And indeed, many among the people are heedless of Our signs.",
+      "reference": "Surah Yūnus 10:92",
+      "note": "Illustrates the chronological (temporal) use of خَلْفَ (khalfa). The teacher explained that خَلْفَكَ here does not mean physically 'behind you' but rather 'those who remain after you' — i.e., future generations. This demonstrates that Ẓarf words indicating place can also indicate time."
+    },
+    {
+      "arabic": "وَجَاءَ إِخْوَةُ يُوسُفَ فَدَخَلُوا عَلَيْهِ فَعَرَفَهُمْ وَهُمْ لَهُ مُنكِرُونَ",
+      "transliteration": "Wa-jāʾa ikhwatu Yūsufa fa-dakhalū ʿalayhi fa-ʿarafahum wa-hum lahu munkirūn",
+      "translation": "And the brothers of Yūsuf came and entered upon him, and he recognized them while they were unaware of him.",
+      "reference": "Surah Yūsuf 12:58",
+      "note": "Provides context for the teacher's lesson on شَيْخٌ كَبِيرٌ (shaykhun kabīrun): the story of the brothers of Yūsuf عَلَيْهِ السَّلَام who stood before him not recognizing him. The teacher referenced this narrative when a student used 'old man' in a sentence, explaining that the brothers later described their father to Yūsuf عَلَيْهِ السَّلَام as 'a father who is an old man' (أَبٌ شَيْخٌ كَبِيرٌ)."
+    },
+    {
+      "arabic": "قَالُوا يَا أَيُّهَا الْعَزِيزُ إِنَّ لَهُ أَبًا شَيْخًا كَبِيرًا فَخُذْ أَحَدَنَا مَكَانَهُ إِنَّا نَرَاكَ مِنَ الْمُحْسِنِينَ",
+      "transliteration": "Qālū yā ayyuhā al-ʿazīzu inna lahu aban shaykhan kabīran fa-khudh aḥadanā makānahu innā narāka min al-muḥsinīn",
+      "translation": "They said: O ʿAzīz, indeed he has a father who is a very old man, so take one of us in his place. Indeed, we see you as one of the doers of good.",
+      "reference": "Surah Yūsuf 12:78",
+      "note": "Directly illustrates شَيْخٌ كَبِيرٌ (shaykhun kabīrun) meaning 'old man'. The teacher explicitly cited this Qurʾānic usage to explain that شَيْخٌ كَبِيرٌ is the correct Arabic expression for an elderly person, as opposed to قَدِيمٌ (qadīm) which applies to old objects or long-standing presence."
+    },
+    {
+      "arabic": "ذَٰلِكَ الْكِتَابُ لَا رَيْبَ فِيهِ هُدًى لِلْمُتَّقِينَ",
+      "transliteration": "Dhālika al-kitābu lā rayba fīhi hudan li-l-muttaqīn",
+      "translation": "That is the Book about which there is no doubt, a guidance for those conscious of Allāh عَزَّ وَجَلَّ.",
+      "reference": "Surah al-Baqarah 2:2",
+      "note": "Illustrates the construction where an ism al-ishāra (ذَٰلِكَ, dhālika) is followed by a definite noun with اَلـ (الْكِتَابُ), forming the mubtadaʾ phrase 'that Book'. The teacher cited this āyah when explaining that هَٰذَا/ذَٰلِكَ + a noun with اَلـ together form the subject, meaning 'that book' rather than 'that is a book'."
+    },
+    {
+      "arabic": "فَلْيَعْبُدُوا رَبَّ هَٰذَا الْبَيْتِ",
+      "transliteration": "Fa-l-yaʿbudū rabba hādhā al-bayt",
+      "translation": "Then let them worship the Lord of this House.",
+      "reference": "Surah Quraysh 106:3",
+      "note": "Illustrates هَٰذَا followed by a definite noun (الْبَيْتِ) within a possessive construction (iḍāfa). The teacher cited this āyah as a Qurʾānic example of an ism al-ishāra used with اَلـ, demonstrating the pattern of هَٰذَا + noun with اَلـ."
+    },
+    {
+      "arabic": "إِنَّ هَٰذَا لَهُوَ الْحَقُّ الْيَقِينُ",
+      "transliteration": "Inna hādhā la-huwa al-ḥaqqu al-yaqīn",
+      "translation": "Indeed, this is the true certainty.",
+      "reference": "Surah al-Wāqiʿah 56:95",
+      "note": "Illustrates emphatic use of هَٰذَا with الْحَقُّ. The teacher discussed a similar example (ذَٰلِكَ هُوَ الْحَقُّ) and explained how adding هُوَ between the demonstrative and the definite noun adds even greater emphasis — 'that is THE truth' — beyond the already emphatic هَٰذَا الْحَقُّ construction."
+    }
+  ]
 }

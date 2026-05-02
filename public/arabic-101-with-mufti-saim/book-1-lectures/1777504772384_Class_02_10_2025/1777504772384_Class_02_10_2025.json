@@ -27,5 +27,136 @@
                  "Correspondence Rules",
                  "Intermediate Level"
              ],
-    "date":  "2025-02-10"
+    "date":  "2025-02-10",
+  "quiz": [
+    {
+      "q": "What is the definition of مَوْصُوف (mawṣūf) and صِفَة (ṣifah) as explained in the lecture?",
+      "options": [
+        "Both are verbs describing actions",
+        "مَوْصُوف is the noun being described and صِفَة is the adjective describing it",
+        "صِفَة is the subject and مَوْصُوف is the object",
+        "Both are particles used in sentences"
+      ],
+      "correctIndex": 1,
+      "a": "The lecture defined مَوْصُوف as the described noun and صِفَة as the adjective that describes it."
+    },
+    {
+      "q": "How many aspects must the مَوْصُوف (mawṣūf) and صِفَة (ṣifah) agree in?",
+      "options": [
+        "Two",
+        "Three",
+        "Four",
+        "Five"
+      ],
+      "correctIndex": 2,
+      "a": "The teacher emphasized four: gender, number, case ending (إِعْرَاب), and definiteness."
+    },
+    {
+      "q": "Which of the following is an example of correct gender agreement?",
+      "options": [
+        "تَاجِرٌ غَنِيٌّ",
+        "تَاجِرَةٌ غَنِيٌّ",
+        "تَاجِرَةٌ غَنِيَّةٌ",
+        "تُجَّارٌ غَنِيٌّ"
+      ],
+      "correctIndex": 2,
+      "a": "The lecture explained that if the noun is feminine (تَاجِرَةٌ), the adjective must also be feminine (غَنِيَّةٌ)."
+    },
+    {
+      "q": "What must happen to the صِفَة (ṣifah) when the مَوْصُوف (mawṣūf) becomes dual (مُثَنًّى)?",
+      "options": [
+        "It remains singular",
+        "It becomes plural",
+        "It must also become dual",
+        "It becomes indefinite only"
+      ],
+      "correctIndex": 2,
+      "a": "The lecture showed that in dual form like تَاجِرَانِ, the adjective must also be dual such as غَنِيَانِ."
+    },
+    {
+      "q": "What does agreement in إِعْرَاب (case ending) mean?",
+      "options": [
+        "Both words must have the same root letters",
+        "Both must share the same final vowel (ḥarakah)",
+        "Both must be verbs",
+        "Both must be definite"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher explained that if the noun has fatḥah, kasrah, or ḍammah, the adjective must match it."
+    },
+    {
+      "q": "In the phrase رَأَيْتُ تَاجِرًا غَنِيًّا, why does غَنِيًّا have fatḥah?",
+      "options": [
+        "Because it is plural",
+        "Because it is feminine",
+        "Because it matches the case of تَاجِرًا",
+        "Because it is definite"
+      ],
+      "correctIndex": 2,
+      "a": "The lecture showed that the adjective follows the noun in case ending, so both take fatḥah."
+    },
+    {
+      "q": "What happens if the مَوْصُوف (mawṣūf) is definite (مَعْرِفَة)?",
+      "options": [
+        "The صِفَة must remain indefinite",
+        "The صِفَة must also be definite",
+        "The صِفَة becomes a verb",
+        "There is no rule"
+      ],
+      "correctIndex": 1,
+      "a": "The lecture emphasized that both must match in definiteness, e.g., التَّاجِرُ الْغَنِيُّ."
+    },
+    {
+      "q": "Why is التَّاجِرُ غَنِيٌّ not considered مَوْصُوف وَصِفَة?",
+      "options": [
+        "Because it is grammatically incorrect",
+        "Because it is a verbal sentence",
+        "Because it forms a مُبْتَدَأ وَخَبَر (subject–predicate) sentence",
+        "Because it is plural"
+      ],
+      "correctIndex": 2,
+      "a": "The lecture explained this is a complete sentence meaning “the merchant is rich,” not a noun-adjective phrase."
+    },
+    {
+      "q": "What is the key difference in word order between English and Arabic adjectives?",
+      "options": [
+        "Arabic places the adjective before the noun",
+        "Arabic places the adjective after the noun",
+        "Both languages use the same order",
+        "Arabic does not use adjectives"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher explained that Arabic says the noun first (مَوْصُوف) then the adjective (صِفَة), unlike English."
+    }
+  ],
+  "quran_examples": [
+    {
+      "arabic": "وَيَأْتِ بِخَلْقٍ جَدِيدٍ",
+      "transliteration": "wa-yaʾti bi-khalqin jadīd",
+      "translation": "And He will bring a new creation.",
+      "reference": "Fatir 35:16",
+      "note": "Demonstrates agreement between خَلْقٍ (khalq, mawṣūf) and جَدِيدٍ (jadīd, ṣifah) in gender, number, case (kasrah), and indefiniteness."
+    },
+    {
+      "arabic": "إِذَا رَأَتْهُم مِّن مَّكَانٍ بَعِيدٍ",
+      "transliteration": "idhā raʾat-hum min makānin baʿīd",
+      "translation": "When it sees them from a distant place.",
+      "reference": "Al-Furqan 25:12",
+      "note": "Illustrates مَكَانٍ (makān, mawṣūf) and بَعِيدٍ (baʿīd, ṣifah) matching in gender, number, case, and indefiniteness."
+    },
+    {
+      "arabic": "هُوَ اللَّهُ الَّذِي لَا إِلَٰهَ إِلَّا هُوَ الْمَلِكُ الْقُدُّوسُ",
+      "transliteration": "huwa Allāhu alladhī lā ilāha illā huwa al-malik al-quddūs",
+      "translation": "He is Allāh عَزَّ وَجَلَّ, other than whom there is no deity, the Sovereign, the Most Pure.",
+      "reference": "Al-Hashr 59:23",
+      "note": "Shows definite agreement where الْمَلِكُ (al-malik) and الْقُدُّوسُ (al-quddūs) are both definite and match as noun and adjective."
+    },
+    {
+      "arabic": "وَفَاكِهَةٍ كَثِيرَةٍ",
+      "transliteration": "wa-fākihatin kathīrah",
+      "translation": "And abundant fruit.",
+      "reference": "Al-Waqi'ah 56:32",
+      "note": "Demonstrates agreement in feminine gender, singular form, case (kasrah), and indefiniteness between فَاكِهَةٍ and كَثِيرَةٍ."
+    }
+  ]
 }

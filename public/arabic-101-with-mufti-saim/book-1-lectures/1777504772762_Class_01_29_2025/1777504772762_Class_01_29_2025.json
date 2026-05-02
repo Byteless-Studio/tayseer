@@ -27,5 +27,147 @@
                  "Harf al-Jar Exceptions",
                  "Beginner"
              ],
-    "date":  "2025-01-29"
+    "date":  "2025-01-29",
+  "quiz": [
+    {
+      "q": "What does the structure هَٰذَا الْبَيْتُ لِلتَّاجِرِ (hādhā al-baytu li-l-tājiri) mean?",
+      "options": [
+        "This is a house of a merchant",
+        "This house belongs to the merchant",
+        "That house is for the merchant",
+        "The merchant's house is big"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher explained that هَٰذَا الْبَيْتُ together form the subject meaning 'this house', and لِلتَّاجِرِ indicates belonging. The لِـ (lām) is a ḥarf al-jarr meaning 'for/belonging to', making the full sentence 'This house belongs to the merchant.'"
+    },
+    {
+      "q": "How do you ask 'To whom does this pen belong?' in Arabic?",
+      "options": [
+        "مِنْ أَيْنَ هَٰذَا الْقَلَمُ؟",
+        "مَا هَٰذَا الْقَلَمُ؟",
+        "لِمَنْ هَٰذَا الْقَلَمُ؟",
+        "مَنْ هَٰذَا الْقَلَمُ؟"
+      ],
+      "correctIndex": 2,
+      "a": "The teacher taught that لِمَنْ (liman) is formed from the ḥarf al-jarr لِـ combined with the interrogative مَنْ, producing 'to whom?' This is the correct structure for asking about ownership, as practiced throughout the tamrīn exercises."
+    },
+    {
+      "q": "If the answer to 'To whom does this pen belong?' is 'It belongs to Abbas', how would that be expressed?",
+      "options": [
+        "هَٰذَا الْقَلَمُ عَبَّاسٌ",
+        "هَٰذَا الْقَلَمُ لِعَبَّاسٍ",
+        "الْقَلَمُ مِنْ عَبَّاسٍ",
+        "عَبَّاسٌ لَهُ الْقَلَمُ"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher demonstrated that the response to a لِمَنْ question uses لِـ before the name: هَٰذَا الْقَلَمُ لِعَبَّاسٍ (this pen belongs to Abbas). The name عَبَّاسٍ takes a kasra because لِـ is a ḥarf al-jarr that puts the word after it in the genitive case."
+    },
+    {
+      "q": "Why do words like أَمْرِيكَا (Amrīkā), سُوِيسَرَة (Swissara — Switzerland), and إِنْكِلْتَرَا (Inkiltarā — England) not change their ending even when a ḥarf al-jarr precedes them?",
+      "options": [
+        "They are verbs, not nouns, so grammar rules do not apply",
+        "They are proper nouns from the Qurʾān and are therefore protected",
+        "They end in an alif (either alif maqṣūra or alif mamdūda), which cannot show ḥarakāt",
+        "They are masculine, so they always remain in the nominative"
+      ],
+      "correctIndex": 2,
+      "a": "The teacher explained that words ending in alif maqṣūra (like مُوسَى) or alif mamdūda (like أَمْرِيكَا) cannot display changing ḥarakāt on their final letter. Therefore, no matter what ḥarf al-jarr precedes them, their ending remains unchanged — a rule that applies equally to foreign country names like Switzerland, England, Germany, and France."
+    },
+    {
+      "q": "What is the difference between مِنْ (min) and مَنْ (man) in Arabic?",
+      "options": [
+        "مِنْ means 'who' and مَنْ means 'from'",
+        "مِنْ means 'from' (preposition indicating origin) and مَنْ means 'who' (interrogative pronoun)",
+        "They are the same word with different spellings",
+        "مِنْ is used for places and مَنْ is used for objects"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher clarified this distinction when a student was confused. مِنْ (with kasra) is a ḥarf al-jarr meaning 'from', used for indicating origin or direction. مَنْ (with fatḥa) is an interrogative pronoun meaning 'who', belonging to the question-word family. The context of the sentence determines which is appropriate."
+    },
+    {
+      "q": "What happens to the hamza of اَلـ when the lām (لِـ) of the ḥarf al-jarr is attached to it?",
+      "options": [
+        "The lām is dropped and only the hamza remains",
+        "Both lāms merge and the hamza disappears, resulting in a double lām",
+        "The hamza becomes a wāw",
+        "Nothing changes — both are written and pronounced separately"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher explained that when لِـ (the possessive preposition) attaches to اَلـ (the definite article), the hamza of اَلـ — which is hamzat al-waṣl — disappears because it is not pronounced anyway. What remains are two lāms written together, e.g., لِلتَّاجِرِ (li-l-tājiri). Seeing two lāms together signals that there is a hidden اَلـ."
+    },
+    {
+      "q": "What does اَلْآنَ (al-āna) mean, and where does it appear in the Qurʾān?",
+      "options": [
+        "It means 'before', and appears in Surah Yūsuf",
+        "It means 'now', and appears in contexts such as Allāh عَزَّ وَجَلَّ addressing Firʿawn at the moment of drowning",
+        "It means 'here', and appears in Surah al-Baqarah",
+        "It means 'then', and appears in Surah al-Fātiḥah"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher explained that اَلْآنَ means 'now' and is commonly used in speech (e.g., تَعَالَ الْآنَ — come right now). He cited its Qurʾānic use in the address to Firʿawn at his drowning, where Allāh عَزَّ وَجَلَّ says — in the form of a question — 'Now (do you believe)?', indicating that his belief at that moment was not accepted."
+    },
+    {
+      "q": "The word سِكِّين (sikkīn — knife) appears in Surah Yūsuf. What was the context of its appearance?",
+      "options": [
+        "The brothers of Yūsuf عَلَيْهِ السَّلَام used knives to slaughter an animal as proof",
+        "Zulaykhā gave each woman a knife to cut fruit; upon seeing Yūsuf عَلَيْهِ السَّلَام's beauty, they cut their own hands",
+        "Yūsuf عَلَيْهِ السَّلَام used a knife to defend himself from Zulaykhā",
+        "The king's guards carried knives at the palace gate"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher narrated the Qurʾānic story: Zulaykhā, in response to women gossiping about her, invited them and gave each a knife to cut fruit (وَآتَتْ كُلَّ وَاحِدَةٍ مِّنْهُنَّ سِكِّينًا). When they saw Yūsuf عَلَيْهِ السَّلَام, they were so overwhelmed by his beauty that they cut their own hands instead."
+    },
+    {
+      "q": "The teacher mentioned a ḥadīth about the word سِكِّين (sikkīn). What was Abu Hurayra's رضي الله عنه surprising reaction upon hearing it?",
+      "options": [
+        "He immediately recognised it from Surah Yūsuf",
+        "He said it was the first time he had ever heard the word, as his tribe used مُدْيَة instead",
+        "He said the word was incorrect and the Prophet ﷺ used a different term",
+        "He asked the Prophet ﷺ to explain the word's root"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher shared that Abu Hurayra رضي الله عنه — despite being an Arab — said that سِكِّين was the first time he had heard the word because his tribe (Daws) used مُدْيَة (mudya) for 'knife'. The teacher used this as a light-hearted note that regional variation in Arabic vocabulary existed even among the Companions."
+    },
+    {
+      "q": "What does أَمَامَ (amāma) mean, and what grammatical rule governs the word that follows it?",
+      "options": [
+        "It means 'behind'; the word after it takes a ḍamma",
+        "It means 'in front of'; as a Ẓarf, it makes the word after it take a kasra (genitive)",
+        "It means 'beside'; the word after it takes a fatḥa",
+        "It means 'above'; the word after it takes tanwīn"
+      ],
+      "correctIndex": 1,
+      "a": "The teacher clarified when a student asked about في and أَمَامَ together: أَمَامَ already indicates place (meaning 'in front of'), so في is unnecessary alongside it. As a Ẓarf (adverb of place), أَمَامَ becomes muḍāf to the noun after it, which therefore takes a kasra. Example: هُوَ أَمَامَ الْبَيْتِ (he is in front of the house)."
+    }
+  ],
+  "quran_examples": [
+    {
+      "arabic": "يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ",
+      "transliteration": "Yaʿlamu mā bayna aydīhim wa-mā khalfahum",
+      "translation": "He knows what is before them and what is behind them.",
+      "reference": "Surah al-Baqarah 2:255 (Āyat al-Kursī)",
+      "note": "Cited by a student at the opening of class to illustrate خَلْفَ (khalfa — behind) in a Qurʾānic context. The teacher confirmed the reference as Āyat al-Kursī and explained that the āyah conveys the all-encompassing knowledge of Allāh عَزَّ وَجَلَّ. Here خَلْفَهُمْ is used in both the physical and temporal sense — what is behind and after them."
+    },
+    {
+      "arabic": "وَآتَتْ كُلَّ وَاحِدَةٍ مِّنْهُنَّ سِكِّينًا",
+      "transliteration": "Wa-ātat kulla wāḥidatin minhunna sikkīnā",
+      "translation": "And she gave each one of them a knife.",
+      "reference": "Surah Yūsuf 12:31",
+      "note": "Cited by the teacher to show where سِكِّين (sikkīn — knife) appears in the Qurʾān. Zulaykhā gave the women knives to cut fruit, but upon seeing Yūsuf عَلَيْهِ السَّلَام they cut their own hands. The teacher used this to illustrate vocabulary in context and introduced the ḥadīth of the Prophet ﷺ that also uses this word."
+    },
+    {
+      "arabic": "قَالَ آلْآنَ وَقَدْ عَصَيْتَ قَبْلُ وَكُنتَ مِنَ الْمُفْسِدِينَ",
+      "transliteration": "Qāla ālʾāna wa-qad ʿaṣayta qablu wa-kunta min al-mufsidīn",
+      "translation": "He said: Now? While you had disobeyed before and were of the corruptors?",
+      "reference": "Surah Yūnus 10:91",
+      "note": "Cited by the teacher to illustrate the word اَلْآنَ (al-āna — now). He explained that آلْآنَ here is a question (hamzat al-istifhām merged with اَلْآنَ), meaning Allāh عَزَّ وَجَلَّ is rhetorically asking Firʿawn: 'Now you believe?' — indicating that his declaration of faith at the moment of drowning was not accepted."
+    },
+    {
+      "arabic": "الْآنَ خَفَّفَ اللَّهُ عَنكُمْ",
+      "transliteration": "Al-āna khaffafa Allāhu ʿankum",
+      "translation": "Now Allāh عَزَّ وَجَلَّ has lightened the burden for you.",
+      "reference": "Surah al-Anfāl 8:66",
+      "note": "Cited by the teacher as a second Qurʾānic example of اَلْآنَ (al-āna — now), showing that the word appears in multiple places in the Qurʾān. Here it marks the moment at which Allāh عَزَّ وَجَلَّ reduced the military obligation on the believers, making اَلْآنَ a temporal marker of divine relief."
+    }
+  ]
 }
