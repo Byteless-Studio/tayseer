@@ -5,44 +5,40 @@ export default function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="site-footer">
+    <footer className="border-t border-border bg-muted/40">
       <div className="mx-auto max-w-5xl px-6 py-10">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
-          {/* Brand */}
           <div>
             <Link to="/" className="no-underline inline-block mb-2">
-              <img
-                src="/tayseer-logo.webp"
-                alt={siteConfig.name}
-                className="h-7 w-auto"
-              />
+              <img src="/tayseer-logo.webp" alt={siteConfig.name} className="h-7 w-auto" />
             </Link>
-            <p className="text-sm text-gray-500 max-w-xs">
-              {siteConfig.tagline}
-            </p>
+            <p className="text-sm text-muted-foreground max-w-xs">{siteConfig.tagline}</p>
           </div>
 
-          {/* Links */}
           <div className="flex gap-8 text-sm">
             <div className="flex flex-col gap-2">
-              <span className="section-label">Courses</span>
-              <Link to="/arabic-101" className="text-gray-600 no-underline hover:text-black">
+              <span className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground">
+                Courses
+              </span>
+              <Link to="/arabic-with-mufti-saim/arabic-101" className="text-foreground/70 no-underline hover:text-foreground transition-colors">
                 Arabic With Mufti Saim
               </Link>
             </div>
             <div className="flex flex-col gap-2">
-              <span className="section-label">Tools</span>
-              <Link to="/cognates" className="text-gray-600 no-underline hover:text-black">
+              <span className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground">
+                Tools
+              </span>
+              <Link to="/cognates/cognates" className="text-foreground/70 no-underline hover:text-foreground transition-colors">
                 Cognates
               </Link>
-              <Link to="/quizzes" className="text-gray-600 no-underline hover:text-black">
+              <Link to="/quizzes" className="text-foreground/70 no-underline hover:text-foreground transition-colors">
                 Quizzes
               </Link>
             </div>
           </div>
         </div>
 
-        <div className="mt-8 border-t border-gray-200 pt-6 flex items-center justify-between text-xs text-gray-400">
+        <div className="mt-8 border-t border-border pt-6 flex items-center justify-between text-xs text-muted-foreground">
           <span>© {year} {siteConfig.name}. All rights reserved.</span>
           <span>Built with care for Arabic learners.</span>
         </div>

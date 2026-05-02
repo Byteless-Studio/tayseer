@@ -2,14 +2,12 @@ import { createFileRoute } from '@tanstack/react-router'
 import { useState, useMemo } from 'react'
 import { arabicUrduCognates } from '#/data/arabic-urdu-cognates'
 
-export const Route = createFileRoute('/cognates')({
+export const Route = createFileRoute('/cognates/cognates')({
   head: () => ({ meta: [{ title: 'Cognates — Tayseer' }] }),
   component: CognatesPage,
 })
 
-const TABS = [
-  { id: 'arabic-urdu', label: 'Arabic – Urdu' },
-]
+const TABS = [{ id: 'arabic-urdu', label: 'Arabic – Urdu' }]
 
 function CognatesPage() {
   const [activeTab, setActiveTab] = useState('arabic-urdu')
@@ -31,32 +29,34 @@ function CognatesPage() {
 
   return (
     <main className="flex-1">
-      {/* Page header */}
-      <div className="border-b border-gray-200 bg-[#f5f0e8]">
-        <div className="page-wrap py-12">
-          <div className="section-label mb-3">Reference</div>
-          <h1 className="display-title text-4xl font-bold text-black leading-tight mb-3">
+      <div className="border-b border-border bg-beige">
+        <div className="mx-auto w-[min(1080px,calc(100%-2rem))] py-12">
+          <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-3">
+            Reference
+          </p>
+          <h1 className="font-serif tracking-[-0.02em] text-4xl font-bold text-foreground leading-tight mb-3">
             Cognates
           </h1>
-          <p className="text-gray-500 text-base max-w-xl">
-            Words shared between Arabic and other languages — a shortcut to vocabulary for speakers who already know them.
+          <p className="text-muted-foreground text-base max-w-xl">
+            Words shared between Arabic and other languages — a shortcut to vocabulary for
+            speakers who already know them.
           </p>
         </div>
       </div>
 
-      {/* Tab bar */}
-      <div className="border-b border-gray-200 bg-white sticky top-0 z-10">
-        <div className="page-wrap">
+      <div className="border-b border-border bg-card sticky top-0 z-10">
+        <div className="mx-auto w-[min(1080px,calc(100%-2rem))]">
           <div className="flex gap-1">
             {TABS.map((tab) => (
               <button
                 key={tab.id}
+                type="button"
                 onClick={() => setActiveTab(tab.id)}
                 className={[
                   'px-5 py-3.5 text-sm font-semibold border-b-2 transition-colors',
                   activeTab === tab.id
-                    ? 'border-[#009000] text-[#009000]'
-                    : 'border-transparent text-gray-500 hover:text-black',
+                    ? 'border-brand text-brand'
+                    : 'border-transparent text-muted-foreground hover:text-foreground',
                 ].join(' ')}
               >
                 {tab.label}
@@ -66,8 +66,7 @@ function CognatesPage() {
         </div>
       </div>
 
-      {/* Content */}
-      <div className="page-wrap py-8">
+      <div className="mx-auto w-[min(1080px,calc(100%-2rem))] py-8">
         {activeTab === 'arabic-urdu' && (
           <ArabicUrduTable filtered={filtered} search={search} setSearch={setSearch} />
         )}
@@ -85,9 +84,7 @@ function ArabicHighlight({ text, highlight }: { text: string; highlight?: string
         <span key={i}>
           {part}
           {i < parts.length - 1 && (
-            <mark
-              style={{ background: 'rgba(0,144,0,0.15)', color: 'inherit', borderRadius: '3px', padding: '0 2px' }}
-            >
+            <mark className="bg-brand/15 text-inherit rounded-sm px-0.5">
               {highlight}
             </mark>
           )}
@@ -108,11 +105,10 @@ function ArabicUrduTable({
 }) {
   return (
     <div>
-      {/* Controls row */}
       <div className="flex flex-col sm:flex-row sm:items-center gap-3 mb-6">
         <div className="relative flex-1 max-w-sm">
           <svg
-            className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none"
+            className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground w-4 h-4 pointer-events-none"
             fill="none"
             stroke="currentColor"
             strokeWidth={2}
@@ -126,46 +122,45 @@ function ArabicUrduTable({
             placeholder="Search words, roots, meanings…"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full pl-9 pr-4 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#009000]/30 focus:border-[#009000]"
+            className="w-full pl-9 pr-4 py-2 text-sm border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition-colors"
           />
         </div>
-        <span className="text-sm text-gray-400 shrink-0">
+        <span className="text-sm text-muted-foreground shrink-0">
           {filtered.length} of {arabicUrduCognates.length} words
         </span>
       </div>
 
-      {/* Table */}
-      <div className="rounded-xl border border-gray-200 overflow-hidden">
+      <div className="rounded-xl border border-border overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead>
-              <tr className="bg-[#f5f0e8] border-b border-gray-200">
-                <th className="text-left px-4 py-3 font-semibold text-gray-600 whitespace-nowrap">#</th>
-                <th className="text-right px-4 py-3 font-semibold text-gray-600 whitespace-nowrap">
-                  <span className="font-[Noto Naskh Arabic,serif]">اردو</span>
-                  <span className="ml-1 text-gray-400 font-normal text-xs">Urdu</span>
+              <tr className="bg-beige border-b border-border">
+                <th className="text-left px-4 py-3 font-semibold text-muted-foreground whitespace-nowrap">#</th>
+                <th className="text-right px-4 py-3 font-semibold text-muted-foreground whitespace-nowrap">
+                  <span className="font-[Noto_Naskh_Arabic,serif]">اردو</span>
+                  <span className="ml-1 text-muted-foreground/60 font-normal text-xs">Urdu</span>
                 </th>
-                <th className="text-right px-4 py-3 font-semibold text-gray-600 whitespace-nowrap">
-                  <span className="font-[Noto Naskh Arabic,serif]">عربي</span>
-                  <span className="ml-1 text-gray-400 font-normal text-xs">Arabic</span>
+                <th className="text-right px-4 py-3 font-semibold text-muted-foreground whitespace-nowrap">
+                  <span className="font-[Noto_Naskh_Arabic,serif]">عربي</span>
+                  <span className="ml-1 text-muted-foreground/60 font-normal text-xs">Arabic</span>
                 </th>
-                <th className="text-right px-4 py-3 font-semibold text-gray-600 whitespace-nowrap">
-                  <span className="font-[Noto Naskh Arabic,serif]">جذر</span>
-                  <span className="ml-1 text-gray-400 font-normal text-xs">Root</span>
+                <th className="text-right px-4 py-3 font-semibold text-muted-foreground whitespace-nowrap">
+                  <span className="font-[Noto_Naskh_Arabic,serif]">جذر</span>
+                  <span className="ml-1 text-muted-foreground/60 font-normal text-xs">Root</span>
                 </th>
-                <th className="text-left px-4 py-3 font-semibold text-gray-600 whitespace-nowrap">English</th>
-                <th className="text-left px-4 py-3 font-semibold text-gray-600 whitespace-nowrap">Arabic pron.</th>
-                <th className="text-left px-4 py-3 font-semibold text-gray-600 whitespace-nowrap">Urdu pron.</th>
-                <th className="text-right px-4 py-3 font-semibold text-gray-600 whitespace-nowrap">
-                  <span className="font-[Noto Naskh Arabic,serif]">مثال قرآني</span>
-                  <span className="ml-1 text-gray-400 font-normal text-xs">Quranic example</span>
+                <th className="text-left px-4 py-3 font-semibold text-muted-foreground whitespace-nowrap">English</th>
+                <th className="text-left px-4 py-3 font-semibold text-muted-foreground whitespace-nowrap">Arabic pron.</th>
+                <th className="text-left px-4 py-3 font-semibold text-muted-foreground whitespace-nowrap">Urdu pron.</th>
+                <th className="text-right px-4 py-3 font-semibold text-muted-foreground whitespace-nowrap">
+                  <span className="font-[Noto_Naskh_Arabic,serif]">مثال قرآني</span>
+                  <span className="ml-1 text-muted-foreground/60 font-normal text-xs">Quranic example</span>
                 </th>
               </tr>
             </thead>
             <tbody>
               {filtered.length === 0 ? (
                 <tr>
-                  <td colSpan={8} className="text-center py-12 text-gray-400">
+                  <td colSpan={8} className="text-center py-12 text-muted-foreground">
                     No matches for "{search}"
                   </td>
                 </tr>
@@ -173,12 +168,12 @@ function ArabicUrduTable({
                 filtered.map((c, i) => (
                   <tr
                     key={i}
-                    className="border-b border-gray-100 last:border-0 hover:bg-gray-50 transition-colors"
+                    className="border-b border-border last:border-0 hover:bg-muted/50 transition-colors"
                   >
-                    <td className="px-4 py-3 text-gray-300 text-xs tabular-nums">{i + 1}</td>
+                    <td className="px-4 py-3 text-muted-foreground/40 text-xs tabular-nums">{i + 1}</td>
                     <td className="px-4 py-3 text-right">
                       <span
-                        className="text-lg text-black font-medium leading-none"
+                        className="text-lg text-foreground font-medium leading-none"
                         dir="rtl"
                         lang="ur"
                         style={{ fontFamily: "'Noto Nastaliq Urdu', 'Noto Naskh Arabic', serif" }}
@@ -188,7 +183,7 @@ function ArabicUrduTable({
                     </td>
                     <td className="px-4 py-3 text-right">
                       <span
-                        className="text-lg text-black leading-none"
+                        className="text-lg text-foreground leading-none"
                         dir="rtl"
                         lang="ar"
                         style={{ fontFamily: "'Noto Naskh Arabic', 'Amiri', serif" }}
@@ -198,7 +193,7 @@ function ArabicUrduTable({
                     </td>
                     <td className="px-4 py-3 text-right">
                       <span
-                        className="text-sm text-[#007700] font-medium bg-[#009000]/8 px-2 py-0.5 rounded"
+                        className="text-sm text-brand-hover font-medium bg-brand/8 px-2 py-0.5 rounded"
                         dir="rtl"
                         lang="ar"
                         style={{ fontFamily: "'Noto Naskh Arabic', serif" }}
@@ -206,9 +201,9 @@ function ArabicUrduTable({
                         {c.root}
                       </span>
                     </td>
-                    <td className="px-4 py-3 text-gray-700">{c.english}</td>
-                    <td className="px-4 py-3 text-gray-600 italic">{c.arabicPron}</td>
-                    <td className="px-4 py-3 text-gray-600 italic">{c.urduPron}</td>
+                    <td className="px-4 py-3 text-foreground/80">{c.english}</td>
+                    <td className="px-4 py-3 text-muted-foreground italic">{c.arabicPron}</td>
+                    <td className="px-4 py-3 text-muted-foreground italic">{c.urduPron}</td>
                     <td className="px-4 py-3 text-right">
                       {c.quranicExamples && c.quranicExamples.length > 0 ? (
                         <div className="inline-flex flex-col items-end gap-2">
@@ -225,19 +220,19 @@ function ArabicUrduTable({
                                   dir="rtl"
                                   lang="ar"
                                   style={{ fontFamily: "'Noto Naskh Arabic', 'Amiri', serif" }}
-                                  className="text-base text-black leading-relaxed"
+                                  className="text-base text-foreground leading-relaxed"
                                 >
                                   <ArabicHighlight text={ex.text} highlight={ex.highlight} />
                                 </span>
                               )}
-                              <span className="text-xs text-[#009000] font-semibold group-hover:text-[#007700] transition-colors">
+                              <span className="text-xs text-brand font-semibold group-hover:text-brand-hover transition-colors">
                                 {ex.surah}:{ex.ayah} ↗
                               </span>
                             </a>
                           ))}
                         </div>
                       ) : (
-                        <span className="text-gray-300 text-xs">—</span>
+                        <span className="text-muted-foreground/30 text-xs">—</span>
                       )}
                     </td>
                   </tr>
@@ -249,7 +244,7 @@ function ArabicUrduTable({
       </div>
 
       {filtered.length > 0 && (
-        <p className="text-xs text-gray-400 mt-4 text-center">
+        <p className="text-xs text-muted-foreground mt-4 text-center">
           Transliterations follow standard academic conventions. ā/ī/ū = long vowels · ʿ = ع · ḥ/ṣ/ḍ/ṭ/ẓ = emphatic consonants
         </p>
       )}

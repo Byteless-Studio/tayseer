@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import type { QuizItem } from '#/lib/arabic-101'
+import type { QuizItem } from '#/arabic-with-mufti-saim/arabic-101'
+import { Button } from '#/components/ui/button'
 
 export function QuizCarousel({ items }: { items: QuizItem[] }) {
   const [current, setCurrent] = useState(0)
@@ -26,12 +27,12 @@ export function QuizCarousel({ items }: { items: QuizItem[] }) {
 
   if (showScore) {
     return (
-      <div className="rounded-xl border border-gray-200 p-6">
+      <div className="rounded-xl border border-border p-6">
         <div className="text-center mb-6">
-          <div className="text-5xl font-bold text-[#009000] mb-2">
+          <div className="text-5xl font-bold text-brand mb-2">
             {score}/{items.length}
           </div>
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-muted-foreground">
             {score === items.length
               ? 'Perfect score!'
               : score >= Math.ceil(items.length / 2)
@@ -49,16 +50,16 @@ export function QuizCarousel({ items }: { items: QuizItem[] }) {
               <div
                 key={i}
                 className={`rounded-lg border p-3 text-xs ${
-                  correct ? 'border-[#009000]/30 bg-[#009000]/5' : 'border-red-200 bg-red-50'
+                  correct ? 'border-brand/30 bg-brand/5' : 'border-red-200 bg-red-50'
                 }`}
               >
-                <p className="font-medium text-gray-700 mb-1">
+                <p className="font-medium text-foreground mb-1">
                   {i + 1}. {it.q}
                 </p>
                 {!correct && ua !== undefined && (
                   <p className="text-red-500 mb-0.5">Your answer: {it.options?.[ua]}</p>
                 )}
-                <p className={correct ? 'text-[#009000]' : 'text-gray-600'}>
+                <p className={correct ? 'text-brand' : 'text-muted-foreground'}>
                   ✓ {it.options?.[ci]}
                 </p>
               </div>
@@ -66,54 +67,45 @@ export function QuizCarousel({ items }: { items: QuizItem[] }) {
           })}
         </div>
 
-        <button
-          type="button"
-          onClick={reset}
-          className="w-full rounded-lg border border-gray-200 py-2 text-sm text-gray-600 hover:border-gray-400 hover:text-gray-900 transition-colors cursor-pointer"
-        >
+        <Button variant="outline" className="w-full" onClick={reset}>
           Try Again
-        </button>
+        </Button>
       </div>
     )
   }
 
   return (
     <div>
-      {/* Progress */}
       <div className="flex items-center justify-between mb-2">
-        <span className="text-xs text-gray-400">
+        <span className="text-xs text-muted-foreground">
           Question {current + 1} of {items.length}
         </span>
-        <span className="text-xs text-gray-400">
+        <span className="text-xs text-muted-foreground">
           {answeredCount}/{items.length} answered
         </span>
       </div>
-      <div className="mb-4 h-1 w-full rounded-full bg-gray-100">
+      <div className="mb-4 h-1 w-full rounded-full bg-muted">
         <div
-          className="h-1 rounded-full bg-[#009000] transition-all duration-300"
+          className="h-1 rounded-full bg-brand transition-all duration-300"
           style={{ width: `${((current + 1) / items.length) * 100}%` }}
         />
       </div>
 
-      {/* Question card */}
-      <div className="rounded-xl border border-gray-200 p-5">
-        <p className="text-sm font-medium text-gray-800 mb-4 leading-snug">{item.q}</p>
+      <div className="rounded-xl border border-border p-5">
+        <p className="text-sm font-medium text-foreground mb-4 leading-snug">{item.q}</p>
 
         {item.options && item.options.length > 0 && (
           <div className="flex flex-col gap-2">
             {item.options.map((opt, j) => {
-              let cls =
-                'text-left w-full rounded-lg border px-3 py-2 text-xs transition-colors '
+              let cls = 'text-left w-full rounded-lg border px-3 py-2 text-xs transition-colors cursor-pointer '
               if (!hasAnswered) {
-                cls +=
-                  'border-gray-200 text-gray-700 hover:border-[#009000] hover:bg-[#009000]/5 cursor-pointer'
+                cls += 'border-border text-foreground hover:border-brand hover:bg-brand/5'
               } else if (j === correctIdx) {
-                cls +=
-                  'border-[#009000] bg-[#009000]/10 text-[#009000] font-medium cursor-default'
+                cls += 'border-brand bg-brand/10 text-brand font-medium cursor-default'
               } else if (j === selected) {
                 cls += 'border-red-300 bg-red-50 text-red-600 cursor-default'
               } else {
-                cls += 'border-gray-100 text-gray-300 cursor-default'
+                cls += 'border-border/50 text-muted-foreground/40 cursor-default'
               }
               return (
                 <button type="button" key={j} className={cls} onClick={() => select(j)}>
@@ -126,22 +118,22 @@ export function QuizCarousel({ items }: { items: QuizItem[] }) {
         )}
 
         {hasAnswered && (
-          <div className="mt-4 rounded-lg bg-gray-50 border-l-2 border-[#009000] p-3 text-xs text-gray-700 leading-relaxed">
+          <div className="mt-4 rounded-lg bg-muted border-l-2 border-brand p-3 text-xs text-foreground leading-relaxed">
             {item.a}
           </div>
         )}
       </div>
 
-      {/* Navigation */}
       <div className="flex items-center justify-between mt-3">
-        <button
-          type="button"
-          onClick={() => setCurrent(current - 1)}
+        <Button
+          variant="outline"
+          size="sm"
+          onClick={() => setCurrent((c) => c - 1)}
           disabled={current === 0}
-          className="rounded-lg border border-gray-200 px-3 py-1.5 text-xs text-gray-500 hover:border-gray-400 hover:text-gray-700 transition-colors cursor-pointer disabled:opacity-30"
+          className="text-xs"
         >
           ← Prev
-        </button>
+        </Button>
 
         <div className="flex gap-1.5 items-center">
           {items.map((_, i) => (
@@ -151,33 +143,35 @@ export function QuizCarousel({ items }: { items: QuizItem[] }) {
               onClick={() => setCurrent(i)}
               className={`rounded-full transition-all cursor-pointer ${
                 i === current
-                  ? 'w-4 h-2 bg-[#009000]'
+                  ? 'w-4 h-2 bg-brand'
                   : answers[i] !== undefined
-                  ? 'w-2 h-2 bg-gray-300'
-                  : 'w-2 h-2 bg-gray-200 hover:bg-gray-300'
+                  ? 'w-2 h-2 bg-muted-foreground/40'
+                  : 'w-2 h-2 bg-muted hover:bg-muted-foreground/20'
               }`}
             />
           ))}
         </div>
 
         {current < items.length - 1 ? (
-          <button
-            type="button"
-            onClick={() => setCurrent(current + 1)}
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => setCurrent((c) => c + 1)}
             disabled={!hasAnswered}
-            className="rounded-lg border px-3 py-1.5 text-xs transition-colors border-[#009000] text-[#009000] hover:bg-[#009000] hover:text-white cursor-pointer disabled:opacity-30"
+            className="text-xs border-brand text-brand hover:bg-brand hover:text-white"
           >
             Next →
-          </button>
+          </Button>
         ) : (
-          <button
-            type="button"
+          <Button
+            variant="outline"
+            size="sm"
             onClick={() => setShowScore(true)}
             disabled={!hasAnswered}
-            className="rounded-lg border px-3 py-1.5 text-xs transition-colors border-[#009000] text-[#009000] hover:bg-[#009000] hover:text-white cursor-pointer disabled:opacity-30"
+            className="text-xs border-brand text-brand hover:bg-brand hover:text-white"
           >
             See Score
-          </button>
+          </Button>
         )}
       </div>
     </div>

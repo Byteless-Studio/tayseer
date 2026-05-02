@@ -1,16 +1,18 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { createServerFn } from '@tanstack/react-start'
-import { encodeLectureId, type Book } from '#/lib/arabic-101'
+import { encodeLectureId, type Book } from '#/arabic-with-mufti-saim/arabic-101'
 import { courses } from '#/config/site'
+
+const cf = courses['arabic-101'].cloudfrontUrl
 
 const course = courses['arabic-101']
 
 const fetchAllBooks = createServerFn({ method: 'GET' }).handler(async () => {
-  const { loadAllBooks } = await import('#/lib/arabic-101.server')
+  const { loadAllBooks } = await import('#/arabic-with-mufti-saim/arabic-101.server')
   return loadAllBooks()
 })
 
-export const Route = createFileRoute('/arabic-101/')({
+export const Route = createFileRoute('/arabic-with-mufti-saim/arabic-101/')({
   loader: () => fetchAllBooks(),
   head: () => ({
     meta: [{ title: 'Arabic With Mufti Saim — Tayseer' }],
@@ -27,80 +29,85 @@ function Arabic101Page() {
       {/* Hero image */}
       <div className="mb-10 rounded-2xl overflow-hidden shadow-md">
         <img
-          src="/arabic-101-with-mufti-saim/medina university books sunlit.png"
+          src={`${cf}/arabic-101-with-mufti-saim/medina university books sunlit.png`}
           alt="Medina University books in sunlit setting"
           className="w-full h-112 object-cover object-center"
         />
       </div>
 
       {/* Course header */}
-      <div className="mb-12 border-b border-gray-200 pb-10">
-        <div className="mb-3 section-label">Course</div>
-        <h1 className="display-title text-4xl font-bold text-black leading-tight mb-4">
+      <div className="mb-12 border-b border-border pb-10">
+        <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-3">
+          Course
+        </p>
+        <h1 className="font-serif tracking-[-0.02em] text-4xl font-bold text-foreground leading-tight mb-4">
           {course.name}
         </h1>
-        <p className="text-gray-500 text-base max-w-2xl mb-8">{course.description}</p>
+        <p className="text-muted-foreground text-base max-w-2xl mb-8">{course.description}</p>
 
         {/* Info grid */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          {/* Schedule */}
-          <div className="rounded-xl bg-[#f5f0e8] border border-[#ede4d3] p-5">
-            <div className="section-label mb-2">Schedule</div>
-            <p className="text-sm font-semibold text-black">
+          <div className="rounded-xl bg-beige border border-beige-dark p-5">
+            <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-2">
+              Schedule
+            </p>
+            <p className="text-sm font-semibold text-foreground">
               {course.schedule.days.join(' & ')}
             </p>
-            <p className="text-sm text-gray-600">{course.schedule.time}</p>
+            <p className="text-sm text-muted-foreground">{course.schedule.time}</p>
           </div>
 
-          {/* Location */}
-          <div className="rounded-xl bg-[#f5f0e8] border border-[#ede4d3] p-5">
-            <div className="section-label mb-2">Location</div>
+          <div className="rounded-xl bg-beige border border-beige-dark p-5">
+            <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-2">
+              Location
+            </p>
             <a
               href={course.schedule.locationUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-semibold text-black hover:text-[#009000] no-underline"
+              className="text-sm font-semibold text-foreground hover:text-brand no-underline"
             >
               {course.schedule.location} ↗
             </a>
-            <p className="text-sm text-gray-600 mt-1">
+            <p className="text-sm text-muted-foreground mt-1">
               <a
                 href={course.schedule.registrationUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#009000] text-xs font-semibold hover:text-[#007700]"
+                className="text-brand text-xs font-semibold hover:text-brand-hover"
               >
                 Register for classes →
               </a>
             </p>
           </div>
 
-          {/* Textbook */}
-          <div className="rounded-xl bg-[#f5f0e8] border border-[#ede4d3] p-5">
-            <div className="section-label mb-2">Textbook</div>
+          <div className="rounded-xl bg-beige border border-beige-dark p-5">
+            <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-2">
+              Textbook
+            </p>
             <a
               href={course.resources.textbooks.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-semibold text-black hover:text-[#009000] no-underline"
+              className="text-sm font-semibold text-foreground hover:text-brand no-underline"
             >
               {course.resources.textbooks.label} ↗
             </a>
-            <p className="text-sm text-gray-600 mt-1">Medina Series</p>
+            <p className="text-sm text-muted-foreground mt-1">Medina Series</p>
           </div>
         </div>
       </div>
 
       {/* Lectures */}
       <div className="mb-3 flex items-center justify-between">
-        <h2 className="text-xl font-bold text-black">Lectures</h2>
-        <span className="text-sm text-gray-400">
+        <h2 className="text-xl font-bold text-foreground">Lectures</h2>
+        <span className="text-sm text-muted-foreground">
           {totalLectures} lecture{totalLectures !== 1 ? 's' : ''}
         </span>
       </div>
 
       {totalLectures === 0 ? (
-        <p className="py-16 text-center text-sm text-gray-400">
+        <p className="py-16 text-center text-sm text-muted-foreground">
           No lectures published yet. Check back soon.
         </p>
       ) : (
@@ -120,50 +127,54 @@ function BookSection({ book }: { book: Book }) {
   return (
     <section>
       <div className="flex items-center gap-3 mb-4">
-        <h3 className="text-sm font-bold text-black uppercase tracking-wider">
+        <h3 className="text-sm font-bold text-foreground uppercase tracking-wider">
           {book.name}
         </h3>
-        <div className="flex-1 h-px bg-gray-200" />
-        <span className="text-xs text-gray-400">
+        <div className="flex-1 h-px bg-border" />
+        <span className="text-xs text-muted-foreground">
           {book.lectures.length} lecture{book.lectures.length !== 1 ? 's' : ''}
         </span>
       </div>
 
-      <div className="rounded-xl border border-gray-200 overflow-hidden">
+      <div className="rounded-xl border border-border overflow-hidden">
         {book.lectures.map((lecture, i) => {
           const lectureId = encodeLectureId(book.number, lecture._lectureDir!)
           return (
             <Link
               key={lecture.id ?? i}
-              to="/arabic-101/lecture/$lectureId"
+              to="/arabic-with-mufti-saim/arabic-101/lecture/$lectureId"
               params={{ lectureId }}
-              className="lecture-card flex items-start gap-4 px-5 py-4 no-underline bg-white block"
+              className="flex items-start gap-4 px-5 py-4 no-underline bg-card border-b border-border last:border-b-0 hover:bg-muted/50 transition-colors block"
             >
-              {/* Number */}
-              <span className="shrink-0 w-7 h-7 rounded-full bg-black text-white text-xs font-bold flex items-center justify-center mt-0.5">
+              <span className="shrink-0 w-7 h-7 rounded-full bg-foreground text-background text-xs font-bold flex items-center justify-center mt-0.5">
                 {i + 1}
               </span>
 
               <div className="min-w-0 flex-1">
                 <div className="flex items-baseline gap-2 mb-1">
-                  <h4 className="text-sm font-semibold text-black leading-snug">
+                  <h4 className="text-sm font-semibold text-foreground leading-snug">
                     {lecture.title ?? lecture._lectureDir}
                   </h4>
                   {lecture.date && (
-                    <span className="shrink-0 text-xs text-gray-400 tabular-nums">
-                      {new Date(lecture.date + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+                    <span className="shrink-0 text-xs text-muted-foreground tabular-nums">
+                      {new Date(lecture.date + 'T00:00:00').toLocaleDateString('en-US', {
+                        month: 'short',
+                        day: 'numeric',
+                        year: 'numeric',
+                      })}
                     </span>
                   )}
                 </div>
                 {lecture.summary && (
-                  <p className="text-xs text-gray-500 line-clamp-2">
-                    {lecture.summary}
-                  </p>
+                  <p className="text-xs text-muted-foreground line-clamp-2">{lecture.summary}</p>
                 )}
                 {lecture.tags && lecture.tags.length > 0 && (
                   <div className="mt-2 flex flex-wrap gap-1">
                     {lecture.tags.slice(0, 4).map((tag) => (
-                      <span key={tag} className="tag-pill">
+                      <span
+                        key={tag}
+                        className="inline-block bg-brand/10 text-brand-hover text-[0.72rem] font-semibold px-2 py-0.5 rounded-full border border-brand/20"
+                      >
                         {tag}
                       </span>
                     ))}
@@ -171,7 +182,7 @@ function BookSection({ book }: { book: Book }) {
                 )}
               </div>
 
-              <span className="shrink-0 text-gray-300 text-sm">→</span>
+              <span className="shrink-0 text-muted-foreground/50 text-sm">→</span>
             </Link>
           )
         })}

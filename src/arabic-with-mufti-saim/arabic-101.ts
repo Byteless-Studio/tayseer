@@ -1,5 +1,5 @@
 // Client-safe types and pure functions only.
-// Anything that uses node:fs / node:path lives in arabic-101.server.ts
+// Anything that uses AWS SDK lives in arabic-101.server.ts
 
 export interface QuizItem {
   q: string

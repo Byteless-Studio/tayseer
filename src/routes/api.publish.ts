@@ -1,45 +1,63 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { writeFileSync, mkdirSync } from 'node:fs'
-import { join } from 'node:path'
+import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3'
 import { courses } from '#/config/site'
-import type { Lecture } from '#/lib/arabic-101'
+import type { Lecture } from '#/arabic-with-mufti-saim/arabic-101'
 
 // TODO: re-enable signature verification when the pipeline sends the header.
-// import { createPublicKey, verify } from 'node:crypto'
-// function loadPublicKey() { ... }
-// function verifySignature(body: Buffer, sigBase64: string): boolean { ... }
+
+const s3 = new S3Client({
+  region: process.env['AWS_REGION'] ?? 'us-east-1',
+  credentials: {
+    accessKeyId: process.env['AWS_ACCESS_KEY_ID'] ?? '',
+    secretAccessKey: process.env['AWS_SECRET_KEY'] ?? '',
+  },
+})
+
+const BUCKET = 'arabic-with-mufti-saim-789915097776-us-east-1-an'
+const course = courses['arabic-101']
 
 export const Route = createFileRoute('/api/publish')({
   server: {
     handlers: {
       POST: async ({ request }) => {
-        const body = Buffer.from(await request.arrayBuffer())
-
-        // TODO: Accept the original audio recording alongside the JSON payload.
-        //
-        // Currently this endpoint only receives the processed JSON (transcript,
-        // summary, key_points, tags, etc.).  The pipeline should also send the
-        // original .ogg / .mp3 recording so it can be stored next to the JSON
-        // and served via the audio player on the lecture page.
-        //
-        // Suggested approach:
-        //   - Switch to multipart/form-data so the audio file and JSON can be
-        //     sent in a single request:
-        //       form field "data"  → JSON string (Lecture)
-        //       form field "audio" → binary audio file (.ogg / .mp3 / .m4a)
-        //   - Save the audio file to:
-        //       public/<courseDir>/<bookDir>/<lectureDir>/<lectureId>.ogg
-        //   - Save the JSON to the same directory so the loader picks both up.
-        //
-        // Until then, audio files must be placed manually in the lecture folder.
+        const contentType = request.headers.get('content-type') ?? ''
 
         let data: Lecture
-        try {
-          data = JSON.parse(body.toString('utf-8')) as Lecture
-        } catch {
-          return new Response('Request body must be valid JSON.', {
-            status: 400,
-          })
+        let audioBuffer: Buffer | null = null
+        let audioFileName: string | null = null
+
+        if (contentType.includes('multipart/form-data')) {
+          // Multipart: JSON in "data" field, optional audio in "audio" field
+          let formData: FormData
+          try {
+            formData = await request.formData()
+          } catch {
+            return new Response('Failed to parse multipart form data.', { status: 400 })
+          }
+
+          const jsonField = formData.get('data')
+          if (typeof jsonField !== 'string') {
+            return new Response('Missing "data" field with JSON payload.', { status: 400 })
+          }
+          try {
+            data = JSON.parse(jsonField) as Lecture
+          } catch {
+            return new Response('"data" field must be valid JSON.', { status: 400 })
+          }
+
+          const audioFile = formData.get('audio')
+          if (audioFile instanceof File) {
+            audioBuffer = Buffer.from(await audioFile.arrayBuffer())
+            audioFileName = audioFile.name
+          }
+        } else {
+          // Plain JSON body
+          const body = Buffer.from(await request.arrayBuffer())
+          try {
+            data = JSON.parse(body.toString('utf-8')) as Lecture
+          } catch {
+            return new Response('Request body must be valid JSON.', { status: 400 })
+          }
         }
 
         const contentId = (data.id ?? '').trim()
@@ -47,21 +65,37 @@ export const Route = createFileRoute('/api/publish')({
           return new Response('Missing id field.', { status: 400 })
         }
 
-        // Save to public/arabic-101-with-mufti-saim/book-2-lectures/<id>.json
-        const book2Dir = join(
-          process.cwd(),
-          'public',
-          courses['arabic-101'].publicDir,
-          'book-2-lectures',
-        )
-        mkdirSync(book2Dir, { recursive: true })
-        writeFileSync(
-          join(book2Dir, `${contentId}.json`),
-          JSON.stringify(data, null, 2),
-          'utf-8',
-        )
+        // Upload JSON to s3Prefix/book-2-lectures/<contentId>/<contentId>.json
+        const lecturePrefix = `${course.s3Prefix}book-2-lectures/${contentId}/`
+        const jsonKey = `${lecturePrefix}${contentId}.json`
 
-        console.log(`[publish] saved ${contentId}`)
+        try {
+          await s3.send(
+            new PutObjectCommand({
+              Bucket: BUCKET,
+              Key: jsonKey,
+              Body: JSON.stringify(data, null, 2),
+              ContentType: 'application/json',
+            }),
+          )
+
+          if (audioBuffer && audioFileName) {
+            const audioKey = `${lecturePrefix}${audioFileName}`
+            await s3.send(
+              new PutObjectCommand({
+                Bucket: BUCKET,
+                Key: audioKey,
+                Body: audioBuffer,
+                ContentType: 'audio/mpeg',
+              }),
+            )
+          }
+        } catch (err) {
+          console.error('[publish] S3 upload failed:', err)
+          return new Response('Failed to upload to S3.', { status: 500 })
+        }
+
+        console.log(`[publish] uploaded ${contentId} to s3://${BUCKET}/${jsonKey}`)
 
         return Response.json({ ok: true, id: contentId }, { status: 201 })
       },

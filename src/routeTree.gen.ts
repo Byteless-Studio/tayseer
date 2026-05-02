@@ -10,37 +10,21 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as QuizzesRouteImport } from './routes/quizzes'
-import { Route as McpRouteImport } from './routes/mcp'
-import { Route as CognatesRouteImport } from './routes/cognates'
-import { Route as Arabic101RouteImport } from './routes/arabic-101'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as Arabic101IndexRouteImport } from './routes/arabic-101.index'
 import { Route as LectureVideoIdRouteImport } from './routes/lecture.$videoId'
+import { Route as CognatesCognatesRouteImport } from './routes/cognates/cognates'
+import { Route as ArabicWithMuftiSaimArabic101RouteImport } from './routes/arabic-with-mufti-saim/arabic-101'
 import { Route as ApiPublishRouteImport } from './routes/api.publish'
 import { Route as ApiLecturesRouteImport } from './routes/api.lectures'
-import { Route as Arabic101LectureLectureIdRouteImport } from './routes/arabic-101.lecture.$lectureId'
+import { Route as ArabicWithMuftiSaimArabic101IndexRouteImport } from './routes/arabic-with-mufti-saim/arabic-101.index'
 import { Route as ApiLecturesVideoIdRouteImport } from './routes/api.lectures.$videoId'
 import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
+import { Route as ArabicWithMuftiSaimArabic101LectureLectureIdRouteImport } from './routes/arabic-with-mufti-saim/arabic-101.lecture.$lectureId'
 
 const QuizzesRoute = QuizzesRouteImport.update({
   id: '/quizzes',
   path: '/quizzes',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const McpRoute = McpRouteImport.update({
-  id: '/mcp',
-  path: '/mcp',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CognatesRoute = CognatesRouteImport.update({
-  id: '/cognates',
-  path: '/cognates',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const Arabic101Route = Arabic101RouteImport.update({
-  id: '/arabic-101',
-  path: '/arabic-101',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -53,16 +37,22 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const Arabic101IndexRoute = Arabic101IndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => Arabic101Route,
-} as any)
 const LectureVideoIdRoute = LectureVideoIdRouteImport.update({
   id: '/lecture/$videoId',
   path: '/lecture/$videoId',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CognatesCognatesRoute = CognatesCognatesRouteImport.update({
+  id: '/cognates/cognates',
+  path: '/cognates/cognates',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArabicWithMuftiSaimArabic101Route =
+  ArabicWithMuftiSaimArabic101RouteImport.update({
+    id: '/arabic-with-mufti-saim/arabic-101',
+    path: '/arabic-with-mufti-saim/arabic-101',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ApiPublishRoute = ApiPublishRouteImport.update({
   id: '/api/publish',
   path: '/api/publish',
@@ -73,11 +63,11 @@ const ApiLecturesRoute = ApiLecturesRouteImport.update({
   path: '/api/lectures',
   getParentRoute: () => rootRouteImport,
 } as any)
-const Arabic101LectureLectureIdRoute =
-  Arabic101LectureLectureIdRouteImport.update({
-    id: '/lecture/$lectureId',
-    path: '/lecture/$lectureId',
-    getParentRoute: () => Arabic101Route,
+const ArabicWithMuftiSaimArabic101IndexRoute =
+  ArabicWithMuftiSaimArabic101IndexRouteImport.update({
+    id: '/',
+    path: '/',
+    getParentRoute: () => ArabicWithMuftiSaimArabic101Route,
   } as any)
 const ApiLecturesVideoIdRoute = ApiLecturesVideoIdRouteImport.update({
   id: '/$videoId',
@@ -89,108 +79,107 @@ const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
   path: '/api/auth/$',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ArabicWithMuftiSaimArabic101LectureLectureIdRoute =
+  ArabicWithMuftiSaimArabic101LectureLectureIdRouteImport.update({
+    id: '/lecture/$lectureId',
+    path: '/lecture/$lectureId',
+    getParentRoute: () => ArabicWithMuftiSaimArabic101Route,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/arabic-101': typeof Arabic101RouteWithChildren
-  '/cognates': typeof CognatesRoute
-  '/mcp': typeof McpRoute
   '/quizzes': typeof QuizzesRoute
   '/api/lectures': typeof ApiLecturesRouteWithChildren
   '/api/publish': typeof ApiPublishRoute
+  '/arabic-with-mufti-saim/arabic-101': typeof ArabicWithMuftiSaimArabic101RouteWithChildren
+  '/cognates/cognates': typeof CognatesCognatesRoute
   '/lecture/$videoId': typeof LectureVideoIdRoute
-  '/arabic-101/': typeof Arabic101IndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
   '/api/lectures/$videoId': typeof ApiLecturesVideoIdRoute
-  '/arabic-101/lecture/$lectureId': typeof Arabic101LectureLectureIdRoute
+  '/arabic-with-mufti-saim/arabic-101/': typeof ArabicWithMuftiSaimArabic101IndexRoute
+  '/arabic-with-mufti-saim/arabic-101/lecture/$lectureId': typeof ArabicWithMuftiSaimArabic101LectureLectureIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/cognates': typeof CognatesRoute
-  '/mcp': typeof McpRoute
   '/quizzes': typeof QuizzesRoute
   '/api/lectures': typeof ApiLecturesRouteWithChildren
   '/api/publish': typeof ApiPublishRoute
+  '/cognates/cognates': typeof CognatesCognatesRoute
   '/lecture/$videoId': typeof LectureVideoIdRoute
-  '/arabic-101': typeof Arabic101IndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
   '/api/lectures/$videoId': typeof ApiLecturesVideoIdRoute
-  '/arabic-101/lecture/$lectureId': typeof Arabic101LectureLectureIdRoute
+  '/arabic-with-mufti-saim/arabic-101': typeof ArabicWithMuftiSaimArabic101IndexRoute
+  '/arabic-with-mufti-saim/arabic-101/lecture/$lectureId': typeof ArabicWithMuftiSaimArabic101LectureLectureIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/arabic-101': typeof Arabic101RouteWithChildren
-  '/cognates': typeof CognatesRoute
-  '/mcp': typeof McpRoute
   '/quizzes': typeof QuizzesRoute
   '/api/lectures': typeof ApiLecturesRouteWithChildren
   '/api/publish': typeof ApiPublishRoute
+  '/arabic-with-mufti-saim/arabic-101': typeof ArabicWithMuftiSaimArabic101RouteWithChildren
+  '/cognates/cognates': typeof CognatesCognatesRoute
   '/lecture/$videoId': typeof LectureVideoIdRoute
-  '/arabic-101/': typeof Arabic101IndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
   '/api/lectures/$videoId': typeof ApiLecturesVideoIdRoute
-  '/arabic-101/lecture/$lectureId': typeof Arabic101LectureLectureIdRoute
+  '/arabic-with-mufti-saim/arabic-101/': typeof ArabicWithMuftiSaimArabic101IndexRoute
+  '/arabic-with-mufti-saim/arabic-101/lecture/$lectureId': typeof ArabicWithMuftiSaimArabic101LectureLectureIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
     | '/about'
-    | '/arabic-101'
-    | '/cognates'
-    | '/mcp'
     | '/quizzes'
     | '/api/lectures'
     | '/api/publish'
+    | '/arabic-with-mufti-saim/arabic-101'
+    | '/cognates/cognates'
     | '/lecture/$videoId'
-    | '/arabic-101/'
     | '/api/auth/$'
     | '/api/lectures/$videoId'
-    | '/arabic-101/lecture/$lectureId'
+    | '/arabic-with-mufti-saim/arabic-101/'
+    | '/arabic-with-mufti-saim/arabic-101/lecture/$lectureId'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
-    | '/cognates'
-    | '/mcp'
     | '/quizzes'
     | '/api/lectures'
     | '/api/publish'
+    | '/cognates/cognates'
     | '/lecture/$videoId'
-    | '/arabic-101'
     | '/api/auth/$'
     | '/api/lectures/$videoId'
-    | '/arabic-101/lecture/$lectureId'
+    | '/arabic-with-mufti-saim/arabic-101'
+    | '/arabic-with-mufti-saim/arabic-101/lecture/$lectureId'
   id:
     | '__root__'
     | '/'
     | '/about'
-    | '/arabic-101'
-    | '/cognates'
-    | '/mcp'
     | '/quizzes'
     | '/api/lectures'
     | '/api/publish'
+    | '/arabic-with-mufti-saim/arabic-101'
+    | '/cognates/cognates'
     | '/lecture/$videoId'
-    | '/arabic-101/'
     | '/api/auth/$'
     | '/api/lectures/$videoId'
-    | '/arabic-101/lecture/$lectureId'
+    | '/arabic-with-mufti-saim/arabic-101/'
+    | '/arabic-with-mufti-saim/arabic-101/lecture/$lectureId'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
-  Arabic101Route: typeof Arabic101RouteWithChildren
-  CognatesRoute: typeof CognatesRoute
-  McpRoute: typeof McpRoute
   QuizzesRoute: typeof QuizzesRoute
   ApiLecturesRoute: typeof ApiLecturesRouteWithChildren
   ApiPublishRoute: typeof ApiPublishRoute
+  ArabicWithMuftiSaimArabic101Route: typeof ArabicWithMuftiSaimArabic101RouteWithChildren
+  CognatesCognatesRoute: typeof CognatesCognatesRoute
   LectureVideoIdRoute: typeof LectureVideoIdRoute
   ApiAuthSplatRoute: typeof ApiAuthSplatRoute
 }
@@ -202,27 +191,6 @@ declare module '@tanstack/react-router' {
       path: '/quizzes'
       fullPath: '/quizzes'
       preLoaderRoute: typeof QuizzesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/mcp': {
-      id: '/mcp'
-      path: '/mcp'
-      fullPath: '/mcp'
-      preLoaderRoute: typeof McpRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/cognates': {
-      id: '/cognates'
-      path: '/cognates'
-      fullPath: '/cognates'
-      preLoaderRoute: typeof CognatesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/arabic-101': {
-      id: '/arabic-101'
-      path: '/arabic-101'
-      fullPath: '/arabic-101'
-      preLoaderRoute: typeof Arabic101RouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -239,18 +207,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/arabic-101/': {
-      id: '/arabic-101/'
-      path: '/'
-      fullPath: '/arabic-101/'
-      preLoaderRoute: typeof Arabic101IndexRouteImport
-      parentRoute: typeof Arabic101Route
-    }
     '/lecture/$videoId': {
       id: '/lecture/$videoId'
       path: '/lecture/$videoId'
       fullPath: '/lecture/$videoId'
       preLoaderRoute: typeof LectureVideoIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cognates/cognates': {
+      id: '/cognates/cognates'
+      path: '/cognates/cognates'
+      fullPath: '/cognates/cognates'
+      preLoaderRoute: typeof CognatesCognatesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/arabic-with-mufti-saim/arabic-101': {
+      id: '/arabic-with-mufti-saim/arabic-101'
+      path: '/arabic-with-mufti-saim/arabic-101'
+      fullPath: '/arabic-with-mufti-saim/arabic-101'
+      preLoaderRoute: typeof ArabicWithMuftiSaimArabic101RouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/publish': {
@@ -267,12 +242,12 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiLecturesRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/arabic-101/lecture/$lectureId': {
-      id: '/arabic-101/lecture/$lectureId'
-      path: '/lecture/$lectureId'
-      fullPath: '/arabic-101/lecture/$lectureId'
-      preLoaderRoute: typeof Arabic101LectureLectureIdRouteImport
-      parentRoute: typeof Arabic101Route
+    '/arabic-with-mufti-saim/arabic-101/': {
+      id: '/arabic-with-mufti-saim/arabic-101/'
+      path: '/'
+      fullPath: '/arabic-with-mufti-saim/arabic-101/'
+      preLoaderRoute: typeof ArabicWithMuftiSaimArabic101IndexRouteImport
+      parentRoute: typeof ArabicWithMuftiSaimArabic101Route
     }
     '/api/lectures/$videoId': {
       id: '/api/lectures/$videoId'
@@ -288,22 +263,15 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiAuthSplatRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/arabic-with-mufti-saim/arabic-101/lecture/$lectureId': {
+      id: '/arabic-with-mufti-saim/arabic-101/lecture/$lectureId'
+      path: '/lecture/$lectureId'
+      fullPath: '/arabic-with-mufti-saim/arabic-101/lecture/$lectureId'
+      preLoaderRoute: typeof ArabicWithMuftiSaimArabic101LectureLectureIdRouteImport
+      parentRoute: typeof ArabicWithMuftiSaimArabic101Route
+    }
   }
 }
-
-interface Arabic101RouteChildren {
-  Arabic101IndexRoute: typeof Arabic101IndexRoute
-  Arabic101LectureLectureIdRoute: typeof Arabic101LectureLectureIdRoute
-}
-
-const Arabic101RouteChildren: Arabic101RouteChildren = {
-  Arabic101IndexRoute: Arabic101IndexRoute,
-  Arabic101LectureLectureIdRoute: Arabic101LectureLectureIdRoute,
-}
-
-const Arabic101RouteWithChildren = Arabic101Route._addFileChildren(
-  Arabic101RouteChildren,
-)
 
 interface ApiLecturesRouteChildren {
   ApiLecturesVideoIdRoute: typeof ApiLecturesVideoIdRoute
@@ -317,15 +285,33 @@ const ApiLecturesRouteWithChildren = ApiLecturesRoute._addFileChildren(
   ApiLecturesRouteChildren,
 )
 
+interface ArabicWithMuftiSaimArabic101RouteChildren {
+  ArabicWithMuftiSaimArabic101IndexRoute: typeof ArabicWithMuftiSaimArabic101IndexRoute
+  ArabicWithMuftiSaimArabic101LectureLectureIdRoute: typeof ArabicWithMuftiSaimArabic101LectureLectureIdRoute
+}
+
+const ArabicWithMuftiSaimArabic101RouteChildren: ArabicWithMuftiSaimArabic101RouteChildren =
+  {
+    ArabicWithMuftiSaimArabic101IndexRoute:
+      ArabicWithMuftiSaimArabic101IndexRoute,
+    ArabicWithMuftiSaimArabic101LectureLectureIdRoute:
+      ArabicWithMuftiSaimArabic101LectureLectureIdRoute,
+  }
+
+const ArabicWithMuftiSaimArabic101RouteWithChildren =
+  ArabicWithMuftiSaimArabic101Route._addFileChildren(
+    ArabicWithMuftiSaimArabic101RouteChildren,
+  )
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
-  Arabic101Route: Arabic101RouteWithChildren,
-  CognatesRoute: CognatesRoute,
-  McpRoute: McpRoute,
   QuizzesRoute: QuizzesRoute,
   ApiLecturesRoute: ApiLecturesRouteWithChildren,
   ApiPublishRoute: ApiPublishRoute,
+  ArabicWithMuftiSaimArabic101Route:
+    ArabicWithMuftiSaimArabic101RouteWithChildren,
+  CognatesCognatesRoute: CognatesCognatesRoute,
   LectureVideoIdRoute: LectureVideoIdRoute,
   ApiAuthSplatRoute: ApiAuthSplatRoute,
 }
