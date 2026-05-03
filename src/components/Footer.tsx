@@ -28,7 +28,7 @@ export default function Footer() {
               <span className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground">
                 Tools
               </span>
-              <Link to="/cognates/cognates" className="text-foreground/70 no-underline hover:text-foreground transition-colors">
+              <Link to="/cognates/" className="text-foreground/70 no-underline hover:text-foreground transition-colors">
                 Cognates
               </Link>
               <Link to="/quizzes" className="text-foreground/70 no-underline hover:text-foreground transition-colors">

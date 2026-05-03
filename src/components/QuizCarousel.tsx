@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import type { QuizItem } from '#/routes/arabic-with-mufti-saim/arabic-101.types'
+import type { QuizItem } from '#/routes/arabic-with-mufti-saim/-arabic-101.types'
 import { Button } from '#/components/ui/button'
 
 export function QuizCarousel({ items }: { items: QuizItem[] }) {

@@ -1,6 +1,6 @@
 import { S3Client, ListObjectsV2Command, GetObjectCommand } from '@aws-sdk/client-s3'
 import { courses } from '#/config/site'
-import type { Book, Lecture } from './arabic-101.types'
+import type { Book, Lecture } from './-arabic-101.types'
 
 // ─── S3 client ───────────────────────────────────────────────────────────────
 // AWS_SECRET_KEY is the non-standard name used in this project's .env.local.

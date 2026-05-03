@@ -48,7 +48,7 @@ function HomePage() {
                 </p>
               </div>
               <Button asChild className="shrink-0 self-start bg-brand hover:bg-brand-hover text-white">
-                <Link to="/arabic-with-mufti-saim/arabic-101">View Course →</Link>
+                <Link to="/arabic-with-mufti-saim">View Course →</Link>
               </Button>
             </div>
           </div>
@@ -88,10 +88,10 @@ function HomePage() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <ToolCard
-              to="/cognates/cognates"
+              to="/cognates/"
               title="Cognates"
               description="Discover shared vocabulary between Arabic and other languages. Build a larger mental lexicon faster by leveraging words you already know."
-              badge="Coming Soon"
+              badge="In Progress!"
             />
             <ToolCard
               to="/quizzes"
@@ -146,7 +146,7 @@ function ToolCard({
   description,
   badge,
 }: {
-  to: '/cognates/cognates' | '/quizzes'
+  to: '/cognates/' | '/quizzes'
   title: string
   description: string
   badge?: string

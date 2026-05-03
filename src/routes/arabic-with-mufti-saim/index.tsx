@@ -1,13 +1,13 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { createServerFn } from '@tanstack/react-start'
-import { encodeLectureId, type Book } from '#/routes/arabic-with-mufti-saim/arabic-101.types'
+import { encodeLectureId, type Book } from '#/routes/arabic-with-mufti-saim/-arabic-101.types'
 import { courses } from '#/config/site'
 
 const cf = courses['arabic-101'].cloudfrontUrl
 const course = courses['arabic-101']
 
 const fetchAllBooks = createServerFn({ method: 'GET' }).handler(async () => {
-  const { loadAllBooks } = await import('#/routes/arabic-with-mufti-saim/arabic-101.server')
+  const { loadAllBooks } = await import('#/routes/arabic-with-mufti-saim/-arabic-101.server')
   return loadAllBooks()
 })
 
@@ -28,7 +28,7 @@ function Arabic101Page() {
       {/* Hero image */}
       <div className="mb-6 sm:mb-10 rounded-2xl overflow-hidden shadow-md">
         <img
-          src={`${cf}/arabic-101-with-mufti-saim/medina university books sunlit.png`}
+          src={`/arabic-101-with-mufti-saim/medina university books sunlit.png`}
           alt="Medina University books in sunlit setting"
           className="w-full h-52 sm:h-80 lg:h-112 object-cover object-center"
         />

@@ -2,7 +2,7 @@ import { createFileRoute } from '@tanstack/react-router'
 import { useState, useMemo } from 'react'
 import { arabicUrduCognates } from '#/data/arabic-urdu-cognates'
 
-export const Route = createFileRoute('/cognates/cognates')({
+export const Route = createFileRoute('/cognates/')({
   head: () => ({ meta: [{ title: 'Cognates — Tayseer' }] }),
   component: CognatesPage,
 })

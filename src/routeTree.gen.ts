@@ -11,12 +11,12 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as CognatesIndexRouteImport } from './routes/cognates/index'
 import { Route as ChallengesIndexRouteImport } from './routes/challenges/index'
 import { Route as ArabicWithMuftiSaimIndexRouteImport } from './routes/arabic-with-mufti-saim/index'
-import { Route as CognatesCognatesRouteImport } from './routes/cognates/cognates'
 import { Route as ArabicWithMuftiSaimLectureLectureIdRouteImport } from './routes/arabic-with-mufti-saim/lecture.$lectureId'
+import { Route as ApiPublishSplatRouteImport } from './routes/api/publish/$'
 import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
-import { Route as ApiPublishApiPublishRouteImport } from './routes/api/publish/api.publish'
 
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
@@ -26,6 +26,11 @@ const AboutRoute = AboutRouteImport.update({
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CognatesIndexRoute = CognatesIndexRouteImport.update({
+  id: '/cognates/',
+  path: '/cognates/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ChallengesIndexRoute = ChallengesIndexRouteImport.update({
@@ -39,101 +44,96 @@ const ArabicWithMuftiSaimIndexRoute =
     path: '/arabic-with-mufti-saim/',
     getParentRoute: () => rootRouteImport,
   } as any)
-const CognatesCognatesRoute = CognatesCognatesRouteImport.update({
-  id: '/cognates/cognates',
-  path: '/cognates/cognates',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const ArabicWithMuftiSaimLectureLectureIdRoute =
   ArabicWithMuftiSaimLectureLectureIdRouteImport.update({
     id: '/arabic-with-mufti-saim/lecture/$lectureId',
     path: '/arabic-with-mufti-saim/lecture/$lectureId',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ApiPublishSplatRoute = ApiPublishSplatRouteImport.update({
+  id: '/api/publish/$',
+  path: '/api/publish/$',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
   id: '/api/auth/$',
   path: '/api/auth/$',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiPublishApiPublishRoute = ApiPublishApiPublishRouteImport.update({
-  id: '/api/publish/api/publish',
-  path: '/api/publish/api/publish',
   getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/cognates/cognates': typeof CognatesCognatesRoute
   '/arabic-with-mufti-saim/': typeof ArabicWithMuftiSaimIndexRoute
   '/challenges/': typeof ChallengesIndexRoute
+  '/cognates/': typeof CognatesIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
+  '/api/publish/$': typeof ApiPublishSplatRoute
   '/arabic-with-mufti-saim/lecture/$lectureId': typeof ArabicWithMuftiSaimLectureLectureIdRoute
-  '/api/publish/api/publish': typeof ApiPublishApiPublishRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/cognates/cognates': typeof CognatesCognatesRoute
   '/arabic-with-mufti-saim': typeof ArabicWithMuftiSaimIndexRoute
   '/challenges': typeof ChallengesIndexRoute
+  '/cognates': typeof CognatesIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
+  '/api/publish/$': typeof ApiPublishSplatRoute
   '/arabic-with-mufti-saim/lecture/$lectureId': typeof ArabicWithMuftiSaimLectureLectureIdRoute
-  '/api/publish/api/publish': typeof ApiPublishApiPublishRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/cognates/cognates': typeof CognatesCognatesRoute
   '/arabic-with-mufti-saim/': typeof ArabicWithMuftiSaimIndexRoute
   '/challenges/': typeof ChallengesIndexRoute
+  '/cognates/': typeof CognatesIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
+  '/api/publish/$': typeof ApiPublishSplatRoute
   '/arabic-with-mufti-saim/lecture/$lectureId': typeof ArabicWithMuftiSaimLectureLectureIdRoute
-  '/api/publish/api/publish': typeof ApiPublishApiPublishRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
     | '/about'
-    | '/cognates/cognates'
     | '/arabic-with-mufti-saim/'
     | '/challenges/'
+    | '/cognates/'
     | '/api/auth/$'
+    | '/api/publish/$'
     | '/arabic-with-mufti-saim/lecture/$lectureId'
-    | '/api/publish/api/publish'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
-    | '/cognates/cognates'
     | '/arabic-with-mufti-saim'
     | '/challenges'
+    | '/cognates'
     | '/api/auth/$'
+    | '/api/publish/$'
     | '/arabic-with-mufti-saim/lecture/$lectureId'
-    | '/api/publish/api/publish'
   id:
     | '__root__'
     | '/'
     | '/about'
-    | '/cognates/cognates'
     | '/arabic-with-mufti-saim/'
     | '/challenges/'
+    | '/cognates/'
     | '/api/auth/$'
+    | '/api/publish/$'
     | '/arabic-with-mufti-saim/lecture/$lectureId'
-    | '/api/publish/api/publish'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
-  CognatesCognatesRoute: typeof CognatesCognatesRoute
   ArabicWithMuftiSaimIndexRoute: typeof ArabicWithMuftiSaimIndexRoute
   ChallengesIndexRoute: typeof ChallengesIndexRoute
+  CognatesIndexRoute: typeof CognatesIndexRoute
   ApiAuthSplatRoute: typeof ApiAuthSplatRoute
+  ApiPublishSplatRoute: typeof ApiPublishSplatRoute
   ArabicWithMuftiSaimLectureLectureIdRoute: typeof ArabicWithMuftiSaimLectureLectureIdRoute
-  ApiPublishApiPublishRoute: typeof ApiPublishApiPublishRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -152,6 +152,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/cognates/': {
+      id: '/cognates/'
+      path: '/cognates'
+      fullPath: '/cognates/'
+      preLoaderRoute: typeof CognatesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/challenges/': {
       id: '/challenges/'
       path: '/challenges'
@@ -166,18 +173,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ArabicWithMuftiSaimIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/cognates/cognates': {
-      id: '/cognates/cognates'
-      path: '/cognates/cognates'
-      fullPath: '/cognates/cognates'
-      preLoaderRoute: typeof CognatesCognatesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/arabic-with-mufti-saim/lecture/$lectureId': {
       id: '/arabic-with-mufti-saim/lecture/$lectureId'
       path: '/arabic-with-mufti-saim/lecture/$lectureId'
       fullPath: '/arabic-with-mufti-saim/lecture/$lectureId'
       preLoaderRoute: typeof ArabicWithMuftiSaimLectureLectureIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/publish/$': {
+      id: '/api/publish/$'
+      path: '/api/publish/$'
+      fullPath: '/api/publish/$'
+      preLoaderRoute: typeof ApiPublishSplatRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/auth/$': {
@@ -187,26 +194,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiAuthSplatRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/api/publish/api/publish': {
-      id: '/api/publish/api/publish'
-      path: '/api/publish/api/publish'
-      fullPath: '/api/publish/api/publish'
-      preLoaderRoute: typeof ApiPublishApiPublishRouteImport
-      parentRoute: typeof rootRouteImport
-    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
-  CognatesCognatesRoute: CognatesCognatesRoute,
   ArabicWithMuftiSaimIndexRoute: ArabicWithMuftiSaimIndexRoute,
   ChallengesIndexRoute: ChallengesIndexRoute,
+  CognatesIndexRoute: CognatesIndexRoute,
   ApiAuthSplatRoute: ApiAuthSplatRoute,
+  ApiPublishSplatRoute: ApiPublishSplatRoute,
   ArabicWithMuftiSaimLectureLectureIdRoute:
     ArabicWithMuftiSaimLectureLectureIdRoute,
-  ApiPublishApiPublishRoute: ApiPublishApiPublishRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

@@ -1,7 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3'
 import { courses } from '#/config/site'
-import type { Lecture } from '#/routes/arabic-with-mufti-saim/arabic-101.types'
+import type { Lecture } from '#/routes/arabic-with-mufti-saim/-arabic-101.types'
 
 // TODO: re-enable signature verification when the pipeline sends the header.
 
@@ -16,7 +16,7 @@ const s3 = new S3Client({
 const BUCKET = 'arabic-with-mufti-saim-789915097776-us-east-1-an'
 const course = courses['arabic-101']
 
-export const Route = createFileRoute('/api/publish/api/publish')({
+export const Route = createFileRoute('/api/publish/$')({
   server: {
     handlers: {
       POST: async ({ request }) => {

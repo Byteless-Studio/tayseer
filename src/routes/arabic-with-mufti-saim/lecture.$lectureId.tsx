@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { createFileRoute, Link, notFound } from '@tanstack/react-router'
 import { createServerFn } from '@tanstack/react-start'
-import { decodeLectureId, type QuizItem, type QuranExample } from '#/routes/arabic-with-mufti-saim/arabic-101.types'
+import { decodeLectureId, type QuizItem, type QuranExample } from '#/routes/arabic-with-mufti-saim/-arabic-101.types'
 import { courses } from '#/config/site'
 import { QuizCarousel } from '#/components/QuizCarousel'
 import { QuranCarousel } from '#/components/QuranCarousel'
@@ -11,7 +11,7 @@ const course = courses['arabic-101']
 const fetchLecture = createServerFn({ method: 'GET' })
   .inputValidator((params: { bookNumber: number; lectureDir: string }) => params)
   .handler(async ({ data }) => {
-    const { loadLecture } = await import('#/routes/arabic-with-mufti-saim/arabic-101.server')
+    const { loadLecture } = await import('#/routes/arabic-with-mufti-saim/-arabic-101.server')
     const lecture = await loadLecture(data.bookNumber, data.lectureDir)
     if (!lecture) throw new Error('not_found')
     return { lecture, bookNumber: data.bookNumber, lectureDir: data.lectureDir }
