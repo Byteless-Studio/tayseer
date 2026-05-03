@@ -2,7 +2,7 @@ import { createFileRoute, Link } from '@tanstack/react-router'
 import { Badge } from '#/components/ui/badge'
 import { Button } from '#/components/ui/button'
 
-export const Route = createFileRoute('/quizzes')({
+export const Route = createFileRoute('/challenges/')({
   head: () => ({ meta: [{ title: 'Quizzes — Tayseer' }] }),
   component: QuizzesPage,
 })

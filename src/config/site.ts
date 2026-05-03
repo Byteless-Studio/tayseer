@@ -14,7 +14,7 @@ export const siteConfig = {
 
 export const navItems = [
   { label: 'Home', to: '/' },
-  { label: 'Arabic With Mufti Saim', to: '/arabic-101' },
+  { label: 'Arabic With Mufti Saim', to: '/arabic-with-mufti-saim' },
   { label: 'Cognates', to: '/cognates' },
   { label: 'Quizzes', to: '/quizzes' },
 ] as const
@@ -27,7 +27,7 @@ export type NavItem = (typeof navItems)[number]
 export const courses = {
   'arabic-101': {
     /** S3 key prefix — must match the folder structure in the bucket */
-    s3Prefix: 'arabic-101-with-mufti-saim/',
+    s3Prefix: '',
     /** CloudFront distribution URL for serving media (audio, images). */
     cloudfrontUrl: 'https://dawj2kvc54uj9.cloudfront.net',
     name: 'Arabic With Mufti Saim',

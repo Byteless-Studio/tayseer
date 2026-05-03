@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import type { QuranExample } from '#/arabic-with-mufti-saim/arabic-101'
+import type { QuranExample } from '#/routes/arabic-with-mufti-saim/arabic-101.types'
 import { Button } from '#/components/ui/button'
 
 export function QuranCarousel({ items }: { items: QuranExample[] }) {

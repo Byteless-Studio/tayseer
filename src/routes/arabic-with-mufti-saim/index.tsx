@@ -1,18 +1,17 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { createServerFn } from '@tanstack/react-start'
-import { encodeLectureId, type Book } from '#/arabic-with-mufti-saim/arabic-101'
+import { encodeLectureId, type Book } from '#/routes/arabic-with-mufti-saim/arabic-101.types'
 import { courses } from '#/config/site'
 
 const cf = courses['arabic-101'].cloudfrontUrl
-
 const course = courses['arabic-101']
 
 const fetchAllBooks = createServerFn({ method: 'GET' }).handler(async () => {
-  const { loadAllBooks } = await import('#/arabic-with-mufti-saim/arabic-101.server')
+  const { loadAllBooks } = await import('#/routes/arabic-with-mufti-saim/arabic-101.server')
   return loadAllBooks()
 })
 
-export const Route = createFileRoute('/arabic-with-mufti-saim/arabic-101/')({
+export const Route = createFileRoute('/arabic-with-mufti-saim/')({
   loader: () => fetchAllBooks(),
   head: () => ({
     meta: [{ title: 'Arabic With Mufti Saim — Tayseer' }],
@@ -22,25 +21,25 @@ export const Route = createFileRoute('/arabic-with-mufti-saim/arabic-101/')({
 
 function Arabic101Page() {
   const books = Route.useLoaderData()
-  const totalLectures = books.reduce((sum, b) => sum + b.lectures.length, 0)
+  const totalLectures = books.reduce((sum: number, b: Book) => sum + b.lectures.length, 0)
 
   return (
-    <main className="mx-auto max-w-5xl px-6 py-12">
+    <main className="mx-auto max-w-5xl px-4 sm:px-6 py-8 sm:py-12">
       {/* Hero image */}
-      <div className="mb-10 rounded-2xl overflow-hidden shadow-md">
+      <div className="mb-6 sm:mb-10 rounded-2xl overflow-hidden shadow-md">
         <img
           src={`${cf}/arabic-101-with-mufti-saim/medina university books sunlit.png`}
           alt="Medina University books in sunlit setting"
-          className="w-full h-112 object-cover object-center"
+          className="w-full h-52 sm:h-80 lg:h-112 object-cover object-center"
         />
       </div>
 
       {/* Course header */}
-      <div className="mb-12 border-b border-border pb-10">
+      <div className="mb-8 sm:mb-12 border-b border-border pb-8 sm:pb-10">
         <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-3">
           Course
         </p>
-        <h1 className="font-serif tracking-[-0.02em] text-4xl font-bold text-foreground leading-tight mb-4">
+        <h1 className="font-serif tracking-[-0.02em] text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground leading-tight mb-4">
           {course.name}
         </h1>
         <p className="text-muted-foreground text-base max-w-2xl mb-8">{course.description}</p>
@@ -99,7 +98,7 @@ function Arabic101Page() {
       </div>
 
       {/* Lectures */}
-      <div className="mb-3 flex items-center justify-between">
+      <div className="mb-3 flex items-center justify-between gap-2">
         <h2 className="text-xl font-bold text-foreground">Lectures</h2>
         <span className="text-sm text-muted-foreground">
           {totalLectures} lecture{totalLectures !== 1 ? 's' : ''}
@@ -112,7 +111,7 @@ function Arabic101Page() {
         </p>
       ) : (
         <div className="flex flex-col gap-10">
-          {books.map((book) =>
+          {books.map((book: Book) =>
             book.lectures.length > 0 ? (
               <BookSection key={book.number} book={book} />
             ) : null,
@@ -142,7 +141,7 @@ function BookSection({ book }: { book: Book }) {
           return (
             <Link
               key={lecture.id ?? i}
-              to="/arabic-with-mufti-saim/arabic-101/lecture/$lectureId"
+              to="/arabic-with-mufti-saim/lecture/$lectureId"
               params={{ lectureId }}
               className="flex items-start gap-4 px-5 py-4 no-underline bg-card border-b border-border last:border-b-0 hover:bg-muted/50 transition-colors block"
             >
@@ -151,7 +150,7 @@ function BookSection({ book }: { book: Book }) {
               </span>
 
               <div className="min-w-0 flex-1">
-                <div className="flex items-baseline gap-2 mb-1">
+                <div className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5 mb-1">
                   <h4 className="text-sm font-semibold text-foreground leading-snug">
                     {lecture.title ?? lecture._lectureDir}
                   </h4>

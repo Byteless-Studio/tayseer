@@ -16,27 +16,27 @@ function HomePage() {
     <div className="rise-in">
       {/* ── Hero ─────────────────────────────────────────────────────── */}
       <section className="bg-black text-white">
-        <div className="mx-auto max-w-5xl px-6 py-24 sm:py-32">
+        <div className="mx-auto max-w-5xl px-6 py-16 sm:py-24 md:py-32">
           <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-white/40 mb-5">
             {siteConfig.name}
           </p>
-          <h1 className="font-serif tracking-[-0.02em] text-5xl sm:text-6xl font-bold leading-tight mb-6 max-w-2xl">
+          <h1 className="font-serif tracking-[-0.02em] text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6 max-w-2xl">
             {siteConfig.tagline}
           </h1>
-          <p className="text-white/60 text-lg max-w-xl mb-10 leading-relaxed">
+          <p className="text-white/60 text-base sm:text-lg max-w-xl mb-8 sm:mb-10 leading-relaxed">
             {siteConfig.description}
           </p>
         </div>
       </section>
 
       {/* ── Courses ──────────────────────────────────────────────────── */}
-      <section className="mx-auto max-w-5xl px-6 py-20">
+      <section className="mx-auto max-w-5xl px-4 sm:px-6 py-12 sm:py-20">
         <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-8">
           Courses
         </p>
 
         <Card className="overflow-hidden mb-6">
-          <div className="bg-beige px-8 py-8 sm:py-10 border-b border-beige-dark">
+          <div className="bg-beige px-5 sm:px-8 py-6 sm:py-8 lg:py-10 border-b border-beige-dark">
             <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-6">
               <div className="flex-1">
                 <Badge className="mb-4 bg-brand/10 text-brand-hover border-brand/20 hover:bg-brand/10">
@@ -82,7 +82,7 @@ function HomePage() {
 
       {/* ── Tools ────────────────────────────────────────────────────── */}
       <section className="bg-beige border-y border-beige-dark">
-        <div className="mx-auto max-w-5xl px-6 py-16">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 py-10 sm:py-16">
           <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-8">
             Learning Tools
           </p>
@@ -104,7 +104,7 @@ function HomePage() {
       </section>
 
       {/* ── Why Arabic ───────────────────────────────────────────────── */}
-      <section className="mx-auto max-w-5xl px-6 py-20">
+      <section className="mx-auto max-w-5xl px-4 sm:px-6 py-12 sm:py-20">
         <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-8">
           Why Learn Arabic?
         </p>

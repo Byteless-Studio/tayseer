@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { createFileRoute, Link, notFound } from '@tanstack/react-router'
 import { createServerFn } from '@tanstack/react-start'
-import { decodeLectureId, type QuizItem, type QuranExample } from '#/arabic-with-mufti-saim/arabic-101'
+import { decodeLectureId, type QuizItem, type QuranExample } from '#/routes/arabic-with-mufti-saim/arabic-101.types'
 import { courses } from '#/config/site'
 import { QuizCarousel } from '#/components/QuizCarousel'
 import { QuranCarousel } from '#/components/QuranCarousel'
@@ -11,15 +11,13 @@ const course = courses['arabic-101']
 const fetchLecture = createServerFn({ method: 'GET' })
   .inputValidator((params: { bookNumber: number; lectureDir: string }) => params)
   .handler(async ({ data }) => {
-    const { loadLecture } = await import('#/arabic-with-mufti-saim/arabic-101.server')
+    const { loadLecture } = await import('#/routes/arabic-with-mufti-saim/arabic-101.server')
     const lecture = await loadLecture(data.bookNumber, data.lectureDir)
     if (!lecture) throw new Error('not_found')
     return { lecture, bookNumber: data.bookNumber, lectureDir: data.lectureDir }
   })
 
-export const Route = createFileRoute(
-  '/arabic-with-mufti-saim/arabic-101/lecture/$lectureId',
-)({
+export const Route = createFileRoute('/arabic-with-mufti-saim/lecture/$lectureId')({
   loader: async ({ params }): Promise<Awaited<ReturnType<typeof fetchLecture>>> => {
     const { bookNumber, lectureDir } = decodeLectureId(params.lectureId)
     try {
@@ -71,11 +69,11 @@ function LecturePage() {
   const hasQuranExamples = quranExamples.length > 0
 
   return (
-    <main className="mx-auto max-w-5xl px-6 py-12">
+    <main className="mx-auto max-w-5xl px-4 sm:px-6 py-8 sm:py-12">
       {/* Breadcrumb */}
-      <nav className="mb-8 flex items-center gap-2 text-sm text-muted-foreground">
+      <nav className="mb-6 sm:mb-8 flex items-center gap-2 text-sm text-muted-foreground">
         <Link
-          to="/arabic-with-mufti-saim/arabic-101"
+          to="/arabic-with-mufti-saim"
           className="hover:text-foreground no-underline text-muted-foreground"
         >
           Arabic With Mufti Saim
@@ -112,7 +110,7 @@ function LecturePage() {
 
       {/* Original Recording */}
       {lecture._audioUrl && (
-        <section className="mb-10">
+        <section className="mb-8 sm:mb-10">
           <SectionLabel>Original Recording</SectionLabel>
           <div className="rounded-xl border border-border bg-beige p-4">
             <audio controls className="w-full" preload="metadata">
@@ -127,7 +125,7 @@ function LecturePage() {
 
       {/* Key Points + Quiz */}
       {(hasKeyPoints || hasQuiz) && (
-        <div className="mb-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+        <div className="mb-8 sm:mb-10 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-start">
           {hasKeyPoints && (
             <section>
               <SectionLabel>Key Points</SectionLabel>
@@ -154,7 +152,7 @@ function LecturePage() {
 
       {/* Discussion Questions + Quranic Examples */}
       {(hasQuestions || hasQuranExamples) && (
-        <div className="mb-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+        <div className="mb-8 sm:mb-10 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-start">
           {hasQuestions && (
             <section>
               <SectionLabel>Discussion Questions</SectionLabel>
@@ -183,7 +181,7 @@ function LecturePage() {
 
       {/* Transcript */}
       {lecture.transcript && (
-        <section className="mb-10">
+        <section className="mb-8 sm:mb-10">
           <button
             type="button"
             onClick={() => setTranscriptOpen((o) => !o)}
@@ -196,7 +194,7 @@ function LecturePage() {
           </button>
           {transcriptOpen && (
             <div
-              className="rounded-xl border border-border bg-muted/50 p-6 text-sm leading-loose text-foreground/80 whitespace-pre-wrap font-mono overflow-x-auto"
+              className="rounded-xl border border-border bg-muted/50 p-4 sm:p-6 text-sm leading-loose text-foreground/80 whitespace-pre-wrap font-mono overflow-x-auto"
               dangerouslySetInnerHTML={{
                 __html: formatTranscript(lecture.transcript as string),
               }}
@@ -206,9 +204,9 @@ function LecturePage() {
       )}
 
       {/* Back */}
-      <div className="mt-12 border-t border-border pt-8">
+      <div className="mt-8 sm:mt-12 border-t border-border pt-6 sm:pt-8">
         <Link
-          to="/arabic-with-mufti-saim/arabic-101"
+          to="/arabic-with-mufti-saim"
           className="text-sm text-muted-foreground no-underline hover:text-foreground"
         >
           ← All lectures

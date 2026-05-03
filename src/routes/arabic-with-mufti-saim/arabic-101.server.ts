@@ -1,6 +1,6 @@
 import { S3Client, ListObjectsV2Command, GetObjectCommand } from '@aws-sdk/client-s3'
 import { courses } from '#/config/site'
-import type { Book, Lecture } from './arabic-101'
+import type { Book, Lecture } from './arabic-101.types'
 
 // ─── S3 client ───────────────────────────────────────────────────────────────
 // AWS_SECRET_KEY is the non-standard name used in this project's .env.local.
@@ -10,7 +10,7 @@ const s3 = new S3Client({
   region: process.env['AWS_REGION'] ?? 'us-east-1',
   credentials: {
     accessKeyId: process.env['AWS_ACCESS_KEY_ID'] ?? '',
-    secretAccessKey: process.env['AWS_SECRET_KEY'] ?? '',
+    secretAccessKey: process.env['AWS_SECRET_ACCESS_KEY'] ?? '',
   },
 })
 
@@ -125,6 +125,8 @@ export async function loadAllBooks(): Promise<Book[]> {
 
       try {
         const keys = await listPrefix(bookPrefix)
+        console.log(`[arabic-101] ${bookPrefix} → ${keys.length} keys`)
+
         const groups = groupByEntry(bookPrefix, keys)
 
         const rawLectures = await Promise.all(
@@ -139,8 +141,8 @@ export async function loadAllBooks(): Promise<Book[]> {
           if (b.date) return 1
           return 0
         })
-      } catch {
-        // Book prefix doesn't exist yet — return empty
+      } catch (err) {
+        console.error(`[arabic-101] failed to load ${bookPrefix}:`, err)
       }
 
       return { number: cfg.number, name: cfg.name, dir: cfg.dir, lectures }
