@@ -1,0 +1,10 @@
+node_modules
+.output
+.vinxi
+.tanstack
+.nitro
+.git
+.env
+.env.*
+*.local
+public/book-*

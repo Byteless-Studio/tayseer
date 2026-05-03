@@ -1,5 +1,8 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { siteConfig, courses } from '#/config/site'
+import { Badge } from '#/components/ui/badge'
+import { Button } from '#/components/ui/button'
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '#/components/ui/card'
 
 export const Route = createFileRoute('/')({
   head: () => ({ meta: [{ title: 'Tayseer — Learn Arabic' }] }),
@@ -13,58 +16,52 @@ function HomePage() {
     <div className="rise-in">
       {/* ── Hero ─────────────────────────────────────────────────────── */}
       <section className="bg-black text-white">
-        <div className="mx-auto max-w-5xl px-6 py-24 sm:py-32">
-          <p className="section-label text-white/40 mb-5">{siteConfig.name}</p>
-          <h1 className="display-title text-5xl sm:text-6xl font-bold leading-tight mb-6 max-w-2xl">
+        <div className="mx-auto max-w-5xl px-6 py-16 sm:py-24 md:py-32">
+          <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-white/40 mb-5">
+            {siteConfig.name}
+          </p>
+          <h1 className="font-serif tracking-[-0.02em] text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6 max-w-2xl">
             {siteConfig.tagline}
           </h1>
-          <p className="text-white/60 text-lg max-w-xl mb-10 leading-relaxed">
+          <p className="text-white/60 text-base sm:text-lg max-w-xl mb-8 sm:mb-10 leading-relaxed">
             {siteConfig.description}
           </p>
-      
         </div>
       </section>
 
       {/* ── Courses ──────────────────────────────────────────────────── */}
-      <section className="mx-auto max-w-5xl px-6 py-20">
-        <div className="section-label mb-8">Courses Near You</div>
+      <section className="mx-auto max-w-5xl px-4 sm:px-6 py-12 sm:py-20">
+        <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-8">
+          Courses
+        </p>
 
-        {/* Arabic 101 featured card */}
-        <div className="rounded-2xl border border-gray-200 overflow-hidden mb-6">
-          <div className="bg-[#f5f0e8] px-8 py-8 sm:py-10 border-b border-[#ede4d3]">
+        <Card className="overflow-hidden mb-6">
+          <div className="bg-beige px-5 sm:px-8 py-6 sm:py-8 lg:py-10 border-b border-beige-dark">
             <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-6">
               <div className="flex-1">
-                <div className="inline-flex items-center gap-2 bg-[#009000]/10 text-[#007700] text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4">
+                <Badge className="mb-4 bg-brand/10 text-brand-hover border-brand/20 hover:bg-brand/10">
                   Active Course
-                </div>
-                <h2 className="text-2xl font-bold text-black mb-2">
-                  {arabic101.name}
-                </h2>
-                <p className="text-gray-600 text-sm max-w-lg leading-relaxed">
+                </Badge>
+                <h2 className="text-2xl font-bold text-black mb-2">{arabic101.name}</h2>
+                <p className="text-muted-foreground text-sm max-w-lg leading-relaxed">
                   {arabic101.description}
                 </p>
               </div>
-              <Link
-                to="/arabic-101"
-                className="btn-primary shrink-0 self-start"
-              >
-                View Course →
-              </Link>
+              <Button asChild className="shrink-0 self-start bg-brand hover:bg-brand-hover text-white">
+                <Link to="/arabic-with-mufti-saim">View Course →</Link>
+              </Button>
             </div>
           </div>
 
-          {/* Course details strip */}
-          <div className="bg-white divide-y divide-gray-100 sm:divide-y-0 sm:flex sm:divide-x sm:divide-gray-100">
-            <DetailCell label="Days">
-              {arabic101.schedule.days.join(' & ')}
-            </DetailCell>
+          <div className="bg-card divide-y divide-border sm:divide-y-0 sm:flex sm:divide-x sm:divide-border">
+            <DetailCell label="Days">{arabic101.schedule.days.join(' & ')}</DetailCell>
             <DetailCell label="Time">{arabic101.schedule.time}</DetailCell>
             <DetailCell label="Location">
               <a
                 href={arabic101.schedule.locationUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#009000] font-semibold hover:text-[#007700]"
+                className="text-brand font-semibold hover:text-brand-hover"
               >
                 {arabic101.schedule.location} ↗
               </a>
@@ -74,25 +71,27 @@ function HomePage() {
                 href={arabic101.resources.textbooks.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#009000] font-semibold hover:text-[#007700]"
+                className="text-brand font-semibold hover:text-brand-hover"
               >
                 Medina Series ↗
               </a>
             </DetailCell>
           </div>
-        </div>
+        </Card>
       </section>
 
       {/* ── Tools ────────────────────────────────────────────────────── */}
-      <section className="bg-[#f5f0e8] border-y border-[#ede4d3]">
-        <div className="mx-auto max-w-5xl px-6 py-16">
-          <div className="section-label mb-8">Learning Tools</div>
+      <section className="bg-beige border-y border-beige-dark">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 py-10 sm:py-16">
+          <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-8">
+            Learning Tools
+          </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <ToolCard
-              to="/cognates"
+              to="/cognates/"
               title="Cognates"
               description="Discover shared vocabulary between Arabic and other languages. Build a larger mental lexicon faster by leveraging words you already know."
-              badge="Coming Soon"
+              badge="In Progress!"
             />
             <ToolCard
               to="/quizzes"
@@ -105,8 +104,10 @@ function HomePage() {
       </section>
 
       {/* ── Why Arabic ───────────────────────────────────────────────── */}
-      <section className="mx-auto max-w-5xl px-6 py-20">
-        <div className="section-label mb-8">Why Learn Arabic?</div>
+      <section className="mx-auto max-w-5xl px-4 sm:px-6 py-12 sm:py-20">
+        <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-8">
+          Why Learn Arabic?
+        </p>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
           <Reason
             title="Understand the Quran"
@@ -128,17 +129,13 @@ function HomePage() {
 
 // ── Sub-components ─────────────────────────────────────────────────────────────
 
-function DetailCell({
-  label,
-  children,
-}: {
-  label: string
-  children: React.ReactNode
-}) {
+function DetailCell({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <div className="flex-1 px-6 py-4">
-      <div className="section-label mb-1">{label}</div>
-      <div className="text-sm font-medium text-black">{children}</div>
+      <div className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-1">
+        {label}
+      </div>
+      <div className="text-sm font-medium text-foreground">{children}</div>
     </div>
   )
 }
@@ -149,37 +146,40 @@ function ToolCard({
   description,
   badge,
 }: {
-  to: '/cognates' | '/quizzes'
+  to: '/cognates/' | '/quizzes'
   title: string
   description: string
   badge?: string
 }) {
   return (
-    <Link
-      to={to}
-      className="group rounded-xl border border-[#ede4d3] bg-white p-6 no-underline hover:border-black hover:shadow-sm transition-all"
-    >
-      <div className="flex items-start justify-between mb-3">
-        <h3 className="text-base font-bold text-black">{title}</h3>
-        {badge && (
-          <span className="text-xs font-semibold text-gray-400 bg-gray-100 px-2 py-0.5 rounded-full">
-            {badge}
+    <Link to={to} className="group no-underline">
+      <Card className="h-full border-beige-dark hover:border-foreground hover:shadow-sm transition-all">
+        <CardHeader className="pb-2">
+          <div className="flex items-start justify-between">
+            <CardTitle className="text-base">{title}</CardTitle>
+            {badge && (
+              <Badge variant="secondary" className="text-xs">
+                {badge}
+              </Badge>
+            )}
+          </div>
+        </CardHeader>
+        <CardContent>
+          <CardDescription className="leading-relaxed">{description}</CardDescription>
+          <span className="mt-4 inline-block text-xs font-semibold text-muted-foreground/50 group-hover:text-brand transition-colors">
+            Learn more →
           </span>
-        )}
-      </div>
-      <p className="text-sm text-gray-500 leading-relaxed">{description}</p>
-      <span className="mt-4 inline-block text-xs font-semibold text-gray-300 group-hover:text-[#009000] transition-colors">
-        Learn more →
-      </span>
+        </CardContent>
+      </Card>
     </Link>
   )
 }
 
 function Reason({ title, body }: { title: string; body: string }) {
   return (
-    <div className="border-t-2 border-[#009000] pt-5">
-      <h3 className="text-base font-bold text-black mb-2">{title}</h3>
-      <p className="text-sm text-gray-500 leading-relaxed">{body}</p>
+    <div className="border-t-2 border-brand pt-5">
+      <h3 className="text-base font-bold text-foreground mb-2">{title}</h3>
+      <p className="text-sm text-muted-foreground leading-relaxed">{body}</p>
     </div>
   )
 }
