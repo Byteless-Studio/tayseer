@@ -91,7 +91,7 @@ function HomePage() {
               to="/cognates/"
               title="Cognates"
               description="Discover shared vocabulary between Arabic and other languages. Build a larger mental lexicon faster by leveraging words you already know."
-              badge="In Progress!"
+              badge=""
             />
             <ToolCard
               to="/quizzes"

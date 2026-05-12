@@ -3,9 +3,10 @@ import { createServerFn } from '@tanstack/react-start'
 import { encodeLectureId, type Book } from '#/routes/arabic-with-mufti-saim/-arabic-101.types'
 import { courses } from '#/config/site'
 
-const cf = courses['arabic-101'].cloudfrontUrl
 const course = courses['arabic-101']
 
+// Dynamic import keeps the AWS SDK out of the client bundle. Static imports at
+// the top of this file would be analyzed by Vite and included client-side.
 const fetchAllBooks = createServerFn({ method: 'GET' }).handler(async () => {
   const { loadAllBooks } = await import('#/routes/arabic-with-mufti-saim/-arabic-101.server')
   return loadAllBooks()

@@ -1,11 +1,24 @@
+// ─── arabic-101.server.ts ────────────────────────────────────────────────────
+// Server-only module — prefixed with `-` so Vinxi never includes it in the
+// client bundle. Imported exclusively via dynamic `await import(...)` inside
+// createServerFn handlers, which only execute on the server.
+//
+// S3 bucket structure:
+//   book-1-lectures/
+//     {lectureDir}/
+//       {lectureDir}.json   ← lecture metadata & content
+//       {lectureDir}.ogg    ← optional class recording
+//   book-2-lectures/
+//     ...
+//
+// CloudFront sits in front of the bucket for audio/image delivery.
+
 import { S3Client, ListObjectsV2Command, GetObjectCommand } from '@aws-sdk/client-s3'
 import { courses } from '#/config/site'
 import type { Book, Lecture } from './-arabic-101.types'
 
-// ─── S3 client ───────────────────────────────────────────────────────────────
-// AWS_SECRET_KEY is the non-standard name used in this project's .env.local.
-// The SDK default is AWS_SECRET_ACCESS_KEY, so we pass credentials explicitly.
-
+// Credentials passed explicitly because the SDK default env var name is
+// AWS_SECRET_ACCESS_KEY, which matches what we set.
 const s3 = new S3Client({
   region: process.env['AWS_REGION'] ?? 'us-east-1',
   credentials: {
@@ -19,6 +32,8 @@ const course = courses['arabic-101']
 
 // ─── URL helpers ─────────────────────────────────────────────────────────────
 
+// Prefer CloudFront for audio/image delivery. Falls back to the direct S3 URL
+// if cloudfrontUrl is not configured (useful for local dev without CF).
 function mediaUrl(key: string): string {
   const cf = course.cloudfrontUrl
   if (cf) return `${cf.replace(/\/$/, '')}/${key}`
@@ -27,6 +42,8 @@ function mediaUrl(key: string): string {
 
 // ─── S3 helpers ──────────────────────────────────────────────────────────────
 
+// S3 ListObjects returns at most 1000 keys per request. This loop follows
+// continuation tokens until all keys under the prefix are collected.
 async function listPrefix(prefix: string): Promise<string[]> {
   const keys: string[] = []
   let continuationToken: string | undefined
@@ -48,6 +65,8 @@ async function listPrefix(prefix: string): Promise<string[]> {
   return keys
 }
 
+// Fetches and parses a JSON file from S3. Returns null on any error (missing
+// key, malformed JSON) so callers can skip gracefully.
 async function getJson<T>(key: string): Promise<T | null> {
   try {
     const res = await s3.send(new GetObjectCommand({ Bucket: BUCKET, Key: key }))
@@ -59,7 +78,7 @@ async function getJson<T>(key: string): Promise<T | null> {
   }
 }
 
-// ─── Audio file detection ─────────────────────────────────────────────────────
+// ─── File type detection ──────────────────────────────────────────────────────
 
 const AUDIO_EXTS = ['.ogg', '.mp3', '.m4a', '.wav']
 
@@ -73,6 +92,11 @@ function isJson(key: string): boolean {
 
 // ─── Lecture loading ──────────────────────────────────────────────────────────
 
+// Given a flat list of S3 keys under a book prefix, groups them by the first
+// path segment (the lecture directory name). Each group contains all files
+// belonging to one lecture (its JSON and optional audio).
+//
+// Example: "book-1-lectures/lesson-01/lesson-01.json" → segment "lesson-01"
 function groupByEntry(bookPrefix: string, keys: string[]): Map<string, string[]> {
   const groups = new Map<string, string[]>()
 
@@ -90,6 +114,9 @@ function groupByEntry(bookPrefix: string, keys: string[]): Map<string, string[]>
   return groups
 }
 
+// Builds a Lecture from the files in one lecture directory. The JSON file is
+// required; the audio file is optional. The _bookNumber, _lectureDir, and
+// _audioUrl fields are injected at runtime — they don't exist in the S3 JSON.
 async function loadLectureFromKeys(
   bookNumber: number,
   entryName: string,
@@ -115,6 +142,9 @@ async function loadLectureFromKeys(
 
 // ─── Public API ───────────────────────────────────────────────────────────────
 
+// Loads all books and their lectures in parallel. Books with no lectures are
+// still returned (empty array) so the UI can show them as placeholders.
+// Lectures within each book are sorted ascending by date.
 export async function loadAllBooks(): Promise<Book[]> {
   const bookConfigs = course.books
 
@@ -152,6 +182,10 @@ export async function loadAllBooks(): Promise<Book[]> {
   return books
 }
 
+// Loads a single lecture by book number + directory name. Tries the directory
+// format first (lectureDir/ folder with JSON + audio inside), then falls back
+// to a flat single-file format (lectureDir.json with no audio). This supports
+// both upload styles from the publish pipeline.
 export async function loadLecture(
   bookNumber: number,
   lectureDir: string,
@@ -166,6 +200,7 @@ export async function loadLecture(
     return loadLectureFromKeys(bookNumber, lectureDir, dirKeys)
   }
 
+  // Fallback: some older lectures were published as a bare .json file
   const jsonKey = `${prefix}.json`
   const lecture = await getJson<Lecture>(jsonKey)
   if (!lecture) return null
