@@ -88,13 +88,13 @@ function HomePage() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <ToolCard
-              to="/cognates/"
+              to="/cognates"
               title="Cognates"
               description="Discover shared vocabulary between Arabic and other languages. Build a larger mental lexicon faster by leveraging words you already know."
               badge=""
             />
             <ToolCard
-              to="/quizzes"
+              to="/challenges"
               title="Quizzes"
               description="Reinforce what you've learned with vocabulary drills, grammar exercises, and comprehension challenges drawn from course material."
               badge="Coming Soon"
@@ -146,7 +146,7 @@ function ToolCard({
   description,
   badge,
 }: {
-  to: '/cognates/' | '/quizzes'
+  to: '/cognates' | '/challenges'
   title: string
   description: string
   badge?: string

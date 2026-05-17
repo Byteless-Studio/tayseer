@@ -16,7 +16,7 @@ export const navItems = [
   { label: 'Home', to: '/' },
   { label: 'Arabic With Mufti Saim', to: '/arabic-with-mufti-saim' },
   { label: 'Cognates', to: '/cognates' },
-  { label: 'Quizzes', to: '/quizzes' },
+  { label: 'Quizzes', to: '/challenges' },
 ] as const
 
 export type NavItem = (typeof navItems)[number]
