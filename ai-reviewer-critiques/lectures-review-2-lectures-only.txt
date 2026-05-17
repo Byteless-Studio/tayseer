@@ -1,0 +1,295 @@
+===== 1776381595609_ =====
+
+**transcript**
+
+[Rule 3 — Garbled/Hallucinated Segment]
+[00:04:00–00:04:56] Contains garbled STT output including the string "first福 rood" (Chinese character 福 embedded in English text) — likely a hallucinated or mis-transcribed segment. Recreate transcript segment.
+
+[Rule 3 — Garbled/Hallucinated Segment]
+[00:21:00] "Seahawks of mutakallim" — nonsense phrase; "Seahawks" is clearly a mis-transcription of Arabic grammatical terminology ("sighat al-mutakallim"). Recreate transcript segment.
+
+[Rule 1 — Standalone Transliterations] (used throughout)
+First occurrence: [00:02:00] "masdar" appears without Arabic script. Must appear as مَصْدَر (masdar : verbal noun).
+Other standalone transliterations found throughout: mudhaf, mawsuf, sifah — each must be accompanied by Arabic script and meaning.
+
+[Rule 2 — Arabic Grammatical Terms Without Arabic Script] (used throughout)
+First occurrence: [00:05:00] "male" and "female" used without مُذَكَّر (mudhakkar) and مُؤَنَّث (mu'annath).
+Also found throughout: "singular" without مُفْرَد (mufrad), "plural" without جَمْع (jam').
+
+
+===== 1776729064447_ =====
+
+**transcript**
+
+[Rule 3 — Non-Arabic/Non-English Characters]
+[00:26:00] Cyrillic text "вопросы" appears in transcript — clear STT hallucination. Recreate transcript segment.
+
+[Rule 3 — Non-Arabic/Non-English Characters]
+[00:13:00] Korean characters "달라" appear in transcript — clear STT hallucination. Recreate transcript segment.
+
+[Rule 1 — Standalone Transliterations] (used throughout)
+First occurrence: [00:03:00] "ma'adud" appears without Arabic script. Must appear as مَعْدُود (ma'dūd : counted noun).
+Other standalone transliterations found throughout: aadat, sarf, nahwa, adad — each must be accompanied by Arabic script and meaning.
+
+[Rule 2 — Arabic Grammatical Terms Without Arabic Script] (used throughout)
+First occurrence: [00:04:00] "male or female" used without مُذَكَّر (mudhakkar) / مُؤَنَّث (mu'annath).
+Also found throughout: "singular" without مُفْرَد (mufrad), "plural" without جَمْع (jam'), "fatha" without فَتْحَة (fatḥah).
+
+
+===== 1776898624238_ =====
+
+**transcript**
+
+[Rule 3 — Garbled/Hallucinated Segment — SEVERE]
+[00:10:00–00:11:00] Heavily garbled multi-script hallucination containing Cyrillic ("всегда", "мотри"), mixed Korean/Latin script ("B기"), and nonsense character strings. This entire segment appears to be a complete STT hallucination. Recreate transcript segment.
+
+[Rule 1 — Standalone Transliterations] (used throughout)
+First occurrence: [00:02:00] "mudhaf" appears without Arabic script. Must appear as مُضَاف (muḍāf : annexing noun).
+Other standalone transliterations found throughout: mudafi, ghair munsarif, tanween — each must be accompanied by Arabic script and meaning.
+
+[Rule 2 — Arabic Grammatical Terms Without Arabic Script] (used throughout)
+First occurrence: [00:03:00] "male or female" used without مُذَكَّر (mudhakkar) / مُؤَنَّث (mu'annath).
+Also found throughout: "singular" without مُفْرَد (mufrad), "plural" without جَمْع (jam'), "tanween" without تَنْوِين (tanwīn).
+
+
+===== 1776898680547_ =====
+
+**transcript**
+
+[Rule 2 — Arabic Grammatical Terms Without Arabic Script] (used throughout)
+First occurrence: [00:01:00] "singular female" used without مُفْرَد (mufrad) / مُؤَنَّث (mu'annath).
+Also found throughout: "singular" without مُفْرَد (mufrad), "plural" without جَمْع (jam'), "male" without مُذَكَّر (mudhakkar).
+
+[Rule 1 — Standalone Transliterations] (used throughout)
+First occurrence: [00:03:00] "mudhaf" appears without Arabic script. Must appear as مُضَاف (muḍāf : annexing noun).
+Other standalone transliterations found throughout: sifah, mawsuf, la'alla, akhawat — each must be accompanied by Arabic script and meaning.
+
+
+===== 1776898698879_ =====
+
+**transcript**
+
+[Rule 3 — Non-Arabic/Non-English Characters]
+[00:13:00] Korean character "달라" appears in transcript — clear STT hallucination. Recreate transcript segment.
+
+[Rule 3 — Garbled/Hallucinated Segment]
+[00:13:00] Arabic-script sentence adjacent to Korean character appears garbled and likely hallucinated. Recreate transcript segment.
+
+[Rule 1 — Standalone Transliterations] (used throughout)
+First occurrence: [00:02:00] "adad" appears without Arabic script. Must appear as عَدَد (ʿadad : number/numeral).
+Other standalone transliterations found throughout: ma'adud, tamyeez/tamiz, ism al-tafdeel, ghair munsarif — each must be accompanied by Arabic script and meaning.
+
+[Rule 2 — Arabic Grammatical Terms Without Arabic Script] (used throughout)
+First occurrence: [00:02:00] "male or female" used without مُذَكَّر (mudhakkar) / مُؤَنَّث (mu'annath).
+Also found throughout: "singular" without مُفْرَد (mufrad), "fatha" without فَتْحَة (fatḥah).
+
+
+===== 1776898741932_ =====
+
+**transcript**
+
+[Rule 2 — Arabic Grammatical Terms Without Arabic Script] (used throughout)
+First occurrence: [00:01:00] "male" used without مُذَكَّر (mudhakkar).
+Also found throughout: "fatha" without فَتْحَة (fatḥah), "kasra" without كَسْرَة (kasrah), "dhamma" without ضَمَّة (ḍammah).
+
+[Rule 1 — Standalone Transliterations] (used throughout)
+First occurrence: [00:02:00] "mudhaf mudhaf ilayh" appears without Arabic script. Must appear as مُضَاف (muḍāf) and مُضَاف إِلَيْهِ (muḍāf ilayhi).
+Other standalone transliterations found throughout: sifah, musuf, ka'anna, ism al-tafdeel, dhamir muttasil — each must be accompanied by Arabic script and meaning.
+
+
+===== 1776898743008_ =====
+
+**transcript**
+
+[Rule 2 — Arabic Grammatical Terms Without Arabic Script]
+[00:07:00] "subject" and "predicate" used without مُبْتَدَأ (mubtada') and خَبَر (khabar). (used throughout)
+
+[Rule 1 — Standalone Transliterations]
+[00:08:00] "ma'rifah" and "nakirah" appear as standalone transliterations without Arabic script. Must appear as مَعْرِفَة (ma'rifah : definite) and نَكِرَة (nakirah : indefinite). (used throughout)
+
+[Rule 1 — Standalone Transliterations] (used throughout)
+First occurrence: [00:05:00] "mubtada" and "khabar" appear without Arabic script. Must appear as مُبْتَدَأ (mubtada' : subject) and خَبَر (khabar : predicate).
+Other standalone transliterations found throughout: harf al-jar, sifah, musuf, inna — each must be accompanied by Arabic script and meaning.
+
+
+===== 1776898752749_ =====
+
+**transcript**
+
+[Rule 1 — Standalone Transliterations] (used throughout)
+First occurrence: [00:02:00] "fa'il" appears without Arabic script. Must appear as فَاعِل (fā'il : doer/subject of verb).
+Also found throughout: "mafrool" without مَفْعُول (maf'ūl : object), "lazim" without لَازِم (lāzim : intransitive), "muta'di" without مُتَعَدِّي (muta'addī : transitive) — each must be accompanied by Arabic script and meaning.
+
+[Rule 2 — Arabic Grammatical Terms Without Arabic Script] (used throughout)
+First occurrence: [00:03:00] "dhamma" used without ضَمَّة (ḍammah).
+Also found throughout: "fatha" without فَتْحَة (fatḥah).
+
+[Rule 3 — Garbled/Hallucinated Segments]
+[00:07:00–00:08:00] Garbled/incoherent passage — STT artifact. Recreate transcript segment.
+[00:17:00–00:19:00] Additional garbled passage with incoherent word strings. Recreate transcript segment.
+
+
+===== 1776898766167_ =====
+
+**transcript**
+
+[Rule 3 — Inappropriate Language]
+[00:03:00–00:04:00] Phrase "Go home and fuck safe" appears in transcript — clearly a transcription artifact producing profanity. Flag for human review and correction.
+
+[Rule 3 — Non-Arabic/Non-English Characters / Garbled Segment]
+[00:04:00] Korean characters and garbled content appear — STT hallucination. Recreate transcript segment.
+
+[Rule 2 — Arabic Grammatical Terms Without Arabic Script]
+[00:07:00] "subject" and "predicate" used without مُبْتَدَأ (mubtada') and خَبَر (khabar). (used throughout)
+
+[Rule 1 — Standalone Transliterations]
+[00:08:00] "ma'rifah" and "nakirah" appear as standalone transliterations without Arabic script. Must appear as مَعْرِفَة (ma'rifah : definite) and نَكِرَة (nakirah : indefinite). (used throughout)
+
+[Rule 1 — Standalone Transliterations] (used throughout)
+First occurrence: [00:05:00] "mubtada" and "khabar" appear without Arabic script.
+Other standalone transliterations found throughout: harf al-jar, sifah, musuf — each must be accompanied by Arabic script and meaning.
+
+
+===== 1776898772583_ =====
+
+**transcript**
+
+[Rule 2 — Arabic Grammatical Terms Without Arabic Script] (used throughout)
+First occurrence: [00:01:00] "fatha" used without فَتْحَة (fatḥah).
+Also found throughout: "kasra" without كَسْرَة (kasrah), "dhamma" without ضَمَّة (ḍammah).
+
+[Rule 1 — Standalone Transliterations] (used throughout)
+First occurrence: [00:02:00] "mubtada" and "khabar" appear without Arabic script. Must appear as مُبْتَدَأ (mubtada' : subject) and خَبَر (khabar : predicate).
+Other standalone transliterations found throughout: sighat al-malbi, sighat al-mudarit, sighat al-amar, naqis — each must be accompanied by Arabic script and meaning.
+
+
+===== 1776898823789_ =====
+
+**transcript**
+
+[Rule 1 — Standalone Transliterations] (used throughout)
+First occurrence: [00:01:00] "ma nafi" appears without Arabic script. Must appear as مَا النَّافِيَة (mā al-nāfiyah : negating mā).
+Other standalone transliterations found throughout: verb-form transliterations (e.g., sighat al-madi, sighat al-mudarri', sighat al-amr) — each must be accompanied by Arabic script and meaning.
+
+[Rule 2 — Arabic Grammatical Terms Without Arabic Script] (used throughout)
+First occurrence: [00:02:00] "singular" and "plural" used without مُفْرَد (mufrad) and جَمْع (jam').
+Also found throughout: "male" / "female" without مُذَكَّر (mudhakkar) / مُؤَنَّث (mu'annath).
+
+
+===== 1776898824288_ =====
+
+**transcript**
+
+[Rule 1 — Standalone Transliterations] (used throughout)
+First occurrence: [00:02:00] "fa'il" appears without Arabic script. Must appear as فَاعِل (fā'il : doer/subject of verb).
+Also found throughout: "mafrool bihi" without مَفْعُول بِهِ (maf'ūl bihi : direct object), "sighat al-amr" without صِيغَة الأَمْر, "la adri" without لَا أَدْرِي — each must be accompanied by Arabic script and meaning.
+
+[Rule 2 — Arabic Grammatical Terms Without Arabic Script] (used throughout)
+First occurrence: [00:03:00] "dhamma" used without ضَمَّة (ḍammah).
+Also found throughout: "fatha" without فَتْحَة (fatḥah).
+
+[Rule 3 — Garbled Segment]
+[00:41:00] "Yes. And till I say taw profu', it's hard to say weird." — incoherent sentence, appears to be a STT artifact. Recreate transcript segment.
+
+
+===== 1776898893722_ =====
+
+**transcript**
+
+[Rule 2 — Arabic Grammatical Terms Without Arabic Script] (used throughout)
+First occurrence: [00:00:03] "male" and "female" used without مُذَكَّر (mudhakkar) and مُؤَنَّث (mu'annath).
+Also found throughout: "tanween" without تَنْوِين (tanwīn), "dhamma" without ضَمَّة (ḍammah), "fatha" without فَتْحَة (fatḥah).
+
+[Rule 1 — Standalone Transliterations] (used throughout)
+First occurrence: [00:01:00] "fa'al" and "fa'il" appear without Arabic script. Must appear as فَعَل (fa'ala : verb pattern) and فَاعِل (fā'il : doer).
+Also found throughout: "mafrool" without مَفْعُول (maf'ūl : object) — each must be accompanied by Arabic script and meaning.
+
+
+===== 1776898898933_ =====
+
+**transcript**
+
+[Rule 3 — Inappropriate Language]
+[00:23:00–00:24:00] Phrase "What the fuck are you asking?" appears in transcript — transcription artifact producing profanity. Flag for human review and correction.
+
+[Rule 1 — Standalone Transliterations] (used throughout)
+First occurrence: [00:02:00] "mubtada" and "khabar" appear without Arabic script. Must appear as مُبْتَدَأ (mubtada' : subject) and خَبَر (khabar : predicate).
+Other standalone transliterations found throughout: nakira, ma'rifah, harf al-jar, sifah, musuf, laysa forms — each must be accompanied by Arabic script and meaning.
+
+[Rule 2 — Arabic Grammatical Terms Without Arabic Script] (used throughout)
+First occurrence: [00:03:00] "definite" and "indefinite" used without مَعْرِفَة (ma'rifah) and نَكِرَة (nakirah).
+Also found throughout: "subject"/"predicate" without مُبْتَدَأ/خَبَر.
+
+
+===== 1776898916225_ =====
+
+**transcript**
+
+[Rule 3 — Garbled/Hallucinated Segment]
+[00:56:00–00:57:00] Garbled multi-script segment with mixed non-Arabic characters and nonsense strings — likely STT hallucination. Recreate transcript segment.
+
+[Rule 2 — Arabic Grammatical Terms Without Arabic Script] (used throughout — pervasive)
+First occurrence: [00:01:00] "fatha" used without فَتْحَة (fatḥah).
+Also found throughout: "kasra" without كَسْرَة (kasrah), "dhamma" without ضَمَّة (ḍammah), "subject"/"predicate" without مُبْتَدَأ/خَبَر, "definite"/"indefinite" without مَعْرِفَة/نَكِرَة.
+
+[Rule 1 — Standalone Transliterations] (used throughout — pervasive)
+First occurrence: [00:02:00] "mubtada" and "khabar" appear without Arabic script.
+Other standalone transliterations found throughout: nakira, ma'rifah, fa'il, mafrool, sarf, nahw, ism al-fa'il — each must be accompanied by Arabic script and meaning.
+
+
+===== 1777597039500_AUDIO-2026-04-29-20-59-04 =====
+
+**transcript**
+
+[Rule 1 — Standalone Transliterations] (used throughout)
+First occurrence: [00:01:00] "fa'al" appears without Arabic script. Must appear as فَعَل (fa'ala : verb pattern).
+Other standalone transliterations found throughout: mafrool, dameer mustatir, dameer al-bariz — each must be accompanied by Arabic script and meaning.
+
+[Rule 2 — Arabic Grammatical Terms Without Arabic Script] (used throughout)
+First occurrence: [00:02:00] "dhamma" used without ضَمَّة (ḍammah).
+Also found throughout: "fatha" without فَتْحَة (fatḥah).
+
+
+===== 1777597044285_AUDIO-2026-04-22-20-48-17 =====
+
+**transcript**
+
+[Rule 1 — Standalone Transliterations] (used throughout)
+First occurrence: [00:02:00] "mudhaf" and "mudaf ilayh" appear without Arabic script. Must appear as مُضَاف (muḍāf : annexing noun) and مُضَاف إِلَيْهِ (muḍāf ilayhi : annexed-to noun).
+Other standalone transliterations found throughout: nakira, ma'rifah, mousuf, sifa, ghair munsarif — each must be accompanied by Arabic script and meaning.
+
+[Rule 2 — Arabic Grammatical Terms Without Arabic Script] (used throughout)
+First occurrence: [00:03:00] "kasra" used without كَسْرَة (kasrah).
+Also found throughout: "definite"/"indefinite" without مَعْرِفَة (ma'rifah) / نَكِرَة (nakirah).
+
+
+===== 1777597139953_AUDIO-2026-01-12-21-16-12 =====
+
+**transcript**
+
+[Rule 2 — Arabic Grammatical Terms Without Arabic Script] (used throughout)
+First occurrence: [00:07:00] "subject" and "predicate" used without مُبْتَدَأ (mubtada') and خَبَر (khabar). Transcript uses both the English terms ("subject", "predicate") and the transliterations ("Mubtada", "Khabr") without Arabic script — both forms violate Rule 2.
+Also found throughout: "female, singular" without مُؤَنَّث (mu'annath) / مُفْرَد (mufrad) at [00:06:00–00:07:00]; "Ma'rifah" and "Nakira" as standalone transliterations at [00:08:00–00:09:00] without مَعْرِفَة / نَكِرَة.
+
+[Rule 1 — Standalone Transliterations] (used throughout)
+First occurrence: [00:08:00] "Mubtada" and "Khabr" appear as standalone transliterations without Arabic script. Must appear as مُبْتَدَأ (mubtada' : subject) and خَبَر (khabar : predicate).
+Also found throughout: "mudaf lay", "musuf sifa", "Mosuf Sifa", "harf al-jar", "harf al-Jar al-Dharf", "jar and majroor" — each must be accompanied by Arabic script and meaning.
+
+[Rule 3 — Oddity]
+[00:35:00] "Mosuf Sifa" — inconsistent transliteration of مَوْصُوف صِفَة; uses non-standard spelling "Mosuf" instead of "mawsuf". Flag as inconsistent transliteration.
+
+
+===== 1777597148065_AUDIO-2026-03-25-20-29-00 =====
+
+**transcript**
+
+[Rule 1 — Standalone Transliterations] (used throughout)
+First occurrence: [00:00:01] "fa'ala", "fa'ila", "fa'ula" appear as standalone transliterations of verb patterns without Arabic script. Must appear as فَعَلَ (fa'ala), فَعِلَ (fa'ila), فَعُلَ (fa'ula).
+Other standalone transliterations found throughout: fa'il, mafrool, maf'ool, maf'ool bihi, maf'ool fihi, maf'ool maahu, maf'ool di ajrihi, li anna — each must be accompanied by Arabic script and meaning.
+
+[Rule 2 — Arabic Grammatical Terms Without Arabic Script] (used throughout)
+First occurrence: [00:03:00] "object" used for مَفْعُول (maf'ūl) without Arabic term and script alongside it.
+Also found throughout: "doer" for فَاعِل (fā'il) without Arabic script; "fatha" without فَتْحَة (fatḥah); "dhamma"/"pejh" without ضَمَّة (ḍammah); "singular female" without مُفْرَد مُؤَنَّث.
+
+[Rule 3 — Oddity]
+[00:37:00] "if you ask in a rapist, you would say..." — clear STT artifact producing highly inappropriate word. The intended word is likely "aqru" or a form related to Quran recitation. Flag for immediate human review and correction.

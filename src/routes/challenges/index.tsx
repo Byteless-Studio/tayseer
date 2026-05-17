@@ -1,5 +1,4 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
-import { Badge } from '#/components/ui/badge'
 import { Button } from '#/components/ui/button'
 
 export const Route = createFileRoute('/challenges/')({
@@ -10,9 +9,12 @@ export const Route = createFileRoute('/challenges/')({
 function QuizzesPage() {
   return (
     <main className="flex-1 flex flex-col items-center justify-center px-6 py-20 text-center">
-      <Badge className="mb-6 bg-brand/10 text-brand-hover border-brand/20 hover:bg-brand/10">
-        Coming Soon
-      </Badge>
+      <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-amber-100 border border-amber-300 px-4 py-1.5 dark:bg-amber-950 dark:border-amber-700">
+        <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
+        <span className="text-sm font-semibold tracking-wide text-amber-700 uppercase dark:text-amber-400">
+          Coming Soon
+        </span>
+      </div>
       <h1 className="font-serif tracking-[-0.02em] text-4xl font-bold text-foreground mb-4">
         Quizzes
       </h1>

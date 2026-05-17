@@ -1,0 +1,1650 @@
+================================================================================
+Review: 1777504773255_Class_10_9_2024
+Title: Introduction to Ism Al-Ishara (Hadha) and Basic Questions
+================================================================================
+
+**title**
+- "Ism Al-Ishara" — standalone transliteration; replace with اِسْمُ الْإِشَارَةِ (ism al-ishāra : demonstrative nouns)
+- "Hadha" — standalone transliteration; replace with هَٰذَا (hādhā : this)
+
+**summary**
+- "هٰذَا (hadha)" — missing English meaning; replace with هٰذَا (hādhā : this)
+- "ism al-ishara" — standalone transliteration without Arabic script; replace with اِسْمُ الْإِشَارَةِ (ism al-ishāra : demonstrative nouns)
+- "singular, masculine nouns" — plain English grammatical terms; replace with مُفْرَد (mufrad : singular), مُذَكَّر (mudhakkar : masculine)
+- "اَل (al-)" — factual error: the teacher is teaching the interrogative hamza أَ (hamzat al-istifhām : interrogative particle), not the definite article اَل; replace "اَل (al-)" with أَ (hamzat al-istifhām : interrogative particle)
+
+**key_points**
+- (item 1) "Hadha (هٰذَا)" — transliteration precedes Arabic; reformat to Arabic-first: هٰذَا (hādhā : this)
+- (item 1) "singular, masculine" — replace with مُفْرَد (mufrad : singular), مُذَكَّر (mudhakkar : masculine)
+- (item 2) "Ism al-ishara" — standalone transliteration; replace with اِسْمُ الْإِشَارَةِ (ism al-ishāra : demonstrative nouns)
+- (item 2) "hadha" — standalone transliteration mid-sentence; replace with هَٰذَا (hādhā)
+- (item 3) "اَل (al-) turns statements into yes/no questions" — factual error: this is the definite article, not the interrogative particle; replace with أَ (hamzat al-istifhām : interrogative particle)
+- (item 4) Parenthetical format uses " - " as separator: "(ma hadha - what is this?)" and "(ahadha sarirun - is this a bed?)"; skill format requires " : " — replace " - " with " : "
+- (item 5) "baytun, masjidun" — standalone transliterations; replace with بَيْتٌ (baytun : house), مَسْجِدٌ (masjidun : mosque)
+- (item 5) "gender" — plain English grammatical term; replace with جِنْس (jins : gender)
+
+**questions**
+- (item 1) "ma and a" in question text — standalone transliterations; replace with ما (mā : what) and أَ (hamzat al-istifhām : interrogative particle)
+- (item 1) "Ma asks 'what'" and "a turns statements" in answer — same pattern; replace with ما (mā : what) and أَ (hamzat al-istifhām : interrogative particle)
+- (item 2) "(ahadha sarirun)" — standalone transliteration; replace with أَهٰذَا سَرِيرٌ (ahadha sarirun : is this a bed?)
+- (item 2) "La, hadha kursiyun" — standalone transliterations; replace with لَا (lā : no), هٰذَا كُرْسِيٌّ (hādhā kursiyyun : this is a chair)
+
+**quiz**
+- (Q5 question) "Hamza (أَ)" — transliteration precedes Arabic; reformat to Arabic-first: أَ (hamzat al-istifhām : interrogative particle)
+- (Q5 answer) "Hamzatul Istifhām" — standalone transliteration; replace with هَمْزَةُ الِاسْتِفْهَامِ (hamzat al-istifhām : interrogative hamza)
+- (Q7 option 3) "grammar (Naḥw)" — transliteration follows English; reformat to نَحْو (naḥw : Arabic grammar)
+- (Q7 option 2) "Tajweed" — standalone transliteration; replace with تَجْوِيد (tajwīd : recitation rules)
+
+**quran_examples**
+- (item 1 note) "masculine singular" — plain English grammatical terms; replace with مُذَكَّر (mudhakkar : masculine) and مُفْرَد (mufrad : singular)
+- (item 3 note) "interrogative (asmāʾu al-istifhām)" — English precedes Arabic; reformat to أَسْمَاء الِاسْتِفْهَامِ (asmāʾu al-istifhām : interrogative particles)
+
+**transcript**
+- [00:01:00–00:02:00]: "there's a fair" — likely transcription error for فِعْل (fi'l : verb); verify and correct
+- [00:01:00–00:02:00]: "muqtada, it's a khabar" and "jumlah ismiyah" — standalone transliterations throughout; first-occurrence pattern: replace with مُبْتَدَأ (mubtadaʾ : subject), خَبَر (khabar : predicate), جُمْلَة اِسْمِيَّة (jumlah ismiyyah : nominal sentence)
+- [00:03:00–00:04:00]: "male or female" / "male" / "female" — pattern used throughout; replace first occurrence with مُذَكَّر (mudhakkar : masculine) / مُؤَنَّث (mu'annath : feminine); note pattern continues
+- [00:05:00–00:06:00]: "singular" used throughout — pattern; replace first occurrence with مُفْرَد (mufrad : singular); note pattern continues
+- [00:04:00–00:05:00]: "ism al-ishara" — standalone transliteration; replace with اِسْمُ الْإِشَارَةِ (ism al-ishāra : demonstrative nouns)
+- [00:13:00–00:14:00]: "ism al-istifham", "asma al-istifham" — standalone transliterations; replace with أَسْمَاء الِاسْتِفْهَامِ (asmāʾu al-istifhām : interrogative particles)
+- [00:18:00–00:19:00]: "Hamzatul Istifham" — standalone transliteration; replace with هَمْزَةُ الِاسْتِفْهَامِ (hamzat al-istifhām : interrogative hamza)
+
+--- PHASE 2 — PROPOSED CHANGES ---
+
+```json
+{
+  "title": "Introduction to اِسْمُ الْإِشَارَةِ (ism al-ishāra) and هَٰذَا (hādhā)",
+  "summary": "This session introduces the Arabic demonstrative particle هٰذَا (hādhā : this) as part of اِسْمُ الْإِشَارَةِ (ism al-ishāra : demonstrative nouns), focusing on its usage for مُفْرَد (mufrad : singular), مُذَكَّر (mudhakkar : masculine) nouns that are close. The teacher also covers basic question structures with ما (mā : what) and أَ (hamzat al-istifhām : interrogative particle) to ask about objects and confirmations, respectively. Students learn vocabulary through repetition and memorization.",
+  "key_points": [
+    "هٰذَا (hādhā : this) indicates a مُفْرَد (mufrad : singular), مُذَكَّر (mudhakkar : masculine) noun that is close: e.g., هذا بيت (hādhā baytun : this is a house).",
+    "اِسْمُ الْإِشَارَةِ (ism al-ishāra : demonstrative nouns) refers to demonstrative nouns like هَٰذَا (hādhā) used for pointing.",
+    "Question words: ما (mā : what) asks 'what?' for objects without intellect; أَ (hamzat al-istifhām : interrogative particle) turns statements into yes/no questions:",
+    "Examples include مَا هٰذَا (mā hādhā : what is this?) and أَهٰذَا سَرِيرٌ (ahadha sarirun : is this a bed?).",
+    "Vocabulary memorization is critical: بَيْتٌ (baytun : house), مَسْجِدٌ (masjidun : mosque), etc., with their جِنْس (jins : gender) noted."
+  ],
+  "questions": [
+    "[00:15:00] Q: What's the difference between ما (mā : what) and أَ (hamzat al-istifhām : interrogative particle) for questions? — A: ما (mā : what) asks 'what' about non-intelligent things; أَ (hamzat al-istifhām : interrogative particle) turns statements into yes/no questions.",
+    "[00:21:00] Q: Is this a bed? أَهٰذَا سَرِيرٌ (ahadha sarirun : is this a bed?) — A: لَا (lā : no), هٰذَا كُرْسِيٌّ (hādhā kursiyyun : this is a chair). (No, it's a chair.)"
+  ]
+}
+```
+
+================================================================================
+Review: 1777504773056_Class_04_07_2025
+Title: Arabic Pronouns and Their Attached Forms: Huwa, Hiya, ka, and ya
+================================================================================
+
+**title**
+- "Huwa, Hiya, ka, and ya" — standalone transliterations; replace with هُوَ (huwa : he/it), هِيَ (hiya : she/it), ـكَ (ka : your), ـي (yā : my)
+
+**summary**
+- "ka (your)" — transliteration precedes Arabic; replace with ـكَ (ka : your)
+- "ya (my)" — transliteration precedes Arabic; replace with ـي (yā : my)
+
+**key_points**
+- (item 1) "ה֑וא - huwa" and "ה֓י - hiya" — Hebrew script used instead of Arabic; replace with هُوَ (huwa : he/it) and هِيَ (hiya : she/it)
+- (item 2) "כְ (ka/your)" — Hebrew letter כ used instead of Arabic ـكَ; also "عناك (ismuka = your name)" — "عناك" is garbled/hallucinated; correct Arabic is اِسْمُكَ (ismuka : your name); replace entire item
+- (item 3) "יְ (ya/my)" — Hebrew letter י used instead of Arabic ـي; "عنوا (کنی - yameen = my right hand)" — garbled/hallucinated; correct form is يَمِينِي (yamīnī : my right hand); replace entire item
+
+**questions**
+- Empty array — no student Q&A was captured; review transcript for extractable questions
+
+**tags**
+- "ه֑ت (ڪذ)" — non-Arabic Unicode artifacts; remove or replace with valid tag
+- "صڑۊیا (ړک)" — Urdu/Pashto characters mixed in; not a valid Arabic tag; remove or replace
+
+**quiz**
+- (Q5 answer) "Iʿrāb" — standalone transliteration; replace with إِعْرَاب (iʿrāb : case ending)
+- (Q5 answer) "ḥaraka" — standalone transliteration; replace with حَرَكَة (ḥarakah : vowel mark)
+- (Q5 answer) "singular, dual, or plural" — plain English grammatical terms; replace with مُفْرَد (mufrad : singular), مُثَنَّى (muthannā : dual), جَمْع (jam' : plural)
+- (Q5 answer) "masculine or feminine" — plain English; replace with مُذَكَّر (mudhakkar : masculine), مُؤَنَّث (mu'annath : feminine)
+- (Q10 answer) "tanwīn" — standalone transliteration; replace with تَنْوِين (tanwīn : nunation)
+- (Q10 answer) "ḍamma" — standalone transliteration; replace with ضَمَّة (ḍammah : short u-vowel)
+
+**quran_examples**
+- (item 1 note) "Ẓarf مَعَ" — "Ẓarf" precedes Arabic; reformat to ظَرْف (ẓarf : adverb of time/place) مَعَ (maʿa : with)
+- (item 7 note) "ḥarf al-jarr" — standalone transliteration; replace with حَرْف الجَرّ (ḥarf al-jarr : preposition)
+
+**transcript**
+- [00:10:00–00:11:00]: "Huwa means masjid" — factual error; هُوَ (huwa) does not mean مَسْجِد (masjid); it is used to refer to masculine nouns. Correct to "هُوَ (huwa) is used to refer to masculine nouns like مَسْجِد (masjid)"
+- [00:11:00–00:12:00]: "ism taadibi hamza" — garbled/incoherent transcription; recreate transcript segment
+- [00:10:00–00:11:00]: "anda" used throughout — pattern: standalone transliterations; replace first occurrence with أَنْتَ (anta : you [m.]); note pattern continues
+- [00:10:00–00:11:00]: "male/female" used throughout — pattern; replace first occurrence with مُذَكَّر (mudhakkar : masculine) / مُؤَنَّث (mu'annath : feminine); note pattern continues
+
+--- PHASE 2 — PROPOSED CHANGES ---
+
+```json
+{
+  "title": "Arabic Pronouns and Their Attached Forms: هُوَ (huwa), هِيَ (hiya), ـكَ (ka), and ـي (yā)",
+  "summary": "This session teaches detached and attached pronouns in Modern Standard Arabic, focusing on their usage to replace repeated nouns. The teacher explains how attached pronouns like ـكَ (ka : your) and ـي (yā : my) modify nouns, emphasizing examples and avoiding overcomplication with advanced grammar.",
+  "key_points": [
+    "Arabic uses both detached (e.g., هُوَ (huwa : he/it), هِيَ (hiya : she/it)) and attached pronouns.",
+    "ـكَ (ka : your) attaches to nouns for possession: e.g., اِسْمُكَ (ismuka : your name).",
+    "ـي (yā : my) modifies nouns: e.g., يَمِينِي (yamīnī : my right hand).",
+    "Attached pronouns indicate possession without repeating the noun, similar to English 'my', 'your'."
+  ],
+  "questions": []
+}
+```
+
+================================================================================
+Review: 1777504773184_Class_04_14_2025
+Title: Lesson on Possessive Pronouns and Interrogative Structures in Arabic
+================================================================================
+
+**title**
+- No standalone transliterations; no changes needed.
+
+**summary**
+- "'li'" — standalone transliteration; replace with لِ (li : for/belonging to)
+- "'ando'" — standalone transliteration and likely typo for عِنْدَ; replace with عِنْدَ (ʿinda : possession/proximity particle)
+
+**key_points**
+- (item 1) "alaka akhun" — standalone transliteration; replace with أَلَكَ (a-laka) … أَلَكَ أَخٌ (a-laka akhun : do you have a brother?)
+- (item 2) "li-" → لِي (lī : I have / for me); "naam, akhun" — standalone transliterations; replace with نَعَم (naʿam : yes), أَخٌ (akhun : brother)
+- (item 3) "abi" and "ummi" — standalone transliterations; replace with أَبِي (abī : my father) and أُمِّي (ummī : my mother); "male and female relatives" → مُذَكَّر (mudhakkar : masculine) and مُؤَنَّث (mu'annath : feminine)
+- (item 4) "ma'a" and "ando/indo" — standalone transliterations; replace with مَعَ (maʿa : with) and عِنْدَ (ʿinda : at/near); also "'afruud ma'aka' ('The prisoner is with you')" — factual translation error: "afruud" does not mean "prisoner"; this is likely a garbled example phrase; replace with مَعَكَ (maʿaka : with you)
+- (item 5) "-atun" and "Hamzatun, Talhatun" — standalone transliterations; replace with تَاء المَرْبُوطَة (tāʾ marbūṭa), حَمْزَةُ (Hamzatu), طَلْحَةُ (Ṭalḥatu); "tanwīn" → تَنْوِين (tanwīn : nunation)
+
+**questions**
+- (item 1) "Aina abooka?" — standalone transliteration; replace with أَيْنَ أَبُوكَ؟ (Ayna abūka : Where is your father?)
+- (item 2) "akhun" and "akhi" — standalone transliterations; replace with أَخٌ (akhun : brother) and أَخِي (akhī : my brother)
+
+**tags**
+- "Nahw" — standalone transliteration; replace with نَحْو (Naḥw : Arabic grammar)
+
+**quiz**
+- (Q4 options and answer) "ʿAmmun" and "khālun" — standalone transliterations; add Arabic-first: عَمٌّ (ʿammun : paternal uncle) and خَالٌ (khālun : maternal uncle)
+
+**quran_examples**
+- Generally well-formatted with Arabic-first; no significant issues.
+
+**transcript**
+- [00:00:00]: "Bismillah ar-Rahman ar-Rahim" — pattern: standalone transliterations throughout; flag first occurrence only
+- Pattern: "alaka, akhi, akhun, abi, ummi, li" used throughout as standalone transliterations — flag first occurrence [00:01:00]
+- [00:13:00]: "male/female" used throughout — replace first occurrence with مُذَكَّر (mudhakkar : masculine) / مُؤَنَّث (mu'annath : feminine); note pattern continues
+
+--- PHASE 2 — PROPOSED CHANGES ---
+
+```json
+{
+  "title": "Lesson on Possessive Pronouns and Interrogative Structures in Arabic",
+  "summary": "This lesson focuses on interrogative structures and possessive pronouns in Modern Standard Arabic, emphasizing correct usage through examples involving family members, objects, and daily conversations. The teacher explains when to use لِ (li : for/belonging to), عِنْدَ (ʿinda : possession/proximity particle), and other particles for possession, as well as translating questions like 'Do you have...?' and their answers.",
+  "key_points": [
+    "Interrogative structure for asking about possessions: Use أَلَكَ (a-laka) followed by the noun (e.g., أَلَكَ أَخٌ (a-laka akhun : do you have a brother?))",
+    "Response to possession questions uses لِي (lī : I have / for me) or personal pronouns: نَعَم (naʿam : yes), أَخٌ (akhun : brother) ('Yes, I have a brother.')",
+    "Differentiating between مُذَكَّر (mudhakkar : masculine) and مُؤَنَّث (mu'annath : feminine) relatives using correct possessive suffixes (e.g., أَبِي (abī : my father) vs. أُمِّي (ummī : my mother))",
+    "Usage of مَعَ (maʿa : with) to indicate accompaniment vs. عِنْدَ (ʿinda : at/near) for location: e.g., مَعَكَ (maʿaka : with you)",
+    "Gender-specific names ending in تَاء المَرْبُوطَة (tāʾ marbūṭa) (e.g., حَمْزَةُ (Hamzatu), طَلْحَةُ (Ṭalḥatu)) do not take تَنْوِين (tanwīn : nunation)"
+  ],
+  "questions": [
+    "[00:02:00] Q: How to ask about someone's father — A: Use أَيْنَ أَبُوكَ؟ (Ayna abūka : Where is your father?)",
+    "[00:05:49] Q: Difference between أَخٌ (akhun : brother) and أَخِي (akhī : my brother) — A: أَخٌ (akhun) is 'brother', while أَخِي (akhī) means 'my brother.'"
+  ]
+}
+```
+
+================================================================================
+Review: 1777504773283_Class_04_16_2025
+Title: Pronouns and Present Tense in the Qur'an: Examples from Surahs and Grammar Rules
+================================================================================
+
+**title**
+- No standalone transliterations; no changes needed.
+
+**summary**
+- "dama'ir" — standalone transliteration; replace with الضَّمَائِر (ḍamāʾir : pronouns)
+- "gender" — plain English grammatical term; replace with جِنْس (jins : gender)
+- "'uhibbu'" — standalone transliteration; replace with أُحِبُّ (uḥibbu : I love)
+- "fatha" — standalone transliteration; replace with فَتْحَة (fatḥah : short a-vowel)
+
+**key_points**
+- (item 1) "Pronouns (الضمائر)" — English precedes Arabic; reformat to الضَّمَائِر (ḍamāʾir : pronouns) first; also "feminine" → مُؤَنَّث (mu'annath : feminine), "masculine" → مُذَكَّر (mudhakkar : masculine); "'ha'" → هَا (hā), "'u'" → هُ (hu)
+- (item 2) "لها (laha)" — Arabic first but parenthetical missing English meaning; should be لَهَا (lahā : for her/it [fem.])
+- (item 3) "مفوعل به" — garbled Arabic for مَفْعُولٌ بِهِ (mafʿūlun bihi : direct object); also "fatha" → فَتْحَة (fatḥah : short a-vowel); "'uhibbu'allah'" — reformat as أُحِبُّ الله (uḥibbu Allāha)
+- (item 4) "fatha" → فَتْحَة (fatḥah : short a-vowel); "subjects" → فَاعِل (fāʿil : doer/subject)
+
+**questions**
+- (item 1) "'alayka'" — standalone transliteration; replace with عَلَيْكَ (ʿalayka : upon you); "'ala'" → عَلَى (ʿalā : upon); "(الon you)" — garbled; replace with (عَلَيْكَ : upon you); "masculine" → مُذَكَّر (mudhakkar : masculine)
+- (item 2) "'feeha'" → فِيهَا (fīhā : in it [fem.]); "'fee'" → فِي (fī : in); "feminine" → مُؤَنَّث (mu'annath : feminine); "'hadeeqah' (garden)" → حَدِيقَة (ḥadīqah : garden); "'ha'" → هَا (hā)
+
+**quiz**
+- (Q6 answer) "ظرف (adverb)" — missing full diacritics; should be ظَرْف (ẓarf : adverb of time/place)
+
+**quran_examples**
+- (item 3 note) "Maf'ool bihi" — standalone transliteration; replace with مَفْعُولٌ بِهِ (mafʿūlun bihi : direct object)
+- (item 5 note) "'mā' being used for negation" — standalone transliteration; replace with مَا (mā) for negation
+
+**transcript**
+- [00:00:00]: "Amma ba'al" — standalone transliteration for أَمَّا بَعْدُ (ammā baʿd : to proceed); note pattern throughout
+- [00:37:00]: "Farah al-Mawli" — garbled transcription, likely for فِعْل الماضِي (fi'l al-māḍī : past tense verb); replace
+- [00:52:00–00:52:34]: Garbled/incoherent final segment — recreate transcript segment
+- Pattern: standalone transliterations (alayka, tawakkalna, zawjiha, uhibbu, etc.) throughout — flag first occurrence [00:01:00]
+
+--- PHASE 2 — PROPOSED CHANGES ---
+
+```json
+{
+  "title": "Pronouns and Present Tense in the Qur'an: Examples from Surahs and Grammar Rules",
+  "summary": "The session focused on understanding Arabic pronouns الضَّمَائِر (ḍamāʾir : pronouns) through examples from the Qur'an, emphasizing how they connect to different nouns based on جِنْس (jins : gender). The teacher also introduced present tense verbs like أُحِبُّ (uḥibbu : I love), highlighting how objects receive فَتْحَة (fatḥah : short a-vowel) cases. Students reviewed grammar rules and applied them to translations of Qur'anic verses.",
+  "key_points": [
+    "الضَّمَائِر (ḍamāʾir : pronouns) must agree in جِنْس (jins : gender) with the noun they refer to, e.g., مُؤَنَّث (mu'annath : feminine) nouns use هَا (hā) while مُذَكَّر (mudhakkar : masculine) use هُ (hu).",
+    "Examples from the Qur'an such as لَهَا (lahā : for her/it [fem.]) referring back to مُؤَنَّث (mu'annath : feminine) nouns like نَفْس (nafs : soul).",
+    "Present tense verbs introduce the مَفْعُولٌ بِهِ (mafʿūlun bihi : direct object) with a فَتْحَة (fatḥah : short a-vowel) case, e.g., أُحِبُّ الله (uḥibbu Allāha : I love Allah).",
+    "Objects in sentences receive a فَتْحَة (fatḥah : short a-vowel), while the فَاعِل (fāʿil : doer/subject) retains its natural cases based on verb context."
+  ],
+  "questions": [
+    "[00:02:34] Q: How does the pronoun عَلَيْكَ (ʿalayka : upon you) connect to the noun? — A: When عَلَى (ʿalā : upon) takes the attached pronoun ـكَ (ka : you), it becomes عَلَيْكَ (ʿalayka : upon you) for مُذَكَّر (mudhakkar : masculine) reference.",
+    "[00:19:09] Q: Why is it فِيهَا (fīhā : in it [fem.]) instead of فِي (fī : in)? — A: The pronoun refers back to the مُؤَنَّث (mu'annath : feminine) noun حَدِيقَة (ḥadīqah : garden), requiring هَا (hā)."
+  ]
+}
+```
+
+================================================================================
+FILE: 1777504773366_Class_02_24_2025
+TITLE: Understanding Relative Clauses with 'al-ladhi' and Descriptions in Arabic
+================================================================================
+
+PHASE 1 — ISSUES FOUND
+
+[title]
+- "al-ladhi" is a standalone transliteration without Arabic script — Rule 1. Should be اَلَّذِي (alladhī : who/that).
+
+[summary]
+- "al-ladhi" standalone transliteration — Rule 1.
+
+[key_points]
+- key_points[0]: Contains Hebrew characters ד and ו mixed into Arabic text ("מَنِ الْوَלְדُ") — Rule 3 flag: Hebrew script must not appear in Arabic content.
+- key_points[0]: "allati" standalone transliteration without Arabic — Rule 1.
+- key_points[2]: "'zahaba'", "'zahabat'", "'zahabu'" are standalone transliterations without Arabic script — Rule 1.
+- key_points[3]: "tata'i al-sakin" standalone transliteration — Rule 1. Should be اِلْتِقَاءُ السَّاكِنَيْنِ (iltiqāʾ al-sākinayn : meeting of two sukūns).
+
+[questions]
+- questions[0]: "alladhi" standalone transliteration — Rule 1.
+- questions[1]: "Hamzat al-Wasl" standalone transliteration — Rule 1. Should be حَمْزَةُ الْوَصْل (hamzat al-waṣl : connecting hamza).
+
+[tags]
+- "Iʿrab" standalone transliteration — Rule 1. Should be إِعْرَاب (iʿrāb : grammatical inflection).
+
+[transcript]
+- "male" used for مُذَكَّر — Rule 2 (first occurrence at segment 3: "they're both male").
+- "mausuf and sifa" standalone transliterations — Rule 1 (first occurrence at segment 3).
+- "Mugtada" / "khabar" standalone at segment 32 — Rule 1.
+- "Hamzat al-Wasl" standalone at segment 11 — Rule 1.
+- "al-ladi" / "al-sirat al-mawsul" standalone at segment 5 — Rule 1.
+
+PHASE 2 — PROPOSED CHANGES
+
+```json
+{
+  "title": "Understanding Relative Clauses with اَلَّذِي (alladhī : who/that) and Descriptions in Arabic",
+  "summary": "This session focuses on the use of relative clauses (اَلَّذِي — alladhī : who/that) and descriptive phrases in Modern Standard Arabic. Key points include understanding how to construct sentences with اَلَّذِي (alladhī), differentiating between definite and indefinite nouns in descriptives, and proper verb conjugation for past tense verbs like ذَهَبَ (dhahaba : he went). The teacher emphasizes recognizing grammatical structures through examples and avoids situational rules.",
+  "key_points": [
+    "Relative clauses introduce additional information using اَلَّذِي (alladhī : who/that [masc. sg.]) or اَلَّتِي (allatī : who/that [fem. sg.]): مَنِ الْوَلَدُ الصَّغِيرُ الَّذِي خَرَجَ الْآنَ؟",
+    "Descriptive phrases (صِفَة — ṣifah : adjective/description) must match the noun in case, gender, number, and definiteness: السِّكِينُ الْحَادُّ (al-sikkīn al-ḥādd : the sharp knife)",
+    "Past tense verb conjugation for third person singular/plural: ذَهَبَ (dhahaba : he went), ذَهَبَتْ (dhahabat : she went), ذَهَبُوا (dhahabū : they went [masc. pl.])",
+    "Avoid اِلْتِقَاءُ السَّاكِنَيْنِ (iltiqāʾ al-sākinayn : meeting of two sukūns) by modifying the first word's vowel: عَنِ النَّبَإِ (ʿani n-nabaʾi)"
+  ],
+  "questions": [
+    "[00:25:02] Q: How to translate sentences with اَلَّذِي (alladhī : who/that)? — A: Treat the clause as parentheses, focusing on subject-predicate structure: الطَّالِبُ الَّذِي خَرَجَ مِنَ الصَّفِّ هُوَ مِنْ إِنْدُونِيسِيَا.",
+    "[00:37:00] Q: Why does اَلَّذِي (alladhī : who/that) have different vowels in connected speech? — A: Due to حَمْزَةُ الْوَصْل (hamzat al-waṣl : connecting hamza) and اِلْتِقَاءُ السَّاكِنَيْنِ (iltiqāʾ al-sākinayn : meeting of two sukūns)."
+  ]
+}
+```
+
+================================================================================
+FILE: 1777504773623_Class_10_14_2024
+TITLE: Basic Arabic Vocabulary and Etiquettes of Seeking Knowledge
+================================================================================
+
+PHASE 1 — ISSUES FOUND
+
+[title]
+- No Rule 1/2/3 violations in the title itself.
+
+[summary]
+- "'hada'" standalone transliteration — Rule 1.
+- "'Ism al-Mishallah'" standalone transliteration — Rule 1.
+
+[key_points]
+- key_points[1]: "hada (هاذَا)" — transliteration precedes Arabic, and Arabic is misspelled (هاذَا should be هَٰذَا) — Rule 1 and Rule 3.
+- key_points[2]: "Ism al-Mishallah (أسماء ال مشا llه)" — transliteration precedes Arabic, and Arabic text is garbled (contains "llه" which is Latin mixed into Arabic) — Rule 1 and Rule 3.
+- key_points[3]: "masculine and feminine" plain English terms for مُذَكَّر and مُؤَنَّث — Rule 2.
+- key_points[4]: "doctor طَبِيب, teacher مُدَرِيس" — transliteration precedes Arabic for "doctor" and "teacher" labels; مُدَرِّس has a missing shadda (مُدَرِيس vs مُدَرِّس) — Rule 1, Rule 3.
+
+[questions]
+- questions[0]: "'man'" and "'ma'" standalone transliterations without Arabic — Rule 1.
+
+[tags]
+- No standalone transliteration issues in tags for this file.
+
+[transcript]
+- "masculine" and "feminine" used for مُذَكَّر / مُؤَنَّث — Rule 2 (first occurrence at segment 16).
+- "hada" standalone transliteration — Rule 1 (first occurrence at segment 15).
+- "Ism al-Mishallah" standalone transliteration — Rule 1 (segment 17).
+- "man" and "ma" standalone in segment 37 — Rule 1.
+
+PHASE 2 — PROPOSED CHANGES
+
+```json
+{
+  "title": "Basic Arabic Vocabulary and Etiquettes of Seeking Knowledge",
+  "summary": "The session began with introductions emphasizing the importance of knowing each other's names as Muslims. The teacher reviewed previous lessons on Arabic grammar, focusing on vocabulary like هَٰذَا (hādhā : this [masc. sg. near]) and its usage for singular, close, مُذَكَّر (mudhakkar : masculine) nouns, and the family of words indicating proximity — أَسْمَاءُ الْإِشَارَة (asmāʾ al-ʾishārah : demonstrative pronouns). Students practiced reading drills and learned new terms for objects and professions, along with the importance of proper pronunciation and tajwīd.",
+  "key_points": [
+    "Respect for classmates and books as part of Islamic etiquette in learning.",
+    "The word هَٰذَا (hādhā : this) indicates something close, singular, and مُذَكَّر (mudhakkar : masculine).",
+    "أَسْمَاءُ الْإِشَارَة (asmāʾ al-ʾishārah : demonstrative pronouns) refers to words that point toward objects or people, such as هَٰذَا (hādhā : this).",
+    "Differentiating between مُذَكَّر (mudhakkar : masculine) and مُؤَنَّث (muʾannath : feminine) nouns in Arabic grammar.",
+    "Reading practice with new vocabulary including professions (e.g., طَبِيب — ṭabīb : doctor, مُدَرِّس — mudarris : teacher)."
+  ],
+  "questions": [
+    "[00:50:27] Q: What is the difference between مَنْ (man : who) and مَا (mā : what) in questions? — A: مَنْ (man : who) asks about entities with intellect (e.g., people), while مَا (mā : what) refers to non-sentient objects."
+  ]
+}
+```
+
+================================================================================
+FILE: 1777504773694_Class_10_16_2024
+TITLE: Understanding the Use of "HathA" and "ZalikA" in the Qur'an
+================================================================================
+
+PHASE 1 — ISSUES FOUND
+
+[title]
+- "'HathA'" and "'ZalikA'" are standalone transliterations — Rule 1.
+
+[summary]
+- "'HathA' (هذا)" — transliteration precedes Arabic — Rule 1. Arabic also missing diacritics (هذا should be هَٰذَا).
+- "'ZalikA' (ذلك)" — transliteration precedes Arabic, and ذلك missing diacritics (should be ذَٰلِكَ) — Rule 1.
+- "masculine/feminine, near/far" plain English for مُذَكَّر/مُؤَنَّث — Rule 2.
+
+[key_points]
+- key_points[0]: "'HathA' (هذا)" transliteration precedes Arabic — Rule 1.
+- key_points[1]: "'ZalikA' (ذلك)" transliteration precedes Arabic — Rule 1.
+- key_points[2]: "masculine/feminine" plain English — Rule 2. "near/far" plain English — Rule 2. "fi" is a standalone transliteration — Rule 1. "Surah Yaseen 36:48" — the ayah cited (36:48) is in Surah Yāsīn, not "fi Surah Yaseen" — verify: this is correct, no factual error.
+- key_points[3]: "Balagha" standalone transliteration — Rule 1. "'mushakala'" standalone — Rule 1.
+
+[questions]
+- questions[0]: "AllAhu" is inconsistent romanization (capital A mid-word) — minor; "'maa'" standalone — Rule 1.
+- questions[1]: "'maa'" standalone — Rule 1; "Quran 15:32" — this reference is wrong; the relevant ayah is Surah al-Anbiyāʾ 21:91 or Shuʿarāʾ 26:23 area for Mūsā/ʿĪsā; the lecture discussed Surah al-Anbiyāʾ, not Quran 15:32. This appears to be a factual error — Rule 3.
+
+[tags]
+- "Nahw" standalone — Rule 1.
+- "Iʿrāb " has trailing space and is standalone — Rule 1.
+- "Balagha" standalone — Rule 1.
+
+[transcript]
+- "male" used for مُذَكَّر — Rule 2 (first occurrence at segment 9).
+- "hada" standalone transliteration — Rule 1 (segment 23).
+- "balagha" standalone — Rule 1 (segment 1).
+
+PHASE 2 — PROPOSED CHANGES
+
+```json
+{
+  "title": "Understanding the Use of هَٰذَا (hādhā : this) and ذَٰلِكَ (dhālika : that) in the Qurʾān",
+  "summary": "This session focuses on distinguishing between the Arabic demonstrative pronouns هَٰذَا (hādhā : this) and ذَٰلِكَ (dhālika : that) using examples from the Qurʾān. The teacher explains how these terms denote proximity (هَٰذَا — hādhā) and distance (ذَٰلِكَ — dhālika), both physically and contextually, and their grammatical rules related to جِنْس (jins : gender) and number.",
+  "key_points": [
+    "The demonstrative pronoun هَٰذَا (hādhā : this) is used for nearby or psychologically proximate objects, مُذَكَّر (mudhakkar : masculine) singular nouns, and for items with or without intellect when indicating immediacy.",
+    "In contrast, ذَٰلِكَ (dhālika : that) refers to distant or conceptually remote objects, also مُذَكَّر (mudhakkar : masculine) singular. It appears in contexts where emphasis on remoteness is needed, even metaphorically.",
+    "Qurʾānic examples such as Sūrah Yāsīn 36:48 and Sūrah al-Kāfirūn illustrate how these terms maintain grammatical agreement (مُذَكَّر — mudhakkar : masculine / مُؤَنَّث — muʾannath : feminine; near/far) while serving stylistic purposes like rhyme and balance.",
+    "الْبَلَاغَة (al-balāghah : Arabic rhetoric) concepts like الْمُشَاكَلَة (al-mushākalah : lexical parallelism) explain the Qurʾān's use of repetition and symmetry, guiding students to deeper analysis beyond basic grammar."
+  ],
+  "questions": [
+    "[00:02:00] Q: Why does Sūrah al-Kāfirūn use مَا (mā : what)? — A: Allāh ﷻ uses مَا (mā : what) for non-intellectual idols, maintaining lexical symmetry despite its usual restriction.",
+    "[00:04:00] Q: Can ʿĪsā عَلَيْهِ السَّلَام be in Hell as some claimed from the verse? — A: مَا (mā : what) refers to non-intellectual objects; since ʿĪsā has intellect, the claim is a misinterpretation refuted by Imām al-Qurṭubī."
+  ]
+}
+```
+
+================================================================================
+FILE: 1777504773736_Class_10_21_2024
+TITLE: Understanding Jumla Ismiyyah: Nouns and Sentence Structure in Arabic
+================================================================================
+
+PHASE 1 — ISSUES FOUND
+
+[title]
+- "Jumla Ismiyyah" standalone transliteration — Rule 1.
+
+[summary]
+- "Jumla Ismiyyah" standalone — Rule 1.
+- "al-" standalone (used as a symbol, acceptable minimal reference when naming the article itself).
+
+[key_points]
+- key_points[1]: "(المبدإ)" — this is a garbled/non-standard spelling of مُبْتَدَأ; المبدإ is not correct Arabic for this term — Rule 3.
+- key_points[1]: "الخبر" appears correctly in Arabic but without transliteration in parentheses — Rule 1 (Arabic without format).
+- key_points[2]: "Proper nouns are exceptions" — fine, no issue here.
+- key_points[3]: "مAAر" is garbled Arabic (capital Latin letters A mixed into Arabic) — Rule 3.
+- key_points[3]: "rajun (man), taajur (merchant), tabeebun (doctor), waladun (boy)" — all transliterations precede Arabic — Rule 1.
+
+[questions]
+- questions[0]: Timestamp "00:04:08,519" uses comma instead of colon in seconds — minor formatting.
+- questions[0]: Factual error — the answer says "Dadiqah refers to nearby; hada is for distant things." This is inverted: هَٰذَا (hādhā) is for near, ذَٰلِكَ (dhālika) is for far — Rule 3.
+- questions[1]: "ism eradik haf" is garbled and incoherent — Rule 3.
+
+[tags]
+- "Jumla Ismiyyah" standalone — Rule 1.
+
+[transcript]
+- "Jumlah Ismiyyah" / "Jumna Ismiyyah" used inconsistently as standalone transliteration — Rule 1 (first at segment 28).
+- "Mugtada" / "khabar" standalone — Rule 1 (segment 32).
+- "nakira" / "ma'rifah" standalone — Rule 1 (segment 38).
+- "ma'rifah is known" — Rule 2: مَعْرِفَة and نَكِرَة should carry Arabic-first format.
+
+PHASE 2 — PROPOSED CHANGES
+
+```json
+{
+  "title": "Understanding جُمْلَة اِسْمِيَّة (jumlah ismiyyah : nominal sentence): Nouns and Sentence Structure in Arabic",
+  "summary": "This session focuses on classifying words in Arabic into three categories (noun, verb, particle) and understanding the structure of sentences starting with nouns — جُمْلَة اِسْمِيَّة (jumlah ismiyyah : nominal sentence). Key distinctions include the use of اَلْ (al- : the definite article) versus تَنْوِين (tanwīn : indefinite double vowel ending), with examples from vocabulary practice and Qurʾānic verses.",
+  "key_points": [
+    "Arabic words are categorized into: اِسْم (ism : noun), فِعْل (fiʿl : verb), and حَرْف (ḥarf : particle).",
+    "جُمْلَة اِسْمِيَّة (jumlah ismiyyah : nominal sentence) starts with a noun — the مُبْتَدَأ (mubtadaʾ : subject of nominal sentence) — followed by a predicate خَبَر (khabar : predicate). Example: اَلْقَلَمُ مَكْسُورٌ (the pen is broken).",
+    "اَلْ (al- : the definite article) indicates مَعْرِفَة (maʿrifah : definiteness), while تَنْوِين (tanwīn : indefinite double vowel) marks نَكِرَة (nakirah : indefiniteness). Proper nouns are exceptions, using تَنْوِين (tanwīn) without اَلْ.",
+    "Vocabulary practice included identification exercises: رَجُل (rajul : man), تَاجِر (tājir : merchant), طَبِيب (ṭabīb : doctor), وَلَد (walad : boy)."
+  ],
+  "questions": [
+    "[00:04:08] Q: How to distinguish هَٰذَا (hādhā : this) and ذَٰلِكَ (dhālika : that)? — A: هَٰذَا (hādhā : this) refers to something near; ذَٰلِكَ (dhālika : that) refers to something far.",
+    "[00:21:00] Q: What are the categories of اِسْم (ism : noun)? — A: Includes persons, places, things, ideas, adjectives, and adverbs."
+  ]
+}
+```
+
+================================================================================
+FILE: 1777504773775_Class_10_23_24
+TITLE: Identifying Definite and Indefinite Nouns Through Particle Usage
+================================================================================
+
+PHASE 1 — ISSUES FOUND
+
+[title]
+- No transliteration violations in the title.
+
+[summary]
+- "maṣḍara" used as the technical term for مَعْرِفَة — this is wrong; maṣdar means "verbal noun/infinitive," not "definite." The correct term is مَعْرِفَة (maʿrifah : definiteness) — Rule 3.
+- "nāsira" used as the technical term for نَكِرَة — this is wrong; nāsirah means "supporter/helper," not "indefinite." The correct term is نَكِرَة (nakirah : indefiniteness) — Rule 3.
+
+[key_points]
+- key_points[3]: "اللهَ mdash;" — an em-dash HTML entity ("mdash;") appears inside the Arabic text, corrupting it — Rule 3.
+
+[tags]
+- "Nahw" standalone — Rule 1.
+- "Iʿrāb" standalone — Rule 1.
+
+[transcript]
+- "nakira" / "ma'rifah" standalone transliterations — Rule 1 (first at segment 41).
+- "mubtada" / "khabar" standalone — Rule 1 (segment 9).
+
+PHASE 2 — PROPOSED CHANGES
+
+```json
+{
+  "title": "Identifying Definite and Indefinite Nouns Through Particle Usage",
+  "summary": "This session focuses on distinguishing between مَعْرِفَة (maʿrifah : definite) and نَكِرَة (nakirah : indefinite) nouns using اَلْ (al- : the definite article) and تَنْوِين (tanwīn : indefinite double vowel ending). The teacher explains how these grammatical markers indicate specificity or generality, providing examples from daily life and the Qurʾān to reinforce understanding.",
+  "key_points": [
+    "Definite nouns use اَلْ (al- : the definite article) indicating specificity; indefinite nouns have تَنْوِين (tanwīn — ـٌ, ـٍ, ـً) showing non-specificity.",
+    "Examples contrasted: كِتَابٌ (kitābun : a book) vs. اَلْكِتَابُ (al-kitābu : the specific book).",
+    "Golden rule: Words with اَلْ (al-) never have تَنْوِين (tanwīn) and vice versa; attempting to write both is grammatically incorrect.",
+    "Qurʾānic examples highlight usage differences, such as اَللَّهُ (Allāh) with اَلْ for definiteness in praise versus تَنْوِين for unknown subjects."
+  ],
+  "questions": [
+    "[03:11] Q: Can I bring any book? — A: Use تَنْوِين (tanwīn — kitābun : a book) for indefinite. Specific requests require اَلْ followed by identifier like اَلْكِتَاب (al-kitāb : the book).",
+    "[24:56] Q: Why use both اَلْ and description? — A: Definite nouns with descriptions, e.g., رَجُلٌ (rajulun : a man) indefinite vs. اَلرَّجُلِ (al-rajuli : the man) known to context."
+  ]
+}
+```
+
+================================================================================
+FILE: 1777504773984_Class_2_19_2025
+TITLE: Ghayr al-Munsarif, Ism Al-Mawsul, and Related Grammar Concepts
+================================================================================
+
+PHASE 1 — ISSUES FOUND
+
+[title]
+- "Ghayr al-Munsarif" standalone transliteration — Rule 1.
+- "Ism Al-Mawsul" standalone transliteration — Rule 1.
+
+[summary]
+- "Ghayr al-Munsarif" standalone — Rule 1.
+- "Ism Al-Mawsul" standalone — Rule 1.
+- "iltiqa al-sakin" standalone — Rule 1.
+- "female names" plain English for مُؤَنَّث — Rule 2.
+
+[key_points]
+- key_points[0]: "Ghayr al-Munsarif" standalone — Rule 1. "female names (e.g., مَرْيَم)" — "female names" is plain English for مُؤَنَّث — Rule 2. "e.g., كَسْلَان" — no transliteration provided.
+- key_points[1]: "Ism Al-Mawsul" standalone — Rule 1. "relative pronouns: الذي, التي, اللاتي" — Arabic given without transliteration format — Rule 1.
+- key_points[2]: "iltiqa al-sakinين" — hybrid Arabic/transliteration construct; standalone — Rule 1.
+- key_points[3]: "female names" plain English — Rule 2.
+
+[questions]
+- No critical Rule 1/2/3 violations in questions.
+
+[tags]
+- "Nahw" standalone — Rule 1.
+- "I'rab" standalone — Rule 1.
+- "Ghayr al-Munsarif" standalone — Rule 1.
+- "Ism Al-Mawsul" standalone — Rule 1.
+
+[transcript]
+- "ghayr al-munsarif" standalone — Rule 1 (first at segment 1).
+- "ism al-mawsool" standalone — Rule 1 (segment 20).
+- "iltiqa al-sakin" standalone — Rule 1 (segment 31).
+- "female names" for مُؤَنَّث — Rule 2 (segment 5).
+
+PHASE 2 — PROPOSED CHANGES
+
+```json
+{
+  "title": "غَيْرُ الْمُنْصَرِف (ghayr al-munṣarif : diptote), اِسْم الْمَوْصُول (ism al-mawṣūl : relative pronoun), and Related Grammar Concepts",
+  "summary": "This session covers the Arabic grammatical concept of غَيْرُ الْمُنْصَرِف (ghayr al-munṣarif : diptote — words that do not take tanwīn or kasrah), distinguishing it through examples from the Qurʾān and classical texts. The teacher explains exceptions like أَسْمَاء الْمُؤَنَّث (asmāʾ al-muʾannath : feminine names) and specific noun patterns, then transitions to discuss اِسْم الْمَوْصُول (ism al-mawṣūl : relative pronoun) with examples from the Qurʾān, focusing on usage rules and pronunciation adjustments including اِلْتِقَاءُ السَّاكِنَيْنِ (iltiqāʾ al-sākinayn : meeting of two sukūns) for smooth recitation.",
+  "key_points": [
+    "غَيْرُ الْمُنْصَرِف (ghayr al-munṣarif : diptote) are words that do not take تَنْوِين (tanwīn) or كَسْرَة (kasrah) when they grammatically should, due to specific exceptions like أَسْمَاء الْمُؤَنَّث (asmāʾ al-muʾannath : feminine names — e.g., مَرْيَمُ) and certain noun patterns (e.g., كَسْلَانُ — kaslān : lazy).",
+    "اِسْم الْمَوْصُول (ism al-mawṣūl : relative pronoun — اَلَّذِي, اَلَّتِي, اَللَّاتِي) connects a noun to its description and is used with the appropriate جِنْس (jins : gender) and number. Examples from the Qurʾān include descriptions of the Prophet's miracles and attributes.",
+    "Pronunciation rules for اِلْتِقَاءُ السَّاكِنَيْنِ (iltiqāʾ al-sākinayn : meeting of two sukūns): When two sākin letters meet between words, a كَسْرَة (kasrah) is added to the first (e.g., لِمَنِ الْمُلْكُ instead of لِمَنْ الْمُلْكُ).",
+    "أَسْمَاء الْمُؤَنَّث (asmāʾ al-muʾannath : feminine names) in Arabic always fall under غَيْرُ الْمُنْصَرِف (ghayr al-munṣarif) and do not take تَنْوِين (tanwīn) or كَسْرَة (kasrah), as per Qurʾānic examples like مَرْيَمُ and فَاطِمَةُ."
+  ],
+  "questions": [
+    "[00:01:00] Q: Is يَحْيَىٰ (Yaḥyā) an example of غَيْرُ الْمُنْصَرِف (ghayr al-munṣarif)? — A: No, it is a different exception not covered here.",
+    "[00:05:00] Q: Why don't أَسْمَاء الْمُؤَنَّث (asmāʾ al-muʾannath : feminine names) take تَنْوِين (tanwīn)? — A: Because they are inherently part of the غَيْرُ الْمُنْصَرِف (ghayr al-munṣarif) category."
+  ]
+}
+```
+
+================================================================================
+FILE: 1777504774112_Class_10_30_2024
+TITLE: Introduction to Definite Articles and Huroof Al-Jar
+================================================================================
+
+PHASE 1 — ISSUES FOUND
+
+[title]
+- "Huroof Al-Jar" standalone transliteration — Rule 1.
+
+[summary]
+- "Huroof Al-Jar" standalone — Rule 1.
+- "harf لجر" — garbled Arabic: اَلْجَرّ is missing the alif and diacritics, and the lam is disconnected — Rule 3.
+
+[key_points]
+- key_points[1]: "zar'" — Urdu term for جَرّ — Rule 3.
+- key_points[2]: Vocabulary listed with transliteration preceding Arabic (e.g., "fi (في), ala (على), ila (إلى), min (من), li (لـ)") — Rule 1 throughout.
+- key_points[3]: "Hamzat al-wasl" standalone — Rule 1.
+
+[questions]
+- No critical violations.
+
+[tags]
+- "Nahw" standalone — Rule 1.
+- "Huroof Al-Jar" standalone — Rule 1.
+
+[transcript]
+- "zar'" used as term for جَرّ — Rule 3 (first occurrence, flag once).
+- "harf al-jar" standalone — Rule 1 (first at transcript segment 14).
+- "hamzat al-wasl" standalone — Rule 1 (segment 11).
+
+PHASE 2 — PROPOSED CHANGES
+
+```json
+{
+  "title": "Introduction to Definite Articles and حُرُوف الْجَرّ (ḥurūf al-jarr : prepositions)",
+  "summary": "This lesson introduces the concept of حُرُوف الْجَرّ (ḥurūf al-jarr : prepositions), particles that assign a كَسْرَة (kasrah) to the following noun (making it مَجْرُور — majrūr : genitive). The five prepositions covered are فِي (fī : in), عَلَى (ʿalā : on), إِلَى (ilā : to), مِنْ (min : from), and لِـ (li- : for/belonging to). The lesson also reviews how اَلْ (al- : the definite article) and تَنْوِين (tanwīn) are mutually exclusive, introduces حَمْزَةُ الْوَصْل (hamzat al-waṣl : connecting hamza), and covers vocabulary for common objects.",
+  "key_points": [
+    "حُرُوف الْجَرّ (ḥurūf al-jarr : prepositions) cause the following noun to take a كَسْرَة (kasrah), making it مَجْرُور (majrūr : genitive). Example: فِي الْمَسْجِدِ (fī l-masjidi : in the mosque).",
+    "The five prepositions introduced: فِي (fī : in), عَلَى (ʿalā : on/upon), إِلَى (ilā : to/toward), مِنْ (min : from), لِـ (li- : for/belonging to).",
+    "Vocabulary with prepositions: فِي الْبَيْتِ (fī l-bayti : in the house), عَلَى الْمَكْتَبِ (ʿalā l-maktabi : on the desk), مِنَ الْمَسْجِدِ (mina l-masjidi : from the mosque).",
+    "حَمْزَةُ الْوَصْل (hamzat al-waṣl : connecting hamza) is silent in connected speech; اَلْ (al-) and تَنْوِين (tanwīn) never appear together on the same word."
+  ],
+  "questions": [
+    "[00:15:00] Q: Why does the noun change after حُرُوف الْجَرّ (ḥurūf al-jarr : prepositions)? — A: These particles assign a كَسْرَة (kasrah) to the following noun, marking it as مَجْرُور (majrūr : genitive).",
+    "[00:25:00] Q: What is حَمْزَةُ الْوَصْل (hamzat al-waṣl : connecting hamza)? — A: A hamza that is pronounced at the start of speech but drops in connected speech, unlike حَمْزَةُ الْقَطْع (hamzat al-qaṭʿ : cutting hamza)."
+  ]
+}
+```
+
+================================================================================
+FILE: 1777504774156_Class_10_28_2024
+TITLE: Al-Mondeel and the Definite Article 'al-' in Arabic: Sun Letters (Shamsi) vs Moon Letters (Qamariyya)
+================================================================================
+
+PHASE 1 — ISSUES FOUND
+
+[title]
+- "Shamsi" and "Qamariyya" standalone transliterations — Rule 1.
+- "Al-Mondeel" — standalone transliteration, and "mondeel" is not standard; standard is مِنْدِيل (mindīl) — Rule 1, Rule 3.
+
+[summary]
+- "Shamsi" and "Qamariyya" standalone — Rule 1.
+- "Sun letters" and "Moon letters" are plain English for اَلْحُرُوف الشَّمْسِيَّة and اَلْحُرُوف الْقَمَرِيَّة — Rule 2.
+
+[key_points]
+- key_points[0]: "shamsi letters" and "qamariyya" standalone — Rule 1.
+- key_points[2]: "al-Shams (الشمس)" — transliteration precedes Arabic — Rule 1.
+- key_points[3]: "aristocratic" appears in the context of Arabic grammar examples and is incoherent/garbled — Rule 3 (the word "aristocratic" has no place in a grammar rule about sun/moon letters; likely a hallucination or transcription error).
+
+[questions]
+- questions is an empty array — content missing.
+
+[tags]
+- "Nahw" standalone — Rule 1.
+- "I'rāb" standalone — Rule 1.
+- "Shamsi Letters" standalone — Rule 1.
+- "Qamariyya Letters" standalone — Rule 1.
+
+[transcript]
+- "shamsi" / "qamariyya" standalone — Rule 1 (first occurrence, flag once).
+- "sun letters" / "moon letters" plain English for Arabic terms — Rule 2 (first occurrence, flag once).
+
+PHASE 2 — PROPOSED CHANGES
+
+```json
+{
+  "title": "اَلْمِنْدِيل (al-mindīl : handkerchief) and the Definite Article اَلْ in Arabic: اَلْحُرُوف الشَّمْسِيَّة (al-ḥurūf al-shamsiyyah : sun letters) vs اَلْحُرُوف الْقَمَرِيَّة (al-ḥurūf al-qamariyyah : moon letters)",
+  "summary": "This session covers the Arabic definite article اَلْ (al- : the) and how its pronunciation changes depending on the first letter of the word it precedes. When preceding اَلْحُرُوف الشَّمْسِيَّة (al-ḥurūf al-shamsiyyah : sun letters), the lām of اَلْ is assimilated (e.g., اَلشَّمْسُ — ash-shamsu : the sun). When preceding اَلْحُرُوف الْقَمَرِيَّة (al-ḥurūf al-qamariyyah : moon letters), the lām is pronounced clearly (e.g., اَلْقَمَرُ — al-qamaru : the moon).",
+  "key_points": [
+    "اَلْحُرُوف الشَّمْسِيَّة (al-ḥurūf al-shamsiyyah : sun letters) cause the lām of اَلْ to assimilate into the following letter (e.g., اَلشَّمْسُ — ash-shamsu : the sun, اَلنُّورُ — an-nūru : the light).",
+    "اَلْحُرُوف الْقَمَرِيَّة (al-ḥurūf al-qamariyyah : moon letters) allow the lām of اَلْ to be pronounced clearly (e.g., اَلْقَمَرُ — al-qamaru : the moon, اَلْبَيْتُ — al-baytu : the house).",
+    "اَلشَّمْس (al-shams : the sun) itself begins with a شَمْسِيَّة (shamsiyyah : sun letter), demonstrating the assimilation rule.",
+    "Recognizing sun and moon letters is essential for correct recitation of the Qurʾān and proper Arabic pronunciation."
+  ],
+  "questions": []
+}
+```
+
+================================================================================
+FILE: 1777504774220_Class_11_06_2024
+TITLE: Introduction to Arabic Prepositions (Haruf al-Jar) and Pronouns
+================================================================================
+
+PHASE 1 — ISSUES FOUND
+
+[title]
+- "Haruf al-Jar" standalone transliteration — Rule 1.
+
+[summary]
+- "Haruf al-Jar" standalone — Rule 1.
+- "zar'" — Urdu term for جَرّ — Rule 3.
+- "female names" plain English for مُؤَنَّث — Rule 2.
+- "Hamzatul wasli" standalone — Rule 1.
+
+[key_points]
+- key_points[0]: Prepositions listed with transliteration preceding Arabic — Rule 1.
+- key_points[1]: "as-sahmu (feminine pen)" — factual error: اَلسَّهْم (al-sahm) means arrow, not pen; the word for pen is اَلْقَلَم (al-qalam) — Rule 3.
+- key_points[2]: "female names" plain English — Rule 2.
+- key_points[3]: "Hamzatul wasli" standalone — Rule 1.
+
+[questions]
+- questions[0]: "haruf al-Jar" standalone — Rule 1.
+- questions[1]: "Hamzatul wasli" standalone — Rule 1.
+
+[tags]
+- "Nahw" standalone — Rule 1.
+- "Haruf al-Jar" standalone — Rule 1.
+
+[transcript]
+- "zar'" used for جَرّ — Rule 3 (flag once, first occurrence).
+- "haruf al-jar" standalone — Rule 1 (first occurrence).
+- "hamzatul wasli" standalone — Rule 1 (first occurrence).
+- "female names" for مُؤَنَّث — Rule 2 (first occurrence).
+
+PHASE 2 — PROPOSED CHANGES
+
+```json
+{
+  "title": "Introduction to Arabic حُرُوف الْجَرّ (ḥurūf al-jarr : prepositions) and Pronouns",
+  "summary": "This session introduces حُرُوف الْجَرّ (ḥurūf al-jarr : prepositions) and their role in assigning كَسْرَة (kasrah) to the following noun, making it مَجْرُور (majrūr : genitive). The lesson covers attached pronouns (ضَمَائِر — ḍamāʾir : pronouns) for possession, discusses why أَسْمَاء الْمُؤَنَّث (asmāʾ al-muʾannath : feminine names) do not take تَنْوِين (tanwīn), and introduces حَمْزَةُ الْوَصْل (hamzat al-waṣl : connecting hamza).",
+  "key_points": [
+    "حُرُوف الْجَرّ (ḥurūf al-jarr : prepositions) assign a كَسْرَة (kasrah) to the noun that follows: فِي (fī : in), عَلَى (ʿalā : on), إِلَى (ilā : to), مِنْ (min : from), لِـ (li- : for).",
+    "Nouns that are مُؤَنَّث (muʾannath : feminine) — such as اَلشَّمْس (al-shams : the sun) and اَلسَّهْم (al-sahm : the arrow) — must be identified correctly; confusing them with مُذَكَّر (mudhakkar : masculine) nouns leads to agreement errors.",
+    "أَسْمَاء الْمُؤَنَّث (asmāʾ al-muʾannath : feminine names) do not take تَنْوِين (tanwīn), as they belong to the غَيْرُ الْمُنْصَرِف (ghayr al-munṣarif : diptote) category.",
+    "حَمْزَةُ الْوَصْل (hamzat al-waṣl : connecting hamza) is silent in connected speech and appears on words like اَلْ (al-)."
+  ],
+  "questions": [
+    "[00:10:00] Q: What do حُرُوف الْجَرّ (ḥurūf al-jarr : prepositions) do to the following noun? — A: They assign a كَسْرَة (kasrah) making it مَجْرُور (majrūr : genitive).",
+    "[00:30:00] Q: What is حَمْزَةُ الْوَصْل (hamzat al-waṣl : connecting hamza)? — A: A hamza that is pronounced at the beginning of speech but dropped in continuous speech."
+  ]
+}
+```
+
+================================================================================
+FILE: 1777504774290_Class_11_11_2024
+TITLE: Arabic Writing and Pronunciation with Focus on Key Verbs and Particles
+================================================================================
+
+PHASE 1 — ISSUES FOUND
+
+[title]
+- No transliteration violations in the title.
+
+[summary]
+- "kharaja (خرج)" — transliteration precedes Arabic — Rule 1. Arabic also lacks diacritics (خَرَجَ).
+- "past tense" without Arabic term مَاضِي — Rule 2.
+
+[key_points]
+- key_points[0]: "kharaja" standalone transliteration — Rule 1.
+- key_points[1]: "past tense" without مَاضِي — Rule 2.
+- key_points[2]: "min (من)" — transliteration precedes Arabic — Rule 1.
+- key_points[3]: "male" plain English for مُذَكَّر — Rule 2.
+
+[questions]
+- questions[0]: "Mada" standalone — Rule 1.
+- questions[1]: "min" standalone — Rule 1.
+
+[tags]
+- "Nahw" standalone — Rule 1.
+
+[transcript]
+- "male" for مُذَكَّر — Rule 2 (first occurrence).
+- "kharaja" standalone — Rule 1 (first occurrence).
+- "past tense" without مَاضِي — Rule 2 (first occurrence).
+
+PHASE 2 — PROPOSED CHANGES
+
+```json
+{
+  "title": "Arabic Writing and Pronunciation with Focus on Key Verbs and Particles",
+  "summary": "This session focuses on Arabic handwriting practice and pronunciation of key vocabulary and particles. The teacher introduces past tense — فِعْل مَاضِي (fiʿl māḍī : past tense verb) — verbs such as خَرَجَ (kharaja : he exited) and reviews حُرُوف الْجَرّ (ḥurūf al-jarr : prepositions) like مِنْ (min : from). Students practiced writing and translating sentences, including how مَاضِي (māḍī : past tense) verbs indicate completed actions.",
+  "key_points": [
+    "فِعْل مَاضِي (fiʿl māḍī : past tense verb) examples: خَرَجَ (kharaja : he exited), ذَهَبَ (dhahaba : he went), جَلَسَ (jalasa : he sat).",
+    "فِعْل مَاضِي (fiʿl māḍī : past tense verb) in its base form indicates: مَاضِي (māḍī : past tense), مُذَكَّر (mudhakkar : masculine), مُفْرَد (mufrad : singular), and third person.",
+    "حُرُوف الْجَرّ (ḥurūf al-jarr : prepositions) reviewed: مِنْ (min : from) assigns كَسْرَة (kasrah) to the following noun.",
+    "Gender in Arabic: base verb forms are for مُذَكَّر (mudhakkar : masculine) singular; different endings mark مُؤَنَّث (muʾannath : feminine) or plural."
+  ],
+  "questions": [
+    "[00:10:00] Q: What does مَاضِي (māḍī : past tense) mean? — A: A verb in the فِعْل مَاضِي (fiʿl māḍī : past tense) form indicates a completed action.",
+    "[00:20:00] Q: What does مِنْ (min : from) do to the noun that follows? — A: It assigns a كَسْرَة (kasrah), making the noun مَجْرُور (majrūr : genitive)."
+  ]
+}
+```
+
+================================================================================
+FILE: 1777504774496_Class_11_13_2024
+TITLE: Understanding Min and Ila: Connecting Phrases in the Quran
+================================================================================
+
+PHASE 1 — ISSUES FOUND
+
+[title]
+- "Min" and "Ila" standalone transliterations — Rule 1.
+
+[summary]
+- "Min" and "Ila" standalone — Rule 1.
+- "harf al-jarb" is a typo — should be "harf al-jarr" (حَرْف الْجَرّ) — Rule 3.
+- "DHama'ir" standalone transliteration — Rule 1.
+- "Mubtada'" standalone — Rule 1.
+
+[key_points]
+- key_points[0]: "Min (مِنْ)" and "Ila (إِلَى)" transliterations precede Arabic — Rule 1.
+- key_points[1]: "harf al-jarb" typo (should be حَرْف الْجَرّ — jarr) — Rule 3.
+- key_points[2]: "DHama'ir" standalone — Rule 1.
+- key_points[3]: "Mubtada'" standalone — Rule 1.
+
+[questions]
+- No additional issues beyond summary flags.
+
+[tags]
+- "Nahw" standalone — Rule 1.
+- "Harf al-Jarb" typo in tags — Rule 3.
+- "Min" and "Ila" standalone — Rule 1.
+
+[transcript]
+- "min" and "ila" standalone — Rule 1 (first occurrence).
+- "harf al-jarb" typo — Rule 3 (first occurrence, flag once).
+- "DHama'ir" standalone — Rule 1 (first occurrence).
+- "Mubtada'" standalone — Rule 1 (first occurrence).
+
+PHASE 2 — PROPOSED CHANGES
+
+```json
+{
+  "title": "Understanding مِنْ (min : from) and إِلَى (ilā : to/toward): Connecting Phrases in the Qurʾān",
+  "summary": "This session focuses on the حُرُوف الْجَرّ (ḥurūf al-jarr : prepositions) مِنْ (min : from) and إِلَى (ilā : to/toward) and how they connect phrases in the Qurʾān. The teacher reviews ضَمَائِر (ḍamāʾir : pronouns) attached to prepositions, discusses the مُبْتَدَأ (mubtadaʾ : subject of nominal sentence) and خَبَر (khabar : predicate) structure, and provides Qurʾānic examples.",
+  "key_points": [
+    "The حَرْف الْجَرّ (ḥarf al-jarr : preposition) مِنْ (min : from) indicates a starting point and assigns كَسْرَة (kasrah) to the following noun.",
+    "The حَرْف الْجَرّ (ḥarf al-jarr : preposition) إِلَى (ilā : to/toward) indicates a destination and also assigns كَسْرَة (kasrah).",
+    "ضَمَائِر (ḍamāʾir : pronouns) attached to حُرُوف الْجَرّ (ḥurūf al-jarr : prepositions) change their form, e.g., مِنِّي (minnī : from me), مِنْهُ (minhu : from him).",
+    "The مُبْتَدَأ (mubtadaʾ : subject of nominal sentence) and خَبَر (khabar : predicate) structure applies when preposition phrases serve as the predicate."
+  ],
+  "questions": [
+    "[00:10:00] Q: What does مِنْ (min : from) indicate? — A: It marks the starting point and assigns كَسْرَة (kasrah) to the following noun, making it مَجْرُور (majrūr : genitive).",
+    "[00:20:00] Q: What does إِلَى (ilā : to/toward) indicate? — A: It marks the destination and similarly assigns كَسْرَة (kasrah)."
+  ]
+}
+```
+
+================================================================================
+FILE: 1777504774536_Class_11_18_2024
+TITLE: Possessive Constructions and Question-Answer Dynamics in Arabic
+================================================================================
+
+PHASE 1 — ISSUES FOUND
+
+[title]
+- No transliteration violations in the title.
+
+[summary]
+- "'ya'" standalone transliteration — Rule 1.
+- "kitabu muhammadin" transliteration without Arabic script — Rule 1.
+- "possessed" and "possessor" plain English for مُضَاف and مُضَافٌ إِلَيْهِ — Rule 2.
+- "aliph" — misspelling of "alif" — Rule 3.
+- "Hamzat al-wasl" standalone — Rule 1.
+
+[key_points]
+- key_points[0]: "'ya'" standalone — Rule 1.
+- key_points[1]: Transliteration of possessive example precedes Arabic — Rule 1.
+- key_points[2]: "possessed" and "possessor" plain English — Rule 2.
+- key_points[3]: "Hamzat al-wasl" standalone — Rule 1.
+
+[questions]
+- No additional issues beyond the summary.
+
+[tags]
+- "Diacritics (Haraqat)" — "Haraqat" is a standalone transliteration — Rule 1. (Standard term is حَرَكَات — ḥarakāt.)
+- "Mudaf" standalone — Rule 1.
+- "Nahw" standalone — Rule 1.
+
+[transcript]
+- "'ya'" standalone — Rule 1 (first occurrence).
+- "kitabu muhammadin" standalone transliteration without Arabic — Rule 1 (first occurrence).
+- "possessed/possessor" for مُضَاف/مُضَافٌ إِلَيْهِ — Rule 2 (first occurrence).
+- "aliph" misspelling — Rule 3 (first occurrence).
+- "hamzat al-wasl" standalone — Rule 1 (first occurrence).
+
+PHASE 2 — PROPOSED CHANGES
+
+```json
+{
+  "title": "Possessive Constructions and Question-Answer Dynamics in Arabic",
+  "summary": "This session covers the مُضَاف (muḍāf : possessed noun) and مُضَافٌ إِلَيْهِ (muḍāf ilayhi : possessor) possessive construction, translatable as 'the X of Y' (e.g., كِتَابُ مُحَمَّدٍ — kitābu muḥammadin : the book of Muḥammad). The teacher also covers حَرْف النِّدَاء (ḥarf al-nidāʾ : the vocative particle) يَا (yā : O), explains حَمْزَةُ الْوَصْل (hamzat al-waṣl : connecting hamza) and how اَلِف (alif) behaves in connected speech, and reviews question-answer patterns.",
+  "key_points": [
+    "The vocative particle يَا (yā : O) is used to call someone and causes the following noun to take a single ضَمَّة (ḍammah) without تَنْوِين (tanwīn).",
+    "مُضَاف (muḍāf : possessed noun) and مُضَافٌ إِلَيْهِ (muḍāf ilayhi : possessor) construct: كِتَابُ مُحَمَّدٍ (kitābu muḥammadin : the book of Muḥammad) — the مُضَاف comes first and loses اَلْ and تَنْوِين; the مُضَافٌ إِلَيْهِ takes كَسْرَة (kasrah).",
+    "The مُضَاف (muḍāf : possessed noun) cannot have اَلْ or تَنْوِين (tanwīn); the مُضَافٌ إِلَيْهِ (muḍāf ilayhi : possessor) generally takes كَسْرَة (kasrah).",
+    "حَمْزَةُ الْوَصْل (hamzat al-waṣl : connecting hamza) is pronounced at the start of speech but dropped in connected speech, unlike حَمْزَةُ الْقَطْع (hamzat al-qaṭʿ : cutting hamza)."
+  ],
+  "questions": [
+    "[00:10:00] Q: What is the role of يَا (yā : O) in a sentence? — A: يَا (yā : O) is حَرْف النِّدَاء (ḥarf al-nidāʾ : the vocative particle), used to call someone; it causes the following noun to take a single ضَمَّة (ḍammah) without تَنْوِين (tanwīn).",
+    "[00:25:00] Q: How does the مُضَاف (muḍāf : possessed noun) differ from a regular noun? — A: The مُضَاف (muḍāf) loses its اَلْ and تَنْوِين (tanwīn) when joined to the مُضَافٌ إِلَيْهِ (muḍāf ilayhi : possessor)."
+  ]
+}
+```
+
+================================================================================
+FILE: 1777504774591_Class_11_25_2024
+TITLE: Understanding Maudū al-Mudāf ʻalayh and Possessive Constructions in Arabic Grammar
+================================================================================
+
+PHASE 1 — ISSUES FOUND
+
+[title]
+- "Maudū al-Mudāf ʻalayh" — "Maudū" is a garbled/wrong term; the correct term is مُضَافٌ إِلَيْهِ (muḍāf ilayhi) — Rule 3.
+- "ʻalayh" is wrong; the correct form is إِلَيْهِ (ilayhi), not ʻalayh — Rule 3.
+- "Mudāf" standalone transliteration — Rule 1.
+
+[summary]
+- "harfu al-jar" standalone — Rule 1.
+- "Mudaf" and "Mudaf Ilayhi" standalone — Rule 1.
+
+[key_points]
+- key_points[0]: "Mudaf" standalone — Rule 1.
+- key_points[1]: "Mudaf Ilayhi" standalone — Rule 1.
+- key_points[2]: "harfu al-jar" standalone — Rule 1.
+- key_points[3]: Multiple standalone transliterations — Rule 1.
+
+[questions]
+- No additional critical issues.
+
+[tags]
+- "Nāhīṭ" — garbled/meaningless term; likely meant نَحْو (naḥw : Arabic grammar) — Rule 3.
+- "Harfu Jar" standalone — Rule 1.
+- "Mudaaf" standalone — Rule 1.
+
+[transcript]
+- "mudaf" / "mudaf ilayhi" standalone — Rule 1 (first occurrence).
+- "harfu al-jar" standalone — Rule 1 (first occurrence).
+
+PHASE 2 — PROPOSED CHANGES
+
+```json
+{
+  "title": "Understanding مُضَاف (muḍāf : possessed noun) and مُضَافٌ إِلَيْهِ (muḍāf ilayhi : possessor) and Possessive Constructions in Arabic Grammar",
+  "summary": "This session covers the مُضَاف (muḍāf : possessed noun) and مُضَافٌ إِلَيْهِ (muḍāf ilayhi : possessor) construction and how حَرْف الْجَرّ (ḥarf al-jarr : preposition) particles interact with possessive phrases. The teacher provides Qurʾānic examples and clarifies common mistakes in applying possessive rules.",
+  "key_points": [
+    "The مُضَاف (muḍāf : possessed noun) always comes first in the construction and must be stripped of اَلْ and تَنْوِين (tanwīn).",
+    "The مُضَافٌ إِلَيْهِ (muḍāf ilayhi : possessor) follows the مُضَاف (muḍāf) and takes كَسْرَة (kasrah) by default.",
+    "حَرْف الْجَرّ (ḥarf al-jarr : preposition) can precede the مُضَاف (muḍāf) construction: e.g., فِي كِتَابِ اللَّهِ (fī kitābi llāhi : in the book of Allah).",
+    "Nothing may be inserted between the مُضَاف (muḍāf : possessed noun) and the مُضَافٌ إِلَيْهِ (muḍāf ilayhi : possessor)."
+  ],
+  "questions": [
+    "[00:10:00] Q: Can an adjective come between the مُضَاف (muḍāf) and مُضَافٌ إِلَيْهِ (muḍāf ilayhi)? — A: No; the adjective must come after the complete مُضَاف (muḍāf)–مُضَافٌ إِلَيْهِ (muḍāf ilayhi) unit.",
+    "[00:20:00] Q: Why does the مُضَافٌ إِلَيْهِ (muḍāf ilayhi : possessor) take كَسْرَة (kasrah)? — A: The possessor is مَجْرُور (majrūr : genitive) by virtue of the مُضَاف (muḍāf) construction."
+  ]
+}
+```
+
+================================================================================
+FILE: 1777504774641_Class_11_20_2024
+TITLE: Understanding Mudaaf and Mudaaf-ilayhi in Arabic Grammar
+================================================================================
+
+PHASE 1 — ISSUES FOUND
+
+[title]
+- "Mudaaf" and "Mudaaf-ilayhi" standalone transliterations — Rule 1.
+
+[summary]
+- "Mudaaf" and "Mudaaf-ilayhi" standalone — Rule 1.
+- "'nasrullahi'" standalone — Rule 1.
+
+[key_points]
+- key_points[0]: "'Mudaaf'" standalone — Rule 1.
+- key_points[1]: "'nasrullahi'" standalone — Rule 1.
+- key_points[2]: "'Jannat-u-Adnin'" — standalone transliteration with Urdu connector "-u-" — Rule 1, Rule 3 (Urdu izāfah connector in place of Arabic).
+- key_points[3]: Multiple standalone transliterations — Rule 1.
+
+[questions]
+- questions[0]: "Mudaaf e Layh" — "e" is an Urdu connector (izāfah) substituted for the Arabic إِلَيْهِ — Rule 3.
+
+[tags]
+- "Mudaaf" standalone — Rule 1.
+- "Nahw" standalone — Rule 1.
+
+[transcript]
+- "mudaaf" / "mudaaf ilayhi" standalone — Rule 1 (first occurrence).
+- "Mudaaf e Layh" Urdu connector — Rule 3 (first occurrence, flag once).
+
+PHASE 2 — PROPOSED CHANGES
+
+```json
+{
+  "title": "Understanding مُضَاف (muḍāf : possessed noun) and مُضَافٌ إِلَيْهِ (muḍāf ilayhi : possessor) in Arabic Grammar",
+  "summary": "This session focuses on the مُضَاف (muḍāf : possessed noun) and مُضَافٌ إِلَيْهِ (muḍāf ilayhi : possessor) possessive construction with Qurʾānic examples such as نَصْرُ اللَّهِ (naṣru llāhi : the help of Allah) and جَنَّاتُ عَدْنٍ (jannātu ʿadnin : gardens of Eden). Rules discussed include the مُضَاف losing its تَنْوِين (tanwīn) and اَلْ, and the مُضَافٌ إِلَيْهِ taking كَسْرَة (kasrah).",
+  "key_points": [
+    "The مُضَاف (muḍāf : possessed noun) loses its تَنْوِين (tanwīn) and اَلْ (al-) when it precedes the مُضَافٌ إِلَيْهِ (muḍāf ilayhi : possessor).",
+    "Qurʾānic example: نَصْرُ اللَّهِ (naṣru llāhi : the help of Allah) — نَصْر (naṣr) is مُضَاف (muḍāf) and اللَّه is مُضَافٌ إِلَيْهِ (muḍāf ilayhi).",
+    "Qurʾānic example: جَنَّاتُ عَدْنٍ (jannātu ʿadnin : gardens of Eden) — جَنَّاتُ is مُضَاف (muḍāf) and عَدْن is مُضَافٌ إِلَيْهِ (muḍāf ilayhi) taking كَسْرَة (kasrah).",
+    "The five rules of مُضَاف (muḍāf)–مُضَافٌ إِلَيْهِ (muḍāf ilayhi): (1) مُضَاف comes first, (2) مُضَاف loses اَلْ, (3) مُضَاف loses تَنْوِين, (4) مُضَافٌ إِلَيْهِ is generally مَجْرُور (majrūr : genitive) with كَسْرَة, (5) nothing may come between them."
+  ],
+  "questions": [
+    "[00:10:00] Q: What is the difference between مُضَاف (muḍāf : possessed noun) and مُضَافٌ إِلَيْهِ (muḍāf ilayhi : possessor)? — A: مُضَاف is the possessed noun that comes first and loses اَلْ and تَنْوِين; مُضَافٌ إِلَيْهِ is the possessor that follows with كَسْرَة (kasrah).",
+    "[00:25:00] Q: Why does the مُضَافٌ إِلَيْهِ (muḍāf ilayhi : possessor) sometimes not take كَسْرَة (kasrah)? — A: Exceptions include words like مُوسَى (Mūsā) which are غَيْرُ الْمُنْصَرِف (ghayr al-munṣarif : diptote) and take فَتْحَة (fatḥah) instead."
+  ]
+}
+```
+
+================================================================================
+FILE: 1777504774710_Class_12_2_2024
+TITLE: Understanding Possessive Constructions in Arabic: 'Ibn' and 'Kitabun'
+================================================================================
+
+PHASE 1 — ISSUES FOUND
+
+[title]
+- "'Ibn'" and "'Kitabun'" standalone transliterations — Rule 1.
+
+[summary]
+- "'Ibn'" and "'Kitabun'" standalone — Rule 1.
+- "'Hamzat al-Wasl'" standalone — Rule 1.
+- "possessed" and "possessor" plain English for مُضَاف and مُضَافٌ إِلَيْهِ — Rule 2.
+
+[key_points]
+- key_points[0]: Transliteration precedes Arabic throughout — Rule 1.
+- key_points[1]: "'Hamzat al-Wasl'" standalone — Rule 1.
+- key_points[2]: "possessed/possessor" plain English — Rule 2.
+- key_points[3]: Multiple standalone transliterations — Rule 1.
+
+[questions]
+- questions[0]: Timestamp "00:10:00,000" uses comma — minor formatting.
+- questions[1]: Transliteration standalone in question text — Rule 1.
+
+[tags]
+- "Mudaf" standalone — Rule 1.
+- "Nahw" standalone — Rule 1.
+
+[transcript]
+- Transliteration precedes Arabic throughout — Rule 1 (first occurrence, flag once).
+- "possessed/possessor" — Rule 2 (first occurrence).
+- "hamzat al-wasl" standalone — Rule 1 (first occurrence).
+
+PHASE 2 — PROPOSED CHANGES
+
+```json
+{
+  "title": "Understanding Possessive Constructions in Arabic: اِبْن (ibn : son) and كِتَابٌ (kitābun : a book)",
+  "summary": "This session covers the مُضَاف (muḍāf : possessed noun) and مُضَافٌ إِلَيْهِ (muḍāf ilayhi : possessor) possessive construction with examples like اِبْنُ الْمُدَرِّسِ (ibnu l-mudarrisi : the son of the teacher). The teacher also explains حَمْزَةُ الْوَصْل (hamzat al-waṣl : connecting hamza) as it appears in اِبْن (ibn) and similar words, and reviews how the مُضَاف (muḍāf) loses its اَلْ and تَنْوِين (tanwīn).",
+  "key_points": [
+    "اِبْن (ibn : son) is an example of مُضَاف (muḍāf : possessed noun); it begins with حَمْزَةُ الْوَصْل (hamzat al-waṣl : connecting hamza) that is silent in connected speech.",
+    "حَمْزَةُ الْوَصْل (hamzat al-waṣl : connecting hamza) appears at the start of certain words like اِبْن (ibn), اِسْم (ism), and اَلْ (al-); it is pronounced only at the beginning of speech.",
+    "The مُضَاف (muḍāf : possessed noun) loses its اَلْ (al-) and تَنْوِين (tanwīn) when preceding the مُضَافٌ إِلَيْهِ (muḍāf ilayhi : possessor).",
+    "The مُضَافٌ إِلَيْهِ (muḍāf ilayhi : possessor) generally takes كَسْرَة (kasrah), making it مَجْرُور (majrūr : genitive)."
+  ],
+  "questions": [
+    "[00:10:00] Q: Why does اِبْن (ibn : son) sometimes appear without its initial alif in writing? — A: Because اِبْن starts with حَمْزَةُ الْوَصْل (hamzat al-waṣl : connecting hamza) which is dropped in connected speech and sometimes omitted in writing when the word is not at the start.",
+    "[00:20:00] Q: Why does the مُضَاف (muḍāf : possessed noun) lose its تَنْوِين (tanwīn)? — A: Because the مُضَافٌ إِلَيْهِ (muḍāf ilayhi : possessor) that follows it already specifies the noun, making تَنْوِين (tanwīn) redundant."
+  ]
+}
+```
+
+================================================================================
+FILE: 1777504774810_Class_12_11_2024
+TITLE: Understanding Gender in Nouns and Body Parts with Examples from the Qur'an
+================================================================================
+
+PHASE 1 — ISSUES FOUND
+
+[title]
+- No transliteration violations in the title.
+
+[summary]
+- "lam al-jar" standalone — Rule 1.
+- "ta marbutah" standalone — Rule 1.
+
+[key_points]
+- key_points[1]: "Lamb" appears as a garbled word — likely meant لَامُ الْجَرّ (lāmu l-jarr : the preposition lam) — Rule 3.
+- key_points[2]: "ta marbutah" standalone — Rule 1.
+- key_points[4]: "hath" is an incorrect/garbled transliteration for هَٰذِهِ (hādhihi : this [fem.]) — Rule 3.
+- key_points[5]: Gendering rule discussed for body parts — content is correct but terminology uses plain English.
+
+[questions]
+- questions[2]: "hadath" used as a term — wrong; likely meant هَٰذَا (hādhā) or هَٰذِهِ (hādhihi) — Rule 3.
+
+[tags]
+- "Lam Al-Jar" standalone — Rule 1.
+- "Sama'i Terms" standalone transliteration — Rule 1.
+- "Nahw" standalone — Rule 1.
+
+[transcript]
+- "lam al-jar" standalone — Rule 1 (first occurrence).
+- "ta marbutah" standalone — Rule 1 (first occurrence).
+- "hath" garbled transliteration — Rule 3 (first occurrence).
+
+PHASE 2 — PROPOSED CHANGES
+
+```json
+{
+  "title": "Understanding جِنْس (jins : gender) in Nouns and Body Parts with Examples from the Qurʾān",
+  "summary": "This session focuses on determining جِنْس (jins : gender) of Arabic nouns, particularly for body parts and nouns lacking تَاء مَرْبُوطَة (tāʾ marbūṭah : the feminine marker ة). The teacher covers لَامُ الْجَرّ (lāmu l-jarr : the preposition lam — لِـ), which assigns كَسْرَة (kasrah), and distinguishes between سَمَاعِي (samāʿī : heard/memorized) gender rules and those predictable from word endings.",
+  "key_points": [
+    "لَامُ الْجَرّ (lāmu l-jarr : the preposition lam — لِـ) assigns كَسْرَة (kasrah) to the following noun: لِلَّهِ (lillāhi : for/belonging to Allah).",
+    "تَاء مَرْبُوطَة (tāʾ marbūṭah : the feminine marker ة) generally marks a noun as مُؤَنَّث (muʾannath : feminine), but some مُؤَنَّث nouns lack it and must be memorized (سَمَاعِي — samāʿī : heard).",
+    "هَٰذِهِ (hādhihi : this [fem.]) is the مُؤَنَّث (muʾannath : feminine) counterpart to هَٰذَا (hādhā : this [masc.]).",
+    "Body parts with pairs — e.g., يَد (yad : hand), عَيْن (ʿayn : eye), رِجْل (rijl : foot) — are generally مُؤَنَّث (muʾannath : feminine); body parts without pairs are generally مُذَكَّر (mudhakkar : masculine)."
+  ],
+  "questions": [
+    "[00:10:00] Q: How do we identify مُؤَنَّث (muʾannath : feminine) nouns that lack تَاء مَرْبُوطَة (tāʾ marbūṭah)? — A: They must be memorized as سَمَاعِي (samāʿī : heard) exceptions, such as شَمْس (shams : sun), نَار (nār : fire), and أَرْض (arḍ : earth).",
+    "[00:25:00] Q: Why are paired body parts مُؤَنَّث (muʾannath : feminine)? — A: This is a سَمَاعِي (samāʿī : heard) rule in Arabic: paired body parts like يَد (yad : hand) and عَيْن (ʿayn : eye) are treated as مُؤَنَّث (muʾannath : feminine) by convention.",
+    "[00:35:00] Q: What is هَٰذِهِ (hādhihi : this [fem.])? — A: هَٰذِهِ (hādhihi) is the مُؤَنَّث (muʾannath : feminine) demonstrative pronoun corresponding to مُذَكَّر (mudhakkar : masculine) هَٰذَا (hādhā : this [masc.])."
+  ]
+}
+```
+
+================================================================================
+FILE: 1777504774844_Class_12_09_2024
+TITLE: Arabic Handwriting Practice and Gender Identification in Nouns
+================================================================================
+
+PHASE 1 — ISSUES FOUND
+
+[title]
+- No transliteration violations in the title.
+
+[summary]
+- "tanwin" confused with تَاء مَرْبُوطَة in the summary — factual confusion: tanwīn (تَنْوِين) and tāʾ marbūṭah (تَاء مَرْبُوطَة) are distinct concepts; the summary appears to conflate them — Rule 3.
+- "ta marbutah" standalone — Rule 1.
+
+[key_points]
+- key_points[1]: "تان" — garbled Arabic; likely intended as تَنْوِين (tanwīn) but rendered as two letters without diacritics — Rule 3.
+- key_points[2]: "شمس (sun)" — Arabic missing diacritics (should be شَمْس) — Rule 1.
+- key_points[3]: "ta marbutah" standalone — Rule 1.
+- key_points[4]: Gendering rule for body parts — content correct but uses plain English terms for مُذَكَّر/مُؤَنَّث.
+
+[questions]
+- questions[0]: "tanwin" standalone — Rule 1.
+- questions[2]: "huruf al-jall" — wrong term; likely intended حُرُوف الْجَرّ (ḥurūf al-jarr : prepositions) — Rule 3.
+
+[tags]
+- "Tanwin Rules" standalone — Rule 1.
+- "Nahw" standalone — Rule 1.
+
+[transcript]
+- "Tamar Bhuta" — phonetic approximation of تَاء مَرْبُوطَة in a non-Arabic accent, used in transcript — Rule 3 (flag once as phonetic approximation).
+- "tanwin" standalone — Rule 1 (first occurrence).
+- "ta marbutah" standalone — Rule 1 (first occurrence).
+- "huruf al-jall" wrong term — Rule 3 (first occurrence).
+
+PHASE 2 — PROPOSED CHANGES
+
+```json
+{
+  "title": "Arabic Handwriting Practice and جِنْس (jins : gender) Identification in Nouns",
+  "summary": "This session focuses on Arabic handwriting practice and identifying the جِنْس (jins : gender) of nouns. The teacher distinguishes تَاء مَرْبُوطَة (tāʾ marbūṭah : the feminine marker ة) from تَنْوِين (tanwīn : the indefinite double vowel ending), clarifies which nouns are سَمَاعِي (samāʿī : heard/memorized) مُؤَنَّث (muʾannath : feminine) without تَاء مَرْبُوطَة, and reviews writing exercises from the textbook.",
+  "key_points": [
+    "Handwriting practice reinforces correct letter formation and vowel placement for words learned so far.",
+    "تَنْوِين (tanwīn : the indefinite double vowel ending) marks نَكِرَة (nakirah : indefiniteness); تَاء مَرْبُوطَة (tāʾ marbūṭah : the feminine marker ة) marks مُؤَنَّث (muʾannath : feminine) gender — these are two distinct concepts.",
+    "Some nouns are مُؤَنَّث (muʾannath : feminine) without تَاء مَرْبُوطَة (tāʾ marbūṭah) and must be memorized: شَمْس (shams : sun), نَار (nār : fire), أَرْض (arḍ : earth).",
+    "تَاء مَرْبُوطَة (tāʾ marbūṭah : the feminine marker ة) is pronounced as a hāʾ (هَاء) when pausing and as a tāʾ (تَاء) in connected speech."
+  ],
+  "questions": [
+    "[00:10:00] Q: What is the difference between تَنْوِين (tanwīn) and تَاء مَرْبُوطَة (tāʾ marbūṭah)? — A: تَنْوِين (tanwīn : indefinite double vowel) marks نَكِرَة (nakirah : indefiniteness); تَاء مَرْبُوطَة (tāʾ marbūṭah : the feminine marker ة) marks مُؤَنَّث (muʾannath : feminine) gender.",
+    "[00:20:00] Q: How do we identify مُؤَنَّث (muʾannath : feminine) nouns without تَاء مَرْبُوطَة (tāʾ marbūṭah)? — A: By memorization (سَمَاعِي — samāʿī : heard); examples include شَمْس (shams : sun) and نَار (nār : fire).",
+    "[00:35:00] Q: What do حُرُوف الْجَرّ (ḥurūf al-jarr : prepositions) do to the following noun? — A: They assign كَسْرَة (kasrah), making the noun مَجْرُور (majrūr : genitive)."
+  ]
+}
+```
+
+================================================================================
+FILE: 1777504774932_Class_12_18_2024
+TITLE: Arabic Grammar: Hurúf Al-Jar, Mudhaf and Mudhaf Ilayh, Verbs in Past Tense
+================================================================================
+
+PHASE 1 — ISSUES FOUND
+
+[title]
+- "Hurúf Al-Jar" standalone transliteration (also with spurious accent on ú) — Rule 1.
+- "Mudhaf and Mudhaf Ilayh" standalone — Rule 1.
+
+[summary]
+- "hurúf al-jar" standalone — Rule 1.
+- "Fi" and "Ala" standalone — Rule 1.
+- "kharaJ(a)" inconsistent romanization — Rule 1.
+
+[key_points]
+- key_points[0]: "فِي، عَلَى، إِلَى، مِن، لِـ" — Arabic given, but transliterations precede in prose — Rule 1 throughout the key_points prose.
+- key_points[1]: "tanwīn" standalone — Rule 1. "female proper names" plain English for أَسْمَاء الْمُؤَنَّث — Rule 2.
+- key_points[2]: "kharaja", "zahabu" standalone — Rule 1.
+- key_points[3]: "Mudāf" and "mudāf ilayh" standalone — Rule 1.
+- key_points[4]: "Ẓarf" standalone — Rule 1. "هُنَاكَ" and "تَحْتَ" given correctly with Arabic.
+- key_points[5]: "Ḥarf al-nidāʾ (يَا)" — Arabic is given, but the term is otherwise presented in standalone transliteration form — mixed compliance.
+- key_points[7]: "tāʾ marbūṭah (ة)" — partially compliant; "words describing females" plain English — Rule 2.
+- key_points[9]: "body parts with pairs" / "body parts without pairs" — plain English for مُذَكَّر/مُؤَنَّث rule — Rule 2.
+
+[questions]
+- questions[0]: "Body parts with counterparts (arms, eyes) use feminine; others like nose (male)" — "male" for مُذَكَّر — Rule 2.
+- questions[1]: "exceptions include names that don't change" — plain English; "Musa, Ibrahim" standalone — Rule 1.
+
+[tags]
+- "Nahw" standalone — Rule 1.
+- "Iʿrab" standalone — Rule 1.
+- "Harf Al-Jar" standalone — Rule 1.
+- "Mudhaf" standalone — Rule 1.
+
+[transcript]
+- "harf al-jar" standalone — Rule 1 (first occurrence).
+- "male" for مُذَكَّر — Rule 2 (first occurrence).
+- "mudaf" / "mudaf ilay" standalone — Rule 1 (first occurrence).
+- "female names" for مُؤَنَّث — Rule 2 (first occurrence).
+
+PHASE 2 — PROPOSED CHANGES
+
+```json
+{
+  "title": "Arabic Grammar: حُرُوف الْجَرّ (ḥurūf al-jarr : prepositions), مُضَاف (muḍāf : possessed noun) and مُضَافٌ إِلَيْهِ (muḍāf ilayhi : possessor), Verbs in فِعْل مَاضِي (fiʿl māḍī : past tense)",
+  "summary": "The session covered advanced grammar topics including the functions and usage of حُرُوف الْجَرّ (ḥurūf al-jarr : prepositions — making following words مَجْرُور — majrūr : genitive), rules governing مُضَاف (muḍāf : possessed noun) and مُضَافٌ إِلَيْهِ (muḍāf ilayhi : possessor), and فِعْل مَاضِي (fiʿl māḍī : past tense) verbs indicating مُذَكَّر (mudhakkar : masculine), مُفْرَد (mufrad : singular), third person. Key examples included فِي (fī : in), عَلَى (ʿalā : on) as prepositions and verbs like خَرَجَ (kharaja : he exited) for actions in the past.",
+  "key_points": [
+    "حُرُوف الْجَرّ (ḥurūf al-jarr — e.g., فِي — fī : in, عَلَى — ʿalā : on, إِلَى — ilā : to, مِنْ — min : from, لِـ — li- : for) make the following word مَجْرُور (majrūr : genitive — typically with كَسْرَة). Example: فِي الْمَسْجِدِ (fī l-masjidi : in the mosque).",
+    "أَسْمَاء الْمُؤَنَّث (asmāʾ al-muʾannath : feminine proper names) do not take تَنْوِين (tanwīn — e.g., فَاطِمَةُ، زَيْنَبُ، مَرْيَمُ), unlike regular مُؤَنَّث (muʾannath : feminine) nouns which may still take تَنْوِين (e.g., سَاعَةٌ — sāʿatun : a watch).",
+    "فِعْل مَاضِي (fiʿl māḍī : past tense verb — e.g., خَرَجَ — kharaja : he exited, ذَهَبَ — dhahaba : he went) indicates four things in this form: مَاضِي (māḍī : past tense), مُذَكَّر (mudhakkar : masculine), مُفْرَد (mufrad : singular), and third person.",
+    "مُضَاف (muḍāf : possessed noun) and مُضَافٌ إِلَيْهِ (muḍāf ilayhi : possessor) construction is translated as 'the X of Y' (e.g., كِتَابُ مُحَمَّدٍ — kitābu muḥammadin : the book of Muḥammad). Rules: the مُضَاف (muḍāf) comes first, cannot have اَلْ or تَنْوِين, the مُضَافٌ إِلَيْهِ (muḍāf ilayhi) is generally مَجْرُور (majrūr : genitive), and nothing comes between them.",
+    "ظَرْف (ẓarf : adverb of place or time) words indicate place or time (e.g., هُنَاكَ — hunāka : there, تَحْتَ — taḥta : under) and are used to describe location or timing.",
+    "حَرْف النِّدَاء (ḥarf al-nidāʾ : the vocative particle) يَا (yā : O) is used to call someone and generally makes the following noun take a single ضَمَّة (ḍammah) without تَنْوِين (e.g., يَا يَاسِرُ، يَا اللَّهُ).",
+    "Demonstrative pronouns: هَٰذَا (hādhā : this [masc. sg. near]) is used for مُذَكَّر (mudhakkar : masculine) singular nearby objects, while هَٰذِهِ (hādhihi : this [fem. sg. near]) is used for مُؤَنَّث (muʾannath : feminine) singular nearby objects.",
+    "Words describing مُؤَنَّث (muʾannath : feminine) nouns take تَاء مَرْبُوطَة (tāʾ marbūṭah : the feminine marker ة), such as وَاقِفَةٌ (wāqifatun : standing [fem.]) and مُهَنْدِسَةٌ (muhandisatun : female engineer).",
+    "Some nouns are مُؤَنَّث (muʾannath : feminine) despite lacking تَاء مَرْبُوطَة (tāʾ marbūṭah) and must be memorized (e.g., شَمْسٌ — shamsun : sun, نَارٌ — nārun : fire, جَهَنَّمُ — jahannam : hellfire, نَفْسٌ — nafsun : soul, سَبِيلٌ — sabīlun : path).",
+    "General body-part gender rule: body parts with one counterpart are typically مُذَكَّر (mudhakkar : masculine), while body parts with two counterparts (e.g., يَدٌ — yadun : hand, عَيْنٌ — ʿaynun : eye, رِجْلٌ — rijlun : foot) are generally مُؤَنَّث (muʾannath : feminine)."
+  ],
+  "questions": [
+    "[00:49:01] Q: How are body parts grammatically categorized? — A: Body parts with counterparts (arms, eyes) are مُؤَنَّث (muʾannath : feminine); those without pairs like the nose are مُذَكَّر (mudhakkar : masculine).",
+    "[00:23:00] Q: Why is the مُضَافٌ إِلَيْهِ (muḍāf ilayhi : possessor) sometimes not in كَسْرَة (kasrah)? — A: Exceptions include names that are غَيْرُ الْمُنْصَرِف (ghayr al-munṣarif : diptote) such as مُوسَى (Mūsā) and إِبْرَاهِيمَ (Ibrāhīma) which take فَتْحَة (fatḥah) instead of كَسْرَة."
+  ]
+}
+```
+
+================================================================================
+Review: 1776898777182_
+Title: Understanding the Object of a Verb (المفعول به) in Arabic
+================================================================================
+
+**[title]**
+- No transliteration violations.
+
+**[summary]**
+- "fatha (فَتْحَة)" — transliteration precedes Arabic script; replace with فَتْحَة (fatḥah : short a-vowel). Rule 1.
+
+**[key_points]**
+- key_points[2]: "كتب from Surah Al-Baqarah" — كتب was not used as a مَفْعُولٌ بِهِ example from Al-Baqarah in this session. The two Quranic examples given were إِبْرَاهِيمَ (Al-Baqarah 2:124) and الْعُلَمَاءُ (Fatir 35:28). Hallucinated example. Rule 3.
+
+**[tags]**
+- "Maf'ool Bihi (المفعول به)" — transliteration precedes Arabic script. Rule 1.
+- "Case Endings (تحريك)" — تحريك means vocalization/movement, not case endings; correct term is إِعْرَاب (iʿrāb : case endings). Rule 3.
+
+**[quiz]**
+- quiz[1].options: "Damma (ـُ)", "Kasra (ـِ)", "Fatha (ـَ)" — transliteration precedes diacritics; Arabic diacritic should appear first. Rule 1.
+
+**[transcript]**
+- "مفرولون به" — garbled for مَفْعُولٌ بِهِ (mafʿūlun bihi : direct object); first occurrence flagged. Rule 3.
+
+--- PHASE 2 — PROPOSED CHANGES ---
+
+```json
+{
+  "title": "Understanding the Object of a Verb (المفعول به) in Arabic",
+  "summary": "The session focused on explaining the concept of the object of a verb (المفعول به) in Modern Standard Arabic, emphasizing its grammatical rules and practical applications. The teacher used Quranic examples to illustrate how the presence of a فَتْحَة (fatḥah : short a-vowel) indicates an object and stressed avoiding common mistakes that alter meanings.",
+  "key_points": [
+    "The مفعول به (object of a verb) is marked with a فتحة, contrasting with verbs requiring no object like ' exited' (خرج).",
+    "In example sentences like 'I love him' (أُحِبُّه), the object takes a fatha to show it's the target of action.",
+    "Quranic examples such as إِبْرَاهِيمَ from Surah Al-Baqarah (2:124) and الْعُلَمَاءُ from Surah Fatir (35:28) highlight the importance of proper case endings for meaning accuracy.",
+    "Common mistakes, like incorrect case endings in phrases like 'I love my father' (أُحِبُّ أبي), were discussed to prevent misinterpretation."
+  ],
+  "questions": [
+    "[00:01:52] Q: How do you respond to من في هذه السيارة? — A: Using فيها for feminine objects and فيه for masculine, e.g., فيها أمي.",
+    "[00:06:38] Q: Why is the correct Quranic reading إبراهيم with a fatha? — A: To denote the word Ibrahim as the object (being tested), not the subject."
+  ]
+}
+```
+
+================================================================================
+Review: 1777597212867_AUDIO-2025-09-17-20-00-59
+Title: Pronouns, Verbs and Context Clues in Arabic
+================================================================================
+
+**[summary]**
+- "ikhwan/yā a frat kutābitum" — "ya a frat" is garbled and "kutābitum" does not appear in the transcript; hallucinated forms. Rule 3.
+- "qabla (before)" — transliteration precedes English gloss without Arabic script first; replace with قَبْلَ (qabla : before). Rule 1.
+- "ba'da (after)" — same issue; replace with بَعْدَ (baʿda : after). Rule 1.
+
+**[key_points]**
+- key_points[0]: "ya a frat (singular)" — not a real Arabic expression. Rule 3. "ya ikhwanat" — not a real Arabic term. Rule 3. Standalone transliterations throughout without Arabic-first format. Rule 1.
+- key_points[1]: "qabla (قبل)" — transliteration before Arabic. Rule 1. "ba'da (بَعد)" — same. Rule 1. "qabla al-shahr" standalone without Arabic. Rule 1.
+- key_points[4]: "Muntassila vs. munfassila" — wrong spellings; correct transliterations are muttaṣilah / munfaṣilah. Rule 3. "Dhamir" standalone without Arabic-first. Rule 1.
+
+**[questions]**
+- questions[0]: "ikhwan to akhawatu" — standalone transliterations without Arabic-first format. Rule 1.
+- questions[1]: "Hamzat al-Wassl" — garbled; correct term is حَمْزَةُ الوَصْل (hamzat al-waṣl : connecting hamza). Rule 3. "Hamzat al-Qatar" should be حَمْزَةُ الْقَطْع (hamzat al-qaṭʿ : cutting hamza). Rule 3/1. "Ma'a asma'ukum" standalone. Rule 1.
+- questions[2]: "Hadi" — standalone transliteration for هَذِهِ (hādhihi). Rule 1.
+
+**[transcript]**
+- "Hamdatul Wasm" — garbled for حَمْزَةُ الوَصْل (hamzat al-waṣl : connecting hamza); first occurrence flagged. Rule 3.
+
+--- PHASE 2 — PROPOSED CHANGES ---
+
+```json
+{
+  "title": "Pronouns, Verbs and Context Clues in Arabic",
+  "summary": "This lesson covers the correct use of pronouns in response to context clues, specifically focusing on gender and number agreement for address terms. It also emphasizes understanding time-related adverbs like قَبْلَ (qabla : before) and بَعْدَ (baʿda : after), and how they attach to nouns. The teacher underscores the importance of context in determining verb forms and possessive structures.",
+  "key_points": [
+    "Pronouns must agree with gender and number: يَا إِخْوَان (yā ikhwān : O brothers, plural masculine), يَا أُخْتُ (yā ukhtu : O sister, singular feminine). Proper feminine plural address forms include يَا أَخَوَات (yā akhawāt : O sisters, plural feminine).",
+    "Time adverbs قَبْلَ (qabla : before) and بَعْدَ (baʿda : after) attach to nouns indicating time (e.g., قَبْلَ الشَّهْرِ for 'before the month / a month ago').",
+    "Context determines verb forms: When addressing a male, use Zahabta; for females, Zahat. Third person uses Zahaba/Zahabat.",
+    "Possessive pronouns require proper agreement: Asa'atuki (your singular feminine watch), Masma'ukum (plural 'your names').",
+    "الضَّمِيرُ (al-ḍamīr : pronoun) takes two forms: مُتَّصِلَة (muttaṣilah : attached pronouns) and مُنْفَصِلَة (munfaṣilah : detached pronouns), depending on context."
+  ],
+  "questions": [
+    "[00:03:00] Q: Why change إِخْوَان (ikhwān) to أَخَوَات (akhawāt) when addressing sisters? — A: To reflect gender agreement; when addressing females, use feminine plural forms.",
+    "[00:14:00] Q: How is حَمْزَةُ الوَصْل (hamzat al-waṣl : connecting hamza) pronounced in plurals like أَسْمَاء (asmāʾ)? — A: It becomes حَمْزَةُ الْقَطْع (hamzat al-qaṭʿ : cutting hamza, pronounced at the start of speech), e.g., مَا أَسْمَاؤُكُم (mā asmāʾukum : what are your names).",
+    "[00:29:00] Q: Why use هَذِهِ (hādhihi) for plural pens? — A: Rule explained next session; cliffhanger."
+  ]
+}
+```
+
+================================================================================
+Review: 1777597215883_2025-10-20
+Title: Numbers in Arabic Grammar: Masculine-Feminine Opposites and Practical Application
+================================================================================
+
+**[title]**
+- No violations.
+
+**[summary]**
+- "masculine-feminsin" — typo for "masculine-feminine". Rule 3.
+- "arba'atu talibat" — standalone transliteration without Arabic-first format. Rule 1.
+
+**[key_points]**
+- key_points[0]: "arba'atu talibat" — standalone transliteration. Rule 1.
+- key_points[1]: "sab'atu riyalatin" — standalone transliteration. Rule 1.
+- key_points[2]: "mudaf (mafuu')" — CRITICAL factual error: مَفْعُولٌ (mafʿūl) means direct object, which is completely different from مُضَاف (muḍāf : construct noun). These are entirely distinct grammatical concepts. Rule 3.
+- key_points[3]: "rajad, rubbana" — garbled forms. The Quranic vocabulary discussed was رِجَالًا (rijālan : on foot) and رُكْبَانًا (rukbānan : riding) from Al-Baqarah 2:239. Rule 3.
+
+**[tags]**
+- "Numbers (A'dad)" — transliteration before Arabic. Rule 1.
+- "Nouns (Ismaa')" — standalone transliteration. Rule 1.
+
+**[questions]**
+- questions[0]: "khamsatu ikhwatin" — standalone transliteration. Rule 1.
+- questions[1]: "arba'atu a'mamin" — standalone transliteration. Rule 1.
+
+--- PHASE 2 — PROPOSED CHANGES ---
+
+```json
+{
+  "title": "Numbers in Arabic Grammar: Masculine-Feminine Opposites and Practical Application",
+  "summary": "The session focused on applying masculine-feminine number rules to female nouns. Students practiced forming numbers from three to ten with feminine مَعْدُود (maʿdūd : counted noun), emphasizing the opposite gender rule for numbers. The teacher used examples like 'four students' (أَرْبَعُ طَالِبَاتٍ : arbaʿu ṭālibāt) and discussed pluralization in specific contexts, clarifying common mistakes regarding تَنْوِين (tanwīn) and مُضَاف-مُضَافٌ إِلَيْهِ (muḍāf-muḍāf ilayhi) rules.",
+  "key_points": [
+    "Numbers from three to ten follow a masculine-feminine opposite rule when counting nouns. For female مَعْدُود (maʿdūd : counted noun), use male numbers (e.g., أَرْبَعُ طَالِبَاتٍ : arbaʿu ṭālibāt).",
+    "Pluralization of counted nouns must agree with the singular gender: if the singular is feminine, the plural number takes كَسْرَة (kasrah : short i-vowel) (e.g., سَبْعُ رِيَالَاتٍ : sabʿu riyālāt).",
+    "Key terms like مُضَاف (muḍāf : construct noun) and مُضَافٌ إِلَيْهِ (muḍāf ilayhi : possessor) were reviewed in examples such as خَمْسَةُ أَعْمَامٍ (khamsat aʿmām : five paternal uncles).",
+    "Quranic vocabulary from Surah Al-Baqarah (2:239) was discussed: رِجَالًا (rijālan : on foot) and رُكْبَانًا (rukbānan : riding) as two conditions for prayer under circumstances of fear."
+  ],
+  "questions": [
+    "[00:03:00] Q: How many brothers do you have? — A: Use female numbers for male plural nouns (e.g., خَمْسَةُ إِخْوَةٍ : khamsat ikhwah).",
+    "[00:19:00] Q: Why is أَرْبَعُ أَعْمَامٍ (arbaʿu aʿmām) correct instead of أَرْبَعٌ? — A: The counted noun is مُضَافٌ إِلَيْهِ (muḍāf ilayhi : possessor) in the iḍāfah construction and takes كَسْرَة (kasrah : short i-vowel) as genitive."
+  ]
+}
+```
+
+================================================================================
+Review: 1777597219021_2025-10-22
+Title: Using Numbers with Nouns: Gender and Plural Agreement in Arabic
+================================================================================
+
+**[title]**
+- No violations.
+
+**[summary]**
+- No violations.
+
+**[key_points]**
+- key_points[2]: "iḍāfah structure" — standalone transliteration without Arabic-first format. Rule 1.
+- key_points[4]: "Mawṣūf and Ṣifah" — standalone transliterations. Rule 1.
+
+**[quiz]**
+- Quiz schema appears non-standard in this file (question/answer strings rather than the expected q/options/correctIndex/a structure); could not verify against transcript. Rule 3.
+
+--- PHASE 2 — PROPOSED CHANGES ---
+
+```json
+{
+  "title": "Using Numbers with Nouns: Gender and Plural Agreement in Arabic",
+  "summary": "The session focuses on correctly applying numbers to nouns in Modern Standard Arabic, emphasizing gender agreement and plural forms. The teacher explains how numeric adjectives must agree in gender with the noun they modify and how plurals affect this agreement. Students practice translating sentences using correct grammatical structures.",
+  "key_points": [
+    "Numbers from 3–10 must be opposite in gender to the noun being counted: feminine nouns take masculine numbers, and masculine nouns take feminine numbers.",
+    "Plural nouns are counted using the singular grammatical form of the number structure, e.g., ثمانية طبيبات (eight female doctors).",
+    "The counted noun (المعدود) is plural and enters an إِضَافَة (iḍāfah : construct/possessive structure) after the number, e.g., ستةُ إخوةٍ (six brothers).",
+    "After كَمْ (how many?), the following noun takes a fathah, e.g., كَمْ طَالِبًا.",
+    "مَوْصُوف (mawṣūf : described noun) and صِفَة (ṣifah : adjective/descriptor) agreement: descriptive words must match the noun in gender, number, and harakah. Non-intelligent plurals are treated as singular feminine."
+  ],
+  "questions": [
+    "[00:17:01] Q: What harakah does the noun after كَمْ take? — A: It takes a fathah.",
+    "[00:39:00] Q: Why is مَفْتُوحَةٌ used for أبواب (doors)? — A: Because non-intelligent plurals are treated as singular feminine in agreement."
+  ]
+}
+```
+
+================================================================================
+Review: 1777597222169_AUDIO-2025-10-27-21-09-19
+Title: Nouns, Plurals, and Duals: Understanding Ghayr al-Munsarif and Case Endings
+================================================================================
+
+**[title]**
+- "Duals" — duals were not a focus of this session (which covered classroom items, non-sentient plural agreement, and demonstratives). Misleading label. Rule 3.
+- "Ghayr al-Munsarif" — standalone transliteration without Arabic-first format. Rule 1.
+
+**[summary]**
+- Conflates غَيْرُ الْمُنْصَرِف (non-declinable category) with non-sentient plurals (غَيْرُ الْعَاقِل — a separate rule). These are distinct grammatical concepts. Rule 3.
+- "ghayr al-munsarif" — standalone transliteration. Rule 1.
+
+**[key_points]**
+- key_points[0]: "نافذة تاني" — garbled; correct dual is نَافِذَتَانِ (nāfidhatan : two windows). Rule 3. "كرسيان (kursiyan)" — wrong; dual of كُرْسِيّ is كُرْسِيَّانِ (kursiyyāni). Rule 3.
+- key_points[1]: "كبريتون kabiratun for 'big blackboard'" — "كبريتون" is garbled; correct form is كَبِيرَةٌ (kabiratun : big, feminine singular). Rule 3.
+- key_points[2]: "Tilka (tilka)" — redundant standalone form with transliteration in parentheses. Rule 1.
+- key_points[3]: "ملك يعقوبيان (mulk Ya'qūbian)" — completely hallucinated; does not appear anywhere in the transcript. Rule 3.
+
+**[questions]**
+- questions[1]: "Uhubbu shaykh bilal" — wrong verb form; the teacher used نُحِبُّ (nuḥibbu : we love, first person plural), not أُحِبُّ (uḥibbu : I love, first person singular). Rule 3. Standalone transliteration. Rule 1.
+
+--- PHASE 2 — PROPOSED CHANGES ---
+
+```json
+{
+  "title": "Nouns, Plurals, and Demonstratives: Non-Sentient Plural Agreement and Case Endings",
+  "summary": "The session reviewed homework related to describing a classroom using proper Arabic nouns and grammatical structures. Key focus was placed on recognizing plural forms of non-sentient objects (غَيْرُ الْعَاقِل : ghayr al-ʿāqil : non-sentient), correct case endings, and contextual usage of demonstrative pronouns. Students practiced translating sentences about the classroom setup while correcting common errors in gender agreement and مَوْصُوف-صِفَة (mawṣūf-ṣifah : noun-adjective) concordance.",
+  "key_points": [
+    "Dual forms require gender consistency: نَافِذَتَانِ (nāfidhatan : two windows) is the feminine dual of نَافِذَة (nāfidhah : window). Plural forms like مَكَاتِب (makātib : desks) do not take تَنْوِين (tanwīn) as they are غَيْرُ الْمُنْصَرِف (ghayr al-munsarif : non-declinable).",
+    "Plurals of non-sentient objects (e.g., مَكَاتِب makātib : desks) take feminine singular agreement because they lack intellect. Example: كَبِيرَةٌ (kabiratun : big, feminine singular) describing سَبُّورَة (sabbūrah : blackboard).",
+    "Demonstrative pronouns like ذَٰلِكَ (dhālika : that, masculine singular far) and تِلْكَ (tilka : that, feminine singular far/non-sentient plural far) refer to distance; when referring to non-sentient plurals far from the speaker, تِلْكَ is used. Example: تِلْكَ مَكَاتِبُ الطُّلَّابِ (tilka makātibu l-ṭullāb : those are the students' desks).",
+    "Non-sentient plurals (غَيْرُ الْعَاقِل) require their descriptors and pronouns to be in singular feminine form regardless of the actual plurality of the noun."
+  ],
+  "questions": [
+    "[00:26:00] Q: Why is the object pronoun required when saying 'we love him' in Arabic? — A: Because in Arabic, the مَفْعُولٌ بِهِ (mafʿūlun bihi : direct object) must be explicitly stated; without it, the verb's target is unclear.",
+    "[00:35:00] Q: How do you say 'we love him' when referring to Shaykh Bilal? — A: Use نُحِبُّهُ (nuḥibbuhu : we love him), with the first person plural verb نُحِبُّ (nuḥibbu : we love) and the attached pronoun هُ (hu : him)."
+  ]
+}
+```
+
+================================================================================
+Review: 1777597225799_AUDIO-2025-10-29-21-13-23
+Title: Rules and Applications of Ghayrul Munsarif (غير المنصرف) in Arabic Grammar
+================================================================================
+
+**[title]**
+- "Ghayrul Munsarif (غير المنصرف)" — transliteration precedes Arabic. Rule 1.
+
+**[summary]**
+- "غ ayr ul-Mun s raf" — garbled Arabic with spaces inserted mid-word. Rule 3.
+- "(non-verbs that do not conjugate)" — CRITICAL factual error: غَيْرُ الْمُنْصَرِف applies to NOUNS and ADJECTIVES, not verbs. It means "non-declinable" (does not take كَسْرَة or تَنْوِين), not "non-conjugating verbs." Rule 3.
+- "retaining a fatha instead of jam" — "jam" is garbled; the word intended is كَسْرَة (kasrah). Rule 3.
+- "Aminatou...non-conjugating verbs" — critically wrong categorization; أَمِينَة is a non-declinable feminine proper noun, not a verb. Rule 3.
+
+**[key_points]**
+- key_points[0]: "غ ayrul-Munsarif (verbs not following conjugation rules)" — garbled Arabic, wrong definition (nouns/adjectives, not verbs). Rule 3.
+- key_points[1]: "retain fatha without jam" — "jam" garbled for "kasrah." Rule 3.
+- key_points[2]: "Aminatou are treated as non-conjugating verbs" — critically wrong: these are non-declinable feminine proper nouns. Rule 3.
+- key_points[3]: "fa' al" — standalone transliteration without Arabic-first. Rule 1.
+
+**[questions]**
+- questions[0]: "When is the test?" — scheduling information, not an Arabic grammar question. Rule 3.
+
+--- PHASE 2 — PROPOSED CHANGES ---
+
+```json
+{
+  "title": "غَيْرُ الْمُنْصَرِف (ghayr al-munsarif : non-declinable) Nouns: Rules and Applications in Arabic Grammar",
+  "summary": "The session focused on the grammatical rule of غَيْرُ الْمُنْصَرِف (ghayr al-munsarif : non-declinable) — nouns and adjectives that do not take كَسْرَة (kasrah) or تَنْوِين (tanwīn). The teacher explained how these words take فَتْحَة (fatḥah) wherever كَسْرَة would normally appear. Examples included colors and proper nouns like أَمِينَةُ (Aminatu), which are non-declinable. Homework involved reading Lesson 22's English section to reinforce understanding.",
+  "key_points": [
+    "غَيْرُ الْمُنْصَرِف (ghayr al-munsarif : non-declinable) refers to certain nouns and adjectives that do not take كَسْرَة (kasrah) or تَنْوِين (tanwīn); wherever كَسْرَة would normally appear, they take فَتْحَة (fatḥah) instead.",
+    "Colors such as أَحْمَرُ (aḥmar : red) and أَزْرَقُ (azraq : blue) retain فَتْحَة (fatḥah) wherever كَسْرَة (kasrah) would normally apply, and they never take تَنْوِين (tanwīn).",
+    "Proper nouns like أَمِينَةُ (Aminatu) are غَيْرُ الْمُنْصَرِف (ghayr al-munsarif : non-declinable) because they are feminine proper nouns; they use ضَمَّة (ḍammah) in the nominative state without تَنْوِين (tanwīn).",
+    "Identifying the فَاعِل (fāʿil : doer of the verb) in sentences is essential; the فَاعِل (fāʿil) takes ضَمَّة (ḍammah) as its case ending."
+  ],
+  "questions": [
+    "[00:26:00] Q: Why does a non-declinable adjective like أَحْمَرُ (aḥmar : red) lack تَنْوِين (tanwīn) in قَلَمٌ أَحْمَرُ (a red pen), even though قَلَمٌ has تَنْوِين? — A: Both are indefinite (مَوْصُوف and صِفَة must agree in definiteness), but غَيْرُ الْمُنْصَرِف words never take تَنْوِين regardless; this is not a mismatch in agreement.",
+    "[00:35:00] Q: Why are colors in Quran referring to human traits? — A: Colors symbolize states (e.g., dawn's white thread) not skin tones."
+  ]
+}
+```
+
+================================================================================
+Review: 1777597229177_AUDIO-2025-11-03-21-26-20
+Title: Non-Orthodox Nouns (Ghayr Munsarif) and Proper Nouns in Arabic
+================================================================================
+
+**[title]**
+- "Non-Orthodox Nouns" — non-standard rendering; the standard term is "non-declinable" or غَيْرُ الْمُنْصَرِف, not "non-orthodox." Rule 3.
+- "Ghayr Munsarif" — standalone transliteration without Arabic-first. Rule 1.
+
+**[summary]**
+- "fa'lan and af'adu" — standalone transliterations without Arabic-first format. Rule 1.
+
+**[key_points]**
+- key_points[2]: "فَعْلَان such as عُثْمَان" — factual error: عُثْمَان is a masculine proper noun ending in ān (one of the eight categories), NOT on the فَعْلَان (faʿlān) pattern, which applies to adjectives like كَسْلَان (kaslān : lazy). Rule 3.
+
+**[questions]**
+- questions[0]: "It's on the fa'lan pattern (Masajidu)" — CRITICAL factual error: مَسَاجِد is on the مَفَاعِل (mafāʿil) broken plural pattern, NOT fa'lan. fa'lan is for adjectives like كَسْلَان. Rule 3.
+
+**[tags]**
+- "Nahw" — standalone transliteration. Rule 1.
+
+--- PHASE 2 — PROPOSED CHANGES ---
+
+```json
+{
+  "title": "غَيْرُ الْمُنْصَرِف (ghayr al-munsarif : non-declinable) Nouns and Proper Nouns in Arabic",
+  "summary": "This session focuses on non-declinable nouns (غَيْرُ الْمُنْصَرِف : ghayr al-munsarif) that do not take tanween or kasrah under specific conditions. The teacher explains various categories of such nouns, including female proper names, certain patterns like فَعْلَان (faʿlān) and أَفْعَل (afʿal), and non-Arabic proper nouns. Examples include names like عَائِشَة (ʿĀʾishah), أُسَامَة (Usāmah), and لندن (London).",
+  "key_points": [
+    "Nouns/adjectives that are غَيْرُ الْمُنْصَرِف (ghayr al-munṣarif) do not take tanween. This includes words with specific grammatical properties, though words with ال, muḍāf constructions, or after يَا are prevented from tanween for different grammatical reasons.",
+    "Female proper nouns (e.g., مريم, عائشة) are inherently غَيْرُ الْمُنْصَرِف (ghayr al-munṣarif) and do not take tanween.",
+    "Words on certain patterns (e.g., فَعْلَان : faʿlān such as كَسْلَان : kaslān : lazy) and masculine proper nouns ending in ān (e.g., عُثْمَان) are غَيْرُ الْمُنْصَرِف (ghayr al-munṣarif).",
+    "Non-Arabic proper nouns (e.g., إِبْرَاهِيم, لندن, William) are غَيْرُ الْمُنْصَرِف (ghayr al-munṣarif): they do not take tanween and take a fatḥah instead of kasrah in the majrūr state unless made definite or in iḍāfah.",
+    "A common daily example of غَيْرُ الْمُنْصَرِف (ghayr al-munṣarif) appears in the Durood Ibrāhīmī: عَلَىٰ مُحَمَّدٍ uses kasrah because مُحَمَّد is an Arabic name, while عَلَىٰ إِبْرَاهِيمَ uses fatḥah because إِبْرَاهِيم عَلَيْهِ السَّلَام is a non-Arabic proper noun and therefore ghayr al-munsarif."
+  ],
+  "questions": [
+    "[00:17:04] Q: Why does مَسَاجِدُ (masājidu) take a ḍammah without tanwīn instead of kasrah after a ḥarf al-jār? — A: Because مَسَاجِد is on the مَفَاعِل (mafāʿil) broken plural pattern, making it غَيْرُ الْمُنْصَرِف (ghayr al-munsarif : non-declinable); it cannot take kasrah or tanwīn.",
+    "[00:36:00] Q: How to use 'hati' for commands? — A: Singular command, e.g., 'hati' vs. plural 'hato'."
+  ]
+}
+```
+
+================================================================================
+Review: 1777597232806_AUDIO-2025-11-05-21-01-45
+Title: Proper Nouns in Harakah Rules: Non-Arabic Names and Exceptions
+================================================================================
+
+**[title]**
+- No major violations.
+
+**[summary]**
+- "non-prolongable" — wrong translation of غَيْرُ الْمُنْصَرِف; the correct rendering is "non-declinable." Rule 3.
+- مَسَاجِد described as "Musajid" with the implication it is non-Arabic — CRITICAL factual error: مَسَاجِد IS Arabic (plural of مَسْجِد). Rule 3.
+
+**[key_points]**
+- key_points[0]: "Londnًا" — garbled rendering of لَنْدَن (London) with a misplaced diacritic. Rule 3. "non-prolongable" — wrong translation. Rule 3.
+- key_points[1]: "مَفْعَل (e.g., مساجد, Masajid)" — CRITICAL wrong pattern: مَسَاجِد is on مَفَاعِل (mafāʿil) broken plural pattern, NOT مَفْعَل (mafʿal). Rule 3. "tamarboo'ah" — garbled for تَاءُ الْمَرْبُوطَة (tāʾ marbūṭah). Rule 3.
+- key_points[2]: "Musar (school)" — hallucinated word; no such Arabic word exists. Rule 3. Claim that Makkah takes fatḥah "despite being feminine" is misleading — it takes fatḥah BECAUSE it is feminine and therefore غَيْرُ الْمُنْصَرِف. Rule 3.
+
+**[questions]**
+- questions[2]: "Min Musajidatun" — garbled; correct form is مِنْ مَسَاجِدَ (min masājida) without tanwīn. Rule 3. "due to being non-Arabic" — wrong: مَسَاجِد is Arabic. Rule 3.
+
+--- PHASE 2 — PROPOSED CHANGES ---
+
+```json
+{
+  "title": "Proper Nouns in Harakah Rules: Non-Arabic Names and Exceptions",
+  "summary": "The session focuses on applying ḥarakah rules to proper nouns, particularly non-Arabic names. The teacher explains exceptions where words do not follow the standard kasrah rule due to being غَيْرُ الْمُنْصَرِف (ghayr al-munsarif : non-declinable), emphasizing examples like مَسَاجِدُ (masājid : mosques), وَاشِنْطُن (Wāshintun : Washington), and لَنْدَن (Landan : London).",
+  "key_points": [
+    "Non-Arabic names (e.g., لَنْدَن : London) use فَتْحَة (fatḥah) instead of كَسْرَة (kasrah) because they are غَيْرُ الْمُنْصَرِف (ghayr al-munsarif : non-declinable).",
+    "Words on the broken plural pattern مَفَاعِل (mafāʿil) (e.g., مَسَاجِدُ : masājidu : mosques, مَنَادِيلُ : manādilu : handkerchiefs) are غَيْرُ الْمُنْصَرِف; proper nouns with تَاءُ الْمَرْبُوطَة (tāʾ marbūṭah) like مَرْوَانُ (Marwān) also retain فَتْحَة (fatḥah) instead of كَسْرَة.",
+    "Feminine city names like مَكَّةُ (Makkah) take فَتْحَة (fatḥah) instead of كَسْرَة because they are feminine proper nouns and therefore غَيْرُ الْمُنْصَرِف (ghayr al-munsarif : non-declinable)."
+  ],
+  "questions": [
+    "[00:02:00] Q: Why does Harun get a fatha instead of kasra? — A: Because it's a non-Arabic name, thus an exception (ghayr munsarif).",
+    "[00:04:00] Q: Why is Makkah مakkah and not Makkatin? — A: It's a female city name, so fatha applies despite the rule. ",
+    "[00:09:06] Q: Why does مَسَاجِدُ (masājidu) take فَتْحَة (fatḥah) instead of كَسْرَة after a preposition? — A: Because مَسَاجِد is an Arabic broken plural on the مَفَاعِل (mafāʿil) pattern, making it غَيْرُ الْمُنْصَرِف (ghayr al-munsarif : non-declinable); it cannot take kasrah or tanwīn."
+  ]
+}
+```
+
+================================================================================
+Review: 1777597236534_AUDIO-2025-11-12-21-21-19
+Title: Arabic Lesson 8-13 Review: Key Concepts in Grammar, Plurals, and Pronouns
+================================================================================
+
+**[title]**
+- No violations.
+
+**[summary]**
+- "mousuf and sifa" — standalone transliterations without Arabic-first format. Rule 1.
+- "Amama" — standalone transliteration. Rule 1.
+
+**[key_points]**
+- key_points[0]: "mousuf and sifa" — standalone transliterations. Rule 1. "case (جر)" — جر means specifically GENITIVE case; the correct umbrella term for case endings in general is إِعْرَاب (iʿrāb). Rule 3.
+- key_points[6]: "ذَهَبْتُ (past female)" — critically wrong: ذَهَبْتُ means "I went" (first person singular, applicable to both male and female speakers), NOT "past female." The "past female/she went" form is ذَهَبَتْ (dhahabat). Rule 3.
+
+**[questions]**
+- Empty array despite the session containing substantial Q&A about grammatical rules. Rule 3.
+
+--- PHASE 2 — PROPOSED CHANGES ---
+
+```json
+{
+  "title": "Arabic Lesson 8-13 Review: Key Concepts in Grammar, Plurals, and Pronouns",
+  "summary": "This session reviews lessons 8 to 13, focusing on grammatical structures like the مَوْصُوف (mawṣūf : described noun) and صِفَة (ṣifah : adjective/descriptor) agreement, ظَرْف (ẓarf : adverb of time/place) usage (e.g., أَمَام : amāma : in front of), attached pronouns, plurals (qiyasi and sama'i), and verb forms. Important concepts include noun-adjective agreement rules, relative pronouns (الذي), and negation with مَا.",
+  "key_points": [
+    "Noun-adjective agreement (مَوْصُوف : mawṣūf and صِفَة : ṣifah) requires matching إِعْرَاب (iʿrāb : case ending), عَدَد (ʿadad : number singular/dual/plural), جِنْس (jins : gender), and definiteness (تَنْوِين or اَلْ).",
+    "Dharf particles like أَمَام (amāma : in front of) and خَلْف (khalf : behind) indicate time/place and trigger kasrah on the following word.",
+    "Attached pronouns (ضمائر متصلة) such as -hu, -ha, and -him attach to nouns for possession (e.g., كِتَابُهُ his book).",
+    "Plurals: Qiyasi plurals follow patterns (e.g., مسلمون/مسلمات), while sama'i plurals are irregular (e.g., رجال from رجل).",
+    "Negation with مَا as نافي (e.g., مَا عِندي سَيَّارَةٌ 'I don't have a car').",
+    "Relative pronoun الَّذِي introduces clauses for description (e.g., الرَّجُلُ الَّذِي جَاء 'the man who came').",
+    "Verb forms like ذَهَبَ (past, male, 3rd person singular) and ذَهَبْتُ (past, 1st person singular — 'I went', used by both male and female speakers) demonstrate person-based conjugation."
+  ],
+  "questions": [
+    "[00:01:40] Q: What is the difference between هَذَا كِتَابٌ and هَذَا الْكِتَابُ? — A: هَذَا كِتَابٌ is a complete sentence meaning 'this is a book'; هَذَا الْكِتَابُ means 'this book' and requires a predicate (خَبَر) to complete the sentence.",
+    "[00:07:00] Q: What are the four elements in which مَوْصُوف (mawṣūf) and صِفَة (ṣifah) must agree? — A: They must match in definiteness (definite/indefinite), إِعْرَاب (iʿrāb : case ending), عَدَد (ʿadad : number — singular, dual, or plural), and جِنْس (jins : gender)."
+  ]
+}
+```
+
+================================================================================
+Review: 1777597240147_AUDIO-2025-11-17-21-16-27
+Title: Arabic Nouns: Plurals, Dual Forms, and Gender Agreement in Numbers
+================================================================================
+
+**[title]**
+- No violations.
+
+**[summary]**
+- "'-an' suffixes" — standalone transliteration without Arabic-first format. Rule 1.
+
+**[key_points]**
+- key_points[0]: "مفرد فeminine" — garbled mid-word rendering mixing Arabic and Latin scripts. Rule 3. The claim "is considered feminine like its singular كِتاب (masculine)" is contradictory; the singular is masculine, and the rule is the plural is TREATED AS singular feminine (not that it becomes feminine like the singular). Rule 3.
+- key_points[1]: "the suffix -an (أن)" — CRITICAL factual error: أن is the Arabic conjunction meaning "that/because." The dual suffix is انِ (āni in the nominative) or يْنِ (ayni in the genitive/accusative). Rule 3.
+- key_points[2]: CRITICAL wrong rule: "Numbers from 3 to 10 agree in gender with the item being counted" — WRONG. The number must be OPPOSITE in gender to the مَعْدُود (maʿdūd : counted noun). Rule 3.
+
+**[questions]**
+- questions[1]: "سبعٌ أبوابًا (sab'un abwaaban)" — CRITICAL: this is incorrect Arabic. The correct form for 'seven doors' is سَبْعَةُ أَبْوَابٍ (sabʿatu abwāb); the Quran (Surah Al-Hijr 15:44) uses لَهَا سَبْعَةُ أَبْوَابٍ. Rule 3.
+
+--- PHASE 2 — PROPOSED CHANGES ---
+
+```json
+{
+  "title": "Arabic Nouns: Plurals, Dual Forms, and Gender Agreement in Numbers",
+  "summary": "The session reviewed key grammatical concepts including plurals of non-intellect beings (غَيْرُ عَاقِل : ghayr al-ʿāqil) treated as singular feminine, dual forms using the suffix انِ (āni), and rules for gender agreement when counting objects. The teacher emphasized foundational topics for an upcoming test, focusing on practical examples and clarifying common confusion points.",
+  "key_points": [
+    "Plurals of non-intellect entities (غَيْرُ عَاقِل : ghayr al-ʿāqil) are treated grammatically as مُفْرَد مُؤَنَّث (mufrad muʾannath : singular feminine). Example: كُتُب (kutub : books, plural) is treated as singular feminine even though its singular كِتَاب (kitāb) is masculine.",
+    "Dual forms use the suffix انِ (āni). Example: بَابَانِ (bābāni : two doors).",
+    "Numbers from 3 to 10 must be OPPOSITE in gender to the item being counted (مَعْدُود : maʿdūd). If counting a masculine noun, the number takes a feminine form, and vice versa."
+  ],
+  "questions": [
+    "[00:15:08] Q: Does this rule apply only to plurals? — A: No, it also applies to singulars but doesn't affect rules for them.",
+    "[00:34:06] Q: How do you say 'seven doors' in Arabic? — A: Seven doors is سَبْعَةُ أَبْوَابٍ (sabʿatu abwāb); this structure appears in the Quran in Surah Al-Hijr (15:44): لَهَا سَبْعَةُ أَبْوَابٍ."
+  ]
+}
+```
+
+================================================================================
+Review: 1777597243822_AUDIO-2025-11-19-21-13-01
+Title: Analyzing Sentences for I'rab and Vocabulary: Madrasati to Family Terms
+================================================================================
+
+**[title]**
+- "I'rab" — standalone transliteration without Arabic-first format. Rule 1.
+
+**[summary]**
+- "ismul ishara (demonstrative nouns)" — transliteration precedes Arabic; should be Arabic-first. Rule 1.
+- "یا" — uses Urdu/Persian letter form (یا) instead of standard Arabic script (يَا). Rule 3.
+- "munsarif" — standalone transliteration. Rule 1.
+
+**[key_points]**
+- key_points[0]: "هٗذي" — wrong Arabic; correct form is هَذِهِ (hādhihi). هٗذي does not exist in standard Arabic orthography. Rule 3. "ismul ishara" — standalone transliteration. Rule 1.
+- key_points[3]: "Lam al-jam' (lam of plurality) in 'masajid'" — CRITICAL hallucination: there is no "lam al-jam'" concept in مَسَاجِد. مَسَاجِد is غَيْرُ الْمُنْصَرِف because it is on the مَفَاعِل (mafāʿil) broken plural pattern. "Lam al-jam'" is not a recognized Arabic grammatical term taught in this session. Rule 3.
+- key_points[4]: "abwab (doors) use tilka (tilká تلك)" — in the transcript, أَبْوَاب (the school's doors) was used with هَذِهِ (hādhihi : close demonstrative); تِلْكَ (tilka : far demonstrative) was used for مَكَاتِب (students' desks). Minor inaccuracy. Rule 3.
+
+--- PHASE 2 — PROPOSED CHANGES ---
+
+```json
+{
+  "title": "Analyzing Sentences for إِعْرَاب (iʿrāb : case analysis) and Vocabulary: Madrasati to Family Terms",
+  "summary": "The session focused on breaking down sentences for grammatical analysis, including identifying elements like اِسْمُ الْإِشَارَةِ (ism al-ishārah : demonstrative nouns), attached pronouns (e.g., يَا 'ya' : my), gender consistency in plurals, and special cases such as non-sentient plurals treated as feminine singular. Key vocabulary included school terms and family names. The session emphasized applying rules like غَيْرُ الْمُنْصَرِف (ghayr al-munsarif : non-declinable) nouns during sentence deconstruction.",
+  "key_points": [
+    "هَذِهِ (hādhihi) indicates singular, feminine, close — part of اِسْمُ الْإِشَارَةِ (ism al-ishārah : demonstrative noun family).",
+    "Madrasati (madrasati مدرستي): 'ya' as attached pronoun for possession ('my'), madrasah (feminine).",
+    "Dual forms and gender rules: أَبْوَابُهَا (abwābuha : its doors) — plural treated as feminine singular because أَبْوَاب lacks intellect (غَيْرُ عَاقِل).",
+    "مَسَاجِدُ (masājidu : mosques) is غَيْرُ الْمُنْصَرِف (ghayr al-munsarif : non-declinable) because it is on the مَفَاعِل (mafāʿil) broken plural pattern; therefore it takes فَتْحَة (fatḥah) instead of كَسْرَة wherever kasrah is expected.",
+    "Non-sentient plurals are treated as feminine singular: e.g., أَبْوَاب (doors) near the speaker use هَذِهِ (hādhihi : this, feminine singular close); مَكَاتِب (desks) far from the speaker use تِلْكَ (tilka : that, feminine singular far).",
+    "Vocabulary: family terms and country names with case endings, e.g., 'Ali, Fāṭimah."
+  ],
+  "questions": [
+    "[00:02:00] Q: What does the يَا (yā : my) attached pronoun indicate in مَدْرَسَتِي (madrasatī)? — A: It is an attached pronoun (ضَمِيرٌ مُتَّصِل : ḍamīr muttaṣil) indicating first-person possession ('my school').",
+    "[00:15:00] Q: Why is أَبْوَابُهَا (abwābuha : its doors) treated as feminine? — A: Non-sentient plural (غَيْرُ عَاقِل) treated as singular female."
+  ]
+}
+```
+

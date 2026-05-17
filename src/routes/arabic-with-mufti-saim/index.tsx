@@ -137,7 +137,14 @@ function BookSection({ book }: { book: Book }) {
       </div>
 
       <div className="rounded-xl border border-border overflow-hidden">
-        {book.lectures.map((lecture, i) => {
+        {[...book.lectures]
+          .sort((a, b) => {
+            if (!a.date && !b.date) return 0
+            if (!a.date) return 1
+            if (!b.date) return -1
+            return new Date(b.date).getTime() - new Date(a.date).getTime()
+          })
+          .map((lecture, i) => {
           const lectureId = encodeLectureId(book.number, lecture._lectureDir!)
           return (
             <Link

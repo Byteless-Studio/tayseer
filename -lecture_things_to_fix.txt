@@ -1,25 +1,2 @@
 
-http://localhost:3000/arabic-with-mufti-saim/lecture/1_1777504774844_Class_12_09_2024
-
-This is missing quizzes and examples
-
-
-http://localhost:3000/arabic-with-mufti-saim/lecture/1_1777504774932_Class_12_18_2024
-
-This lecture is cooked need to fix some of it
-
-
-http://localhost:3000/arabic-with-mufti-saim/lecture/1_1777504772400_Class_01_13_2025
-
-fix the chinese here LOL
-
-
-
-http://localhost:3000/arabic-with-mufti-saim/lecture/1_2025-04-21
-
-this should haev more examples
-
-
-http://localhost:3000/arabic-with-mufti-saim/lecture/1_2025-10-20
-
-remove transliteration in favor of arabic
+Need to review book 2

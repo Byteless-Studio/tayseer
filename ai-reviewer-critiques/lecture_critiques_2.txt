@@ -1,0 +1,733 @@
+===== 1776381595609_ =====
+## Phase 1 — Issues
+
+**title**
+- Rule 1: "Dhahab" is a bare transliteration — needs Arabic script. Required form: ذَهَبَ (dhahaba : to go)
+- Rule 1: "Kana" is a bare transliteration — needs Arabic script. Required form: كَانَ (kāna : to be)
+
+**summary**
+- Rule 1: "dhahab" — bare transliteration; required: ذَهَبَ (dhahaba : to go)
+- Rule 1: "kana" — bare transliteration; required: كَانَ (kāna : to be)
+
+**key_points**
+- Rule 2: "male and female" — must use مُذَكَّر (mudhakkar : masculine) and مُؤَنَّث (mu'annath : feminine)
+- Rule 1: "qara'tum", "qara'tunna", "sharibtum", "sharibtunna", "dhahabtum", "dhahabnaa" — all bare transliterations without Arabic script
+- Rule 1: "amr" — bare transliteration; required: أَمْر (amr : command/matter)
+
+**questions**
+- Rule 1: "qara'tum", "qara'tunna", "sharibtum", "sharibtunna", "dhahabtum", "dhahabnaa" — bare transliterations without Arabic script wherever they appear in questions
+
+## Phase 2 — Corrected Fields
+```json
+{
+  "title": "Introduction to Arabic Verbs: ذَهَبَ (dhahaba : to go) and كَانَ (kāna : to be)",
+  "summary": "This lesson introduces key Arabic verbs, focusing on ذَهَبَ (dhahaba : to go) and كَانَ (kāna : to be), their conjugations across مُذَكَّر (mudhakkar : masculine) and مُؤَنَّث (mu'annath : feminine) forms, and their usage in sentences. Students practise past-tense patterns and explore how verb endings change according to person and gender.",
+  "key_points": [
+    "Verbs like ذَهَبَ (dhahaba : to go) and كَانَ (kāna : to be) change endings based on whether the subject is مُذَكَّر (mudhakkar : masculine) or مُؤَنَّث (mu'annath : feminine).",
+    "Past-tense forms reviewed: قَرَأْتُمْ (qara'tum : you [masc. pl.] read), قَرَأْتُنَّ (qara'tunna : you [fem. pl.] read), شَرِبْتُمْ (sharibtum : you [masc. pl.] drank), شَرِبْتُنَّ (sharibtunna : you [fem. pl.] drank), ذَهَبْتُمْ (dhahabtum : you [masc. pl.] went), ذَهَبْنَا (dhahabnā : we went).",
+    "The أَمْر (amr : command) form is introduced as a verb mood distinct from past and present tense."
+  ],
+  "questions": [
+    "What is the مُؤَنَّث (mu'annath : feminine) form of قَرَأْتُمْ (qara'tum : you [masc. pl.] read)? — قَرَأْتُنَّ (qara'tunna : you [fem. pl.] read).",
+    "How does ذَهَبَ (dhahaba : to go) change for مُذَكَّر (mudhakkar : masculine) plural second person? — ذَهَبْتُمْ (dhahabtum : you [masc. pl.] went).",
+    "What distinguishes كَانَ (kāna : to be) from other past-tense verbs in terms of its effect on the sentence?"
+  ]
+}
+```
+
+===== 1776729064447_ =====
+## Phase 1 — Issues
+
+**title**
+- No issues.
+
+**summary**
+- Rule 2: "male or female" — must use مُذَكَّر (mudhakkar : masculine) and مُؤَنَّث (mu'annath : feminine)
+
+**key_points**
+- Rule 3: "تسعون" means ninety (90), not nineteen (19). The number nineteen is تِسْعَةَ عَشَرَ.
+- Rule 3: "مالئنا كتب Mashru'a Tamathuthaa'ir" — garbled Arabic; this is hallucinated/corrupted text.
+- Rule 3: "كاتبٌ بِقَلَمٍ Kātibun Bicalamm" — "Bicalamm" is a garbled transliteration (should be bi-qalamin بِقَلَمٍ); also the example sentence structure is questionable.
+- Rule 1: "Tisa'a 'Ushr" — bare transliteration; required: تِسْعَةَ عَشَرَ (tis'ata 'ashara : nineteen)
+- Rule 2: "male or female" in key_points — must use مُذَكَّر (mudhakkar : masculine) / مُؤَنَّث (mu'annath : feminine)
+- Rule 3: "كم Sanūka" — "Sanūka" is garbled; كَمْ (kam) means "how many/much" and has no attached pronoun form "Sanūka".
+
+**questions**
+- Rule 3: "Kusūl for males" — "Kusūl" is a garbled form; the correct مُذَكَّر (mudhakkar : masculine) جَمْع (jam' : plural) of كَسُول (kasūl : lazy) is كُسَالَى (kusālā).
+- Rule 3: Factual error — the question states the gender rule for numbers 11–19 without accurately reflecting the reversal rule (numbers 13–19 have reversed gender for the units digit).
+- Rule 1: "Kusūl" — bare/garbled transliteration without Arabic script.
+
+## Phase 2 — Corrected Fields
+```json
+{
+  "title": "Numbers 11-20 and Sentence Construction in Arabic",
+  "summary": "This lesson covers Arabic numbers from 11 to 20, explaining the gender-agreement rule for مُذَكَّر (mudhakkar : masculine) and مُؤَنَّث (mu'annath : feminine) counted nouns, and introduces basic sentence construction with فَاعِل (fā'il : doer) and مَفْعُول (maf'ūl : object).",
+  "key_points": [
+    "The number nineteen is تِسْعَةَ عَشَرَ (tis'ata 'ashara : nineteen); note that تِسْعُون (tis'ūn) means ninety and must not be confused with it.",
+    "Numbers 13–19 follow the gender-reversal rule: the units digit takes the opposite gender marker of the counted noun.",
+    "Sentence construction example: كَاتِبٌ بِقَلَمٍ (kātibun bi-qalamin : a writer with a pen).",
+    "كَمْ (kam : how many/much) is used to ask about quantity and is followed by a مُفْرَد (mufrad : singular) مَجْرُور (majrūr : genitive) noun.",
+    "Counted nouns for numbers 11–99 remain مُفْرَد (mufrad : singular) and مَنْصُوب (mansūb : accusative)."
+  ],
+  "questions": [
+    "What is the مُذَكَّر (mudhakkar : masculine) جَمْع (jam' : plural) of كَسُول (kasūl : lazy)? — كُسَالَى (kusālā : lazy ones [plural]).",
+    "How does the gender rule apply to the number 19 when counting مُذَكَّر (mudhakkar : masculine) nouns vs. مُؤَنَّث (mu'annath : feminine) nouns?"
+  ]
+}
+```
+
+===== 1776898624238_ =====
+## Phase 1 — Issues
+
+**title**
+- Rule 1: "Mi'at" — bare transliteration; required: مِئَة (mi'ah : one hundred)
+- Rule 1: "Alf" — bare transliteration; required: أَلْف (alf : one thousand)
+
+**summary**
+- No issues beyond what is in the title.
+
+**key_points**
+- Rule 3: "mudāfīliyyah" — garbled word; should be مُضَاف إِلَيْه (mudāf ilayh : the second term of a possessive construct).
+- Rule 3: "مئة م Mudāf mudāfīliyyah" — "م" is a stray character and "mudāfīliyyah" is garbled; should read مِئَة مُضَاف (mi'ah mudāf) + مُضَاف إِلَيْه (mudāf ilayh).
+
+**questions**
+- No issues.
+
+## Phase 2 — Corrected Fields
+```json
+{
+  "title": "Counting with مِئَة (mi'ah : one hundred) and أَلْف (alf : one thousand)",
+  "summary": "This session covers how to use مِئَة (mi'ah : one hundred) and أَلْف (alf : one thousand) in counting and in مُضَاف–مُضَاف إِلَيْه (mudāf–mudāf ilayh : possessive construct) structures, with practice on forming larger numbers in Arabic.",
+  "key_points": [
+    "مِئَة (mi'ah : one hundred) and أَلْف (alf : one thousand) function as مُضَاف (mudāf : first term of a genitive construct) when followed by the counted noun, which becomes مُضَاف إِلَيْه (mudāf ilayh : genitive second term).",
+    "Example: مِئَةُ طَالِبٍ (mi'atu tālibin : one hundred students) — مِئَة is مُضَاف and طَالِب is مُضَاف إِلَيْه in the مُفْرَد (mufrad : singular) مَجْرُور (majrūr : genitive) form.",
+    "For multiples of one hundred, Arabic uses compound forms: مِئَتَان (mi'atān : two hundred), ثَلَاثُمِئَة (thalāthu mi'ah : three hundred), etc.",
+    "أَلْف (alf : one thousand) follows the same مُضَاف–مُضَاف إِلَيْه pattern as مِئَة."
+  ],
+  "questions": [
+    "How is مِئَة (mi'ah : one hundred) used in a مُضَاف–مُضَاف إِلَيْه (possessive) construct?",
+    "What is the difference between مِئَة (mi'ah : one hundred) and أَلْف (alf : one thousand) in terms of their grammatical behaviour when used with counted nouns?"
+  ]
+}
+```
+
+===== 1776898680547_ =====
+## Phase 1 — Issues
+
+**title**
+- Rule 1: "la'alla" — bare transliteration; required: لَعَلَّ (la'alla : perhaps/maybe)
+- Rule 1: "ghalin" — bare transliteration; required: غَالٍ (ghālin : expensive [masc. indef.])
+- Rule 1: "ghaliyâtun" — bare transliteration; required: غَالِيَاتٌ (ghāliyātun : expensive [fem. pl.])
+
+**summary**
+- Rule 1: "la'alla" — bare transliteration; required: لَعَلَّ (la'alla : perhaps/maybe)
+
+**key_points**
+- Rule 3: "<this.raketon>" — hallucinated code fragment; must be removed.
+- Rule 3: "هذِتَmalin kathirin" — garbled Arabic mixed with Latin; should be هَذَا مَالٌ كَثِيرٌ (hādhā mālun kathīrun : this is much wealth).
+- Rule 3: "لا حول ولا قوة伊利lam الله" — contains Chinese characters "伊利" which are completely out of place; this is a hallucination.
+- Rule 1: "la'alkerum tathakkun" — garbled; no Arabic script provided; this text is unintelligible and appears hallucinated.
+- Rule 2: "Masculine singular" — must use مُذَكَّر (mudhakkar : masculine) مُفْرَد (mufrad : singular)
+- Rule 2: "FEMINine" / "feminine" — must use مُؤَنَّث (mu'annath : feminine)
+
+**questions**
+- Rule 1: "la'allah" — incorrect form of the particle (should be لَعَلَّ la'alla, not la'allah which resembles لِلَّه); bare transliteration without Arabic script.
+
+## Phase 2 — Corrected Fields
+```json
+{
+  "title": "Use of لَعَلَّ (la'alla : perhaps) and Differentiating غَالٍ (ghālin : expensive [masc.]) vs. غَالِيَاتٌ (ghāliyātun : expensive [fem. pl.])",
+  "summary": "This lesson explores the particle لَعَلَّ (la'alla : perhaps/maybe) and its grammatical effect on the following noun, alongside a comparison of the مُذَكَّر (mudhakkar : masculine) مُفْرَد (mufrad : singular) form غَالٍ (ghālin) and the مُؤَنَّث (mu'annath : feminine) جَمْع (jam' : plural) form غَالِيَاتٌ (ghāliyātun).",
+  "key_points": [
+    "لَعَلَّ (la'alla : perhaps/maybe) is one of أَخَوَات إِنَّ (akhawāt inna : the sisters of inna) and makes its مُبْتَدَأ (mubtada' : subject) take a فَتْحَة (fatḥah : short a-vowel).",
+    "Example: هَذَا مَالٌ كَثِيرٌ (hādhā mālun kathīrun : this is much wealth) illustrates a مُذَكَّر (mudhakkar : masculine) nominal sentence.",
+    "The مُذَكَّر (mudhakkar : masculine) مُفْرَد (mufrad : singular) form is غَالٍ (ghālin : expensive), while the مُؤَنَّث (mu'annath : feminine) جَمْع (jam' : plural) form is غَالِيَاتٌ (ghāliyātun : expensive [pl. fem.]).",
+    "مَوْصُوف (mawṣūf : described noun) and صِفَة (ṣifah : adjective) must agree in gender, number, and definiteness."
+  ],
+  "questions": [
+    "How does لَعَلَّ (la'alla : perhaps) affect the word that follows it?",
+    "What is the مُؤَنَّث (mu'annath : feminine) مُفْرَد (mufrad : singular) form of غَالٍ (ghālin : expensive)?"
+  ]
+}
+```
+
+===== 1776898698879_ =====
+## Phase 1 — Issues
+
+**title**
+- Rule 1: "Ism al-Tafdeel" — bare transliteration; required: اِسْمُ التَّفْضِيل (ism al-tafḍīl : comparative/superlative noun)
+
+**summary**
+- Rule 1: "Ism al-Tafdeel" — same as title; required: اِسْمُ التَّفْضِيل (ism al-tafḍīl : comparative/superlative noun)
+
+**key_points**
+- Rule 3: "كتابان مرفوعان (maʿdūd has fatha and is singular)" — factual error: كِتَابَانِ is مُثَنَّى (muthannā : dual) and takes a رَفْع (raf' : nominative) ending (ـَانِ), not فَتْحَة. The statement is wrong.
+- Rule 3: "thirteen = thalathatūn 'ashratan" — factual error: thalathatūn (ثَلَاثُون) means thirty, not the prefix for thirteen; thirteen is ثَلَاثَةَ عَشَرَ (thalāthata 'ashara).
+- Rule 3: "afʿal or afwal" — "afwal" is not a valid Arabic morphological pattern; it appears to be a hallucination. The correct pattern is أَفْعَل (af'al).
+- Rule 3: "qacīr" — garbled transliteration; likely intended as قَصِير (qaṣīr : short/brief) but the form is corrupted.
+- Rule 3: "مِن سِنًّا ('in age')" — misleading; مِن here is used in a comparative construction (older than), not simply "in age".
+- Rule 2: "singular" — must use مُفْرَد (mufrad : singular)
+- Rule 2: "fatha" (repeated) — must use فَتْحَة (fatḥah : short a-vowel)
+
+**questions**
+- No issues beyond what stems from the key_points errors.
+
+## Phase 2 — Corrected Fields
+```json
+{
+  "title": "Numbers 11 to 20 and اِسْمُ التَّفْضِيل (ism al-tafḍīl : comparative noun): Rules and Applications",
+  "summary": "This lesson covers the numbers 11–20 and introduces اِسْمُ التَّفْضِيل (ism al-tafḍīl : the comparative/superlative noun), built on the pattern أَفْعَل (af'al), used to express 'more/most' in Arabic. Rules for gender agreement and the use of مِن (min : than) in comparisons are also discussed.",
+  "key_points": [
+    "اِسْمُ التَّفْضِيل (ism al-tafḍīl : comparative noun) is built on the pattern أَفْعَل (af'al), e.g., أَكْبَر (akbar : bigger/oldest) and أَصْغَر (aṣghar : smaller/youngest).",
+    "The number thirteen is ثَلَاثَةَ عَشَرَ (thalāthata 'ashara : thirteen) — not to be confused with ثَلَاثُون (thalāthūn : thirty).",
+    "كِتَابَانِ (kitābāni : two books) is مُثَنَّى (muthannā : dual) and takes the مَرْفُوع (marfū' : nominative) ending ـَانِ — it does not take a فَتْحَة (fatḥah).",
+    "قَصِير (qaṣīr : short) forms its اِسْمُ التَّفْضِيل as أَقْصَر (aqṣar : shorter/shortest).",
+    "Comparisons use مِن (min : than) after اِسْمُ التَّفْضِيل: هُوَ أَكْبَرُ مِنْهُ سِنًّا (huwa akbaru minhu sinnan : he is older than him in age)."
+  ],
+  "questions": [
+    "What is the اِسْمُ التَّفْضِيل (ism al-tafḍīl : comparative form) of كَبِير (kabīr : big)?",
+    "How does the number ثَلَاثَةَ عَشَرَ (thalāthata 'ashara : thirteen) differ in structure from ثَلَاثُون (thalāthūn : thirty)?",
+    "Why does كِتَابَانِ (kitābāni : two books) take the ending ـَانِ rather than a فَتْحَة (fatḥah : short a-vowel)?"
+  ]
+}
+```
+
+===== 1776898741932_ =====
+## Phase 1 — Issues
+
+**title**
+- No issues.
+
+**summary**
+- Rule 1: Various transliterations in summary without Arabic script (e.g., "ahsanu", "atwal") — need Arabic.
+- Rule 2: "masculine"/"feminine" throughout — must use مُذَكَّر (mudhakkar : masculine) / مُؤَنَّث (mu'annath : feminine)
+
+**key_points**
+- Rule 3: "'_ahsanu'" — underscore makes this garbled; should be أَحْسَن (aḥsan : better/best)
+- Rule 3: "'at-ta'lu'" — garbled; the comparative of طَوِيل (ṭawīl : tall) is أَطْوَل (aṭwal : taller/tallest), not "at-ta'lu"
+- Rule 3: "'Antum at-tawwilon minil-maalimin' (You are the richest)" — factual/translation error: at-tawwilon (الطَّوِيلُون) means "the tall ones", not "the richest"; "the richest" would use أَغْنَى (aghnā) or أَكْثَر مَالًا
+- Rule 3: "'Ka'anna Hu a_khuka'" — underscore garbled; should be كَأَنَّهُ أَخُوكَ (ka'annahu akhūka : as if he is your brother)
+- Rule 2: "masculine"/"feminine" — must use مُذَكَّر (mudhakkar : masculine) / مُؤَنَّث (mu'annath : feminine)
+- Rule 1: "ahsanu", "atwal", "ka'anna" etc. — bare transliterations need Arabic script
+
+**questions**
+- Same Rule 1 and Rule 2 issues wherever bare transliterations appear.
+
+## Phase 2 — Corrected Fields
+```json
+{
+  "title": "Comparative Adjectives and Numbers in Arabic",
+  "summary": "This session covers اِسْمُ التَّفْضِيل (ism al-tafḍīl : comparative adjective) forms such as أَحْسَن (aḥsan : better/best) and أَطْوَل (aṭwal : taller/tallest), their agreement rules for مُذَكَّر (mudhakkar : masculine) and مُؤَنَّث (mu'annath : feminine) nouns, and the use of particles like كَأَنَّ (ka'anna : as if) in sentences.",
+  "key_points": [
+    "أَحْسَن (aḥsan : better/best) is the اِسْمُ التَّفْضِيل of حَسَن (ḥasan : good).",
+    "The اِسْمُ التَّفْضِيل of طَوِيل (ṭawīl : tall) is أَطْوَل (aṭwal : taller/tallest).",
+    "Example sentence: أَنْتُمُ الطَّوِيلُونَ مِنَ الْمُعَلِّمِينَ (antumu al-ṭawīlūna mina al-mu'allimīna : You are the tallest of the teachers) — note this describes height, not wealth.",
+    "كَأَنَّهُ أَخُوكَ (ka'annahu akhūka : as if he is your brother) uses كَأَنَّ (ka'anna : as if), one of أَخَوَات إِنَّ (akhawāt inna : the sisters of inna).",
+    "اِسْمُ التَّفْضِيل forms are مُذَكَّر (mudhakkar : masculine) by default; the مُؤَنَّث (mu'annath : feminine) form uses فُعْلَى (fu'lā) pattern, e.g., كُبْرَى (kubrā : greatest [fem.])."
+  ],
+  "questions": [
+    "What is the اِسْمُ التَّفْضِيل of طَوِيل (ṭawīl : tall)?",
+    "How does كَأَنَّ (ka'anna : as if) affect the word that follows it?",
+    "What is the مُؤَنَّث (mu'annath : feminine) form of أَحْسَن (aḥsan : better/best)?"
+  ]
+}
+```
+
+===== 1776898743008_ =====
+## Phase 1 — Issues
+
+**title**
+- Rule 1: "Laysa" — bare transliteration; required: لَيْسَ (laysa : is not)
+- Rule 1: "Mubtada'" — bare transliteration; required: مُبْتَدَأ (mubtada' : subject of a nominal sentence)
+
+**summary**
+- Rule 1: "mubtada' and khabar" — bare transliterations; required: مُبْتَدَأ (mubtada') and خَبَر (khabar)
+- Rule 1: "Harf al-Jar" — bare transliteration; required: حَرْفُ الْجَرّ (ḥarf al-jarr : preposition)
+
+**key_points**
+- Rule 3: "استخدام 'لست' (laysa) ل.negation" — "ل.negation" is garbled text mixing Latin and Arabic; should simply be لِلنَّفْي (li-l-nafy : for negation)
+- Rule 3: "ل.lay negations" — same garbled mixing; should be نَفْي بِـ لَيْسَ (nafy bi-laysa : negation with laysa)
+- Rule 1: "Ma'rûf" — bare transliteration; required: مَعْرِفَة (ma'rifah : definite)
+- Rule 2: Implicit "subject" used for مُبْتَدَأ — must use مُبْتَدَأ (mubtada' : subject)
+- Rule 2: "kasr" — must use كَسْرَة (kasrah : short i-vowel)
+
+**questions**
+- No separate issues beyond what is reflected in key_points.
+
+## Phase 2 — Corrected Fields
+```json
+{
+  "title": "Using لَيْسَ (laysa : is not) and Understanding مُبْتَدَأ (mubtada' : subject) Rules",
+  "summary": "This lesson focuses on لَيْسَ (laysa : is not) for negation in nominal sentences, its effect on the مُبْتَدَأ (mubtada' : subject) and خَبَر (khabar : predicate), and the role of حَرْفُ الْجَرّ (ḥarf al-jarr : preposition) in sentence structure. Rules for مَعْرِفَة (ma'rifah : definite) and نَكِرَة (nakirah : indefinite) nouns are reinforced.",
+  "key_points": [
+    "لَيْسَ (laysa : is not) is used لِلنَّفْي (li-l-nafy : for negation) in nominal sentences and makes its خَبَر (khabar : predicate) مَجْرُور (majrūr : genitive) when prefixed with the بَاء (bā') of لَيْسَ.",
+    "The مُبْتَدَأ (mubtada' : subject) of a nominal sentence is typically مَعْرِفَة (ma'rifah : definite); the خَبَر (khabar : predicate) is typically نَكِرَة (nakirah : indefinite).",
+    "When حَرْفُ الْجَرّ (ḥarf al-jarr : preposition) is added to the خَبَر (khabar) of لَيْسَ, it takes a كَسْرَة (kasrah : short i-vowel): لَيْسَ أَبِي بِمُهَنْدِسٍ (laysa abī bi-muhandis : my father is not an engineer).",
+    "Negation with لَيْسَ (laysa) must match the subject in gender and number (e.g., لَيْسَتْ laysat for مُؤَنَّث mu'annath : feminine)."
+  ],
+  "questions": [
+    "How does لَيْسَ (laysa : is not) change when the subject is مُؤَنَّث (mu'annath : feminine) مُفْرَد (mufrad : singular)?",
+    "Why does the خَبَر (khabar : predicate) of لَيْسَ take a كَسْرَة (kasrah : short i-vowel) when preceded by the preposition بَاء (bā')?"
+  ]
+}
+```
+
+===== 1776898752749_ =====
+## Phase 1 — Issues
+
+**title**
+- Rule 1: "Fa'il" — bare transliteration; required: فَاعِل (fā'il : doer/subject of verb)
+- Rule 1: "Mafrool" — bare transliteration; required: مَفْعُول (maf'ūl : object)
+
+**summary**
+- Rule 1: "fa'il" and "mafrool" — bare transliterations; same corrections as title
+- Rule 3: "fa'il (subject)" — slightly inaccurate framing; فَاعِل (fā'il) is the doer/agent of a verbal sentence, not the "subject" in the sense of مُبْتَدَأ; better described as "doer" or "agent of the verb"
+
+**key_points**
+- Rule 3: "kharaja" listed as a verb that takes direct objects (مَفْعُول) — factual error: خَرَجَ (kharaja : to leave/exit) is a لَازِم (lāzim : intransitive) verb and does not take a direct مَفْعُول بِهِ
+- Rule 2: "dhamma" — must use ضَمَّة (ḍammah : short u-vowel)
+- Rule 2: "fatha" — must use فَتْحَة (fatḥah : short a-vowel)
+
+**questions**
+- No issues (questions field is empty).
+
+## Phase 2 — Corrected Fields
+```json
+{
+  "title": "Identifying فَاعِل (fā'il : doer) and مَفْعُول (maf'ūl : object) in Sentences: Verbs Requiring Objects",
+  "summary": "This lesson focuses on distinguishing فَاعِل (fā'il : doer/agent of a verb) from مَفْعُول (maf'ūl : object) in verbal sentences. The فَاعِل takes a ضَمَّة (ḍammah : short u-vowel) and the مَفْعُول takes a فَتْحَة (fatḥah : short a-vowel). Students practise identifying these roles using مُتَعَدِّي (muta'addī : transitive) verbs that require a direct object.",
+  "key_points": [
+    "فَاعِل (fā'il : doer/agent of the verb) takes a ضَمَّة (ḍammah : short u-vowel) at its end.",
+    "مَفْعُول (maf'ūl : object) takes a فَتْحَة (fatḥah : short a-vowel) at its end.",
+    "Only مُتَعَدِّي (muta'addī : transitive) verbs take a direct مَفْعُول بِهِ (maf'ūl bihi : direct object). Note: خَرَجَ (kharaja : to exit) is لَازِم (lāzim : intransitive) and does not take a direct object.",
+    "Example: ضَرَبَ زَيْدٌ عَمْرًا (ḍaraba Zaydun 'Amran : Zayd hit 'Amr) — زَيْدٌ is فَاعِل (ḍammah) and عَمْرًا is مَفْعُول (fatḥah)."
+  ],
+  "questions": []
+}
+```
+
+===== 1776898766167_ =====
+## Phase 1 — Issues
+
+**title**
+- Rule 1: "Laysa" — bare transliteration; required: لَيْسَ (laysa : is not)
+- Rule 1: "Inna" — bare transliteration; required: إِنَّ (inna : indeed/verily)
+
+**summary**
+- Rule 1: "Laysa" — same issue
+- Rule 1: "mubtada and khabar" — bare transliterations; required: مُبْتَدَأ (mubtada') and خَبَر (khabar)
+- Rule 1: "Harf al-Jar" — bare transliteration; required: حَرْفُ الْجَرّ (ḥarf al-jarr : preposition)
+- Rule 2: "subject"/"predicate" — must use مُبْتَدَأ (mubtada' : subject) / خَبَر (khabar : predicate)
+
+**key_points**
+- Rule 3: "na'ir (indefinite)" — "na'ir" is a garbled/hallucinated word; the correct term is نَكِرَة (nakirah : indefinite)
+- Rule 1: "ma'ruf" — bare transliteration; required: مَعْرِفَة (ma'rifah : definite)
+- Rule 2: "indefinite" — must use نَكِرَة (nakirah : indefinite)
+- Rule 2: "subject"/"predicate" — must use مُبْتَدَأ (mubtada') / خَبَر (khabar)
+
+**questions**
+- Rule 1: "na'ir" — same garbled form; required: نَكِرَة (nakirah : indefinite)
+- Rule 1: "laysat" — bare transliteration; required: لَيْسَتْ (laysat : is not [fem.])
+
+## Phase 2 — Corrected Fields
+```json
+{
+  "title": "Advanced Use of لَيْسَ (laysa : is not) and the Structure of Sentences with إِنَّ (inna : indeed)",
+  "summary": "This lesson provides advanced practice with لَيْسَ (laysa : is not) in nominal sentences, focusing on the rules governing مُبْتَدَأ (mubtada' : subject) and خَبَر (khabar : predicate) agreement, the use of حَرْفُ الْجَرّ (ḥarf al-jarr : preposition) with the خَبَر, and how إِنَّ (inna : indeed) emphasises the مُبْتَدَأ.",
+  "key_points": [
+    "لَيْسَ (laysa : is not) requires the مُبْتَدَأ (mubtada' : subject) to be مَعْرِفَة (ma'rifah : definite) and the خَبَر (khabar : predicate) to be نَكِرَة (nakirah : indefinite).",
+    "إِنَّ (inna : indeed) makes the مُبْتَدَأ (mubtada') take a فَتْحَة (fatḥah : short a-vowel).",
+    "حَرْفُ الْجَرّ (ḥarf al-jarr : preposition) never serves as a مُبْتَدَأ (mubtada'); it and the مَجْرُور (majrūr) following it form a شِبْهُ الْجُمْلَة (shibh al-jumlah : quasi-sentence) that can serve as a خَبَر.",
+    "The مُؤَنَّث (mu'annath : feminine) form of لَيْسَ is لَيْسَتْ (laysat : is not [fem. sing.]), and the جَمْع مُؤَنَّث (jam' mu'annath : feminine plural) form is لَسْنَ (lasna)."
+  ],
+  "questions": [
+    "When a noun is نَكِرَة (nakirah : indefinite), can it serve as مُبْتَدَأ (mubtada' : subject)? Under what conditions?",
+    "What is the مُؤَنَّث (mu'annath : feminine) مُفْرَد (mufrad : singular) form of لَيْسَ (laysa), and how is it spelled?"
+  ]
+}
+```
+
+===== 1776898772583_ =====
+## Phase 1 — Issues
+
+**title**
+- Rule 1: "Kana" — bare transliteration; required: كَانَ (kāna : was/to be)
+
+**summary**
+- Rule 2: "masculine and feminine" — must use مُذَكَّر (mudhakkar : masculine) and مُؤَنَّث (mu'annath : feminine)
+
+**key_points**
+- Rule 3: "قانـا" — garbled Arabic; should be كَانَ (kāna : was). The form "قانـا" does not exist.
+- Rule 3: "Man has a virgin? Mā i'tirāf ujūb al-ṣalāt?" — this is hallucinated text that has no relation to the lesson content; it appears to be a confabulated question/answer.
+- Rule 2: "masculine and feminine" — must use مُذَكَّر (mudhakkar : masculine) and مُؤَنَّث (mu'annath : feminine)
+
+**questions**
+- No issues.
+
+## Phase 2 — Corrected Fields
+```json
+{
+  "title": "Verbs, Questions, and Pronouns in Arabic: كَانَ (kāna : was/to be) and Interrogative Structures",
+  "summary": "This lesson covers the verb كَانَ (kāna : was/to be) and its conjugation across مُذَكَّر (mudhakkar : masculine) and مُؤَنَّث (mu'annath : feminine) forms, alongside interrogative structures and pronoun usage in Arabic sentences.",
+  "key_points": [
+    "كَانَ (kāna : was/to be) conjugates differently for مُذَكَّر (mudhakkar : masculine) and مُؤَنَّث (mu'annath : feminine) subjects.",
+    "Interrogative sentences in Arabic use particles such as هَلْ (hal : yes/no question marker) and مَنْ (man : who) to form questions.",
+    "Pronouns must agree with their referents in gender: هُوَ (huwa : he) for مُذَكَّر and هِيَ (hiya : she) for مُؤَنَّث.",
+    "كَانَ (kāna : was) is one of أَخَوَات كَانَ (akhawāt kāna : the sisters of kāna) that affect the case endings of the مُبْتَدَأ (mubtada' : subject) and خَبَر (khabar : predicate)."
+  ],
+  "questions": [
+    "How does كَانَ (kāna : was/to be) conjugate for مُؤَنَّث (mu'annath : feminine) مُفْرَد (mufrad : singular) subjects?",
+    "What interrogative particle is used for yes/no questions in Arabic?"
+  ]
+}
+```
+
+===== 1776898823789_ =====
+## Phase 1 — Issues
+
+**title**
+- No issues.
+
+**summary**
+- No issues.
+
+**key_points**
+- Rule 3: "**أli sa ka-thaariq?**" — garbled Arabic; this appears to be a corrupted rendering of أَلَيْسَ كَذَلِكَ (alaysa kadhālik : is it not so?); "ka-thaariq" is not Arabic and is hallucinated.
+- Rule 3: "al-awwald" — garbled; should be الأَوَّل (al-awwal : the first)
+- Rule 1: "al-awwald" — bare/garbled transliteration without proper Arabic script
+
+**questions**
+- No issues.
+
+## Phase 2 — Corrected Fields
+```json
+{
+  "title": "Arabic Numbers and Verb Negation: Demonstrative Questions and Family Terms",
+  "summary": "This session covers Arabic numbers, verb negation patterns, demonstrative question structures such as أَلَيْسَ كَذَلِكَ؟ (alaysa kadhālik : is it not so?), and vocabulary related to family terms. Ordinal numbers such as الأَوَّل (al-awwal : the first) are also introduced.",
+  "key_points": [
+    "The phrase أَلَيْسَ كَذَلِكَ؟ (alaysa kadhālik : is it not so?) is used as a tag-question to seek confirmation.",
+    "The ordinal الأَوَّل (al-awwal : the first) is used for masculine nouns; the feminine form is الأُولَى (al-ūlā : the first [fem.]).",
+    "Verb negation in past tense uses مَا (mā : not [past]) before the verb.",
+    "Family vocabulary is introduced alongside demonstrative sentences using هَذَا (hādhā : this [masc.]) and هَذِهِ (hādhihi : this [fem.])."
+  ],
+  "questions": [
+    "How is أَلَيْسَ كَذَلِكَ؟ (alaysa kadhālik : is it not so?) used in conversation?",
+    "What is the مُؤَنَّث (mu'annath : feminine) form of الأَوَّل (al-awwal : the first)?"
+  ]
+}
+```
+
+===== 1776898824288_ =====
+## Phase 1 — Issues
+
+**title**
+- Rule 3: "Prayers" in the title is misleading — the lesson is about past-tense verb conjugation and pronoun attachment, not about prayers (ṣalāh). This word appears to have been hallucinated into the title.
+- Rule 1: "Mafrūʿ Pronouns" — "mafrūʿ" is a non-standard and misleading spelling of مَفْعُول (maf'ūl : object); bare transliteration without Arabic script.
+
+**summary**
+- Rule 3: "mafrūʿ" — non-standard; standard term is مَفْعُول (maf'ūl : object); this appears to be a corrupted form.
+- Rule 3: "mAFrūʿ" — inconsistent capitalisation of the same corrupted term.
+- Rule 3: "dakhaltā (dakhaltā) for they entered" — factual error: دَخَلْتَا (dakhaltā) is the مُثَنَّى (muthannā : dual) مُؤَنَّث (mu'annath : feminine) past-tense form meaning "the two of them (fem.) entered", not "they entered".
+- Rule 1: "Sighatu'l-Amr" — bare transliteration; required: صِيغَةُ الأَمْر (ṣīghat al-amr : imperative form)
+- Rule 1: "dhamīr" — bare transliteration; required: ضَمِير (ḍamīr : pronoun)
+
+**questions**
+- No separate issues.
+
+## Phase 2 — Corrected Fields
+```json
+{
+  "title": "Basics of Arabic Verbs: Past Tense and Attached ضَمَائِر (ḍamā'ir : pronouns)",
+  "summary": "This lesson covers past-tense verb conjugation with attached ضَمَائِر (ḍamā'ir : pronouns) functioning as مَفْعُول (maf'ūl : object), the صِيغَةُ الأَمْر (ṣīghat al-amr : imperative form), and the distinction between dual مُؤَنَّث (mu'annath : feminine) forms and جَمْع (jam' : plural) forms. Example: دَخَلْتَا (dakhaltā : the two of them [dual fem.] entered) is مُثَنَّى (muthannā : dual) مُؤَنَّث and must not be confused with the جَمْع (jam' : plural) دَخَلُوا (dakhalū : they [masc. pl.] entered).",
+  "key_points": [
+    "ضَمَائِر (ḍamā'ir : pronouns) can be attached to verbs as direct مَفْعُول (maf'ūl : object), e.g., ضَرَبَهُ (ḍarabahu : he hit him).",
+    "صِيغَةُ الأَمْر (ṣīghat al-amr : the imperative form) is derived from the مُضَارِع (muḍāri' : present tense) verb.",
+    "دَخَلْتَا (dakhaltā : the two of them [dual fem.] entered) is the مُثَنَّى (muthannā : dual) مُؤَنَّث (mu'annath : feminine) past-tense form — not to be confused with جَمْع (jam' : plural) forms.",
+    "The attached ضَمِير (ḍamīr : pronoun) does not change the base verb form, only the suffix changes."
+  ],
+  "questions": [
+    "What is the difference between دَخَلْتَا (dakhaltā : dual fem. entered) and دَخَلُوا (dakhalū : masc. pl. entered)?",
+    "How is صِيغَةُ الأَمْر (ṣīghat al-amr : the imperative form) derived from the مُضَارِع (muḍāri' : present tense)?"
+  ]
+}
+```
+
+===== 1776898893722_ =====
+## Phase 1 — Issues
+
+**title**
+- Rule 1: "Tameen" — bare transliteration; required: تَمْرِين (tamrīn : exercise/drill)
+
+**summary**
+- Rule 1: "kataba", "dhabti", "dhabata" — bare transliterations without Arabic script
+- Rule 3: "ikhwati for 'my sister'" — factual error: إِخْوَتِي (ikhwatī) means "my brothers" or "my siblings"; the word for "my sisters" is أَخَوَاتِي (akhawātī : my sisters)
+
+**key_points**
+- Rule 3: "ghatib (one who writes)" — garbled/wrong; the active participle for "one who writes" is كَاتِب (kātib : writer/one who writes), not "ghatib"
+- Rule 3: "plural females use humna" — factual error: هُنَّ (hunna) is the third-person مُؤَنَّث جَمْع (jam' mu'annath : feminine plural) pronoun; the second-person مُؤَنَّث جَمْع is أَنْتُنَّ (antunna : you [fem. pl.])
+- Rule 1: "Balaa" — bare transliteration; required: بَلَى (balā : yes [in response to a negative question])
+- Rule 1: "Naam" — bare transliteration; required: نَعَمْ (na'am : yes)
+
+**questions**
+- Rule 1: "Balaa" and "Naam" — same as above
+
+## Phase 2 — Corrected Fields
+```json
+{
+  "title": "Addressing Females: Verbs and Pronouns in تَمْرِين (tamrīn : exercise) Lesson 4",
+  "summary": "This session covers verb conjugation when addressing مُؤَنَّث (mu'annath : feminine) subjects, including كَتَبَ (kataba : he wrote), ذَهَبَتْ (dhahabat : she went), and related forms. Students practise using أَخَوَاتِي (akhawātī : my sisters) vs. إِخْوَتِي (ikhwatī : my brothers) and responding with نَعَمْ (na'am : yes) and بَلَى (balā : yes [after a negative]).",
+  "key_points": [
+    "كَاتِب (kātib : one who writes/writer) is the اِسْمُ الْفَاعِل (ism al-fā'il : active participle) of كَتَبَ (kataba : to write).",
+    "Second-person مُؤَنَّث (mu'annath : feminine) مُفْرَد (mufrad : singular) uses the suffix ـتِ, e.g., ذَهَبْتِ (dhahabti : you [fem.] went).",
+    "The second-person مُؤَنَّث (mu'annath : feminine) جَمْع (jam' : plural) pronoun is أَنْتُنَّ (antunna : you [fem. pl.]); the third-person مُؤَنَّث جَمْع pronoun is هُنَّ (hunna : they [fem. pl.]).",
+    "أَخَوَاتِي (akhawātī : my sisters) must not be confused with إِخْوَتِي (ikhwatī : my brothers/siblings)."
+  ],
+  "questions": [
+    "What is the difference between نَعَمْ (na'am : yes) and بَلَى (balā : yes [after a negative question])?",
+    "What is the correct second-person مُؤَنَّث (mu'annath : feminine) جَمْع (jam' : plural) pronoun?"
+  ]
+}
+```
+
+===== 1776898898933_ =====
+## Phase 1 — Issues
+
+**title**
+- Rule 1: "Laysa" — bare transliteration; required: لَيْسَ (laysa : is not)
+
+**summary**
+- No issues beyond the title.
+
+**key_points**
+- Rule 3: "لesthetic plural females use لَيسْن" — "لesthetic" contains garbled text; also لَيسْن is wrong — the correct مُؤَنَّث (mu'annath : feminine) جَمْع (jam' : plural) third-person form of لَيْسَ is لَسْنَ (lasna)
+- Rule 3: "لaysa Mina al-Iraq" — mixes Latin letter 'l' with Arabic text mid-word; should be لَيْسَ مِنَ الْعِرَاقِ (laysa mina al-'irāqi : he is not from Iraq)
+- Rule 3: "لَيسَ الطِلędún قَآم" — contains non-Arabic characters "ędún" embedded in Arabic text; this is hallucinated/corrupted
+- Rule 2: Implicit "plural"/"singular" mentioned without Arabic terms — must use جَمْع (jam' : plural) / مُفْرَد (mufrad : singular)
+
+**questions**
+- Rule 3: "Лайся" — Cyrillic script; this is a hallucination with no place in Arabic grammar content; should be لَيْسَ (laysa)
+
+## Phase 2 — Corrected Fields
+```json
+{
+  "title": "Negation with لَيْسَ (laysa : is not) in the Qur'an and Sentence Structure",
+  "summary": "This lesson examines how لَيْسَ (laysa : is not) is used for negation in Qur'anic Arabic, focusing on its conjugation for مُفْرَد (mufrad : singular) and جَمْع (jam' : plural) forms, مُذَكَّر (mudhakkar : masculine) and مُؤَنَّث (mu'annath : feminine), and its role in nominal sentence structure.",
+  "key_points": [
+    "The مُؤَنَّث (mu'annath : feminine) جَمْع (jam' : plural) third-person form of لَيْسَ is لَسْنَ (lasna : they [fem. pl.] are not).",
+    "Example from Qur'anic usage: لَيْسَ مِنَ الْعِرَاقِ (laysa mina al-'irāqi : he is not from Iraq) illustrates لَيْسَ in context.",
+    "لَيْسَ (laysa) conjugates for مُفْرَد (mufrad : singular): لَيْسَ (masc.) / لَيْسَتْ (fem.); and for جَمْع (jam' : plural): لَيْسُوا (masc.) / لَسْنَ (fem.).",
+    "In Qur'anic Arabic, لَيْسَ frequently negates both nouns and predicates in nominal sentences."
+  ],
+  "questions": [
+    "What is the مُؤَنَّث (mu'annath : feminine) جَمْع (jam' : plural) form of لَيْسَ (laysa : is not)?",
+    "How is لَيْسَ (laysa) used for negation in Qur'anic sentences?"
+  ]
+}
+```
+
+===== 1776898916225_ =====
+## Phase 1 — Issues
+
+**title**
+- No issues.
+
+**summary**
+- No issues.
+
+**key_points**
+- Rule 3: "la'kan (لكن)" — garbled; the correct particle is لَكِنَّ (lakinna : but/however); "la'kan" is not a valid Arabic word
+- Rule 3: "kathththina (كَأَنَّ)" — garbled transliteration; the correct form is كَأَنَّ (ka'anna : as if); "kathththina" is a hallucinated rendering
+- Rule 3: "ذهبت – dhahabta (you [fem.] went)" — factual error: ذَهَبْتَ (dhahabta) is second-person مُذَكَّر (mudhakkar : masculine) مُفْرَد (mufrad : singular); the second-person مُؤَنَّث (mu'annath : feminine) form is ذَهَبْتِ (dhahabti)
+- Rule 3: "kassara al-kitāb" listed as an example for verb-subject agreement — factual error: كَسَّرَ (kassara : smashed/broke repeatedly) has a doubled middle root letter (Form II) and is not a standard example for basic verb-subject agreement
+- Rule 2: "masculine"/"feminine" mentioned implicitly without Arabic terms — must use مُذَكَّر (mudhakkar : masculine) / مُؤَنَّث (mu'annath : feminine)
+
+**questions**
+- No issues.
+
+## Phase 2 — Corrected Fields
+```json
+{
+  "title": "Advanced Practice with Past Tense Verbs and Negation",
+  "summary": "This session provides advanced practice with past-tense verb conjugation, negation particles including مَا (mā : not [past tense]) and لَكِنَّ (lakinna : but/however), and the particle كَأَنَّ (ka'anna : as if). Emphasis is placed on correctly distinguishing مُذَكَّر (mudhakkar : masculine) and مُؤَنَّث (mu'annath : feminine) verb endings.",
+  "key_points": [
+    "لَكِنَّ (lakinna : but/however) is one of أَخَوَات إِنَّ (akhawāt inna : the sisters of inna) and makes the following مُبْتَدَأ (mubtada' : subject) take a فَتْحَة (fatḥah : short a-vowel).",
+    "كَأَنَّ (ka'anna : as if) is also one of أَخَوَات إِنَّ and introduces a comparison or likening.",
+    "ذَهَبْتَ (dhahabta : you [masc.] went) is مُذَكَّر (mudhakkar : masculine) مُفْرَد (mufrad : singular); the مُؤَنَّث (mu'annath : feminine) مُفْرَد equivalent is ذَهَبْتِ (dhahabti : you [fem.] went).",
+    "مَا (mā : not) is used to negate past-tense verbs: مَا ذَهَبَ (mā dhahaba : he did not go)."
+  ],
+  "questions": [
+    "What is the مُؤَنَّث (mu'annath : feminine) مُفْرَد (mufrad : singular) past-tense form of ذَهَبَ (dhahaba : to go)?",
+    "How does لَكِنَّ (lakinna : but/however) differ from لَكِنْ (lakin : but) in terms of its grammatical effect?"
+  ]
+}
+```
+
+===== 1777597039500_AUDIO-2026-04-29-20-59-04 =====
+## Phase 1 — Issues
+
+**title**
+- No issues.
+
+**summary**
+- Rule 3: "khalaf" used in the sense of "past" — factual error: خَلَف (khalaf) means "successor" or "replacement", not "past tense"; the correct term for past tense is مَاضِي (māḍī : past)
+- Rule 3: "nakar" used in the sense of a speaker role — wrong: نَكَر is not a grammatical term for speaker role; the related term is نَكِرَة (nakirah : indefinite noun); speaker role/first person is مُتَكَلِّم (mutakallim : speaker/first person)
+
+**key_points**
+- Rule 3: "nawasikh" used to mean attached pronouns — factual error: النَّوَاسِخ (al-nawāsikh : the abrogators) are particles/verbs like كَانَ (kāna) and إِنَّ (inna) that change the case endings of nominal sentences; they are not attached pronouns
+- Rule 1: "nawasikh" — bare transliteration; required: النَّوَاسِخ (al-nawāsikh : the abrogators/case-changers)
+- Rule 3: "ذهبت (zahibtum)" — mismatch: ذَهَبْتُمْ (dhahabtum) is the form for second-person مُذَكَّر (mudhakkar : masculine) جَمْع (jam' : plural); it does not match ذَهَبْتُ (dhahabtu : I went) which is first-person مُفْرَد
+
+**questions**
+- No separate issues.
+
+## Phase 2 — Corrected Fields
+```json
+{
+  "title": "Using Past Tense Verbs in Context: Differentiating Speaker and Subject",
+  "summary": "This lesson focuses on using مَاضِي (māḍī : past tense) verbs in context, distinguishing the role of the مُتَكَلِّم (mutakallim : speaker/first person) from that of third-person subjects, and practising correct pronoun attachment to verbs.",
+  "key_points": [
+    "مَاضِي (māḍī : past tense) verb forms change based on person (مُتَكَلِّم mutakallim : first person, مُخَاطَب mukhāṭab : second person, غَائِب ghā'ib : third person) and gender.",
+    "Attached ضَمَائِر (ḍamā'ir : pronouns) are different from النَّوَاسِخ (al-nawāsikh : the abrogators) — النَّوَاسِخ are particles/verbs like كَانَ (kāna) and إِنَّ (inna) that alter case endings in nominal sentences.",
+    "ذَهَبْتُمْ (dhahabtum : you [masc. pl.] went) is second-person مُذَكَّر (mudhakkar : masculine) جَمْع (jam' : plural) — distinct from ذَهَبْتُ (dhahabtu : I went) which is first-person مُفْرَد (mufrad : singular).",
+    "The مُتَكَلِّم (mutakallim : speaker/first person) مُفْرَد form always ends in ـتُ in the مَاضِي (māḍī : past tense)."
+  ],
+  "questions": [
+    "What is the difference between ذَهَبْتُ (dhahabtu : I went) and ذَهَبْتُمْ (dhahabtum : you [masc. pl.] went)?",
+    "How do النَّوَاسِخ (al-nawāsikh : the abrogators) differ from attached ضَمَائِر (ḍamā'ir : pronouns)?"
+  ]
+}
+```
+
+===== 1777597044285_AUDIO-2026-04-22-20-48-17 =====
+## Phase 1 — Issues
+
+**title**
+- Rule 1: "Mudaaf" — bare transliteration; required: مُضَاف (mudāf : first term of a genitive construct)
+- Rule 1: "Mudaaf Ileyh" — bare transliteration; required: مُضَاف إِلَيْه (mudāf ilayh : second term of a genitive construct)
+
+**summary**
+- Rule 3: "Mudaaf (الموصول)" — factual error: مُضَاف is the first term of a possessive/genitive construct (إِضَافَة iḍāfah), not مَوْصُول (mawṣūl : relative/connected). الموصول is the relative noun/pronoun, a completely different grammatical concept.
+- Rule 3: "Mudaaf Ileyh (المudingiyh)" — "المudingiyh" is garbled/hallucinated Arabic; the correct Arabic is مُضَاف إِلَيْه.
+- Rule 1: "Ma'rifa" — bare transliteration; required: مَعْرِفَة (ma'rifah : definite)
+- Rule 1: "Nakira" — bare transliteration; required: نَكِرَة (nakirah : indefinite)
+
+**key_points**
+- Rule 3: "Mudaaf (الموصول)" — same factual error as summary; must be مُضَاف (mudāf), not الموصول
+- Rule 3: "Mudaaf Ileyh (المudingiyh)" — same garbled text as summary
+- Rule 1: "Dhu ghilafin ahmar" — bare transliteration; required: ذُو غِلَافٍ أَحْمَر (dhū ghilāfin aḥmar : [the one] with a red cover)
+- Rule 1: "Ma'rifa" / "Nakira" — bare transliterations (multiple occurrences)
+- Rule 3: "rub'" listed as meaning "one-fourth" but a key_point states "thumunun for one-fourth" — factual error: رُبْع (rub') means one-fourth; ثُمُن (thumun) means one-eighth
+- Rule 2: "definite"/"indefinite" — must use مَعْرِفَة (ma'rifah : definite) / نَكِرَة (nakirah : indefinite)
+
+**questions**
+- Rule 1: "nisf", "thuluth", "rub'" — bare transliterations without Arabic script
+
+## Phase 2 — Corrected Fields
+```json
+{
+  "title": "Understanding مُضَاف (mudāf : first term) and مُضَاف إِلَيْه (mudāf ilayh : second term) in Sentences",
+  "summary": "The session covers the rules of مُضَاف (mudāf : first term of a genitive construct) and مُضَاف إِلَيْه (mudāf ilayh : second term), focusing on how the مَعْرِفَة (ma'rifah : definiteness) or نَكِرَة (nakirah : indefiniteness) of the مُضَاف depends on the مُضَاف إِلَيْه. Examples like ذُو غِلَافٍ أَحْمَر (dhū ghilāfin aḥmar : the one with a red cover) illustrate when to use أَلْ based on context. The class also covers Arabic fractions.",
+  "key_points": [
+    "مُضَاف (mudāf : first term of a genitive construct) definiteness depends on مُضَاف إِلَيْه (mudāf ilayh : second term): if the مُضَاف إِلَيْه is مَعْرِفَة (ma'rifah : definite), the مُضَاف becomes مَعْرِفَة; if نَكِرَة (nakirah : indefinite), it remains so.",
+    "Example: In ذُو غِلَافٍ أَحْمَر (dhū ghilāfin aḥmar : the one with a red cover), since غِلَاف (ghilāf : cover) is نَكِرَة (nakirah : indefinite) without أَلْ, the مُضَاف ذُو (dhū) stays نَكِرَة.",
+    "Exception: Some words that are غَيْر مُنْصَرِف (ghayr munsarif : diptote) cannot take كَسْرَة (kasrah : short i-vowel) unless they have أَلْ or are used as مُضَاف.",
+    "Arabic fractions: نِصْف (niṣf : half), ثُلُث (thuluth : one-third), رُبْع (rub' : one-fourth), خُمُس (khumus : one-fifth), سُدُس (sudus : one-sixth), سُبُع (subi' : one-seventh), ثُمُن (thumun : one-eighth), تُسُع (tusu' : one-ninth), عُشُر (ushr : one-tenth).",
+    "Practical exercises focus on applying مُضَاف–مُضَاف إِلَيْه rules in sentences and recognising verb forms in past-tense contexts."
+  ],
+  "questions": [
+    "[00:02:48] Q: Do we need to use أَلْ with مُضَاف (mudāf)? — A: Only if the مُضَاف إِلَيْه (mudāf ilayh) is مَعْرِفَة (ma'rifah : definite).",
+    "[00:11:05] Q: Can غَيْر مُنْصَرِف (ghayr munsarif : diptote) get كَسْرَة (kasrah : short i-vowel)? — A: Yes, if it has أَلْ or is used as مُضَاف.",
+    "[00:36:02] Q: How are fractions formed in Arabic? — A: Use specific terms like نِصْف (niṣf : half), ثُلُث (thuluth : one-third) with ضَمَّة (ḍammah : short u-vowel)."
+  ]
+}
+```
+
+===== 1777597139953_AUDIO-2026-01-12-21-16-12 =====
+## Phase 1 — Issues
+
+**title**
+- Rule 1: "Leysa" — bare transliteration; required: لَيْسَ (laysa : is not)
+- Rule 1: "Inna" — bare transliteration; required: إِنَّ (inna : indeed/verily)
+
+**summary**
+- Rule 1: "leysa" — bare transliteration; required: لَيْسَ (laysa : is not)
+- Rule 1: "inna" — bare transliteration; required: إِنَّ (inna : indeed)
+
+**key_points**
+- Rule 1: "Laysa abiy bi-muhandis" — bare transliteration; needs Arabic script
+- Rule 3: "meyat (100)" — "meyat" is a non-standard romanisation; correct: مِئَة (mi'ah : one hundred)
+- Rule 3: "musdafa ilaihi" — garbled; should be مُضَاف إِلَيْه (mudāf ilayh : genitive second term)
+- Rule 1: "musdafa ilaihi" — bare/garbled transliteration
+- Rule 3: "(Inna fi jaybim aidat riyal)" — "aidat" is garbled; should be مِئَتَ (mi'ata : two hundred [accusative]); the transliteration is corrupted
+- Rule 2: "subject" — must use مُبْتَدَأ (mubtada' : subject of a nominal sentence)
+- Rule 2: "fatha" (multiple) — must use فَتْحَة (fatḥah : short a-vowel)
+
+**questions**
+- Rule 3: "ma'ruf (with alif lam or proper noun)" — the technical term should be مَعْرِفَة (ma'rifah : definite), not "ma'ruf" which is مَعْرُوف (well-known/customary) — a different word entirely
+- Rule 1: "ma'ruf" — bare transliteration; required: مَعْرِفَة (ma'rifah : definite)
+- Rule 3: "Innaka mutazawjan" — confused example; when إِنَّ attaches to a ضَمِير (ḍamīr : pronoun) suffix (كَ), the following خَبَر (khabar) actually stays مَرْفُوع (marfū' : nominative): إِنَّكَ مُتَزَوِّجٌ (innaka mutazawwijun); the example as given is wrong
+
+## Phase 2 — Corrected Fields
+```json
+{
+  "title": "Understanding the Uses of لَيْسَ (laysa : is not) and إِنَّ (inna : indeed) in Sentences",
+  "summary": "The class reviewed key concepts from تَمْرِين (tamrīn : exercise) 8, focusing on the correct usage of لَيْسَ (laysa : is not) with different grammatical structures and the emphasis added by إِنَّ (inna : indeed). Students practised forming responses using the same words as questions and explored exceptions introduced by these particles.",
+  "key_points": [
+    "لَيْسَ (laysa : is not) must be paired with the بَاء (bā') of negation on the خَبَر (khabar : predicate): لَيْسَ أَبِي بِمُهَنْدِسٍ (laysa abī bi-muhandis : my father is not an engineer).",
+    "اِبْن (ibn : son) takes the حَرَكَة (ḥarakah : vowel mark) of the preceding word and is مُضَاف (mudāf) to the word after it, as in خَالِدُ بْنُ الْوَلِيدِ (Khālidu bnu al-Walīdi : Khalid ibn al-Walid).",
+    "In sentences with لَيْسَ (laysa), use the same pronoun form as the question when answering.",
+    "إِنَّ (inna : indeed) emphasises and makes the مُبْتَدَأ (mubtada' : subject) take a فَتْحَة (fatḥah : short a-vowel): إِنَّ فِي جَيْبِي مِئَتَ رِيَالٍ (inna fī jaybī mi'ata riyālin : indeed I have 200 riyals in my pocket).",
+    "مِئَة (mi'ah : one hundred) functions as مُضَاف (mudāf) in a genitive construct, requiring the following noun to be مُضَاف إِلَيْه (mudāf ilayh : genitive second term) in مُفْرَد (mufrad : singular) مَجْرُور (majrūr : genitive) form.",
+    "حَرْفُ الْجَرّ (ḥarf al-jarr : preposition) such as فِي (fī : in) and بِ (bi : with/by) does not receive the فَتْحَة (fatḥah) from إِنَّ; only the مُبْتَدَأ (mubtada') does."
+  ],
+  "questions": [
+    "[00:02:31] Q: What is the rule for اِبْن (ibn : son)? — A: It takes the حَرَكَة (ḥarakah : vowel mark) of the previous word and is مُضَاف (mudāf) to the next (e.g., خَالِدُ بْنُ الْوَلِيدِ).",
+    "[00:06:00] Q: Why is تَنْوِين (tanwīn : nunation) removed when using لَيْسَ (laysa)? — A: لَيْسَتْ (laysat) is used for مُؤَنَّث (mu'annath : feminine) مُفْرَد (mufrad : singular) third person.",
+    "[00:12:00] Q: How to identify مُبْتَدَأ (mubtada' : subject) and خَبَر (khabar : predicate) in complex sentences? — A: مُبْتَدَأ is مَعْرِفَة (ma'rifah : definite) — has أَلْ or is a proper noun; خَبَر is نَكِرَة (nakirah : indefinite) — new information.",
+    "[00:24:00] Q: Why does مُتَزَوِّج (mutazawwij : married) take فَتْحَة (fatḥah) after إِنَّ? — A: After إِنَّ (inna), the مُبْتَدَأ (mubtada') receives فَتْحَة (fatḥah): إِنَّ الرَّجُلَ مُتَزَوِّجٌ (inna al-rajula mutazawwijun : indeed the man is married). Note: when إِنَّ is followed directly by a ضَمِير (ḍamīr : pronoun) suffix, the خَبَر (khabar) remains مَرْفُوع (marfū' : nominative)."
+  ]
+}
+```
+
+===== 1777597148065_AUDIO-2026-03-25-20-29-00 =====
+## Phase 1 — Issues
+
+**title**
+- Rule 1: "Maf'ool" — bare transliteration; required: مَفْعُول (maf'ūl : object)
+
+**summary**
+- Rule 1: "maf'ool" — bare transliteration; required: مَفْعُول (maf'ūl : object)
+- Rule 1: "fa'il" — bare transliteration; required: فَاعِل (fā'il : doer/agent)
+- Rule 2: "fatha" — must use فَتْحَة (fatḥah : short a-vowel)
+
+**key_points**
+- Rule 2: "fatha (فتحة)" — "fatha" alone is insufficient; must be فَتْحَة (fatḥah : short a-vowel) with full format
+- Rule 2: "dhamma (ضمة)" — "dhamma" alone is insufficient; must be ضَمَّة (ḍammah : short u-vowel)
+- Rule 1: "fa'il" — bare transliteration; required: فَاعِل (fā'il : doer/agent)
+- Rule 1: "maf'ool" — bare transliteration; required: مَفْعُول (maf'ūl : object)
+- Rule 3: "Maf'ool bihi (.instrument)" — the parenthetical ".instrument" is wrong and garbled; مَفْعُول بِهِ (maf'ūl bihi) means "direct object" not "instrument"
+- Rule 3: "maf'ool minh (object needing treatment)" — "maf'ool minh" is not a recognised category of مَفْعُول; the five types are: مَفْعُول بِهِ, مَفْعُول فِيهِ, مَفْعُول مَعَهُ, مَفْعُول لَهُ/لِأَجْلِهِ, and مَفْعُول مُطْلَق; "maf'ool minh" is hallucinated
+- Rule 3: "mā darris-tu al-kitāba (I did not teach the book)" — the example verb is wrong for this lesson context; the lesson discusses مَا with ذَهَبَ and similar verbs; minor hallucination in the example
+
+**questions**
+- Rule 2: "fatha" — must use فَتْحَة (fatḥah : short a-vowel)
+
+## Phase 2 — Corrected Fields
+```json
+{
+  "title": "Understanding مَفْعُول (maf'ūl : object) in Past Tense Verbs and Verb Patterns",
+  "summary": "This session focuses on identifying the مَفْعُول (maf'ūl : object) in past-tense verbs, emphasising how objects receive a فَتْحَة (fatḥah : short a-vowel) while the فَاعِل (fā'il : doer/agent) carries a ضَمَّة (ḍammah : short u-vowel). The teacher distinguishes between فَاعِل and مَفْعُول, highlights exceptions, and discusses verb patterns فَعَلَ / فَعِلَ / فَعُلَ with examples from the Qur'an.",
+  "key_points": [
+    "In past-tense verbs, the مَفْعُول (maf'ūl : object) takes a فَتْحَة (fatḥah : short a-vowel), while the فَاعِل (fā'il : doer/agent) takes a ضَمَّة (ḍammah : short u-vowel).",
+    "Example: فَتَحْتُ الْبَابَ (fataḥtu al-bāba : I opened the door) — الْبَاب is مَفْعُول with فَتْحَة.",
+    "When the فَاعِل (fā'il) is implied within the verb (e.g., فَهِمْتَ : you understood), no separate ضَمَّة marker is needed.",
+    "Verb patterns: فَعَلَ (fa'ala), فَعِلَ (fa'ila), and فَعُلَ (fa'ula) are all valid past-tense patterns, e.g., سَمِعَ (sami'a : he heard), عَلِمَ (alima : he knew).",
+    "Negation of past-tense verbs uses مَا (mā : not): مَا ذَهَبَ (mā dhahaba : he did not go).",
+    "The five types of مَفْعُول in Arabic grammar are: مَفْعُول بِهِ (direct object), مَفْعُول فِيهِ (adverbial of time/place), مَفْعُول مَعَهُ (accompaniment), مَفْعُول لَهُ (reason/purpose), and مَفْعُول مُطْلَق (cognate/absolute object)."
+  ],
+  "questions": [
+    "[00:03:00] Q: Why is there a فَتْحَة (fatḥah : short a-vowel) on the object? — A: The مَفْعُول (maf'ūl : object) receives a فَتْحَة because it is what the verb acts upon.",
+    "[00:12:00] Q: How to handle جَمْع (jam' : plural) in verbs before names? — A: Use مُفْرَد (mufrad : singular) verb when the verb precedes multiple فَاعِلُون (fā'ilūn : doers); use جَمْع (jam' : plural) verb form when the verb follows them."
+  ]
+}
+```
