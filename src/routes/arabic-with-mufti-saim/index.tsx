@@ -45,7 +45,7 @@ function Arabic101Page() {
       {/* Hero image */}
       <div className="mb-6 sm:mb-10 rounded-2xl overflow-hidden shadow-md">
         <img
-          src={`/arabic-101-with-mufti-saim/medina university books sunlit.png`}
+          src={`/arabic-101-with-mufti-saim/medina university books sunlit.webp`}
           alt="Medina University books in sunlit setting"
           className="w-full h-52 sm:h-80 lg:h-112 object-cover object-center"
         />
