@@ -52,7 +52,7 @@ export const courses = {
       time: 'After Maghrib',
       location: 'Masjid Hamza',
       locationUrl: 'https://masjidhamza.com',
-      registrationUrl: 'https://masjidhamza.com',
+      registrationUrl: 'https://masjidhamza.com/donate/',
     },
   },
 } as const
