@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { createServerFn } from '@tanstack/react-start'
-import { encodeLectureId, type Book } from '#/routes/arabic-with-mufti-saim/-arabic-101.types'
+import { useState } from 'react'
+import { encodeLectureId, type Book, type Lecture } from '#/routes/arabic-with-mufti-saim/-arabic-101.types'
 import { courses } from '#/config/site'
 
 const course = courses['arabic-101']
@@ -20,9 +21,24 @@ export const Route = createFileRoute('/arabic-with-mufti-saim/')({
   component: Arabic101Page,
 })
 
+type SortOrder = 'newest' | 'oldest'
+
+function sortLectures(lectures: Lecture[], order: SortOrder): Lecture[] {
+  return [...lectures].sort((a, b) => {
+    if (!a.date && !b.date) return 0
+    if (!a.date) return 1
+    if (!b.date) return -1
+    const diff = new Date(a.date).getTime() - new Date(b.date).getTime()
+    return order === 'newest' ? -diff : diff
+  })
+}
+
 function Arabic101Page() {
   const books = Route.useLoaderData()
+  const [sortOrder, setSortOrder] = useState<SortOrder>('newest')
   const totalLectures = books.reduce((sum: number, b: Book) => sum + b.lectures.length, 0)
+
+  const sortedBooks = [...books].sort((a: Book, b: Book) => b.number - a.number)
 
   return (
     <main className="mx-auto max-w-5xl px-4 sm:px-6 py-8 sm:py-12">
@@ -99,11 +115,36 @@ function Arabic101Page() {
       </div>
 
       {/* Lectures */}
-      <div className="mb-3 flex items-center justify-between gap-2">
-        <h2 className="text-xl font-bold text-foreground">Lectures</h2>
-        <span className="text-sm text-muted-foreground">
-          {totalLectures} lecture{totalLectures !== 1 ? 's' : ''}
-        </span>
+      <div className="mb-4 flex items-center justify-between gap-2">
+        <div className="flex items-baseline gap-3">
+          <h2 className="text-xl font-bold text-foreground">Lectures</h2>
+          <span className="text-sm text-muted-foreground">
+            {totalLectures} lecture{totalLectures !== 1 ? 's' : ''}
+          </span>
+        </div>
+
+        <div className="flex items-center gap-1 rounded-lg border border-border bg-muted/40 p-1">
+          <button
+            onClick={() => setSortOrder('newest')}
+            className={`px-3 py-1 rounded-md text-xs font-semibold transition-colors ${
+              sortOrder === 'newest'
+                ? 'bg-background text-foreground shadow-sm'
+                : 'text-muted-foreground hover:text-foreground'
+            }`}
+          >
+            Newest first
+          </button>
+          <button
+            onClick={() => setSortOrder('oldest')}
+            className={`px-3 py-1 rounded-md text-xs font-semibold transition-colors ${
+              sortOrder === 'oldest'
+                ? 'bg-background text-foreground shadow-sm'
+                : 'text-muted-foreground hover:text-foreground'
+            }`}
+          >
+            Oldest first
+          </button>
+        </div>
       </div>
 
       {totalLectures === 0 ? (
@@ -112,9 +153,9 @@ function Arabic101Page() {
         </p>
       ) : (
         <div className="flex flex-col gap-10">
-          {books.map((book: Book) =>
+          {sortedBooks.map((book: Book) =>
             book.lectures.length > 0 ? (
-              <BookSection key={book.number} book={book} />
+              <BookSection key={book.number} book={book} sortOrder={sortOrder} />
             ) : null,
           )}
         </div>
@@ -123,7 +164,15 @@ function Arabic101Page() {
   )
 }
 
-function BookSection({ book }: { book: Book }) {
+function BookSection({ book, sortOrder }: { book: Book; sortOrder: SortOrder }) {
+  const lectures = sortLectures(book.lectures, sortOrder)
+
+  // Permanent chronological number for each lecture (oldest = 1, newest = N),
+  // independent of the current display order.
+  const chronologicalNumber = new Map(
+    sortLectures(book.lectures, 'oldest').map((l, i) => [l._lectureDir, i + 1]),
+  )
+
   return (
     <section>
       <div className="flex items-center gap-3 mb-4">
@@ -137,15 +186,9 @@ function BookSection({ book }: { book: Book }) {
       </div>
 
       <div className="rounded-xl border border-border overflow-hidden">
-        {[...book.lectures]
-          .sort((a, b) => {
-            if (!a.date && !b.date) return 0
-            if (!a.date) return 1
-            if (!b.date) return -1
-            return new Date(b.date).getTime() - new Date(a.date).getTime()
-          })
-          .map((lecture, i) => {
+        {lectures.map((lecture, i) => {
           const lectureId = encodeLectureId(book.number, lecture._lectureDir!)
+          const num = chronologicalNumber.get(lecture._lectureDir) ?? i + 1
           return (
             <Link
               key={lecture.id ?? i}
@@ -154,7 +197,7 @@ function BookSection({ book }: { book: Book }) {
               className="flex items-start gap-4 px-5 py-4 no-underline bg-card border-b border-border last:border-b-0 hover:bg-muted/50 transition-colors block"
             >
               <span className="shrink-0 w-7 h-7 rounded-full bg-foreground text-background text-xs font-bold flex items-center justify-center mt-0.5">
-                {i + 1}
+                {num}
               </span>
 
               <div className="min-w-0 flex-1">
