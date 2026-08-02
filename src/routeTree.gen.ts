@@ -14,6 +14,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as CognatesIndexRouteImport } from './routes/cognates/index'
 import { Route as ChallengesIndexRouteImport } from './routes/challenges/index'
 import { Route as ArabicWithMuftiSaimIndexRouteImport } from './routes/arabic-with-mufti-saim/index'
+import { Route as ChallengesVocabularyIndexRouteImport } from './routes/challenges/vocabulary/index'
 import { Route as ArabicWithMuftiSaimLectureLectureIdRouteImport } from './routes/arabic-with-mufti-saim/lecture.$lectureId'
 import { Route as ApiPublishSplatRouteImport } from './routes/api/publish/$'
 import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
@@ -44,6 +45,12 @@ const ArabicWithMuftiSaimIndexRoute =
     path: '/arabic-with-mufti-saim/',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ChallengesVocabularyIndexRoute =
+  ChallengesVocabularyIndexRouteImport.update({
+    id: '/challenges/vocabulary/',
+    path: '/challenges/vocabulary/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ArabicWithMuftiSaimLectureLectureIdRoute =
   ArabicWithMuftiSaimLectureLectureIdRouteImport.update({
     id: '/arabic-with-mufti-saim/lecture/$lectureId',
@@ -70,6 +77,7 @@ export interface FileRoutesByFullPath {
   '/api/auth/$': typeof ApiAuthSplatRoute
   '/api/publish/$': typeof ApiPublishSplatRoute
   '/arabic-with-mufti-saim/lecture/$lectureId': typeof ArabicWithMuftiSaimLectureLectureIdRoute
+  '/challenges/vocabulary/': typeof ChallengesVocabularyIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -80,6 +88,7 @@ export interface FileRoutesByTo {
   '/api/auth/$': typeof ApiAuthSplatRoute
   '/api/publish/$': typeof ApiPublishSplatRoute
   '/arabic-with-mufti-saim/lecture/$lectureId': typeof ArabicWithMuftiSaimLectureLectureIdRoute
+  '/challenges/vocabulary': typeof ChallengesVocabularyIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -91,6 +100,7 @@ export interface FileRoutesById {
   '/api/auth/$': typeof ApiAuthSplatRoute
   '/api/publish/$': typeof ApiPublishSplatRoute
   '/arabic-with-mufti-saim/lecture/$lectureId': typeof ArabicWithMuftiSaimLectureLectureIdRoute
+  '/challenges/vocabulary/': typeof ChallengesVocabularyIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -103,6 +113,7 @@ export interface FileRouteTypes {
     | '/api/auth/$'
     | '/api/publish/$'
     | '/arabic-with-mufti-saim/lecture/$lectureId'
+    | '/challenges/vocabulary/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -113,6 +124,7 @@ export interface FileRouteTypes {
     | '/api/auth/$'
     | '/api/publish/$'
     | '/arabic-with-mufti-saim/lecture/$lectureId'
+    | '/challenges/vocabulary'
   id:
     | '__root__'
     | '/'
@@ -123,6 +135,7 @@ export interface FileRouteTypes {
     | '/api/auth/$'
     | '/api/publish/$'
     | '/arabic-with-mufti-saim/lecture/$lectureId'
+    | '/challenges/vocabulary/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -134,6 +147,7 @@ export interface RootRouteChildren {
   ApiAuthSplatRoute: typeof ApiAuthSplatRoute
   ApiPublishSplatRoute: typeof ApiPublishSplatRoute
   ArabicWithMuftiSaimLectureLectureIdRoute: typeof ArabicWithMuftiSaimLectureLectureIdRoute
+  ChallengesVocabularyIndexRoute: typeof ChallengesVocabularyIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -173,6 +187,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ArabicWithMuftiSaimIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/challenges/vocabulary/': {
+      id: '/challenges/vocabulary/'
+      path: '/challenges/vocabulary'
+      fullPath: '/challenges/vocabulary/'
+      preLoaderRoute: typeof ChallengesVocabularyIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/arabic-with-mufti-saim/lecture/$lectureId': {
       id: '/arabic-with-mufti-saim/lecture/$lectureId'
       path: '/arabic-with-mufti-saim/lecture/$lectureId'
@@ -207,6 +228,7 @@ const rootRouteChildren: RootRouteChildren = {
   ApiPublishSplatRoute: ApiPublishSplatRoute,
   ArabicWithMuftiSaimLectureLectureIdRoute:
     ArabicWithMuftiSaimLectureLectureIdRoute,
+  ChallengesVocabularyIndexRoute: ChallengesVocabularyIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
