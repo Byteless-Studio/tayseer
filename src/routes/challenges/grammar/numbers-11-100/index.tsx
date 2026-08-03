@@ -14,7 +14,7 @@ const quizItems: StrictQuizItem[] = [
       'جاء اثنا عشرَ رجلاً\nTwelve men came (اثنا — nominative dual form)',
       'رأيتُ اثني عشرَ رجلاً\nI saw twelve men (اثني — accusative dual form)',
       'مررتُ باثني عشرَ رجلاً\nI passed by twelve men (اثني — genitive dual form)',
-      'جاء اثني عشرَ رجلاً\nIncorrect: with جاء (fā\'il, nominative) it must be اثنا, not اثني',
+      'جاء اثني عشرَ رجلاً\njā\'a ithnay ʿashara rajulan — "twelve men came" (اثني — accusative dual form)',
     ],
     correctIndex: 3,
     a: 'الجملة الرابعة خطأ لأن "اثنا عشر" فاعل مرفوع هنا، والجزء الأول من العدد ١٢ يُعرب إعراب المثنى: رفعاً بالألف، فالصواب "جاء اثنا عشرَ رجلاً" لا "اثني عشر".\nThe fourth sentence is wrong because اثنا عشر is the فاعل (subject, مرفوع) here, and the first part of the number 12 is declined like the dual: nominative with ا. The correct form is "جاء اثنا عشرَ رجلاً", not "اثني عشر".',

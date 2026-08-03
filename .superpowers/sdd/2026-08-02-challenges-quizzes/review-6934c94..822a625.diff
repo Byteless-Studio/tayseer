@@ -1,0 +1,37 @@
+# Review package: 6934c94..HEAD
+
+## Commits
+822a625 Fix malformed معرفة+تنوين example in mubtada-khabar quiz
+
+## Files changed
+ src/routes/challenges/grammar/mubtada-khabar/index.tsx | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+## Diff
+diff --git a/src/routes/challenges/grammar/mubtada-khabar/index.tsx b/src/routes/challenges/grammar/mubtada-khabar/index.tsx
+index c754254..6e14cd5 100644
+--- a/src/routes/challenges/grammar/mubtada-khabar/index.tsx
++++ b/src/routes/challenges/grammar/mubtada-khabar/index.tsx
+@@ -13,21 +13,21 @@ const quizItems: StrictQuizItem[] = [
+     options: [
+       'جملة تبدأ بفعل، وركناها الفاعل والمفعول به',
+       'جملة تبدأ باسم، وركناها المبتدأ والخبر',
+       'جملة تبدأ بحرف جر، وركناها الجار والمجرور',
+       'جملة تبدأ بأداة استفهام، وركناها السؤال والجواب',
+     ],
+     correctIndex: 1,
+     a: 'الجملة الاسمية هي الجملة التي تبدأ باسم، وتتكون في أبسط صورها من ركنين: المبتدأ (الاسم الذي يُبتدأ به الكلام) والخبر (ما يخبر عنه ويكمل معناه).',
+   },
+   {
+-    q: 'المحمدٌ في الفصلِ — ما إعراب "محمد" هنا، ولماذا؟',
++    q: 'محمدٌ في الفصلِ — ما إعراب "محمد" هنا، ولماذا؟',
+     options: [
+       'مبتدأ مرفوع لأنه ابتدئ به الكلام والحديث عنه',
+       'مفعول به منصوب',
+       'مضاف إليه مجرور',
+       'حال منصوب',
+     ],
+     correctIndex: 0,
+     a: 'محمد هنا هو الاسم الذي ابتدئ به الكلام، فهو مبتدأ، وحكمه الرفع. الجار والمجرور "في الفصلِ" يقع في محل رفع خبر.',
+   },
+   {

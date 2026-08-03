@@ -32,7 +32,9 @@ export interface Lecture {
   quran_examples?: QuranExample[]
   platform?: string
   ts?: number
+  media_id?: string
   source?: Record<string, string | number | boolean | null>
+  audio_url?: string        // presigned R2 URL — consumed at publish time, stripped before S3 storage
   // Runtime-injected by the server — not present in the S3 JSON:
   _audioUrl?: string
   _bookNumber?: number

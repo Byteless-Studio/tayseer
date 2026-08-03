@@ -65,6 +65,32 @@ export const Route = createFileRoute('/api/publish/$')({
           return new Response('Missing id field.', { status: 400 })
         }
 
+        if (!data.date) {
+          const now = new Date()
+          data.date = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`
+        }
+
+        // Download audio from presigned R2 URL if provided
+        const audioUrl = data.audio_url
+        if (audioUrl && !audioBuffer) {
+          console.log(`[publish] downloading audio from R2: ${audioUrl.split('?')[0]}`)
+          try {
+            const audioRes = await fetch(audioUrl)
+            if (!audioRes.ok) {
+              return new Response(`Failed to download audio from R2: ${audioRes.status} ${audioRes.statusText}`, { status: 502 })
+            }
+            audioBuffer = Buffer.from(await audioRes.arrayBuffer())
+            // Extract filename from the URL path (before the query string)
+            audioFileName = new URL(audioUrl).pathname.split('/').pop() ?? `${contentId}.m4a`
+          } catch (err) {
+            console.error('[publish] R2 audio download failed:', err)
+            return new Response('Failed to download audio from R2.', { status: 502 })
+          }
+        }
+
+        // Strip the transient R2 URL before persisting — it expires in 24 hours
+        delete data.audio_url
+
         // Upload JSON to s3Prefix/book-2-lectures/<contentId>/<contentId>.json
         const lecturePrefix = `${course.s3Prefix}book-2-lectures/${contentId}/`
         const jsonKey = `${lecturePrefix}${contentId}.json`
@@ -80,15 +106,22 @@ export const Route = createFileRoute('/api/publish/$')({
           )
 
           if (audioBuffer && audioFileName) {
+            const ext = audioFileName.split('.').pop()?.toLowerCase() ?? 'm4a'
+            const audioContentType =
+              ext === 'mp3' ? 'audio/mpeg' :
+              ext === 'ogg' ? 'audio/ogg' :
+              ext === 'wav' ? 'audio/wav' :
+              'audio/mp4' // m4a / aac / generic
             const audioKey = `${lecturePrefix}${audioFileName}`
             await s3.send(
               new PutObjectCommand({
                 Bucket: BUCKET,
                 Key: audioKey,
                 Body: audioBuffer,
-                ContentType: 'audio/mpeg',
+                ContentType: audioContentType,
               }),
             )
+            console.log(`[publish] uploaded audio to s3://${BUCKET}/${audioKey}`)
           }
         } catch (err) {
           console.error('[publish] S3 upload failed:', err)

@@ -1,0 +1,2330 @@
+# Review package: 563d1171..HEAD
+
+## Commits
+6934c94 Add grammar quizzes 1-14: noun & sentence basics
+
+## Files changed
+ src/routeTree.gen.ts                               | 320 +++++++++++++++++++++
+ .../grammar/adjectives-agreement/index.tsx         | 130 +++++++++
+ .../challenges/grammar/attached-pronouns/index.tsx | 124 ++++++++
+ .../grammar/case-system-overview/index.tsx         | 141 +++++++++
+ src/routes/challenges/grammar/colors/index.tsx     | 123 ++++++++
+ .../grammar/definiteness-tanwin/index.tsx          | 131 +++++++++
+ src/routes/challenges/grammar/idafah/index.tsx     | 131 +++++++++
+ .../grammar/independent-pronouns/index.tsx         | 117 ++++++++
+ .../grammar/interrogatives-man-maa/index.tsx       | 126 ++++++++
+ .../challenges/grammar/ism-ishaara-far/index.tsx   | 120 ++++++++
+ .../challenges/grammar/ism-ishaara-near/index.tsx  | 127 ++++++++
+ .../grammar/masculine-feminine/index.tsx           | 116 ++++++++
+ .../challenges/grammar/mubtada-khabar/index.tsx    | 132 +++++++++
+ .../challenges/grammar/prepositions/index.tsx      | 107 +++++++
+ .../challenges/grammar/yes-no-questions/index.tsx  | 115 ++++++++
+ 15 files changed, 2060 insertions(+)
+
+## Diff
+diff --git a/src/routeTree.gen.ts b/src/routeTree.gen.ts
+index 2dc3c6d..387100e 100644
+--- a/src/routeTree.gen.ts
++++ b/src/routeTree.gen.ts
+@@ -11,20 +11,34 @@
+ import { Route as rootRouteImport } from './routes/__root'
+ import { Route as AboutRouteImport } from './routes/about'
+ import { Route as IndexRouteImport } from './routes/index'
+ import { Route as CognatesIndexRouteImport } from './routes/cognates/index'
+ import { Route as ChallengesIndexRouteImport } from './routes/challenges/index'
+ import { Route as ArabicWithMuftiSaimIndexRouteImport } from './routes/arabic-with-mufti-saim/index'
+ import { Route as ChallengesVocabularyIndexRouteImport } from './routes/challenges/vocabulary/index'
+ import { Route as ArabicWithMuftiSaimLectureLectureIdRouteImport } from './routes/arabic-with-mufti-saim/lecture.$lectureId'
+ import { Route as ApiPublishSplatRouteImport } from './routes/api/publish/$'
+ import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
++import { Route as ChallengesGrammarYesNoQuestionsIndexRouteImport } from './routes/challenges/grammar/yes-no-questions/index'
++import { Route as ChallengesGrammarPrepositionsIndexRouteImport } from './routes/challenges/grammar/prepositions/index'
++import { Route as ChallengesGrammarMubtadaKhabarIndexRouteImport } from './routes/challenges/grammar/mubtada-khabar/index'
++import { Route as ChallengesGrammarMasculineFeminineIndexRouteImport } from './routes/challenges/grammar/masculine-feminine/index'
++import { Route as ChallengesGrammarIsmIshaaraNearIndexRouteImport } from './routes/challenges/grammar/ism-ishaara-near/index'
++import { Route as ChallengesGrammarIsmIshaaraFarIndexRouteImport } from './routes/challenges/grammar/ism-ishaara-far/index'
++import { Route as ChallengesGrammarInterrogativesManMaaIndexRouteImport } from './routes/challenges/grammar/interrogatives-man-maa/index'
++import { Route as ChallengesGrammarIndependentPronounsIndexRouteImport } from './routes/challenges/grammar/independent-pronouns/index'
++import { Route as ChallengesGrammarIdafahIndexRouteImport } from './routes/challenges/grammar/idafah/index'
++import { Route as ChallengesGrammarDefinitenessTanwinIndexRouteImport } from './routes/challenges/grammar/definiteness-tanwin/index'
++import { Route as ChallengesGrammarColorsIndexRouteImport } from './routes/challenges/grammar/colors/index'
++import { Route as ChallengesGrammarCaseSystemOverviewIndexRouteImport } from './routes/challenges/grammar/case-system-overview/index'
++import { Route as ChallengesGrammarAttachedPronounsIndexRouteImport } from './routes/challenges/grammar/attached-pronouns/index'
++import { Route as ChallengesGrammarAdjectivesAgreementIndexRouteImport } from './routes/challenges/grammar/adjectives-agreement/index'
+ 
+ const AboutRoute = AboutRouteImport.update({
+   id: '/about',
+   path: '/about',
+   getParentRoute: () => rootRouteImport,
+ } as any)
+ const IndexRoute = IndexRouteImport.update({
+   id: '/',
+   path: '/',
+   getParentRoute: () => rootRouteImport,
+@@ -60,101 +74,283 @@ const ArabicWithMuftiSaimLectureLectureIdRoute =
+ const ApiPublishSplatRoute = ApiPublishSplatRouteImport.update({
+   id: '/api/publish/$',
+   path: '/api/publish/$',
+   getParentRoute: () => rootRouteImport,
+ } as any)
+ const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
+   id: '/api/auth/$',
+   path: '/api/auth/$',
+   getParentRoute: () => rootRouteImport,
+ } as any)
++const ChallengesGrammarYesNoQuestionsIndexRoute =
++  ChallengesGrammarYesNoQuestionsIndexRouteImport.update({
++    id: '/challenges/grammar/yes-no-questions/',
++    path: '/challenges/grammar/yes-no-questions/',
++    getParentRoute: () => rootRouteImport,
++  } as any)
++const ChallengesGrammarPrepositionsIndexRoute =
++  ChallengesGrammarPrepositionsIndexRouteImport.update({
++    id: '/challenges/grammar/prepositions/',
++    path: '/challenges/grammar/prepositions/',
++    getParentRoute: () => rootRouteImport,
++  } as any)
++const ChallengesGrammarMubtadaKhabarIndexRoute =
++  ChallengesGrammarMubtadaKhabarIndexRouteImport.update({
++    id: '/challenges/grammar/mubtada-khabar/',
++    path: '/challenges/grammar/mubtada-khabar/',
++    getParentRoute: () => rootRouteImport,
++  } as any)
++const ChallengesGrammarMasculineFeminineIndexRoute =
++  ChallengesGrammarMasculineFeminineIndexRouteImport.update({
++    id: '/challenges/grammar/masculine-feminine/',
++    path: '/challenges/grammar/masculine-feminine/',
++    getParentRoute: () => rootRouteImport,
++  } as any)
++const ChallengesGrammarIsmIshaaraNearIndexRoute =
++  ChallengesGrammarIsmIshaaraNearIndexRouteImport.update({
++    id: '/challenges/grammar/ism-ishaara-near/',
++    path: '/challenges/grammar/ism-ishaara-near/',
++    getParentRoute: () => rootRouteImport,
++  } as any)
++const ChallengesGrammarIsmIshaaraFarIndexRoute =
++  ChallengesGrammarIsmIshaaraFarIndexRouteImport.update({
++    id: '/challenges/grammar/ism-ishaara-far/',
++    path: '/challenges/grammar/ism-ishaara-far/',
++    getParentRoute: () => rootRouteImport,
++  } as any)
++const ChallengesGrammarInterrogativesManMaaIndexRoute =
++  ChallengesGrammarInterrogativesManMaaIndexRouteImport.update({
++    id: '/challenges/grammar/interrogatives-man-maa/',
++    path: '/challenges/grammar/interrogatives-man-maa/',
++    getParentRoute: () => rootRouteImport,
++  } as any)
++const ChallengesGrammarIndependentPronounsIndexRoute =
++  ChallengesGrammarIndependentPronounsIndexRouteImport.update({
++    id: '/challenges/grammar/independent-pronouns/',
++    path: '/challenges/grammar/independent-pronouns/',
++    getParentRoute: () => rootRouteImport,
++  } as any)
++const ChallengesGrammarIdafahIndexRoute =
++  ChallengesGrammarIdafahIndexRouteImport.update({
++    id: '/challenges/grammar/idafah/',
++    path: '/challenges/grammar/idafah/',
++    getParentRoute: () => rootRouteImport,
++  } as any)
++const ChallengesGrammarDefinitenessTanwinIndexRoute =
++  ChallengesGrammarDefinitenessTanwinIndexRouteImport.update({
++    id: '/challenges/grammar/definiteness-tanwin/',
++    path: '/challenges/grammar/definiteness-tanwin/',
++    getParentRoute: () => rootRouteImport,
++  } as any)
++const ChallengesGrammarColorsIndexRoute =
++  ChallengesGrammarColorsIndexRouteImport.update({
++    id: '/challenges/grammar/colors/',
++    path: '/challenges/grammar/colors/',
++    getParentRoute: () => rootRouteImport,
++  } as any)
++const ChallengesGrammarCaseSystemOverviewIndexRoute =
++  ChallengesGrammarCaseSystemOverviewIndexRouteImport.update({
++    id: '/challenges/grammar/case-system-overview/',
++    path: '/challenges/grammar/case-system-overview/',
++    getParentRoute: () => rootRouteImport,
++  } as any)
++const ChallengesGrammarAttachedPronounsIndexRoute =
++  ChallengesGrammarAttachedPronounsIndexRouteImport.update({
++    id: '/challenges/grammar/attached-pronouns/',
++    path: '/challenges/grammar/attached-pronouns/',
++    getParentRoute: () => rootRouteImport,
++  } as any)
++const ChallengesGrammarAdjectivesAgreementIndexRoute =
++  ChallengesGrammarAdjectivesAgreementIndexRouteImport.update({
++    id: '/challenges/grammar/adjectives-agreement/',
++    path: '/challenges/grammar/adjectives-agreement/',
++    getParentRoute: () => rootRouteImport,
++  } as any)
+ 
+ export interface FileRoutesByFullPath {
+   '/': typeof IndexRoute
+   '/about': typeof AboutRoute
+   '/arabic-with-mufti-saim/': typeof ArabicWithMuftiSaimIndexRoute
+   '/challenges/': typeof ChallengesIndexRoute
+   '/cognates/': typeof CognatesIndexRoute
+   '/api/auth/$': typeof ApiAuthSplatRoute
+   '/api/publish/$': typeof ApiPublishSplatRoute
+   '/arabic-with-mufti-saim/lecture/$lectureId': typeof ArabicWithMuftiSaimLectureLectureIdRoute
+   '/challenges/vocabulary/': typeof ChallengesVocabularyIndexRoute
++  '/challenges/grammar/adjectives-agreement/': typeof ChallengesGrammarAdjectivesAgreementIndexRoute
++  '/challenges/grammar/attached-pronouns/': typeof ChallengesGrammarAttachedPronounsIndexRoute
++  '/challenges/grammar/case-system-overview/': typeof ChallengesGrammarCaseSystemOverviewIndexRoute
++  '/challenges/grammar/colors/': typeof ChallengesGrammarColorsIndexRoute
++  '/challenges/grammar/definiteness-tanwin/': typeof ChallengesGrammarDefinitenessTanwinIndexRoute
++  '/challenges/grammar/idafah/': typeof ChallengesGrammarIdafahIndexRoute
++  '/challenges/grammar/independent-pronouns/': typeof ChallengesGrammarIndependentPronounsIndexRoute
++  '/challenges/grammar/interrogatives-man-maa/': typeof ChallengesGrammarInterrogativesManMaaIndexRoute
++  '/challenges/grammar/ism-ishaara-far/': typeof ChallengesGrammarIsmIshaaraFarIndexRoute
++  '/challenges/grammar/ism-ishaara-near/': typeof ChallengesGrammarIsmIshaaraNearIndexRoute
++  '/challenges/grammar/masculine-feminine/': typeof ChallengesGrammarMasculineFeminineIndexRoute
++  '/challenges/grammar/mubtada-khabar/': typeof ChallengesGrammarMubtadaKhabarIndexRoute
++  '/challenges/grammar/prepositions/': typeof ChallengesGrammarPrepositionsIndexRoute
++  '/challenges/grammar/yes-no-questions/': typeof ChallengesGrammarYesNoQuestionsIndexRoute
+ }
+ export interface FileRoutesByTo {
+   '/': typeof IndexRoute
+   '/about': typeof AboutRoute
+   '/arabic-with-mufti-saim': typeof ArabicWithMuftiSaimIndexRoute
+   '/challenges': typeof ChallengesIndexRoute
+   '/cognates': typeof CognatesIndexRoute
+   '/api/auth/$': typeof ApiAuthSplatRoute
+   '/api/publish/$': typeof ApiPublishSplatRoute
+   '/arabic-with-mufti-saim/lecture/$lectureId': typeof ArabicWithMuftiSaimLectureLectureIdRoute
+   '/challenges/vocabulary': typeof ChallengesVocabularyIndexRoute
++  '/challenges/grammar/adjectives-agreement': typeof ChallengesGrammarAdjectivesAgreementIndexRoute
++  '/challenges/grammar/attached-pronouns': typeof ChallengesGrammarAttachedPronounsIndexRoute
++  '/challenges/grammar/case-system-overview': typeof ChallengesGrammarCaseSystemOverviewIndexRoute
++  '/challenges/grammar/colors': typeof ChallengesGrammarColorsIndexRoute
++  '/challenges/grammar/definiteness-tanwin': typeof ChallengesGrammarDefinitenessTanwinIndexRoute
++  '/challenges/grammar/idafah': typeof ChallengesGrammarIdafahIndexRoute
++  '/challenges/grammar/independent-pronouns': typeof ChallengesGrammarIndependentPronounsIndexRoute
++  '/challenges/grammar/interrogatives-man-maa': typeof ChallengesGrammarInterrogativesManMaaIndexRoute
++  '/challenges/grammar/ism-ishaara-far': typeof ChallengesGrammarIsmIshaaraFarIndexRoute
++  '/challenges/grammar/ism-ishaara-near': typeof ChallengesGrammarIsmIshaaraNearIndexRoute
++  '/challenges/grammar/masculine-feminine': typeof ChallengesGrammarMasculineFeminineIndexRoute
++  '/challenges/grammar/mubtada-khabar': typeof ChallengesGrammarMubtadaKhabarIndexRoute
++  '/challenges/grammar/prepositions': typeof ChallengesGrammarPrepositionsIndexRoute
++  '/challenges/grammar/yes-no-questions': typeof ChallengesGrammarYesNoQuestionsIndexRoute
+ }
+ export interface FileRoutesById {
+   __root__: typeof rootRouteImport
+   '/': typeof IndexRoute
+   '/about': typeof AboutRoute
+   '/arabic-with-mufti-saim/': typeof ArabicWithMuftiSaimIndexRoute
+   '/challenges/': typeof ChallengesIndexRoute
+   '/cognates/': typeof CognatesIndexRoute
+   '/api/auth/$': typeof ApiAuthSplatRoute
+   '/api/publish/$': typeof ApiPublishSplatRoute
+   '/arabic-with-mufti-saim/lecture/$lectureId': typeof ArabicWithMuftiSaimLectureLectureIdRoute
+   '/challenges/vocabulary/': typeof ChallengesVocabularyIndexRoute
++  '/challenges/grammar/adjectives-agreement/': typeof ChallengesGrammarAdjectivesAgreementIndexRoute
++  '/challenges/grammar/attached-pronouns/': typeof ChallengesGrammarAttachedPronounsIndexRoute
++  '/challenges/grammar/case-system-overview/': typeof ChallengesGrammarCaseSystemOverviewIndexRoute
++  '/challenges/grammar/colors/': typeof ChallengesGrammarColorsIndexRoute
++  '/challenges/grammar/definiteness-tanwin/': typeof ChallengesGrammarDefinitenessTanwinIndexRoute
++  '/challenges/grammar/idafah/': typeof ChallengesGrammarIdafahIndexRoute
++  '/challenges/grammar/independent-pronouns/': typeof ChallengesGrammarIndependentPronounsIndexRoute
++  '/challenges/grammar/interrogatives-man-maa/': typeof ChallengesGrammarInterrogativesManMaaIndexRoute
++  '/challenges/grammar/ism-ishaara-far/': typeof ChallengesGrammarIsmIshaaraFarIndexRoute
++  '/challenges/grammar/ism-ishaara-near/': typeof ChallengesGrammarIsmIshaaraNearIndexRoute
++  '/challenges/grammar/masculine-feminine/': typeof ChallengesGrammarMasculineFeminineIndexRoute
++  '/challenges/grammar/mubtada-khabar/': typeof ChallengesGrammarMubtadaKhabarIndexRoute
++  '/challenges/grammar/prepositions/': typeof ChallengesGrammarPrepositionsIndexRoute
++  '/challenges/grammar/yes-no-questions/': typeof ChallengesGrammarYesNoQuestionsIndexRoute
+ }
+ export interface FileRouteTypes {
+   fileRoutesByFullPath: FileRoutesByFullPath
+   fullPaths:
+     | '/'
+     | '/about'
+     | '/arabic-with-mufti-saim/'
+     | '/challenges/'
+     | '/cognates/'
+     | '/api/auth/$'
+     | '/api/publish/$'
+     | '/arabic-with-mufti-saim/lecture/$lectureId'
+     | '/challenges/vocabulary/'
++    | '/challenges/grammar/adjectives-agreement/'
++    | '/challenges/grammar/attached-pronouns/'
++    | '/challenges/grammar/case-system-overview/'
++    | '/challenges/grammar/colors/'
++    | '/challenges/grammar/definiteness-tanwin/'
++    | '/challenges/grammar/idafah/'
++    | '/challenges/grammar/independent-pronouns/'
++    | '/challenges/grammar/interrogatives-man-maa/'
++    | '/challenges/grammar/ism-ishaara-far/'
++    | '/challenges/grammar/ism-ishaara-near/'
++    | '/challenges/grammar/masculine-feminine/'
++    | '/challenges/grammar/mubtada-khabar/'
++    | '/challenges/grammar/prepositions/'
++    | '/challenges/grammar/yes-no-questions/'
+   fileRoutesByTo: FileRoutesByTo
+   to:
+     | '/'
+     | '/about'
+     | '/arabic-with-mufti-saim'
+     | '/challenges'
+     | '/cognates'
+     | '/api/auth/$'
+     | '/api/publish/$'
+     | '/arabic-with-mufti-saim/lecture/$lectureId'
+     | '/challenges/vocabulary'
++    | '/challenges/grammar/adjectives-agreement'
++    | '/challenges/grammar/attached-pronouns'
++    | '/challenges/grammar/case-system-overview'
++    | '/challenges/grammar/colors'
++    | '/challenges/grammar/definiteness-tanwin'
++    | '/challenges/grammar/idafah'
++    | '/challenges/grammar/independent-pronouns'
++    | '/challenges/grammar/interrogatives-man-maa'
++    | '/challenges/grammar/ism-ishaara-far'
++    | '/challenges/grammar/ism-ishaara-near'
++    | '/challenges/grammar/masculine-feminine'
++    | '/challenges/grammar/mubtada-khabar'
++    | '/challenges/grammar/prepositions'
++    | '/challenges/grammar/yes-no-questions'
+   id:
+     | '__root__'
+     | '/'
+     | '/about'
+     | '/arabic-with-mufti-saim/'
+     | '/challenges/'
+     | '/cognates/'
+     | '/api/auth/$'
+     | '/api/publish/$'
+     | '/arabic-with-mufti-saim/lecture/$lectureId'
+     | '/challenges/vocabulary/'
++    | '/challenges/grammar/adjectives-agreement/'
++    | '/challenges/grammar/attached-pronouns/'
++    | '/challenges/grammar/case-system-overview/'
++    | '/challenges/grammar/colors/'
++    | '/challenges/grammar/definiteness-tanwin/'
++    | '/challenges/grammar/idafah/'
++    | '/challenges/grammar/independent-pronouns/'
++    | '/challenges/grammar/interrogatives-man-maa/'
++    | '/challenges/grammar/ism-ishaara-far/'
++    | '/challenges/grammar/ism-ishaara-near/'
++    | '/challenges/grammar/masculine-feminine/'
++    | '/challenges/grammar/mubtada-khabar/'
++    | '/challenges/grammar/prepositions/'
++    | '/challenges/grammar/yes-no-questions/'
+   fileRoutesById: FileRoutesById
+ }
+ export interface RootRouteChildren {
+   IndexRoute: typeof IndexRoute
+   AboutRoute: typeof AboutRoute
+   ArabicWithMuftiSaimIndexRoute: typeof ArabicWithMuftiSaimIndexRoute
+   ChallengesIndexRoute: typeof ChallengesIndexRoute
+   CognatesIndexRoute: typeof CognatesIndexRoute
+   ApiAuthSplatRoute: typeof ApiAuthSplatRoute
+   ApiPublishSplatRoute: typeof ApiPublishSplatRoute
+   ArabicWithMuftiSaimLectureLectureIdRoute: typeof ArabicWithMuftiSaimLectureLectureIdRoute
+   ChallengesVocabularyIndexRoute: typeof ChallengesVocabularyIndexRoute
++  ChallengesGrammarAdjectivesAgreementIndexRoute: typeof ChallengesGrammarAdjectivesAgreementIndexRoute
++  ChallengesGrammarAttachedPronounsIndexRoute: typeof ChallengesGrammarAttachedPronounsIndexRoute
++  ChallengesGrammarCaseSystemOverviewIndexRoute: typeof ChallengesGrammarCaseSystemOverviewIndexRoute
++  ChallengesGrammarColorsIndexRoute: typeof ChallengesGrammarColorsIndexRoute
++  ChallengesGrammarDefinitenessTanwinIndexRoute: typeof ChallengesGrammarDefinitenessTanwinIndexRoute
++  ChallengesGrammarIdafahIndexRoute: typeof ChallengesGrammarIdafahIndexRoute
++  ChallengesGrammarIndependentPronounsIndexRoute: typeof ChallengesGrammarIndependentPronounsIndexRoute
++  ChallengesGrammarInterrogativesManMaaIndexRoute: typeof ChallengesGrammarInterrogativesManMaaIndexRoute
++  ChallengesGrammarIsmIshaaraFarIndexRoute: typeof ChallengesGrammarIsmIshaaraFarIndexRoute
++  ChallengesGrammarIsmIshaaraNearIndexRoute: typeof ChallengesGrammarIsmIshaaraNearIndexRoute
++  ChallengesGrammarMasculineFeminineIndexRoute: typeof ChallengesGrammarMasculineFeminineIndexRoute
++  ChallengesGrammarMubtadaKhabarIndexRoute: typeof ChallengesGrammarMubtadaKhabarIndexRoute
++  ChallengesGrammarPrepositionsIndexRoute: typeof ChallengesGrammarPrepositionsIndexRoute
++  ChallengesGrammarYesNoQuestionsIndexRoute: typeof ChallengesGrammarYesNoQuestionsIndexRoute
+ }
+ 
+ declare module '@tanstack/react-router' {
+   interface FileRoutesByPath {
+     '/about': {
+       id: '/about'
+       path: '/about'
+       fullPath: '/about'
+       preLoaderRoute: typeof AboutRouteImport
+       parentRoute: typeof rootRouteImport
+@@ -208,34 +404,158 @@ declare module '@tanstack/react-router' {
+       preLoaderRoute: typeof ApiPublishSplatRouteImport
+       parentRoute: typeof rootRouteImport
+     }
+     '/api/auth/$': {
+       id: '/api/auth/$'
+       path: '/api/auth/$'
+       fullPath: '/api/auth/$'
+       preLoaderRoute: typeof ApiAuthSplatRouteImport
+       parentRoute: typeof rootRouteImport
+     }
++    '/challenges/grammar/yes-no-questions/': {
++      id: '/challenges/grammar/yes-no-questions/'
++      path: '/challenges/grammar/yes-no-questions'
++      fullPath: '/challenges/grammar/yes-no-questions/'
++      preLoaderRoute: typeof ChallengesGrammarYesNoQuestionsIndexRouteImport
++      parentRoute: typeof rootRouteImport
++    }
++    '/challenges/grammar/prepositions/': {
++      id: '/challenges/grammar/prepositions/'
++      path: '/challenges/grammar/prepositions'
++      fullPath: '/challenges/grammar/prepositions/'
++      preLoaderRoute: typeof ChallengesGrammarPrepositionsIndexRouteImport
++      parentRoute: typeof rootRouteImport
++    }
++    '/challenges/grammar/mubtada-khabar/': {
++      id: '/challenges/grammar/mubtada-khabar/'
++      path: '/challenges/grammar/mubtada-khabar'
++      fullPath: '/challenges/grammar/mubtada-khabar/'
++      preLoaderRoute: typeof ChallengesGrammarMubtadaKhabarIndexRouteImport
++      parentRoute: typeof rootRouteImport
++    }
++    '/challenges/grammar/masculine-feminine/': {
++      id: '/challenges/grammar/masculine-feminine/'
++      path: '/challenges/grammar/masculine-feminine'
++      fullPath: '/challenges/grammar/masculine-feminine/'
++      preLoaderRoute: typeof ChallengesGrammarMasculineFeminineIndexRouteImport
++      parentRoute: typeof rootRouteImport
++    }
++    '/challenges/grammar/ism-ishaara-near/': {
++      id: '/challenges/grammar/ism-ishaara-near/'
++      path: '/challenges/grammar/ism-ishaara-near'
++      fullPath: '/challenges/grammar/ism-ishaara-near/'
++      preLoaderRoute: typeof ChallengesGrammarIsmIshaaraNearIndexRouteImport
++      parentRoute: typeof rootRouteImport
++    }
++    '/challenges/grammar/ism-ishaara-far/': {
++      id: '/challenges/grammar/ism-ishaara-far/'
++      path: '/challenges/grammar/ism-ishaara-far'
++      fullPath: '/challenges/grammar/ism-ishaara-far/'
++      preLoaderRoute: typeof ChallengesGrammarIsmIshaaraFarIndexRouteImport
++      parentRoute: typeof rootRouteImport
++    }
++    '/challenges/grammar/interrogatives-man-maa/': {
++      id: '/challenges/grammar/interrogatives-man-maa/'
++      path: '/challenges/grammar/interrogatives-man-maa'
++      fullPath: '/challenges/grammar/interrogatives-man-maa/'
++      preLoaderRoute: typeof ChallengesGrammarInterrogativesManMaaIndexRouteImport
++      parentRoute: typeof rootRouteImport
++    }
++    '/challenges/grammar/independent-pronouns/': {
++      id: '/challenges/grammar/independent-pronouns/'
++      path: '/challenges/grammar/independent-pronouns'
++      fullPath: '/challenges/grammar/independent-pronouns/'
++      preLoaderRoute: typeof ChallengesGrammarIndependentPronounsIndexRouteImport
++      parentRoute: typeof rootRouteImport
++    }
++    '/challenges/grammar/idafah/': {
++      id: '/challenges/grammar/idafah/'
++      path: '/challenges/grammar/idafah'
++      fullPath: '/challenges/grammar/idafah/'
++      preLoaderRoute: typeof ChallengesGrammarIdafahIndexRouteImport
++      parentRoute: typeof rootRouteImport
++    }
++    '/challenges/grammar/definiteness-tanwin/': {
++      id: '/challenges/grammar/definiteness-tanwin/'
++      path: '/challenges/grammar/definiteness-tanwin'
++      fullPath: '/challenges/grammar/definiteness-tanwin/'
++      preLoaderRoute: typeof ChallengesGrammarDefinitenessTanwinIndexRouteImport
++      parentRoute: typeof rootRouteImport
++    }
++    '/challenges/grammar/colors/': {
++      id: '/challenges/grammar/colors/'
++      path: '/challenges/grammar/colors'
++      fullPath: '/challenges/grammar/colors/'
++      preLoaderRoute: typeof ChallengesGrammarColorsIndexRouteImport
++      parentRoute: typeof rootRouteImport
++    }
++    '/challenges/grammar/case-system-overview/': {
++      id: '/challenges/grammar/case-system-overview/'
++      path: '/challenges/grammar/case-system-overview'
++      fullPath: '/challenges/grammar/case-system-overview/'
++      preLoaderRoute: typeof ChallengesGrammarCaseSystemOverviewIndexRouteImport
++      parentRoute: typeof rootRouteImport
++    }
++    '/challenges/grammar/attached-pronouns/': {
++      id: '/challenges/grammar/attached-pronouns/'
++      path: '/challenges/grammar/attached-pronouns'
++      fullPath: '/challenges/grammar/attached-pronouns/'
++      preLoaderRoute: typeof ChallengesGrammarAttachedPronounsIndexRouteImport
++      parentRoute: typeof rootRouteImport
++    }
++    '/challenges/grammar/adjectives-agreement/': {
++      id: '/challenges/grammar/adjectives-agreement/'
++      path: '/challenges/grammar/adjectives-agreement'
++      fullPath: '/challenges/grammar/adjectives-agreement/'
++      preLoaderRoute: typeof ChallengesGrammarAdjectivesAgreementIndexRouteImport
++      parentRoute: typeof rootRouteImport
++    }
+   }
+ }
+ 
+ const rootRouteChildren: RootRouteChildren = {
+   IndexRoute: IndexRoute,
+   AboutRoute: AboutRoute,
+   ArabicWithMuftiSaimIndexRoute: ArabicWithMuftiSaimIndexRoute,
+   ChallengesIndexRoute: ChallengesIndexRoute,
+   CognatesIndexRoute: CognatesIndexRoute,
+   ApiAuthSplatRoute: ApiAuthSplatRoute,
+   ApiPublishSplatRoute: ApiPublishSplatRoute,
+   ArabicWithMuftiSaimLectureLectureIdRoute:
+     ArabicWithMuftiSaimLectureLectureIdRoute,
+   ChallengesVocabularyIndexRoute: ChallengesVocabularyIndexRoute,
++  ChallengesGrammarAdjectivesAgreementIndexRoute:
++    ChallengesGrammarAdjectivesAgreementIndexRoute,
++  ChallengesGrammarAttachedPronounsIndexRoute:
++    ChallengesGrammarAttachedPronounsIndexRoute,
++  ChallengesGrammarCaseSystemOverviewIndexRoute:
++    ChallengesGrammarCaseSystemOverviewIndexRoute,
++  ChallengesGrammarColorsIndexRoute: ChallengesGrammarColorsIndexRoute,
++  ChallengesGrammarDefinitenessTanwinIndexRoute:
++    ChallengesGrammarDefinitenessTanwinIndexRoute,
++  ChallengesGrammarIdafahIndexRoute: ChallengesGrammarIdafahIndexRoute,
++  ChallengesGrammarIndependentPronounsIndexRoute:
++    ChallengesGrammarIndependentPronounsIndexRoute,
++  ChallengesGrammarInterrogativesManMaaIndexRoute:
++    ChallengesGrammarInterrogativesManMaaIndexRoute,
++  ChallengesGrammarIsmIshaaraFarIndexRoute:
++    ChallengesGrammarIsmIshaaraFarIndexRoute,
++  ChallengesGrammarIsmIshaaraNearIndexRoute:
++    ChallengesGrammarIsmIshaaraNearIndexRoute,
++  ChallengesGrammarMasculineFeminineIndexRoute:
++    ChallengesGrammarMasculineFeminineIndexRoute,
++  ChallengesGrammarMubtadaKhabarIndexRoute:
++    ChallengesGrammarMubtadaKhabarIndexRoute,
++  ChallengesGrammarPrepositionsIndexRoute:
++    ChallengesGrammarPrepositionsIndexRoute,
++  ChallengesGrammarYesNoQuestionsIndexRoute:
++    ChallengesGrammarYesNoQuestionsIndexRoute,
+ }
+ export const routeTree = rootRouteImport
+   ._addFileChildren(rootRouteChildren)
+   ._addFileTypes<FileRouteTypes>()
+ 
+ import type { getRouter } from './router.tsx'
+ import type { createStart } from '@tanstack/react-start'
+ declare module '@tanstack/react-start' {
+   interface Register {
+     ssr: true
+diff --git a/src/routes/challenges/grammar/adjectives-agreement/index.tsx b/src/routes/challenges/grammar/adjectives-agreement/index.tsx
+new file mode 100644
+index 0000000..6695bd8
+--- /dev/null
++++ b/src/routes/challenges/grammar/adjectives-agreement/index.tsx
+@@ -0,0 +1,130 @@
++import { createFileRoute, Link } from '@tanstack/react-router'
++import { QuizCarousel } from '#/components/QuizCarousel'
++import type { StrictQuizItem } from '#/routes/challenges/-quiz-types'
++
++export const Route = createFileRoute('/challenges/grammar/adjectives-agreement/')({
++  head: () => ({ meta: [{ title: 'Adjective Agreement — Grammar — Tayseer' }] }),
++  component: TopicPage,
++})
++
++const quizItems: StrictQuizItem[] = [
++  {
++    q: 'ما هو النعت (الصفة) وما هو المنعوت (الموصوف)؟',
++    options: [
++      'النعت هو الاسم الأصلي، والمنعوت هو الصفة التي تصفه',
++      'النعت هو الصفة التي تصف اسماً، والمنعوت هو الاسم الموصوف بتلك الصفة',
++      'النعت فعل، والمنعوت فاعله',
++      'لا فرق بينهما، مصطلحان مترادفان',
++    ],
++    correctIndex: 1,
++    a: 'النعت هو الكلمة التي تصف اسماً وتوضح صفة من صفاته، والمنعوت هو الاسم الأصلي الذي تصفه، مثل "طالبٌ مجتهدٌ": طالبٌ منعوت، مجتهدٌ نعت.',
++  },
++  {
++    q: 'في كم وجه يجب أن يطابق النعت المنعوت؟',
++    options: [
++      'في التذكير والتأنيث فقط',
++      'في العدد فقط',
++      'في أربعة أوجه: التذكير/التأنيث، الإفراد/التثنية/الجمع، التعريف/التنكير، والإعراب (الحالة)',
++      'لا يلزم أي تطابق بينهما',
++    ],
++    correctIndex: 2,
++    a: 'يجب أن يطابق النعت منعوته في أربعة أوجه معاً: الجنس (تذكير/تأنيث)، العدد (إفراد/تثنية/جمع)، التعريف (معرفة/نكرة)، والحالة الإعرابية (رفع/نصب/جر).',
++  },
++  {
++    q: 'ما هو الترتيب الصحيح للنعت والمنعوت في الجملة العربية؟',
++    options: [
++      'النعت يسبق المنعوت دائماً',
++      'المنعوت يسبق النعت دائماً',
++      'لا ترتيب ثابت بينهما',
++      'يتبادلان الترتيب حسب الجنس',
++    ],
++    correctIndex: 1,
++    a: 'الترتيب الثابت في العربية هو أن يأتي الموصوف (المنعوت) أولاً ثم تتبعه صفته (النعت): "طالبٌ مجتهدٌ" لا "مجتهدٌ طالبٌ".',
++  },
++  {
++    q: 'أكمل: رأيتُ الطالبَ ___ (the diligent student, as a definite object)',
++    options: ['مجتهدٌ', 'مجتهداً', 'المجتهدَ', 'مجتهدةً'],
++    correctIndex: 2,
++    a: 'الطالبَ هنا مفعول به معرفة منصوب، فيجب أن يطابقه النعت في التعريف (بأل) والنصب معاً: "المجتهدَ" — لا "مجتهداً" (نكرة) ولا "مجتهدٌ" (مرفوع).',
++  },
++  {
++    q: 'أيّ من هذه الجمل بها خطأ في مطابقة النعت للمنعوت؟',
++    options: ['رأيتُ طالباً مجتهداً', 'رأيتُ الطالبَ المجتهدَ', 'رأيتُ طالباً المجتهدَ', 'رأيتُ الطالبةَ المجتهدةَ'],
++    correctIndex: 2,
++    a: '"طالباً المجتهدَ" خطأ لأنه يجمع بين منعوت نكرة (طالباً) ونعت معرفة (المجتهدَ) — يجب أن يتطابقا في التعريف؛ الصواب إما "طالباً مجتهداً" (كلاهما نكرة) أو "الطالبَ المجتهدَ" (كلاهما معرفة).',
++  },
++  {
++    q: 'الطالباتُ المجتهداتُ ناجحاتٌ — لماذا جاء النعت "المجتهداتُ" بصيغة جمع المؤنث السالم؟',
++    options: [
++      'لأن كل النعوت تأتي بهذه الصيغة دائماً',
++      'لأن المنعوت "الطالباتُ" جمع مؤنث سالم، والنعت يجب أن يطابقه في العدد والجنس',
++      'صدفة لا قاعدة لها',
++      'لأن الجملة في حالة نصب',
++    ],
++    correctIndex: 1,
++    a: 'يجب أن يطابق النعت منعوته في العدد والجنس، وبما أن "الطالباتُ" جمع مؤنث سالم، وجب أن يأتي نعتها "المجتهداتُ" بنفس الصيغة.',
++  },
++  {
++    q: 'هذا كتابٌ مفيدٌ — أعرب "مفيدٌ" إعراباً كاملاً.',
++    options: [
++      'نعت مرفوع وعلامة رفعه الضمة، تابع لمنعوته "كتابٌ" في الرفع والتنكير والتذكير والإفراد',
++      'خبر مرفوع لمبتدأ محذوف',
++      'مفعول به منصوب',
++      'مضاف إليه مجرور',
++    ],
++    correctIndex: 0,
++    a: 'مفيدٌ نعت لـ"كتابٌ"، وهو مرفوع تبعاً له لأن كتابٌ خبر مرفوع، ويطابقه أيضاً في التنكير والتذكير والإفراد — أربعة أوجه من المطابقة مجتمعة.',
++  },
++  {
++    q: 'لماذا يُعتبر النعت من "التوابع" في النحو العربي؟',
++    options: [
++      'لأنه يسبق الفعل دائماً في الجملة',
++      'لأنه يتبع منعوته في إعرابه (حركته) بدلاً من أن يكون له إعراب مستقل عن العامل',
++      'لأنه لا يمكن حذفه من الجملة أبداً',
++      'لأنه دائماً في محل رفع',
++    ],
++    correctIndex: 1,
++    a: 'يُسمى النعت من "التوابع" لأنه لا يأخذ حركته من عامل مستقل، بل "يتبع" حركة المنعوت نفسها في الرفع أو النصب أو الجر، إضافة إلى تطابقه معه في الجنس والعدد والتعريف.',
++  },
++]
++
++function TopicPage() {
++  return (
++    <main className="flex-1">
++      <div className="border-b border-border bg-beige">
++        <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-12">
++          <Link
++            to="/challenges/grammar"
++            className="text-xs text-muted-foreground hover:text-brand mb-3 inline-block"
++          >
++            ← All grammar topics
++          </Link>
++          <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-3">
++            Topic 12 of 47
++          </p>
++          <h1 className="font-serif tracking-[-0.02em] text-3xl font-bold text-foreground leading-tight mb-3">
++            <span
++              dir="rtl"
++              lang="ar"
++              style={{ fontFamily: "'Noto Naskh Arabic', serif" }}
++              className="mr-2"
++            >
++              النعت والمنعوت
++            </span>
++            — Adjective Agreement
++          </h1>
++          <p className="text-muted-foreground text-base max-w-xl">
++            An Arabic adjective (نعت) must agree with the noun it describes (منعوت) on all four
++            fronts at once — gender, number, definiteness, <span className="italic">and</span>{' '}
++            case — which is why it's classed as a تابع ("follower") rather than something with its
++            own independent case. Word order is fixed too: the noun always comes first, the
++            adjective right after (طالبٌ مجتهدٌ — "a diligent student", never the reverse).
++          </p>
++        </div>
++      </div>
++      <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-8">
++        <QuizCarousel items={quizItems} />
++      </div>
++    </main>
++  )
++}
+diff --git a/src/routes/challenges/grammar/attached-pronouns/index.tsx b/src/routes/challenges/grammar/attached-pronouns/index.tsx
+new file mode 100644
+index 0000000..bdf9afe
+--- /dev/null
++++ b/src/routes/challenges/grammar/attached-pronouns/index.tsx
+@@ -0,0 +1,124 @@
++import { createFileRoute, Link } from '@tanstack/react-router'
++import { QuizCarousel } from '#/components/QuizCarousel'
++import type { StrictQuizItem } from '#/routes/challenges/-quiz-types'
++
++export const Route = createFileRoute('/challenges/grammar/attached-pronouns/')({
++  head: () => ({ meta: [{ title: 'Attached Pronouns — Grammar — Tayseer' }] }),
++  component: TopicPage,
++})
++
++const quizItems: StrictQuizItem[] = [
++  {
++    q: 'ما الفرق بين الضمير المتصل والضمير المنفصل؟',
++    options: [
++      'المتصل كلمة مستقلة قائمة بذاتها، والمنفصل يُكتب ملتصقاً بآخر اسم أو فعل أو حرف',
++      'المتصل يُكتب ملتصقاً بآخر اسم أو فعل أو حرف، والمنفصل كلمة مستقلة قائمة بذاتها',
++      'لا فرق بينهما، مصطلحان لنفس الشيء',
++      'المتصل للمفرد فقط، والمنفصل للجمع فقط',
++    ],
++    correctIndex: 1,
++    a: 'الضمير المتصل لا يُنطق ولا يُكتب مستقلاً، بل يتصل بآخر الكلمة التي يلحق بها (اسم، فعل، أو حرف)، بخلاف الضمير المنفصل (كأنا وهو) الذي يقف كلمة قائمة بذاتها.',
++  },
++  {
++    q: 'كتابٌ + ـي (my) → ___',
++    options: ['كتابي', 'كتابُي', 'كتابٌي', 'كتاباي'],
++    correctIndex: 0,
++    a: 'حين يتصل الضمير ـي باسم، يفيد الملكية: كتابي = "my book". لاحظ سقوط التنوين من "كتاب" لأن اتصال الضمير جعله معرفة.',
++  },
++  {
++    q: 'إذا اتصل الضمير ـهُ (his) بحرف جر مثل مِن، فما وظيفته؟',
++    options: [
++      'يفيد الملكية كما مع الأسماء',
++      'يكون في محل جر اسماً مجروراً، أي مفعولاً لحرف الجر (مِنه = "from him")',
++      'يتحول حرف الجر إلى فعل',
++      'لا يجوز اتصال الضمائر بحروف الجر إطلاقاً',
++    ],
++    correctIndex: 1,
++    a: 'حين يتصل الضمير باسم فهو يفيد الملكية (كتابُهُ = his book)، أما حين يتصل بحرف جر فهو في محل جر اسماً مجروراً هو مفعول حرف الجر: مِنه = "from him".',
++  },
++  {
++    q: 'قلمٌ + ـكِ (your, fem.) → ___',
++    options: ['قلمُكِ', 'قلمُكَ', 'قلمُهُ', 'قلمُها'],
++    correctIndex: 0,
++    a: 'ـكِ (بكسر الكاف) ضمير المخاطبة المفردة المؤنثة، فتصبح "قلمُكِ" = "your (fem.) pen". لاحظ الفرق بين ـكَ (بفتح الكاف، للمخاطب المذكر) وـكِ (بكسرها، للمخاطبة المؤنثة).',
++  },
++  {
++    q: 'أيّ من هذه الجمل بها خطأ نحوي متعلق بالتنوين مع الضمير المتصل؟',
++    options: ['هذا كتابي', 'هذا كتابٌي', 'هذا بيتُنا', 'هذه سيارتُها'],
++    correctIndex: 1,
++    a: '"كتابٌي" خطأ لأن اتصال الضمير بالاسم يجعله معرفة بالإضافة، فيسقط التنوين وجوباً؛ الصواب "كتابي" بلا تنوين.',
++  },
++  {
++    q: 'بيتُنا كبيرٌ — What does the attached pronoun ـنا on بيت indicate here?',
++    options: [
++      'أن البيت مفعول به لضمير الجماعة',
++      'ملكية جماعية — "our house" — نحن نملك هذا البيت',
++      'أن البيت في محل جر بحرف جر مقدر',
++      'صيغة المبالغة',
++    ],
++    correctIndex: 1,
++    a: 'ـنا (نحن) حين تتصل باسم تفيد الملكية الجماعية: بيتُنا = "our house" — البيت مملوك للمتكلمين معاً.',
++  },
++  {
++    q: 'سلَّمتُ عليهم — Which word carries the attached pronoun هم here, and what role does it play?',
++    options: [
++      'الفعل سلَّمتُ يحمل ـهم كمفعول به مباشر',
++      'حرف الجر على يتصل به ـهم فيكون في محل جر اسماً مجروراً (عليهم = "upon/to them")',
++      'ـهم هنا اسم إشارة',
++      'ـهم في هذه الجملة أداة استفهام',
++    ],
++    correctIndex: 1,
++    a: 'ـهم اتصل بحرف الجر على، فأصبح في محل جر اسماً مجروراً هو مفعول حرف الجر: عليهم = "upon/to them" — وليس مفعولاً به للفعل مباشرة لأن سلَّمَ يتعدى بحرف الجر على لا بنفسه.',
++  },
++  {
++    q: 'لماذا يُقال إن اتصال الضمير بالاسم "يُعرِّف" ذلك الاسم؟',
++    options: [
++      'لأن الاسم يصبح ممنوعاً من الصرف',
++      'لأن الاسم يصبح مضافاً إلى معرفة (الضمير معرفة دائماً), فيكتسب تعريفه ويسقط تنوينه/أله',
++      'لأن الاسم يتحول إلى فعل',
++      'لا علاقة للأمر بالتعريف إطلاقاً',
++    ],
++    correctIndex: 1,
++    a: 'الضمائر كلها معارف بذاتها، فإذا أُضيف اسم إلى ضمير (كقلمي، بيتنا) صار الاسم مضافاً إلى معرفة، فاكتسب التعريف منه، ولذلك يسقط تنوينه ولا يجتمع معه أل التعريف.',
++  },
++]
++
++function TopicPage() {
++  return (
++    <main className="flex-1">
++      <div className="border-b border-border bg-beige">
++        <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-12">
++          <Link
++            to="/challenges/grammar"
++            className="text-xs text-muted-foreground hover:text-brand mb-3 inline-block"
++          >
++            ← All grammar topics
++          </Link>
++          <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-3">
++            Topic 9 of 47
++          </p>
++          <h1 className="font-serif tracking-[-0.02em] text-3xl font-bold text-foreground leading-tight mb-3">
++            <span
++              dir="rtl"
++              lang="ar"
++              style={{ fontFamily: "'Noto Naskh Arabic', serif" }}
++              className="mr-2"
++            >
++              الضمائر المتصلة
++            </span>
++            — Attached Pronouns
++          </h1>
++          <p className="text-muted-foreground text-base max-w-xl">
++            ـي ـكَ ـكِ ـهُ ـها ـنا ـكم ـهم never stand alone — they attach directly onto the word
++            before them. Attached to a noun, they show possession (كتابي — "my book"); attached to
++            a preposition, they become its object (منه — "from him"). Either way, attaching a
++            pronoun makes the noun definite, so any تنوين or أل it carried is dropped.
++          </p>
++        </div>
++      </div>
++      <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-8">
++        <QuizCarousel items={quizItems} />
++      </div>
++    </main>
++  )
++}
+diff --git a/src/routes/challenges/grammar/case-system-overview/index.tsx b/src/routes/challenges/grammar/case-system-overview/index.tsx
+new file mode 100644
+index 0000000..362dc35
+--- /dev/null
++++ b/src/routes/challenges/grammar/case-system-overview/index.tsx
+@@ -0,0 +1,141 @@
++import { createFileRoute, Link } from '@tanstack/react-router'
++import { QuizCarousel } from '#/components/QuizCarousel'
++import type { StrictQuizItem } from '#/routes/challenges/-quiz-types'
++
++export const Route = createFileRoute('/challenges/grammar/case-system-overview/')({
++  head: () => ({ meta: [{ title: 'Case System Overview — Grammar — Tayseer' }] }),
++  component: TopicPage,
++})
++
++const quizItems: StrictQuizItem[] = [
++  {
++    q: 'ما هي الحالات الإعرابية الثلاث الأساسية في العربية، وما علامة كل منها في الأصل؟',
++    options: [
++      'الرفع (ـُ)، النصب (ـَ)، الجر (ـِ)',
++      'الماضي، المضارع، الأمر',
++      'المفرد، المثنى، الجمع',
++      'المذكر، المؤنث، المحايد',
++    ],
++    correctIndex: 0,
++    a: 'الحالات الإعرابية الثلاث للاسم هي: الرفع وعلامته الأصلية الضمة (ـُ)، النصب وعلامته الأصلية الفتحة (ـَ)، والجر وعلامته الأصلية الكسرة (ـِ).',
++  },
++  {
++    q: 'جاء الطالبُ — ما الذي يجعل "الطالبُ" مرفوعاً هنا؟',
++    options: [
++      'لأنه مفعول به',
++      'لأنه فاعل — والفاعل من أشهر الأسباب الموجبة للرفع',
++      'لأنه مضاف إليه',
++      'لأنه اسم بعد حرف جر',
++    ],
++    correctIndex: 1,
++    a: 'الفاعل مرفوع دائماً، وهو أحد أبرز مواضع الرفع في الجملة الفعلية، تماماً كما يُرفع المبتدأ والخبر في الجملة الاسمية.',
++  },
++  {
++    q: 'رأيتُ الطالبَ — لماذا "الطالبَ" هنا منصوب؟',
++    options: [
++      'لأنه مبتدأ',
++      'لأنه مفعول به — والمفعول به من أشهر الأسباب الموجبة للنصب',
++      'لأنه مضاف إليه',
++      'لأنه اسم بعد حرف جر',
++    ],
++    correctIndex: 1,
++    a: 'المفعول به منصوب دائماً، فهو أحد أشهر المواضع الموجبة لحالة النصب، مثل مفعول به الفعل رأى في هذا المثال.',
++  },
++  {
++    q: 'مررتُ بالطالبِ / كتابُ الطالبِ — ما القاسم المشترك الذي يجعل "الطالبِ" مجروراً في كلا المثالين؟',
++    options: [
++      'الوقوع بعد حرف جر في الأول، والوقوع مضافاً إليه في الثاني — وكلاهما من أسباب الجر',
++      'كون الطالب فاعلاً في الحالتين',
++      'كون الطالب خبراً في الحالتين',
++      'الصدفة، لا رابط بينهما',
++    ],
++    correctIndex: 0,
++    a: 'الجر له سببان رئيسيان: الوقوع بعد حرف جر (مررتُ بالطالبِ) أو الوقوع مضافاً إليه (كتابُ الطالبِ) — وكلاهما يوجب الجر رغم اختلاف السياق.',
++  },
++  {
++    q: 'جاء الفتى — لماذا لا تظهر حركة إعرابية واضحة على آخر "الفتى" رغم أنه فاعل مرفوع؟',
++    options: [
++      'لأنه اسم مبني لا معرب',
++      'لأنه اسم منقوص من نوع خاص لا يُعرب أصلاً',
++      'لأن الاسم المقصور (المنتهي بألف لينة) تُقدَّر عليه حركات الإعراب لتعذر نطقها على الألف',
++      'لأنه جمع تكسير',
++    ],
++    correctIndex: 2,
++    a: 'الاسم المقصور المنتهي بألف لينة (كالفتى) تُقدَّر عليه حركات الإعراب الثلاث جميعاً لتعذر النطق بها على الألف الساكنة، فيُقال "جاء الفتى" و"رأيتُ الفتى" و"مررتُ بالفتى" دون تغير ظاهر في اللفظ رغم اختلاف الإعراب.',
++  },
++  {
++    q: 'هذا الطالبُ مجتهدٌ — لماذا لا تتغير حركة "هذا" أبداً رغم أنه في محل رفع مبتدأ؟',
++    options: [
++      'لأنه اسم مبني (اسم إشارة)، والمبني لا تتغير حركة آخره بتغير موقعه الإعرابي، بخلاف المعرب',
++      'لأنه ليس له موقع إعرابي أصلاً',
++      'لأنه حرف لا اسم',
++      'لأنه ممنوع من الصرف',
++    ],
++    correctIndex: 0,
++    a: 'أسماء الإشارة والضمائر من الأسماء المبنية، فحركة آخرها ثابتة مهما تغير موقعها الإعرابي في الجملة، على خلاف الأسماء المعربة التي تتغير حركتها بتغير العامل (رفع/نصب/جر).',
++  },
++  {
++    q: 'أيّ من هذه الجمل بها خطأ في اختيار الحالة الإعرابية المناسبة للسبب النحوي المذكور؟',
++    options: [
++      'الطالبُ (فاعل) → رفع',
++      'الكتابَ (مفعول به) → نصب',
++      'الطالبِ (مضاف إليه) → رفع',
++      'المسجدِ (بعد حرف جر) → جر',
++    ],
++    correctIndex: 2,
++    a: 'المضاف إليه يكون مجروراً دائماً لا مرفوعاً؛ فالخيار "الطالبِ (مضاف إليه) → رفع" خطأ، والصواب أن يكون مجروراً كما في "كتابُ الطالبِ".',
++  },
++  {
++    q: 'باختصار، ما الفرق الجوهري بين اسم معرب واسم مبني من حيث الإعراب؟',
++    options: [
++      'المعرب تتغير حركة آخره (ظاهرة أو مقدّرة) حسب موقعه في الجملة؛ المبني حركة آخره ثابتة لا تتغير رغم اختلاف موقعه الإعرابي',
++      'المعرب دائماً مرفوع، والمبني دائماً منصوب',
++      'المعرب للأفعال فقط، والمبني للأسماء فقط',
++      'لا فرق بينهما، كلاهما بنفس القاعدة',
++    ],
++    correctIndex: 0,
++    a: 'الاسم المعرب (كالطالب، الفتى) تتغير حركة آخره — ظاهرة كانت أو مقدّرة — بحسب موقعه الإعرابي (فاعل، مفعول به، مضاف إليه...)، بينما الاسم المبني (كأسماء الإشارة والضمائر) تبقى حركة آخره ثابتة دائماً بصرف النظر عن موقعه.',
++  },
++]
++
++function TopicPage() {
++  return (
++    <main className="flex-1">
++      <div className="border-b border-border bg-beige">
++        <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-12">
++          <Link
++            to="/challenges/grammar"
++            className="text-xs text-muted-foreground hover:text-brand mb-3 inline-block"
++          >
++            ← All grammar topics
++          </Link>
++          <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-3">
++            Topic 14 of 47
++          </p>
++          <h1 className="font-serif tracking-[-0.02em] text-3xl font-bold text-foreground leading-tight mb-3">
++            <span
++              dir="rtl"
++              lang="ar"
++              style={{ fontFamily: "'Noto Naskh Arabic', serif" }}
++              className="mr-2"
++            >
++              الإعراب
++            </span>
++            — Case System Overview
++          </h1>
++          <p className="text-muted-foreground text-base max-w-xl">
++            Every noun in Arabic carries one of three cases: رفع (ـُ, typically the subject or
++            مبتدأ), نصب (ـَ, typically the object), or جر (ـِ, after a preposition or as a مضاف
++            إليه). Words ending in ا or ى (like الفتى) can't physically carry these vowels, so the
++            case is <span className="font-medium text-foreground">مقدّرة</span> — estimated, not
++            pronounced. And مبني words like demonstratives and pronouns sit outside the system
++            entirely: their ending never changes no matter what role they play.
++          </p>
++        </div>
++      </div>
++      <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-8">
++        <QuizCarousel items={quizItems} />
++      </div>
++    </main>
++  )
++}
+diff --git a/src/routes/challenges/grammar/colors/index.tsx b/src/routes/challenges/grammar/colors/index.tsx
+new file mode 100644
+index 0000000..a194010
+--- /dev/null
++++ b/src/routes/challenges/grammar/colors/index.tsx
+@@ -0,0 +1,123 @@
++import { createFileRoute, Link } from '@tanstack/react-router'
++import { QuizCarousel } from '#/components/QuizCarousel'
++import type { StrictQuizItem } from '#/routes/challenges/-quiz-types'
++
++export const Route = createFileRoute('/challenges/grammar/colors/')({
++  head: () => ({ meta: [{ title: 'Colors as Adjectives — Grammar — Tayseer' }] }),
++  component: TopicPage,
++})
++
++const quizItems: StrictQuizItem[] = [
++  {
++    q: 'ما هو الوزن الذي تُبنى عليه أغلب أسماء الألوان الأساسية للمذكر؟',
++    options: ['فَعِيل', 'أَفْعَل', 'مَفْعُول', 'فَعَّال'],
++    correctIndex: 1,
++    a: 'أغلب ألوان الأساس (أحمر، أزرق، أصفر، أخضر، أسود، أبيض) تُبنى للمذكر على وزن أَفْعَل — وهو وزن خاص بالألوان والعيوب الخَلقية، مختلف عن أوزان الصفات العادية كفَعِيل.',
++  },
++  {
++    q: 'ما هو الوزن المقابل لـ أَفْعَل حين يوصف اسم مؤنث بلون؟',
++    options: ['فَعْلاء', 'فَعِيلة', 'مَفْعُولة', 'فُعْلى'],
++    correctIndex: 0,
++    a: 'الصيغة المؤنثة لوزن أَفْعَل في الألوان هي فَعْلاء: أحمر (مذكر) ↔ حمراء (مؤنث)، أزرق ↔ زرقاء، وهكذا.',
++  },
++  {
++    q: 'قميصٌ أحمرُ مقابل سيارةٌ حمراءُ — لماذا اختلفت صيغة كلمة "أحمر" بين الجملتين؟',
++    options: [
++      'خطأ إملائي، الصيغتان صحيحتان لكل الأسماء بلا فرق',
++      'لأن النعت يجب أن يطابق منعوته في التذكير والتأنيث؛ قميص مذكر فيأخذ وزن أَفْعَل، وسيارة مؤنثة فتأخذ وزن فَعْلاء',
++      'لأن أحمر تعني شيئاً مختلفاً عن حمراء',
++      'لأن حمراء اسم علم لا صفة',
++    ],
++    correctIndex: 1,
++    a: 'قاعدة مطابقة النعت للمنعوت في التذكير والتأنيث تنطبق على الألوان كذلك: أحمر لموصوف مذكر (قميص)، وحمراء لموصوف مؤنث (سيارة).',
++  },
++  {
++    q: 'أكمل: هذه وردةٌ ___ (a yellow rose, fem.)',
++    options: ['أصفرُ', 'صفراءُ', 'صفراً', 'أصفرٍ'],
++    correctIndex: 1,
++    a: 'وردة اسم مؤنث، فيجب أن يطابقها النعت في التأنيث، فتُستخدم الصيغة المؤنثة صفراءُ لا الصيغة المذكرة أصفرُ.',
++  },
++  {
++    q: 'رأيتُ سيارةً حمراءَ — ما إعراب "حمراءَ" هنا من حيث التنوين، ولماذا؟',
++    options: [
++      'منصوبة وتحمل تنويناً كسائر النكرات المنصوبة',
++      'منصوبة بلا تنوين لأنها اسم ممنوع من الصرف',
++      'مرفوعة بتنوين',
++      'مجرورة بتنوين',
++    ],
++    correctIndex: 1,
++    a: 'وزن الألوان أَفْعَل/فَعْلاء ممنوع من الصرف، فلا يقبل التنوين حتى في حالة التنكير: "سيارةً حمراءَ" — الفتحة وحدها علامة النصب هنا بلا تنوين، خلافاً للنكرات العادية.',
++  },
++  {
++    q: 'أيّ من هذه الجمل بها خطأ نحوي في التنوين على صفة اللون؟',
++    options: ['رأيتُ رجلاً طويلاً', 'رأيتُ قميصاً أحمرَ', 'رأيتُ قميصاً أحمراً', 'اشتريتُ سيارةً زرقاءَ'],
++    correctIndex: 2,
++    a: '"أحمراً" بتنوين خطأ لأن أفعل (اللون) اسم ممنوع من الصرف ولا يُنوَّن أبداً حتى في حالة النصب والتنكير؛ الصواب "أحمرَ" بفتحة واحدة بلا تنوين.',
++  },
++  {
++    q: 'بم يختلف وزن الألوان أَفْعَل عن الصفات العادية من نوع فَعِيل (كطويل، جميل) من الناحية الصرفية؟',
++    options: [
++      'لا فرق بينهما إطلاقاً في كل شيء',
++      'أَفْعَل ممنوع من الصرف (لا تنوين، وفي الجر يأخذ فتحة بدل الكسرة)، بينما فَعِيل صفة عادية مصروفة تأخذ التنوين والكسرة في الجر بشكل طبيعي',
++      'فَعِيل خاص بالمذكر فقط، وأَفْعَل خاص بالمؤنث فقط',
++      'أَفْعَل لا يمكن أن يكون نعتاً أبداً',
++    ],
++    correctIndex: 1,
++    a: 'صفات الألوان على وزن أَفْعَل من الأسماء الممنوعة من الصرف، فتُجر بالفتحة لا الكسرة ولا تُنوَّن، بخلاف الصفات العادية على وزن فَعِيل ونحوه التي تُصرف بشكل طبيعي وتقبل التنوين والكسرة في الجر.',
++  },
++  {
++    q: 'مررتُ برجلٍ أسودَ الشعرِ — ما علامة الجر التي ستظهر على "أسودَ" هنا، ولماذا؟',
++    options: [
++      'الكسرة الظاهرة، لأنه اسم عادي مصروف',
++      'الفتحة نيابة عن الكسرة، لأنه ممنوع من الصرف',
++      'الضمة، لأنه مرفوع',
++      'لا تظهر عليه أي علامة لأنه مبني',
++    ],
++    correctIndex: 1,
++    a: 'بما أن أسود على وزن الألوان أَفْعَل الممنوع من الصرف، فعلامة جره الفتحة نيابة عن الكسرة الأصلية، وهذا من أبرز آثار كونه ممنوعاً من الصرف.',
++  },
++]
++
++function TopicPage() {
++  return (
++    <main className="flex-1">
++      <div className="border-b border-border bg-beige">
++        <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-12">
++          <Link
++            to="/challenges/grammar"
++            className="text-xs text-muted-foreground hover:text-brand mb-3 inline-block"
++          >
++            ← All grammar topics
++          </Link>
++          <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-3">
++            Topic 13 of 47
++          </p>
++          <h1 className="font-serif tracking-[-0.02em] text-3xl font-bold text-foreground leading-tight mb-3">
++            <span
++              dir="rtl"
++              lang="ar"
++              style={{ fontFamily: "'Noto Naskh Arabic', serif" }}
++              className="mr-2"
++            >
++              الألوان
++            </span>
++            — Colors as Adjectives
++          </h1>
++          <p className="text-muted-foreground text-base max-w-xl">
++            Basic colors don't follow the regular adjective patterns — they're built on{' '}
++            <span className="font-medium text-foreground">أَفْعَل</span> for masculine and{' '}
++            <span className="font-medium text-foreground">فَعْلاء</span> for feminine (أحمر/حمراء,
++            أزرق/زرقاء). This pattern is <span className="font-medium text-foreground">
++              ممنوع من الصرف
++            </span>{' '}
++            (diptote) — it never takes تنوين, even when indefinite, and takes a fatḥah instead of a
++            kasrah in the جر case.
++          </p>
++        </div>
++      </div>
++      <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-8">
++        <QuizCarousel items={quizItems} />
++      </div>
++    </main>
++  )
++}
+diff --git a/src/routes/challenges/grammar/definiteness-tanwin/index.tsx b/src/routes/challenges/grammar/definiteness-tanwin/index.tsx
+new file mode 100644
+index 0000000..9c3e244
+--- /dev/null
++++ b/src/routes/challenges/grammar/definiteness-tanwin/index.tsx
+@@ -0,0 +1,131 @@
++import { createFileRoute, Link } from '@tanstack/react-router'
++import { QuizCarousel } from '#/components/QuizCarousel'
++import type { StrictQuizItem } from '#/routes/challenges/-quiz-types'
++
++export const Route = createFileRoute('/challenges/grammar/definiteness-tanwin/')({
++  head: () => ({ meta: [{ title: 'Definiteness & Tanwīn — Grammar — Tayseer' }] }),
++  component: TopicPage,
++})
++
++const quizItems: StrictQuizItem[] = [
++  {
++    q: 'ما الفرق الأساسي بين الاسم النكرة (nakirah) والاسم المعرفة (maʿrifah)؟',
++    options: [
++      'النكرة تدل على شيء غير محدد ("a/an ..."), والمعرفة تدل على شيء محدد معروف ("the ...")',
++      'النكرة مرفوعة دائماً، والمعرفة منصوبة دائماً',
++      'النكرة للمذكر فقط، والمعرفة للمؤنث فقط',
++      'لا فرق بينهما؛ هما مترادفان في الاستعمال',
++    ],
++    correctIndex: 0,
++    a: 'النكرة اسم عام غير محدد (كتابٌ = "a book"), بينما المعرفة اسم محدد معروف بعينه للمخاطب (الكتابُ = "the book"). هذا التمييز هو أساس معظم قواعد النحو المتعلقة بالتعريف.',
++  },
++  {
++    q: "تنوين مثل ـٌ ـً ـٍ يظهر في النطق على آخر الاسم النكرة. بماذا ينطق تحديداً؟",
++    options: [
++      'بنون ساكنة منطوقة غير مكتوبة تدل على أن الاسم نكرة',
++      'بحرف الألف المكتوب فقط',
++      'بشدّة على أول الكلمة',
++      'بحذف آخر حرف من الكلمة',
++    ],
++    correctIndex: 0,
++    a: 'التنوين هو نون ساكنة زائدة تُنطق آخر الاسم ولا تُكتب حرفاً، وهي العلامة الصوتية القياسية التي تدل على أن الاسم نكرة (غير محدد).',
++  },
++  {
++    q: 'كتابٌ (indefinite, "a book") becomes الكتابُ ("the book") once أل is added. What happens to the تنوين?',
++    options: [
++      'It stays exactly as it was',
++      'It is dropped entirely — أل and تنوين never co-occur on the same word',
++      'It changes into a shaddah',
++      'It moves to the first letter of the word',
++    ],
++    correctIndex: 1,
++    a: 'أل التعريف وتنوين النكرة يتنافيان: الاسم إما نكرة (يحمل تنوينًا) أو معرفة بأل (بلا تنوين), فلا يمكن أن يجتمع الاثنان على اسم واحد.',
++  },
++  {
++    q: 'كتابٌ + ياء المتكلم (my) → ___ (fill in the blank)',
++    options: ['كتابٌي', 'كتابي', 'كتابٍي', 'كِتاباً ي'],
++    correctIndex: 1,
++    a: 'إضافة ضمير متصل مثل ياء المتكلم تجعل الاسم معرفة بالإضافة إلى الضمير، فيسقط التنوين تماماً: كتابي = "my book" بلا تنوين، تماماً كما يسقط عند دخول أل.',
++  },
++  {
++    q: 'أيّ من هذه الجمل بها خطأ نحوي متعلق بالتنوين والتعريف؟',
++    options: [
++      'رأيتُ كتاباً جديداً',
++      'رأيتُ الكتابٌ الجديدُ',
++      'هذا كتابُ محمدٍ',
++      'رأيتُ الكتابَ الجديدَ',
++    ],
++    correctIndex: 1,
++    a: 'الجملة "رأيتُ الكتابٌ الجديدُ" خاطئة لأنها جمعت بين أل التعريف والتنوين على كلمة واحدة (الكتابٌ), وهذا غير جائز؛ الصواب "الكتابَ" بلا تنوين لأن أل موجودة.',
++  },
++  {
++    q: 'أيّ من هذه الأسماء معرفة بذاتها من غير حاجة إلى أل أو إضافة؟',
++    options: ['بيتٌ', 'إبراهيمُ', 'رجلٌ', 'طالبةٌ'],
++    correctIndex: 1,
++    a: 'اسم العَلَم مثل إبراهيمُ معرفة بذاته لأنه يشير إلى شخص بعينه دون حاجة لأل، وهو أيضاً ممنوع من الصرف فلا يُنوَّن أصلاً — على عكس الأسماء النكرة الثلاثة الأخرى التي تحمل تنويناً ظاهراً.',
++  },
++  {
++    q: 'هذا (this) وهو (he) كلاهما معرفة بذاتهما دون أل أو إضافة. Why?',
++    options: [
++      'لأنهما اسم إشارة وضمير، وكلاهما نوع مستقل من أنواع المعرفة السبعة',
++      'لأنهما مبنيان على الفتح دائماً في كل موضع',
++      'لأنهما لا يُعربان أبداً في أي موضع من الكلام',
++      'لأنهما جمعا تكسير لكلمتين أخريين',
++    ],
++    correctIndex: 0,
++    a: 'اسم الإشارة (هذا) والضمير (هو) نوعان من أنواع المعرفة الأساسية في العربية، فهما معرفة بذاتهما بصرف النظر عن دخول أل أو الإضافة عليهما.',
++  },
++  {
++    q: 'كتابُ الطالبِ ("the student\'s book") — لماذا كلمة "كتاب" هنا معرفة رغم خلوها من أل؟',
++    options: [
++      'لأنها اسم علم بذاتها',
++      'لأنها مضاف، وقد اكتسبت تعريفها من المضاف إليه المعرَّف (الطالبِ)',
++      'لأنها منصوبة في هذه الجملة',
++      'لأنها جمع مؤنث سالم',
++    ],
++    correctIndex: 1,
++    a: 'في تركيب الإضافة، يكتسب المضاف (كتاب) تعريفه من المضاف إليه (الطالب) متى كان هذا الأخير معرفة، فتصبح عبارة "كتاب الطالب" كلها معرفة رغم أن "كتاب" نفسها بلا أل ولا تنوين.',
++  },
++]
++
++function TopicPage() {
++  return (
++    <main className="flex-1">
++      <div className="border-b border-border bg-beige">
++        <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-12">
++          <Link
++            to="/challenges/grammar"
++            className="text-xs text-muted-foreground hover:text-brand mb-3 inline-block"
++          >
++            ← All grammar topics
++          </Link>
++          <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-3">
++            Topic 1 of 47
++          </p>
++          <h1 className="font-serif tracking-[-0.02em] text-3xl font-bold text-foreground leading-tight mb-3">
++            <span
++              dir="rtl"
++              lang="ar"
++              style={{ fontFamily: "'Noto Naskh Arabic', serif" }}
++              className="mr-2"
++            >
++              التنوين
++            </span>
++            — Definiteness &amp; Tanwīn
++          </h1>
++          <p className="text-muted-foreground text-base max-w-xl">
++            Every Arabic noun is either <span className="font-medium text-foreground">نكرة</span>{' '}
++            (indefinite, "a/an ...") or <span className="font-medium text-foreground">معرفة</span>{' '}
++            (definite, "the ..."). Tanwīn — the trailing ـٌ ـً ـٍ sound — is the spoken marker of an
++            indefinite noun, and it disappears the moment the noun becomes definite, whether by
++            adding أل, attaching a possessive pronoun, or being a proper noun, demonstrative,
++            pronoun, or the first term of an idāfah whose second term is definite.
++          </p>
++        </div>
++      </div>
++      <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-8">
++        <QuizCarousel items={quizItems} />
++      </div>
++    </main>
++  )
++}
+diff --git a/src/routes/challenges/grammar/idafah/index.tsx b/src/routes/challenges/grammar/idafah/index.tsx
+new file mode 100644
+index 0000000..8ae52f9
+--- /dev/null
++++ b/src/routes/challenges/grammar/idafah/index.tsx
+@@ -0,0 +1,131 @@
++import { createFileRoute, Link } from '@tanstack/react-router'
++import { QuizCarousel } from '#/components/QuizCarousel'
++import type { StrictQuizItem } from '#/routes/challenges/-quiz-types'
++
++export const Route = createFileRoute('/challenges/grammar/idafah/')({
++  head: () => ({ meta: [{ title: 'Idāfah — Grammar — Tayseer' }] }),
++  component: TopicPage,
++})
++
++const quizItems: StrictQuizItem[] = [
++  {
++    q: 'ما هي الإضافة وما ركناها؟',
++    options: [
++      'تركيب من فعل وفاعل',
++      'تركيب من اسمين متتاليين يدل ثانيهما على ملكية أو اختصاص للأول: المضاف (الأول) والمضاف إليه (الثاني)',
++      'تركيب من حرف جر واسم مجرور فقط',
++      'تركيب من مبتدأ وخبر منفصلين بفاصلة',
++    ],
++    correctIndex: 1,
++    a: 'الإضافة تركيب من اسمين: المضاف (الأول, وهو المضاف إلى غيره) والمضاف إليه (الثاني), ويفيد هذا التركيب معنى الملكية أو الاختصاص، مثل "كتابُ الطالبِ" = "the student\'s book".',
++  },
++  {
++    q: 'كتابُ الطالبِ — What are the grammatical rules for the first term (المضاف) "كتابُ" here?',
++    options: [
++      'يأخذ تنويناً وأل التعريف معاً',
++      'لا يأخذ تنويناً ولا أل التعريف أبداً',
++      'يُجزم دائماً',
++      'يكون منصوباً دائماً بصرف النظر عن موقعه',
++    ],
++    correctIndex: 1,
++    a: 'المضاف (الكلمة الأولى في الإضافة) لا يأخذ تنويناً ولا أل التعريف مطلقاً، لأنه يكتسب تعريفه أو تخصيصه من المضاف إليه الذي يليه مباشرة.',
++  },
++  {
++    q: 'ما حكم إعراب المضاف إليه (الاسم الثاني في الإضافة) دائماً؟',
++    options: ['مرفوع دائماً', 'منصوب دائماً', 'مجرور دائماً', 'يتبع حركة المضاف نفسها'],
++    correctIndex: 2,
++    a: 'المضاف إليه مجرور دائماً بصرف النظر عن موقع المضاف الإعرابي، سواء كان المضاف مرفوعاً أو منصوباً أو مجروراً هو نفسه.',
++  },
++  {
++    q: 'أيّ من هذه الجمل بها خطأ نحوي في تركيب الإضافة؟',
++    options: ['هذا قلمُ الطالبِ', 'هذا قلمٌ الطالبِ', 'رأيتُ قلمَ الطالبِ', 'كتبتُ بقلمِ الطالبِ'],
++    correctIndex: 1,
++    a: '"قلمٌ الطالبِ" خطأ لأن المضاف (قلم) لا يجوز أن يحمل تنويناً أبداً؛ الصواب حذف التنوين: "قلمُ الطالبِ".',
++  },
++  {
++    q: 'بابُ بيتِ محمدٍ — هذه سلسلة إضافات مترابطة (chained idāfah). What determines the case of محمدٍ, the final term?',
++    options: [
++      'محمدٍ مجرور لأنه مضاف إليه لكلمة "بيتِ" التي قبله مباشرة',
++      'محمدٍ مرفوع لأنه في أول الجملة معنوياً',
++      'محمدٍ منصوب لأنه مفعول به',
++      'لا علاقة له بالإضافة إطلاقاً',
++    ],
++    correctIndex: 0,
++    a: 'في سلسلة الإضافات المتتالية، كل اسم مضاف إليه لما قبله مباشرة ومجرور به: بيتِ مضاف إليه لبابُ (مجرور), ومحمدٍ مضاف إليه لبيتِ (مجرور أيضاً) — كل حلقة في السلسلة إضافة قائمة بذاتها.',
++  },
++  {
++    q: 'كتابُ الطالبِ ("the student\'s book", definite) مقابل كتابُ طالبٍ ("a student\'s book", indefinite) — What determines whether the whole idāfah phrase is definite or indefinite?',
++    options: [
++      'شكل المضاف نفسه فقط',
++      'تعريف أو تنكير المضاف إليه — إن كان معرفة فالعبارة كلها معرفة، وإن كان نكرة فالعبارة كلها نكرة',
++      'موقع الجملة في النص',
++      'عدد الكلمات في الإضافة',
++    ],
++    correctIndex: 1,
++    a: 'تعريف عبارة الإضافة بأكملها يتبع تعريف المضاف إليه تحديداً: "الطالبِ" معرفة بأل فتصبح "كتابُ الطالبِ" معرفة، بينما "طالبٍ" نكرة فتصبح "كتابُ طالبٍ" نكرة — رغم أن "كتاب" نفسها لم تتغير شكلاً.',
++  },
++  {
++    q: 'أعرب "بابَ" في الجملة: فتحتُ بابَ البيتِ.',
++    options: [
++      'مفعول به منصوب، وهو مضاف',
++      'فاعل مرفوع',
++      'مضاف إليه مجرور',
++      'خبر مرفوع',
++    ],
++    correctIndex: 0,
++    a: 'بابَ هنا مفعول به لفعل "فتحتُ" فهو منصوب، وهو في الوقت ذاته مضاف (لأن بعده مضاف إليه هو "البيتِ") — إعراب المضاف يتحدد بموقعه في الجملة تماماً كأي اسم آخر، بينما المضاف إليه يبقى مجروراً ثابتاً.',
++  },
++  {
++    q: 'ما معنى الإضافة "معنى" (الفكرة الأساسية التي يفيدها هذا التركيب)؟',
++    options: [
++      "الفعل يقع على المفعول به مباشرة",
++      "أن المضاف إليه يخصص أو يملك المضاف، أي 'ملكية أو اختصاص' — بيتُ محمدٍ = the house belonging to Muhammad",
++      "المضاف يصف المضاف إليه كصفة",
++      "المضاف والمضاف إليه لا علاقة بينهما في المعنى",
++    ],
++    correctIndex: 1,
++    a: 'المعنى الأساسي للإضافة هو "الملكية أو الاختصاص" — المضاف إليه يخصص المضاف أو يملكه: بيتُ محمدٍ = "Muhammad\'s house/the house belonging to Muhammad".',
++  },
++]
++
++function TopicPage() {
++  return (
++    <main className="flex-1">
++      <div className="border-b border-border bg-beige">
++        <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-12">
++          <Link
++            to="/challenges/grammar"
++            className="text-xs text-muted-foreground hover:text-brand mb-3 inline-block"
++          >
++            ← All grammar topics
++          </Link>
++          <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-3">
++            Topic 10 of 47
++          </p>
++          <h1 className="font-serif tracking-[-0.02em] text-3xl font-bold text-foreground leading-tight mb-3">
++            <span
++              dir="rtl"
++              lang="ar"
++              style={{ fontFamily: "'Noto Naskh Arabic', serif" }}
++              className="mr-2"
++            >
++              الإضافة
++            </span>
++            — Idāfah
++          </h1>
++          <p className="text-muted-foreground text-base max-w-xl">
++            Idāfah glues two nouns together to mean "of/belonging to": the{' '}
++            <span className="font-medium text-foreground">مضاف</span> (first term) takes no تنوين
++            and no أل, while the <span className="font-medium text-foreground">مضاف إليه</span>{' '}
++            (second term) is always مجرور. Idāfahs can chain (بابُ بيتِ محمدٍ — "the door of
++            Muhammad's house"), and the whole phrase's definiteness follows the last term in the
++            chain.
++          </p>
++        </div>
++      </div>
++      <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-8">
++        <QuizCarousel items={quizItems} />
++      </div>
++    </main>
++  )
++}
+diff --git a/src/routes/challenges/grammar/independent-pronouns/index.tsx b/src/routes/challenges/grammar/independent-pronouns/index.tsx
+new file mode 100644
+index 0000000..3428c5f
+--- /dev/null
++++ b/src/routes/challenges/grammar/independent-pronouns/index.tsx
+@@ -0,0 +1,117 @@
++import { createFileRoute, Link } from '@tanstack/react-router'
++import { QuizCarousel } from '#/components/QuizCarousel'
++import type { StrictQuizItem } from '#/routes/challenges/-quiz-types'
++
++export const Route = createFileRoute('/challenges/grammar/independent-pronouns/')({
++  head: () => ({ meta: [{ title: 'Independent Pronouns — Grammar — Tayseer' }] }),
++  component: TopicPage,
++})
++
++const quizItems: StrictQuizItem[] = [
++  {
++    q: 'ما هو الضمير المنفصل المناسب للمتكلم المفرد (I)؟',
++    options: ['أنتَ', 'أنا', 'هو', 'نحن'],
++    correctIndex: 1,
++    a: 'أنا هو ضمير المتكلم المفرد (سواء مذكراً أو مؤنثاً)، يُستخدم للإشارة إلى المتكلم نفسه.',
++  },
++  {
++    q: 'ما هو الضمير المنفصل المناسب للمخاطب المؤنث المفرد (you, fem. sg.)؟',
++    options: ['أنتَ', 'أنتِ', 'أنتما', 'أنتنّ'],
++    correctIndex: 1,
++    a: 'أنتِ (بكسر التاء) ضمير المخاطبة المفردة المؤنثة، بينما أنتَ (بفتح التاء) للمخاطب المفرد المذكر.',
++  },
++  {
++    q: 'هما ذاهبانِ إلى المسجدِ — لأيّ عدد وجنس يُستخدم الضمير هما؟',
++    options: ['الجمع المذكر', 'المثنى (مذكراً كان أو مؤنثاً)', 'المفرد المؤنث', 'الجمع المؤنث'],
++    correctIndex: 1,
++    a: 'هما ضمير الغائب للمثنى، ويُستخدم للمثنى المذكر والمؤنث معاً (على خلاف أنتما التي تخص المخاطَبين تحديداً بنفس الصيغة أيضاً لكليهما).',
++  },
++  {
++    q: 'أكمل: ___ مجتهدونَ (نحن نتحدث عن جماعة رجال غائبين — "they are diligent")',
++    options: ['هم', 'هنّ', 'هما', 'أنتم'],
++    correctIndex: 0,
++    a: 'هم ضمير الغائب لجمع الذكور، ويطابقه الخبر بصيغة جمع المذكر السالم "مجتهدونَ".',
++  },
++  {
++    q: 'أنتَ طالبٌ ("You are a student") — What role does the pronoun أنتَ play, and what case does that put it in?',
++    options: [
++      'مفعول به، منصوب',
++      'مبتدأ، في محل رفع',
++      'مضاف إليه، في محل جر',
++      'حال، في محل نصب',
++    ],
++    correctIndex: 1,
++    a: 'أنتَ هنا مبتدأ في محل رفع، وطالبٌ خبره المرفوع — الضمائر المنفصلة تعمل مبتدأ في الجملة الاسمية تماماً كالأسماء الظاهرة.',
++  },
++  {
++    q: 'أيّ من هذه الجمل بها خطأ في مطابقة الخبر لضمير المبتدأ؟',
++    options: ['هي مجتهدةٌ', 'هم مجتهدونَ', 'هنّ مجتهدٌ', 'أنتِ مجتهدةٌ'],
++    correctIndex: 2,
++    a: '"هنّ مجتهدٌ" خطأ لأن هنّ ضمير لجمع الإناث الغائبات، ويحتاج خبراً بصيغة جمع المؤنث السالم؛ الصواب "هنّ مجتهداتٌ".',
++  },
++  {
++    q: 'الضمائر المنفصلة مثل أنا وهو مبنية دائماً. What does that mean about their form?',
++    options: [
++      'تتغير حركة آخرها حسب موقعها الإعرابي في الجملة',
++      'شكلها وحركة آخرها ثابتان دائماً، بصرف النظر عن موقعها من الإعراب',
++      'لا يمكن أن تكون مبتدأ أبداً',
++      'تُعرب فقط في حالة النصب',
++    ],
++    correctIndex: 1,
++    a: 'الضمائر المنفصلة كلها مبنية، فشكلها لا يتغير بتغير موقعها الإعرابي (مبتدأ أو غيره)، خلافاً للأسماء المعربة التي تتغير حركة آخرها حسب العامل.',
++  },
++  {
++    q: 'رتّب هذه الضمائر حسب المخاطَب الصحيح: نحن جالسونَ في الحديقةِ. لماذا استُخدم "نحن" هنا وليس "أنا"؟',
++    options: [
++      'لأن المتكلم يتحدث عن نفسه وحده',
++      'لأن المتكلم يتحدث نيابة عن مجموعة تضمه (نحن = "we"), لا عن نفسه منفرداً (أنا = "I")',
++      'لأن نحن للمخاطب لا للمتكلم',
++      'لا فرق بين أنا ونحن في المعنى',
++    ],
++    correctIndex: 1,
++    a: 'نحن ضمير المتكلمين (جمع)، يُستخدم حين يتحدث المتكلم عن نفسه مع آخرين، بخلاف أنا التي تخص المتكلم المفرد وحده.',
++  },
++]
++
++function TopicPage() {
++  return (
++    <main className="flex-1">
++      <div className="border-b border-border bg-beige">
++        <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-12">
++          <Link
++            to="/challenges/grammar"
++            className="text-xs text-muted-foreground hover:text-brand mb-3 inline-block"
++          >
++            ← All grammar topics
++          </Link>
++          <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-3">
++            Topic 7 of 47
++          </p>
++          <h1 className="font-serif tracking-[-0.02em] text-3xl font-bold text-foreground leading-tight mb-3">
++            <span
++              dir="rtl"
++              lang="ar"
++              style={{ fontFamily: "'Noto Naskh Arabic', serif" }}
++              className="mr-2"
++            >
++              الضمائر المنفصلة
++            </span>
++            — Independent Pronouns
++          </h1>
++          <p className="text-muted-foreground text-base max-w-xl">
++            أنا نحن أنتَ أنتِ أنتما أنتم أنتنّ هو هي هما هم هنّ — the full set of independent
++            pronouns stands on its own as a complete word (unlike attached pronouns), most commonly
++            working as the <span className="font-medium text-foreground">مبتدأ</span> of a nominal
++            sentence. Whatever خبر follows must agree with the pronoun's person, gender, and number,
++            and like all pronouns, these words are{' '}
++            <span className="font-medium text-foreground">مبني</span> — their form never changes
++            with case.
++          </p>
++        </div>
++      </div>
++      <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-8">
++        <QuizCarousel items={quizItems} />
++      </div>
++    </main>
++  )
++}
+diff --git a/src/routes/challenges/grammar/interrogatives-man-maa/index.tsx b/src/routes/challenges/grammar/interrogatives-man-maa/index.tsx
+new file mode 100644
+index 0000000..62e7b8a
+--- /dev/null
++++ b/src/routes/challenges/grammar/interrogatives-man-maa/index.tsx
+@@ -0,0 +1,126 @@
++import { createFileRoute, Link } from '@tanstack/react-router'
++import { QuizCarousel } from '#/components/QuizCarousel'
++import type { StrictQuizItem } from '#/routes/challenges/-quiz-types'
++
++export const Route = createFileRoute('/challenges/grammar/interrogatives-man-maa/')({
++  head: () => ({ meta: [{ title: 'Interrogatives — Grammar — Tayseer' }] }),
++  component: TopicPage,
++})
++
++const quizItems: StrictQuizItem[] = [
++  {
++    q: 'ما الفرق بين اسمي الاستفهام من وما؟',
++    options: [
++      'من يُسأل بها عن العاقل (الأشخاص)، وما يُسأل بها عن غير العاقل (الأشياء)',
++      'من للمذكر فقط، وما للمؤنث فقط',
++      'من للماضي، وما للمضارع',
++      'لا فرق، يستخدمان بالتبادل في كل السياقات',
++    ],
++    correctIndex: 0,
++    a: 'من أداة استفهام يُسأل بها عمن يعقل (الأشخاص)، بينما ما أداة استفهام يُسأل بها عما لا يعقل (الأشياء والحيوانات وغيرها).',
++  },
++  {
++    q: 'رأيتَ شخصاً ولا تعرف اسمه، فسألتَه معرِّفاً بنفسه. أيّ سؤال هو الأنسب؟',
++    options: ['ما هذا؟', 'مَن هذا؟', 'أين هذا؟', 'كيف هذا؟'],
++    correctIndex: 1,
++    a: 'بما أن السؤال عن شخص (عاقل), فالأداة المناسبة هي مَن: "مَن هذا؟" = "Who is this?" وليس ما التي تُستخدم لغير العاقل.',
++  },
++  {
++    q: 'رأيتَ جهازاً غريباً على الطاولة ولا تعرف ماهيته. أيّ سؤال هو الأنسب؟',
++    options: ['مَن هذا؟', 'ما هذا؟', 'من ذلك؟', 'أيّ هذا؟'],
++    correctIndex: 1,
++    a: 'بما أن السؤال عن شيء غير عاقل, فالأداة المناسبة هي ما: "ما هذا؟" = "What is this?" — لا تُستخدم مَن هنا لأنها مختصة بالعقلاء.',
++  },
++  {
++    q: 'أيّ من هذه الأسئلة به خطأ في اختيار أداة الاستفهام المناسبة؟',
++    options: ['مَن هذا الرجلُ؟', 'ما هذا الكتابُ؟', 'مَن هذا الكتابُ؟', 'ما هذه السيارةُ؟'],
++    correctIndex: 2,
++    a: '"مَن هذا الكتابُ؟" خطأ لأن الكتاب غير عاقل، فيجب استخدام ما لا مَن؛ الصواب "ما هذا الكتابُ؟".',
++  },
++  {
++    q: 'مَن أستاذُك؟ — لماذا استُخدمت مَن هنا لا ما؟',
++    options: [
++      'لأن السؤال عن شيء غير عاقل',
++      'لأن السؤال عن شخص عاقل (الأستاذ)',
++      'لأن أستاذ اسم مؤنث',
++      'صدفة، يمكن استخدام ما أيضاً هنا دون فرق في المعنى',
++    ],
++    correctIndex: 1,
++    a: 'أستاذ اسم يدل على شخص عاقل، والقاعدة أن السؤال عن العاقل يكون بـ مَن، فتصبح الجملة "مَن أستاذُك؟" = "Who is your teacher?".',
++  },
++  {
++    q: 'من وما من الأسماء المبنية. ماذا يعني ذلك؟',
++    options: [
++      'أن حركة آخرهما تتغير حسب موقعهما الإعرابي في الجملة',
++      'أن شكلهما ثابت ولا يتغير آخرهما بتغير موقعهما الإعرابي، بخلاف الأسماء المعربة',
++      'أنهما لا يمكن أن يأتيا في أول الجملة',
++      'أنهما يُعربان دائماً بحركات مقدرة على الألف',
++    ],
++    correctIndex: 1,
++    a: 'من وما اسمان مبنيان على السكون، فحركة آخرهما لا تتغير مهما اختلف موقعهما الإعرابي في الجملة (مبتدأ، مفعول به، اسم استفهام مجرور...)، خلافاً للأسماء المعربة.',
++  },
++  {
++    q: 'ما اسمُك؟ — ما هو الإعراب المتوقع لـ ما هنا؟',
++    options: [
++      'اسم استفهام مبني في محل رفع مبتدأ',
++      'حرف جر',
++      'فعل ماضٍ',
++      'اسم موصول في محل نصب',
++    ],
++    correctIndex: 0,
++    a: 'ما هنا اسم استفهام يقع في محل رفع مبتدأ، واسمُك خبره — رغم أنه مبني (لا يظهر عليه إعراب لفظي), إلا أن له محلاً إعرابياً كما لو كان معرباً.',
++  },
++  {
++    q: 'أيّ زوج من الجمل يوضح الاستخدام الصحيح لـ من وما حسب قاعدة العاقل/غير العاقل؟',
++    options: [
++      'ما هذا الطفلُ؟ / مَن هذا القلمُ؟',
++      'مَن هذا الطفلُ؟ / ما هذا القلمُ؟',
++      'مَن هذا الطفلُ؟ / مَن هذا القلمُ؟',
++      'ما هذا الطفلُ؟ / ما هذا القلمُ؟',
++    ],
++    correctIndex: 1,
++    a: 'الطفل عاقل فيُسأل عنه بـ مَن (مَن هذا الطفلُ؟)، والقلم غير عاقل فيُسأل عنه بـ ما (ما هذا القلمُ؟) — تطبيق مباشر لقاعدة العاقل مقابل غير العاقل.',
++  },
++]
++
++function TopicPage() {
++  return (
++    <main className="flex-1">
++      <div className="border-b border-border bg-beige">
++        <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-12">
++          <Link
++            to="/challenges/grammar"
++            className="text-xs text-muted-foreground hover:text-brand mb-3 inline-block"
++          >
++            ← All grammar topics
++          </Link>
++          <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-3">
++            Topic 4 of 47
++          </p>
++          <h1 className="font-serif tracking-[-0.02em] text-3xl font-bold text-foreground leading-tight mb-3">
++            <span
++              dir="rtl"
++              lang="ar"
++              style={{ fontFamily: "'Noto Naskh Arabic', serif" }}
++              className="mr-2"
++            >
++              من / ما
++            </span>
++            — Interrogatives
++          </h1>
++          <p className="text-muted-foreground text-base max-w-xl">
++            Two of the most basic question words split Arabic nouns along one line: whether they're{' '}
++            <span className="font-medium text-foreground">عاقل</span> (rational/human) or not.{' '}
++            من asks "who" about a person (مَن هذا؟), while ما asks "what" about a thing (ما هذا؟).
++            Both are <span className="font-medium text-foreground">مبني</span> — indeclinable words
++            whose ending never changes, even though they still hold a grammatical position (like
++            مبتدأ) in the sentence.
++          </p>
++        </div>
++      </div>
++      <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-8">
++        <QuizCarousel items={quizItems} />
++      </div>
++    </main>
++  )
++}
+diff --git a/src/routes/challenges/grammar/ism-ishaara-far/index.tsx b/src/routes/challenges/grammar/ism-ishaara-far/index.tsx
+new file mode 100644
+index 0000000..d51f3de
+--- /dev/null
++++ b/src/routes/challenges/grammar/ism-ishaara-far/index.tsx
+@@ -0,0 +1,120 @@
++import { createFileRoute, Link } from '@tanstack/react-router'
++import { QuizCarousel } from '#/components/QuizCarousel'
++import type { StrictQuizItem } from '#/routes/challenges/-quiz-types'
++
++export const Route = createFileRoute('/challenges/grammar/ism-ishaara-far/')({
++  head: () => ({ meta: [{ title: 'Ism Ishaara (Far) — Grammar — Tayseer' }] }),
++  component: TopicPage,
++})
++
++const quizItems: StrictQuizItem[] = [
++  {
++    q: 'ما الفرق بين ذلك وتلك؟',
++    options: [
++      'ذلك للإشارة إلى البعيد المذكر المفرد، وتلك للإشارة إلى البعيد المؤنث المفرد',
++      'ذلك للقريب، وتلك للبعيد',
++      'ذلك للجمع، وتلك للمفرد',
++      'لا فرق بينهما، يستخدمان بالتبادل',
++    ],
++    correctIndex: 0,
++    a: 'ذلك اسم إشارة للمفرد المذكر البعيد، وتلك اسم إشارة للمفرد المؤنث البعيد — وهما نظيرا هذا وهذه لكن للإشارة إلى ما هو بعيد عن المتكلم لا قريب منه.',
++  },
++  {
++    q: 'ما العلاقة بين ذلك/تلك وهذا/هذه من حيث البنية والوظيفة؟',
++    options: [
++      'لا علاقة بينهما إطلاقاً، أدوات مختلفة تماماً في الاستخدام',
++      'كلاهما يعمل بنفس الطريقة نحوياً (مبتدأ أو صفة إشارية)، والفرق فقط في البعد: هذا/هذه للقريب، ذلك/تلك للبعيد',
++      'ذلك/تلك تُستخدمان للأشخاص فقط، وهذا/هذه للأشياء فقط',
++      'ذلك/تلك مُعربتان، وهذا/هذه مبنيتان',
++    ],
++    correctIndex: 1,
++    a: 'ذلك/تلك توازيان هذا/هذه تماماً في الوظيفة النحوية (تعملان مبتدأ أو صفة إشارية)، والفرق الوحيد هو الدلالة على البُعد المكاني (أو المعنوي) بدل القرب.',
++  },
++  {
++    q: 'كتابٌ (masc.) بعيد عن المتكلم. أيّ جملة صحيحة للإشارة إليه؟',
++    options: ['هذا كتابٌ', 'تلك كتابٌ', 'ذلك كتابٌ', 'هذه كتابٌ'],
++    correctIndex: 2,
++    a: 'كتاب اسم مذكر، والمشار إليه بعيد، فالأداة الصحيحة هي ذلك (المذكر البعيد): "ذلك كتابٌ" = "That is a book."',
++  },
++  {
++    q: 'مدرسةٌ (fem.) بعيدة عن المتكلم. أيّ جملة صحيحة للإشارة إليها؟',
++    options: ['ذلك مدرسةٌ', 'هذه مدرسةٌ', 'تلك مدرسةٌ', 'هذا مدرسةٌ'],
++    correctIndex: 2,
++    a: 'مدرسة اسم مؤنث، والمشار إليه بعيد، فالأداة الصحيحة هي تلك (المؤنث البعيد): "تلك مدرسةٌ" = "That is a school."',
++  },
++  {
++    q: 'أيّ من هذه الجمل بها خطأ في مطابقة اسم الإشارة البعيد لجنس المشار إليه؟',
++    options: ['ذلك رجلٌ', 'تلك امرأةٌ', 'ذلك سيارةٌ', 'تلك حديقةٌ'],
++    correctIndex: 2,
++    a: '"ذلك سيارةٌ" خطأ لأن سيارة اسم مؤنث، فيجب استخدام تلك لا ذلك؛ الصواب "تلك سيارةٌ".',
++  },
++  {
++    q: 'ذلك كتابُ زيدٍ — What structure follows the demonstrative ذلك here, and what does it mean?',
++    options: [
++      'فعل وفاعل — "that wrote Zayd"',
++      'تركيب إضافة (كتابُ زيدٍ = "Zayd\'s book") يعمل خبراً للمبتدأ ذلك',
++      'جار ومجرور فقط',
++      'اسم موصول وصلته',
++    ],
++    correctIndex: 1,
++    a: 'ذلك مبتدأ، وما بعده "كتابُ زيدٍ" تركيب إضافة كامل (مضاف + مضاف إليه) يعمل خبراً للمبتدأ: "ذلك كتابُ زيدٍ" = "That is Zayd\'s book" — اسم الإشارة البعيد يمكن أن يُخبر عنه بإضافة كاملة تماماً كما يُخبر عنه باسم مفرد.',
++  },
++  {
++    q: 'تلك حقيبةُ الطالبةِ — أعرب "تلك" في هذه الجملة.',
++    options: ['اسم إشارة مبني في محل رفع مبتدأ', 'فعل ماضٍ مبني', 'حرف عطف', 'اسم إشارة في محل نصب مفعول به'],
++    correctIndex: 0,
++    a: 'تلك اسم إشارة مبني على السكون في محل رفع مبتدأ، وخبره هو تركيب الإضافة "حقيبةُ الطالبةِ" (حقيبة الطالبة).',
++  },
++  {
++    q: 'مثل هذا وهذه، فإن ذلك وتلك أيضاً ___',
++    options: [
++      'معربان تتغير حركة آخرهما حسب الموقع الإعرابي',
++      'مبنيان لا تتغير حركة آخرهما بتغير الموقع الإعرابي',
++      'يُعربان فقط في حالة الرفع',
++      'جمعا تكسير لكلمة مفردة',
++    ],
++    correctIndex: 1,
++    a: 'أسماء الإشارة كلها — القريبة (هذا/هذه) والبعيدة (ذلك/تلك) — مبنية، فحركة آخرها ثابتة (السكون هنا) ولا تتغير مهما اختلف موقعها الإعرابي في الجملة.',
++  },
++]
++
++function TopicPage() {
++  return (
++    <main className="flex-1">
++      <div className="border-b border-border bg-beige">
++        <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-12">
++          <Link
++            to="/challenges/grammar"
++            className="text-xs text-muted-foreground hover:text-brand mb-3 inline-block"
++          >
++            ← All grammar topics
++          </Link>
++          <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-3">
++            Topic 6 of 47
++          </p>
++          <h1 className="font-serif tracking-[-0.02em] text-3xl font-bold text-foreground leading-tight mb-3">
++            <span
++              dir="rtl"
++              lang="ar"
++              style={{ fontFamily: "'Noto Naskh Arabic', serif" }}
++              className="mr-2"
++            >
++              ذلك / تلك
++            </span>
++            — Ism Ishaara (Far)
++          </h1>
++          <p className="text-muted-foreground text-base max-w-xl">
++            ذلك (masculine) and تلك (feminine) point to something distant, running exactly parallel
++            to هذا/هذه — same مبني nature, same مبتدأ/صفة-إشارية roles — only shifted from near to
++            far. They combine naturally with an idāfah phrase acting as their خبر, as in{' '}
++            <span className="font-medium text-foreground">ذلك كتابُ زيدٍ</span> ("that is Zayd's
++            book").
++          </p>
++        </div>
++      </div>
++      <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-8">
++        <QuizCarousel items={quizItems} />
++      </div>
++    </main>
++  )
++}
+diff --git a/src/routes/challenges/grammar/ism-ishaara-near/index.tsx b/src/routes/challenges/grammar/ism-ishaara-near/index.tsx
+new file mode 100644
+index 0000000..1edd41e
+--- /dev/null
++++ b/src/routes/challenges/grammar/ism-ishaara-near/index.tsx
+@@ -0,0 +1,127 @@
++import { createFileRoute, Link } from '@tanstack/react-router'
++import { QuizCarousel } from '#/components/QuizCarousel'
++import type { StrictQuizItem } from '#/routes/challenges/-quiz-types'
++
++export const Route = createFileRoute('/challenges/grammar/ism-ishaara-near/')({
++  head: () => ({ meta: [{ title: 'Ism Ishaara (Near) — Grammar — Tayseer' }] }),
++  component: TopicPage,
++})
++
++const quizItems: StrictQuizItem[] = [
++  {
++    q: 'ما الفرق بين هذا وهذه؟',
++    options: [
++      'هذا للمثنى، هذه للجمع',
++      'هذا للإشارة إلى القريب المذكر المفرد، هذه للإشارة إلى القريب المؤنث المفرد',
++      'هذا للمؤنث، هذه للمذكر',
++      'لا فرق بينهما، يستخدمان بالتبادل',
++    ],
++    correctIndex: 1,
++    a: 'هذا اسم إشارة للمفرد المذكر القريب، وهذه اسم إشارة للمفرد المؤنث القريب — يجب أن يطابق اسم الإشارة جنس المشار إليه.',
++  },
++  {
++    q: 'هذا + مسجدٌ → ___ ("this is a mosque")',
++    options: ['هذا مسجدٌ', 'هذه مسجدٌ', 'هذا المسجدُ', 'هذا مسجدُ'],
++    correctIndex: 0,
++    a: 'في هذا التركيب هذا مبتدأ ومسجدٌ خبر مرفوع نكرة — وهذا هو النمط القياسي للجملة الاسمية بعد اسم الإشارة: اسم إشارة (مبتدأ) + اسم نكرة (خبر).',
++  },
++  {
++    q: 'سيارةٌ (car) مؤنثة. أيّ جملة صحيحة للإشارة إليها من قريب؟',
++    options: ['هذا سيارةٌ', 'هذه سيارةٌ', 'ذلك سيارةٌ', 'هؤلاء سيارةٌ'],
++    correctIndex: 1,
++    a: 'سيارة اسم مؤنث، فيجب استخدام هذه (اسم الإشارة المؤنث القريب) لا هذا (المذكر) — قاعدة مطابقة اسم الإشارة لجنس المشار إليه.',
++  },
++  {
++    q: 'قارن بين هذا الكتابُ وهذا كتابٌ — ما الفرق النحوي بين التركيبين؟',
++    options: [
++      'لا فرق، كلاهما بنفس المعنى والوظيفة',
++      'الأول: هذا نعت/صفة إشارية قبل اسم معرفة (this [particular] book); الثاني: هذا مبتدأ وكتابٌ خبر نكرة (this is a book)',
++      'الأول خطأ نحوي والثاني صحيح',
++      'الأول للمثنى والثاني للمفرد',
++    ],
++    correctIndex: 1,
++    a: 'إذا تلا اسمَ الإشارة اسمٌ معرفة بأل مباشرة (هذا الكتابُ), فاسم الإشارة صفة إشارية تخصص ذلك الاسم؛ أما إذا تلاه اسم نكرة منفصل (هذا كتابٌ), فاسم الإشارة مبتدأ والاسم النكرة خبره.',
++  },
++  {
++    q: 'أيّ من هذه الجمل بها خطأ في مطابقة اسم الإشارة لجنس المشار إليه؟',
++    options: ['هذا رجلٌ', 'هذه امرأةٌ', 'هذا سيارةٌ', 'هذه مدرسةٌ'],
++    correctIndex: 2,
++    a: '"هذا سيارةٌ" خطأ لأن سيارة اسم مؤنث ويجب أن يسبقها اسم الإشارة المؤنث هذه، فالصواب "هذه سيارةٌ".',
++  },
++  {
++    q: 'اسم الإشارة هذا مبني (indeclinable). What does مبني mean in this context?',
++    options: [
++      'أن آخره يتغير حسب موقعه الإعرابي في الجملة (رفع/نصب/جر)',
++      'أن شكله وحركة آخره ثابتان لا تتغيران أبداً بتغير موقعه في الجملة',
++      'أنه لا يمكن استخدامه في بداية الجملة',
++      'أنه يُعرب دائماً بحركات مقدرة',
++    ],
++    correctIndex: 1,
++    a: 'المبني اسم لا تتغير حركة آخره بتغير موقعه في الجملة، بخلاف المُعرَب. اسم الإشارة هذا مبني على السكون في كل المواضع، سواء كان مبتدأ أو مفعولاً به أو غير ذلك.',
++  },
++  {
++    q: 'هذه الطالبةُ مجتهدةٌ — What role does هذه play here?',
++    options: [
++      'خبر مقدم',
++      'صفة إشارية تخصص الاسم المعرفة "الطالبة" (this [particular] student)',
++      'حرف جر',
++      'مفعول به',
++    ],
++    correctIndex: 1,
++    a: 'لأن الطالبة اسم معرفة بأل يلي اسم الإشارة مباشرة، فهذه هنا صفة إشارية للطالبة (وليست مبتدأ مستقلاً), وبعدها يأتي الخبر الحقيقي للجملة: مجتهدةٌ.',
++  },
++  {
++    q: 'لماذا لا يتأثر اسم الإشارة هذا بموقعه الإعرابي (مبتدأ، مفعول به، مضاف إليه...) من حيث الحركة؟',
++    options: [
++      'لأنه اسم نكرة لا يقبل التعريف',
++      'لأنه اسم مبني، والأسماء المبنية لا تتغير حركة آخرها بتغير العامل',
++      'لأنه دائماً في محل رفع فقط',
++      'لأنه ممنوع من الصرف',
++    ],
++    correctIndex: 1,
++    a: 'أسماء الإشارة من الأسماء المبنية في العربية، فحركة آخرها ثابتة (هنا السكون) بصرف النظر عن موقعها الإعرابي في الجملة، على عكس الأسماء المعربة التي تتغير حركتها حسب العامل.',
++  },
++]
++
++function TopicPage() {
++  return (
++    <main className="flex-1">
++      <div className="border-b border-border bg-beige">
++        <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-12">
++          <Link
++            to="/challenges/grammar"
++            className="text-xs text-muted-foreground hover:text-brand mb-3 inline-block"
++          >
++            ← All grammar topics
++          </Link>
++          <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-3">
++            Topic 3 of 47
++          </p>
++          <h1 className="font-serif tracking-[-0.02em] text-3xl font-bold text-foreground leading-tight mb-3">
++            <span
++              dir="rtl"
++              lang="ar"
++              style={{ fontFamily: "'Noto Naskh Arabic', serif" }}
++              className="mr-2"
++            >
++              هذا / هذه
++            </span>
++            — Ism Ishaara (Near)
++          </h1>
++          <p className="text-muted-foreground text-base max-w-xl">
++            هذا (masculine) and هذه (feminine) point to something near, and must agree in gender
++            with what they refer to. They work two ways: as the{' '}
++            <span className="font-medium text-foreground">مبتدأ</span> of a nominal sentence
++            followed by an indefinite خبر (هذا كتابٌ — "this is a book"), or as a demonstrative
++            adjective placed directly before a definite noun (هذا الكتابُ — "this book"). Either
++            way, both words are <span className="font-medium text-foreground">مبني</span> — their
++            ending never changes regardless of case.
++          </p>
++        </div>
++      </div>
++      <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-8">
++        <QuizCarousel items={quizItems} />
++      </div>
++    </main>
++  )
++}
+diff --git a/src/routes/challenges/grammar/masculine-feminine/index.tsx b/src/routes/challenges/grammar/masculine-feminine/index.tsx
+new file mode 100644
+index 0000000..d020a55
+--- /dev/null
++++ b/src/routes/challenges/grammar/masculine-feminine/index.tsx
+@@ -0,0 +1,116 @@
++import { createFileRoute, Link } from '@tanstack/react-router'
++import { QuizCarousel } from '#/components/QuizCarousel'
++import type { StrictQuizItem } from '#/routes/challenges/-quiz-types'
++
++export const Route = createFileRoute('/challenges/grammar/masculine-feminine/')({
++  head: () => ({ meta: [{ title: 'Masculine & Feminine Nouns — Grammar — Tayseer' }] }),
++  component: TopicPage,
++})
++
++const quizItems: StrictQuizItem[] = [
++  {
++    q: 'إذا كان الاسم خالياً من تاء التأنيث وليس من كلمات المؤنث السماعي المعروفة، فما جنسه الافتراضي؟',
++    options: ['مؤنث', 'مذكر', 'مثنى', 'لا شيء مما سبق'],
++    correctIndex: 1,
++    a: 'الأصل في الأسماء العربية أنها مذكرة ما لم تظهر عليها علامة تأنيث كالتاء المربوطة، أو تكن من الأسماء المؤنثة سماعاً.',
++  },
++  {
++    q: 'طالب (student, masc.) + ة → ___, meaning "female student"',
++    options: ['طالبة', 'طالبٌ', 'طالبين', 'طالبون'],
++    correctIndex: 0,
++    a: 'التاء المربوطة (ة) هي العلامة القياسية الأشهر للتأنيث في العربية، تُضاف لتحويل الاسم من صيغته المذكرة إلى المؤنثة.',
++  },
++  {
++    q: 'الكلمة "أرض" (earth/land) مؤنثة رغم خلوها من تاء التأنيث. ماذا يسمى هذا النوع من التأنيث؟',
++    options: [
++      'مؤنث لفظي',
++      'مؤنث سماعي/مجازي — لا تحمل علامة ظاهرة وتُحفظ سماعاً عن العرب',
++      'مؤنث قياسي',
++      'ليست مؤنثة أصلاً',
++    ],
++    correctIndex: 1,
++    a: 'بعض الأسماء مؤنثة سماعاً بلا علامة ظاهرة، تُعرف بالمؤنث السماعي أو المجازي، ومنها أرض وشمس وريح — يجب حفظها لأن اللفظ نفسه لا يدل عليها.',
++  },
++  {
++    q: 'أيّ من هذه الكلمات مؤنث رغم خلوها من تاء التأنيث؟',
++    options: ['كتابٌ', 'قلمٌ', 'شمسٌ', 'بابٌ'],
++    correctIndex: 2,
++    a: 'شمس (sun) من الأسماء المؤنثة سماعاً بلا علامة تأنيث ظاهرة، ولذلك يُقال "الشمسُ مشرقةٌ" لا "مشرقٌ".',
++  },
++  {
++    q: 'Body parts that come in natural pairs (يد hand, عين eye, أذن ear, رِجل foot) are typically treated as ___ in gender, even without ة.',
++    options: ['مذكرة', 'مؤنثة', 'لا شيء يحدد جنسها', 'مثناة دائماً بحكم كونها زوجية'],
++    correctIndex: 1,
++    a: 'الأعضاء المزدوجة في جسم الإنسان (اليد، العين، الأذن، الرِّجل) مؤنثة سماعاً رغم خلوها من التاء، فيقال "يدٌ طويلةٌ" لا "طويلٌ".',
++  },
++  {
++    q: 'أيّ جملة فيها خطأ في مطابقة الصفة للموصوف من حيث التذكير والتأنيث؟',
++    options: ['الشمسُ حارّةٌ اليوم', 'الشمسُ حارٌّ اليوم', 'العينُ جميلةٌ', 'الأرضُ واسعةٌ'],
++    correctIndex: 1,
++    a: '"الشمسُ حارٌّ" خطأ لأن شمس اسم مؤنث سماعاً، فيجب أن تطابقه الصفة في التأنيث: الصواب "الشمسُ حارّةٌ".',
++  },
++  {
++    q: 'بنتٌ ذكيةٌ ("a smart girl") — Why does the adjective ذكية carry a ة even though بنت already ends with one?',
++    options: [
++      'صدفة لا قاعدة لها',
++      'لأن الصفة (النعت) يجب أن تطابق الموصوف في التذكير والتأنيث',
++      'لأن كل الصفات تنتهي بتاء مربوطة دائماً بغض النظر عن الموصوف',
++      'لأن بنت اسم مذكر ويحتاج تصحيحاً',
++    ],
++    correctIndex: 1,
++    a: 'النعت يجب أن يطابق المنعوت في النوع (تذكير/تأنيث)، وبما أن بنت مؤنثة، وجب أن تكون صفتها "ذكية" لا "ذكياً".',
++  },
++  {
++    q: 'رجلٌ طويلٌ مقابل اِمرأةٌ طويلةٌ — ما القاعدة النحوية التي يوضحها هذان المثالان معاً؟',
++    options: [
++      'أن النعت يتبع المنعوت في العدد فقط',
++      'أن النعت يتبع المنعوت في التذكير والتأنيث',
++      'أن الصفة تسبق الموصوف دائماً في الترتيب',
++      'أن كل الصفات مؤنثة أصلاً بصرف النظر عن الموصوف',
++    ],
++    correctIndex: 1,
++    a: 'في كلا المثالين تتبع الصفة موصوفها في الجنس: "طويل" لرجل المذكر، و"طويلة" لامرأة المؤنثة — وهذه قاعدة مطابقة النعت للمنعوت في التذكير والتأنيث.',
++  },
++]
++
++function TopicPage() {
++  return (
++    <main className="flex-1">
++      <div className="border-b border-border bg-beige">
++        <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-12">
++          <Link
++            to="/challenges/grammar"
++            className="text-xs text-muted-foreground hover:text-brand mb-3 inline-block"
++          >
++            ← All grammar topics
++          </Link>
++          <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-3">
++            Topic 2 of 47
++          </p>
++          <h1 className="font-serif tracking-[-0.02em] text-3xl font-bold text-foreground leading-tight mb-3">
++            <span
++              dir="rtl"
++              lang="ar"
++              style={{ fontFamily: "'Noto Naskh Arabic', serif" }}
++              className="mr-2"
++            >
++              التذكير والتأنيث
++            </span>
++            — Masculine &amp; Feminine Nouns
++          </h1>
++          <p className="text-muted-foreground text-base max-w-xl">
++            Arabic nouns default to <span className="font-medium text-foreground">مذكر</span>{' '}
++            (masculine) unless marked otherwise. The typical feminine marker is a trailing{' '}
++            <span className="font-medium text-foreground">تاء مربوطة</span> (ة), but a handful of
++            "hidden feminine" nouns — أرض، شمس، ريح, and body parts that come in natural pairs — are
++            feminine with no visible marker at all. Whichever kind, an adjective describing the noun
++            must always match its gender.
++          </p>
++        </div>
++      </div>
++      <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-8">
++        <QuizCarousel items={quizItems} />
++      </div>
++    </main>
++  )
++}
+diff --git a/src/routes/challenges/grammar/mubtada-khabar/index.tsx b/src/routes/challenges/grammar/mubtada-khabar/index.tsx
+new file mode 100644
+index 0000000..c754254
+--- /dev/null
++++ b/src/routes/challenges/grammar/mubtada-khabar/index.tsx
+@@ -0,0 +1,132 @@
++import { createFileRoute, Link } from '@tanstack/react-router'
++import { QuizCarousel } from '#/components/QuizCarousel'
++import type { StrictQuizItem } from '#/routes/challenges/-quiz-types'
++
++export const Route = createFileRoute('/challenges/grammar/mubtada-khabar/')({
++  head: () => ({ meta: [{ title: 'The Nominal Sentence — Grammar — Tayseer' }] }),
++  component: TopicPage,
++})
++
++const quizItems: StrictQuizItem[] = [
++  {
++    q: 'ما هي الجملة الاسمية وما ركناها الأساسيان؟',
++    options: [
++      'جملة تبدأ بفعل، وركناها الفاعل والمفعول به',
++      'جملة تبدأ باسم، وركناها المبتدأ والخبر',
++      'جملة تبدأ بحرف جر، وركناها الجار والمجرور',
++      'جملة تبدأ بأداة استفهام، وركناها السؤال والجواب',
++    ],
++    correctIndex: 1,
++    a: 'الجملة الاسمية هي الجملة التي تبدأ باسم، وتتكون في أبسط صورها من ركنين: المبتدأ (الاسم الذي يُبتدأ به الكلام) والخبر (ما يخبر عنه ويكمل معناه).',
++  },
++  {
++    q: 'المحمدٌ في الفصلِ — ما إعراب "محمد" هنا، ولماذا؟',
++    options: [
++      'مبتدأ مرفوع لأنه ابتدئ به الكلام والحديث عنه',
++      'مفعول به منصوب',
++      'مضاف إليه مجرور',
++      'حال منصوب',
++    ],
++    correctIndex: 0,
++    a: 'محمد هنا هو الاسم الذي ابتدئ به الكلام، فهو مبتدأ، وحكمه الرفع. الجار والمجرور "في الفصلِ" يقع في محل رفع خبر.',
++  },
++  {
++    q: 'ما حكم إعراب كل من المبتدأ والخبر في الجملة الاسمية البسيطة (كالطالبُ مجتهدٌ)؟',
++    options: [
++      'المبتدأ مرفوع والخبر منصوب',
++      'المبتدأ منصوب والخبر مرفوع',
++      'كلاهما مرفوع',
++      'كلاهما مجرور',
++    ],
++    correctIndex: 2,
++    a: 'الأصل في الجملة الاسمية البسيطة أن يكون كل من المبتدأ والخبر مرفوعاً — الطالبُ (مبتدأ مرفوع) مجتهدٌ (خبر مرفوع).',
++  },
++  {
++    q: 'الطالبُ مجتهدٌ — لماذا المبتدأ هنا معرفة (الطالبُ بأل) بينما الخبر نكرة (مجتهدٌ)؟',
++    options: [
++      'صدفة لا قاعدة عامة لها',
++      'لأن هذا هو النمط الأشيع: مبتدأ معرفة (شيء محدد نتحدث عنه) + خبر نكرة (صفة أو معلومة عنه)',
++      'لأن كل مبتدأ يجب أن يكون معرفة وكل خبر يجب أن يكون نكرة بلا استثناء',
++      'لأن الخبر لا يمكن أن يكون معرفة أبداً في أي جملة',
++    ],
++    correctIndex: 1,
++    a: 'الأنماط الأشيع للجملة الاسمية هي مبتدأ معرفة (شيء معروف نتكلم عنه) يتبعه خبر نكرة (يعطي معلومة عنه) — وإن كان هذا ليس قيداً مطلقاً في كل تراكيب اللغة.',
++  },
++  {
++    q: 'أيّ من هذه الجمل بها خطأ في مطابقة الخبر للمبتدأ في العدد والجنس؟',
++    options: ['الطالبةُ مجتهدةٌ', 'الطالبانِ مجتهدانِ', 'الطالباتُ مجتهدةٌ', 'الطلابُ مجتهدونَ'],
++    correctIndex: 2,
++    a: '"الطالباتُ مجتهدةٌ" خطأ لأن المبتدأ جمع مؤنث (الطالباتُ) ويحتاج خبراً يطابقه في الجمع لا في المفرد؛ الصواب "الطالباتُ مجتهداتٌ".',
++  },
++  {
++    q: 'البيتُ كبيرٌ — What kind of word is the خبر "كبيرٌ" here, and what does it tell us about المبتدأ؟',
++    options: [
++      'فعل يخبر عن حدوث الكبر',
++      'اسم مفرد (صفة) يصف حال المبتدأ ويكمل معناه',
++      'حرف جر يربط بين المبتدأ وما بعده',
++      'مضاف إليه يخصص المبتدأ',
++    ],
++    correctIndex: 1,
++    a: 'كبيرٌ هنا خبر مفرد (اسم وليس فعلاً ولا جملة)، وهو صفة تصف حال المبتدأ "البيت" وتُتمم معنى الجملة، ويطابقه في الرفع والإفراد والتذكير.',
++  },
++  {
++    q: 'أكمل الجملة بخبر مرفوع يطابق المبتدأ في التذكير: البابُ ___',
++    options: ['مفتوحةٌ', 'مفتوحٌ', 'مفتوحاً', 'مفتوحِ'],
++    correctIndex: 1,
++    a: 'الباب اسم مذكر، فيجب أن يطابقه الخبر في التذكير والرفع: "البابُ مفتوحٌ" — لا "مفتوحةٌ" (مؤنث) ولا "مفتوحاً" (منصوب).',
++  },
++  {
++    q: 'هل يمكن أن يتقدم الخبر على المبتدأ في العربية؟ اختر التوضيح الأدق.',
++    options: [
++      'لا، أبداً؛ ترتيب مبتدأ ثم خبر ثابت لا يتغير في كل الحالات',
++      'نعم، يجوز تقديم الخبر شبه الجملة (كالجار والمجرور أو الظرف) على المبتدأ في مواضع معينة، كقولنا "في البيتِ رجلٌ"',
++      'نعم، لكن فقط إذا كان المبتدأ فعلاً',
++      'لا فرق؛ لا يوجد ترتيب محدد أصلاً في الجملة الاسمية',
++    ],
++    correctIndex: 1,
++    a: 'الأصل تقديم المبتدأ على الخبر، لكن يجوز تقديم الخبر إذا كان شبه جملة (جار ومجرور أو ظرف) خصوصاً إذا كان المبتدأ نكرة، كقولنا "في البيتِ رجلٌ" حيث تقدّم شبه الجملة "في البيتِ" على المبتدأ النكرة "رجلٌ".',
++  },
++]
++
++function TopicPage() {
++  return (
++    <main className="flex-1">
++      <div className="border-b border-border bg-beige">
++        <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-12">
++          <Link
++            to="/challenges/grammar"
++            className="text-xs text-muted-foreground hover:text-brand mb-3 inline-block"
++          >
++            ← All grammar topics
++          </Link>
++          <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-3">
++            Topic 5 of 47
++          </p>
++          <h1 className="font-serif tracking-[-0.02em] text-3xl font-bold text-foreground leading-tight mb-3">
++            <span
++              dir="rtl"
++              lang="ar"
++              style={{ fontFamily: "'Noto Naskh Arabic', serif" }}
++              className="mr-2"
++            >
++              مبتدأ وخبر
++            </span>
++            — The Nominal Sentence
++          </h1>
++          <p className="text-muted-foreground text-base max-w-xl">
++            An Arabic sentence that starts with a noun is a{' '}
++            <span className="font-medium text-foreground">جملة اسمية</span>, built from a{' '}
++            <span className="font-medium text-foreground">مبتدأ</span> (topic, مرفوع) and a{' '}
++            <span className="font-medium text-foreground">خبر</span> (predicate, مرفوع). The most
++            common shape is a definite مبتدأ followed by an indefinite خبر (الطالبُ مجتهدٌ — "the
++            student is diligent"), and the خبر must always agree with the مبتدأ in gender and
++            number.
++          </p>
++        </div>
++      </div>
++      <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-8">
++        <QuizCarousel items={quizItems} />
++      </div>
++    </main>
++  )
++}
+diff --git a/src/routes/challenges/grammar/prepositions/index.tsx b/src/routes/challenges/grammar/prepositions/index.tsx
+new file mode 100644
+index 0000000..d946ad0
+--- /dev/null
++++ b/src/routes/challenges/grammar/prepositions/index.tsx
+@@ -0,0 +1,107 @@
++import { createFileRoute, Link } from '@tanstack/react-router'
++import { QuizCarousel } from '#/components/QuizCarousel'
++import type { StrictQuizItem } from '#/routes/challenges/-quiz-types'
++
++export const Route = createFileRoute('/challenges/grammar/prepositions/')({
++  head: () => ({ meta: [{ title: 'Prepositions — Grammar — Tayseer' }] }),
++  component: TopicPage,
++})
++
++const quizItems: StrictQuizItem[] = [
++  {
++    q: 'ما حكم إعراب الاسم الواقع بعد حرف الجر دائماً؟',
++    options: ['مرفوع دائماً', 'منصوب دائماً', 'مجرور دائماً', 'يتبع حركة الفعل قبله'],
++    correctIndex: 2,
++    a: 'من أهم قواعد النحو العربي: كل اسم يقع مباشرة بعد حرف جر يكون مجروراً وجوباً، ويسمى التركيب بأكمله "جار ومجرور".',
++  },
++  {
++    q: 'ذهبتُ ___ المدرسةِ (to the school) — أكمل بحرف الجر المناسب للدلالة على الاتجاه/الوجهة.',
++    options: ['مِن', 'إلى', 'عن', 'مع'],
++    correctIndex: 1,
++    a: 'إلى حرف جر يفيد الانتهاء أو الوجهة (الاتجاه نحو شيء): "ذهبتُ إلى المدرسةِ" = "I went to the school".',
++  },
++  {
++    q: 'خرجَ الطالبُ ___ الفصلِ (from the classroom) — أكمل بحرف الجر المناسب للدلالة على بداية الحركة/الابتداء.',
++    options: ['إلى', 'على', 'مِن', 'في'],
++    correctIndex: 2,
++    a: 'مِن حرف جر يفيد ابتداء الغاية (بداية الحركة أو المصدر): "خرجَ الطالبُ مِن الفصلِ" = "The student left [from] the classroom".',
++  },
++  {
++    q: 'أيّ من هذه الجمل بها خطأ نحوي في حالة الاسم بعد حرف الجر؟',
++    options: ['ذهبتُ إلى المسجدِ', 'ذهبتُ إلى المسجدُ', 'صلّيتُ في المسجدِ', 'خرجتُ من المسجدِ'],
++    correctIndex: 1,
++    a: '"إلى المسجدُ" خطأ لأن الاسم بعد حرف الجر يجب أن يكون مجروراً؛ الصواب "إلى المسجدِ" بالكسرة.',
++  },
++  {
++    q: 'الكتابُ ___ الطاولةِ (on the table) — أكمل بحرف الجر المناسب للدلالة على الاستعلاء.',
++    options: ['على', 'عن', 'بـ', 'لـ'],
++    correctIndex: 0,
++    a: 'على حرف جر يفيد الاستعلاء (فوقية): "الكتابُ على الطاولةِ" = "The book is on the table".',
++  },
++  {
++    q: 'كتبتُ ___ القلمِ (with the pen) — أكمل بحرف الجر المناسب للدلالة على الاستعانة/الآلة.',
++    options: ['لـ', 'بـ', 'عن', 'إلى'],
++    correctIndex: 1,
++    a: 'بـ حرف جر يفيد الاستعانة أو الآلة التي تُستخدم لأداء الفعل: "كتبتُ بالقلمِ" = "I wrote with the pen".',
++  },
++  {
++    q: 'هذا الكتابُ ___ محمدٍ (belongs to/is for Muhammad) — أكمل بحرف الجر المناسب للدلالة على الملكية/الاختصاص.',
++    options: ['عن', 'مع', 'لـ', 'على'],
++    correctIndex: 2,
++    a: 'لـ حرف جر يفيد الملكية أو الاختصاص: "هذا الكتابُ لمحمدٍ" = "This book belongs to Muhammad".',
++  },
++  {
++    q: 'أخذتُ الكتابَ منه — لا تظهر حركة الجر على الضمير "ـه" كما تظهر على الاسم الظاهر. Why?',
++    options: [
++      'لأن الضمير في هذه الحالة ليس مجروراً أصلاً',
++      'لأن الضمائر المتصلة مبنية، فإعرابها (هنا الجر بحرف الجر مِن) يكون في محل جر مقدّراً لا ظاهراً في الحركة',
++      'لأن حرف الجر مِن لا يجر الضمائر إطلاقاً',
++      'لأن الضمير هنا فاعل لا مجرور',
++    ],
++    correctIndex: 1,
++    a: 'الضمائر المتصلة مبنية لا تظهر عليها حركات الإعراب، فحين يتصل الضمير بحرف جر (كمنه) يكون في محل جر بحرف الجر، أي أن حالة الجر ثابتة معنىً (محلاً) لا لفظاً (حركة ظاهرة) كما يحدث مع الأسماء الظاهرة مثل "من الرجلِ".',
++  },
++]
++
++function TopicPage() {
++  return (
++    <main className="flex-1">
++      <div className="border-b border-border bg-beige">
++        <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-12">
++          <Link
++            to="/challenges/grammar"
++            className="text-xs text-muted-foreground hover:text-brand mb-3 inline-block"
++          >
++            ← All grammar topics
++          </Link>
++          <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-3">
++            Topic 11 of 47
++          </p>
++          <h1 className="font-serif tracking-[-0.02em] text-3xl font-bold text-foreground leading-tight mb-3">
++            <span
++              dir="rtl"
++              lang="ar"
++              style={{ fontFamily: "'Noto Naskh Arabic', serif" }}
++              className="mr-2"
++            >
++              حروف الجر
++            </span>
++            — Prepositions
++          </h1>
++          <p className="text-muted-foreground text-base max-w-xl">
++            من إلى في على بـ لـ عن مع — Arabic's core prepositions each carry their own shade of
++            meaning (from, to, in, on, with, for, about, with-together), but they share one iron
++            rule: whatever noun follows a preposition is always{' '}
++            <span className="font-medium text-foreground">مجرور</span>, forming a{' '}
++            <span className="font-medium text-foreground">جار ومجرور</span>. When a pronoun takes
++            the noun's place (منه، له، به), that same جر case is still there — just hidden, since
++            attached pronouns show no visible case ending.
++          </p>
++        </div>
++      </div>
++      <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-8">
++        <QuizCarousel items={quizItems} />
++      </div>
++    </main>
++  )
++}
+diff --git a/src/routes/challenges/grammar/yes-no-questions/index.tsx b/src/routes/challenges/grammar/yes-no-questions/index.tsx
+new file mode 100644
+index 0000000..78e0fcd
+--- /dev/null
++++ b/src/routes/challenges/grammar/yes-no-questions/index.tsx
+@@ -0,0 +1,115 @@
++import { createFileRoute, Link } from '@tanstack/react-router'
++import { QuizCarousel } from '#/components/QuizCarousel'
++import type { StrictQuizItem } from '#/routes/challenges/-quiz-types'
++
++export const Route = createFileRoute('/challenges/grammar/yes-no-questions/')({
++  head: () => ({ meta: [{ title: 'Yes/No Questions — Grammar — Tayseer' }] }),
++  component: TopicPage,
++})
++
++const quizItems: StrictQuizItem[] = [
++  {
++    q: 'ما هما أداتا الاستفهام المستخدمتان لطرح سؤال يُجاب عنه بنعم أو لا؟',
++    options: ['من وما', 'أ وهل', 'كيف وأين', 'متى وكم'],
++    correctIndex: 1,
++    a: 'أ وهل هما أداتا الاستفهام المخصصتان لطرح سؤال إثبات/نفي يكون جوابه نعم أو لا، على خلاف أدوات كمن وما وأين وكيف التي تطلب معلومة محددة.',
++  },
++  {
++    q: 'أين تُوضع همزة الاستفهام أ في الجملة؟',
++    options: [
++      'تُتصل مباشرة بأول كلمة في الجملة',
++      'تقف منفصلة في أول الجملة كهل تماماً',
++      'توضع في آخر الجملة',
++      'توضع بعد الفعل مباشرة بصرف النظر عن موقعه',
++    ],
++    correctIndex: 0,
++    a: 'همزة الاستفهام أ تتصل اتصالاً مباشراً بأول كلمة في الجملة (أطالبٌ أنتَ؟)، بخلاف هل التي تقف كلمة منفصلة بذاتها في مستهل الجملة (هل أنتَ طالبٌ؟).',
++  },
++  {
++    q: 'أيّ من هاتين الجملتين مكتوبة بالشكل الصحيح لأداة الاستفهام؟',
++    options: ['هل أنتَ مدرّسٌ؟', 'أ نتَ مدرّسٌ؟', 'أنتَ هل مدرّسٌ؟', 'مدرّسٌ هل أنتَ؟'],
++    correctIndex: 0,
++    a: 'هل تقف منفصلة قبل الجملة مباشرة في أولها: "هل أنتَ مدرّسٌ؟" — أما "أ نتَ" ففيها انفصال خاطئ لهمزة الاستفهام التي يجب أن تتصل بالكلمة (أأنتَ).',
++  },
++  {
++    q: 'حوّل الجملة "هذا كتابٌ" إلى سؤال باستخدام همزة الاستفهام أ.',
++    options: ['هل هذا كتابٌ؟', 'أهذا كتابٌ؟', 'أ هذا كتابٌ ؟ (منفصلة)', 'كتابٌ أهذا؟'],
++    correctIndex: 1,
++    a: 'تتصل همزة الاستفهام مباشرة بأول كلمة في الجملة، فتصبح "هذا" ← "أهذا": "أهذا كتابٌ؟" = "Is this a book?"',
++  },
++  {
++    q: 'أيّ من هذه الجمل بها خطأ في استخدام أداة الاستفهام؟',
++    options: ['هل ذهبتَ إلى المدرسةِ؟', 'أذهبتَ إلى المدرسةِ؟', 'هلذهبتَ إلى المدرسةِ؟', 'أطالبٌ أنتَ؟'],
++    correctIndex: 2,
++    a: '"هلذهبتَ" خطأ لأن هل يجب أن تُكتب منفصلة عن الكلمة التي تليها دائماً (هل + ذهبتَ)، بخلاف أ التي تتصل اتصالاً مباشراً بالكلمة.',
++  },
++  {
++    q: 'بأي كلمتين تُجاب أسئلة نعم/لا في العربية عادة؟',
++    options: ['أي ولا', 'نعم ولا', 'بلى وكلا', 'صحيح وخطأ'],
++    correctIndex: 1,
++    a: 'يُجاب عن سؤال أ/هل المثبت عادة بـ نعم (للإثبات) أو لا (للنفي) — مثل: "هل أنتَ طالبٌ؟" فيُجاب "نعم" أو "لا".',
++  },
++  {
++    q: 'هل أنتَ مريضٌ؟ فأجاب المخاطب: نعم. What does this answer confirm?',
++    options: [
++      'أنه ليس مريضاً',
++      'أنه مريضٌ فعلاً، مؤكداً مضمون السؤال المُثبت',
++      'أنه لا يعرف الجواب',
++      'أنه سيصبح مريضاً لاحقاً',
++    ],
++    correctIndex: 1,
++    a: 'بما أن السؤال هنا مُثبت (هل أنتَ مريضٌ؟), فإن الجواب "نعم" يؤكد مضمون السؤال كما هو: أي أنه مريضٌ بالفعل.',
++  },
++  {
++    q: 'أهذه سيارتُك؟ — أعرب الجملة إعراباً وظيفياً: ما وظيفة الهمزة أ هنا؟',
++    options: [
++      'حرف عطف يربط جملتين',
++      'حرف استفهام يفيد طلب الإثبات أو النفي (yes/no) ولا محل له من الإعراب',
++      'اسم موصول',
++      'فعل أمر',
++    ],
++    correctIndex: 1,
++    a: 'الهمزة هنا حرف استفهام يفيد طلب جواب بنعم أو لا، وهي حرف مبني لا محل له من الإعراب، متصل مباشرة بأول الجملة (هذه ← أهذه).',
++  },
++]
++
++function TopicPage() {
++  return (
++    <main className="flex-1">
++      <div className="border-b border-border bg-beige">
++        <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-12">
++          <Link
++            to="/challenges/grammar"
++            className="text-xs text-muted-foreground hover:text-brand mb-3 inline-block"
++          >
++            ← All grammar topics
++          </Link>
++          <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-3">
++            Topic 8 of 47
++          </p>
++          <h1 className="font-serif tracking-[-0.02em] text-3xl font-bold text-foreground leading-tight mb-3">
++            <span
++              dir="rtl"
++              lang="ar"
++              style={{ fontFamily: "'Noto Naskh Arabic', serif" }}
++              className="mr-2"
++            >
++              أ / هل
++            </span>
++            — Yes/No Questions
++          </h1>
++          <p className="text-muted-foreground text-base max-w-xl">
++            Two particles turn a plain statement into a yes/no question. أ attaches directly to the
++            first word of the sentence (هذا كتابٌ → أهذا كتابٌ؟), while هل stands on its own at the
++            very start of the sentence (هل هذا كتابٌ؟). Either way, the answer is a simple{' '}
++            <span className="font-medium text-foreground">نعم</span> (yes) or{' '}
++            <span className="font-medium text-foreground">لا</span> (no).
++          </p>
++        </div>
++      </div>
++      <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-8">
++        <QuizCarousel items={quizItems} />
++      </div>
++    </main>
++  )
++}

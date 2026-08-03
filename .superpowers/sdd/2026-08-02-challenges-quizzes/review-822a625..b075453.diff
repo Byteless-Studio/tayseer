@@ -1,0 +1,2536 @@
+# Review package: 822a625..HEAD
+
+## Commits
+b075453 Add grammar quizzes 15-28: number & structure expansion
+
+## Files changed
+ src/routeTree.gen.ts                               | 316 +++++++++++++++++++++
+ .../challenges/grammar/aakhar-ukhraa/index.tsx     | 128 +++++++++
+ .../challenges/grammar/adverbs-of-place/index.tsx  | 113 ++++++++
+ .../challenges/grammar/badal-vocative/index.tsx    | 129 +++++++++
+ .../challenges/grammar/broken-plural/index.tsx     | 124 ++++++++
+ .../challenges/grammar/days-months/index.tsx       | 129 +++++++++
+ .../grammar/defective-diptotes/index.tsx           | 134 +++++++++
+ src/routes/challenges/grammar/dhu-dhaat/index.tsx  | 117 ++++++++
+ src/routes/challenges/grammar/dual/index.tsx       | 110 +++++++
+ src/routes/challenges/grammar/five-nouns/index.tsx | 117 ++++++++
+ .../challenges/grammar/numbers-1-10/index.tsx      | 124 ++++++++
+ .../challenges/grammar/relative-pronouns/index.tsx | 119 ++++++++
+ .../grammar/sound-feminine-plural/index.tsx        | 113 ++++++++
+ .../grammar/sound-masculine-plural/index.tsx       | 120 ++++++++
+ src/routes/challenges/grammar/taajjub/index.tsx    | 119 ++++++++
+ 15 files changed, 2012 insertions(+)
+
+## Diff
+diff --git a/src/routeTree.gen.ts b/src/routeTree.gen.ts
+index 387100e..60a76f7 100644
+--- a/src/routeTree.gen.ts
++++ b/src/routeTree.gen.ts
+@@ -12,33 +12,47 @@ import { Route as rootRouteImport } from './routes/__root'
+ import { Route as AboutRouteImport } from './routes/about'
+ import { Route as IndexRouteImport } from './routes/index'
+ import { Route as CognatesIndexRouteImport } from './routes/cognates/index'
+ import { Route as ChallengesIndexRouteImport } from './routes/challenges/index'
+ import { Route as ArabicWithMuftiSaimIndexRouteImport } from './routes/arabic-with-mufti-saim/index'
+ import { Route as ChallengesVocabularyIndexRouteImport } from './routes/challenges/vocabulary/index'
+ import { Route as ArabicWithMuftiSaimLectureLectureIdRouteImport } from './routes/arabic-with-mufti-saim/lecture.$lectureId'
+ import { Route as ApiPublishSplatRouteImport } from './routes/api/publish/$'
+ import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
+ import { Route as ChallengesGrammarYesNoQuestionsIndexRouteImport } from './routes/challenges/grammar/yes-no-questions/index'
++import { Route as ChallengesGrammarTaajjubIndexRouteImport } from './routes/challenges/grammar/taajjub/index'
++import { Route as ChallengesGrammarSoundMasculinePluralIndexRouteImport } from './routes/challenges/grammar/sound-masculine-plural/index'
++import { Route as ChallengesGrammarSoundFemininePluralIndexRouteImport } from './routes/challenges/grammar/sound-feminine-plural/index'
++import { Route as ChallengesGrammarRelativePronounsIndexRouteImport } from './routes/challenges/grammar/relative-pronouns/index'
+ import { Route as ChallengesGrammarPrepositionsIndexRouteImport } from './routes/challenges/grammar/prepositions/index'
++import { Route as ChallengesGrammarNumbers110IndexRouteImport } from './routes/challenges/grammar/numbers-1-10/index'
+ import { Route as ChallengesGrammarMubtadaKhabarIndexRouteImport } from './routes/challenges/grammar/mubtada-khabar/index'
+ import { Route as ChallengesGrammarMasculineFeminineIndexRouteImport } from './routes/challenges/grammar/masculine-feminine/index'
+ import { Route as ChallengesGrammarIsmIshaaraNearIndexRouteImport } from './routes/challenges/grammar/ism-ishaara-near/index'
+ import { Route as ChallengesGrammarIsmIshaaraFarIndexRouteImport } from './routes/challenges/grammar/ism-ishaara-far/index'
+ import { Route as ChallengesGrammarInterrogativesManMaaIndexRouteImport } from './routes/challenges/grammar/interrogatives-man-maa/index'
+ import { Route as ChallengesGrammarIndependentPronounsIndexRouteImport } from './routes/challenges/grammar/independent-pronouns/index'
+ import { Route as ChallengesGrammarIdafahIndexRouteImport } from './routes/challenges/grammar/idafah/index'
++import { Route as ChallengesGrammarFiveNounsIndexRouteImport } from './routes/challenges/grammar/five-nouns/index'
++import { Route as ChallengesGrammarDualIndexRouteImport } from './routes/challenges/grammar/dual/index'
++import { Route as ChallengesGrammarDhuDhaatIndexRouteImport } from './routes/challenges/grammar/dhu-dhaat/index'
+ import { Route as ChallengesGrammarDefinitenessTanwinIndexRouteImport } from './routes/challenges/grammar/definiteness-tanwin/index'
++import { Route as ChallengesGrammarDefectiveDiptotesIndexRouteImport } from './routes/challenges/grammar/defective-diptotes/index'
++import { Route as ChallengesGrammarDaysMonthsIndexRouteImport } from './routes/challenges/grammar/days-months/index'
+ import { Route as ChallengesGrammarColorsIndexRouteImport } from './routes/challenges/grammar/colors/index'
+ import { Route as ChallengesGrammarCaseSystemOverviewIndexRouteImport } from './routes/challenges/grammar/case-system-overview/index'
++import { Route as ChallengesGrammarBrokenPluralIndexRouteImport } from './routes/challenges/grammar/broken-plural/index'
++import { Route as ChallengesGrammarBadalVocativeIndexRouteImport } from './routes/challenges/grammar/badal-vocative/index'
+ import { Route as ChallengesGrammarAttachedPronounsIndexRouteImport } from './routes/challenges/grammar/attached-pronouns/index'
++import { Route as ChallengesGrammarAdverbsOfPlaceIndexRouteImport } from './routes/challenges/grammar/adverbs-of-place/index'
+ import { Route as ChallengesGrammarAdjectivesAgreementIndexRouteImport } from './routes/challenges/grammar/adjectives-agreement/index'
++import { Route as ChallengesGrammarAakharUkhraaIndexRouteImport } from './routes/challenges/grammar/aakhar-ukhraa/index'
+ 
+ const AboutRoute = AboutRouteImport.update({
+   id: '/about',
+   path: '/about',
+   getParentRoute: () => rootRouteImport,
+ } as any)
+ const IndexRoute = IndexRouteImport.update({
+   id: '/',
+   path: '/',
+   getParentRoute: () => rootRouteImport,
+@@ -80,26 +94,56 @@ const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
+   id: '/api/auth/$',
+   path: '/api/auth/$',
+   getParentRoute: () => rootRouteImport,
+ } as any)
+ const ChallengesGrammarYesNoQuestionsIndexRoute =
+   ChallengesGrammarYesNoQuestionsIndexRouteImport.update({
+     id: '/challenges/grammar/yes-no-questions/',
+     path: '/challenges/grammar/yes-no-questions/',
+     getParentRoute: () => rootRouteImport,
+   } as any)
++const ChallengesGrammarTaajjubIndexRoute =
++  ChallengesGrammarTaajjubIndexRouteImport.update({
++    id: '/challenges/grammar/taajjub/',
++    path: '/challenges/grammar/taajjub/',
++    getParentRoute: () => rootRouteImport,
++  } as any)
++const ChallengesGrammarSoundMasculinePluralIndexRoute =
++  ChallengesGrammarSoundMasculinePluralIndexRouteImport.update({
++    id: '/challenges/grammar/sound-masculine-plural/',
++    path: '/challenges/grammar/sound-masculine-plural/',
++    getParentRoute: () => rootRouteImport,
++  } as any)
++const ChallengesGrammarSoundFemininePluralIndexRoute =
++  ChallengesGrammarSoundFemininePluralIndexRouteImport.update({
++    id: '/challenges/grammar/sound-feminine-plural/',
++    path: '/challenges/grammar/sound-feminine-plural/',
++    getParentRoute: () => rootRouteImport,
++  } as any)
++const ChallengesGrammarRelativePronounsIndexRoute =
++  ChallengesGrammarRelativePronounsIndexRouteImport.update({
++    id: '/challenges/grammar/relative-pronouns/',
++    path: '/challenges/grammar/relative-pronouns/',
++    getParentRoute: () => rootRouteImport,
++  } as any)
+ const ChallengesGrammarPrepositionsIndexRoute =
+   ChallengesGrammarPrepositionsIndexRouteImport.update({
+     id: '/challenges/grammar/prepositions/',
+     path: '/challenges/grammar/prepositions/',
+     getParentRoute: () => rootRouteImport,
+   } as any)
++const ChallengesGrammarNumbers110IndexRoute =
++  ChallengesGrammarNumbers110IndexRouteImport.update({
++    id: '/challenges/grammar/numbers-1-10/',
++    path: '/challenges/grammar/numbers-1-10/',
++    getParentRoute: () => rootRouteImport,
++  } as any)
+ const ChallengesGrammarMubtadaKhabarIndexRoute =
+   ChallengesGrammarMubtadaKhabarIndexRouteImport.update({
+     id: '/challenges/grammar/mubtada-khabar/',
+     path: '/challenges/grammar/mubtada-khabar/',
+     getParentRoute: () => rootRouteImport,
+   } as any)
+ const ChallengesGrammarMasculineFeminineIndexRoute =
+   ChallengesGrammarMasculineFeminineIndexRouteImport.update({
+     id: '/challenges/grammar/masculine-feminine/',
+     path: '/challenges/grammar/masculine-feminine/',
+@@ -128,228 +172,380 @@ const ChallengesGrammarIndependentPronounsIndexRoute =
+     id: '/challenges/grammar/independent-pronouns/',
+     path: '/challenges/grammar/independent-pronouns/',
+     getParentRoute: () => rootRouteImport,
+   } as any)
+ const ChallengesGrammarIdafahIndexRoute =
+   ChallengesGrammarIdafahIndexRouteImport.update({
+     id: '/challenges/grammar/idafah/',
+     path: '/challenges/grammar/idafah/',
+     getParentRoute: () => rootRouteImport,
+   } as any)
++const ChallengesGrammarFiveNounsIndexRoute =
++  ChallengesGrammarFiveNounsIndexRouteImport.update({
++    id: '/challenges/grammar/five-nouns/',
++    path: '/challenges/grammar/five-nouns/',
++    getParentRoute: () => rootRouteImport,
++  } as any)
++const ChallengesGrammarDualIndexRoute =
++  ChallengesGrammarDualIndexRouteImport.update({
++    id: '/challenges/grammar/dual/',
++    path: '/challenges/grammar/dual/',
++    getParentRoute: () => rootRouteImport,
++  } as any)
++const ChallengesGrammarDhuDhaatIndexRoute =
++  ChallengesGrammarDhuDhaatIndexRouteImport.update({
++    id: '/challenges/grammar/dhu-dhaat/',
++    path: '/challenges/grammar/dhu-dhaat/',
++    getParentRoute: () => rootRouteImport,
++  } as any)
+ const ChallengesGrammarDefinitenessTanwinIndexRoute =
+   ChallengesGrammarDefinitenessTanwinIndexRouteImport.update({
+     id: '/challenges/grammar/definiteness-tanwin/',
+     path: '/challenges/grammar/definiteness-tanwin/',
+     getParentRoute: () => rootRouteImport,
+   } as any)
++const ChallengesGrammarDefectiveDiptotesIndexRoute =
++  ChallengesGrammarDefectiveDiptotesIndexRouteImport.update({
++    id: '/challenges/grammar/defective-diptotes/',
++    path: '/challenges/grammar/defective-diptotes/',
++    getParentRoute: () => rootRouteImport,
++  } as any)
++const ChallengesGrammarDaysMonthsIndexRoute =
++  ChallengesGrammarDaysMonthsIndexRouteImport.update({
++    id: '/challenges/grammar/days-months/',
++    path: '/challenges/grammar/days-months/',
++    getParentRoute: () => rootRouteImport,
++  } as any)
+ const ChallengesGrammarColorsIndexRoute =
+   ChallengesGrammarColorsIndexRouteImport.update({
+     id: '/challenges/grammar/colors/',
+     path: '/challenges/grammar/colors/',
+     getParentRoute: () => rootRouteImport,
+   } as any)
+ const ChallengesGrammarCaseSystemOverviewIndexRoute =
+   ChallengesGrammarCaseSystemOverviewIndexRouteImport.update({
+     id: '/challenges/grammar/case-system-overview/',
+     path: '/challenges/grammar/case-system-overview/',
+     getParentRoute: () => rootRouteImport,
+   } as any)
++const ChallengesGrammarBrokenPluralIndexRoute =
++  ChallengesGrammarBrokenPluralIndexRouteImport.update({
++    id: '/challenges/grammar/broken-plural/',
++    path: '/challenges/grammar/broken-plural/',
++    getParentRoute: () => rootRouteImport,
++  } as any)
++const ChallengesGrammarBadalVocativeIndexRoute =
++  ChallengesGrammarBadalVocativeIndexRouteImport.update({
++    id: '/challenges/grammar/badal-vocative/',
++    path: '/challenges/grammar/badal-vocative/',
++    getParentRoute: () => rootRouteImport,
++  } as any)
+ const ChallengesGrammarAttachedPronounsIndexRoute =
+   ChallengesGrammarAttachedPronounsIndexRouteImport.update({
+     id: '/challenges/grammar/attached-pronouns/',
+     path: '/challenges/grammar/attached-pronouns/',
+     getParentRoute: () => rootRouteImport,
+   } as any)
++const ChallengesGrammarAdverbsOfPlaceIndexRoute =
++  ChallengesGrammarAdverbsOfPlaceIndexRouteImport.update({
++    id: '/challenges/grammar/adverbs-of-place/',
++    path: '/challenges/grammar/adverbs-of-place/',
++    getParentRoute: () => rootRouteImport,
++  } as any)
+ const ChallengesGrammarAdjectivesAgreementIndexRoute =
+   ChallengesGrammarAdjectivesAgreementIndexRouteImport.update({
+     id: '/challenges/grammar/adjectives-agreement/',
+     path: '/challenges/grammar/adjectives-agreement/',
+     getParentRoute: () => rootRouteImport,
+   } as any)
++const ChallengesGrammarAakharUkhraaIndexRoute =
++  ChallengesGrammarAakharUkhraaIndexRouteImport.update({
++    id: '/challenges/grammar/aakhar-ukhraa/',
++    path: '/challenges/grammar/aakhar-ukhraa/',
++    getParentRoute: () => rootRouteImport,
++  } as any)
+ 
+ export interface FileRoutesByFullPath {
+   '/': typeof IndexRoute
+   '/about': typeof AboutRoute
+   '/arabic-with-mufti-saim/': typeof ArabicWithMuftiSaimIndexRoute
+   '/challenges/': typeof ChallengesIndexRoute
+   '/cognates/': typeof CognatesIndexRoute
+   '/api/auth/$': typeof ApiAuthSplatRoute
+   '/api/publish/$': typeof ApiPublishSplatRoute
+   '/arabic-with-mufti-saim/lecture/$lectureId': typeof ArabicWithMuftiSaimLectureLectureIdRoute
+   '/challenges/vocabulary/': typeof ChallengesVocabularyIndexRoute
++  '/challenges/grammar/aakhar-ukhraa/': typeof ChallengesGrammarAakharUkhraaIndexRoute
+   '/challenges/grammar/adjectives-agreement/': typeof ChallengesGrammarAdjectivesAgreementIndexRoute
++  '/challenges/grammar/adverbs-of-place/': typeof ChallengesGrammarAdverbsOfPlaceIndexRoute
+   '/challenges/grammar/attached-pronouns/': typeof ChallengesGrammarAttachedPronounsIndexRoute
++  '/challenges/grammar/badal-vocative/': typeof ChallengesGrammarBadalVocativeIndexRoute
++  '/challenges/grammar/broken-plural/': typeof ChallengesGrammarBrokenPluralIndexRoute
+   '/challenges/grammar/case-system-overview/': typeof ChallengesGrammarCaseSystemOverviewIndexRoute
+   '/challenges/grammar/colors/': typeof ChallengesGrammarColorsIndexRoute
++  '/challenges/grammar/days-months/': typeof ChallengesGrammarDaysMonthsIndexRoute
++  '/challenges/grammar/defective-diptotes/': typeof ChallengesGrammarDefectiveDiptotesIndexRoute
+   '/challenges/grammar/definiteness-tanwin/': typeof ChallengesGrammarDefinitenessTanwinIndexRoute
++  '/challenges/grammar/dhu-dhaat/': typeof ChallengesGrammarDhuDhaatIndexRoute
++  '/challenges/grammar/dual/': typeof ChallengesGrammarDualIndexRoute
++  '/challenges/grammar/five-nouns/': typeof ChallengesGrammarFiveNounsIndexRoute
+   '/challenges/grammar/idafah/': typeof ChallengesGrammarIdafahIndexRoute
+   '/challenges/grammar/independent-pronouns/': typeof ChallengesGrammarIndependentPronounsIndexRoute
+   '/challenges/grammar/interrogatives-man-maa/': typeof ChallengesGrammarInterrogativesManMaaIndexRoute
+   '/challenges/grammar/ism-ishaara-far/': typeof ChallengesGrammarIsmIshaaraFarIndexRoute
+   '/challenges/grammar/ism-ishaara-near/': typeof ChallengesGrammarIsmIshaaraNearIndexRoute
+   '/challenges/grammar/masculine-feminine/': typeof ChallengesGrammarMasculineFeminineIndexRoute
+   '/challenges/grammar/mubtada-khabar/': typeof ChallengesGrammarMubtadaKhabarIndexRoute
++  '/challenges/grammar/numbers-1-10/': typeof ChallengesGrammarNumbers110IndexRoute
+   '/challenges/grammar/prepositions/': typeof ChallengesGrammarPrepositionsIndexRoute
++  '/challenges/grammar/relative-pronouns/': typeof ChallengesGrammarRelativePronounsIndexRoute
++  '/challenges/grammar/sound-feminine-plural/': typeof ChallengesGrammarSoundFemininePluralIndexRoute
++  '/challenges/grammar/sound-masculine-plural/': typeof ChallengesGrammarSoundMasculinePluralIndexRoute
++  '/challenges/grammar/taajjub/': typeof ChallengesGrammarTaajjubIndexRoute
+   '/challenges/grammar/yes-no-questions/': typeof ChallengesGrammarYesNoQuestionsIndexRoute
+ }
+ export interface FileRoutesByTo {
+   '/': typeof IndexRoute
+   '/about': typeof AboutRoute
+   '/arabic-with-mufti-saim': typeof ArabicWithMuftiSaimIndexRoute
+   '/challenges': typeof ChallengesIndexRoute
+   '/cognates': typeof CognatesIndexRoute
+   '/api/auth/$': typeof ApiAuthSplatRoute
+   '/api/publish/$': typeof ApiPublishSplatRoute
+   '/arabic-with-mufti-saim/lecture/$lectureId': typeof ArabicWithMuftiSaimLectureLectureIdRoute
+   '/challenges/vocabulary': typeof ChallengesVocabularyIndexRoute
++  '/challenges/grammar/aakhar-ukhraa': typeof ChallengesGrammarAakharUkhraaIndexRoute
+   '/challenges/grammar/adjectives-agreement': typeof ChallengesGrammarAdjectivesAgreementIndexRoute
++  '/challenges/grammar/adverbs-of-place': typeof ChallengesGrammarAdverbsOfPlaceIndexRoute
+   '/challenges/grammar/attached-pronouns': typeof ChallengesGrammarAttachedPronounsIndexRoute
++  '/challenges/grammar/badal-vocative': typeof ChallengesGrammarBadalVocativeIndexRoute
++  '/challenges/grammar/broken-plural': typeof ChallengesGrammarBrokenPluralIndexRoute
+   '/challenges/grammar/case-system-overview': typeof ChallengesGrammarCaseSystemOverviewIndexRoute
+   '/challenges/grammar/colors': typeof ChallengesGrammarColorsIndexRoute
++  '/challenges/grammar/days-months': typeof ChallengesGrammarDaysMonthsIndexRoute
++  '/challenges/grammar/defective-diptotes': typeof ChallengesGrammarDefectiveDiptotesIndexRoute
+   '/challenges/grammar/definiteness-tanwin': typeof ChallengesGrammarDefinitenessTanwinIndexRoute
++  '/challenges/grammar/dhu-dhaat': typeof ChallengesGrammarDhuDhaatIndexRoute
++  '/challenges/grammar/dual': typeof ChallengesGrammarDualIndexRoute
++  '/challenges/grammar/five-nouns': typeof ChallengesGrammarFiveNounsIndexRoute
+   '/challenges/grammar/idafah': typeof ChallengesGrammarIdafahIndexRoute
+   '/challenges/grammar/independent-pronouns': typeof ChallengesGrammarIndependentPronounsIndexRoute
+   '/challenges/grammar/interrogatives-man-maa': typeof ChallengesGrammarInterrogativesManMaaIndexRoute
+   '/challenges/grammar/ism-ishaara-far': typeof ChallengesGrammarIsmIshaaraFarIndexRoute
+   '/challenges/grammar/ism-ishaara-near': typeof ChallengesGrammarIsmIshaaraNearIndexRoute
+   '/challenges/grammar/masculine-feminine': typeof ChallengesGrammarMasculineFeminineIndexRoute
+   '/challenges/grammar/mubtada-khabar': typeof ChallengesGrammarMubtadaKhabarIndexRoute
++  '/challenges/grammar/numbers-1-10': typeof ChallengesGrammarNumbers110IndexRoute
+   '/challenges/grammar/prepositions': typeof ChallengesGrammarPrepositionsIndexRoute
++  '/challenges/grammar/relative-pronouns': typeof ChallengesGrammarRelativePronounsIndexRoute
++  '/challenges/grammar/sound-feminine-plural': typeof ChallengesGrammarSoundFemininePluralIndexRoute
++  '/challenges/grammar/sound-masculine-plural': typeof ChallengesGrammarSoundMasculinePluralIndexRoute
++  '/challenges/grammar/taajjub': typeof ChallengesGrammarTaajjubIndexRoute
+   '/challenges/grammar/yes-no-questions': typeof ChallengesGrammarYesNoQuestionsIndexRoute
+ }
+ export interface FileRoutesById {
+   __root__: typeof rootRouteImport
+   '/': typeof IndexRoute
+   '/about': typeof AboutRoute
+   '/arabic-with-mufti-saim/': typeof ArabicWithMuftiSaimIndexRoute
+   '/challenges/': typeof ChallengesIndexRoute
+   '/cognates/': typeof CognatesIndexRoute
+   '/api/auth/$': typeof ApiAuthSplatRoute
+   '/api/publish/$': typeof ApiPublishSplatRoute
+   '/arabic-with-mufti-saim/lecture/$lectureId': typeof ArabicWithMuftiSaimLectureLectureIdRoute
+   '/challenges/vocabulary/': typeof ChallengesVocabularyIndexRoute
++  '/challenges/grammar/aakhar-ukhraa/': typeof ChallengesGrammarAakharUkhraaIndexRoute
+   '/challenges/grammar/adjectives-agreement/': typeof ChallengesGrammarAdjectivesAgreementIndexRoute
++  '/challenges/grammar/adverbs-of-place/': typeof ChallengesGrammarAdverbsOfPlaceIndexRoute
+   '/challenges/grammar/attached-pronouns/': typeof ChallengesGrammarAttachedPronounsIndexRoute
++  '/challenges/grammar/badal-vocative/': typeof ChallengesGrammarBadalVocativeIndexRoute
++  '/challenges/grammar/broken-plural/': typeof ChallengesGrammarBrokenPluralIndexRoute
+   '/challenges/grammar/case-system-overview/': typeof ChallengesGrammarCaseSystemOverviewIndexRoute
+   '/challenges/grammar/colors/': typeof ChallengesGrammarColorsIndexRoute
++  '/challenges/grammar/days-months/': typeof ChallengesGrammarDaysMonthsIndexRoute
++  '/challenges/grammar/defective-diptotes/': typeof ChallengesGrammarDefectiveDiptotesIndexRoute
+   '/challenges/grammar/definiteness-tanwin/': typeof ChallengesGrammarDefinitenessTanwinIndexRoute
++  '/challenges/grammar/dhu-dhaat/': typeof ChallengesGrammarDhuDhaatIndexRoute
++  '/challenges/grammar/dual/': typeof ChallengesGrammarDualIndexRoute
++  '/challenges/grammar/five-nouns/': typeof ChallengesGrammarFiveNounsIndexRoute
+   '/challenges/grammar/idafah/': typeof ChallengesGrammarIdafahIndexRoute
+   '/challenges/grammar/independent-pronouns/': typeof ChallengesGrammarIndependentPronounsIndexRoute
+   '/challenges/grammar/interrogatives-man-maa/': typeof ChallengesGrammarInterrogativesManMaaIndexRoute
+   '/challenges/grammar/ism-ishaara-far/': typeof ChallengesGrammarIsmIshaaraFarIndexRoute
+   '/challenges/grammar/ism-ishaara-near/': typeof ChallengesGrammarIsmIshaaraNearIndexRoute
+   '/challenges/grammar/masculine-feminine/': typeof ChallengesGrammarMasculineFeminineIndexRoute
+   '/challenges/grammar/mubtada-khabar/': typeof ChallengesGrammarMubtadaKhabarIndexRoute
++  '/challenges/grammar/numbers-1-10/': typeof ChallengesGrammarNumbers110IndexRoute
+   '/challenges/grammar/prepositions/': typeof ChallengesGrammarPrepositionsIndexRoute
++  '/challenges/grammar/relative-pronouns/': typeof ChallengesGrammarRelativePronounsIndexRoute
++  '/challenges/grammar/sound-feminine-plural/': typeof ChallengesGrammarSoundFemininePluralIndexRoute
++  '/challenges/grammar/sound-masculine-plural/': typeof ChallengesGrammarSoundMasculinePluralIndexRoute
++  '/challenges/grammar/taajjub/': typeof ChallengesGrammarTaajjubIndexRoute
+   '/challenges/grammar/yes-no-questions/': typeof ChallengesGrammarYesNoQuestionsIndexRoute
+ }
+ export interface FileRouteTypes {
+   fileRoutesByFullPath: FileRoutesByFullPath
+   fullPaths:
+     | '/'
+     | '/about'
+     | '/arabic-with-mufti-saim/'
+     | '/challenges/'
+     | '/cognates/'
+     | '/api/auth/$'
+     | '/api/publish/$'
+     | '/arabic-with-mufti-saim/lecture/$lectureId'
+     | '/challenges/vocabulary/'
++    | '/challenges/grammar/aakhar-ukhraa/'
+     | '/challenges/grammar/adjectives-agreement/'
++    | '/challenges/grammar/adverbs-of-place/'
+     | '/challenges/grammar/attached-pronouns/'
++    | '/challenges/grammar/badal-vocative/'
++    | '/challenges/grammar/broken-plural/'
+     | '/challenges/grammar/case-system-overview/'
+     | '/challenges/grammar/colors/'
++    | '/challenges/grammar/days-months/'
++    | '/challenges/grammar/defective-diptotes/'
+     | '/challenges/grammar/definiteness-tanwin/'
++    | '/challenges/grammar/dhu-dhaat/'
++    | '/challenges/grammar/dual/'
++    | '/challenges/grammar/five-nouns/'
+     | '/challenges/grammar/idafah/'
+     | '/challenges/grammar/independent-pronouns/'
+     | '/challenges/grammar/interrogatives-man-maa/'
+     | '/challenges/grammar/ism-ishaara-far/'
+     | '/challenges/grammar/ism-ishaara-near/'
+     | '/challenges/grammar/masculine-feminine/'
+     | '/challenges/grammar/mubtada-khabar/'
++    | '/challenges/grammar/numbers-1-10/'
+     | '/challenges/grammar/prepositions/'
++    | '/challenges/grammar/relative-pronouns/'
++    | '/challenges/grammar/sound-feminine-plural/'
++    | '/challenges/grammar/sound-masculine-plural/'
++    | '/challenges/grammar/taajjub/'
+     | '/challenges/grammar/yes-no-questions/'
+   fileRoutesByTo: FileRoutesByTo
+   to:
+     | '/'
+     | '/about'
+     | '/arabic-with-mufti-saim'
+     | '/challenges'
+     | '/cognates'
+     | '/api/auth/$'
+     | '/api/publish/$'
+     | '/arabic-with-mufti-saim/lecture/$lectureId'
+     | '/challenges/vocabulary'
++    | '/challenges/grammar/aakhar-ukhraa'
+     | '/challenges/grammar/adjectives-agreement'
++    | '/challenges/grammar/adverbs-of-place'
+     | '/challenges/grammar/attached-pronouns'
++    | '/challenges/grammar/badal-vocative'
++    | '/challenges/grammar/broken-plural'
+     | '/challenges/grammar/case-system-overview'
+     | '/challenges/grammar/colors'
++    | '/challenges/grammar/days-months'
++    | '/challenges/grammar/defective-diptotes'
+     | '/challenges/grammar/definiteness-tanwin'
++    | '/challenges/grammar/dhu-dhaat'
++    | '/challenges/grammar/dual'
++    | '/challenges/grammar/five-nouns'
+     | '/challenges/grammar/idafah'
+     | '/challenges/grammar/independent-pronouns'
+     | '/challenges/grammar/interrogatives-man-maa'
+     | '/challenges/grammar/ism-ishaara-far'
+     | '/challenges/grammar/ism-ishaara-near'
+     | '/challenges/grammar/masculine-feminine'
+     | '/challenges/grammar/mubtada-khabar'
++    | '/challenges/grammar/numbers-1-10'
+     | '/challenges/grammar/prepositions'
++    | '/challenges/grammar/relative-pronouns'
++    | '/challenges/grammar/sound-feminine-plural'
++    | '/challenges/grammar/sound-masculine-plural'
++    | '/challenges/grammar/taajjub'
+     | '/challenges/grammar/yes-no-questions'
+   id:
+     | '__root__'
+     | '/'
+     | '/about'
+     | '/arabic-with-mufti-saim/'
+     | '/challenges/'
+     | '/cognates/'
+     | '/api/auth/$'
+     | '/api/publish/$'
+     | '/arabic-with-mufti-saim/lecture/$lectureId'
+     | '/challenges/vocabulary/'
++    | '/challenges/grammar/aakhar-ukhraa/'
+     | '/challenges/grammar/adjectives-agreement/'
++    | '/challenges/grammar/adverbs-of-place/'
+     | '/challenges/grammar/attached-pronouns/'
++    | '/challenges/grammar/badal-vocative/'
++    | '/challenges/grammar/broken-plural/'
+     | '/challenges/grammar/case-system-overview/'
+     | '/challenges/grammar/colors/'
++    | '/challenges/grammar/days-months/'
++    | '/challenges/grammar/defective-diptotes/'
+     | '/challenges/grammar/definiteness-tanwin/'
++    | '/challenges/grammar/dhu-dhaat/'
++    | '/challenges/grammar/dual/'
++    | '/challenges/grammar/five-nouns/'
+     | '/challenges/grammar/idafah/'
+     | '/challenges/grammar/independent-pronouns/'
+     | '/challenges/grammar/interrogatives-man-maa/'
+     | '/challenges/grammar/ism-ishaara-far/'
+     | '/challenges/grammar/ism-ishaara-near/'
+     | '/challenges/grammar/masculine-feminine/'
+     | '/challenges/grammar/mubtada-khabar/'
++    | '/challenges/grammar/numbers-1-10/'
+     | '/challenges/grammar/prepositions/'
++    | '/challenges/grammar/relative-pronouns/'
++    | '/challenges/grammar/sound-feminine-plural/'
++    | '/challenges/grammar/sound-masculine-plural/'
++    | '/challenges/grammar/taajjub/'
+     | '/challenges/grammar/yes-no-questions/'
+   fileRoutesById: FileRoutesById
+ }
+ export interface RootRouteChildren {
+   IndexRoute: typeof IndexRoute
+   AboutRoute: typeof AboutRoute
+   ArabicWithMuftiSaimIndexRoute: typeof ArabicWithMuftiSaimIndexRoute
+   ChallengesIndexRoute: typeof ChallengesIndexRoute
+   CognatesIndexRoute: typeof CognatesIndexRoute
+   ApiAuthSplatRoute: typeof ApiAuthSplatRoute
+   ApiPublishSplatRoute: typeof ApiPublishSplatRoute
+   ArabicWithMuftiSaimLectureLectureIdRoute: typeof ArabicWithMuftiSaimLectureLectureIdRoute
+   ChallengesVocabularyIndexRoute: typeof ChallengesVocabularyIndexRoute
++  ChallengesGrammarAakharUkhraaIndexRoute: typeof ChallengesGrammarAakharUkhraaIndexRoute
+   ChallengesGrammarAdjectivesAgreementIndexRoute: typeof ChallengesGrammarAdjectivesAgreementIndexRoute
++  ChallengesGrammarAdverbsOfPlaceIndexRoute: typeof ChallengesGrammarAdverbsOfPlaceIndexRoute
+   ChallengesGrammarAttachedPronounsIndexRoute: typeof ChallengesGrammarAttachedPronounsIndexRoute
++  ChallengesGrammarBadalVocativeIndexRoute: typeof ChallengesGrammarBadalVocativeIndexRoute
++  ChallengesGrammarBrokenPluralIndexRoute: typeof ChallengesGrammarBrokenPluralIndexRoute
+   ChallengesGrammarCaseSystemOverviewIndexRoute: typeof ChallengesGrammarCaseSystemOverviewIndexRoute
+   ChallengesGrammarColorsIndexRoute: typeof ChallengesGrammarColorsIndexRoute
++  ChallengesGrammarDaysMonthsIndexRoute: typeof ChallengesGrammarDaysMonthsIndexRoute
++  ChallengesGrammarDefectiveDiptotesIndexRoute: typeof ChallengesGrammarDefectiveDiptotesIndexRoute
+   ChallengesGrammarDefinitenessTanwinIndexRoute: typeof ChallengesGrammarDefinitenessTanwinIndexRoute
++  ChallengesGrammarDhuDhaatIndexRoute: typeof ChallengesGrammarDhuDhaatIndexRoute
++  ChallengesGrammarDualIndexRoute: typeof ChallengesGrammarDualIndexRoute
++  ChallengesGrammarFiveNounsIndexRoute: typeof ChallengesGrammarFiveNounsIndexRoute
+   ChallengesGrammarIdafahIndexRoute: typeof ChallengesGrammarIdafahIndexRoute
+   ChallengesGrammarIndependentPronounsIndexRoute: typeof ChallengesGrammarIndependentPronounsIndexRoute
+   ChallengesGrammarInterrogativesManMaaIndexRoute: typeof ChallengesGrammarInterrogativesManMaaIndexRoute
+   ChallengesGrammarIsmIshaaraFarIndexRoute: typeof ChallengesGrammarIsmIshaaraFarIndexRoute
+   ChallengesGrammarIsmIshaaraNearIndexRoute: typeof ChallengesGrammarIsmIshaaraNearIndexRoute
+   ChallengesGrammarMasculineFeminineIndexRoute: typeof ChallengesGrammarMasculineFeminineIndexRoute
+   ChallengesGrammarMubtadaKhabarIndexRoute: typeof ChallengesGrammarMubtadaKhabarIndexRoute
++  ChallengesGrammarNumbers110IndexRoute: typeof ChallengesGrammarNumbers110IndexRoute
+   ChallengesGrammarPrepositionsIndexRoute: typeof ChallengesGrammarPrepositionsIndexRoute
++  ChallengesGrammarRelativePronounsIndexRoute: typeof ChallengesGrammarRelativePronounsIndexRoute
++  ChallengesGrammarSoundFemininePluralIndexRoute: typeof ChallengesGrammarSoundFemininePluralIndexRoute
++  ChallengesGrammarSoundMasculinePluralIndexRoute: typeof ChallengesGrammarSoundMasculinePluralIndexRoute
++  ChallengesGrammarTaajjubIndexRoute: typeof ChallengesGrammarTaajjubIndexRoute
+   ChallengesGrammarYesNoQuestionsIndexRoute: typeof ChallengesGrammarYesNoQuestionsIndexRoute
+ }
+ 
+ declare module '@tanstack/react-router' {
+   interface FileRoutesByPath {
+     '/about': {
+       id: '/about'
+       path: '/about'
+       fullPath: '/about'
+       preLoaderRoute: typeof AboutRouteImport
+@@ -411,27 +607,62 @@ declare module '@tanstack/react-router' {
+       preLoaderRoute: typeof ApiAuthSplatRouteImport
+       parentRoute: typeof rootRouteImport
+     }
+     '/challenges/grammar/yes-no-questions/': {
+       id: '/challenges/grammar/yes-no-questions/'
+       path: '/challenges/grammar/yes-no-questions'
+       fullPath: '/challenges/grammar/yes-no-questions/'
+       preLoaderRoute: typeof ChallengesGrammarYesNoQuestionsIndexRouteImport
+       parentRoute: typeof rootRouteImport
+     }
++    '/challenges/grammar/taajjub/': {
++      id: '/challenges/grammar/taajjub/'
++      path: '/challenges/grammar/taajjub'
++      fullPath: '/challenges/grammar/taajjub/'
++      preLoaderRoute: typeof ChallengesGrammarTaajjubIndexRouteImport
++      parentRoute: typeof rootRouteImport
++    }
++    '/challenges/grammar/sound-masculine-plural/': {
++      id: '/challenges/grammar/sound-masculine-plural/'
++      path: '/challenges/grammar/sound-masculine-plural'
++      fullPath: '/challenges/grammar/sound-masculine-plural/'
++      preLoaderRoute: typeof ChallengesGrammarSoundMasculinePluralIndexRouteImport
++      parentRoute: typeof rootRouteImport
++    }
++    '/challenges/grammar/sound-feminine-plural/': {
++      id: '/challenges/grammar/sound-feminine-plural/'
++      path: '/challenges/grammar/sound-feminine-plural'
++      fullPath: '/challenges/grammar/sound-feminine-plural/'
++      preLoaderRoute: typeof ChallengesGrammarSoundFemininePluralIndexRouteImport
++      parentRoute: typeof rootRouteImport
++    }
++    '/challenges/grammar/relative-pronouns/': {
++      id: '/challenges/grammar/relative-pronouns/'
++      path: '/challenges/grammar/relative-pronouns'
++      fullPath: '/challenges/grammar/relative-pronouns/'
++      preLoaderRoute: typeof ChallengesGrammarRelativePronounsIndexRouteImport
++      parentRoute: typeof rootRouteImport
++    }
+     '/challenges/grammar/prepositions/': {
+       id: '/challenges/grammar/prepositions/'
+       path: '/challenges/grammar/prepositions'
+       fullPath: '/challenges/grammar/prepositions/'
+       preLoaderRoute: typeof ChallengesGrammarPrepositionsIndexRouteImport
+       parentRoute: typeof rootRouteImport
+     }
++    '/challenges/grammar/numbers-1-10/': {
++      id: '/challenges/grammar/numbers-1-10/'
++      path: '/challenges/grammar/numbers-1-10'
++      fullPath: '/challenges/grammar/numbers-1-10/'
++      preLoaderRoute: typeof ChallengesGrammarNumbers110IndexRouteImport
++      parentRoute: typeof rootRouteImport
++    }
+     '/challenges/grammar/mubtada-khabar/': {
+       id: '/challenges/grammar/mubtada-khabar/'
+       path: '/challenges/grammar/mubtada-khabar'
+       fullPath: '/challenges/grammar/mubtada-khabar/'
+       preLoaderRoute: typeof ChallengesGrammarMubtadaKhabarIndexRouteImport
+       parentRoute: typeof rootRouteImport
+     }
+     '/challenges/grammar/masculine-feminine/': {
+       id: '/challenges/grammar/masculine-feminine/'
+       path: '/challenges/grammar/masculine-feminine'
+@@ -467,93 +698,178 @@ declare module '@tanstack/react-router' {
+       preLoaderRoute: typeof ChallengesGrammarIndependentPronounsIndexRouteImport
+       parentRoute: typeof rootRouteImport
+     }
+     '/challenges/grammar/idafah/': {
+       id: '/challenges/grammar/idafah/'
+       path: '/challenges/grammar/idafah'
+       fullPath: '/challenges/grammar/idafah/'
+       preLoaderRoute: typeof ChallengesGrammarIdafahIndexRouteImport
+       parentRoute: typeof rootRouteImport
+     }
++    '/challenges/grammar/five-nouns/': {
++      id: '/challenges/grammar/five-nouns/'
++      path: '/challenges/grammar/five-nouns'
++      fullPath: '/challenges/grammar/five-nouns/'
++      preLoaderRoute: typeof ChallengesGrammarFiveNounsIndexRouteImport
++      parentRoute: typeof rootRouteImport
++    }
++    '/challenges/grammar/dual/': {
++      id: '/challenges/grammar/dual/'
++      path: '/challenges/grammar/dual'
++      fullPath: '/challenges/grammar/dual/'
++      preLoaderRoute: typeof ChallengesGrammarDualIndexRouteImport
++      parentRoute: typeof rootRouteImport
++    }
++    '/challenges/grammar/dhu-dhaat/': {
++      id: '/challenges/grammar/dhu-dhaat/'
++      path: '/challenges/grammar/dhu-dhaat'
++      fullPath: '/challenges/grammar/dhu-dhaat/'
++      preLoaderRoute: typeof ChallengesGrammarDhuDhaatIndexRouteImport
++      parentRoute: typeof rootRouteImport
++    }
+     '/challenges/grammar/definiteness-tanwin/': {
+       id: '/challenges/grammar/definiteness-tanwin/'
+       path: '/challenges/grammar/definiteness-tanwin'
+       fullPath: '/challenges/grammar/definiteness-tanwin/'
+       preLoaderRoute: typeof ChallengesGrammarDefinitenessTanwinIndexRouteImport
+       parentRoute: typeof rootRouteImport
+     }
++    '/challenges/grammar/defective-diptotes/': {
++      id: '/challenges/grammar/defective-diptotes/'
++      path: '/challenges/grammar/defective-diptotes'
++      fullPath: '/challenges/grammar/defective-diptotes/'
++      preLoaderRoute: typeof ChallengesGrammarDefectiveDiptotesIndexRouteImport
++      parentRoute: typeof rootRouteImport
++    }
++    '/challenges/grammar/days-months/': {
++      id: '/challenges/grammar/days-months/'
++      path: '/challenges/grammar/days-months'
++      fullPath: '/challenges/grammar/days-months/'
++      preLoaderRoute: typeof ChallengesGrammarDaysMonthsIndexRouteImport
++      parentRoute: typeof rootRouteImport
++    }
+     '/challenges/grammar/colors/': {
+       id: '/challenges/grammar/colors/'
+       path: '/challenges/grammar/colors'
+       fullPath: '/challenges/grammar/colors/'
+       preLoaderRoute: typeof ChallengesGrammarColorsIndexRouteImport
+       parentRoute: typeof rootRouteImport
+     }
+     '/challenges/grammar/case-system-overview/': {
+       id: '/challenges/grammar/case-system-overview/'
+       path: '/challenges/grammar/case-system-overview'
+       fullPath: '/challenges/grammar/case-system-overview/'
+       preLoaderRoute: typeof ChallengesGrammarCaseSystemOverviewIndexRouteImport
+       parentRoute: typeof rootRouteImport
+     }
++    '/challenges/grammar/broken-plural/': {
++      id: '/challenges/grammar/broken-plural/'
++      path: '/challenges/grammar/broken-plural'
++      fullPath: '/challenges/grammar/broken-plural/'
++      preLoaderRoute: typeof ChallengesGrammarBrokenPluralIndexRouteImport
++      parentRoute: typeof rootRouteImport
++    }
++    '/challenges/grammar/badal-vocative/': {
++      id: '/challenges/grammar/badal-vocative/'
++      path: '/challenges/grammar/badal-vocative'
++      fullPath: '/challenges/grammar/badal-vocative/'
++      preLoaderRoute: typeof ChallengesGrammarBadalVocativeIndexRouteImport
++      parentRoute: typeof rootRouteImport
++    }
+     '/challenges/grammar/attached-pronouns/': {
+       id: '/challenges/grammar/attached-pronouns/'
+       path: '/challenges/grammar/attached-pronouns'
+       fullPath: '/challenges/grammar/attached-pronouns/'
+       preLoaderRoute: typeof ChallengesGrammarAttachedPronounsIndexRouteImport
+       parentRoute: typeof rootRouteImport
+     }
++    '/challenges/grammar/adverbs-of-place/': {
++      id: '/challenges/grammar/adverbs-of-place/'
++      path: '/challenges/grammar/adverbs-of-place'
++      fullPath: '/challenges/grammar/adverbs-of-place/'
++      preLoaderRoute: typeof ChallengesGrammarAdverbsOfPlaceIndexRouteImport
++      parentRoute: typeof rootRouteImport
++    }
+     '/challenges/grammar/adjectives-agreement/': {
+       id: '/challenges/grammar/adjectives-agreement/'
+       path: '/challenges/grammar/adjectives-agreement'
+       fullPath: '/challenges/grammar/adjectives-agreement/'
+       preLoaderRoute: typeof ChallengesGrammarAdjectivesAgreementIndexRouteImport
+       parentRoute: typeof rootRouteImport
+     }
++    '/challenges/grammar/aakhar-ukhraa/': {
++      id: '/challenges/grammar/aakhar-ukhraa/'
++      path: '/challenges/grammar/aakhar-ukhraa'
++      fullPath: '/challenges/grammar/aakhar-ukhraa/'
++      preLoaderRoute: typeof ChallengesGrammarAakharUkhraaIndexRouteImport
++      parentRoute: typeof rootRouteImport
++    }
+   }
+ }
+ 
+ const rootRouteChildren: RootRouteChildren = {
+   IndexRoute: IndexRoute,
+   AboutRoute: AboutRoute,
+   ArabicWithMuftiSaimIndexRoute: ArabicWithMuftiSaimIndexRoute,
+   ChallengesIndexRoute: ChallengesIndexRoute,
+   CognatesIndexRoute: CognatesIndexRoute,
+   ApiAuthSplatRoute: ApiAuthSplatRoute,
+   ApiPublishSplatRoute: ApiPublishSplatRoute,
+   ArabicWithMuftiSaimLectureLectureIdRoute:
+     ArabicWithMuftiSaimLectureLectureIdRoute,
+   ChallengesVocabularyIndexRoute: ChallengesVocabularyIndexRoute,
++  ChallengesGrammarAakharUkhraaIndexRoute:
++    ChallengesGrammarAakharUkhraaIndexRoute,
+   ChallengesGrammarAdjectivesAgreementIndexRoute:
+     ChallengesGrammarAdjectivesAgreementIndexRoute,
++  ChallengesGrammarAdverbsOfPlaceIndexRoute:
++    ChallengesGrammarAdverbsOfPlaceIndexRoute,
+   ChallengesGrammarAttachedPronounsIndexRoute:
+     ChallengesGrammarAttachedPronounsIndexRoute,
++  ChallengesGrammarBadalVocativeIndexRoute:
++    ChallengesGrammarBadalVocativeIndexRoute,
++  ChallengesGrammarBrokenPluralIndexRoute:
++    ChallengesGrammarBrokenPluralIndexRoute,
+   ChallengesGrammarCaseSystemOverviewIndexRoute:
+     ChallengesGrammarCaseSystemOverviewIndexRoute,
+   ChallengesGrammarColorsIndexRoute: ChallengesGrammarColorsIndexRoute,
++  ChallengesGrammarDaysMonthsIndexRoute: ChallengesGrammarDaysMonthsIndexRoute,
++  ChallengesGrammarDefectiveDiptotesIndexRoute:
++    ChallengesGrammarDefectiveDiptotesIndexRoute,
+   ChallengesGrammarDefinitenessTanwinIndexRoute:
+     ChallengesGrammarDefinitenessTanwinIndexRoute,
++  ChallengesGrammarDhuDhaatIndexRoute: ChallengesGrammarDhuDhaatIndexRoute,
++  ChallengesGrammarDualIndexRoute: ChallengesGrammarDualIndexRoute,
++  ChallengesGrammarFiveNounsIndexRoute: ChallengesGrammarFiveNounsIndexRoute,
+   ChallengesGrammarIdafahIndexRoute: ChallengesGrammarIdafahIndexRoute,
+   ChallengesGrammarIndependentPronounsIndexRoute:
+     ChallengesGrammarIndependentPronounsIndexRoute,
+   ChallengesGrammarInterrogativesManMaaIndexRoute:
+     ChallengesGrammarInterrogativesManMaaIndexRoute,
+   ChallengesGrammarIsmIshaaraFarIndexRoute:
+     ChallengesGrammarIsmIshaaraFarIndexRoute,
+   ChallengesGrammarIsmIshaaraNearIndexRoute:
+     ChallengesGrammarIsmIshaaraNearIndexRoute,
+   ChallengesGrammarMasculineFeminineIndexRoute:
+     ChallengesGrammarMasculineFeminineIndexRoute,
+   ChallengesGrammarMubtadaKhabarIndexRoute:
+     ChallengesGrammarMubtadaKhabarIndexRoute,
++  ChallengesGrammarNumbers110IndexRoute: ChallengesGrammarNumbers110IndexRoute,
+   ChallengesGrammarPrepositionsIndexRoute:
+     ChallengesGrammarPrepositionsIndexRoute,
++  ChallengesGrammarRelativePronounsIndexRoute:
++    ChallengesGrammarRelativePronounsIndexRoute,
++  ChallengesGrammarSoundFemininePluralIndexRoute:
++    ChallengesGrammarSoundFemininePluralIndexRoute,
++  ChallengesGrammarSoundMasculinePluralIndexRoute:
++    ChallengesGrammarSoundMasculinePluralIndexRoute,
++  ChallengesGrammarTaajjubIndexRoute: ChallengesGrammarTaajjubIndexRoute,
+   ChallengesGrammarYesNoQuestionsIndexRoute:
+     ChallengesGrammarYesNoQuestionsIndexRoute,
+ }
+ export const routeTree = rootRouteImport
+   ._addFileChildren(rootRouteChildren)
+   ._addFileTypes<FileRouteTypes>()
+ 
+ import type { getRouter } from './router.tsx'
+ import type { createStart } from '@tanstack/react-start'
+ declare module '@tanstack/react-start' {
+diff --git a/src/routes/challenges/grammar/aakhar-ukhraa/index.tsx b/src/routes/challenges/grammar/aakhar-ukhraa/index.tsx
+new file mode 100644
+index 0000000..b4a8135
+--- /dev/null
++++ b/src/routes/challenges/grammar/aakhar-ukhraa/index.tsx
+@@ -0,0 +1,128 @@
++import { createFileRoute, Link } from '@tanstack/react-router'
++import { QuizCarousel } from '#/components/QuizCarousel'
++import type { StrictQuizItem } from '#/routes/challenges/-quiz-types'
++
++export const Route = createFileRoute('/challenges/grammar/aakhar-ukhraa/')({
++  head: () => ({ meta: [{ title: 'Aakhar / Ukhraa — Grammar — Tayseer' }] }),
++  component: TopicPage,
++})
++
++const quizItems: StrictQuizItem[] = [
++  {
++    q: 'ما صيغ "آخر" (another/other) بحسب الجنس والعدد؟',
++    options: [
++      'آخر (مذكر مفرد)، أخرى (مؤنث مفرد)، آخرون (مذكر جمع)، أخريات (مؤنث جمع)',
++      'آخر للجميع دون تغيير',
++      'أخرى للمذكر وآخر للمؤنث',
++      'آخرون للمفرد وآخر للجمع',
++    ],
++    correctIndex: 0,
++    a: '"آخر" للمفرد المذكر، و"أخرى" للمفردة المؤنثة، و"آخرون" لجمع المذكر، و"أخريات" لجمع المؤنث — وتتبع في ذلك قواعد النعت العادية.',
++  },
++  {
++    q: 'لماذا تُعد "آخر" (بصيغة المفرد المذكر النكرة) اسماً ممنوعاً من الصرف؟',
++    options: [
++      'لأنها على وزن "أفعل" وهو من أوزان الممنوع من الصرف',
++      'لأنها معرفة دائماً',
++      'لأنها جمع تكسير',
++      'لأنها اسم أعجمي',
++    ],
++    correctIndex: 0,
++    a: '"آخر" على وزن "أفعل"، وهذا الوزن من أوزان الممنوع من الصرف في حالة التنكير، فلا تقبل التنوين وتُجر بالفتحة نيابة عن الكسرة.',
++  },
++  {
++    q: 'قرأتُ كتاباً ___ (آخر، نصب)',
++    options: ['آخرَ', 'آخرٌ', 'آخرٍ', 'آخراً'],
++    correctIndex: 0,
++    a: '"آخرَ" هنا نعت منصوب تابع لـ"كتاباً"، ويُنصب بالفتحة كالمعتاد (تشابه المصروف في النصب رغم كونه ممنوعاً من الصرف).',
++  },
++  {
++    q: 'مررتُ بكتابٍ ___ (آخر، جر)',
++    options: ['آخرَ', 'آخرٍ', 'آخرُ', 'آخراً'],
++    correctIndex: 0,
++    a: '"آخرَ" هنا نعت مجرور تابع لـ"كتابٍ"، لكنه يُجر بالفتحة نيابة عن الكسرة وبلا تنوين لأنه ممنوع من الصرف في حالة التنكير.',
++  },
++  {
++    q: 'بم يُرفع "آخر" النكرة، وهل يُنوَّن؟',
++    options: [
++      'بالضمة، ولا يُنوَّن لأنه ممنوع من الصرف',
++      'بالضمة، ويُنوَّن كالمعتاد',
++      'بالفتحة نيابة عن الضمة',
++      'لا يجوز رفعه إطلاقاً',
++    ],
++    correctIndex: 0,
++    a: 'يُرفع "آخر" النكرة بالضمة الظاهرة (كسائر الأسماء الممنوعة من الصرف في الرفع) لكن دون تنوين: "هذا كتابٌ آخرُ".',
++  },
++  {
++    q: 'هل "أخرى" (المؤنث) ممنوعة من الصرف أيضاً؟',
++    options: [
++      'نعم، فهي على وزن "فُعلى" الممنوع من الصرف، وتُعرب بحركات مقدرة على الألف المقصورة',
++      'لا، فهي مصروفة تماماً وتُنوَّن',
++      'لا فرق بين آخر وأخرى في هذا الحكم',
++      'أخرى تُبنى دائماً على الفتح',
++    ],
++    correctIndex: 0,
++    a: '"أخرى" على وزن "فُعلى" وهو أيضاً من أوزان الممنوع من الصرف، لكنها تنتهي بألف مقصورة فتُعرب بحركات مقدرة على الألف في جميع الحالات لتعذر ظهورها، لا بحركات ظاهرة كـ"آخر".',
++  },
++  {
++    q: 'أيّ من هذه الجمل بها خطأ نحوي؟',
++    options: [
++      'عندي سيارةٌ أخرى',
++      'اشتريتُ قلماً آخراً',
++      'جاء طالبٌ آخرُ',
++      'قابلتُ طالباتٍ أخرياتٍ',
++    ],
++    correctIndex: 1,
++    a: '"آخر" ممنوعة من الصرف في حالة التنكير فلا تقبل التنوين: الصواب "اشتريتُ قلماً آخرَ" لا "آخراً" بالتنوين.',
++  },
++  {
++    q: 'هل "الآخر" (معرفة بأل) ممنوعة من الصرف أيضاً؟',
++    options: [
++      'لا، فمنع الصرف خاص بحالة التنكير فقط؛ إذا عُرِّف الاسم عاد إلى الإعراب بالحركات الظاهرة الكاملة بما فيها الكسرة',
++      'نعم، يبقى ممنوعاً من الصرف حتى بعد التعريف',
++      'يصبح مبنياً',
++      'لا يجوز تعريفه بأل إطلاقاً',
++    ],
++    correctIndex: 0,
++    a: 'منع الصرف يزول إذا عُرِّف الاسم بأل التعريف أو أُضيف، فيعود الاسم إلى الإعراب الكامل بالحركات الظاهرة: "مررتُ بالكتابِ الآخرِ" بالكسرة الكاملة، لا بالفتحة كما في حالة التنكير.',
++  },
++]
++
++function TopicPage() {
++  return (
++    <main className="flex-1">
++      <div className="border-b border-border bg-beige">
++        <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-12">
++          <Link
++            to="/challenges/grammar"
++            className="text-xs text-muted-foreground hover:text-brand mb-3 inline-block"
++          >
++            ← All grammar topics
++          </Link>
++          <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-3">
++            Topic 27 of 47
++          </p>
++          <h1 className="font-serif tracking-[-0.02em] text-3xl font-bold text-foreground leading-tight mb-3">
++            <span
++              dir="rtl"
++              lang="ar"
++              style={{ fontFamily: "'Noto Naskh Arabic', serif" }}
++              className="mr-2"
++            >
++              آخر / أخرى
++            </span>
++            — Another/Other
++          </h1>
++          <p className="text-muted-foreground text-base max-w-xl">
++            آخر (masc.), أخرى (fem.), آخرون/أخريات (plural) mean "another/other". This adjective
++            agrees like a normal adjective in gender and number, but the indefinite masculine
++            singular form آخر is itself a diptote (ممنوع من الصرف).
++          </p>
++        </div>
++      </div>
++      <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-8">
++        <QuizCarousel items={quizItems} />
++      </div>
++    </main>
++  )
++}
+diff --git a/src/routes/challenges/grammar/adverbs-of-place/index.tsx b/src/routes/challenges/grammar/adverbs-of-place/index.tsx
+new file mode 100644
+index 0000000..5996acc
+--- /dev/null
++++ b/src/routes/challenges/grammar/adverbs-of-place/index.tsx
+@@ -0,0 +1,113 @@
++import { createFileRoute, Link } from '@tanstack/react-router'
++import { QuizCarousel } from '#/components/QuizCarousel'
++import type { StrictQuizItem } from '#/routes/challenges/-quiz-types'
++
++export const Route = createFileRoute('/challenges/grammar/adverbs-of-place/')({
++  head: () => ({ meta: [{ title: 'Adverbs of Place — Grammar — Tayseer' }] }),
++  component: TopicPage,
++})
++
++const quizItems: StrictQuizItem[] = [
++  {
++    q: 'أيّ من هذه الكلمات ليست من ظروف المكان؟',
++    options: ['فوق', 'أمس', 'تحت', 'بين'],
++    correctIndex: 1,
++    a: '"أمس" ظرف زمان (يدل على وقت) لا ظرف مكان، بخلاف "فوق" و"تحت" و"بين" و"أمام" و"وراء" و"عند" و"يمين" و"يسار" التي تدل جميعها على مكان.',
++  },
++  {
++    q: 'ما إعراب ظرف المكان مثل "فوقَ" عندما يلي الفعل؟',
++    options: [
++      'منصوب على الظرفية المكانية',
++      'مرفوع على الفاعلية',
++      'مجرور بحرف جر مقدر',
++      'مبني على الفتح دائماً',
++    ],
++    correctIndex: 0,
++    a: 'ظرف المكان يُعرب منصوباً على الظرفية المكانية (نائباً عن "في")، مثل "الكتابُ فوقَ الطاولةِ" — "فوقَ" ظرف منصوب.',
++  },
++  {
++    q: 'الكتابُ ___ الطاولةِ (فوق)',
++    options: ['فوقَ', 'فوقُ', 'فوقٍ', 'فوقاً'],
++    correctIndex: 0,
++    a: '"فوقَ" ظرف مكان منصوب وهو مضاف، و"الطاولةِ" مضاف إليه مجرور: "فوقَ الطاولةِ".',
++  },
++  {
++    q: 'ما إعراب الاسم الذي يلي ظرف المكان، مثل "الطاولة" في "فوق الطاولة"؟',
++    options: ['مضاف إليه مجرور', 'مفعول به منصوب', 'فاعل مرفوع', 'نعت مرفوع'],
++    correctIndex: 0,
++    a: 'ظرف المكان يعمل عمل المضاف، فالاسم الذي يليه مضاف إليه مجرور دائماً، مثل "الطاولةِ" في "فوقَ الطاولةِ".',
++  },
++  {
++    q: 'القطُّ ___ السريرِ (تحت)',
++    options: ['تحتَ', 'تحتُ', 'تحتٍ', 'تحتاً'],
++    correctIndex: 0,
++    a: '"تحتَ" ظرف مكان منصوب مضاف، و"السريرِ" مضاف إليه مجرور: "تحتَ السريرِ".',
++  },
++  {
++    q: 'أيّ من هذه الجمل بها خطأ نحوي؟',
++    options: [
++      'جلستُ أمامَ المعلمِ',
++      'وقفَ وراءُ البابِ',
++      'المسجدُ بينَ البيتينِ',
++      'جلسَ عن يمينِ الإمامِ',
++    ],
++    correctIndex: 1,
++    a: '"وراء" ظرف مكان يجب أن يُنصب دائماً عند الدلالة على الظرفية: الصواب "وقفَ وراءَ البابِ" لا "وراءُ" بالرفع.',
++  },
++  {
++    q: 'المسجدُ ___ البيتِ والمدرسةِ (بين)',
++    options: ['بينَ', 'بينُ', 'بينٍ', 'بيناً'],
++    correctIndex: 0,
++    a: '"بينَ" ظرف مكان منصوب يفيد الوقوع وسط شيئين، وما بعده مضاف إليه مجرور: "بينَ البيتِ والمدرسةِ".',
++  },
++  {
++    q: 'كيف تتغير حركة "عند" عند إضافتها إلى ياء المتكلم كما في "عندي"؟',
++    options: [
++      'تبقى منصوبة اسمياً لكنها تتصل بضمير متصل "ي" فتصبح "عندي" بمعنى "I have / at my place"',
++      'تتحول إلى فعل',
++      'تصبح حرف جر مستقل',
++      'لا يجوز إضافتها إلى الضمائر إطلاقاً',
++    ],
++    correctIndex: 0,
++    a: '"عند" ظرف مكان يُضاف إلى الأسماء والضمائر كسائر ظروف المكان، فتتصل به ياء المتكلم (ضمير مبني في محل جر مضاف إليه) لتكوّن "عندي" وتفيد الملكية أو المصاحبة، مع بقاء "عند" نفسها منصوبة على الظرفية.',
++  },
++]
++
++function TopicPage() {
++  return (
++    <main className="flex-1">
++      <div className="border-b border-border bg-beige">
++        <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-12">
++          <Link
++            to="/challenges/grammar"
++            className="text-xs text-muted-foreground hover:text-brand mb-3 inline-block"
++          >
++            ← All grammar topics
++          </Link>
++          <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-3">
++            Topic 21 of 47
++          </p>
++          <h1 className="font-serif tracking-[-0.02em] text-3xl font-bold text-foreground leading-tight mb-3">
++            <span
++              dir="rtl"
++              lang="ar"
++              style={{ fontFamily: "'Noto Naskh Arabic', serif" }}
++              className="mr-2"
++            >
++              ظرف المكان
++            </span>
++            — Adverbs of Place
++          </h1>
++          <p className="text-muted-foreground text-base max-w-xl">
++            Place adverbs like فوق، تحت، أمام، وراء، بين، عند، يمين، يسار function as ظرف —
++            منصوب — when followed by a مضاف إليه: فوقَ الطاولةِ (فوق منصوب, الطاولة مجرور مضاف
++            إليه).
++          </p>
++        </div>
++      </div>
++      <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-8">
++        <QuizCarousel items={quizItems} />
++      </div>
++    </main>
++  )
++}
+diff --git a/src/routes/challenges/grammar/badal-vocative/index.tsx b/src/routes/challenges/grammar/badal-vocative/index.tsx
+new file mode 100644
+index 0000000..3b25fce
+--- /dev/null
++++ b/src/routes/challenges/grammar/badal-vocative/index.tsx
+@@ -0,0 +1,129 @@
++import { createFileRoute, Link } from '@tanstack/react-router'
++import { QuizCarousel } from '#/components/QuizCarousel'
++import type { StrictQuizItem } from '#/routes/challenges/-quiz-types'
++
++export const Route = createFileRoute('/challenges/grammar/badal-vocative/')({
++  head: () => ({ meta: [{ title: 'Apposition & Vocative — Grammar — Tayseer' }] }),
++  component: TopicPage,
++})
++
++const quizItems: StrictQuizItem[] = [
++  {
++    q: 'ما حكم إعراب البدل (التابع) بالنسبة إلى المبدل منه (متبوعه)؟',
++    options: [
++      'يأخذ إعراباً ثابتاً هو الرفع دائماً',
++      'يأخذ نفس إعراب المبدل منه أياً كان (رفعاً أو نصباً أو جراً)، لأنه في نية إحلاله محله',
++      'يُبنى دائماً بصرف النظر عن موقعه',
++      'يخالف المبدل منه في الإعراب دائماً',
++    ],
++    correctIndex: 1,
++    a: 'البدل تابع يشارك متبوعه (المبدل منه) في إعرابه نفسه أياً كان — رفعاً أو نصباً أو جراً — لأن البدل في نية إحلاله محل المبدل منه، مثل "جاء أخوك خالدٌ" (خالدٌ بدل مرفوع من أخوك).',
++  },
++  {
++    q: 'قابلتُ المعلمَ ___ (خالد، بدل منصوب)',
++    options: ['خالداً', 'خالدٌ', 'خالدٍ', 'خالدَ'],
++    correctIndex: 0,
++    a: '"خالداً" بدل منصوب من "المعلمَ" لأنه يتبعه في إعرابه، والمعلم منصوب مفعول به: "قابلتُ المعلمَ خالداً".',
++  },
++  {
++    q: 'كيف يُعرب المنادى العلم المفرد، مثل "محمد" في "يا محمدُ"؟',
++    options: [
++      'مبني على الضم في محل نصب',
++      'منصوب دائماً بالفتحة الظاهرة',
++      'مجرور بحرف النداء',
++      'مرفوع بالضمة الظاهرة إعراباً لا بناءً',
++    ],
++    correctIndex: 0,
++    a: 'العلم المفرد (غير المضاف) إذا نُودي يُبنى على الضم في محل نصب على النداء، مثل "يا محمدُ" — والضمة هنا علامة بناء لا إعراب.',
++  },
++  {
++    q: 'إذا ناديتَ رجلاً معيناً أمامك لا تعرف اسمه بقولك "يا رجلُ"، فما إعراب "رجل"؟',
++    options: [
++      'نكرة مقصودة، مبنية على الضم في محل نصب كالعلم المفرد تماماً',
++      'نكرة غير مقصودة، منصوبة بالفتحة',
++      'مضاف، منصوب',
++      'لا يجوز نداء النكرة إطلاقاً',
++    ],
++    correctIndex: 0,
++    a: '"رجل" هنا نكرة مقصودة (تقصد شخصاً بعينه حاضراً وإن لم تعرف اسمه)، وحكمها كحكم العلم المفرد: البناء على الضم في محل نصب: "يا رجلُ".',
++  },
++  {
++    q: 'كيف يُعرب المنادى إذا كان مضافاً، مثل "طالبَ" في "يا طالبَ العلمِ"؟',
++    options: [
++      'مبني على الضم كالعلم المفرد',
++      'منصوب بالفتحة الظاهرة لأنه مضاف',
++      'مجرور لأنه تلا حرف النداء',
++      'مرفوع دائماً',
++    ],
++    correctIndex: 1,
++    a: 'المنادى المضاف يُنصب بالفتحة الظاهرة لأنه لم يستوفِ شروط البناء (كونه مفرداً غير مضاف)، مثل "يا طالبَ العلمِ" حيث "طالبَ" منصوب وهو مضاف إلى "العلمِ" المجرور.',
++  },
++  {
++    q: 'إذا نادى المتكلم منادىً غير معيّن (أيّ فرد من الجنس دون تخصيص)، فما إعرابه؟',
++    options: [
++      'نكرة غير مقصودة، منصوبة بالفتحة',
++      'نكرة مقصودة، مبنية على الضم',
++      'علم مفرد، مبني على الضم',
++      'مضاف، منصوب',
++    ],
++    correctIndex: 0,
++    a: 'النداء العام لأي فرد من الجنس دون تعيين شخص بذاته يُسمى نكرة غير مقصودة، وحكمها النصب بالفتحة، بخلاف النكرة المقصودة التي تُبنى على الضم.',
++  },
++  {
++    q: 'أيّ من هذه الجمل بها خطأ نحوي؟',
++    options: [
++      'يا محمدُ أقبِلْ',
++      'يا طالبَ العلمِ اجتهدْ',
++      'يا عبدَ اللهِ استعِنْ بربك',
++      'يا محمداً أقبِلْ',
++    ],
++    correctIndex: 3,
++    a: '"محمد" علم مفرد غير مضاف، فيُبنى على الضم في محل نصب عند النداء: الصواب "يا محمدُ أقبِلْ" لا "يا محمداً" بالنصب.',
++  },
++  {
++    q: 'هذا أخوك ___ (خالد، بدل مرفوع)',
++    options: ['خالدٌ', 'خالداً', 'خالدٍ', 'خالدَ'],
++    correctIndex: 0,
++    a: '"خالدٌ" بدل مرفوع تابع لـ"أخوك" المرفوع، لأن البدل يطابق المبدل منه في إعرابه: "هذا أخوك خالدٌ".',
++  },
++]
++
++function TopicPage() {
++  return (
++    <main className="flex-1">
++      <div className="border-b border-border bg-beige">
++        <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-12">
++          <Link
++            to="/challenges/grammar"
++            className="text-xs text-muted-foreground hover:text-brand mb-3 inline-block"
++          >
++            ← All grammar topics
++          </Link>
++          <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-3">
++            Topic 28 of 47
++          </p>
++          <h1 className="font-serif tracking-[-0.02em] text-3xl font-bold text-foreground leading-tight mb-3">
++            <span
++              dir="rtl"
++              lang="ar"
++              style={{ fontFamily: "'Noto Naskh Arabic', serif" }}
++              className="mr-2"
++            >
++              البدل والنداء
++            </span>
++            — Apposition & Vocative
++          </h1>
++          <p className="text-muted-foreground text-base max-w-xl">
++            بدل renames or restates the preceding noun and takes the SAME case as it — not a
++            fixed case. يا + vocative noun: the noun is مبني على الضم if it's a definite single
++            name (يا محمدُ) or a specific-but-unnamed addressee (نكرة مقصودة), and منصوب if it's
++            an idāfah (يا طالبَ العلمِ) or a non-specific indefinite call.
++          </p>
++        </div>
++      </div>
++      <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-8">
++        <QuizCarousel items={quizItems} />
++      </div>
++    </main>
++  )
++}
+diff --git a/src/routes/challenges/grammar/broken-plural/index.tsx b/src/routes/challenges/grammar/broken-plural/index.tsx
+new file mode 100644
+index 0000000..00ecab7
+--- /dev/null
++++ b/src/routes/challenges/grammar/broken-plural/index.tsx
+@@ -0,0 +1,124 @@
++import { createFileRoute, Link } from '@tanstack/react-router'
++import { QuizCarousel } from '#/components/QuizCarousel'
++import type { StrictQuizItem } from '#/routes/challenges/-quiz-types'
++
++export const Route = createFileRoute('/challenges/grammar/broken-plural/')({
++  head: () => ({ meta: [{ title: 'Broken Plural — Grammar — Tayseer' }] }),
++  component: TopicPage,
++})
++
++const quizItems: StrictQuizItem[] = [
++  {
++    q: 'ما الذي يميّز جمع التكسير عن جمع المذكر السالم وجمع المؤنث السالم؟',
++    options: [
++      'يُصاغ بزيادة لاحقة ثابتة على آخر الكلمة',
++      'يتغيّر فيه البناء الداخلي للكلمة (الحركات والحروف) بدلاً من إضافة لاحقة ثابتة',
++      'يقتصر على الأسماء المؤنثة',
++      'لا يُستعمل إلا مع الصفات',
++    ],
++    correctIndex: 1,
++    a: 'جمع التكسير يُصاغ بتغيير الصيغة الداخلية للمفرد (تكسير بنيته) لا بزيادة لاحقة ثابتة، مثل: كتاب ← كُتُب، رجل ← رجال، بيت ← بيوت — بخلاف جمعي المذكر والمؤنث السالمين اللذين يحافظان على صورة المفرد ويزيدان عليها لاحقة.',
++  },
++  {
++    q: 'ما جمع كلمة "كتاب" جمع تكسير؟',
++    options: ['كُتُب', 'كتابونَ', 'كتاباتٌ', 'كتابانِ'],
++    correctIndex: 0,
++    a: 'جمع "كتاب" تكسيراً هو "كُتُب" على وزن فُعُل، وهذا نمط داخلي محفوظ سماعاً لا يُقاس عليه بقاعدة ثابتة.',
++  },
++  {
++    q: 'ما جمع كلمة "بيت" جمع تكسير؟',
++    options: ['بيوت', 'بيتاتٌ', 'بيتينَ', 'بيتانِ'],
++    correctIndex: 0,
++    a: 'جمع "بيت" تكسيراً هو "بيوت"، وهو نمط آخر من أنماط جمع التكسير المتعددة التي تُحفظ سماعاً عن العرب.',
++  },
++  {
++    q: 'هل يمكن اشتقاق وزن جمع التكسير لأيّ اسم بقاعدة صرفية واحدة ثابتة؟',
++    options: [
++      'نعم، هناك وزن واحد يُطبَّق دائماً',
++      'لا، فأوزان جمع التكسير كثيرة ومتنوعة وتُحفظ لكل اسم على حدة سماعاً',
++      'نعم، عن طريق إضافة "ون" فقط',
++      'لا، لأن جمع التكسير غير موجود أصلاً في العربية',
++    ],
++    correctIndex: 1,
++    a: 'لجمع التكسير أوزان صرفية كثيرة (مثل فُعُل وفِعال وأفعال وفُعول وغيرها)، ولا توجد قاعدة واحدة تحدد أيّ وزن يُستعمل لأيّ مفرد، لذا يجب حفظ جمع كل اسم سماعاً عن العرب.',
++  },
++  {
++    q: 'كيف تُعامَل الصفة مع جمع تكسير لغير العاقل، مثل "الكتب"؟',
++    options: [
++      'تُعامَل معاملة الجمع المذكر السالم (الكتبُ المجتهدونَ)',
++      'تُعامَل معاملة المفرد المؤنث، فيُقال "الكتبُ الجميلةُ" لا "الكتبُ الجميلاتُ"',
++      'تبقى الصفة مذكرة مفردة دائماً',
++      'لا يجوز نعت جمع التكسير بصفة إطلاقاً',
++    ],
++    correctIndex: 1,
++    a: 'جمع التكسير لغير العاقل يُعامَل معاملة المفردة المؤنثة في الإعراب والنعت، فيُقال "الكتبُ الجميلةُ" بصفة مفردة مؤنثة لا "الكتبُ الجميلاتُ".',
++  },
++  {
++    q: 'أيّ من هذه الجمل بها خطأ نحوي في نعت جمع تكسير لغير عاقل؟',
++    options: [
++      'قرأتُ الكتبَ الجميلةَ',
++      'رأيتُ البيوتَ الجميلاتِ',
++      'هذه الأقلامُ الجديدةُ',
++      'اشتريتُ الحقائبَ الثمينةَ',
++    ],
++    correctIndex: 1,
++    a: '"البيوت" جمع تكسير لغير العاقل، فيجب نعته بصفة مفردة مؤنثة منصوبة: الصواب "رأيتُ البيوتَ الجميلةَ" لا "الجميلاتِ" بصيغة جمع المؤنث السالم.',
++  },
++  {
++    q: 'ما جمع كلمة "رجل" جمع تكسير؟',
++    options: ['رجال', 'رجلونَ', 'رجلاتٌ', 'رجلانِ'],
++    correctIndex: 0,
++    a: 'جمع "رجل" تكسيراً هو "رجال" على وزن فِعال، وهذا الجمع يُعامَل معاملة العاقل المذكر في الإعراب لأنه جمع تكسير لعاقل.',
++  },
++  {
++    q: 'هل يُعامَل جمع التكسير للعاقل (مثل "رجال") أيضاً معاملة المفردة المؤنثة؟',
++    options: [
++      'نعم دائماً بلا استثناء',
++      'لا، فجمع التكسير للعاقل يُعامَل معاملة الجمع الحقيقي في الإعراب (رجالٌ مجتهدونَ)، والمعاملة المفردة المؤنثة خاصة بغير العاقل',
++      'لا فرق بين العاقل وغير العاقل في هذه القاعدة',
++      'جمع التكسير لا يُنعت مطلقاً',
++    ],
++    correctIndex: 1,
++    a: 'قاعدة معاملة جمع التكسير معاملة المفردة المؤنثة خاصة بغير العاقل، أما جمع التكسير للعاقل مثل "رجال" فيُنعت ويُخبر عنه بصيغة الجمع الحقيقي: "رجالٌ مجتهدونَ" لا "رجالٌ مجتهدةٌ".',
++  },
++]
++
++function TopicPage() {
++  return (
++    <main className="flex-1">
++      <div className="border-b border-border bg-beige">
++        <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-12">
++          <Link
++            to="/challenges/grammar"
++            className="text-xs text-muted-foreground hover:text-brand mb-3 inline-block"
++          >
++            ← All grammar topics
++          </Link>
++          <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-3">
++            Topic 18 of 47
++          </p>
++          <h1 className="font-serif tracking-[-0.02em] text-3xl font-bold text-foreground leading-tight mb-3">
++            <span
++              dir="rtl"
++              lang="ar"
++              style={{ fontFamily: "'Noto Naskh Arabic', serif" }}
++              className="mr-2"
++            >
++              جمع التكسير
++            </span>
++            — Broken Plural
++          </h1>
++          <p className="text-muted-foreground text-base max-w-xl">
++            Broken plural (<span className="font-medium text-foreground">جمع التكسير</span>)
++            changes a noun's internal vowel pattern instead of adding a suffix — كتاب becomes كُتُب,
++            رجل becomes رجال, بيت becomes بيوت. The patterns must be memorized noun by noun. A
++            non-human broken plural is grammatically treated as a feminine singular for agreement.
++          </p>
++        </div>
++      </div>
++      <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-8">
++        <QuizCarousel items={quizItems} />
++      </div>
++    </main>
++  )
++}
+diff --git a/src/routes/challenges/grammar/days-months/index.tsx b/src/routes/challenges/grammar/days-months/index.tsx
+new file mode 100644
+index 0000000..65fb4f5
+--- /dev/null
++++ b/src/routes/challenges/grammar/days-months/index.tsx
+@@ -0,0 +1,129 @@
++import { createFileRoute, Link } from '@tanstack/react-router'
++import { QuizCarousel } from '#/components/QuizCarousel'
++import type { StrictQuizItem } from '#/routes/challenges/-quiz-types'
++
++export const Route = createFileRoute('/challenges/grammar/days-months/')({
++  head: () => ({ meta: [{ title: 'Days & Months — Grammar — Tayseer' }] }),
++  component: TopicPage,
++})
++
++const quizItems: StrictQuizItem[] = [
++  {
++    q: 'ما الأيام السبعة بالعربية بالترتيب ابتداءً من الأحد؟',
++    options: [
++      'الأحد، الاثنين، الثلاثاء، الأربعاء، الخميس، الجمعة، السبت',
++      'السبت، الجمعة، الخميس، الأربعاء، الثلاثاء، الاثنين، الأحد',
++      'الاثنين، الثلاثاء، الأربعاء، الخميس، الجمعة، السبت، الأحد',
++      'الجمعة، السبت، الأحد، الاثنين، الثلاثاء، الأربعاء، الخميس',
++    ],
++    correctIndex: 0,
++    a: 'الأيام السبعة بالعربية بالترتيب: الأحد، الاثنين، الثلاثاء، الأربعاء، الخميس، الجمعة، السبت.',
++  },
++  {
++    q: 'كيف يُعرب تركيب "يوم الأحد" نحوياً؟',
++    options: [
++      'تركيب إضافي: "يوم" مضاف و"الأحد" مضاف إليه مجرور',
++      '"يوم" نعت و"الأحد" منعوت',
++      '"يوم" مبتدأ و"الأحد" خبر',
++      'لا علاقة نحوية بين الكلمتين',
++    ],
++    correctIndex: 0,
++    a: '"يوم الأحد" تركيب إضافي: "يوم" مضاف لا يأخذ تنويناً ولا أل، و"الأحد" مضاف إليه مجرور، تماماً كأي تركيب إضافي آخر.',
++  },
++  {
++    q: 'سأسافرُ يومَ ___ (الاثنين، مضاف إليه)',
++    options: ['الاثنينِ', 'الاثنانِ', 'الاثنينُ', 'الاثنون'],
++    correctIndex: 0,
++    a: '"يومَ" هنا ظرف منصوب مضاف، و"الاثنين" مضاف إليه مجرور، ويُجر بالكسرة الظاهرة على النون: "يومَ الاثنينِ".',
++  },
++  {
++    q: 'كيف نقول "اليوم هو يوم الجمعة" بأقصر صياغة صحيحة؟',
++    options: [
++      'اليومُ يومُ الجمعةِ',
++      'اليومَ يومِ الجمعةِ',
++      'اليومُ يومَ الجمعةَ',
++      'الجمعةُ يومَ اليومِ',
++    ],
++    correctIndex: 0,
++    a: '"اليومُ" مبتدأ مرفوع، و"يومُ الجمعةِ" خبر مرفوع وهو تركيب إضافي ("يوم" مضاف مرفوع و"الجمعة" مضاف إليه مجرور): "اليومُ يومُ الجمعةِ".',
++  },
++  {
++    q: 'أيّ من هذه الجمل بها خطأ نحوي؟',
++    options: [
++      'قابلتُه يومَ الخميسِ',
++      'قابلتُه يومُ الخميسِ',
++      'الاجتماعُ يومَ الثلاثاءِ',
++      'سأزورُك يومَ السبتِ',
++    ],
++    correctIndex: 1,
++    a: '"يوم" هنا ظرف زمان منصوب يدل على وقت وقوع الفعل، فالصواب نصبه "يومَ الخميسِ" لا رفعه "يومُ الخميسِ".',
++  },
++  {
++    q: 'كيف نقول "بعد ثلاثةِ أيامٍ" مطبّقين قاعدة مخالفة الجنس مع العدد ٣؟',
++    options: ['بعد ثلاثةِ أيامٍ', 'بعد ثلاثِ أيامٍ', 'بعد ثلاثةِ يومٍ', 'بعد ثلاثُ يومِ'],
++    correctIndex: 0,
++    a: '"أيام" جمع مذكر ("يوم" مذكر)، فيوافق العدد ٣ هذا الأصل بأخذ تاء التأنيث طبقاً لمخالفة الجنس: "ثلاثةُ أيامٍ"، والمعدود "أيامٍ" مجرور مضاف إليه.',
++  },
++  {
++    q: 'كيف يُعرب "رمضانَ" في "صُمْنا شهرَ رمضانَ"؟',
++    options: [
++      'مضاف إليه مجرور',
++      'مضاف إليه منصوب',
++      'مفعول به ثانٍ',
++      'بدل مرفوع',
++    ],
++    correctIndex: 0,
++    a: '"رمضانَ" مضاف إليه، وحكمه الإعرابي الجر دائماً كسائر المضاف إليه، وإن كانت علامة جره هنا الفتحة نيابة عن الكسرة لأنه اسم ممنوع من الصرف (سيأتي تفصيل ذلك في درس الممنوع من الصرف).',
++  },
++  {
++    q: 'لماذا لا يجوز أن نقول "يوم الأحدَ" بنصب "الأحد"؟',
++    options: [
++      'لأن "الأحد" مضاف إليه ويجب أن يكون مجروراً دائماً بصرف النظر عن إعراب المضاف',
++      'لأن "الأحد" ممنوع من الصرف',
++      'لأن "يوم" لا يجوز إضافته',
++      'هذا صحيح ويجوز نصبه',
++    ],
++    correctIndex: 0,
++    a: '"الأحد" مضاف إليه في هذا التركيب، والمضاف إليه مجرور دائماً بصرف النظر عن موقع المضاف الإعرابي (مرفوعاً كان أو منصوباً أو مجروراً)، فلا يجوز نصبه أو رفعه بحال.',
++  },
++]
++
++function TopicPage() {
++  return (
++    <main className="flex-1">
++      <div className="border-b border-border bg-beige">
++        <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-12">
++          <Link
++            to="/challenges/grammar"
++            className="text-xs text-muted-foreground hover:text-brand mb-3 inline-block"
++          >
++            ← All grammar topics
++          </Link>
++          <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-3">
++            Topic 20 of 47
++          </p>
++          <h1 className="font-serif tracking-[-0.02em] text-3xl font-bold text-foreground leading-tight mb-3">
++            <span
++              dir="rtl"
++              lang="ar"
++              style={{ fontFamily: "'Noto Naskh Arabic', serif" }}
++              className="mr-2"
++            >
++              الأيام والشهور
++            </span>
++            — Days & Months
++          </h1>
++          <p className="text-muted-foreground text-base max-w-xl">
++            The days of the week (الأحد، الاثنين، الثلاثاء، الأربعاء، الخميس، الجمعة، السبت) and
++            the months of the year combine with idāfah to express dates — يوم الأحد, "Sunday"
++            (literally "the day of al-Aḥad"). This topic applies your idāfah and number knowledge
++            to build simple date expressions.
++          </p>
++        </div>
++      </div>
++      <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-8">
++        <QuizCarousel items={quizItems} />
++      </div>
++    </main>
++  )
++}
+diff --git a/src/routes/challenges/grammar/defective-diptotes/index.tsx b/src/routes/challenges/grammar/defective-diptotes/index.tsx
+new file mode 100644
+index 0000000..14ac2dd
+--- /dev/null
++++ b/src/routes/challenges/grammar/defective-diptotes/index.tsx
+@@ -0,0 +1,134 @@
++import { createFileRoute, Link } from '@tanstack/react-router'
++import { QuizCarousel } from '#/components/QuizCarousel'
++import type { StrictQuizItem } from '#/routes/challenges/-quiz-types'
++
++export const Route = createFileRoute('/challenges/grammar/defective-diptotes/')({
++  head: () => ({ meta: [{ title: 'Defective Nouns & Diptotes — Grammar — Tayseer' }] }),
++  component: TopicPage,
++})
++
++const quizItems: StrictQuizItem[] = [
++  {
++    q: 'ما هو الاسم المنقوص؟',
++    options: [
++      'اسم ينتهي بياء لازمة مكسور ما قبلها، مثل "القاضي"',
++      'اسم ينتهي بألف، مثل "الفتى"',
++      'اسم ينتهي بواو، مثل "الدلو"',
++      'اسم لا ينصرف',
++    ],
++    correctIndex: 0,
++    a: 'الاسم المنقوص اسم معرب ينتهي بياء لازمة مكسور ما قبلها، مثل "القاضي" و"الداعي" و"الساعي".',
++  },
++  {
++    q: 'ماذا يحدث لياء الاسم المنقوص النكرة في حالتي الرفع والجر؟',
++    options: [
++      'تبقى ثابتة وتُنوَّن',
++      'تُحذف وتبقى الكسرة دالة عليها مع تنوين العوض، مثل "قاضٍ"',
++      'تتحول إلى ألف',
++      'تتحول إلى واو',
++    ],
++    correctIndex: 1,
++    a: 'في حالتي الرفع والجر، إذا كان الاسم المنقوص نكرة، تُحذف ياؤه لفظاً وتبقى الكسرة (مع تنوين العوض) دالة عليها: "قاضٍ" لا "قاضيٌ" ولا "قاضيٍ".',
++  },
++  {
++    q: 'ماذا يحدث لياء الاسم المنقوص النكرة في حالة النصب؟',
++    options: [
++      'تُحذف كما في الرفع والجر',
++      'تثبت الياء وتُنوَّن بالفتح، مثل "رأيتُ قاضياً"',
++      'تتحول إلى واو',
++      'لا يجوز نصب الاسم المنقوص',
++    ],
++    correctIndex: 1,
++    a: 'في حالة النصب تثبت ياء الاسم المنقوص النكرة ويظهر عليها التنوين بالفتح: "رأيتُ قاضياً" — بخلاف الرفع والجر حيث تُحذف الياء.',
++  },
++  {
++    q: 'ماذا يحدث لياء الاسم المنقوص إذا كان معرفاً، مثل "القاضي"؟',
++    options: [
++      'تبقى ثابتة في جميع الحالات وتُقدَّر عليها الحركات',
++      'تُحذف دائماً',
++      'تتحول إلى ألف دائماً',
++      'يصبح الاسم ممنوعاً من الصرف',
++    ],
++    correctIndex: 0,
++    a: 'إذا كان الاسم المنقوص معرفاً (كـ"القاضي")، تثبت ياؤه في جميع حالات الإعراب وتُقدَّر عليها الضمة والكسرة للثقل، بينما تظهر الفتحة في النصب: "جاء القاضي"، "رأيتُ القاضيَ"، "سلّمتُ على القاضي".',
++  },
++  {
++    q: 'ما علامة الاسم الممنوع من الصرف في حالتي الرفع والنصب؟',
++    options: [
++      'نفس علامات الاسم المصروف تماماً بما فيها التنوين',
++      'يُرفع بالضمة ويُنصب بالفتحة كالمصروف، لكن بلا تنوين',
++      'يُجر بالفتحة في الرفع والنصب معاً',
++      'يُبنى في جميع حالاته',
++    ],
++    correctIndex: 1,
++    a: 'الممنوع من الصرف يُرفع بالضمة ويُنصب بالفتحة كالاسم العادي، لكنه لا يقبل التنوين أبداً؛ والفارق الأبرز يظهر في الجر حيث يُجر بالفتحة نيابة عن الكسرة إذا كان نكرة.',
++  },
++  {
++    q: 'كيف يُجر الاسم الممنوع من الصرف إذا كان نكرة (غير معرف بأل ولا مضاف)؟',
++    options: ['بالكسرة كالمعتاد', 'بالفتحة نيابة عن الكسرة، وبلا تنوين', 'بالضمة', 'لا يجوز جره إطلاقاً'],
++    correctIndex: 1,
++    a: 'الاسم الممنوع من الصرف (إذا لم يكن معرفاً بأل ولا مضافاً) يُجر بالفتحة نيابة عن الكسرة وبلا تنوين، مثل "صلّيتُ في مساجدَ كثيرةٍ" — بخلاف الاسم المصروف الذي يُجر بالكسرة المنوَّنة.',
++  },
++  {
++    q: 'أيّ الأسماء التالية ممنوع من الصرف؟',
++    options: [
++      '"أحمر" (وزن أفعل للألوان) و"مساجد" (وزن مفاعل جمعاً)',
++      '"كتاب" و"قلم"',
++      '"رجل" و"بيت"',
++      '"طالب" و"معلم"',
++    ],
++    correctIndex: 0,
++    a: 'من أبرز أسباب المنع من الصرف: وزن "أفعل" في الألوان وأفعل التفضيل (أحمر، أفضل)، وصيغ منتهى الجموع على وزن مفاعل/مفاعيل (مساجد، مصابيح)، وبعض الأعلام (كأحمد وإبراهيم ومعظم الأسماء الأعجمية).',
++  },
++  {
++    q: 'أيّ من هذه الجمل بها خطأ نحوي؟',
++    options: [
++      'صلّيتُ في مساجدَ جميلةٍ',
++      'صلّيتُ في مساجدٍ جميلةٍ',
++      'قابلتُ رجلاً أفضلَ مني',
++      'مررتُ بمصابيحَ مضيئةٍ',
++    ],
++    correctIndex: 1,
++    a: '"مساجد" اسم ممنوع من الصرف (على وزن منتهى الجموع مفاعل)، فلا يقبل التنوين ويُجر بالفتحة: الصواب "صلّيتُ في مساجدَ جميلةٍ" لا "مساجدٍ" بالتنوين والكسر.',
++  },
++]
++
++function TopicPage() {
++  return (
++    <main className="flex-1">
++      <div className="border-b border-border bg-beige">
++        <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-12">
++          <Link
++            to="/challenges/grammar"
++            className="text-xs text-muted-foreground hover:text-brand mb-3 inline-block"
++          >
++            ← All grammar topics
++          </Link>
++          <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-3">
++            Topic 26 of 47
++          </p>
++          <h1 className="font-serif tracking-[-0.02em] text-3xl font-bold text-foreground leading-tight mb-3">
++            <span
++              dir="rtl"
++              lang="ar"
++              style={{ fontFamily: "'Noto Naskh Arabic', serif" }}
++              className="mr-2"
++            >
++              المنقوص والممنوع من الصرف
++            </span>
++            — Defective Nouns & Diptotes
++          </h1>
++          <p className="text-muted-foreground text-base max-w-xl">
++            الاسم المنقوص ends in ي preceded by kasra (القاضي) — it drops the ي in indefinite
++            رفع/جر (قاضٍ) but keeps it in نصب (قاضياً) and always when definite. الممنوع من الصرف
++            takes no تنوين and fatha instead of kasra in indefinite جر — categories: أفعل-pattern
++            colors/elatives, certain proper names, and plurals on مفاعل/مفاعيل.
++          </p>
++        </div>
++      </div>
++      <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-8">
++        <QuizCarousel items={quizItems} />
++      </div>
++    </main>
++  )
++}
+diff --git a/src/routes/challenges/grammar/dhu-dhaat/index.tsx b/src/routes/challenges/grammar/dhu-dhaat/index.tsx
+new file mode 100644
+index 0000000..2ceb6fa
+--- /dev/null
++++ b/src/routes/challenges/grammar/dhu-dhaat/index.tsx
+@@ -0,0 +1,117 @@
++import { createFileRoute, Link } from '@tanstack/react-router'
++import { QuizCarousel } from '#/components/QuizCarousel'
++import type { StrictQuizItem } from '#/routes/challenges/-quiz-types'
++
++export const Route = createFileRoute('/challenges/grammar/dhu-dhaat/')({
++  head: () => ({ meta: [{ title: 'Dhū / Dhāt — Grammar — Tayseer' }] }),
++  component: TopicPage,
++})
++
++const quizItems: StrictQuizItem[] = [
++  {
++    q: 'ما المعنى المشترك لـ"ذو" و"ذات" و"ذوو" و"ذوات"؟',
++    options: ['"هذا/هذه" الإشارية', '"صاحب/صاحبة" أي possessor of', 'اسم موصول', 'حرف عطف'],
++    correctIndex: 1,
++    a: 'هذه الألفاظ الأربعة كلها بمعنى "صاحب" أو "صاحبة" (possessor/owner of)، وتختلف بحسب المذكر والمؤنث والمفرد والجمع.',
++  },
++  {
++    q: 'أيّ الترتيب صحيح: (مفرد مذكر، مفرد مؤنث، جمع مذكر، جمع مؤنث)؟',
++    options: [
++      'ذو، ذات، ذوو، ذوات',
++      'ذو، ذوات، ذات، ذوو',
++      'ذات، ذو، ذوات، ذوو',
++      'ذو، ذات، ذوات، ذوو',
++    ],
++    correctIndex: 0,
++    a: '"ذو" للمفرد المذكر، و"ذات" للمفردة المؤنثة، و"ذوو" لجمع المذكر، و"ذوات" لجمع المؤنث — جميعها بمعنى صاحب/صاحبة.',
++  },
++  {
++    q: 'هل يجوز أن تقف "ذو" وحدها دون مضاف إليه بعدها؟',
++    options: [
++      'نعم، تُستعمل مستقلة كأي اسم',
++      'لا، فهي ملازمة للإضافة دائماً إلى اسم جنس ظاهر يدل على الصفة المملوكة',
++      'نعم إذا سبقتها أل التعريف',
++      'لا يوجد فرق بينها وبين "هذا"',
++    ],
++    correctIndex: 1,
++    a: '"ذو" وأخواتها لا تقع إلا مضافة إلى اسم جنس ظاهر بعدها يبيّن الصفة أو الشيء المملوك، فلا يجوز أن تقف مستقلة بذاتها دون مضاف إليه.',
++  },
++  {
++    q: 'هذا رجلٌ ___ مالٍ (صاحب، رفع)',
++    options: ['ذو', 'ذا', 'ذي', 'ذات'],
++    correctIndex: 0,
++    a: '"ذو" هنا نعت مرفوع تابع لـ"رجلٌ"، ويُرفع بالواو كأحد الأسماء الخمسة: "رجلٌ ذو مالٍ".',
++  },
++  {
++    q: 'رأيتُ رجلاً ___ مالٍ (صاحب، نصب)',
++    options: ['ذا', 'ذو', 'ذي', 'ذات'],
++    correctIndex: 0,
++    a: '"ذا" هنا نعت منصوب تابع لـ"رجلاً"، ويُنصب بالألف كأحد الأسماء الخمسة: "رأيتُ رجلاً ذا مالٍ".',
++  },
++  {
++    q: 'هذه امرأةٌ ___ علمٍ (صاحبة)',
++    options: ['ذاتُ', 'ذو', 'ذا', 'ذي'],
++    correctIndex: 0,
++    a: '"ذات" صيغة المؤنث المفرد بمعنى "صاحبة"، وتُعرب بالحركات الظاهرة لا بالحروف: "امرأةٌ ذاتُ علمٍ" (ذاتُ نعت مرفوع بالضمة).',
++  },
++  {
++    q: 'أيّ من هذه الجمل بها خطأ نحوي؟',
++    options: [
++      'جاء رجلٌ ذو خُلقٍ',
++      'هذا ذو',
++      'هؤلاء رجالٌ ذوو مالٍ',
++      'هؤلاء نساءٌ ذواتُ علمٍ',
++    ],
++    correctIndex: 1,
++    a: '"ذو" لا تقع إلا مضافة إلى اسم بعدها؛ استعمالها وحدها كما في "هذا ذو" خطأ لأنها بلا مضاف إليه، والصواب أن تُتبع دائماً باسم يبيّن الصفة المملوكة، مثل "هذا ذو مالٍ".',
++  },
++  {
++    q: 'متى نستعمل "ذوو" ومتى نستعمل "ذوات"؟',
++    options: [
++      'ذوو لجمع المذكر العاقل، وذوات لجمع المؤنث، وكلاهما ملازم للإضافة',
++      'ذوو للمفرد، وذوات للجمع فقط',
++      'لا فرق بينهما ويُستعملان تبادلياً',
++      'ذوو للمؤنث وذوات للمذكر',
++    ],
++    correctIndex: 0,
++    a: '"ذوو" لجمع المذكر (رفعاً؛ وتصير "ذوي" نصباً وجراً كجمع المذكر السالم)، و"ذوات" لجمع المؤنث (تُعرب بالحركات كجمع المؤنث السالم)، وكلاهما ملازم للإضافة.',
++  },
++]
++
++function TopicPage() {
++  return (
++    <main className="flex-1">
++      <div className="border-b border-border bg-beige">
++        <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-12">
++          <Link
++            to="/challenges/grammar"
++            className="text-xs text-muted-foreground hover:text-brand mb-3 inline-block"
++          >
++            ← All grammar topics
++          </Link>
++          <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-3">
++            Topic 25 of 47
++          </p>
++          <h1 className="font-serif tracking-[-0.02em] text-3xl font-bold text-foreground leading-tight mb-3">
++            <span
++              dir="rtl"
++              lang="ar"
++              style={{ fontFamily: "'Noto Naskh Arabic', serif" }}
++              className="mr-2"
++            >
++              ذو / ذات / ذوو / ذوات
++            </span>
++            — Possessor Of
++          </h1>
++          <p className="text-muted-foreground text-base max-w-xl">
++            ذو (masc. sg. "possessor of"), ذات (fem. sg.), ذوو (masc. pl.), ذوات (fem. pl.) always
++            take a مضاف إليه and never stand alone, meaning "possessor/owner of [quality]".
++          </p>
++        </div>
++      </div>
++      <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-8">
++        <QuizCarousel items={quizItems} />
++      </div>
++    </main>
++  )
++}
+diff --git a/src/routes/challenges/grammar/dual/index.tsx b/src/routes/challenges/grammar/dual/index.tsx
+new file mode 100644
+index 0000000..ce2ae90
+--- /dev/null
++++ b/src/routes/challenges/grammar/dual/index.tsx
+@@ -0,0 +1,110 @@
++import { createFileRoute, Link } from '@tanstack/react-router'
++import { QuizCarousel } from '#/components/QuizCarousel'
++import type { StrictQuizItem } from '#/routes/challenges/-quiz-types'
++
++export const Route = createFileRoute('/challenges/grammar/dual/')({
++  head: () => ({ meta: [{ title: 'The Dual — Grammar — Tayseer' }] }),
++  component: TopicPage,
++})
++
++const quizItems: StrictQuizItem[] = [
++  {
++    q: 'ما هي علامتا رفع المثنى ونصبه وجره؟',
++    options: [
++      'انِ في الرفع، يْنِ في النصب والجر',
++      'ونَ في الرفع، ينَ في النصب والجر',
++      'ات في جميع الحالات',
++      'و في الرفع، ي في النصب والجر',
++    ],
++    correctIndex: 0,
++    a: 'يُثنى الاسم بزيادة "انِ" في حالة الرفع و"يْنِ" في حالتي النصب والجر، مثل: طالبٌ ← طالبانِ (رفع) / طالبَينِ (نصب وجر).',
++  },
++  {
++    q: 'جاء الطالبـ___ إلى المدرسةِ (اثنان، رفع)',
++    options: ['طالبٌ', 'طالبانِ', 'طالبينِ', 'طالبونَ'],
++    correctIndex: 1,
++    a: 'الفاعل هنا مثنى مرفوع، فتُزاد "انِ" على المفرد: "طالبانِ" — والنون هنا عوض عن التنوين وليست علامة إعراب متغيرة.',
++  },
++  {
++    q: 'رأيتُ الطالبـ___ في الملعبِ (اثنان، نصب)',
++    options: ['طالبَينِ', 'طالبانِ', 'طالبونَ', 'طالبينَ'],
++    correctIndex: 0,
++    a: 'المفعول به هنا مثنى منصوب، وعلامة نصب المثنى "يْنِ" لا الألف: "طالبَينِ".',
++  },
++  {
++    q: 'أيّ ضمير يُستعمل للدلالة على المثنى الغائب (هو + هو)؟',
++    options: ['هما', 'هُم', 'هُنّ', 'أنتما'],
++    correctIndex: 0,
++    a: 'يشمل المثنى الأسماء والصفات وحتى الضمائر: "هما" ضمير الغائب للمثنى (مذكراً كان أو مؤنثاً)، بخلاف "هم" لجمع الغائبين و"أنتما" لمثنى المخاطب.',
++  },
++  {
++    q: 'أيّ من هذه الجمل بها خطأ نحوي؟',
++    options: [
++      'جاء طالبانِ مجتهدانِ',
++      'رأيتُ طالبَينِ مجتهدَينِ',
++      'هذانِ الطالبانُ مجتهدانِ',
++      'سلّمتُ على الطالبَينِ المجتهدَينِ',
++    ],
++    correctIndex: 2,
++    a: 'نون المثنى مكسورة دائماً بصرف النظر عن موقع الاسم الإعرابي، لأنها عوض عن التنوين وليست علامة إعراب متغيرة: الصواب "هذانِ الطالبانِ" لا "الطالبانُ" بضم النون.',
++  },
++  {
++    q: 'ماذا يحدث للتنوين عندما يُثنى الاسم؟',
++    options: ['يبقى كما هو', 'يُحذف لأن النون تعوض عنه', 'يتحول إلى شدة', 'يتضاعف'],
++    correctIndex: 1,
++    a: 'عند تثنية الاسم يسقط تنوينه، لأن نون المثنى (في انِ أو يْنِ) تقوم مقام التنوين وتؤدي وظيفته في الدلالة على عدم الإضافة.',
++  },
++  {
++    q: 'المعلمتانِ ___ (اجتهد، نعت مثنى مؤنث مرفوع)',
++    options: ['المجتهدتانِ', 'المجتهدانِ', 'المجتهدتينِ', 'المجتهدةُ'],
++    correctIndex: 0,
++    a: 'الصفة تتبع الموصوف في العدد والنوع والإعراب، فموصوف مثنى مؤنث مرفوع "المعلمتانِ" يستوجب نعتاً مثنى مؤنثاً مرفوعاً: "المجتهدتانِ".',
++  },
++  {
++    q: 'سلّمتُ على المعلمـ___ (اثنتان، جر)',
++    options: ['معلمتينِ', 'معلمتانِ', 'معلماتٍ', 'معلمةٍ'],
++    correctIndex: 0,
++    a: 'الاسم هنا مجرور بحرف الجر "على"، وعلامة جر المثنى مثل نصبه "يْنِ": "معلمتَينِ" لا "معلمتانِ".',
++  },
++]
++
++function TopicPage() {
++  return (
++    <main className="flex-1">
++      <div className="border-b border-border bg-beige">
++        <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-12">
++          <Link
++            to="/challenges/grammar"
++            className="text-xs text-muted-foreground hover:text-brand mb-3 inline-block"
++          >
++            ← All grammar topics
++          </Link>
++          <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-3">
++            Topic 15 of 47
++          </p>
++          <h1 className="font-serif tracking-[-0.02em] text-3xl font-bold text-foreground leading-tight mb-3">
++            <span
++              dir="rtl"
++              lang="ar"
++              style={{ fontFamily: "'Noto Naskh Arabic', serif" }}
++              className="mr-2"
++            >
++              المثنى
++            </span>
++            — The Dual
++          </h1>
++          <p className="text-muted-foreground text-base max-w-xl">
++            The dual (<span className="font-medium text-foreground">مثنى</span>) marks exactly two
++            of something. Add <span className="font-medium text-foreground">انِ</span> in رفع or{' '}
++            <span className="font-medium text-foreground">يْنِ</span> in نصب/جر to the singular —
++            the same suffix works for nouns, adjectives, and even pronouns (هما, "the two of
++            them"). A noun loses its تنوين once it is dualized.
++          </p>
++        </div>
++      </div>
++      <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-8">
++        <QuizCarousel items={quizItems} />
++      </div>
++    </main>
++  )
++}
+diff --git a/src/routes/challenges/grammar/five-nouns/index.tsx b/src/routes/challenges/grammar/five-nouns/index.tsx
+new file mode 100644
+index 0000000..27be6b5
+--- /dev/null
++++ b/src/routes/challenges/grammar/five-nouns/index.tsx
+@@ -0,0 +1,117 @@
++import { createFileRoute, Link } from '@tanstack/react-router'
++import { QuizCarousel } from '#/components/QuizCarousel'
++import type { StrictQuizItem } from '#/routes/challenges/-quiz-types'
++
++export const Route = createFileRoute('/challenges/grammar/five-nouns/')({
++  head: () => ({ meta: [{ title: 'The Five Nouns — Grammar — Tayseer' }] }),
++  component: TopicPage,
++})
++
++const quizItems: StrictQuizItem[] = [
++  {
++    q: 'ما الأسماء الخمسة؟',
++    options: [
++      'أب، أخ، حم، فو، ذو',
++      'أب، أخت، ابن، بنت، حم',
++      'أنا، أنت، هو، هي، نحن',
++      'كتاب، قلم، باب، بيت، شمس',
++    ],
++    correctIndex: 0,
++    a: 'الأسماء الخمسة هي: أب، أخ، حم (بمعنى قريب الزوج أو الزوجة)، فو (بمعنى الفم)، ذو (بمعنى صاحب).',
++  },
++  {
++    q: 'جاء ___ محمدٍ (أبو، رفع)',
++    options: ['أبو', 'أبا', 'أبي', 'أب'],
++    correctIndex: 0,
++    a: '"أب" هنا مضاف إلى اسم ظاهر ("محمد") لا إلى ياء المتكلم، فيُرفع بالواو نيابة عن الضمة: "أبو محمدٍ".',
++  },
++  {
++    q: 'رأيتُ ___ محمدٍ (أبا، نصب)',
++    options: ['أبا', 'أبو', 'أبي', 'أب'],
++    correctIndex: 0,
++    a: 'يُنصب من الأسماء الخمسة بالألف نيابة عن الفتحة عندما يكون مضافاً لغير ياء المتكلم: "رأيتُ أبا محمدٍ".',
++  },
++  {
++    q: 'سلّمتُ على ___ محمدٍ (أبي، جر)',
++    options: ['أبي', 'أبو', 'أبا', 'أب'],
++    correctIndex: 0,
++    a: 'يُجر من الأسماء الخمسة بالياء نيابة عن الكسرة عندما يكون مضافاً لغير ياء المتكلم: "سلّمتُ على أبي محمدٍ".',
++  },
++  {
++    q: 'ماذا يحدث لإعراب "أب" عندما يُضاف إلى ياء المتكلم كما في "أبي"؟',
++    options: [
++      'يبقى معرباً بالحروف (و/ا/ي) كالمعتاد',
++      'يخرج عن قاعدة الأسماء الخمسة وتلزم صورة واحدة بالياء ويُقدَّر إعرابه',
++      'يُصبح مبنياً على الضم دائماً',
++      'لا يجوز إضافته إلى ياء المتكلم إطلاقاً',
++    ],
++    correctIndex: 1,
++    a: 'إذا أُضيف أحد الأسماء الخمسة إلى ياء المتكلم (مثل "أبي") لزمت الكلمة صورة واحدة بالياء، وخرجت عن إعرابها بالحروف، فيُقدَّر إعرابها (رفعاً ونصباً وجراً) على ما قبل ياء المتكلم منع من ظهوره اشتغال المحل بحركة الياء المناسبة.',
++  },
++  {
++    q: 'أيّ من هذه الجمل بها خطأ نحوي؟',
++    options: [
++      'جاء أخو خالدٍ',
++      'رأيتُ أخو خالدٍ',
++      'سلّمتُ على أخي خالدٍ',
++      'هذا ذو مالٍ',
++    ],
++    correctIndex: 1,
++    a: '"أخو" هنا مفعول به منصوب، ويُنصب من الأسماء الخمسة بالألف: الصواب "رأيتُ أخا خالدٍ" لا "أخو".',
++  },
++  {
++    q: 'ما معنى "ذو" من الأسماء الخمسة؟',
++    options: [
++      'بمعنى "صاحب"، ولا يُستعمل إلا مضافاً إلى اسم بعده',
++      'بمعنى "هذا"',
++      'حرف جر',
++      'بمعنى "الذي" الاسم الموصول',
++    ],
++    correctIndex: 0,
++    a: '"ذو" من الأسماء الخمسة بمعنى "صاحب"، ولا يقع إلا مضافاً إلى اسم جنس ظاهر بعده يدل على ما يُملَك أو يُتصف به، مثل "رجلٌ ذو مالٍ" (رجل صاحب مال).',
++  },
++  {
++    q: 'هذا ___ الأسدِ (فو، رفع، بمعنى فم الأسد)',
++    options: ['فو', 'فا', 'في', 'فم'],
++    correctIndex: 0,
++    a: '"فو" (بمعنى الفم) من الأسماء الخمسة، ويُرفع بالواو إذا أُضيف لغير ياء المتكلم: "هذا فو الأسدِ" — واللفظ الشائع "فم" ليس من الأسماء الخمسة، ويُعرب بالحركات العادية.',
++  },
++]
++
++function TopicPage() {
++  return (
++    <main className="flex-1">
++      <div className="border-b border-border bg-beige">
++        <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-12">
++          <Link
++            to="/challenges/grammar"
++            className="text-xs text-muted-foreground hover:text-brand mb-3 inline-block"
++          >
++            ← All grammar topics
++          </Link>
++          <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-3">
++            Topic 24 of 47
++          </p>
++          <h1 className="font-serif tracking-[-0.02em] text-3xl font-bold text-foreground leading-tight mb-3">
++            <span
++              dir="rtl"
++              lang="ar"
++              style={{ fontFamily: "'Noto Naskh Arabic', serif" }}
++              className="mr-2"
++            >
++              الأسماء الخمسة
++            </span>
++            — The Five Nouns
++          </h1>
++          <p className="text-muted-foreground text-base max-w-xl">
++            أب، أخ، حم، فو، ذو ("possessor of") take و in رفع, ا in نصب, ي in جر — but ONLY when
++            مضاف to something other than ياء المتكلم ("my").
++          </p>
++        </div>
++      </div>
++      <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-8">
++        <QuizCarousel items={quizItems} />
++      </div>
++    </main>
++  )
++}
+diff --git a/src/routes/challenges/grammar/numbers-1-10/index.tsx b/src/routes/challenges/grammar/numbers-1-10/index.tsx
+new file mode 100644
+index 0000000..2d0838f
+--- /dev/null
++++ b/src/routes/challenges/grammar/numbers-1-10/index.tsx
+@@ -0,0 +1,124 @@
++import { createFileRoute, Link } from '@tanstack/react-router'
++import { QuizCarousel } from '#/components/QuizCarousel'
++import type { StrictQuizItem } from '#/routes/challenges/-quiz-types'
++
++export const Route = createFileRoute('/challenges/grammar/numbers-1-10/')({
++  head: () => ({ meta: [{ title: 'Numbers 1–10 — Grammar — Tayseer' }] }),
++  component: TopicPage,
++})
++
++const quizItems: StrictQuizItem[] = [
++  {
++    q: 'ما المقصود بـ"مخالفة الجنس" (polarity) بين العدد والمعدود من ٣ إلى ١٠؟',
++    options: [
++      'العدد يوافق المعدود في الجنس دائماً',
++      'العدد يخالف المعدود في الجنس: فيؤنَّث مع المذكر ويُذكَّر مع المؤنث',
++      'العدد لا علاقة له بجنس المعدود',
++      'العدد يوافق المعدود في العدد فقط لا في الجنس',
++    ],
++    correctIndex: 1,
++    a: 'من ٣ إلى ١٠ يخالف العدد المعدود في الجنس (قاعدة مخالفة الجنس): فيُقال "ثلاثةُ رجالٍ" بتاء التأنيث مع المعدود المذكر، و"ثلاثُ نساءٍ" بلا تاء مع المعدود المؤنث.',
++  },
++  {
++    q: 'ثلاثـ___ طلابٍ (ثلاثة، معدود مذكر جمع)',
++    options: ['ثلاثةُ', 'ثلاثُ', 'ثلاثتانِ', 'ثلاثمائةُ'],
++    correctIndex: 0,
++    a: 'المعدود "طلاب" جمع مذكر، فيجب تأنيث العدد بالتاء طبقاً لقاعدة مخالفة الجنس: "ثلاثةُ طلابٍ" — والمعدود مجرور بالإضافة.',
++  },
++  {
++    q: 'ثلاثـ___ نساءٍ (ثلاثة، معدود مؤنث)',
++    options: ['ثلاثُ', 'ثلاثةُ', 'ثلاثانِ', 'ثلاثمائةٌ'],
++    correctIndex: 0,
++    a: 'المعدود "نساء" مؤنث، فيُجرَّد العدد من تاء التأنيث طبقاً لقاعدة مخالفة الجنس: "ثلاثُ نساءٍ".',
++  },
++  {
++    q: 'كيف يوافق العددان (١) و(٢) المعدود؟',
++    options: [
++      'يخالفانه في الجنس كبقية الأعداد',
++      'يوافقانه في الجنس ويأتيان غالباً بعده لا قبله (كصفة)، مثل "رجلٌ واحدٌ" و"امرأتانِ اثنتانِ"',
++      'يبقيان مذكرَين دائماً بصرف النظر عن المعدود',
++      'لا يُستعملان مع الأسماء المؤنثة إطلاقاً',
++    ],
++    correctIndex: 1,
++    a: 'العددان ١ و٢ يخالفان قاعدة مخالفة الجنس ويوافقان المعدود في التذكير والتأنيث، ويأتيان عادة بعد المعدود كالصفة لا قبله كإضافة: "رجلٌ واحدٌ"، "امرأتانِ اثنتانِ".',
++  },
++  {
++    q: 'ما إعراب المعدود بعد الأعداد من ٣ إلى ١٠؟',
++    options: [
++      'مرفوع دائماً',
++      'جمع ومجرور على أنه مضاف إليه',
++      'مفرد ومنصوب على التمييز',
++      'مثنى ومجرور',
++    ],
++    correctIndex: 1,
++    a: 'المعدود بعد أعداد ٣-١٠ يأتي جمعاً مجروراً على أنه مضاف إليه للعدد، مثل "ثلاثةُ رجالٍ" حيث "رجالٍ" مضاف إليه مجرور.',
++  },
++  {
++    q: 'أيّ من هذه الجمل بها خطأ نحوي؟',
++    options: [
++      'عندي خمسةُ كتبٍ',
++      'عندي خمسُ كتبٍ',
++      'عندي خمسُ سياراتٍ',
++      'اشتريتُ سبعةَ أقلامٍ',
++    ],
++    correctIndex: 1,
++    a: '"كتب" جمع مذكر، فيجب تأنيث العدد بالتاء طبقاً لمخالفة الجنس: الصواب "عندي خمسةُ كتبٍ" لا "خمسُ كتبٍ".',
++  },
++  {
++    q: 'عندي طالبتانِ ___ (اثنان، مؤنث، توكيد بعد المعدود)',
++    options: ['اثنتانِ', 'اثنانِ', 'ثنتا', 'اثنينِ'],
++    correctIndex: 0,
++    a: 'العدد (٢) يوافق المعدود المؤنث "طالبتانِ" في التأنيث ويأتي بعده توكيداً: "طالبتانِ اثنتانِ".',
++  },
++  {
++    q: 'أيّ العبارتين صحيحة نحوياً: "أربعةُ بناتٍ" أم "أربعُ بناتٍ"؟',
++    options: [
++      '"أربعةُ بناتٍ" لأن المعدود مؤنث فيوافقه العدد',
++      '"أربعُ بناتٍ" لأن المعدود "بنات" مؤنث فيُجرَّد العدد من تاء التأنيث طبقاً لمخالفة الجنس',
++      'كلاهما خطأ',
++      'كلاهما صحيح بلا فرق في المعنى',
++    ],
++    correctIndex: 1,
++    a: '"بنات" معدود مؤنث، فتُخالفه صيغة العدد بتجريده من تاء التأنيث طبقاً لقاعدة مخالفة الجنس من ٣ إلى ١٠: الصحيح "أربعُ بناتٍ" لا "أربعةُ بناتٍ".',
++  },
++]
++
++function TopicPage() {
++  return (
++    <main className="flex-1">
++      <div className="border-b border-border bg-beige">
++        <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-12">
++          <Link
++            to="/challenges/grammar"
++            className="text-xs text-muted-foreground hover:text-brand mb-3 inline-block"
++          >
++            ← All grammar topics
++          </Link>
++          <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-3">
++            Topic 19 of 47
++          </p>
++          <h1 className="font-serif tracking-[-0.02em] text-3xl font-bold text-foreground leading-tight mb-3">
++            <span
++              dir="rtl"
++              lang="ar"
++              style={{ fontFamily: "'Noto Naskh Arabic', serif" }}
++              className="mr-2"
++            >
++              الأعداد ١-١٠
++            </span>
++            — Numbers 1–10
++          </h1>
++          <p className="text-muted-foreground text-base max-w-xl">
++            Numbers 3–10 take the OPPOSITE gender of the noun they count (gender polarity) —
++            ثلاثةُ رجالٍ but ثلاثُ نساءٍ. Numbers 1 and 2 agree in gender normally and usually
++            follow the noun. The counted noun (معدود) after 3–10 is plural and مجرور as مضاف
++            إليه.
++          </p>
++        </div>
++      </div>
++      <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-8">
++        <QuizCarousel items={quizItems} />
++      </div>
++    </main>
++  )
++}
+diff --git a/src/routes/challenges/grammar/relative-pronouns/index.tsx b/src/routes/challenges/grammar/relative-pronouns/index.tsx
+new file mode 100644
+index 0000000..b8ab5b5
+--- /dev/null
++++ b/src/routes/challenges/grammar/relative-pronouns/index.tsx
+@@ -0,0 +1,119 @@
++import { createFileRoute, Link } from '@tanstack/react-router'
++import { QuizCarousel } from '#/components/QuizCarousel'
++import type { StrictQuizItem } from '#/routes/challenges/-quiz-types'
++
++export const Route = createFileRoute('/challenges/grammar/relative-pronouns/')({
++  head: () => ({ meta: [{ title: 'Relative Pronouns & Clauses — Grammar — Tayseer' }] }),
++  component: TopicPage,
++})
++
++const quizItems: StrictQuizItem[] = [
++  {
++    q: 'ما الاسم الموصول المناسب للمفرد المذكر؟',
++    options: ['الذي', 'التي', 'الذين', 'اللاتي'],
++    correctIndex: 0,
++    a: '"الذي" اسم موصول للمفرد المذكر، مثل "جاء الطالبُ الذي نجحَ".',
++  },
++  {
++    q: 'ما الاسم الموصول المناسب للمفردة المؤنثة؟',
++    options: ['التي', 'الذي', 'اللتان', 'اللاتي'],
++    correctIndex: 0,
++    a: '"التي" اسم موصول للمفردة المؤنثة، مثل "نجحتِ الطالبةُ التي اجتهدتْ".',
++  },
++  {
++    q: 'ما الاسمان الموصولان الخاصان بالمثنى (مذكراً ومؤنثاً)؟',
++    options: [
++      'اللذان (مذكر) واللتان (مؤنث)',
++      'الذين (مذكر) واللاتي (مؤنث)',
++      'الذي والتي',
++      'اللذان للمؤنث واللتان للمذكر',
++    ],
++    correctIndex: 0,
++    a: 'للمثنى اسمان موصولان: "اللذان" للمثنى المذكر و"اللتان" للمثنى المؤنث، مثل "الطالبانِ اللذانِ نجحا" و"الطالبتانِ اللتانِ نجحتا".',
++  },
++  {
++    q: 'ما الاسم الموصول لجمع المذكر العاقل؟',
++    options: ['الذين', 'اللاتي', 'الذي', 'اللتان'],
++    correctIndex: 0,
++    a: '"الذين" اسم موصول لجمع المذكر العاقل، مثل "نجحَ الطلابُ الذين اجتهدوا".',
++  },
++  {
++    q: 'ما هو "العائد" الذي تستلزمه جملة الصلة بعد الاسم الموصول؟',
++    options: [
++      'حرف جر يربط الجملتين',
++      'ضمير يعود على الاسم الموصول ويربط جملة الصلة به، مثل الهاء في "الكتابُ الذي قرأتُه"',
++      'فعل أمر إلزامي',
++      'لا يوجد عائد إلزامي في أي حال',
++    ],
++    correctIndex: 1,
++    a: 'تستلزم جملة الصلة بعد الاسم الموصول ضميراً يعود عليه يُسمى "العائد"، مثل الهاء في "الكتابُ الذي قرأتُه" حيث تعود الهاء على "الذي" (أي على الكتاب).',
++  },
++  {
++    q: 'أيّ من هذه الجمل بها خطأ نحوي (خلوّها من العائد)؟',
++    options: [
++      'الطالبُ الذي نجحَ سعيدٌ',
++      'الكتابُ الذي قرأتُ ممتعٌ',
++      'الرجلُ الذي سلّمتُ عليه كريمٌ',
++      'المدينةُ التي زرتُها جميلةٌ',
++    ],
++    correctIndex: 1,
++    a: 'جملة الصلة "قرأتُ" تفتقر إلى ضمير عائد يربطها بالاسم الموصول "الذي"، والصواب "الكتابُ الذي قرأتُه ممتعٌ" بإضافة الهاء العائدة على الكتاب.',
++  },
++  {
++    q: 'هل يجوز استعمال "الذي" أو "التي" بعد اسم نكرة، مثل "*رجلٌ الذي جاء"؟',
++    options: [
++      'نعم، لا فرق بين النكرة والمعرفة',
++      'لا، فالأسماء الموصولة لا تُستعمل إلا بعد اسم معرفة، والنكرة تُنعت بجملة بلا اسم موصول (رجلٌ جاء)',
++      'نعم بشرط أن يكون الفعل ماضياً',
++      'لا، ولا يجوز نعت النكرة بجملة إطلاقاً',
++    ],
++    correctIndex: 1,
++    a: 'الأسماء الموصولة تُستعمل حصراً بعد اسم معرفة، أما النكرة فتُنعت بجملة فعلية أو اسمية مباشرة دون اسم موصول: يُقال "رجلٌ جاء" لا "*رجلٌ الذي جاء".',
++  },
++  {
++    q: 'ما الاسم الموصول لجمع المؤنث؟',
++    options: ['اللاتي', 'الذين', 'اللتان', 'الذي'],
++    correctIndex: 0,
++    a: '"اللاتي" (وتُقال أيضاً "اللائي") اسم موصول لجمع المؤنث، مثل "نجحتِ الطالباتُ اللاتي اجتهدنَ".',
++  },
++]
++
++function TopicPage() {
++  return (
++    <main className="flex-1">
++      <div className="border-b border-border bg-beige">
++        <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-12">
++          <Link
++            to="/challenges/grammar"
++            className="text-xs text-muted-foreground hover:text-brand mb-3 inline-block"
++          >
++            ← All grammar topics
++          </Link>
++          <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-3">
++            Topic 23 of 47
++          </p>
++          <h1 className="font-serif tracking-[-0.02em] text-3xl font-bold text-foreground leading-tight mb-3">
++            <span
++              dir="rtl"
++              lang="ar"
++              style={{ fontFamily: "'Noto Naskh Arabic', serif" }}
++              className="mr-2"
++            >
++              الأسماء الموصولة
++            </span>
++            — Relative Pronouns & Clauses
++          </h1>
++          <p className="text-muted-foreground text-base max-w-xl">
++            الذي (masc. sg.), التي (fem. sg.), اللذان/اللتان (dual), الذين (masc. pl.), اللاتي
++            (fem. pl.) introduce a relative clause. The clause must contain a referring pronoun
++            (عائد) pointing back to the antecedent, and relative pronouns are only used after a
++            DEFINITE antecedent.
++          </p>
++        </div>
++      </div>
++      <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-8">
++        <QuizCarousel items={quizItems} />
++      </div>
++    </main>
++  )
++}
+diff --git a/src/routes/challenges/grammar/sound-feminine-plural/index.tsx b/src/routes/challenges/grammar/sound-feminine-plural/index.tsx
+new file mode 100644
+index 0000000..5f0ac9d
+--- /dev/null
++++ b/src/routes/challenges/grammar/sound-feminine-plural/index.tsx
+@@ -0,0 +1,113 @@
++import { createFileRoute, Link } from '@tanstack/react-router'
++import { QuizCarousel } from '#/components/QuizCarousel'
++import type { StrictQuizItem } from '#/routes/challenges/-quiz-types'
++
++export const Route = createFileRoute('/challenges/grammar/sound-feminine-plural/')({
++  head: () => ({ meta: [{ title: 'Sound Feminine Plural — Grammar — Tayseer' }] }),
++  component: TopicPage,
++})
++
++const quizItems: StrictQuizItem[] = [
++  {
++    q: 'كيف يُصاغ جمع المؤنث السالم من "معلّمة"؟',
++    options: ['معلّمونَ', 'معلّماتٌ', 'معلّمينَ', 'معلّمانِ'],
++    correctIndex: 1,
++    a: 'يُصاغ جمع المؤنث السالم بحذف التاء المربوطة وزيادة "ات": معلّمة ← معلّماتٌ.',
++  },
++  {
++    q: 'بم يُنصب جمع المؤنث السالم؟',
++    options: ['بالفتحة كسائر الأسماء', 'بالكسرة نيابة عن الفتحة', 'بالياء', 'بحذف النون'],
++    correctIndex: 1,
++    a: 'يُخالف جمع المؤنث السالم القاعدة العامة، فيُنصب بالكسرة نيابة عن الفتحة، بينما يُرفع بالضمة كالمعتاد ويُجر بالكسرة أيضاً.',
++  },
++  {
++    q: 'نجحتِ الطالبـ___ في الامتحانِ (جمع، رفع)',
++    options: ['الطالباتُ', 'الطالباتِ', 'الطالبونَ', 'الطالبتانِ'],
++    correctIndex: 0,
++    a: 'الفاعل هنا جمع مؤنث سالم مرفوع، وعلامة رفعه الضمة: "الطالباتُ".',
++  },
++  {
++    q: 'شاهدتُ الطالبـ___ في الحفلِ (جمع، نصب)',
++    options: ['الطالباتِ', 'الطالباتُ', 'الطالباتَ', 'الطالبونَ'],
++    correctIndex: 0,
++    a: 'المفعول به هنا جمع مؤنث سالم منصوب، وينوب عن الفتحة الكسرة: "الطالباتِ" لا "الطالباتَ".',
++  },
++  {
++    q: 'أيّ من هذه الجمل بها خطأ نحوي؟',
++    options: [
++      'قابلتُ المعلماتِ في المدرسةِ',
++      'إنّ المعلماتَ مجتهداتٌ',
++      'جاءت المعلماتُ باكراً',
++      'مررتُ بالمعلماتِ المجتهداتِ',
++    ],
++    correctIndex: 1,
++    a: '"المعلماتِ" اسم إنّ منصوب، وجمع المؤنث السالم يُنصب بالكسرة لا بالفتحة: الصواب "إنّ المعلماتِ مجتهداتٌ".',
++  },
++  {
++    q: 'هل يقتصر جمع المؤنث السالم على الأسماء المؤنثة العاقلة فقط؟',
++    options: [
++      'نعم، يقتصر على المؤنث العاقل فقط',
++      'لا، فقد يُجمع به بعض الأسماء غير العاقلة أيضاً مثل "سيارة ← سيارات"',
++      'نعم، ويقتصر أيضاً على الصفات دون الأسماء',
++      'لا يوجد جمع مؤنث سالم لغير العاقل مطلقاً',
++    ],
++    correctIndex: 1,
++    a: 'رغم أن جمع المؤنث السالم شائع في المؤنث العاقل (معلّمة ← معلّمات)، فإنه يُستعمل أيضاً لبعض الأسماء غير العاقلة، مثل "سيارة ← سيارات" و"حمّام ← حمّامات".',
++  },
++  {
++    q: 'سلّمتُ على المعلمـ___ الجديداتِ (جمع، جر)',
++    options: ['المعلماتِ', 'المعلماتُ', 'المعلماتَ', 'المعلمينَ'],
++    correctIndex: 0,
++    a: 'الاسم هنا مجرور بحرف الجر "على"، وعلامة جر جمع المؤنث السالم الكسرة: "المعلماتِ".',
++  },
++  {
++    q: 'ما الفرق الجوهري بين علامة إعراب جمع المؤنث السالم وعلامة إعراب المثنى وجمع المذكر السالم؟',
++    options: [
++      'لا فرق، فكلها تُعرب بالحروف',
++      'جمع المؤنث السالم يُعرب بالحركات (الضمة والكسرة) بينما المثنى وجمع المذكر السالم يُعربان بالحروف',
++      'جمع المؤنث السالم يُعرب بالحروف أيضاً',
++      'كلها تُبنى ولا تُعرب',
++    ],
++    correctIndex: 1,
++    a: 'جمع المؤنث السالم يُعرب بالحركات الظاهرة على آخره (الضمة رفعاً والكسرة نصباً وجراً)، بخلاف المثنى وجمع المذكر السالم اللذين يُعربان بالحروف (الألف أو الياء في المثنى، والواو أو الياء في جمع المذكر السالم).',
++  },
++]
++
++function TopicPage() {
++  return (
++    <main className="flex-1">
++      <div className="border-b border-border bg-beige">
++        <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-12">
++          <Link
++            to="/challenges/grammar"
++            className="text-xs text-muted-foreground hover:text-brand mb-3 inline-block"
++          >
++            ← All grammar topics
++          </Link>
++          <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-3">
++            Topic 17 of 47
++          </p>
++          <h1 className="font-serif tracking-[-0.02em] text-3xl font-bold text-foreground leading-tight mb-3">
++            <span
++              dir="rtl"
++              lang="ar"
++              style={{ fontFamily: "'Noto Naskh Arabic', serif" }}
++              className="mr-2"
++            >
++              جمع المؤنث السالم
++            </span>
++            — Sound Feminine Plural
++          </h1>
++          <p className="text-muted-foreground text-base max-w-xl">
++            Sound feminine plural (<span className="font-medium text-foreground">جمع المؤنث السالم</span>)
++            replaces a final تاء مربوطة with ت and adds ات. Unlike most nouns, its case is marked
++            with damma in رفع but kasra — not fatha — in both نصب and جر.
++          </p>
++        </div>
++      </div>
++      <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-8">
++        <QuizCarousel items={quizItems} />
++      </div>
++    </main>
++  )
++}
+diff --git a/src/routes/challenges/grammar/sound-masculine-plural/index.tsx b/src/routes/challenges/grammar/sound-masculine-plural/index.tsx
+new file mode 100644
+index 0000000..5c33db0
+--- /dev/null
++++ b/src/routes/challenges/grammar/sound-masculine-plural/index.tsx
+@@ -0,0 +1,120 @@
++import { createFileRoute, Link } from '@tanstack/react-router'
++import { QuizCarousel } from '#/components/QuizCarousel'
++import type { StrictQuizItem } from '#/routes/challenges/-quiz-types'
++
++export const Route = createFileRoute('/challenges/grammar/sound-masculine-plural/')({
++  head: () => ({ meta: [{ title: 'Sound Masculine Plural — Grammar — Tayseer' }] }),
++  component: TopicPage,
++})
++
++const quizItems: StrictQuizItem[] = [
++  {
++    q: 'كيف يُجمع الاسم جمعاً مذكراً سالماً؟',
++    options: [
++      'بزيادة ونَ في الرفع وينَ في النصب والجر',
++      'بزيادة ات في جميع الحالات',
++      'بتغيير البنية الداخلية للكلمة',
++      'بزيادة انِ في الرفع ويْنِ في النصب والجر',
++    ],
++    correctIndex: 0,
++    a: 'جمع المذكر السالم يُصاغ بزيادة "ونَ" على المفرد في حالة الرفع و"ينَ" في حالتي النصب والجر، مثل: مسلمٌ ← مسلمونَ (رفع) / مسلمينَ (نصب وجر).',
++  },
++  {
++    q: 'على أيّ نوع من الأسماء يُطبَّق جمع المذكر السالم عادة؟',
++    options: [
++      'الأسماء الجامدة غير العاقلة (كتاب، بيت)',
++      'أعلام الذكور العقلاء والصفات المذكرة العاقلة (مثل مسلم، معلّم)',
++      'كل اسم مؤنث',
++      'الأسماء الخمسة فقط',
++    ],
++    correctIndex: 1,
++    a: 'يُطبَّق جمع المذكر السالم غالباً على أعلام الذكور العقلاء وعلى الصفات (اسم الفاعل واسم المفعول ونحوهما) الدالة على المذكر العاقل، مثل "مسلم ← مسلمون" و"معلّم ← معلّمون"، ولا يُقاس على الأسماء الجامدة غير العاقلة.',
++  },
++  {
++    q: 'جاء المعلمـ___ إلى المدرسةِ (جمع، رفع)',
++    options: ['المعلمونَ', 'المعلمينَ', 'المعلماتُ', 'المعلمانِ'],
++    correctIndex: 0,
++    a: 'الفاعل هنا جمع مذكر سالم مرفوع، وعلامة رفعه الواو: "المعلمونَ".',
++  },
++  {
++    q: 'رأيتُ المعلمـ___ في الاجتماعِ (جمع، نصب)',
++    options: ['المعلمينَ', 'المعلمونَ', 'المعلماتِ', 'المعلمَينِ'],
++    correctIndex: 0,
++    a: 'المفعول به هنا جمع مذكر سالم منصوب، وعلامة نصبه الياء لا الألف: "المعلمينَ".',
++  },
++  {
++    q: 'ماذا يحدث لنون جمع المذكر السالم إذا صار الجمع مضافاً؟',
++    options: [
++      'تبقى كما هي',
++      'تُحذف، مثل "معلّمو المدرسةِ"',
++      'تتحول إلى تنوين',
++      'يتحول الجمع إلى جمع تكسير',
++    ],
++    correctIndex: 1,
++    a: 'إذا وقع جمع المذكر السالم مضافاً (أول ركني الإضافة) حُذفت نونه، فيقال "معلّمو المدرسةِ" (رفع) و"معلّمي المدرسةِ" (نصب وجر) لا "معلّمونَ المدرسةِ".',
++  },
++  {
++    q: 'أيّ من هذه الجمل بها خطأ نحوي؟',
++    options: [
++      'هؤلاء معلّمو المدرسةِ المجتهدونَ',
++      'رأيتُ معلّمينَ المدرسةِ',
++      'سلّمتُ على معلّمي المدرسةِ',
++      'هؤلاء معلّمونَ مجتهدونَ',
++    ],
++    correctIndex: 1,
++    a: '"معلّمينَ" هنا مضاف إلى "المدرسةِ" فيجب حذف نونه: الصواب "رأيتُ معلّمي المدرسةِ" لا "معلّمينَ المدرسةِ".',
++  },
++  {
++    q: 'مررتُ بالمهندسـ___ في المكتبِ (جمع، جر)',
++    options: ['المهندسينَ', 'المهندسونَ', 'المهندساتِ', 'المهندسَينِ'],
++    correctIndex: 0,
++    a: 'الاسم هنا مجرور بحرف الجر "الباء"، وعلامة جر جمع المذكر السالم الياء كنصبه: "المهندسينَ".',
++  },
++  {
++    q: 'ما حركة نون "ونَ" و"ينَ" في جمع المذكر السالم، مثل "الفائزونَ"؟',
++    options: ['مكسورة دائماً', 'مفتوحة دائماً', 'مضمومة دائماً', 'ساكنة دائماً'],
++    correctIndex: 1,
++    a: 'نون جمع المذكر السالم مفتوحة دائماً في "ونَ" و"ينَ" بصرف النظر عن موقع الكلمة الإعرابي، بخلاف نون المثنى التي تكون مكسورة دائماً.',
++  },
++]
++
++function TopicPage() {
++  return (
++    <main className="flex-1">
++      <div className="border-b border-border bg-beige">
++        <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-12">
++          <Link
++            to="/challenges/grammar"
++            className="text-xs text-muted-foreground hover:text-brand mb-3 inline-block"
++          >
++            ← All grammar topics
++          </Link>
++          <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-3">
++            Topic 16 of 47
++          </p>
++          <h1 className="font-serif tracking-[-0.02em] text-3xl font-bold text-foreground leading-tight mb-3">
++            <span
++              dir="rtl"
++              lang="ar"
++              style={{ fontFamily: "'Noto Naskh Arabic', serif" }}
++              className="mr-2"
++            >
++              جمع المذكر السالم
++            </span>
++            — Sound Masculine Plural
++          </h1>
++          <p className="text-muted-foreground text-base max-w-xl">
++            Sound masculine plural (<span className="font-medium text-foreground">جمع المذكر السالم</span>)
++            is formed by adding <span className="font-medium text-foreground">ونَ</span> in رفع or{' '}
++            <span className="font-medium text-foreground">ينَ</span> in نصب/جر to masculine human
++            nouns and participles — never to non-human nouns. When the plural becomes a مضاف, its
++            نون is dropped.
++          </p>
++        </div>
++      </div>
++      <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-8">
++        <QuizCarousel items={quizItems} />
++      </div>
++    </main>
++  )
++}
+diff --git a/src/routes/challenges/grammar/taajjub/index.tsx b/src/routes/challenges/grammar/taajjub/index.tsx
+new file mode 100644
+index 0000000..f6aced9
+--- /dev/null
++++ b/src/routes/challenges/grammar/taajjub/index.tsx
+@@ -0,0 +1,119 @@
++import { createFileRoute, Link } from '@tanstack/react-router'
++import { QuizCarousel } from '#/components/QuizCarousel'
++import type { StrictQuizItem } from '#/routes/challenges/-quiz-types'
++
++export const Route = createFileRoute('/challenges/grammar/taajjub/')({
++  head: () => ({ meta: [{ title: "Ta'ajjub — Grammar — Tayseer" }] }),
++  component: TopicPage,
++})
++
++const quizItems: StrictQuizItem[] = [
++  {
++    q: 'في جملة "ما أجملَ السماءَ!" ما إعراب "ما"؟',
++    options: [
++      'اسم استفهام مبني في محل نصب مفعول به',
++      'اسم نكرة تام بمعنى "شيء عظيم"، مبني في محل رفع مبتدأ',
++      'حرف نفي لا محل له من الإعراب',
++      'اسم موصول مبني في محل رفع فاعل',
++    ],
++    correctIndex: 1,
++    a: '"ما" في صيغة التعجب "ما أفعلَه" اسم نكرة تام بمعنى "شيء عظيم"، مبني على السكون في محل رفع مبتدأ، وجملة "أجملَ السماءَ" بعده في محل رفع خبر.',
++  },
++  {
++    q: 'ما نوع الفعل "أجملَ" في هذا التركيب، وهل يتصرف؟',
++    options: [
++      'فعل ماضٍ متصرف عادي',
++      'فعل ماضٍ جامد على وزن "أفعل" ثابت الصيغة لا يتصرف، خاص بصيغة التعجب',
++      'فعل أمر',
++      'اسم فعل',
++    ],
++    correctIndex: 1,
++    a: '"أجملَ" في صيغة التعجب فعل ماضٍ جامد لا يتصرف (لا يأتي منه مضارع ولا أمر بهذا المعنى)، وهو ثابت على وزن "أفعل" دائماً بصرف النظر عن الفاعل.',
++  },
++  {
++    q: 'ما إعراب "السماءَ" في "ما أجملَ السماءَ!"؟',
++    options: ['فاعل مرفوع', 'مفعول به منصوب', 'مضاف إليه مجرور', 'خبر مرفوع'],
++    correctIndex: 1,
++    a: '"السماءَ" مفعول به منصوب لفعل التعجب "أجملَ"، والفاعل ضمير مستتر تقديره "هو" يعود على "ما".',
++  },
++  {
++    q: '___ أحسنَ الطالبَ! (صيغة التعجب القياسية)',
++    options: ['ما', 'من', 'كيف', 'أين'],
++    correctIndex: 0,
++    a: 'صيغة التعجب القياسية تبدأ بـ"ما" التعجبية: "ما أحسنَ الطالبَ!".',
++  },
++  {
++    q: 'أكرِمْ ___ محمدٍ! (الصيغة الثانية للتعجب)',
++    options: ['بـ', 'لـ', 'من', 'إلى'],
++    correctIndex: 0,
++    a: 'الصيغة الثانية للتعجب هي "أَفْعِلْ بِه" وتُبنى بفعل أمر جامد متصل بباء زائدة تجرّ الفاعل لفظاً: "أكرِمْ بمحمدٍ!" وأصل المعنى "ما أكرمَ محمداً!".',
++  },
++  {
++    q: 'في "أكرِمْ بمحمدٍ!" ما إعراب "محمدٍ" رغم أنه مجرور لفظاً بالباء؟',
++    options: [
++      'مجرور لفظاً، لكنه فاعل مرفوع محلاً',
++      'مفعول به منصوب',
++      'مبتدأ مرفوع',
++      'بدل مجرور',
++    ],
++    correctIndex: 0,
++    a: '"محمدٍ" في هذه الصيغة فاعل لفعل "أكرِمْ" مرفوع محلاً، لكنه مجرور لفظاً بالباء الزائدة التي دخلت على الفاعل لتوكيد معنى التعجب.',
++  },
++  {
++    q: 'أيّ من هذه الجمل بها خطأ نحوي في صيغة التعجب؟',
++    options: ['ما أجملَ الحديقةَ!', 'ما أجملُ الحديقةَ!', 'ما أروعَ المنظرَ!', 'أحسِنْ بأخلاقِه!'],
++    correctIndex: 1,
++    a: '"أفعل" في صيغة التعجب فعل ماضٍ جامد مبني على الفتح دائماً، فلا يجوز ضمه: الصواب "ما أجملَ الحديقةَ!" لا "أجملُ".',
++  },
++  {
++    q: 'كيف نفرّق بين "أفعل" التعجب و"أفعل" التفضيل شكلاً ووظيفةً؟',
++    options: [
++      'لا فرق بينهما مطلقاً في الإعراب والوظيفة',
++      '"أفعل" التعجب فعل ماضٍ جامد يقع بعد "ما" ويتبعه مفعول به منصوب، بينما "أفعل" التفضيل اسم يقارن بين شيئين وقد يُضاف أو يُسبق بـ"من"',
++      'كلاهما اسم دائماً',
++      'كلاهما فعل دائماً',
++    ],
++    correctIndex: 1,
++    a: 'كلا التركيبين يشتقان من وزن "أفعل" لكن التعجب فعل ماضٍ جامد يأتي بعد "ما" ويليه مفعول به منصوب ("ما أجملَ السماءَ")، بينما أفعل التفضيل اسم/صفة تفيد المقارنة وتُضاف لاسم بعدها أو تُسبق بـ"من" ("محمدٌ أجملُ من أخيه").',
++  },
++]
++
++function TopicPage() {
++  return (
++    <main className="flex-1">
++      <div className="border-b border-border bg-beige">
++        <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-12">
++          <Link
++            to="/challenges/grammar"
++            className="text-xs text-muted-foreground hover:text-brand mb-3 inline-block"
++          >
++            ← All grammar topics
++          </Link>
++          <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-3">
++            Topic 22 of 47
++          </p>
++          <h1 className="font-serif tracking-[-0.02em] text-3xl font-bold text-foreground leading-tight mb-3">
++            <span
++              dir="rtl"
++              lang="ar"
++              style={{ fontFamily: "'Noto Naskh Arabic', serif" }}
++              className="mr-2"
++            >
++              التعجب
++            </span>
++            — Ta'ajjub
++          </h1>
++          <p className="text-muted-foreground text-base max-w-xl">
++            The main pattern of wonder/exclamation is{' '}
++            <span className="font-medium text-foreground">ما أَفْعَلَه!</span> ("how ...!"), as in
++            ما أجملَ السماءَ! ("How beautiful the sky is!"). ما is a مبتدأ (مبني), أفعل is a fixed
++            verb, and the following noun is مفعول به منصوب. A secondary pattern is أَفْعِلْ بِه!.
++          </p>
++        </div>
++      </div>
++      <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-8">
++        <QuizCarousel items={quizItems} />
++      </div>
++    </main>
++  )
++}

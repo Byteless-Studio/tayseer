@@ -20,12 +20,12 @@ const quizItems: StrictQuizItem[] = [
     a: 'هذا اسم إشارة للمفرد المذكر القريب، وهذه اسم إشارة للمفرد المؤنث القريب — يجب أن يطابق اسم الإشارة جنس المشار إليه.\nهذا is the demonstrative for something near and masculine singular, and هذه is the demonstrative for something near and feminine singular — the demonstrative must match the gender of what it refers to.',
   },
   {
-    q: 'هذا + مسجدٌ → ___ ("this is a mosque")\nهذا + مسجدٌ → ___ ("this is a mosque")',
+    q: 'أكمل: هذا + مسجدٌ → ___\nComplete: هذا + مسجدٌ → ___ ("this is a mosque")',
     options: [
       'هذا مسجدٌ\nhādhā masjidun — "This is a mosque"',
-      'هذه مسجدٌ\nhādhihi masjidun (incorrect — feminine هذه with masculine مسجد)',
-      'هذا المسجدُ\nhādhā al-masjidu — "this [particular] mosque" (a different structure, not "this is a mosque")',
-      'هذا مسجدُ\nhādhā masjidu (incorrect — missing the تنوين on the indefinite خبر)',
+      'هذه مسجدٌ\nhādhihi masjidun — "this [is a] mosque" (feminine هذه, masculine مسجد)',
+      'هذا المسجدُ\nhādhā al-masjidu — "this [particular] mosque" (demonstrative adjective + definite noun)',
+      'هذا مسجدُ\nhādhā masjidu — "this [is a] mosque" (missing تنوين on the indefinite خبر)',
     ],
     correctIndex: 0,
     a: 'في هذا التركيب هذا مبتدأ ومسجدٌ خبر مرفوع نكرة — وهذا هو النمط القياسي للجملة الاسمية بعد اسم الإشارة: اسم إشارة (مبتدأ) + اسم نكرة (خبر).\nHere هذا is the مبتدأ and مسجدٌ is an indefinite مرفوع خبر — the standard pattern for a nominal sentence after a demonstrative: demonstrative (مبتدأ) + indefinite noun (خبر).',
@@ -33,10 +33,10 @@ const quizItems: StrictQuizItem[] = [
   {
     q: 'سيارةٌ (car) مؤنثة. أيّ جملة صحيحة للإشارة إليها من قريب؟\nسيارةٌ ("car") is feminine. Which sentence correctly points to it up close?',
     options: [
-      'هذا سيارةٌ\nhādhā sayyāratun (incorrect — masculine هذا with feminine سيارة)',
+      'هذا سيارةٌ\nhādhā sayyāratun — "this [is a] car" (masculine هذا, feminine سيارة)',
       'هذه سيارةٌ\nhādhihi sayyāratun — "This is a car"',
-      'ذلك سيارةٌ\ndhālika sayyāratun (incorrect — masculine and distant, not near)',
-      'هؤلاء سيارةٌ\nhā\'ulā\'i sayyāratun (incorrect — plural هؤلاء with a singular noun)',
+      'ذلك سيارةٌ\ndhālika sayyāratun — "that [is a] car" (masculine, distant)',
+      'هؤلاء سيارةٌ\nhā\'ulā\'i sayyāratun — "these [are a] car" (plural هؤلاء with a singular noun)',
     ],
     correctIndex: 1,
     a: 'سيارة اسم مؤنث، فيجب استخدام هذه (اسم الإشارة المؤنث القريب) لا هذا (المذكر) — قاعدة مطابقة اسم الإشارة لجنس المشار إليه.\nسيارة is feminine, so the demonstrative must be هذه (feminine, near), not هذا (masculine) — the rule that the demonstrative agrees in gender with what it refers to.',
@@ -55,16 +55,16 @@ const quizItems: StrictQuizItem[] = [
   {
     q: 'أيّ من هذه الجمل بها خطأ في مطابقة اسم الإشارة لجنس المشار إليه؟\nWhich of these sentences has an error in matching the demonstrative to the gender of what it refers to?',
     options: [
-      'هذا رجلٌ\nhādhā rajulun — "This is a man" (correct)',
-      'هذه امرأةٌ\nhādhihi imra\'atun — "This is a woman" (correct)',
-      'هذا سيارةٌ\nhādhā sayyāratun (incorrect — masculine هذا with feminine سيارة)',
-      'هذه مدرسةٌ\nhādhihi madrasatun — "This is a school" (correct)',
+      'هذا رجلٌ\nhādhā rajulun — "This is a man"',
+      'هذه امرأةٌ\nhādhihi imra\'atun — "This is a woman"',
+      'هذا سيارةٌ\nhādhā sayyāratun — "This is a car"',
+      'هذه مدرسةٌ\nhādhihi madrasatun — "This is a school"',
     ],
     correctIndex: 2,
     a: '"هذا سيارةٌ" خطأ لأن سيارة اسم مؤنث ويجب أن يسبقها اسم الإشارة المؤنث هذه، فالصواب "هذه سيارةٌ".\n"هذا سيارةٌ" is wrong because سيارة is feminine and needs the feminine demonstrative هذه before it; the correct form is "هذه سيارةٌ".',
   },
   {
-    q: 'اسم الإشارة هذا مبني (indeclinable). What does مبني mean in this context?\nاسم الإشارة هذا مبني (indeclinable). What does مبني mean in this context?',
+    q: 'ما معنى أن اسم الإشارة "هذا" مبني؟\nThe demonstrative هذا is مبني (indeclinable). What does مبني mean here?',
     options: [
       'أن آخره يتغير حسب موقعه الإعرابي في الجملة (رفع/نصب/جر)\nThat its ending changes according to its grammatical position in the sentence (nominative/accusative/genitive)',
       'أن شكله وحركة آخره ثابتان لا تتغيران أبداً بتغير موقعه في الجملة\nThat its form and final vowel are fixed and never change, regardless of its position in the sentence',
@@ -75,7 +75,7 @@ const quizItems: StrictQuizItem[] = [
     a: 'المبني اسم لا تتغير حركة آخره بتغير موقعه في الجملة، بخلاف المُعرَب. اسم الإشارة هذا مبني على السكون في كل المواضع، سواء كان مبتدأ أو مفعولاً به أو غير ذلك.\nA مبني word\'s final vowel never changes with its position in the sentence, unlike a مُعرَب word. The demonstrative هذا is مبني على السكون in every position — whether it is a مبتدأ, a مفعول به, or anything else.',
   },
   {
-    q: 'هذه الطالبةُ مجتهدةٌ — What role does هذه play here?\nهذه الطالبةُ مجتهدةٌ — what role does هذه play here?',
+    q: 'هذه الطالبةُ مجتهدةٌ — ما دور "هذه" هنا؟\nهذه الطالبةُ مجتهدةٌ — what role does هذه play here?',
     options: [
       'خبر مقدم\nA fronted predicate (خبر مقدم)',
       'صفة إشارية تخصص الاسم المعرفة "الطالبة" (this [particular] student)\nA demonstrative adjective specifying the definite noun "الطالبة" ("this [particular] student")',

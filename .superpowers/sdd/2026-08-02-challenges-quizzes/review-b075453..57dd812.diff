@@ -1,0 +1,1688 @@
+# Review package: b075453..HEAD
+
+## Commits
+57dd812 Add grammar quizzes 29-36: past & present tense verbs
+
+## Files changed
+ src/routeTree.gen.ts                               | 182 +++++++++++++++++++++
+ src/routes/challenges/grammar/imperative/index.tsx | 125 ++++++++++++++
+ .../challenges/grammar/naaqisah-verbs/index.tsx    | 125 ++++++++++++++
+ .../challenges/grammar/negation-of-past/index.tsx  | 121 ++++++++++++++
+ .../grammar/past-tense-conjugation/index.tsx       | 117 +++++++++++++
+ .../grammar/present-tense-conjugation/index.tsx    | 109 ++++++++++++
+ .../challenges/grammar/prohibitive/index.tsx       | 124 ++++++++++++++
+ .../grammar/verb-basics-faail-mafool/index.tsx     | 131 +++++++++++++++
+ src/routes/challenges/grammar/weak-verbs/index.tsx | 125 ++++++++++++++
+ 9 files changed, 1159 insertions(+)
+
+## Diff
+diff --git a/src/routeTree.gen.ts b/src/routeTree.gen.ts
+index 60a76f7..df5bc72 100644
+--- a/src/routeTree.gen.ts
++++ b/src/routeTree.gen.ts
+@@ -12,32 +12,40 @@ import { Route as rootRouteImport } from './routes/__root'
+ import { Route as AboutRouteImport } from './routes/about'
+ import { Route as IndexRouteImport } from './routes/index'
+ import { Route as CognatesIndexRouteImport } from './routes/cognates/index'
+ import { Route as ChallengesIndexRouteImport } from './routes/challenges/index'
+ import { Route as ArabicWithMuftiSaimIndexRouteImport } from './routes/arabic-with-mufti-saim/index'
+ import { Route as ChallengesVocabularyIndexRouteImport } from './routes/challenges/vocabulary/index'
+ import { Route as ArabicWithMuftiSaimLectureLectureIdRouteImport } from './routes/arabic-with-mufti-saim/lecture.$lectureId'
+ import { Route as ApiPublishSplatRouteImport } from './routes/api/publish/$'
+ import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
+ import { Route as ChallengesGrammarYesNoQuestionsIndexRouteImport } from './routes/challenges/grammar/yes-no-questions/index'
++import { Route as ChallengesGrammarWeakVerbsIndexRouteImport } from './routes/challenges/grammar/weak-verbs/index'
++import { Route as ChallengesGrammarVerbBasicsFaailMafoolIndexRouteImport } from './routes/challenges/grammar/verb-basics-faail-mafool/index'
+ import { Route as ChallengesGrammarTaajjubIndexRouteImport } from './routes/challenges/grammar/taajjub/index'
+ import { Route as ChallengesGrammarSoundMasculinePluralIndexRouteImport } from './routes/challenges/grammar/sound-masculine-plural/index'
+ import { Route as ChallengesGrammarSoundFemininePluralIndexRouteImport } from './routes/challenges/grammar/sound-feminine-plural/index'
+ import { Route as ChallengesGrammarRelativePronounsIndexRouteImport } from './routes/challenges/grammar/relative-pronouns/index'
++import { Route as ChallengesGrammarProhibitiveIndexRouteImport } from './routes/challenges/grammar/prohibitive/index'
++import { Route as ChallengesGrammarPresentTenseConjugationIndexRouteImport } from './routes/challenges/grammar/present-tense-conjugation/index'
+ import { Route as ChallengesGrammarPrepositionsIndexRouteImport } from './routes/challenges/grammar/prepositions/index'
++import { Route as ChallengesGrammarPastTenseConjugationIndexRouteImport } from './routes/challenges/grammar/past-tense-conjugation/index'
+ import { Route as ChallengesGrammarNumbers110IndexRouteImport } from './routes/challenges/grammar/numbers-1-10/index'
++import { Route as ChallengesGrammarNegationOfPastIndexRouteImport } from './routes/challenges/grammar/negation-of-past/index'
++import { Route as ChallengesGrammarNaaqisahVerbsIndexRouteImport } from './routes/challenges/grammar/naaqisah-verbs/index'
+ import { Route as ChallengesGrammarMubtadaKhabarIndexRouteImport } from './routes/challenges/grammar/mubtada-khabar/index'
+ import { Route as ChallengesGrammarMasculineFeminineIndexRouteImport } from './routes/challenges/grammar/masculine-feminine/index'
+ import { Route as ChallengesGrammarIsmIshaaraNearIndexRouteImport } from './routes/challenges/grammar/ism-ishaara-near/index'
+ import { Route as ChallengesGrammarIsmIshaaraFarIndexRouteImport } from './routes/challenges/grammar/ism-ishaara-far/index'
+ import { Route as ChallengesGrammarInterrogativesManMaaIndexRouteImport } from './routes/challenges/grammar/interrogatives-man-maa/index'
+ import { Route as ChallengesGrammarIndependentPronounsIndexRouteImport } from './routes/challenges/grammar/independent-pronouns/index'
++import { Route as ChallengesGrammarImperativeIndexRouteImport } from './routes/challenges/grammar/imperative/index'
+ import { Route as ChallengesGrammarIdafahIndexRouteImport } from './routes/challenges/grammar/idafah/index'
+ import { Route as ChallengesGrammarFiveNounsIndexRouteImport } from './routes/challenges/grammar/five-nouns/index'
+ import { Route as ChallengesGrammarDualIndexRouteImport } from './routes/challenges/grammar/dual/index'
+ import { Route as ChallengesGrammarDhuDhaatIndexRouteImport } from './routes/challenges/grammar/dhu-dhaat/index'
+ import { Route as ChallengesGrammarDefinitenessTanwinIndexRouteImport } from './routes/challenges/grammar/definiteness-tanwin/index'
+ import { Route as ChallengesGrammarDefectiveDiptotesIndexRouteImport } from './routes/challenges/grammar/defective-diptotes/index'
+ import { Route as ChallengesGrammarDaysMonthsIndexRouteImport } from './routes/challenges/grammar/days-months/index'
+ import { Route as ChallengesGrammarColorsIndexRouteImport } from './routes/challenges/grammar/colors/index'
+ import { Route as ChallengesGrammarCaseSystemOverviewIndexRouteImport } from './routes/challenges/grammar/case-system-overview/index'
+ import { Route as ChallengesGrammarBrokenPluralIndexRouteImport } from './routes/challenges/grammar/broken-plural/index'
+@@ -94,20 +102,32 @@ const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
+   id: '/api/auth/$',
+   path: '/api/auth/$',
+   getParentRoute: () => rootRouteImport,
+ } as any)
+ const ChallengesGrammarYesNoQuestionsIndexRoute =
+   ChallengesGrammarYesNoQuestionsIndexRouteImport.update({
+     id: '/challenges/grammar/yes-no-questions/',
+     path: '/challenges/grammar/yes-no-questions/',
+     getParentRoute: () => rootRouteImport,
+   } as any)
++const ChallengesGrammarWeakVerbsIndexRoute =
++  ChallengesGrammarWeakVerbsIndexRouteImport.update({
++    id: '/challenges/grammar/weak-verbs/',
++    path: '/challenges/grammar/weak-verbs/',
++    getParentRoute: () => rootRouteImport,
++  } as any)
++const ChallengesGrammarVerbBasicsFaailMafoolIndexRoute =
++  ChallengesGrammarVerbBasicsFaailMafoolIndexRouteImport.update({
++    id: '/challenges/grammar/verb-basics-faail-mafool/',
++    path: '/challenges/grammar/verb-basics-faail-mafool/',
++    getParentRoute: () => rootRouteImport,
++  } as any)
+ const ChallengesGrammarTaajjubIndexRoute =
+   ChallengesGrammarTaajjubIndexRouteImport.update({
+     id: '/challenges/grammar/taajjub/',
+     path: '/challenges/grammar/taajjub/',
+     getParentRoute: () => rootRouteImport,
+   } as any)
+ const ChallengesGrammarSoundMasculinePluralIndexRoute =
+   ChallengesGrammarSoundMasculinePluralIndexRouteImport.update({
+     id: '/challenges/grammar/sound-masculine-plural/',
+     path: '/challenges/grammar/sound-masculine-plural/',
+@@ -118,32 +138,62 @@ const ChallengesGrammarSoundFemininePluralIndexRoute =
+     id: '/challenges/grammar/sound-feminine-plural/',
+     path: '/challenges/grammar/sound-feminine-plural/',
+     getParentRoute: () => rootRouteImport,
+   } as any)
+ const ChallengesGrammarRelativePronounsIndexRoute =
+   ChallengesGrammarRelativePronounsIndexRouteImport.update({
+     id: '/challenges/grammar/relative-pronouns/',
+     path: '/challenges/grammar/relative-pronouns/',
+     getParentRoute: () => rootRouteImport,
+   } as any)
++const ChallengesGrammarProhibitiveIndexRoute =
++  ChallengesGrammarProhibitiveIndexRouteImport.update({
++    id: '/challenges/grammar/prohibitive/',
++    path: '/challenges/grammar/prohibitive/',
++    getParentRoute: () => rootRouteImport,
++  } as any)
++const ChallengesGrammarPresentTenseConjugationIndexRoute =
++  ChallengesGrammarPresentTenseConjugationIndexRouteImport.update({
++    id: '/challenges/grammar/present-tense-conjugation/',
++    path: '/challenges/grammar/present-tense-conjugation/',
++    getParentRoute: () => rootRouteImport,
++  } as any)
+ const ChallengesGrammarPrepositionsIndexRoute =
+   ChallengesGrammarPrepositionsIndexRouteImport.update({
+     id: '/challenges/grammar/prepositions/',
+     path: '/challenges/grammar/prepositions/',
+     getParentRoute: () => rootRouteImport,
+   } as any)
++const ChallengesGrammarPastTenseConjugationIndexRoute =
++  ChallengesGrammarPastTenseConjugationIndexRouteImport.update({
++    id: '/challenges/grammar/past-tense-conjugation/',
++    path: '/challenges/grammar/past-tense-conjugation/',
++    getParentRoute: () => rootRouteImport,
++  } as any)
+ const ChallengesGrammarNumbers110IndexRoute =
+   ChallengesGrammarNumbers110IndexRouteImport.update({
+     id: '/challenges/grammar/numbers-1-10/',
+     path: '/challenges/grammar/numbers-1-10/',
+     getParentRoute: () => rootRouteImport,
+   } as any)
++const ChallengesGrammarNegationOfPastIndexRoute =
++  ChallengesGrammarNegationOfPastIndexRouteImport.update({
++    id: '/challenges/grammar/negation-of-past/',
++    path: '/challenges/grammar/negation-of-past/',
++    getParentRoute: () => rootRouteImport,
++  } as any)
++const ChallengesGrammarNaaqisahVerbsIndexRoute =
++  ChallengesGrammarNaaqisahVerbsIndexRouteImport.update({
++    id: '/challenges/grammar/naaqisah-verbs/',
++    path: '/challenges/grammar/naaqisah-verbs/',
++    getParentRoute: () => rootRouteImport,
++  } as any)
+ const ChallengesGrammarMubtadaKhabarIndexRoute =
+   ChallengesGrammarMubtadaKhabarIndexRouteImport.update({
+     id: '/challenges/grammar/mubtada-khabar/',
+     path: '/challenges/grammar/mubtada-khabar/',
+     getParentRoute: () => rootRouteImport,
+   } as any)
+ const ChallengesGrammarMasculineFeminineIndexRoute =
+   ChallengesGrammarMasculineFeminineIndexRouteImport.update({
+     id: '/challenges/grammar/masculine-feminine/',
+     path: '/challenges/grammar/masculine-feminine/',
+@@ -166,20 +216,26 @@ const ChallengesGrammarInterrogativesManMaaIndexRoute =
+     id: '/challenges/grammar/interrogatives-man-maa/',
+     path: '/challenges/grammar/interrogatives-man-maa/',
+     getParentRoute: () => rootRouteImport,
+   } as any)
+ const ChallengesGrammarIndependentPronounsIndexRoute =
+   ChallengesGrammarIndependentPronounsIndexRouteImport.update({
+     id: '/challenges/grammar/independent-pronouns/',
+     path: '/challenges/grammar/independent-pronouns/',
+     getParentRoute: () => rootRouteImport,
+   } as any)
++const ChallengesGrammarImperativeIndexRoute =
++  ChallengesGrammarImperativeIndexRouteImport.update({
++    id: '/challenges/grammar/imperative/',
++    path: '/challenges/grammar/imperative/',
++    getParentRoute: () => rootRouteImport,
++  } as any)
+ const ChallengesGrammarIdafahIndexRoute =
+   ChallengesGrammarIdafahIndexRouteImport.update({
+     id: '/challenges/grammar/idafah/',
+     path: '/challenges/grammar/idafah/',
+     getParentRoute: () => rootRouteImport,
+   } as any)
+ const ChallengesGrammarFiveNounsIndexRoute =
+   ChallengesGrammarFiveNounsIndexRouteImport.update({
+     id: '/challenges/grammar/five-nouns/',
+     path: '/challenges/grammar/five-nouns/',
+@@ -282,32 +338,40 @@ export interface FileRoutesByFullPath {
+   '/challenges/grammar/broken-plural/': typeof ChallengesGrammarBrokenPluralIndexRoute
+   '/challenges/grammar/case-system-overview/': typeof ChallengesGrammarCaseSystemOverviewIndexRoute
+   '/challenges/grammar/colors/': typeof ChallengesGrammarColorsIndexRoute
+   '/challenges/grammar/days-months/': typeof ChallengesGrammarDaysMonthsIndexRoute
+   '/challenges/grammar/defective-diptotes/': typeof ChallengesGrammarDefectiveDiptotesIndexRoute
+   '/challenges/grammar/definiteness-tanwin/': typeof ChallengesGrammarDefinitenessTanwinIndexRoute
+   '/challenges/grammar/dhu-dhaat/': typeof ChallengesGrammarDhuDhaatIndexRoute
+   '/challenges/grammar/dual/': typeof ChallengesGrammarDualIndexRoute
+   '/challenges/grammar/five-nouns/': typeof ChallengesGrammarFiveNounsIndexRoute
+   '/challenges/grammar/idafah/': typeof ChallengesGrammarIdafahIndexRoute
++  '/challenges/grammar/imperative/': typeof ChallengesGrammarImperativeIndexRoute
+   '/challenges/grammar/independent-pronouns/': typeof ChallengesGrammarIndependentPronounsIndexRoute
+   '/challenges/grammar/interrogatives-man-maa/': typeof ChallengesGrammarInterrogativesManMaaIndexRoute
+   '/challenges/grammar/ism-ishaara-far/': typeof ChallengesGrammarIsmIshaaraFarIndexRoute
+   '/challenges/grammar/ism-ishaara-near/': typeof ChallengesGrammarIsmIshaaraNearIndexRoute
+   '/challenges/grammar/masculine-feminine/': typeof ChallengesGrammarMasculineFeminineIndexRoute
+   '/challenges/grammar/mubtada-khabar/': typeof ChallengesGrammarMubtadaKhabarIndexRoute
++  '/challenges/grammar/naaqisah-verbs/': typeof ChallengesGrammarNaaqisahVerbsIndexRoute
++  '/challenges/grammar/negation-of-past/': typeof ChallengesGrammarNegationOfPastIndexRoute
+   '/challenges/grammar/numbers-1-10/': typeof ChallengesGrammarNumbers110IndexRoute
++  '/challenges/grammar/past-tense-conjugation/': typeof ChallengesGrammarPastTenseConjugationIndexRoute
+   '/challenges/grammar/prepositions/': typeof ChallengesGrammarPrepositionsIndexRoute
++  '/challenges/grammar/present-tense-conjugation/': typeof ChallengesGrammarPresentTenseConjugationIndexRoute
++  '/challenges/grammar/prohibitive/': typeof ChallengesGrammarProhibitiveIndexRoute
+   '/challenges/grammar/relative-pronouns/': typeof ChallengesGrammarRelativePronounsIndexRoute
+   '/challenges/grammar/sound-feminine-plural/': typeof ChallengesGrammarSoundFemininePluralIndexRoute
+   '/challenges/grammar/sound-masculine-plural/': typeof ChallengesGrammarSoundMasculinePluralIndexRoute
+   '/challenges/grammar/taajjub/': typeof ChallengesGrammarTaajjubIndexRoute
++  '/challenges/grammar/verb-basics-faail-mafool/': typeof ChallengesGrammarVerbBasicsFaailMafoolIndexRoute
++  '/challenges/grammar/weak-verbs/': typeof ChallengesGrammarWeakVerbsIndexRoute
+   '/challenges/grammar/yes-no-questions/': typeof ChallengesGrammarYesNoQuestionsIndexRoute
+ }
+ export interface FileRoutesByTo {
+   '/': typeof IndexRoute
+   '/about': typeof AboutRoute
+   '/arabic-with-mufti-saim': typeof ArabicWithMuftiSaimIndexRoute
+   '/challenges': typeof ChallengesIndexRoute
+   '/cognates': typeof CognatesIndexRoute
+   '/api/auth/$': typeof ApiAuthSplatRoute
+   '/api/publish/$': typeof ApiPublishSplatRoute
+@@ -321,32 +385,40 @@ export interface FileRoutesByTo {
+   '/challenges/grammar/broken-plural': typeof ChallengesGrammarBrokenPluralIndexRoute
+   '/challenges/grammar/case-system-overview': typeof ChallengesGrammarCaseSystemOverviewIndexRoute
+   '/challenges/grammar/colors': typeof ChallengesGrammarColorsIndexRoute
+   '/challenges/grammar/days-months': typeof ChallengesGrammarDaysMonthsIndexRoute
+   '/challenges/grammar/defective-diptotes': typeof ChallengesGrammarDefectiveDiptotesIndexRoute
+   '/challenges/grammar/definiteness-tanwin': typeof ChallengesGrammarDefinitenessTanwinIndexRoute
+   '/challenges/grammar/dhu-dhaat': typeof ChallengesGrammarDhuDhaatIndexRoute
+   '/challenges/grammar/dual': typeof ChallengesGrammarDualIndexRoute
+   '/challenges/grammar/five-nouns': typeof ChallengesGrammarFiveNounsIndexRoute
+   '/challenges/grammar/idafah': typeof ChallengesGrammarIdafahIndexRoute
++  '/challenges/grammar/imperative': typeof ChallengesGrammarImperativeIndexRoute
+   '/challenges/grammar/independent-pronouns': typeof ChallengesGrammarIndependentPronounsIndexRoute
+   '/challenges/grammar/interrogatives-man-maa': typeof ChallengesGrammarInterrogativesManMaaIndexRoute
+   '/challenges/grammar/ism-ishaara-far': typeof ChallengesGrammarIsmIshaaraFarIndexRoute
+   '/challenges/grammar/ism-ishaara-near': typeof ChallengesGrammarIsmIshaaraNearIndexRoute
+   '/challenges/grammar/masculine-feminine': typeof ChallengesGrammarMasculineFeminineIndexRoute
+   '/challenges/grammar/mubtada-khabar': typeof ChallengesGrammarMubtadaKhabarIndexRoute
++  '/challenges/grammar/naaqisah-verbs': typeof ChallengesGrammarNaaqisahVerbsIndexRoute
++  '/challenges/grammar/negation-of-past': typeof ChallengesGrammarNegationOfPastIndexRoute
+   '/challenges/grammar/numbers-1-10': typeof ChallengesGrammarNumbers110IndexRoute
++  '/challenges/grammar/past-tense-conjugation': typeof ChallengesGrammarPastTenseConjugationIndexRoute
+   '/challenges/grammar/prepositions': typeof ChallengesGrammarPrepositionsIndexRoute
++  '/challenges/grammar/present-tense-conjugation': typeof ChallengesGrammarPresentTenseConjugationIndexRoute
++  '/challenges/grammar/prohibitive': typeof ChallengesGrammarProhibitiveIndexRoute
+   '/challenges/grammar/relative-pronouns': typeof ChallengesGrammarRelativePronounsIndexRoute
+   '/challenges/grammar/sound-feminine-plural': typeof ChallengesGrammarSoundFemininePluralIndexRoute
+   '/challenges/grammar/sound-masculine-plural': typeof ChallengesGrammarSoundMasculinePluralIndexRoute
+   '/challenges/grammar/taajjub': typeof ChallengesGrammarTaajjubIndexRoute
++  '/challenges/grammar/verb-basics-faail-mafool': typeof ChallengesGrammarVerbBasicsFaailMafoolIndexRoute
++  '/challenges/grammar/weak-verbs': typeof ChallengesGrammarWeakVerbsIndexRoute
+   '/challenges/grammar/yes-no-questions': typeof ChallengesGrammarYesNoQuestionsIndexRoute
+ }
+ export interface FileRoutesById {
+   __root__: typeof rootRouteImport
+   '/': typeof IndexRoute
+   '/about': typeof AboutRoute
+   '/arabic-with-mufti-saim/': typeof ArabicWithMuftiSaimIndexRoute
+   '/challenges/': typeof ChallengesIndexRoute
+   '/cognates/': typeof CognatesIndexRoute
+   '/api/auth/$': typeof ApiAuthSplatRoute
+@@ -361,32 +433,40 @@ export interface FileRoutesById {
+   '/challenges/grammar/broken-plural/': typeof ChallengesGrammarBrokenPluralIndexRoute
+   '/challenges/grammar/case-system-overview/': typeof ChallengesGrammarCaseSystemOverviewIndexRoute
+   '/challenges/grammar/colors/': typeof ChallengesGrammarColorsIndexRoute
+   '/challenges/grammar/days-months/': typeof ChallengesGrammarDaysMonthsIndexRoute
+   '/challenges/grammar/defective-diptotes/': typeof ChallengesGrammarDefectiveDiptotesIndexRoute
+   '/challenges/grammar/definiteness-tanwin/': typeof ChallengesGrammarDefinitenessTanwinIndexRoute
+   '/challenges/grammar/dhu-dhaat/': typeof ChallengesGrammarDhuDhaatIndexRoute
+   '/challenges/grammar/dual/': typeof ChallengesGrammarDualIndexRoute
+   '/challenges/grammar/five-nouns/': typeof ChallengesGrammarFiveNounsIndexRoute
+   '/challenges/grammar/idafah/': typeof ChallengesGrammarIdafahIndexRoute
++  '/challenges/grammar/imperative/': typeof ChallengesGrammarImperativeIndexRoute
+   '/challenges/grammar/independent-pronouns/': typeof ChallengesGrammarIndependentPronounsIndexRoute
+   '/challenges/grammar/interrogatives-man-maa/': typeof ChallengesGrammarInterrogativesManMaaIndexRoute
+   '/challenges/grammar/ism-ishaara-far/': typeof ChallengesGrammarIsmIshaaraFarIndexRoute
+   '/challenges/grammar/ism-ishaara-near/': typeof ChallengesGrammarIsmIshaaraNearIndexRoute
+   '/challenges/grammar/masculine-feminine/': typeof ChallengesGrammarMasculineFeminineIndexRoute
+   '/challenges/grammar/mubtada-khabar/': typeof ChallengesGrammarMubtadaKhabarIndexRoute
++  '/challenges/grammar/naaqisah-verbs/': typeof ChallengesGrammarNaaqisahVerbsIndexRoute
++  '/challenges/grammar/negation-of-past/': typeof ChallengesGrammarNegationOfPastIndexRoute
+   '/challenges/grammar/numbers-1-10/': typeof ChallengesGrammarNumbers110IndexRoute
++  '/challenges/grammar/past-tense-conjugation/': typeof ChallengesGrammarPastTenseConjugationIndexRoute
+   '/challenges/grammar/prepositions/': typeof ChallengesGrammarPrepositionsIndexRoute
++  '/challenges/grammar/present-tense-conjugation/': typeof ChallengesGrammarPresentTenseConjugationIndexRoute
++  '/challenges/grammar/prohibitive/': typeof ChallengesGrammarProhibitiveIndexRoute
+   '/challenges/grammar/relative-pronouns/': typeof ChallengesGrammarRelativePronounsIndexRoute
+   '/challenges/grammar/sound-feminine-plural/': typeof ChallengesGrammarSoundFemininePluralIndexRoute
+   '/challenges/grammar/sound-masculine-plural/': typeof ChallengesGrammarSoundMasculinePluralIndexRoute
+   '/challenges/grammar/taajjub/': typeof ChallengesGrammarTaajjubIndexRoute
++  '/challenges/grammar/verb-basics-faail-mafool/': typeof ChallengesGrammarVerbBasicsFaailMafoolIndexRoute
++  '/challenges/grammar/weak-verbs/': typeof ChallengesGrammarWeakVerbsIndexRoute
+   '/challenges/grammar/yes-no-questions/': typeof ChallengesGrammarYesNoQuestionsIndexRoute
+ }
+ export interface FileRouteTypes {
+   fileRoutesByFullPath: FileRoutesByFullPath
+   fullPaths:
+     | '/'
+     | '/about'
+     | '/arabic-with-mufti-saim/'
+     | '/challenges/'
+     | '/cognates/'
+@@ -402,32 +482,40 @@ export interface FileRouteTypes {
+     | '/challenges/grammar/broken-plural/'
+     | '/challenges/grammar/case-system-overview/'
+     | '/challenges/grammar/colors/'
+     | '/challenges/grammar/days-months/'
+     | '/challenges/grammar/defective-diptotes/'
+     | '/challenges/grammar/definiteness-tanwin/'
+     | '/challenges/grammar/dhu-dhaat/'
+     | '/challenges/grammar/dual/'
+     | '/challenges/grammar/five-nouns/'
+     | '/challenges/grammar/idafah/'
++    | '/challenges/grammar/imperative/'
+     | '/challenges/grammar/independent-pronouns/'
+     | '/challenges/grammar/interrogatives-man-maa/'
+     | '/challenges/grammar/ism-ishaara-far/'
+     | '/challenges/grammar/ism-ishaara-near/'
+     | '/challenges/grammar/masculine-feminine/'
+     | '/challenges/grammar/mubtada-khabar/'
++    | '/challenges/grammar/naaqisah-verbs/'
++    | '/challenges/grammar/negation-of-past/'
+     | '/challenges/grammar/numbers-1-10/'
++    | '/challenges/grammar/past-tense-conjugation/'
+     | '/challenges/grammar/prepositions/'
++    | '/challenges/grammar/present-tense-conjugation/'
++    | '/challenges/grammar/prohibitive/'
+     | '/challenges/grammar/relative-pronouns/'
+     | '/challenges/grammar/sound-feminine-plural/'
+     | '/challenges/grammar/sound-masculine-plural/'
+     | '/challenges/grammar/taajjub/'
++    | '/challenges/grammar/verb-basics-faail-mafool/'
++    | '/challenges/grammar/weak-verbs/'
+     | '/challenges/grammar/yes-no-questions/'
+   fileRoutesByTo: FileRoutesByTo
+   to:
+     | '/'
+     | '/about'
+     | '/arabic-with-mufti-saim'
+     | '/challenges'
+     | '/cognates'
+     | '/api/auth/$'
+     | '/api/publish/$'
+@@ -441,32 +529,40 @@ export interface FileRouteTypes {
+     | '/challenges/grammar/broken-plural'
+     | '/challenges/grammar/case-system-overview'
+     | '/challenges/grammar/colors'
+     | '/challenges/grammar/days-months'
+     | '/challenges/grammar/defective-diptotes'
+     | '/challenges/grammar/definiteness-tanwin'
+     | '/challenges/grammar/dhu-dhaat'
+     | '/challenges/grammar/dual'
+     | '/challenges/grammar/five-nouns'
+     | '/challenges/grammar/idafah'
++    | '/challenges/grammar/imperative'
+     | '/challenges/grammar/independent-pronouns'
+     | '/challenges/grammar/interrogatives-man-maa'
+     | '/challenges/grammar/ism-ishaara-far'
+     | '/challenges/grammar/ism-ishaara-near'
+     | '/challenges/grammar/masculine-feminine'
+     | '/challenges/grammar/mubtada-khabar'
++    | '/challenges/grammar/naaqisah-verbs'
++    | '/challenges/grammar/negation-of-past'
+     | '/challenges/grammar/numbers-1-10'
++    | '/challenges/grammar/past-tense-conjugation'
+     | '/challenges/grammar/prepositions'
++    | '/challenges/grammar/present-tense-conjugation'
++    | '/challenges/grammar/prohibitive'
+     | '/challenges/grammar/relative-pronouns'
+     | '/challenges/grammar/sound-feminine-plural'
+     | '/challenges/grammar/sound-masculine-plural'
+     | '/challenges/grammar/taajjub'
++    | '/challenges/grammar/verb-basics-faail-mafool'
++    | '/challenges/grammar/weak-verbs'
+     | '/challenges/grammar/yes-no-questions'
+   id:
+     | '__root__'
+     | '/'
+     | '/about'
+     | '/arabic-with-mufti-saim/'
+     | '/challenges/'
+     | '/cognates/'
+     | '/api/auth/$'
+     | '/api/publish/$'
+@@ -480,32 +576,40 @@ export interface FileRouteTypes {
+     | '/challenges/grammar/broken-plural/'
+     | '/challenges/grammar/case-system-overview/'
+     | '/challenges/grammar/colors/'
+     | '/challenges/grammar/days-months/'
+     | '/challenges/grammar/defective-diptotes/'
+     | '/challenges/grammar/definiteness-tanwin/'
+     | '/challenges/grammar/dhu-dhaat/'
+     | '/challenges/grammar/dual/'
+     | '/challenges/grammar/five-nouns/'
+     | '/challenges/grammar/idafah/'
++    | '/challenges/grammar/imperative/'
+     | '/challenges/grammar/independent-pronouns/'
+     | '/challenges/grammar/interrogatives-man-maa/'
+     | '/challenges/grammar/ism-ishaara-far/'
+     | '/challenges/grammar/ism-ishaara-near/'
+     | '/challenges/grammar/masculine-feminine/'
+     | '/challenges/grammar/mubtada-khabar/'
++    | '/challenges/grammar/naaqisah-verbs/'
++    | '/challenges/grammar/negation-of-past/'
+     | '/challenges/grammar/numbers-1-10/'
++    | '/challenges/grammar/past-tense-conjugation/'
+     | '/challenges/grammar/prepositions/'
++    | '/challenges/grammar/present-tense-conjugation/'
++    | '/challenges/grammar/prohibitive/'
+     | '/challenges/grammar/relative-pronouns/'
+     | '/challenges/grammar/sound-feminine-plural/'
+     | '/challenges/grammar/sound-masculine-plural/'
+     | '/challenges/grammar/taajjub/'
++    | '/challenges/grammar/verb-basics-faail-mafool/'
++    | '/challenges/grammar/weak-verbs/'
+     | '/challenges/grammar/yes-no-questions/'
+   fileRoutesById: FileRoutesById
+ }
+ export interface RootRouteChildren {
+   IndexRoute: typeof IndexRoute
+   AboutRoute: typeof AboutRoute
+   ArabicWithMuftiSaimIndexRoute: typeof ArabicWithMuftiSaimIndexRoute
+   ChallengesIndexRoute: typeof ChallengesIndexRoute
+   CognatesIndexRoute: typeof CognatesIndexRoute
+   ApiAuthSplatRoute: typeof ApiAuthSplatRoute
+@@ -520,32 +624,40 @@ export interface RootRouteChildren {
+   ChallengesGrammarBrokenPluralIndexRoute: typeof ChallengesGrammarBrokenPluralIndexRoute
+   ChallengesGrammarCaseSystemOverviewIndexRoute: typeof ChallengesGrammarCaseSystemOverviewIndexRoute
+   ChallengesGrammarColorsIndexRoute: typeof ChallengesGrammarColorsIndexRoute
+   ChallengesGrammarDaysMonthsIndexRoute: typeof ChallengesGrammarDaysMonthsIndexRoute
+   ChallengesGrammarDefectiveDiptotesIndexRoute: typeof ChallengesGrammarDefectiveDiptotesIndexRoute
+   ChallengesGrammarDefinitenessTanwinIndexRoute: typeof ChallengesGrammarDefinitenessTanwinIndexRoute
+   ChallengesGrammarDhuDhaatIndexRoute: typeof ChallengesGrammarDhuDhaatIndexRoute
+   ChallengesGrammarDualIndexRoute: typeof ChallengesGrammarDualIndexRoute
+   ChallengesGrammarFiveNounsIndexRoute: typeof ChallengesGrammarFiveNounsIndexRoute
+   ChallengesGrammarIdafahIndexRoute: typeof ChallengesGrammarIdafahIndexRoute
++  ChallengesGrammarImperativeIndexRoute: typeof ChallengesGrammarImperativeIndexRoute
+   ChallengesGrammarIndependentPronounsIndexRoute: typeof ChallengesGrammarIndependentPronounsIndexRoute
+   ChallengesGrammarInterrogativesManMaaIndexRoute: typeof ChallengesGrammarInterrogativesManMaaIndexRoute
+   ChallengesGrammarIsmIshaaraFarIndexRoute: typeof ChallengesGrammarIsmIshaaraFarIndexRoute
+   ChallengesGrammarIsmIshaaraNearIndexRoute: typeof ChallengesGrammarIsmIshaaraNearIndexRoute
+   ChallengesGrammarMasculineFeminineIndexRoute: typeof ChallengesGrammarMasculineFeminineIndexRoute
+   ChallengesGrammarMubtadaKhabarIndexRoute: typeof ChallengesGrammarMubtadaKhabarIndexRoute
++  ChallengesGrammarNaaqisahVerbsIndexRoute: typeof ChallengesGrammarNaaqisahVerbsIndexRoute
++  ChallengesGrammarNegationOfPastIndexRoute: typeof ChallengesGrammarNegationOfPastIndexRoute
+   ChallengesGrammarNumbers110IndexRoute: typeof ChallengesGrammarNumbers110IndexRoute
++  ChallengesGrammarPastTenseConjugationIndexRoute: typeof ChallengesGrammarPastTenseConjugationIndexRoute
+   ChallengesGrammarPrepositionsIndexRoute: typeof ChallengesGrammarPrepositionsIndexRoute
++  ChallengesGrammarPresentTenseConjugationIndexRoute: typeof ChallengesGrammarPresentTenseConjugationIndexRoute
++  ChallengesGrammarProhibitiveIndexRoute: typeof ChallengesGrammarProhibitiveIndexRoute
+   ChallengesGrammarRelativePronounsIndexRoute: typeof ChallengesGrammarRelativePronounsIndexRoute
+   ChallengesGrammarSoundFemininePluralIndexRoute: typeof ChallengesGrammarSoundFemininePluralIndexRoute
+   ChallengesGrammarSoundMasculinePluralIndexRoute: typeof ChallengesGrammarSoundMasculinePluralIndexRoute
+   ChallengesGrammarTaajjubIndexRoute: typeof ChallengesGrammarTaajjubIndexRoute
++  ChallengesGrammarVerbBasicsFaailMafoolIndexRoute: typeof ChallengesGrammarVerbBasicsFaailMafoolIndexRoute
++  ChallengesGrammarWeakVerbsIndexRoute: typeof ChallengesGrammarWeakVerbsIndexRoute
+   ChallengesGrammarYesNoQuestionsIndexRoute: typeof ChallengesGrammarYesNoQuestionsIndexRoute
+ }
+ 
+ declare module '@tanstack/react-router' {
+   interface FileRoutesByPath {
+     '/about': {
+       id: '/about'
+       path: '/about'
+       fullPath: '/about'
+       preLoaderRoute: typeof AboutRouteImport
+@@ -607,20 +719,34 @@ declare module '@tanstack/react-router' {
+       preLoaderRoute: typeof ApiAuthSplatRouteImport
+       parentRoute: typeof rootRouteImport
+     }
+     '/challenges/grammar/yes-no-questions/': {
+       id: '/challenges/grammar/yes-no-questions/'
+       path: '/challenges/grammar/yes-no-questions'
+       fullPath: '/challenges/grammar/yes-no-questions/'
+       preLoaderRoute: typeof ChallengesGrammarYesNoQuestionsIndexRouteImport
+       parentRoute: typeof rootRouteImport
+     }
++    '/challenges/grammar/weak-verbs/': {
++      id: '/challenges/grammar/weak-verbs/'
++      path: '/challenges/grammar/weak-verbs'
++      fullPath: '/challenges/grammar/weak-verbs/'
++      preLoaderRoute: typeof ChallengesGrammarWeakVerbsIndexRouteImport
++      parentRoute: typeof rootRouteImport
++    }
++    '/challenges/grammar/verb-basics-faail-mafool/': {
++      id: '/challenges/grammar/verb-basics-faail-mafool/'
++      path: '/challenges/grammar/verb-basics-faail-mafool'
++      fullPath: '/challenges/grammar/verb-basics-faail-mafool/'
++      preLoaderRoute: typeof ChallengesGrammarVerbBasicsFaailMafoolIndexRouteImport
++      parentRoute: typeof rootRouteImport
++    }
+     '/challenges/grammar/taajjub/': {
+       id: '/challenges/grammar/taajjub/'
+       path: '/challenges/grammar/taajjub'
+       fullPath: '/challenges/grammar/taajjub/'
+       preLoaderRoute: typeof ChallengesGrammarTaajjubIndexRouteImport
+       parentRoute: typeof rootRouteImport
+     }
+     '/challenges/grammar/sound-masculine-plural/': {
+       id: '/challenges/grammar/sound-masculine-plural/'
+       path: '/challenges/grammar/sound-masculine-plural'
+@@ -635,34 +761,69 @@ declare module '@tanstack/react-router' {
+       preLoaderRoute: typeof ChallengesGrammarSoundFemininePluralIndexRouteImport
+       parentRoute: typeof rootRouteImport
+     }
+     '/challenges/grammar/relative-pronouns/': {
+       id: '/challenges/grammar/relative-pronouns/'
+       path: '/challenges/grammar/relative-pronouns'
+       fullPath: '/challenges/grammar/relative-pronouns/'
+       preLoaderRoute: typeof ChallengesGrammarRelativePronounsIndexRouteImport
+       parentRoute: typeof rootRouteImport
+     }
++    '/challenges/grammar/prohibitive/': {
++      id: '/challenges/grammar/prohibitive/'
++      path: '/challenges/grammar/prohibitive'
++      fullPath: '/challenges/grammar/prohibitive/'
++      preLoaderRoute: typeof ChallengesGrammarProhibitiveIndexRouteImport
++      parentRoute: typeof rootRouteImport
++    }
++    '/challenges/grammar/present-tense-conjugation/': {
++      id: '/challenges/grammar/present-tense-conjugation/'
++      path: '/challenges/grammar/present-tense-conjugation'
++      fullPath: '/challenges/grammar/present-tense-conjugation/'
++      preLoaderRoute: typeof ChallengesGrammarPresentTenseConjugationIndexRouteImport
++      parentRoute: typeof rootRouteImport
++    }
+     '/challenges/grammar/prepositions/': {
+       id: '/challenges/grammar/prepositions/'
+       path: '/challenges/grammar/prepositions'
+       fullPath: '/challenges/grammar/prepositions/'
+       preLoaderRoute: typeof ChallengesGrammarPrepositionsIndexRouteImport
+       parentRoute: typeof rootRouteImport
+     }
++    '/challenges/grammar/past-tense-conjugation/': {
++      id: '/challenges/grammar/past-tense-conjugation/'
++      path: '/challenges/grammar/past-tense-conjugation'
++      fullPath: '/challenges/grammar/past-tense-conjugation/'
++      preLoaderRoute: typeof ChallengesGrammarPastTenseConjugationIndexRouteImport
++      parentRoute: typeof rootRouteImport
++    }
+     '/challenges/grammar/numbers-1-10/': {
+       id: '/challenges/grammar/numbers-1-10/'
+       path: '/challenges/grammar/numbers-1-10'
+       fullPath: '/challenges/grammar/numbers-1-10/'
+       preLoaderRoute: typeof ChallengesGrammarNumbers110IndexRouteImport
+       parentRoute: typeof rootRouteImport
+     }
++    '/challenges/grammar/negation-of-past/': {
++      id: '/challenges/grammar/negation-of-past/'
++      path: '/challenges/grammar/negation-of-past'
++      fullPath: '/challenges/grammar/negation-of-past/'
++      preLoaderRoute: typeof ChallengesGrammarNegationOfPastIndexRouteImport
++      parentRoute: typeof rootRouteImport
++    }
++    '/challenges/grammar/naaqisah-verbs/': {
++      id: '/challenges/grammar/naaqisah-verbs/'
++      path: '/challenges/grammar/naaqisah-verbs'
++      fullPath: '/challenges/grammar/naaqisah-verbs/'
++      preLoaderRoute: typeof ChallengesGrammarNaaqisahVerbsIndexRouteImport
++      parentRoute: typeof rootRouteImport
++    }
+     '/challenges/grammar/mubtada-khabar/': {
+       id: '/challenges/grammar/mubtada-khabar/'
+       path: '/challenges/grammar/mubtada-khabar'
+       fullPath: '/challenges/grammar/mubtada-khabar/'
+       preLoaderRoute: typeof ChallengesGrammarMubtadaKhabarIndexRouteImport
+       parentRoute: typeof rootRouteImport
+     }
+     '/challenges/grammar/masculine-feminine/': {
+       id: '/challenges/grammar/masculine-feminine/'
+       path: '/challenges/grammar/masculine-feminine'
+@@ -691,20 +852,27 @@ declare module '@tanstack/react-router' {
+       preLoaderRoute: typeof ChallengesGrammarInterrogativesManMaaIndexRouteImport
+       parentRoute: typeof rootRouteImport
+     }
+     '/challenges/grammar/independent-pronouns/': {
+       id: '/challenges/grammar/independent-pronouns/'
+       path: '/challenges/grammar/independent-pronouns'
+       fullPath: '/challenges/grammar/independent-pronouns/'
+       preLoaderRoute: typeof ChallengesGrammarIndependentPronounsIndexRouteImport
+       parentRoute: typeof rootRouteImport
+     }
++    '/challenges/grammar/imperative/': {
++      id: '/challenges/grammar/imperative/'
++      path: '/challenges/grammar/imperative'
++      fullPath: '/challenges/grammar/imperative/'
++      preLoaderRoute: typeof ChallengesGrammarImperativeIndexRouteImport
++      parentRoute: typeof rootRouteImport
++    }
+     '/challenges/grammar/idafah/': {
+       id: '/challenges/grammar/idafah/'
+       path: '/challenges/grammar/idafah'
+       fullPath: '/challenges/grammar/idafah/'
+       preLoaderRoute: typeof ChallengesGrammarIdafahIndexRouteImport
+       parentRoute: typeof rootRouteImport
+     }
+     '/challenges/grammar/five-nouns/': {
+       id: '/challenges/grammar/five-nouns/'
+       path: '/challenges/grammar/five-nouns'
+@@ -834,42 +1002,56 @@ const rootRouteChildren: RootRouteChildren = {
+   ChallengesGrammarColorsIndexRoute: ChallengesGrammarColorsIndexRoute,
+   ChallengesGrammarDaysMonthsIndexRoute: ChallengesGrammarDaysMonthsIndexRoute,
+   ChallengesGrammarDefectiveDiptotesIndexRoute:
+     ChallengesGrammarDefectiveDiptotesIndexRoute,
+   ChallengesGrammarDefinitenessTanwinIndexRoute:
+     ChallengesGrammarDefinitenessTanwinIndexRoute,
+   ChallengesGrammarDhuDhaatIndexRoute: ChallengesGrammarDhuDhaatIndexRoute,
+   ChallengesGrammarDualIndexRoute: ChallengesGrammarDualIndexRoute,
+   ChallengesGrammarFiveNounsIndexRoute: ChallengesGrammarFiveNounsIndexRoute,
+   ChallengesGrammarIdafahIndexRoute: ChallengesGrammarIdafahIndexRoute,
++  ChallengesGrammarImperativeIndexRoute: ChallengesGrammarImperativeIndexRoute,
+   ChallengesGrammarIndependentPronounsIndexRoute:
+     ChallengesGrammarIndependentPronounsIndexRoute,
+   ChallengesGrammarInterrogativesManMaaIndexRoute:
+     ChallengesGrammarInterrogativesManMaaIndexRoute,
+   ChallengesGrammarIsmIshaaraFarIndexRoute:
+     ChallengesGrammarIsmIshaaraFarIndexRoute,
+   ChallengesGrammarIsmIshaaraNearIndexRoute:
+     ChallengesGrammarIsmIshaaraNearIndexRoute,
+   ChallengesGrammarMasculineFeminineIndexRoute:
+     ChallengesGrammarMasculineFeminineIndexRoute,
+   ChallengesGrammarMubtadaKhabarIndexRoute:
+     ChallengesGrammarMubtadaKhabarIndexRoute,
++  ChallengesGrammarNaaqisahVerbsIndexRoute:
++    ChallengesGrammarNaaqisahVerbsIndexRoute,
++  ChallengesGrammarNegationOfPastIndexRoute:
++    ChallengesGrammarNegationOfPastIndexRoute,
+   ChallengesGrammarNumbers110IndexRoute: ChallengesGrammarNumbers110IndexRoute,
++  ChallengesGrammarPastTenseConjugationIndexRoute:
++    ChallengesGrammarPastTenseConjugationIndexRoute,
+   ChallengesGrammarPrepositionsIndexRoute:
+     ChallengesGrammarPrepositionsIndexRoute,
++  ChallengesGrammarPresentTenseConjugationIndexRoute:
++    ChallengesGrammarPresentTenseConjugationIndexRoute,
++  ChallengesGrammarProhibitiveIndexRoute:
++    ChallengesGrammarProhibitiveIndexRoute,
+   ChallengesGrammarRelativePronounsIndexRoute:
+     ChallengesGrammarRelativePronounsIndexRoute,
+   ChallengesGrammarSoundFemininePluralIndexRoute:
+     ChallengesGrammarSoundFemininePluralIndexRoute,
+   ChallengesGrammarSoundMasculinePluralIndexRoute:
+     ChallengesGrammarSoundMasculinePluralIndexRoute,
+   ChallengesGrammarTaajjubIndexRoute: ChallengesGrammarTaajjubIndexRoute,
++  ChallengesGrammarVerbBasicsFaailMafoolIndexRoute:
++    ChallengesGrammarVerbBasicsFaailMafoolIndexRoute,
++  ChallengesGrammarWeakVerbsIndexRoute: ChallengesGrammarWeakVerbsIndexRoute,
+   ChallengesGrammarYesNoQuestionsIndexRoute:
+     ChallengesGrammarYesNoQuestionsIndexRoute,
+ }
+ export const routeTree = rootRouteImport
+   ._addFileChildren(rootRouteChildren)
+   ._addFileTypes<FileRouteTypes>()
+ 
+ import type { getRouter } from './router.tsx'
+ import type { createStart } from '@tanstack/react-start'
+ declare module '@tanstack/react-start' {
+diff --git a/src/routes/challenges/grammar/imperative/index.tsx b/src/routes/challenges/grammar/imperative/index.tsx
+new file mode 100644
+index 0000000..8a1d46e
+--- /dev/null
++++ b/src/routes/challenges/grammar/imperative/index.tsx
+@@ -0,0 +1,125 @@
++import { createFileRoute, Link } from '@tanstack/react-router'
++import { QuizCarousel } from '#/components/QuizCarousel'
++import type { StrictQuizItem } from '#/routes/challenges/-quiz-types'
++
++export const Route = createFileRoute('/challenges/grammar/imperative/')({
++  head: () => ({ meta: [{ title: 'The Imperative — Grammar — Tayseer' }] }),
++  component: TopicPage,
++})
++
++const quizItems: StrictQuizItem[] = [
++  {
++    q: 'من أين يُشتق فعل الأمر في العربية؟',
++    options: [
++      'من الفعل الماضي مباشرة',
++      'من الفعل المضارع المجزوم المخاطب، بحذف حرف المضارعة وتعديل الآخر',
++      'من المصدر مباشرة',
++      'لا يُشتق بل يُحفظ سماعاً لكل فعل على حدة',
++    ],
++    correctIndex: 1,
++    a: 'فعل الأمر يُشتق من الفعل المضارع المجزوم المخاطب، بحذف حرف المضارعة (التاء) من أوله، مع إجراء التعديلات اللازمة على آخره (سكون، أو حذف نون، أو حذف حرف علة).',
++  },
++  {
++    q: 'لأي ضمائر يُصاغ فعل الأمر حصرياً؟',
++    options: [
++      'لجميع الضمائر (الغائب والمخاطب والمتكلم)',
++      'للمخاطب فقط (أنتَ، أنتِ، أنتما، أنتم، أنتنّ)',
++      'للمتكلم فقط (أنا، نحن)',
++      'للغائب فقط (هو، هي، هم)',
++    ],
++    correctIndex: 1,
++    a: 'فعل الأمر لا يُصاغ إلا لضمائر المخاطب (أنتَ/أنتِ/أنتما/أنتم/أنتنّ)؛ أما الطلب من الغائب أو المتكلم فيُعبَّر عنه بأسلوب آخر (لام الأمر مع المضارع، مثل "لِيكتبْ").',
++  },
++  {
++    q: 'ما صيغة الأمر الصحيحة من الفعل "كتب" للمخاطب المفرد المذكر (أنتَ)؟',
++    options: ['تَكْتُبْ', 'اُكْتُبْ', 'كَتَبْ', 'يَكْتُبْ'],
++    correctIndex: 1,
++    a: 'صيغة الأمر من "كتب" مع "أنتَ" هي "اُكْتُبْ": حُذف حرف المضارعة (التاء) من "تَكْتُبْ"، وأُضيفت همزة وصل مضمومة لأن الحرف الثالث من المضارع (يَكْتُبُ) مضموم العين.',
++  },
++  {
++    q: 'لماذا أضيفت همزة الوصل إلى بداية "اُكْتُبْ"؟',
++    options: [
++      'لأنها تحمل معنى زائداً على الفعل',
++      'لتفادي البدء بساكن، إذ لا يمكن نطق كلمة عربية تبدأ بحرف ساكن مباشرة',
++      'لأنها جزء أصلي من الجذر',
++      'لتمييز الأمر عن المضارع دون أي سبب صوتي',
++    ],
++    correctIndex: 1,
++    a: 'بعد حذف حرف المضارعة يبقى أول الفعل ساكناً (كْتُبْ)، والعربية لا تبدأ كلامها بساكن؛ فتُضاف همزة الوصل لتيسير النطق فقط، وتُحذف في النطق عند الوصل بكلام سابق.',
++  },
++  {
++    q: 'ما صيغة الأمر من "جلس" (يَجْلِسُ) للمخاطب المفرد؟',
++    options: ['اُجْلِسْ', 'اِجْلِسْ', 'أَجْلِسْ', 'جَلَسْ'],
++    correctIndex: 1,
++    a: 'مضارع "جلس" هو "يَجْلِسُ" مكسور العين، فتكون همزة الوصل في الأمر مكسورة أيضاً: "اِجْلِسْ" — تتبع حركة همزة الوصل حركة عين المضارع.',
++  },
++  {
++    q: 'ماذا يحدث لصيغة الأمر في الأفعال الخمسة (كالمشتقة من ضمائر "أنتِ" و"أنتم")؟',
++    options: [
++      'تبقى النون كما هي دائماً',
++      'تُحذف النون كما تُحذف في المضارع المجزوم، مثل "اُكْتُبُوا" و"اُكْتُبِي"',
++      'تُضاف نون زائدة',
++      'لا يُصاغ منها أمر أصلاً',
++    ],
++    correctIndex: 1,
++    a: 'في الأفعال الخمسة (أنتِ، أنتما، أنتم)، يُحذف حرف النون في صيغة الأمر تماماً كما يُحذف في المضارع المجزوم: "تَكْتُبِينَ" ← "اُكْتُبِي"، "تَكْتُبُونَ" ← "اُكْتُبُوا".',
++  },
++  {
++    q: 'أي من هذه الصيغ خطأ في صياغة الأمر من "كتب"؟',
++    options: ['(أنتَ) اُكْتُبْ', '(أنتِ) اُكْتُبِي', '(أنتم) اُكْتُبُونَ', '(أنتما) اُكْتُبَا'],
++    correctIndex: 2,
++    a: 'صيغة الأمر مع "أنتم" هي "اُكْتُبُوا" بحذف النون، لا "اُكْتُبُونَ"؛ فالنون تُحذف في الأمر تماماً كما تُحذف في المضارع المجزوم للأفعال الخمسة.',
++  },
++  {
++    q: 'ماذا يحدث لحرف العلة في فعل الأمر من الأفعال الأجوفة (المعتلة الوسط)، مثل "قال"؟',
++    options: [
++      'يبقى حرف العلة كما هو دون تغيير: "قُولْ"',
++      'يُحذف حرف العلة عند تسكين آخر الفعل، فتصبح الصيغة "قُلْ"',
++      'يتحول حرف العلة إلى همزة',
++      'لا يوجد أمر من الأفعال الأجوفة',
++    ],
++    correctIndex: 1,
++    a: 'في الفعل الأجوف كـ"قال" (يَقُولُ)، إذا سُكِّن آخر الفعل في الجزم أو الأمر، يُحذف حرف العلة (الواو) وتبقى حركته على ما قبله دلالة عليه: فعل الأمر منه "قُلْ" لا "قُوْلْ".',
++  },
++]
++
++function TopicPage() {
++  return (
++    <main className="flex-1">
++      <div className="border-b border-border bg-beige">
++        <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-12">
++          <Link
++            to="/challenges/grammar"
++            className="text-xs text-muted-foreground hover:text-brand mb-3 inline-block"
++          >
++            ← All grammar topics
++          </Link>
++          <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-3">
++            Topic 34 of 47
++          </p>
++          <h1 className="font-serif tracking-[-0.02em] text-3xl font-bold text-foreground leading-tight mb-3">
++            <span
++              dir="rtl"
++              lang="ar"
++              style={{ fontFamily: "'Noto Naskh Arabic', serif" }}
++              className="mr-2"
++            >
++              فعل الأمر
++            </span>
++            — The Imperative
++          </h1>
++          <p className="text-muted-foreground text-base max-w-xl">
++            The imperative is derived from المضارع المجزوم by dropping the person-prefix and
++            adjusting the ending. It exists ONLY for 2nd-person forms (أنتَ/أنتِ/أنتما/أنتم/أنتنّ),
++            ending in سكون, or dropping the نون for the five-verb forms, or dropping a weak letter.
++            A همزة الوصل is added whenever the resulting form would start with a bare consonant
++            cluster (اُكْتُبْ).
++          </p>
++        </div>
++      </div>
++      <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-8">
++        <QuizCarousel items={quizItems} />
++      </div>
++    </main>
++  )
++}
+diff --git a/src/routes/challenges/grammar/naaqisah-verbs/index.tsx b/src/routes/challenges/grammar/naaqisah-verbs/index.tsx
+new file mode 100644
+index 0000000..ff1e81e
+--- /dev/null
++++ b/src/routes/challenges/grammar/naaqisah-verbs/index.tsx
+@@ -0,0 +1,125 @@
++import { createFileRoute, Link } from '@tanstack/react-router'
++import { QuizCarousel } from '#/components/QuizCarousel'
++import type { StrictQuizItem } from '#/routes/challenges/-quiz-types'
++
++export const Route = createFileRoute('/challenges/grammar/naaqisah-verbs/')({
++  head: () => ({ meta: [{ title: 'Introducing Kāna and Her Sisters — Grammar — Tayseer' }] }),
++  component: TopicPage,
++})
++
++const quizItems: StrictQuizItem[] = [
++  {
++    q: 'ماذا تفعل "كان وأخواتها" بالجملة الاسمية التي تدخل عليها؟',
++    options: [
++      'ترفع المبتدأ والخبر معاً كما هما',
++      'ترفع اسمها (المبتدأ سابقاً) وتنصب خبرها، عكس النمط المعتاد الذي يبقي الخبر مرفوعاً',
++      'تجر الاسمين معاً',
++      'تنصب الاسمين معاً',
++    ],
++    correctIndex: 1,
++    a: '"كان وأخواتها" أفعال ناقصة تدخل على الجملة الاسمية فترفع الاسم (وهو المبتدأ سابقاً، ويسمى اسمها) وتنصب الخبر (ويسمى خبرها)، وهذا عكس الجملة الاسمية العادية التي يبقى خبرها مرفوعاً.',
++  },
++  {
++    q: 'أكمل: كانَ الجوُّ ___ (جميلاً، خبر كان منصوب)',
++    options: ['جميلٌ', 'جميلاً', 'جميلٍ', 'جميلُ'],
++    correctIndex: 1,
++    a: 'خبر "كان" منصوب دائماً: "كانَ الجوُّ جميلاً" — "الجوُّ" اسم كان مرفوع، و"جميلاً" خبرها منصوب.',
++  },
++  {
++    q: 'أي مما يلي وصف صحيح لبعض أخوات "كان" (أصبح، أمسى، ظلّ، بات، صار، ليس)؟',
++    options: [
++      'كلها تعمل عمل "كان" في رفع الاسم ونصب الخبر، مع إضافة دلالة زمنية أو معنوية خاصة بكل فعل',
++      'أفعال عادية لا ناسخة، لا تأثير لها على إعراب الجملة الاسمية',
++      'أفعال حركة فقط لا علاقة لها بالجملة الاسمية',
++      'أفعال لا يجوز أن تسبق مبتدأ وخبراً',
++    ],
++    correctIndex: 0,
++    a: 'من أخوات "كان": أصبح (صار في الصباح)، أمسى (صار في المساء)، ظلّ (استمر)، بات (صار ليلاً)، صار (تحول إلى)، وليس (النافية)؛ وكلها تعمل عمل "كان" في رفع الاسم ونصب الخبر مع إضافة دلالة زمنية أو معنوية خاصة بكل فعل.',
++  },
++  {
++    q: 'أي من هذه الجمل بها خطأ في تطبيق عمل "كان" وأخواتها؟',
++    options: ['أصبحَ الجوُّ بارداً', 'ظلَّ الطالبُ مجتهداً', 'صارَ الماءُ جليدٌ', 'باتَ الطفلُ نائماً'],
++    correctIndex: 2,
++    a: '"صارَ الماءُ جليدٌ" خطأ لأن خبر "صار" (من أخوات كان) يجب أن يكون منصوباً: الصواب "صارَ الماءُ جليداً".',
++  },
++  {
++    q: 'ما المعنى الخاص الذي يفيده الفعل الناسخ "ليس" رغم أن صيغته الصرفية صيغة ماضٍ؟',
++    options: [
++      'يفيد معنى المستقبل',
++      'يفيد نفي الخبر عن الاسم في الحاضر ("is not")، رغم أن شكله الصرفي شكل الماضي',
++      'يفيد الأمر',
++      'يفيد الاستمرار في الماضي فقط',
++    ],
++    correctIndex: 1,
++    a: '"ليس" فعل ماضٍ في صيغته لكنه لا يتصرف ويفيد معنى النفي في الحاضر ("is not")، مثل "ليس الجوُّ بارداً" = "the weather is not cold" — فهو استثناء صرفي دلالي بين إخوة كان.',
++  },
++  {
++    q: 'أكمل: ليس الطعامُ ___ (لذيذاً، خبر ليس منصوب)',
++    options: ['لذيذٌ', 'لذيذاً', 'لذيذٍ', 'لذيذُ'],
++    correctIndex: 1,
++    a: '"ليس" تعمل عمل "كان" فتنصب خبرها: "ليس الطعامُ لذيذاً" (the food is not delicious) — "الطعامُ" اسمها مرفوع و"لذيذاً" خبرها منصوب.',
++  },
++  {
++    q: 'الفعل "كاد" (بمعنى "كاد يفعل") ينتمي إلى أي أسرة نحوية، وهل هي نفسها "كان وأخواتها"؟',
++    options: [
++      'نعم، هي نفسها كان وأخواتها تماماً بلا فرق',
++      'أسرة قريبة تسمى "كاد وأخواتها" أو "أفعال المقاربة" — ناسخة كذلك، لكن خبرها يجب أن يكون جملة فعلية مضارعة لا اسماً مفرداً',
++      'لا علاقة لها بكان وأخواتها إطلاقاً ولا تدخل على الجملة الاسمية',
++      'هي أفعال تامة لا ناقصة',
++    ],
++    correctIndex: 1,
++    a: '"كاد" ينتمي إلى فئة منفصلة تسمى "كاد وأخواتها" أو "أفعال المقاربة"، قريبة من "كان وأخواتها" في كونها ناسخة تدخل على الجملة الاسمية، لكنها تختلف بأن خبرها يجب أن يكون جملة فعلية مضارعة تدل على قرب وقوع الفعل، لا اسماً مفرداً كخبر كان.',
++  },
++  {
++    q: 'ما معنى "كادَ" في جملة مثل "كادَ الطفلُ يسقطُ"، وهل يحتاج خبرها المضارع إلى "أن" غالباً؟',
++    options: [
++      'بمعنى "سقط فعلاً"، وتحتاج "أن" وجوباً',
++      'بمعنى "قارب على الفعل ولم يقع" (يكاد يفعل)، وغالباً لا تقترن بـ"أن" في خبرها المضارع',
++      'بمعنى الأمر بالفعل',
++      'بمعنى النفي التام لوقوع الفعل',
++    ],
++    correctIndex: 1,
++    a: '"كادَ" تفيد "قارب على الفعل دون أن يقع فعلاً" (almost/nearly did): "كادَ الطفلُ يسقطُ" = "the child almost fell (but didn\'t)"، وخبرها المضارع يأتي غالباً دون "أن"، بخلاف بعض أخواتها مثل "عسى" التي تُفضّل الاقتران بـ"أن".',
++  },
++]
++
++function TopicPage() {
++  return (
++    <main className="flex-1">
++      <div className="border-b border-border bg-beige">
++        <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-12">
++          <Link
++            to="/challenges/grammar"
++            className="text-xs text-muted-foreground hover:text-brand mb-3 inline-block"
++          >
++            ← All grammar topics
++          </Link>
++          <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-3">
++            Topic 36 of 47
++          </p>
++          <h1 className="font-serif tracking-[-0.02em] text-3xl font-bold text-foreground leading-tight mb-3">
++            <span
++              dir="rtl"
++              lang="ar"
++              style={{ fontFamily: "'Noto Naskh Arabic', serif" }}
++              className="mr-2"
++            >
++              كان وأخواتها (مقدمة)
++            </span>
++            — Introducing Kāna and Her Sisters
++          </h1>
++          <p className="text-muted-foreground text-base max-w-xl">
++            كان وأخواتها (كان، أصبح، أمسى، ظلّ، بات، صار، ليس، ما زال...) enter a nominal sentence
++            and make the خبر منصوب while اسم كان stays مرفوع — the opposite pattern from a normal
++            nominal sentence. ليس means "is not" despite its ماضي shape. A related but distinct
++            family, كاد وأخواتها (أفعال المقاربة), expects a مضارع خبر clause instead of a single
++            noun — كاد itself means "almost/nearly did" and usually skips أن before that clause.
++          </p>
++        </div>
++      </div>
++      <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-8">
++        <QuizCarousel items={quizItems} />
++      </div>
++    </main>
++  )
++}
+diff --git a/src/routes/challenges/grammar/negation-of-past/index.tsx b/src/routes/challenges/grammar/negation-of-past/index.tsx
+new file mode 100644
+index 0000000..e076463
+--- /dev/null
++++ b/src/routes/challenges/grammar/negation-of-past/index.tsx
+@@ -0,0 +1,121 @@
++import { createFileRoute, Link } from '@tanstack/react-router'
++import { QuizCarousel } from '#/components/QuizCarousel'
++import type { StrictQuizItem } from '#/routes/challenges/-quiz-types'
++
++export const Route = createFileRoute('/challenges/grammar/negation-of-past/')({
++  head: () => ({ meta: [{ title: 'Negation of the Past — Grammar — Tayseer' }] }),
++  component: TopicPage,
++})
++
++const quizItems: StrictQuizItem[] = [
++  {
++    q: 'كيف تُنفى الجملة الماضية بأبسط طريقة باستخدام "ما"؟',
++    options: [
++      'ما + فعل مضارع',
++      'ما + فعل ماضٍ، ويبقى الفعل على صيغته الماضية دون تغيير',
++      'ما + اسم منصوب',
++      'ما + فعل أمر',
++    ],
++    correctIndex: 1,
++    a: '"ما" النافية تدخل على الفعل الماضي دون تغيير صيغته: "ما كتبَ" = "he did not write"، وهي أبسط أداة لنفي الماضي.',
++  },
++  {
++    q: 'ما الصيغة الصحيحة لفعل "كتب" في المضارع المجزوم بعد "لم"؟',
++    options: ['يكتبُ (مرفوع)', 'يكتبَ (منصوب)', 'يكتبْ (مجزوم)', 'كتبَ (ماضٍ)'],
++    correctIndex: 2,
++    a: 'بعد "لم" يُجزم الفعل المضارع بحذف حركة الإعراب: "لم يكتبْ" — لا يُرفع (يكتبُ) ولا يُنصب (يكتبَ) ولا يبقى ماضياً (كتبَ).',
++  },
++  {
++    q: 'هل تدخل "ما" و"لم" على نفس نوع الفعل عند نفي الماضي؟',
++    options: [
++      'نعم، كلتاهما تدخل على الفعل الماضي بصيغته دون تغيير',
++      '"ما" تدخل على الماضي كما هو، بينما "لم" تدخل على المضارع فتجزمه رغم أن المعنى الناتج ماضٍ',
++      '"لم" تدخل على فعل الأمر فقط',
++      '"ما" تدخل على المضارع المنصوب فقط',
++    ],
++    correctIndex: 1,
++    a: '"ما" تدخل على الفعل الماضي مباشرة دون تغيير في صيغته، أما "لم" فتدخل على الفعل المضارع وتجزمه، رغم أن المعنى الناتج في الحالتين هو نفي وقوع الفعل في الماضي.',
++  },
++  {
++    q: 'أكمل: ما ___ الولدُ إلى المدرسةِ (نفي "ذهب" بأسلوب "ما")',
++    options: ['يذهبْ', 'ذهبَ', 'يذهبُ', 'اذهبْ'],
++    correctIndex: 1,
++    a: 'بعد "ما" النافية يبقى الفعل على صيغته الماضية كما هو: "ما ذهبَ الولدُ إلى المدرسةِ" (the boy did not go to school).',
++  },
++  {
++    q: 'أي من الجمل التالية بها خطأ في استخدام "لم"؟',
++    options: ['لم يذهبْ الولدُ', 'لم ذهبَ الولدُ', 'لم يكتبْ الطالبُ', 'لم يشربْ الطفلُ'],
++    correctIndex: 1,
++    a: '"لم ذهبَ الولدُ" خطأ لأن "لم" تدخل على المضارع المجزوم لا على الماضي مباشرة؛ الصواب "لم يذهبْ الولدُ" بتحويل الفعل إلى صيغة المضارع المجزوم.',
++  },
++  {
++    q: 'أي أداتين تُستخدمان لنفي الفعل الماضي في العربية؟',
++    options: ['لن ولا', 'ما ولم', 'لا الناهية ولن', 'إن ولو'],
++    correctIndex: 1,
++    a: 'تُستخدم "ما" و"لم" لنفي الفعل الماضي: "ما" تدخل على الماضي مباشرة، و"لم" تدخل على المضارع فتجزمه وتحوّل معناه إلى نفي وقوع الفعل في الماضي.',
++  },
++  {
++    q: 'عند نفي "شرب الطفلُ الحليبَ" بأسلوب "لم"، ما الصيغة الصحيحة؟',
++    options: [
++      'لم شرب الطفلُ الحليبَ',
++      'لم يشربُ الطفلُ الحليبَ',
++      'لم يشربْ الطفلُ الحليبَ',
++      'لم يشربَ الطفلُ الحليبَ',
++    ],
++    correctIndex: 2,
++    a: 'الصواب "لم يشربْ الطفلُ الحليبَ": يتحول الفعل الماضي "شربَ" إلى المضارع المجزوم "يشربْ" بعد دخول أداة الجزم "لم".',
++  },
++  {
++    q: 'لماذا لا يجوز أن يُقال "لم كتبَ الطالبُ" لنفي "كتبَ الطالبُ الدرسَ"؟',
++    options: [
++      'لأن "لم" لا تدخل إلا على أفعال الأمر',
++      'لأن "لم" أداة جزم تختص بالدخول على الفعل المضارع، لا على الفعل الماضي مباشرة',
++      'لأن "لم" لا تفيد النفي أصلاً',
++      'لأنه تركيب صحيح لا خطأ فيه',
++    ],
++    correctIndex: 1,
++    a: '"لم" أداة جزم تدخل حصراً على الفعل المضارع فتجزمه؛ فلا يصح إدخالها على الفعل الماضي كما هو، بل يجب أولاً تحويل الفعل إلى صورته المضارعة ثم جزمه: "لم يكتبْ الطالبُ الدرسَ".',
++  },
++]
++
++function TopicPage() {
++  return (
++    <main className="flex-1">
++      <div className="border-b border-border bg-beige">
++        <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-12">
++          <Link
++            to="/challenges/grammar"
++            className="text-xs text-muted-foreground hover:text-brand mb-3 inline-block"
++          >
++            ← All grammar topics
++          </Link>
++          <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-3">
++            Topic 31 of 47
++          </p>
++          <h1 className="font-serif tracking-[-0.02em] text-3xl font-bold text-foreground leading-tight mb-3">
++            <span
++              dir="rtl"
++              lang="ar"
++              style={{ fontFamily: "'Noto Naskh Arabic', serif" }}
++              className="mr-2"
++            >
++              نفي الماضي
++            </span>
++            — Negation of the Past
++          </h1>
++          <p className="text-muted-foreground text-base max-w-xl">
++            The past tense can be negated two ways. The simple form is{' '}
++            <span className="font-medium text-foreground">ما</span> + فعل ماضٍ (ما كتبَ = "he did
++            not write"), with the verb unchanged. The other is{' '}
++            <span className="font-medium text-foreground">لم</span> + فعل مضارع مجزوم (لم يكتبْ) —
++            critically, لم requires the PRESENT-tense verb in the jussive (مجزوم) form, not the
++            ماضي verb itself.
++          </p>
++        </div>
++      </div>
++      <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-8">
++        <QuizCarousel items={quizItems} />
++      </div>
++    </main>
++  )
++}
+diff --git a/src/routes/challenges/grammar/past-tense-conjugation/index.tsx b/src/routes/challenges/grammar/past-tense-conjugation/index.tsx
+new file mode 100644
+index 0000000..c4bc42d
+--- /dev/null
++++ b/src/routes/challenges/grammar/past-tense-conjugation/index.tsx
+@@ -0,0 +1,117 @@
++import { createFileRoute, Link } from '@tanstack/react-router'
++import { QuizCarousel } from '#/components/QuizCarousel'
++import type { StrictQuizItem } from '#/routes/challenges/-quiz-types'
++
++export const Route = createFileRoute('/challenges/grammar/past-tense-conjugation/')({
++  head: () => ({ meta: [{ title: 'Past Tense Full Conjugation — Grammar — Tayseer' }] }),
++  component: TopicPage,
++})
++
++const quizItems: StrictQuizItem[] = [
++  {
++    q: 'كيف يُصرَّف الفعل الماضي عبر الضمائر المختلفة؟',
++    options: [
++      'بالتصدير بحرف مضارعة في أوله',
++      'بإضافة لواحق (ضمائر متصلة) في آخره، بينما يبقى جذره ثابتاً',
++      'بتغيير الحرف الأول من الجذر نفسه',
++      'لا يتغير شكل الفعل الماضي أبداً بين الضمائر',
++    ],
++    correctIndex: 1,
++    a: 'الفعل الماضي يُصرَّف عبر الضمائر المختلفة بإضافة لواحق (ضمائر متصلة) في آخره، مثل التاء والألف والواو والنون، بينما يبقى جذر الفعل نفسه ثابتاً، كما في: كَتَبَ ← كَتَبْتُ ← كَتَبُوا.',
++  },
++  {
++    q: 'ما هي صيغة الفعل الماضي مع ضمير "هو" (الغائب المفرد المذكر)؟',
++    options: [
++      'الصيغة المجردة بلا لاحقة، مثل "كَتَبَ"',
++      'الصيغة مع لاحقة التاء "كَتَبَتْ"',
++      'الصيغة مع لاحقة الألف "كَتَبَا"',
++      'الصيغة مع لاحقة النون "كَتَبْنَ"',
++    ],
++    correctIndex: 0,
++    a: 'صيغة "هو" هي الأصل المجرد للفعل الماضي بلا أي لاحقة ضمير متصل، مثل "كَتَبَ"، وهي القاعدة التي تُشتق منها بقية الصيغ بإضافة اللواحق المناسبة.',
++  },
++  {
++    q: 'أكمل: أنتِ ___ الرسالةَ (الصيغة الصحيحة لـ"كتب" مع المخاطبة المفردة)',
++    options: ['كَتَبْتَ', 'كَتَبْتِ', 'كَتَبَتْ', 'كَتَبْتُنَّ'],
++    correctIndex: 1,
++    a: 'مع ضمير "أنتِ" (المخاطبة المفردة) تُضاف لاحقة "تِ" بكسر التاء: "أنتِ كَتَبْتِ الرسالةَ"، بخلاف "كَتَبْتَ" الخاصة بالمخاطب المذكر.',
++  },
++  {
++    q: 'ما هي صيغة الفعل الماضي "كتب" مع ضمير "هنّ" (جمع الغائبات)؟',
++    options: ['كَتَبْنَ', 'كَتَبُوا', 'كَتَبَتَا', 'كَتَبَتْ'],
++    correctIndex: 0,
++    a: 'مع "هنّ" تُضاف لاحقة "نَ" الساكنة النون: "الطالباتُ كَتَبْنَ الدرسَ"، وهي لاحقة خاصة بجمع الإناث الغائبات.',
++  },
++  {
++    q: 'أي من هذه الصيغ خطأ في تصريف الفعل الماضي "كتب" مع الضمير المذكور؟',
++    options: ['أنتم كَتَبْتُم', 'نحن كَتَبْنَا', 'أنتما كَتَبَا', 'هم كَتَبُوا'],
++    correctIndex: 2,
++    a: '"أنتما" (المخاطبان) تأخذ لاحقة "تُما": الصواب "كَتَبْتُما"؛ أما "كَتَبَا" (بلا تاء) فهي صيغة "هما" للغائبَين المثنى، لا للمخاطبَين.',
++  },
++  {
++    q: 'ماذا تدل لاحقة "تُ" (بضم التاء) في تصريف الماضي، كما في "كَتَبْتُ"؟',
++    options: [
++      'تدل على ضمير المتكلم المفرد "أنا"',
++      'تدل على ضمير الغائب "هو"',
++      'تدل على جمع المخاطبين',
++      'تدل على المثنى',
++    ],
++    correctIndex: 0,
++    a: 'لاحقة "تُ" المضمومة التاء تدل على المتكلم المفرد "أنا": "أنا كَتَبْتُ الدرسَ" (I wrote the lesson).',
++  },
++  {
++    q: 'ما صيغة الفعل الماضي "كتب" مع "هما" حين تدل على مثنى مؤنث غائب؟',
++    options: ['كَتَبَا', 'كَتَبَتَا', 'كَتَبْتُما', 'كَتَبْنَ'],
++    correctIndex: 1,
++    a: '"هما" للمثنى المؤنث الغائب تأخذ لاحقة "تَا": "الطالبتان كَتَبَتَا الدرسَ"، بخلاف "كَتَبَا" الخاصة بالمثنى المذكر الغائب.',
++  },
++  {
++    q: 'أكمل: نحن ___ الدرسَ (الصيغة الصحيحة لـ"كتب" مع "نحن")',
++    options: ['كَتَبْنَا', 'كَتَبْتُم', 'كَتَبُوا', 'كَتَبْنَ'],
++    correctIndex: 0,
++    a: 'مع "نحن" تُضاف لاحقة "نَا": "نحن كَتَبْنَا الدرسَ" (We wrote the lesson) — لا تُخلط بلاحقة "نَ" الساكنة الخاصة بـ"هنّ" فقط.',
++  },
++]
++
++function TopicPage() {
++  return (
++    <main className="flex-1">
++      <div className="border-b border-border bg-beige">
++        <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-12">
++          <Link
++            to="/challenges/grammar"
++            className="text-xs text-muted-foreground hover:text-brand mb-3 inline-block"
++          >
++            ← All grammar topics
++          </Link>
++          <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-3">
++            Topic 30 of 47
++          </p>
++          <h1 className="font-serif tracking-[-0.02em] text-3xl font-bold text-foreground leading-tight mb-3">
++            <span
++              dir="rtl"
++              lang="ar"
++              style={{ fontFamily: "'Noto Naskh Arabic', serif" }}
++              className="mr-2"
++            >
++              تصريف الفعل الماضي
++            </span>
++            — Past Tense Full Conjugation
++          </h1>
++          <p className="text-muted-foreground text-base max-w-xl">
++            The past tense conjugates entirely by SUFFIX — the root and pattern never move. The
++            هو (3rd person masc. sg.) form is the unsuffixed base (كَتَبَ), and every other person
++            adds a suffix onto it: ت, تِ, تما, تم, تنّ, ا, وا, تا, نَ, نا across{' '}
++            <span className="font-medium text-foreground">
++              هو / هي / هما / هم / هنّ / أنتَ / أنتِ / أنتما / أنتم / أنتنّ / أنا / نحن
++            </span>
++            .
++          </p>
++        </div>
++      </div>
++      <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-8">
++        <QuizCarousel items={quizItems} />
++      </div>
++    </main>
++  )
++}
+diff --git a/src/routes/challenges/grammar/present-tense-conjugation/index.tsx b/src/routes/challenges/grammar/present-tense-conjugation/index.tsx
+new file mode 100644
+index 0000000..f86b2dd
+--- /dev/null
++++ b/src/routes/challenges/grammar/present-tense-conjugation/index.tsx
+@@ -0,0 +1,109 @@
++import { createFileRoute, Link } from '@tanstack/react-router'
++import { QuizCarousel } from '#/components/QuizCarousel'
++import type { StrictQuizItem } from '#/routes/challenges/-quiz-types'
++
++export const Route = createFileRoute('/challenges/grammar/present-tense-conjugation/')({
++  head: () => ({ meta: [{ title: 'Present Tense Full Conjugation — Grammar — Tayseer' }] }),
++  component: TopicPage,
++})
++
++const quizItems: StrictQuizItem[] = [
++  {
++    q: 'بم يتميز الفعل المضارع صرفياً عن الفعل الماضي؟',
++    options: [
++      'بلاحقة في آخره فقط',
++      'بحرف من أحرف المضارعة (أ/ن/ي/ت) في أوله، وأحياناً لاحقة أيضاً',
++      'بحذف الجذر الثلاثي',
++      'لا فرق بينهما شكلياً',
++    ],
++    correctIndex: 1,
++    a: 'الفعل المضارع يتميز بحرف من "أحرف المضارعة" (أ، ن، ي، ت) يُزاد في أوله، وقد يُضاف إليه أيضاً لاحقة في آخره حسب الضمير، مثل "يَكْتُبُ" و"تَكْتُبِينَ".',
++  },
++  {
++    q: 'أكمل: أنا ___ الدرسَ (الصيغة الصحيحة لمضارع "كتب" مع "أنا")',
++    options: ['أَكْتُبُ', 'نَكْتُبُ', 'يَكْتُبُ', 'تَكْتُبُ'],
++    correctIndex: 0,
++    a: 'حرف المضارعة الخاص بالمتكلم المفرد "أنا" هو الهمزة: "أنا أَكْتُبُ الدرسَ".',
++  },
++  {
++    q: 'أكمل: نحن ___ الدرسَ (الصيغة الصحيحة لمضارع "كتب" مع "نحن")',
++    options: ['أَكْتُبُ', 'نَكْتُبُ', 'يَكْتُبُونَ', 'تَكْتُبُ'],
++    correctIndex: 1,
++    a: 'حرف المضارعة الخاص بالمتكلمين "نحن" هو النون: "نحن نَكْتُبُ الدرسَ".',
++  },
++  {
++    q: 'ما علامة الرفع الأصلية (الافتراضية) في الفعل المضارع الصحيح الآخر، مثل "يَكْتُبُ"؟',
++    options: ['الفتحة الظاهرة', 'الضمة الظاهرة', 'السكون', 'ثبوت النون'],
++    correctIndex: 1,
++    a: 'الفعل المضارع الصحيح الآخر يُرفع بالضمة الظاهرة على آخره، كما في "يَكْتُبُ"؛ أما الأفعال الخمسة فتُرفع بثبوت النون بدلاً من الضمة.',
++  },
++  {
++    q: 'ما هي "الأفعال الخمسة" وكيف تُرفع؟',
++    options: [
++      'كل مضارع اتصلت به ألف الاثنين أو واو الجماعة أو ياء المخاطبة (مثل يَكْتُبَانِ، يَكْتُبُونَ، تَكْتُبِينَ)، وتُرفع بثبوت النون',
++      'أفعال ماضية فقط',
++      'أفعال أمر فقط لا غير',
++      'أفعال تُرفع بالضمة كسائر الأفعال',
++    ],
++    correctIndex: 0,
++    a: 'الأفعال الخمسة هي كل مضارع اتصلت به ألف الاثنين أو واو الجماعة أو ياء المخاطبة (مثل يَكْتُبَانِ، يَكْتُبُونَ، تَكْتُبِينَ)، وعلامة رفعها ثبوت النون في آخرها، بدلاً من الضمة.',
++  },
++  {
++    q: 'أكمل: أنتِ ___ الدرسَ (الصيغة الصحيحة لمضارع "كتب" مع المخاطبة المفردة)',
++    options: ['تَكْتُبُ', 'تَكْتُبِينَ', 'تَكْتُبَانِ', 'تَكْتُبْنَ'],
++    correctIndex: 1,
++    a: '"أنتِ" (المخاطبة المفردة) تأخذ صيغة "تَكْتُبِينَ" وهي من الأفعال الخمسة (بياء المخاطبة)، تُرفع بثبوت النون.',
++  },
++  {
++    q: 'أي من هذه الصيغ خطأ في تصريف مضارع "كتب" مع الضمير المذكور؟',
++    options: ['هو يَكْتُبُ', 'هم يَكْتُبُونَ', 'أنتم تَكْتُبُ', 'هنّ يَكْتُبْنَ'],
++    correctIndex: 2,
++    a: '"أنتم" (جمع المخاطبين) تأخذ صيغة "تَكْتُبُونَ" من الأفعال الخمسة، لا "تَكْتُبُ" التي هي صيغة المخاطب المفرد "أنتَ".',
++  },
++  {
++    q: 'أي حرف من أحرف المضارعة (أ ن ي ت) يُستخدم مع "هو" ومع جماعة الغائبين "هم" و"هنّ"؟',
++    options: ['الهمزة', 'النون', 'الياء', 'التاء'],
++    correctIndex: 2,
++    a: 'حرف "الياء" هو حرف المضارعة المستخدم مع الغائب المفرد "هو" (يَكْتُبُ) وجماعة الغائبين "هم" (يَكْتُبُونَ) وجماعة الغائبات "هنّ" (يَكْتُبْنَ).',
++  },
++]
++
++function TopicPage() {
++  return (
++    <main className="flex-1">
++      <div className="border-b border-border bg-beige">
++        <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-12">
++          <Link
++            to="/challenges/grammar"
++            className="text-xs text-muted-foreground hover:text-brand mb-3 inline-block"
++          >
++            ← All grammar topics
++          </Link>
++          <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-3">
++            Topic 32 of 47
++          </p>
++          <h1 className="font-serif tracking-[-0.02em] text-3xl font-bold text-foreground leading-tight mb-3">
++            <span
++              dir="rtl"
++              lang="ar"
++              style={{ fontFamily: "'Noto Naskh Arabic', serif" }}
++              className="mr-2"
++            >
++              تصريف الفعل المضارع
++            </span>
++            — Present Tense Full Conjugation
++          </h1>
++          <p className="text-muted-foreground text-base max-w-xl">
++            Unlike the past tense, the present tense is marked by a PREFIX — one of أ / ن / ي / ت
++            — plus sometimes a suffix. The default مرفوع ending is a ـُ (or ثبوت النون for the
++            five-verb forms). The prefix follows the person: أ=أنا, ن=نحن, ي=هو/هم/هنّ, and
++            ت=أنتَ/أنتِ/هي and the rest of the "you" forms.
++          </p>
++        </div>
++      </div>
++      <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-8">
++        <QuizCarousel items={quizItems} />
++      </div>
++    </main>
++  )
++}
+diff --git a/src/routes/challenges/grammar/prohibitive/index.tsx b/src/routes/challenges/grammar/prohibitive/index.tsx
+new file mode 100644
+index 0000000..47b9dfe
+--- /dev/null
++++ b/src/routes/challenges/grammar/prohibitive/index.tsx
+@@ -0,0 +1,124 @@
++import { createFileRoute, Link } from '@tanstack/react-router'
++import { QuizCarousel } from '#/components/QuizCarousel'
++import type { StrictQuizItem } from '#/routes/challenges/-quiz-types'
++
++export const Route = createFileRoute('/challenges/grammar/prohibitive/')({
++  head: () => ({ meta: [{ title: 'The Prohibitive — Grammar — Tayseer' }] }),
++  component: TopicPage,
++})
++
++const quizItems: StrictQuizItem[] = [
++  {
++    q: 'ما عمل "لا الناهية" في الفعل المضارع الذي يليها؟',
++    options: [
++      'ترفعه',
++      'تنصبه',
++      'تجزمه، وتفيد النهي عن فعل الشيء',
++      'لا تؤثر في إعرابه',
++    ],
++    correctIndex: 2,
++    a: '"لا الناهية" أداة جزم تدخل على الفعل المضارع فتجزمه، وتفيد طلب الكف عن الفعل (النهي)، مثل "لا تَكْتُبْ" = "don\'t write".',
++  },
++  {
++    q: 'أكمل: لا ___ على الجدارِ! (نهي بـ"لا الناهية")',
++    options: ['تَكْتُبُ', 'تَكْتُبَ', 'تَكْتُبْ', 'كَتَبْتَ'],
++    correctIndex: 2,
++    a: 'بعد "لا الناهية" يُجزم الفعل المضارع بحذف حركة الإعراب: "لا تَكْتُبْ على الجدارِ" (don\'t write on the wall) لا "لا تَكْتُبُ" ولا "لا تَكْتُبَ".',
++  },
++  {
++    q: 'ما الفرق بين "لا الناهية" و"لا النافية" رغم أنهما بنفس الشكل؟',
++    options: [
++      'لا فرق بينهما إطلاقاً في المعنى أو العمل',
++      '"لا الناهية" تفيد طلب الكف عن الفعل وتجزم المضارع، بينما "لا النافية" تنفي وقوع الفعل فقط ولا تجزمه',
++      '"لا النافية" تجزم و"الناهية" لا تجزم',
++      'كلتاهما تدخلان على الأسماء فقط',
++    ],
++    correctIndex: 1,
++    a: 'كلاهما بنفس اللفظ لكن يختلفان في المعنى والعمل: "لا الناهية" أداة طلب (أمر بالكف) تجزم المضارع، مثل "لا تَكْذِبْ"؛ أما "لا النافية" فتنفي وقوع الفعل في الحاضر أو الاستقبال دون أن تجزمه، فيبقى مرفوعاً: "لا يَكْذِبُ محمدٌ" (Muhammad does not lie).',
++  },
++  {
++    q: 'أي من الجملتين تستخدم "لا" للنهي (لا للنفي)، ولماذا؟',
++    options: [
++      '"لا يَشْرَبُ الطفلُ القهوةَ" (نفي، الفعل مرفوع)',
++      '"لا تَشْرَبْ القهوةَ" (نهي، الفعل مجزوم)',
++      'كلتاهما نهي',
++      'كلتاهما نفي',
++    ],
++    correctIndex: 1,
++    a: '"لا تَشْرَبْ القهوةَ" نهي لأن الفعل مجزوم (تَشْرَبْ بسكون الآخر) وموجّه لمخاطب، بمعنى "أطلب منك ألا تشرب"؛ أما "لا يَشْرَبُ الطفلُ القهوةَ" فنفي لأن الفعل مرفوع ويخبر عن حال لا يطلب تغييرها.',
++  },
++  {
++    q: 'أكمل: لا ___ بعيداً! (نهي، من فعل "ذهب")',
++    options: ['تَذْهَبُ', 'تَذْهَبْ', 'تَذْهَبَ', 'ذَهَبْتَ'],
++    correctIndex: 1,
++    a: 'النهي يقتضي جزم الفعل المضارع: "لا تَذْهَبْ بعيداً!" (Don\'t go far!).',
++  },
++  {
++    q: 'هل يمكن أن تدخل "لا الناهية" على فعل غائب لا مخاطب؟',
++    options: [
++      'لا، فهي خاصة بالمخاطب فقط',
++      'نعم، وتُفيد طلب عدم فعل الغائب، مثل "لا يَذْهَبْ أحدٌ" مع بقاء عمل الجزم',
++      'لا وجود لهذا الاستخدام إطلاقاً',
++      'تدخل فقط على الأفعال الماضية',
++    ],
++    correctIndex: 1,
++    a: 'يمكن أن تدخل "لا" على الفعل الغائب لإفادة النهي أيضاً، مثل "لا يَذْهَبْ أحدٌ" (Let no one go)، وهو استخدام أقل شيوعاً من النهي المباشر للمخاطب لكنه صحيح نحوياً ويجزم الفعل كذلك.',
++  },
++  {
++    q: 'هل الجملة "لا تَلْعَبِي بالنارِ" صحيحة لمخاطبة مؤنثة؟',
++    options: [
++      'صحيح، والفعل مجزوم بحذف النون لأنه من الأفعال الخمسة',
++      'خطأ، الصواب لا تَلْعَبِينَ بالنار',
++      'خطأ، لا يوجد نهي للمؤنث',
++      'خطأ، الصواب لا تَلْعَبُ بالنار',
++    ],
++    correctIndex: 0,
++    a: '"لا تَلْعَبِي بالنارِ" صحيح: الفعل "تَلْعَبِينَ" من الأفعال الخمسة، وعلامة جزمه حذف النون، فتصبح "تَلْعَبِي" بعد دخول "لا" الناهية.',
++  },
++  {
++    q: 'ما إعراب الفعل المضارع في جملة "لا تَقْتَرِبْ من الحافةِ"؟',
++    options: ['مرفوع بالضمة', 'منصوب بالفتحة', 'مجزوم بالسكون بـ"لا" الناهية', 'مبني على الفتح'],
++    correctIndex: 2,
++    a: 'الفعل "تَقْتَرِبْ" مجزوم بالسكون الظاهر على آخره، وأداة الجزم هي "لا" الناهية التي أفادت هنا معنى النهي عن الاقتراب من الحافة.',
++  },
++]
++
++function TopicPage() {
++  return (
++    <main className="flex-1">
++      <div className="border-b border-border bg-beige">
++        <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-12">
++          <Link
++            to="/challenges/grammar"
++            className="text-xs text-muted-foreground hover:text-brand mb-3 inline-block"
++          >
++            ← All grammar topics
++          </Link>
++          <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-3">
++            Topic 35 of 47
++          </p>
++          <h1 className="font-serif tracking-[-0.02em] text-3xl font-bold text-foreground leading-tight mb-3">
++            <span
++              dir="rtl"
++              lang="ar"
++              style={{ fontFamily: "'Noto Naskh Arabic', serif" }}
++              className="mr-2"
++            >
++              لا الناهية
++            </span>
++            — The Prohibitive
++          </h1>
++          <p className="text-muted-foreground text-base max-w-xl">
++            لا + فعل مضارع مجزوم forms a prohibition (لا تَكْتُبْ = "don't write"). This is
++            distinct from لا النافية, which simply negates a present-tense statement and does NOT
++            cause jazm — the same particle, but a different grammatical effect depending on
++            whether it's a command or a statement.
++          </p>
++        </div>
++      </div>
++      <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-8">
++        <QuizCarousel items={quizItems} />
++      </div>
++    </main>
++  )
++}
+diff --git a/src/routes/challenges/grammar/verb-basics-faail-mafool/index.tsx b/src/routes/challenges/grammar/verb-basics-faail-mafool/index.tsx
+new file mode 100644
+index 0000000..8575133
+--- /dev/null
++++ b/src/routes/challenges/grammar/verb-basics-faail-mafool/index.tsx
+@@ -0,0 +1,131 @@
++import { createFileRoute, Link } from '@tanstack/react-router'
++import { QuizCarousel } from '#/components/QuizCarousel'
++import type { StrictQuizItem } from '#/routes/challenges/-quiz-types'
++
++export const Route = createFileRoute('/challenges/grammar/verb-basics-faail-mafool/')({
++  head: () => ({ meta: [{ title: 'Verb Sentence Basics — Grammar — Tayseer' }] }),
++  component: TopicPage,
++})
++
++const quizItems: StrictQuizItem[] = [
++  {
++    q: 'ما هو الفاعل وما حكم إعرابه؟',
++    options: [
++      'اسم منصوب يقع عليه فعل الفاعل',
++      'اسم مرفوع يدل على من قام بالفعل أو اتصف به، ويأتي بعد الفعل في الترتيب القياسي',
++      'اسم مجرور بحرف جر يسبقه',
++      'فعل يدل على الحدث نفسه',
++    ],
++    correctIndex: 1,
++    a: 'الفاعل اسم مرفوع دائماً يدل على من قام بالفعل، ويأتي بعد الفعل في الترتيب القياسي للجملة الفعلية، مثل "الطالبُ" في "كتبَ الطالبُ الدرسَ".',
++  },
++  {
++    q: 'ما الترتيب القياسي (الأصلي) لعناصر الجملة الفعلية في العربية؟',
++    options: [
++      'فعل - فاعل - مفعول به',
++      'فاعل - فعل - مفعول به',
++      'مفعول به - فعل - فاعل',
++      'فاعل - مفعول به - فعل',
++    ],
++    correctIndex: 0,
++    a: 'الترتيب القياسي للجملة الفعلية هو: الفعل ثم الفاعل ثم المفعول به (فعل-فاعل-مفعول به)، كما في "كتبَ الطالبُ الدرسَ"، وإن جاز التقديم والتأخير لأغراض بلاغية.',
++  },
++  {
++    q: 'أكمل: أكلَ الولدُ ___ (التفاحة، مفعول به منصوب)',
++    options: ['التفاحةُ', 'التفاحةَ', 'التفاحةِ', 'تفاحةٌ'],
++    correctIndex: 1,
++    a: 'المفعول به منصوب دائماً، فتكون "التفاحةَ" هي الإجابة الصحيحة: "أكلَ الولدُ التفاحةَ".',
++  },
++  {
++    q: 'هل يمكن أن يكون للفعل الواحد أكثر من فاعل واحد نحوياً؟',
++    options: [
++      'نعم، يمكن أن يكون له فاعلان أو أكثر في آن واحد',
++      'لا، لكل فعل فاعل واحد فقط؛ وإسناد الفعل لعدة أشخاص يتم بالعطف على الفاعل لا بتعدد الفاعلين',
++      'نعم، إذا كان الفعل متعدياً',
++      'لا يوجد فاعل إلا في الجملة الاسمية',
++    ],
++    correctIndex: 1,
++    a: 'الفعل الواحد له فاعل واحد فقط نحوياً؛ فعند إسناده لعدة أشخاص نستخدم فاعلاً واحداً معطوفاً عليه بحرف عطف، مثل "كتبَ زيدٌ وعمرٌو"، ويبقى "زيدٌ" هو الفاعل و"عمرٌو" معطوفاً عليه.',
++  },
++  {
++    q: 'ما الفرق بين الفعل المتعدي والفعل اللازم؟',
++    options: [
++      'المتعدي يحتاج إلى مفعول به لتمام معناه، واللازم يكتفي بفاعله دون حاجة لمفعول به',
++      'المتعدي لا يحتاج فاعلاً، واللازم يحتاج فاعلاً',
++      'المتعدي فعل ماضٍ فقط، واللازم فعل مضارع فقط',
++      'لا فرق بينهما في المعنى أو الاستعمال',
++    ],
++    correctIndex: 0,
++    a: 'الفعل المتعدي يتعدى أثره إلى مفعول به فيحتاج إليه لتمام المعنى، مثل "كتبَ الرسالةَ"؛ أما الفعل اللازم فيكتفي بفاعله، مثل "ذهبَ الولدُ"، فهو تام المعنى بفاعله وحده.',
++  },
++  {
++    q: 'أي من هذه الجمل بها خطأ في إعراب الفاعل والمفعول به؟',
++    options: ['قرأ الطالبُ الكتابَ', 'قرأ الطالبَ الكتابُ', 'فتح الرجلُ البابَ', 'شرب الطفلُ الماءَ'],
++    correctIndex: 1,
++    a: 'في "قرأ الطالبَ الكتابُ" عُكس الإعراب: الفاعل ("الطالب") يجب أن يكون مرفوعاً والمفعول به ("الكتاب") منصوباً؛ الصواب: "قرأ الطالبُ الكتابَ".',
++  },
++  {
++    q: 'ما هو الجذر الثلاثي (يُرمز له بـ ف-ع-ل) وما فائدته؟',
++    options: [
++      'هيكل مكوّن من ثلاثة أحرف أصلية (مثل ك-ت-ب) تُبنى منه جميع تصريفات الفعل وأوزانه المشتقة',
++      'صيغة خاصة بالفعل المضارع فقط',
++      'اسم آخر لحروف الجر',
++      'قاعدة تخص الأسماء الخمسة فقط',
++    ],
++    correctIndex: 0,
++    a: 'الجذر الثلاثي مثل ف-ع-ل هو الهيكل الأساسي من ثلاثة أحرف أصلية (مثل ك-ت-ب لـ"كتب") الذي تُشتق منه كل صيغ الفعل وأوزانه، ماضياً ومضارعاً ومصدراً واسم فاعل ونحوه.',
++  },
++  {
++    q: 'الفعل "نامَ" في جملة "نامَ الطفلُ" يُصنَّف على أنه:',
++    options: [
++      'فعل متعدٍ يحتاج مفعولاً به',
++      'فعل لازم يكتفي بفاعله',
++      'اسم لا فعل',
++      'حرف جر',
++    ],
++    correctIndex: 1,
++    a: '"نامَ" فعل لازم؛ يكتفي بفاعله ("الطفلُ") ولا يحتاج إلى مفعول به لتمام معناه، بخلاف الأفعال المتعدية كـ"أكلَ" أو "كتبَ".',
++  },
++]
++
++function TopicPage() {
++  return (
++    <main className="flex-1">
++      <div className="border-b border-border bg-beige">
++        <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-12">
++          <Link
++            to="/challenges/grammar"
++            className="text-xs text-muted-foreground hover:text-brand mb-3 inline-block"
++          >
++            ← All grammar topics
++          </Link>
++          <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-3">
++            Topic 29 of 47
++          </p>
++          <h1 className="font-serif tracking-[-0.02em] text-3xl font-bold text-foreground leading-tight mb-3">
++            <span
++              dir="rtl"
++              lang="ar"
++              style={{ fontFamily: "'Noto Naskh Arabic', serif" }}
++              className="mr-2"
++            >
++              الفاعل والمفعول به
++            </span>
++            — Verb Sentence Basics
++          </h1>
++          <p className="text-muted-foreground text-base max-w-xl">
++            Every verbal sentence rests on a فعل (verb), its فاعل (subject — always مرفوع,
++            appearing after the verb), and often a{' '}
++            <span className="font-medium text-foreground">مفعول به</span> (object — always منصوب).
++            Standard word order is verb-subject-object, a verb takes only ONE فاعل, and verbs
++            split into متعدٍ (transitive, takes an object) and لازم (intransitive). Every
++            conjugated form is built from a three-consonant root skeleton like ف-ع-ل.
++          </p>
++        </div>
++      </div>
++      <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-8">
++        <QuizCarousel items={quizItems} />
++      </div>
++    </main>
++  )
++}
+diff --git a/src/routes/challenges/grammar/weak-verbs/index.tsx b/src/routes/challenges/grammar/weak-verbs/index.tsx
+new file mode 100644
+index 0000000..1189622
+--- /dev/null
++++ b/src/routes/challenges/grammar/weak-verbs/index.tsx
+@@ -0,0 +1,125 @@
++import { createFileRoute, Link } from '@tanstack/react-router'
++import { QuizCarousel } from '#/components/QuizCarousel'
++import type { StrictQuizItem } from '#/routes/challenges/-quiz-types'
++
++export const Route = createFileRoute('/challenges/grammar/weak-verbs/')({
++  head: () => ({ meta: [{ title: 'Weak Verbs in Practice — Grammar — Tayseer' }] }),
++  component: TopicPage,
++})
++
++const quizItems: StrictQuizItem[] = [
++  {
++    q: 'ما هو الفعل الأجوف (المعتل الأوسط)؟',
++    options: [
++      'فعل حرفه الأوسط (عين الفعل) حرف علة، و أو ي، مثل "قال" (أصلها ق-و-ل)',
++      'فعل أوله همزة',
++      'فعل آخره حرف علة',
++      'فعل مضعف الحروف',
++    ],
++    correctIndex: 0,
++    a: 'الفعل الأجوف هو ما كان حرفه الأوسط (عين الفعل) حرف علة، واواً أو ياءً، مثل "قالَ" (أصلها ق-و-ل) و"باعَ" (أصلها ب-ي-ع)، وتتحول عينه إلى ألف في الماضي.',
++  },
++  {
++    q: 'أكمل: أنا ___ الحقيقةَ (تصريف "قال" مع ضمير المتكلم، حيث يُحذف حرف العلة)',
++    options: ['قَالْتُ', 'قُلْتُ', 'قَوَلْتُ', 'أَقُولُ'],
++    correctIndex: 1,
++    a: 'عند اتصال الفعل الأجوف "قال" بضمير رفع متحرك مثل "تُ"، يُحذف حرف العلة (أصله واو) وتُنقل حركته إلى ما قبله: "قُلْتُ" لا "قَالْتُ".',
++  },
++  {
++    q: 'ما هو الفعل المهموز الفاء (مثل أخذ وأكل) وماذا يحدث لهمزته في فعل الأمر؟',
++    options: [
++      'تبقى الهمزة كما هي دائماً',
++      'تُحذف الهمزة الأولى كلياً في صيغة الأمر سماعاً، مثل "خُذْ" و"كُلْ"',
++      'تتحول الهمزة إلى ياء في الأمر',
++      'تتحول الهمزة إلى واو في الأمر',
++    ],
++    correctIndex: 1,
++    a: 'الفعل المهموز الفاء مثل "أخذ" و"أكل" تُحذف همزته الأولى كلياً في صيغة الأمر سماعاً: "خُذْ" (من أخذ) و"كُلْ" (من أكل)، لا "اُوخُذْ" أو "اُوكُلْ".',
++  },
++  {
++    q: 'ما فعل الأمر الصحيح من "أخذ" مخاطباً مفرداً؟',
++    options: ['اؤخُذْ', 'أُخُذْ', 'خُذْ', 'آخُذْ'],
++    correctIndex: 2,
++    a: 'فعل الأمر من "أخذ" هو "خُذْ" بحذف الهمزة الأصلية كلياً، وهذا حذف سماعي خاص بهذا النوع من الأفعال المهموزة الفاء.',
++  },
++  {
++    q: '"أرادَ" — إلى أي وزن صرفي تنتمي، وما نوعها من حيث العلة؟',
++    options: [
++      'فعل صحيح سالم من وزن "فَعَلَ"',
++      'فعل أجوف من وزن "أَفْعَلَ" (أصلها ر-و-د)، مضارعها "يُريدُ"',
++      'فعل مهموز اللام',
++      'فعل ناقص من وزن "فاعَلَ"',
++    ],
++    correctIndex: 1,
++    a: '"أرادَ" فعل أجوف على وزن "أَفْعَلَ"، أصله الثلاثي ر-و-د، وحرف العلة (الواو) يتحول إلى ياء في المضارع: "يُريدُ" — من الأفعال الأجوفة الشائعة في التعبير عن الرغبة.',
++  },
++  {
++    q: 'ما هو الفعل المضعف (كـ"ظنّ")، ولماذا كُتب بحرف واحد مشدد؟',
++    options: [
++      'فعل عينه ولامه من جنس واحد (ن-ن) فأُدغمتا في حرف واحد مشدد: أصله ظ-ن-ن',
++      'فعل أوله وآخره حرفا علة',
++      'فعل حُذف أحد أحرفه الثلاثة',
++      'فعل زيد عليه حرف من حروف الزيادة العشرة',
++    ],
++    correctIndex: 0,
++    a: 'الفعل المضعف عينه ولامه من جنس واحد، فيُدغم الحرفان المتماثلان في حرف واحد مشدد: "ظَنَّ" أصلها ظ-ن-ن، أُدغمت النونان في نون واحدة مشددة.',
++  },
++  {
++    q: 'ماذا يفعل الفعل "ظنّ" (من أخوات ظنّ) بالجملة الاسمية التي يدخل عليها؟',
++    options: [
++      'يرفع المبتدأ والخبر معاً كما هما',
++      'ينصب المبتدأ والخبر معاً فيصبحان مفعولين به، أولاً وثانياً',
++      'يجر المبتدأ ويرفع الخبر',
++      'لا تأثير له على إعراب الجملة الاسمية',
++    ],
++    correctIndex: 1,
++    a: '"ظنّ" وأخواتها (من أفعال القلوب) تدخل على الجملة الاسمية فتنصب طرفيها معاً: المبتدأ يصبح مفعولاً به أول، والخبر يصبح مفعولاً به ثانياً، مثل "ظننتُ الجوَّ جميلاً" (الأصل: الجوُّ جميلٌ).',
++  },
++  {
++    q: 'أكمل: ظننتُ الامتحانَ ___ (سهلاً، مفعول به ثانٍ منصوب)',
++    options: ['سهلٌ', 'سهلاً', 'سهلٍ', 'سهلُ'],
++    correctIndex: 1,
++    a: 'المفعول به الثاني لـ"ظنّ" (وهو خبر الجملة الاسمية أصلاً) يكون منصوباً: "ظننتُ الامتحانَ سهلاً" — كلا المفعولين (الامتحانَ وسهلاً) منصوبان.',
++  },
++]
++
++function TopicPage() {
++  return (
++    <main className="flex-1">
++      <div className="border-b border-border bg-beige">
++        <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-12">
++          <Link
++            to="/challenges/grammar"
++            className="text-xs text-muted-foreground hover:text-brand mb-3 inline-block"
++          >
++            ← All grammar topics
++          </Link>
++          <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-3">
++            Topic 33 of 47
++          </p>
++          <h1 className="font-serif tracking-[-0.02em] text-3xl font-bold text-foreground leading-tight mb-3">
++            <span
++              dir="rtl"
++              lang="ar"
++              style={{ fontFamily: "'Noto Naskh Arabic', serif" }}
++              className="mr-2"
++            >
++              الأفعال المعتلة
++            </span>
++            — Weak Verbs in Practice
++          </h1>
++          <p className="text-muted-foreground text-base max-w-xl">
++            Weak verbs bend the rules. Hollow verbs (أجوف) like قَالَ/كَادَ turn a middle و/ي into
++            ا in الماضي and drop it in some conjugations (قُلْتُ). Hamzated verbs like
++            أَخَذَ/أَكَلَ drop their first radical ء entirely in the imperative (خُذْ، كُلْ).
++            أَرَادَ is a hollow أفعل-form verb, while ظَنَّ is a doubled-root verb from the أخوات
++            ظنّ family that enters a nominal sentence and makes both مبتدأ and خبر منصوب.
++          </p>
++        </div>
++      </div>
++      <div className="mx-auto w-[min(720px,calc(100%-2rem))] py-8">
++        <QuizCarousel items={quizItems} />
++      </div>
++    </main>
++  )
++}
