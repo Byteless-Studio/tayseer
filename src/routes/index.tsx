@@ -95,9 +95,9 @@ function HomePage() {
             />
             <ToolCard
               to="/challenges"
-              title="Quizzes"
-              description="Reinforce what you've learned with vocabulary drills, grammar exercises, and comprehension challenges drawn from course material."
-              badge="Coming Soon"
+              title="Challenges"
+              description="Reinforce what you've learned with vocabulary drills on roots and patterns, plus 47 grammar topics drawn from the Medina series."
+              badge=""
             />
           </div>
         </div>

@@ -24,7 +24,7 @@ function VocabularyQuizPage() {
             to="/challenges"
             className="inline-block text-sm text-muted-foreground hover:text-foreground no-underline mb-4"
           >
-            ← Back to Quizzes
+            ← Back to Challenges
           </Link>
           <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-3">
             Vocabulary Quiz

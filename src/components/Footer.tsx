@@ -32,7 +32,7 @@ export default function Footer() {
                 Cognates
               </Link>
               <Link to="/challenges" className="text-foreground/70 no-underline hover:text-foreground transition-colors">
-                Quizzes
+                Challenges
               </Link>
             </div>
           </div>

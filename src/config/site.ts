@@ -6,7 +6,7 @@ export const siteConfig = {
   name: 'Tayseer',
   tagline: 'Learn Arabic. Understand the Quran.',
   description:
-    'Tayseer is a platform for learning classical Arabic through structured courses, vocabulary training, and quizzes.',
+    'Tayseer is a platform for learning classical Arabic through structured courses, vocabulary training, and challenges.',
 } as const
 
 // ─── Navigation ──────────────────────────────────────────────────────────────
@@ -16,7 +16,7 @@ export const navItems = [
   { label: 'Home', to: '/' },
   { label: 'Arabic With Mufti Saim', to: '/arabic-with-mufti-saim' },
   { label: 'Cognates', to: '/cognates' },
-  { label: 'Quizzes', to: '/challenges' },
+  { label: 'Challenges', to: '/challenges' },
 ] as const
 
 export type NavItem = (typeof navItems)[number]
