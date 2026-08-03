@@ -45,6 +45,14 @@ const topics = [
   { n: 37, slug: 'conjunctions', arabic: 'حروف العطف', title: 'Conjunctions' },
   { n: 38, slug: 'inna-wa-akhawatuha', arabic: 'إن وأخواتها', title: 'Inna and Her Sisters' },
   { n: 39, slug: 'kaana-wa-akhawatuha', arabic: 'كان وأخواتها (تابع)', title: 'Kāna and Her Sisters, Continued' },
+  { n: 40, slug: 'other-particles', arabic: 'حروف أخرى', title: 'Other Particles' },
+  { n: 41, slug: 'irab-mudaari', arabic: 'إعراب الفعل المضارع', title: "I'rāb of the Present Tense" },
+  { n: 42, slug: 'masdar-muawwal', arabic: 'المصدر المؤول', title: 'The Interpreted Maṣdar' },
+  { n: 43, slug: 'comparative-superlative', arabic: 'أفعل التفضيل', title: 'Comparative & Superlative' },
+  { n: 44, slug: 'numbers-11-100', arabic: 'الأعداد ١١–١٠٠', title: 'Numbers 11–100 & Ordinals' },
+  { n: 45, slug: 'spelling-rules', arabic: 'قواعد الإملاء', title: 'Spelling Rules' },
+  { n: 46, slug: 'adverbs-of-time-tamyiz', arabic: 'ظرف الزمان والتمييز', title: 'Adverbs of Time & Tamyīz' },
+  { n: 47, slug: 'negative-questions', arabic: 'الأسئلة المنفية', title: 'Negative Questions' },
 ] as const
 
 function GrammarHubPage() {

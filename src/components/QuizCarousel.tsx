@@ -2,6 +2,40 @@ import { useState } from 'react'
 import type { QuizItem } from '#/routes/arabic-with-mufti-saim/-arabic-101.types'
 import { Button } from '#/components/ui/button'
 
+// Quiz strings are authored bilingually as "<arabic>\n<english>". Render the
+// Arabic line RTL in the Naskh face and the English gloss smaller beneath it,
+// using opacity rather than a fixed color so the answer states still tint both.
+function Bilingual({
+  text,
+  arClass = '',
+  enClass = '',
+}: {
+  text: string
+  arClass?: string
+  enClass?: string
+}) {
+  const newline = text.indexOf('\n')
+  const ar = newline === -1 ? text : text.slice(0, newline)
+  const en = newline === -1 ? '' : text.slice(newline + 1).trim()
+  return (
+    <span className="block">
+      <span
+        dir="rtl"
+        lang="ar"
+        style={{ fontFamily: "'Noto Naskh Arabic', 'Amiri', serif" }}
+        className={`block leading-relaxed ${arClass}`}
+      >
+        {ar}
+      </span>
+      {en && (
+        <span dir="ltr" className={`block leading-snug opacity-70 mt-1 ${enClass}`}>
+          {en}
+        </span>
+      )}
+    </span>
+  )
+}
+
 export function QuizCarousel({ items }: { items: QuizItem[] }) {
   const [current, setCurrent] = useState(0)
   const [answers, setAnswers] = useState<Record<number, number>>({})
@@ -53,15 +87,28 @@ export function QuizCarousel({ items }: { items: QuizItem[] }) {
                   correct ? 'border-brand/30 bg-brand/5' : 'border-red-200 bg-red-50'
                 }`}
               >
-                <p className="font-medium text-foreground mb-1">
-                  {i + 1}. {it.q}
-                </p>
-                {!correct && ua !== undefined && (
-                  <p className="text-red-500 mb-0.5">Your answer: {it.options?.[ua]}</p>
+                <div className="font-medium text-foreground mb-2 flex items-start gap-1.5">
+                  <span className="shrink-0 opacity-60">{i + 1}.</span>
+                  <span className="min-w-0 flex-1">
+                    <Bilingual text={it.q} arClass="text-sm" enClass="text-xs" />
+                  </span>
+                </div>
+                {!correct && ua !== undefined && it.options?.[ua] && (
+                  <div className="text-red-500 mb-1.5">
+                    <span className="block text-[0.65rem] uppercase tracking-wide opacity-70 mb-0.5">
+                      Your answer
+                    </span>
+                    <Bilingual text={it.options[ua]} arClass="text-sm" enClass="text-xs" />
+                  </div>
                 )}
-                <p className={correct ? 'text-brand' : 'text-muted-foreground'}>
-                  ✓ {it.options?.[ci]}
-                </p>
+                {it.options?.[ci] && (
+                  <div className={correct ? 'text-brand' : 'text-muted-foreground'}>
+                    <span className="block text-[0.65rem] uppercase tracking-wide opacity-70 mb-0.5">
+                      {correct ? 'Correct' : 'Correct answer'}
+                    </span>
+                    <Bilingual text={it.options[ci]} arClass="text-sm" enClass="text-xs" />
+                  </div>
+                )}
               </div>
             )
           })}
@@ -92,15 +139,19 @@ export function QuizCarousel({ items }: { items: QuizItem[] }) {
       </div>
 
       <div className="rounded-xl border border-border p-5">
-        <p className="text-sm font-medium text-foreground mb-4 leading-snug whitespace-pre-line">
-          {item.q}
-        </p>
+        <div className="mb-5 text-foreground">
+          <Bilingual
+            text={item.q}
+            arClass="text-lg font-medium"
+            enClass="text-sm font-medium"
+          />
+        </div>
 
         {item.options && item.options.length > 0 && (
           <div className="flex flex-col gap-2">
             {item.options.map((opt, j) => {
               let cls =
-                'text-left w-full rounded-lg border px-3 py-2 text-xs transition-colors cursor-pointer whitespace-pre-line '
+                'text-left w-full rounded-lg border px-3 py-2.5 transition-colors cursor-pointer flex items-start gap-2.5 '
               if (!hasAnswered) {
                 cls += 'border-border text-foreground hover:border-brand hover:bg-brand/5'
               } else if (j === correctIdx) {
@@ -112,8 +163,12 @@ export function QuizCarousel({ items }: { items: QuizItem[] }) {
               }
               return (
                 <button type="button" key={j} className={cls} onClick={() => select(j)}>
-                  <span className="font-semibold mr-1">{String.fromCharCode(97 + j)})</span>
-                  {opt}
+                  <span className="font-semibold text-xs shrink-0 pt-1 opacity-60">
+                    {String.fromCharCode(97 + j)})
+                  </span>
+                  <span className="min-w-0 flex-1">
+                    <Bilingual text={opt} arClass="text-base" enClass="text-xs" />
+                  </span>
                 </button>
               )
             })}
@@ -121,8 +176,8 @@ export function QuizCarousel({ items }: { items: QuizItem[] }) {
         )}
 
         {hasAnswered && (
-          <div className="mt-4 rounded-lg bg-muted border-l-2 border-brand p-3 text-xs text-foreground leading-relaxed whitespace-pre-line">
-            {item.a}
+          <div className="mt-4 rounded-lg bg-muted border-l-2 border-brand p-3 text-foreground">
+            <Bilingual text={item.a} arClass="text-[0.95rem]" enClass="text-xs" />
           </div>
         )}
       </div>
