@@ -19,7 +19,12 @@ import { Route as ArabicWithMuftiSaimLectureLectureIdRouteImport } from './route
 import { Route as ApiPublishSplatRouteImport } from './routes/api/publish/$'
 import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
 import { Route as ChallengesGrammarYesNoQuestionsIndexRouteImport } from './routes/challenges/grammar/yes-no-questions/index'
+import { Route as ChallengesGrammarTaajjubIndexRouteImport } from './routes/challenges/grammar/taajjub/index'
+import { Route as ChallengesGrammarSoundMasculinePluralIndexRouteImport } from './routes/challenges/grammar/sound-masculine-plural/index'
+import { Route as ChallengesGrammarSoundFemininePluralIndexRouteImport } from './routes/challenges/grammar/sound-feminine-plural/index'
+import { Route as ChallengesGrammarRelativePronounsIndexRouteImport } from './routes/challenges/grammar/relative-pronouns/index'
 import { Route as ChallengesGrammarPrepositionsIndexRouteImport } from './routes/challenges/grammar/prepositions/index'
+import { Route as ChallengesGrammarNumbers110IndexRouteImport } from './routes/challenges/grammar/numbers-1-10/index'
 import { Route as ChallengesGrammarMubtadaKhabarIndexRouteImport } from './routes/challenges/grammar/mubtada-khabar/index'
 import { Route as ChallengesGrammarMasculineFeminineIndexRouteImport } from './routes/challenges/grammar/masculine-feminine/index'
 import { Route as ChallengesGrammarIsmIshaaraNearIndexRouteImport } from './routes/challenges/grammar/ism-ishaara-near/index'
@@ -27,11 +32,20 @@ import { Route as ChallengesGrammarIsmIshaaraFarIndexRouteImport } from './route
 import { Route as ChallengesGrammarInterrogativesManMaaIndexRouteImport } from './routes/challenges/grammar/interrogatives-man-maa/index'
 import { Route as ChallengesGrammarIndependentPronounsIndexRouteImport } from './routes/challenges/grammar/independent-pronouns/index'
 import { Route as ChallengesGrammarIdafahIndexRouteImport } from './routes/challenges/grammar/idafah/index'
+import { Route as ChallengesGrammarFiveNounsIndexRouteImport } from './routes/challenges/grammar/five-nouns/index'
+import { Route as ChallengesGrammarDualIndexRouteImport } from './routes/challenges/grammar/dual/index'
+import { Route as ChallengesGrammarDhuDhaatIndexRouteImport } from './routes/challenges/grammar/dhu-dhaat/index'
 import { Route as ChallengesGrammarDefinitenessTanwinIndexRouteImport } from './routes/challenges/grammar/definiteness-tanwin/index'
+import { Route as ChallengesGrammarDefectiveDiptotesIndexRouteImport } from './routes/challenges/grammar/defective-diptotes/index'
+import { Route as ChallengesGrammarDaysMonthsIndexRouteImport } from './routes/challenges/grammar/days-months/index'
 import { Route as ChallengesGrammarColorsIndexRouteImport } from './routes/challenges/grammar/colors/index'
 import { Route as ChallengesGrammarCaseSystemOverviewIndexRouteImport } from './routes/challenges/grammar/case-system-overview/index'
+import { Route as ChallengesGrammarBrokenPluralIndexRouteImport } from './routes/challenges/grammar/broken-plural/index'
+import { Route as ChallengesGrammarBadalVocativeIndexRouteImport } from './routes/challenges/grammar/badal-vocative/index'
 import { Route as ChallengesGrammarAttachedPronounsIndexRouteImport } from './routes/challenges/grammar/attached-pronouns/index'
+import { Route as ChallengesGrammarAdverbsOfPlaceIndexRouteImport } from './routes/challenges/grammar/adverbs-of-place/index'
 import { Route as ChallengesGrammarAdjectivesAgreementIndexRouteImport } from './routes/challenges/grammar/adjectives-agreement/index'
+import { Route as ChallengesGrammarAakharUkhraaIndexRouteImport } from './routes/challenges/grammar/aakhar-ukhraa/index'
 
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
@@ -87,10 +101,40 @@ const ChallengesGrammarYesNoQuestionsIndexRoute =
     path: '/challenges/grammar/yes-no-questions/',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ChallengesGrammarTaajjubIndexRoute =
+  ChallengesGrammarTaajjubIndexRouteImport.update({
+    id: '/challenges/grammar/taajjub/',
+    path: '/challenges/grammar/taajjub/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ChallengesGrammarSoundMasculinePluralIndexRoute =
+  ChallengesGrammarSoundMasculinePluralIndexRouteImport.update({
+    id: '/challenges/grammar/sound-masculine-plural/',
+    path: '/challenges/grammar/sound-masculine-plural/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ChallengesGrammarSoundFemininePluralIndexRoute =
+  ChallengesGrammarSoundFemininePluralIndexRouteImport.update({
+    id: '/challenges/grammar/sound-feminine-plural/',
+    path: '/challenges/grammar/sound-feminine-plural/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ChallengesGrammarRelativePronounsIndexRoute =
+  ChallengesGrammarRelativePronounsIndexRouteImport.update({
+    id: '/challenges/grammar/relative-pronouns/',
+    path: '/challenges/grammar/relative-pronouns/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ChallengesGrammarPrepositionsIndexRoute =
   ChallengesGrammarPrepositionsIndexRouteImport.update({
     id: '/challenges/grammar/prepositions/',
     path: '/challenges/grammar/prepositions/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ChallengesGrammarNumbers110IndexRoute =
+  ChallengesGrammarNumbers110IndexRouteImport.update({
+    id: '/challenges/grammar/numbers-1-10/',
+    path: '/challenges/grammar/numbers-1-10/',
     getParentRoute: () => rootRouteImport,
   } as any)
 const ChallengesGrammarMubtadaKhabarIndexRoute =
@@ -135,10 +179,40 @@ const ChallengesGrammarIdafahIndexRoute =
     path: '/challenges/grammar/idafah/',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ChallengesGrammarFiveNounsIndexRoute =
+  ChallengesGrammarFiveNounsIndexRouteImport.update({
+    id: '/challenges/grammar/five-nouns/',
+    path: '/challenges/grammar/five-nouns/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ChallengesGrammarDualIndexRoute =
+  ChallengesGrammarDualIndexRouteImport.update({
+    id: '/challenges/grammar/dual/',
+    path: '/challenges/grammar/dual/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ChallengesGrammarDhuDhaatIndexRoute =
+  ChallengesGrammarDhuDhaatIndexRouteImport.update({
+    id: '/challenges/grammar/dhu-dhaat/',
+    path: '/challenges/grammar/dhu-dhaat/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ChallengesGrammarDefinitenessTanwinIndexRoute =
   ChallengesGrammarDefinitenessTanwinIndexRouteImport.update({
     id: '/challenges/grammar/definiteness-tanwin/',
     path: '/challenges/grammar/definiteness-tanwin/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ChallengesGrammarDefectiveDiptotesIndexRoute =
+  ChallengesGrammarDefectiveDiptotesIndexRouteImport.update({
+    id: '/challenges/grammar/defective-diptotes/',
+    path: '/challenges/grammar/defective-diptotes/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ChallengesGrammarDaysMonthsIndexRoute =
+  ChallengesGrammarDaysMonthsIndexRouteImport.update({
+    id: '/challenges/grammar/days-months/',
+    path: '/challenges/grammar/days-months/',
     getParentRoute: () => rootRouteImport,
   } as any)
 const ChallengesGrammarColorsIndexRoute =
@@ -153,16 +227,40 @@ const ChallengesGrammarCaseSystemOverviewIndexRoute =
     path: '/challenges/grammar/case-system-overview/',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ChallengesGrammarBrokenPluralIndexRoute =
+  ChallengesGrammarBrokenPluralIndexRouteImport.update({
+    id: '/challenges/grammar/broken-plural/',
+    path: '/challenges/grammar/broken-plural/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ChallengesGrammarBadalVocativeIndexRoute =
+  ChallengesGrammarBadalVocativeIndexRouteImport.update({
+    id: '/challenges/grammar/badal-vocative/',
+    path: '/challenges/grammar/badal-vocative/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ChallengesGrammarAttachedPronounsIndexRoute =
   ChallengesGrammarAttachedPronounsIndexRouteImport.update({
     id: '/challenges/grammar/attached-pronouns/',
     path: '/challenges/grammar/attached-pronouns/',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ChallengesGrammarAdverbsOfPlaceIndexRoute =
+  ChallengesGrammarAdverbsOfPlaceIndexRouteImport.update({
+    id: '/challenges/grammar/adverbs-of-place/',
+    path: '/challenges/grammar/adverbs-of-place/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ChallengesGrammarAdjectivesAgreementIndexRoute =
   ChallengesGrammarAdjectivesAgreementIndexRouteImport.update({
     id: '/challenges/grammar/adjectives-agreement/',
     path: '/challenges/grammar/adjectives-agreement/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ChallengesGrammarAakharUkhraaIndexRoute =
+  ChallengesGrammarAakharUkhraaIndexRouteImport.update({
+    id: '/challenges/grammar/aakhar-ukhraa/',
+    path: '/challenges/grammar/aakhar-ukhraa/',
     getParentRoute: () => rootRouteImport,
   } as any)
 
@@ -176,11 +274,20 @@ export interface FileRoutesByFullPath {
   '/api/publish/$': typeof ApiPublishSplatRoute
   '/arabic-with-mufti-saim/lecture/$lectureId': typeof ArabicWithMuftiSaimLectureLectureIdRoute
   '/challenges/vocabulary/': typeof ChallengesVocabularyIndexRoute
+  '/challenges/grammar/aakhar-ukhraa/': typeof ChallengesGrammarAakharUkhraaIndexRoute
   '/challenges/grammar/adjectives-agreement/': typeof ChallengesGrammarAdjectivesAgreementIndexRoute
+  '/challenges/grammar/adverbs-of-place/': typeof ChallengesGrammarAdverbsOfPlaceIndexRoute
   '/challenges/grammar/attached-pronouns/': typeof ChallengesGrammarAttachedPronounsIndexRoute
+  '/challenges/grammar/badal-vocative/': typeof ChallengesGrammarBadalVocativeIndexRoute
+  '/challenges/grammar/broken-plural/': typeof ChallengesGrammarBrokenPluralIndexRoute
   '/challenges/grammar/case-system-overview/': typeof ChallengesGrammarCaseSystemOverviewIndexRoute
   '/challenges/grammar/colors/': typeof ChallengesGrammarColorsIndexRoute
+  '/challenges/grammar/days-months/': typeof ChallengesGrammarDaysMonthsIndexRoute
+  '/challenges/grammar/defective-diptotes/': typeof ChallengesGrammarDefectiveDiptotesIndexRoute
   '/challenges/grammar/definiteness-tanwin/': typeof ChallengesGrammarDefinitenessTanwinIndexRoute
+  '/challenges/grammar/dhu-dhaat/': typeof ChallengesGrammarDhuDhaatIndexRoute
+  '/challenges/grammar/dual/': typeof ChallengesGrammarDualIndexRoute
+  '/challenges/grammar/five-nouns/': typeof ChallengesGrammarFiveNounsIndexRoute
   '/challenges/grammar/idafah/': typeof ChallengesGrammarIdafahIndexRoute
   '/challenges/grammar/independent-pronouns/': typeof ChallengesGrammarIndependentPronounsIndexRoute
   '/challenges/grammar/interrogatives-man-maa/': typeof ChallengesGrammarInterrogativesManMaaIndexRoute
@@ -188,7 +295,12 @@ export interface FileRoutesByFullPath {
   '/challenges/grammar/ism-ishaara-near/': typeof ChallengesGrammarIsmIshaaraNearIndexRoute
   '/challenges/grammar/masculine-feminine/': typeof ChallengesGrammarMasculineFeminineIndexRoute
   '/challenges/grammar/mubtada-khabar/': typeof ChallengesGrammarMubtadaKhabarIndexRoute
+  '/challenges/grammar/numbers-1-10/': typeof ChallengesGrammarNumbers110IndexRoute
   '/challenges/grammar/prepositions/': typeof ChallengesGrammarPrepositionsIndexRoute
+  '/challenges/grammar/relative-pronouns/': typeof ChallengesGrammarRelativePronounsIndexRoute
+  '/challenges/grammar/sound-feminine-plural/': typeof ChallengesGrammarSoundFemininePluralIndexRoute
+  '/challenges/grammar/sound-masculine-plural/': typeof ChallengesGrammarSoundMasculinePluralIndexRoute
+  '/challenges/grammar/taajjub/': typeof ChallengesGrammarTaajjubIndexRoute
   '/challenges/grammar/yes-no-questions/': typeof ChallengesGrammarYesNoQuestionsIndexRoute
 }
 export interface FileRoutesByTo {
@@ -201,11 +313,20 @@ export interface FileRoutesByTo {
   '/api/publish/$': typeof ApiPublishSplatRoute
   '/arabic-with-mufti-saim/lecture/$lectureId': typeof ArabicWithMuftiSaimLectureLectureIdRoute
   '/challenges/vocabulary': typeof ChallengesVocabularyIndexRoute
+  '/challenges/grammar/aakhar-ukhraa': typeof ChallengesGrammarAakharUkhraaIndexRoute
   '/challenges/grammar/adjectives-agreement': typeof ChallengesGrammarAdjectivesAgreementIndexRoute
+  '/challenges/grammar/adverbs-of-place': typeof ChallengesGrammarAdverbsOfPlaceIndexRoute
   '/challenges/grammar/attached-pronouns': typeof ChallengesGrammarAttachedPronounsIndexRoute
+  '/challenges/grammar/badal-vocative': typeof ChallengesGrammarBadalVocativeIndexRoute
+  '/challenges/grammar/broken-plural': typeof ChallengesGrammarBrokenPluralIndexRoute
   '/challenges/grammar/case-system-overview': typeof ChallengesGrammarCaseSystemOverviewIndexRoute
   '/challenges/grammar/colors': typeof ChallengesGrammarColorsIndexRoute
+  '/challenges/grammar/days-months': typeof ChallengesGrammarDaysMonthsIndexRoute
+  '/challenges/grammar/defective-diptotes': typeof ChallengesGrammarDefectiveDiptotesIndexRoute
   '/challenges/grammar/definiteness-tanwin': typeof ChallengesGrammarDefinitenessTanwinIndexRoute
+  '/challenges/grammar/dhu-dhaat': typeof ChallengesGrammarDhuDhaatIndexRoute
+  '/challenges/grammar/dual': typeof ChallengesGrammarDualIndexRoute
+  '/challenges/grammar/five-nouns': typeof ChallengesGrammarFiveNounsIndexRoute
   '/challenges/grammar/idafah': typeof ChallengesGrammarIdafahIndexRoute
   '/challenges/grammar/independent-pronouns': typeof ChallengesGrammarIndependentPronounsIndexRoute
   '/challenges/grammar/interrogatives-man-maa': typeof ChallengesGrammarInterrogativesManMaaIndexRoute
@@ -213,7 +334,12 @@ export interface FileRoutesByTo {
   '/challenges/grammar/ism-ishaara-near': typeof ChallengesGrammarIsmIshaaraNearIndexRoute
   '/challenges/grammar/masculine-feminine': typeof ChallengesGrammarMasculineFeminineIndexRoute
   '/challenges/grammar/mubtada-khabar': typeof ChallengesGrammarMubtadaKhabarIndexRoute
+  '/challenges/grammar/numbers-1-10': typeof ChallengesGrammarNumbers110IndexRoute
   '/challenges/grammar/prepositions': typeof ChallengesGrammarPrepositionsIndexRoute
+  '/challenges/grammar/relative-pronouns': typeof ChallengesGrammarRelativePronounsIndexRoute
+  '/challenges/grammar/sound-feminine-plural': typeof ChallengesGrammarSoundFemininePluralIndexRoute
+  '/challenges/grammar/sound-masculine-plural': typeof ChallengesGrammarSoundMasculinePluralIndexRoute
+  '/challenges/grammar/taajjub': typeof ChallengesGrammarTaajjubIndexRoute
   '/challenges/grammar/yes-no-questions': typeof ChallengesGrammarYesNoQuestionsIndexRoute
 }
 export interface FileRoutesById {
@@ -227,11 +353,20 @@ export interface FileRoutesById {
   '/api/publish/$': typeof ApiPublishSplatRoute
   '/arabic-with-mufti-saim/lecture/$lectureId': typeof ArabicWithMuftiSaimLectureLectureIdRoute
   '/challenges/vocabulary/': typeof ChallengesVocabularyIndexRoute
+  '/challenges/grammar/aakhar-ukhraa/': typeof ChallengesGrammarAakharUkhraaIndexRoute
   '/challenges/grammar/adjectives-agreement/': typeof ChallengesGrammarAdjectivesAgreementIndexRoute
+  '/challenges/grammar/adverbs-of-place/': typeof ChallengesGrammarAdverbsOfPlaceIndexRoute
   '/challenges/grammar/attached-pronouns/': typeof ChallengesGrammarAttachedPronounsIndexRoute
+  '/challenges/grammar/badal-vocative/': typeof ChallengesGrammarBadalVocativeIndexRoute
+  '/challenges/grammar/broken-plural/': typeof ChallengesGrammarBrokenPluralIndexRoute
   '/challenges/grammar/case-system-overview/': typeof ChallengesGrammarCaseSystemOverviewIndexRoute
   '/challenges/grammar/colors/': typeof ChallengesGrammarColorsIndexRoute
+  '/challenges/grammar/days-months/': typeof ChallengesGrammarDaysMonthsIndexRoute
+  '/challenges/grammar/defective-diptotes/': typeof ChallengesGrammarDefectiveDiptotesIndexRoute
   '/challenges/grammar/definiteness-tanwin/': typeof ChallengesGrammarDefinitenessTanwinIndexRoute
+  '/challenges/grammar/dhu-dhaat/': typeof ChallengesGrammarDhuDhaatIndexRoute
+  '/challenges/grammar/dual/': typeof ChallengesGrammarDualIndexRoute
+  '/challenges/grammar/five-nouns/': typeof ChallengesGrammarFiveNounsIndexRoute
   '/challenges/grammar/idafah/': typeof ChallengesGrammarIdafahIndexRoute
   '/challenges/grammar/independent-pronouns/': typeof ChallengesGrammarIndependentPronounsIndexRoute
   '/challenges/grammar/interrogatives-man-maa/': typeof ChallengesGrammarInterrogativesManMaaIndexRoute
@@ -239,7 +374,12 @@ export interface FileRoutesById {
   '/challenges/grammar/ism-ishaara-near/': typeof ChallengesGrammarIsmIshaaraNearIndexRoute
   '/challenges/grammar/masculine-feminine/': typeof ChallengesGrammarMasculineFeminineIndexRoute
   '/challenges/grammar/mubtada-khabar/': typeof ChallengesGrammarMubtadaKhabarIndexRoute
+  '/challenges/grammar/numbers-1-10/': typeof ChallengesGrammarNumbers110IndexRoute
   '/challenges/grammar/prepositions/': typeof ChallengesGrammarPrepositionsIndexRoute
+  '/challenges/grammar/relative-pronouns/': typeof ChallengesGrammarRelativePronounsIndexRoute
+  '/challenges/grammar/sound-feminine-plural/': typeof ChallengesGrammarSoundFemininePluralIndexRoute
+  '/challenges/grammar/sound-masculine-plural/': typeof ChallengesGrammarSoundMasculinePluralIndexRoute
+  '/challenges/grammar/taajjub/': typeof ChallengesGrammarTaajjubIndexRoute
   '/challenges/grammar/yes-no-questions/': typeof ChallengesGrammarYesNoQuestionsIndexRoute
 }
 export interface FileRouteTypes {
@@ -254,11 +394,20 @@ export interface FileRouteTypes {
     | '/api/publish/$'
     | '/arabic-with-mufti-saim/lecture/$lectureId'
     | '/challenges/vocabulary/'
+    | '/challenges/grammar/aakhar-ukhraa/'
     | '/challenges/grammar/adjectives-agreement/'
+    | '/challenges/grammar/adverbs-of-place/'
     | '/challenges/grammar/attached-pronouns/'
+    | '/challenges/grammar/badal-vocative/'
+    | '/challenges/grammar/broken-plural/'
     | '/challenges/grammar/case-system-overview/'
     | '/challenges/grammar/colors/'
+    | '/challenges/grammar/days-months/'
+    | '/challenges/grammar/defective-diptotes/'
     | '/challenges/grammar/definiteness-tanwin/'
+    | '/challenges/grammar/dhu-dhaat/'
+    | '/challenges/grammar/dual/'
+    | '/challenges/grammar/five-nouns/'
     | '/challenges/grammar/idafah/'
     | '/challenges/grammar/independent-pronouns/'
     | '/challenges/grammar/interrogatives-man-maa/'
@@ -266,7 +415,12 @@ export interface FileRouteTypes {
     | '/challenges/grammar/ism-ishaara-near/'
     | '/challenges/grammar/masculine-feminine/'
     | '/challenges/grammar/mubtada-khabar/'
+    | '/challenges/grammar/numbers-1-10/'
     | '/challenges/grammar/prepositions/'
+    | '/challenges/grammar/relative-pronouns/'
+    | '/challenges/grammar/sound-feminine-plural/'
+    | '/challenges/grammar/sound-masculine-plural/'
+    | '/challenges/grammar/taajjub/'
     | '/challenges/grammar/yes-no-questions/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -279,11 +433,20 @@ export interface FileRouteTypes {
     | '/api/publish/$'
     | '/arabic-with-mufti-saim/lecture/$lectureId'
     | '/challenges/vocabulary'
+    | '/challenges/grammar/aakhar-ukhraa'
     | '/challenges/grammar/adjectives-agreement'
+    | '/challenges/grammar/adverbs-of-place'
     | '/challenges/grammar/attached-pronouns'
+    | '/challenges/grammar/badal-vocative'
+    | '/challenges/grammar/broken-plural'
     | '/challenges/grammar/case-system-overview'
     | '/challenges/grammar/colors'
+    | '/challenges/grammar/days-months'
+    | '/challenges/grammar/defective-diptotes'
     | '/challenges/grammar/definiteness-tanwin'
+    | '/challenges/grammar/dhu-dhaat'
+    | '/challenges/grammar/dual'
+    | '/challenges/grammar/five-nouns'
     | '/challenges/grammar/idafah'
     | '/challenges/grammar/independent-pronouns'
     | '/challenges/grammar/interrogatives-man-maa'
@@ -291,7 +454,12 @@ export interface FileRouteTypes {
     | '/challenges/grammar/ism-ishaara-near'
     | '/challenges/grammar/masculine-feminine'
     | '/challenges/grammar/mubtada-khabar'
+    | '/challenges/grammar/numbers-1-10'
     | '/challenges/grammar/prepositions'
+    | '/challenges/grammar/relative-pronouns'
+    | '/challenges/grammar/sound-feminine-plural'
+    | '/challenges/grammar/sound-masculine-plural'
+    | '/challenges/grammar/taajjub'
     | '/challenges/grammar/yes-no-questions'
   id:
     | '__root__'
@@ -304,11 +472,20 @@ export interface FileRouteTypes {
     | '/api/publish/$'
     | '/arabic-with-mufti-saim/lecture/$lectureId'
     | '/challenges/vocabulary/'
+    | '/challenges/grammar/aakhar-ukhraa/'
     | '/challenges/grammar/adjectives-agreement/'
+    | '/challenges/grammar/adverbs-of-place/'
     | '/challenges/grammar/attached-pronouns/'
+    | '/challenges/grammar/badal-vocative/'
+    | '/challenges/grammar/broken-plural/'
     | '/challenges/grammar/case-system-overview/'
     | '/challenges/grammar/colors/'
+    | '/challenges/grammar/days-months/'
+    | '/challenges/grammar/defective-diptotes/'
     | '/challenges/grammar/definiteness-tanwin/'
+    | '/challenges/grammar/dhu-dhaat/'
+    | '/challenges/grammar/dual/'
+    | '/challenges/grammar/five-nouns/'
     | '/challenges/grammar/idafah/'
     | '/challenges/grammar/independent-pronouns/'
     | '/challenges/grammar/interrogatives-man-maa/'
@@ -316,7 +493,12 @@ export interface FileRouteTypes {
     | '/challenges/grammar/ism-ishaara-near/'
     | '/challenges/grammar/masculine-feminine/'
     | '/challenges/grammar/mubtada-khabar/'
+    | '/challenges/grammar/numbers-1-10/'
     | '/challenges/grammar/prepositions/'
+    | '/challenges/grammar/relative-pronouns/'
+    | '/challenges/grammar/sound-feminine-plural/'
+    | '/challenges/grammar/sound-masculine-plural/'
+    | '/challenges/grammar/taajjub/'
     | '/challenges/grammar/yes-no-questions/'
   fileRoutesById: FileRoutesById
 }
@@ -330,11 +512,20 @@ export interface RootRouteChildren {
   ApiPublishSplatRoute: typeof ApiPublishSplatRoute
   ArabicWithMuftiSaimLectureLectureIdRoute: typeof ArabicWithMuftiSaimLectureLectureIdRoute
   ChallengesVocabularyIndexRoute: typeof ChallengesVocabularyIndexRoute
+  ChallengesGrammarAakharUkhraaIndexRoute: typeof ChallengesGrammarAakharUkhraaIndexRoute
   ChallengesGrammarAdjectivesAgreementIndexRoute: typeof ChallengesGrammarAdjectivesAgreementIndexRoute
+  ChallengesGrammarAdverbsOfPlaceIndexRoute: typeof ChallengesGrammarAdverbsOfPlaceIndexRoute
   ChallengesGrammarAttachedPronounsIndexRoute: typeof ChallengesGrammarAttachedPronounsIndexRoute
+  ChallengesGrammarBadalVocativeIndexRoute: typeof ChallengesGrammarBadalVocativeIndexRoute
+  ChallengesGrammarBrokenPluralIndexRoute: typeof ChallengesGrammarBrokenPluralIndexRoute
   ChallengesGrammarCaseSystemOverviewIndexRoute: typeof ChallengesGrammarCaseSystemOverviewIndexRoute
   ChallengesGrammarColorsIndexRoute: typeof ChallengesGrammarColorsIndexRoute
+  ChallengesGrammarDaysMonthsIndexRoute: typeof ChallengesGrammarDaysMonthsIndexRoute
+  ChallengesGrammarDefectiveDiptotesIndexRoute: typeof ChallengesGrammarDefectiveDiptotesIndexRoute
   ChallengesGrammarDefinitenessTanwinIndexRoute: typeof ChallengesGrammarDefinitenessTanwinIndexRoute
+  ChallengesGrammarDhuDhaatIndexRoute: typeof ChallengesGrammarDhuDhaatIndexRoute
+  ChallengesGrammarDualIndexRoute: typeof ChallengesGrammarDualIndexRoute
+  ChallengesGrammarFiveNounsIndexRoute: typeof ChallengesGrammarFiveNounsIndexRoute
   ChallengesGrammarIdafahIndexRoute: typeof ChallengesGrammarIdafahIndexRoute
   ChallengesGrammarIndependentPronounsIndexRoute: typeof ChallengesGrammarIndependentPronounsIndexRoute
   ChallengesGrammarInterrogativesManMaaIndexRoute: typeof ChallengesGrammarInterrogativesManMaaIndexRoute
@@ -342,7 +533,12 @@ export interface RootRouteChildren {
   ChallengesGrammarIsmIshaaraNearIndexRoute: typeof ChallengesGrammarIsmIshaaraNearIndexRoute
   ChallengesGrammarMasculineFeminineIndexRoute: typeof ChallengesGrammarMasculineFeminineIndexRoute
   ChallengesGrammarMubtadaKhabarIndexRoute: typeof ChallengesGrammarMubtadaKhabarIndexRoute
+  ChallengesGrammarNumbers110IndexRoute: typeof ChallengesGrammarNumbers110IndexRoute
   ChallengesGrammarPrepositionsIndexRoute: typeof ChallengesGrammarPrepositionsIndexRoute
+  ChallengesGrammarRelativePronounsIndexRoute: typeof ChallengesGrammarRelativePronounsIndexRoute
+  ChallengesGrammarSoundFemininePluralIndexRoute: typeof ChallengesGrammarSoundFemininePluralIndexRoute
+  ChallengesGrammarSoundMasculinePluralIndexRoute: typeof ChallengesGrammarSoundMasculinePluralIndexRoute
+  ChallengesGrammarTaajjubIndexRoute: typeof ChallengesGrammarTaajjubIndexRoute
   ChallengesGrammarYesNoQuestionsIndexRoute: typeof ChallengesGrammarYesNoQuestionsIndexRoute
 }
 
@@ -418,11 +614,46 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ChallengesGrammarYesNoQuestionsIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/challenges/grammar/taajjub/': {
+      id: '/challenges/grammar/taajjub/'
+      path: '/challenges/grammar/taajjub'
+      fullPath: '/challenges/grammar/taajjub/'
+      preLoaderRoute: typeof ChallengesGrammarTaajjubIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/challenges/grammar/sound-masculine-plural/': {
+      id: '/challenges/grammar/sound-masculine-plural/'
+      path: '/challenges/grammar/sound-masculine-plural'
+      fullPath: '/challenges/grammar/sound-masculine-plural/'
+      preLoaderRoute: typeof ChallengesGrammarSoundMasculinePluralIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/challenges/grammar/sound-feminine-plural/': {
+      id: '/challenges/grammar/sound-feminine-plural/'
+      path: '/challenges/grammar/sound-feminine-plural'
+      fullPath: '/challenges/grammar/sound-feminine-plural/'
+      preLoaderRoute: typeof ChallengesGrammarSoundFemininePluralIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/challenges/grammar/relative-pronouns/': {
+      id: '/challenges/grammar/relative-pronouns/'
+      path: '/challenges/grammar/relative-pronouns'
+      fullPath: '/challenges/grammar/relative-pronouns/'
+      preLoaderRoute: typeof ChallengesGrammarRelativePronounsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/challenges/grammar/prepositions/': {
       id: '/challenges/grammar/prepositions/'
       path: '/challenges/grammar/prepositions'
       fullPath: '/challenges/grammar/prepositions/'
       preLoaderRoute: typeof ChallengesGrammarPrepositionsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/challenges/grammar/numbers-1-10/': {
+      id: '/challenges/grammar/numbers-1-10/'
+      path: '/challenges/grammar/numbers-1-10'
+      fullPath: '/challenges/grammar/numbers-1-10/'
+      preLoaderRoute: typeof ChallengesGrammarNumbers110IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/challenges/grammar/mubtada-khabar/': {
@@ -474,11 +705,46 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ChallengesGrammarIdafahIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/challenges/grammar/five-nouns/': {
+      id: '/challenges/grammar/five-nouns/'
+      path: '/challenges/grammar/five-nouns'
+      fullPath: '/challenges/grammar/five-nouns/'
+      preLoaderRoute: typeof ChallengesGrammarFiveNounsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/challenges/grammar/dual/': {
+      id: '/challenges/grammar/dual/'
+      path: '/challenges/grammar/dual'
+      fullPath: '/challenges/grammar/dual/'
+      preLoaderRoute: typeof ChallengesGrammarDualIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/challenges/grammar/dhu-dhaat/': {
+      id: '/challenges/grammar/dhu-dhaat/'
+      path: '/challenges/grammar/dhu-dhaat'
+      fullPath: '/challenges/grammar/dhu-dhaat/'
+      preLoaderRoute: typeof ChallengesGrammarDhuDhaatIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/challenges/grammar/definiteness-tanwin/': {
       id: '/challenges/grammar/definiteness-tanwin/'
       path: '/challenges/grammar/definiteness-tanwin'
       fullPath: '/challenges/grammar/definiteness-tanwin/'
       preLoaderRoute: typeof ChallengesGrammarDefinitenessTanwinIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/challenges/grammar/defective-diptotes/': {
+      id: '/challenges/grammar/defective-diptotes/'
+      path: '/challenges/grammar/defective-diptotes'
+      fullPath: '/challenges/grammar/defective-diptotes/'
+      preLoaderRoute: typeof ChallengesGrammarDefectiveDiptotesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/challenges/grammar/days-months/': {
+      id: '/challenges/grammar/days-months/'
+      path: '/challenges/grammar/days-months'
+      fullPath: '/challenges/grammar/days-months/'
+      preLoaderRoute: typeof ChallengesGrammarDaysMonthsIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/challenges/grammar/colors/': {
@@ -495,6 +761,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ChallengesGrammarCaseSystemOverviewIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/challenges/grammar/broken-plural/': {
+      id: '/challenges/grammar/broken-plural/'
+      path: '/challenges/grammar/broken-plural'
+      fullPath: '/challenges/grammar/broken-plural/'
+      preLoaderRoute: typeof ChallengesGrammarBrokenPluralIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/challenges/grammar/badal-vocative/': {
+      id: '/challenges/grammar/badal-vocative/'
+      path: '/challenges/grammar/badal-vocative'
+      fullPath: '/challenges/grammar/badal-vocative/'
+      preLoaderRoute: typeof ChallengesGrammarBadalVocativeIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/challenges/grammar/attached-pronouns/': {
       id: '/challenges/grammar/attached-pronouns/'
       path: '/challenges/grammar/attached-pronouns'
@@ -502,11 +782,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ChallengesGrammarAttachedPronounsIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/challenges/grammar/adverbs-of-place/': {
+      id: '/challenges/grammar/adverbs-of-place/'
+      path: '/challenges/grammar/adverbs-of-place'
+      fullPath: '/challenges/grammar/adverbs-of-place/'
+      preLoaderRoute: typeof ChallengesGrammarAdverbsOfPlaceIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/challenges/grammar/adjectives-agreement/': {
       id: '/challenges/grammar/adjectives-agreement/'
       path: '/challenges/grammar/adjectives-agreement'
       fullPath: '/challenges/grammar/adjectives-agreement/'
       preLoaderRoute: typeof ChallengesGrammarAdjectivesAgreementIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/challenges/grammar/aakhar-ukhraa/': {
+      id: '/challenges/grammar/aakhar-ukhraa/'
+      path: '/challenges/grammar/aakhar-ukhraa'
+      fullPath: '/challenges/grammar/aakhar-ukhraa/'
+      preLoaderRoute: typeof ChallengesGrammarAakharUkhraaIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -523,15 +817,29 @@ const rootRouteChildren: RootRouteChildren = {
   ArabicWithMuftiSaimLectureLectureIdRoute:
     ArabicWithMuftiSaimLectureLectureIdRoute,
   ChallengesVocabularyIndexRoute: ChallengesVocabularyIndexRoute,
+  ChallengesGrammarAakharUkhraaIndexRoute:
+    ChallengesGrammarAakharUkhraaIndexRoute,
   ChallengesGrammarAdjectivesAgreementIndexRoute:
     ChallengesGrammarAdjectivesAgreementIndexRoute,
+  ChallengesGrammarAdverbsOfPlaceIndexRoute:
+    ChallengesGrammarAdverbsOfPlaceIndexRoute,
   ChallengesGrammarAttachedPronounsIndexRoute:
     ChallengesGrammarAttachedPronounsIndexRoute,
+  ChallengesGrammarBadalVocativeIndexRoute:
+    ChallengesGrammarBadalVocativeIndexRoute,
+  ChallengesGrammarBrokenPluralIndexRoute:
+    ChallengesGrammarBrokenPluralIndexRoute,
   ChallengesGrammarCaseSystemOverviewIndexRoute:
     ChallengesGrammarCaseSystemOverviewIndexRoute,
   ChallengesGrammarColorsIndexRoute: ChallengesGrammarColorsIndexRoute,
+  ChallengesGrammarDaysMonthsIndexRoute: ChallengesGrammarDaysMonthsIndexRoute,
+  ChallengesGrammarDefectiveDiptotesIndexRoute:
+    ChallengesGrammarDefectiveDiptotesIndexRoute,
   ChallengesGrammarDefinitenessTanwinIndexRoute:
     ChallengesGrammarDefinitenessTanwinIndexRoute,
+  ChallengesGrammarDhuDhaatIndexRoute: ChallengesGrammarDhuDhaatIndexRoute,
+  ChallengesGrammarDualIndexRoute: ChallengesGrammarDualIndexRoute,
+  ChallengesGrammarFiveNounsIndexRoute: ChallengesGrammarFiveNounsIndexRoute,
   ChallengesGrammarIdafahIndexRoute: ChallengesGrammarIdafahIndexRoute,
   ChallengesGrammarIndependentPronounsIndexRoute:
     ChallengesGrammarIndependentPronounsIndexRoute,
@@ -545,8 +853,16 @@ const rootRouteChildren: RootRouteChildren = {
     ChallengesGrammarMasculineFeminineIndexRoute,
   ChallengesGrammarMubtadaKhabarIndexRoute:
     ChallengesGrammarMubtadaKhabarIndexRoute,
+  ChallengesGrammarNumbers110IndexRoute: ChallengesGrammarNumbers110IndexRoute,
   ChallengesGrammarPrepositionsIndexRoute:
     ChallengesGrammarPrepositionsIndexRoute,
+  ChallengesGrammarRelativePronounsIndexRoute:
+    ChallengesGrammarRelativePronounsIndexRoute,
+  ChallengesGrammarSoundFemininePluralIndexRoute:
+    ChallengesGrammarSoundFemininePluralIndexRoute,
+  ChallengesGrammarSoundMasculinePluralIndexRoute:
+    ChallengesGrammarSoundMasculinePluralIndexRoute,
+  ChallengesGrammarTaajjubIndexRoute: ChallengesGrammarTaajjubIndexRoute,
   ChallengesGrammarYesNoQuestionsIndexRoute:
     ChallengesGrammarYesNoQuestionsIndexRoute,
 }
