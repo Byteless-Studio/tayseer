@@ -92,12 +92,15 @@ export function QuizCarousel({ items }: { items: QuizItem[] }) {
       </div>
 
       <div className="rounded-xl border border-border p-5">
-        <p className="text-sm font-medium text-foreground mb-4 leading-snug">{item.q}</p>
+        <p className="text-sm font-medium text-foreground mb-4 leading-snug whitespace-pre-line">
+          {item.q}
+        </p>
 
         {item.options && item.options.length > 0 && (
           <div className="flex flex-col gap-2">
             {item.options.map((opt, j) => {
-              let cls = 'text-left w-full rounded-lg border px-3 py-2 text-xs transition-colors cursor-pointer '
+              let cls =
+                'text-left w-full rounded-lg border px-3 py-2 text-xs transition-colors cursor-pointer whitespace-pre-line '
               if (!hasAnswered) {
                 cls += 'border-border text-foreground hover:border-brand hover:bg-brand/5'
               } else if (j === correctIdx) {
@@ -118,7 +121,7 @@ export function QuizCarousel({ items }: { items: QuizItem[] }) {
         )}
 
         {hasAnswered && (
-          <div className="mt-4 rounded-lg bg-muted border-l-2 border-brand p-3 text-xs text-foreground leading-relaxed">
+          <div className="mt-4 rounded-lg bg-muted border-l-2 border-brand p-3 text-xs text-foreground leading-relaxed whitespace-pre-line">
             {item.a}
           </div>
         )}
