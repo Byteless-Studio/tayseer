@@ -23,6 +23,7 @@ import { Route as ChallengesGrammarYesNoQuestionsIndexRouteImport } from './rout
 import { Route as ChallengesGrammarWeakVerbsIndexRouteImport } from './routes/challenges/grammar/weak-verbs/index'
 import { Route as ChallengesGrammarVerbBasicsFaailMafoolIndexRouteImport } from './routes/challenges/grammar/verb-basics-faail-mafool/index'
 import { Route as ChallengesGrammarTaajjubIndexRouteImport } from './routes/challenges/grammar/taajjub/index'
+import { Route as ChallengesGrammarSpellingRulesIndexRouteImport } from './routes/challenges/grammar/spelling-rules/index'
 import { Route as ChallengesGrammarSoundMasculinePluralIndexRouteImport } from './routes/challenges/grammar/sound-masculine-plural/index'
 import { Route as ChallengesGrammarSoundFemininePluralIndexRouteImport } from './routes/challenges/grammar/sound-feminine-plural/index'
 import { Route as ChallengesGrammarRelativePronounsIndexRouteImport } from './routes/challenges/grammar/relative-pronouns/index'
@@ -30,14 +31,19 @@ import { Route as ChallengesGrammarProhibitiveIndexRouteImport } from './routes/
 import { Route as ChallengesGrammarPresentTenseConjugationIndexRouteImport } from './routes/challenges/grammar/present-tense-conjugation/index'
 import { Route as ChallengesGrammarPrepositionsIndexRouteImport } from './routes/challenges/grammar/prepositions/index'
 import { Route as ChallengesGrammarPastTenseConjugationIndexRouteImport } from './routes/challenges/grammar/past-tense-conjugation/index'
+import { Route as ChallengesGrammarOtherParticlesIndexRouteImport } from './routes/challenges/grammar/other-particles/index'
+import { Route as ChallengesGrammarNumbers11100IndexRouteImport } from './routes/challenges/grammar/numbers-11-100/index'
 import { Route as ChallengesGrammarNumbers110IndexRouteImport } from './routes/challenges/grammar/numbers-1-10/index'
+import { Route as ChallengesGrammarNegativeQuestionsIndexRouteImport } from './routes/challenges/grammar/negative-questions/index'
 import { Route as ChallengesGrammarNegationOfPastIndexRouteImport } from './routes/challenges/grammar/negation-of-past/index'
 import { Route as ChallengesGrammarNaaqisahVerbsIndexRouteImport } from './routes/challenges/grammar/naaqisah-verbs/index'
 import { Route as ChallengesGrammarMubtadaKhabarIndexRouteImport } from './routes/challenges/grammar/mubtada-khabar/index'
+import { Route as ChallengesGrammarMasdarMuawwalIndexRouteImport } from './routes/challenges/grammar/masdar-muawwal/index'
 import { Route as ChallengesGrammarMasculineFeminineIndexRouteImport } from './routes/challenges/grammar/masculine-feminine/index'
 import { Route as ChallengesGrammarKaanaWaAkhawatuhaIndexRouteImport } from './routes/challenges/grammar/kaana-wa-akhawatuha/index'
 import { Route as ChallengesGrammarIsmIshaaraNearIndexRouteImport } from './routes/challenges/grammar/ism-ishaara-near/index'
 import { Route as ChallengesGrammarIsmIshaaraFarIndexRouteImport } from './routes/challenges/grammar/ism-ishaara-far/index'
+import { Route as ChallengesGrammarIrabMudaariIndexRouteImport } from './routes/challenges/grammar/irab-mudaari/index'
 import { Route as ChallengesGrammarInterrogativesManMaaIndexRouteImport } from './routes/challenges/grammar/interrogatives-man-maa/index'
 import { Route as ChallengesGrammarInnaWaAkhawatuhaIndexRouteImport } from './routes/challenges/grammar/inna-wa-akhawatuha/index'
 import { Route as ChallengesGrammarIndependentPronounsIndexRouteImport } from './routes/challenges/grammar/independent-pronouns/index'
@@ -50,11 +56,13 @@ import { Route as ChallengesGrammarDefinitenessTanwinIndexRouteImport } from './
 import { Route as ChallengesGrammarDefectiveDiptotesIndexRouteImport } from './routes/challenges/grammar/defective-diptotes/index'
 import { Route as ChallengesGrammarDaysMonthsIndexRouteImport } from './routes/challenges/grammar/days-months/index'
 import { Route as ChallengesGrammarConjunctionsIndexRouteImport } from './routes/challenges/grammar/conjunctions/index'
+import { Route as ChallengesGrammarComparativeSuperlativeIndexRouteImport } from './routes/challenges/grammar/comparative-superlative/index'
 import { Route as ChallengesGrammarColorsIndexRouteImport } from './routes/challenges/grammar/colors/index'
 import { Route as ChallengesGrammarCaseSystemOverviewIndexRouteImport } from './routes/challenges/grammar/case-system-overview/index'
 import { Route as ChallengesGrammarBrokenPluralIndexRouteImport } from './routes/challenges/grammar/broken-plural/index'
 import { Route as ChallengesGrammarBadalVocativeIndexRouteImport } from './routes/challenges/grammar/badal-vocative/index'
 import { Route as ChallengesGrammarAttachedPronounsIndexRouteImport } from './routes/challenges/grammar/attached-pronouns/index'
+import { Route as ChallengesGrammarAdverbsOfTimeTamyizIndexRouteImport } from './routes/challenges/grammar/adverbs-of-time-tamyiz/index'
 import { Route as ChallengesGrammarAdverbsOfPlaceIndexRouteImport } from './routes/challenges/grammar/adverbs-of-place/index'
 import { Route as ChallengesGrammarAdjectivesAgreementIndexRouteImport } from './routes/challenges/grammar/adjectives-agreement/index'
 import { Route as ChallengesGrammarAakharUkhraaIndexRouteImport } from './routes/challenges/grammar/aakhar-ukhraa/index'
@@ -136,6 +144,12 @@ const ChallengesGrammarTaajjubIndexRoute =
     path: '/challenges/grammar/taajjub/',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ChallengesGrammarSpellingRulesIndexRoute =
+  ChallengesGrammarSpellingRulesIndexRouteImport.update({
+    id: '/challenges/grammar/spelling-rules/',
+    path: '/challenges/grammar/spelling-rules/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ChallengesGrammarSoundMasculinePluralIndexRoute =
   ChallengesGrammarSoundMasculinePluralIndexRouteImport.update({
     id: '/challenges/grammar/sound-masculine-plural/',
@@ -178,10 +192,28 @@ const ChallengesGrammarPastTenseConjugationIndexRoute =
     path: '/challenges/grammar/past-tense-conjugation/',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ChallengesGrammarOtherParticlesIndexRoute =
+  ChallengesGrammarOtherParticlesIndexRouteImport.update({
+    id: '/challenges/grammar/other-particles/',
+    path: '/challenges/grammar/other-particles/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ChallengesGrammarNumbers11100IndexRoute =
+  ChallengesGrammarNumbers11100IndexRouteImport.update({
+    id: '/challenges/grammar/numbers-11-100/',
+    path: '/challenges/grammar/numbers-11-100/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ChallengesGrammarNumbers110IndexRoute =
   ChallengesGrammarNumbers110IndexRouteImport.update({
     id: '/challenges/grammar/numbers-1-10/',
     path: '/challenges/grammar/numbers-1-10/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ChallengesGrammarNegativeQuestionsIndexRoute =
+  ChallengesGrammarNegativeQuestionsIndexRouteImport.update({
+    id: '/challenges/grammar/negative-questions/',
+    path: '/challenges/grammar/negative-questions/',
     getParentRoute: () => rootRouteImport,
   } as any)
 const ChallengesGrammarNegationOfPastIndexRoute =
@@ -200,6 +232,12 @@ const ChallengesGrammarMubtadaKhabarIndexRoute =
   ChallengesGrammarMubtadaKhabarIndexRouteImport.update({
     id: '/challenges/grammar/mubtada-khabar/',
     path: '/challenges/grammar/mubtada-khabar/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ChallengesGrammarMasdarMuawwalIndexRoute =
+  ChallengesGrammarMasdarMuawwalIndexRouteImport.update({
+    id: '/challenges/grammar/masdar-muawwal/',
+    path: '/challenges/grammar/masdar-muawwal/',
     getParentRoute: () => rootRouteImport,
   } as any)
 const ChallengesGrammarMasculineFeminineIndexRoute =
@@ -224,6 +262,12 @@ const ChallengesGrammarIsmIshaaraFarIndexRoute =
   ChallengesGrammarIsmIshaaraFarIndexRouteImport.update({
     id: '/challenges/grammar/ism-ishaara-far/',
     path: '/challenges/grammar/ism-ishaara-far/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ChallengesGrammarIrabMudaariIndexRoute =
+  ChallengesGrammarIrabMudaariIndexRouteImport.update({
+    id: '/challenges/grammar/irab-mudaari/',
+    path: '/challenges/grammar/irab-mudaari/',
     getParentRoute: () => rootRouteImport,
   } as any)
 const ChallengesGrammarInterrogativesManMaaIndexRoute =
@@ -298,6 +342,12 @@ const ChallengesGrammarConjunctionsIndexRoute =
     path: '/challenges/grammar/conjunctions/',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ChallengesGrammarComparativeSuperlativeIndexRoute =
+  ChallengesGrammarComparativeSuperlativeIndexRouteImport.update({
+    id: '/challenges/grammar/comparative-superlative/',
+    path: '/challenges/grammar/comparative-superlative/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ChallengesGrammarColorsIndexRoute =
   ChallengesGrammarColorsIndexRouteImport.update({
     id: '/challenges/grammar/colors/',
@@ -326,6 +376,12 @@ const ChallengesGrammarAttachedPronounsIndexRoute =
   ChallengesGrammarAttachedPronounsIndexRouteImport.update({
     id: '/challenges/grammar/attached-pronouns/',
     path: '/challenges/grammar/attached-pronouns/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ChallengesGrammarAdverbsOfTimeTamyizIndexRoute =
+  ChallengesGrammarAdverbsOfTimeTamyizIndexRouteImport.update({
+    id: '/challenges/grammar/adverbs-of-time-tamyiz/',
+    path: '/challenges/grammar/adverbs-of-time-tamyiz/',
     getParentRoute: () => rootRouteImport,
   } as any)
 const ChallengesGrammarAdverbsOfPlaceIndexRoute =
@@ -361,11 +417,13 @@ export interface FileRoutesByFullPath {
   '/challenges/grammar/aakhar-ukhraa/': typeof ChallengesGrammarAakharUkhraaIndexRoute
   '/challenges/grammar/adjectives-agreement/': typeof ChallengesGrammarAdjectivesAgreementIndexRoute
   '/challenges/grammar/adverbs-of-place/': typeof ChallengesGrammarAdverbsOfPlaceIndexRoute
+  '/challenges/grammar/adverbs-of-time-tamyiz/': typeof ChallengesGrammarAdverbsOfTimeTamyizIndexRoute
   '/challenges/grammar/attached-pronouns/': typeof ChallengesGrammarAttachedPronounsIndexRoute
   '/challenges/grammar/badal-vocative/': typeof ChallengesGrammarBadalVocativeIndexRoute
   '/challenges/grammar/broken-plural/': typeof ChallengesGrammarBrokenPluralIndexRoute
   '/challenges/grammar/case-system-overview/': typeof ChallengesGrammarCaseSystemOverviewIndexRoute
   '/challenges/grammar/colors/': typeof ChallengesGrammarColorsIndexRoute
+  '/challenges/grammar/comparative-superlative/': typeof ChallengesGrammarComparativeSuperlativeIndexRoute
   '/challenges/grammar/conjunctions/': typeof ChallengesGrammarConjunctionsIndexRoute
   '/challenges/grammar/days-months/': typeof ChallengesGrammarDaysMonthsIndexRoute
   '/challenges/grammar/defective-diptotes/': typeof ChallengesGrammarDefectiveDiptotesIndexRoute
@@ -378,14 +436,19 @@ export interface FileRoutesByFullPath {
   '/challenges/grammar/independent-pronouns/': typeof ChallengesGrammarIndependentPronounsIndexRoute
   '/challenges/grammar/inna-wa-akhawatuha/': typeof ChallengesGrammarInnaWaAkhawatuhaIndexRoute
   '/challenges/grammar/interrogatives-man-maa/': typeof ChallengesGrammarInterrogativesManMaaIndexRoute
+  '/challenges/grammar/irab-mudaari/': typeof ChallengesGrammarIrabMudaariIndexRoute
   '/challenges/grammar/ism-ishaara-far/': typeof ChallengesGrammarIsmIshaaraFarIndexRoute
   '/challenges/grammar/ism-ishaara-near/': typeof ChallengesGrammarIsmIshaaraNearIndexRoute
   '/challenges/grammar/kaana-wa-akhawatuha/': typeof ChallengesGrammarKaanaWaAkhawatuhaIndexRoute
   '/challenges/grammar/masculine-feminine/': typeof ChallengesGrammarMasculineFeminineIndexRoute
+  '/challenges/grammar/masdar-muawwal/': typeof ChallengesGrammarMasdarMuawwalIndexRoute
   '/challenges/grammar/mubtada-khabar/': typeof ChallengesGrammarMubtadaKhabarIndexRoute
   '/challenges/grammar/naaqisah-verbs/': typeof ChallengesGrammarNaaqisahVerbsIndexRoute
   '/challenges/grammar/negation-of-past/': typeof ChallengesGrammarNegationOfPastIndexRoute
+  '/challenges/grammar/negative-questions/': typeof ChallengesGrammarNegativeQuestionsIndexRoute
   '/challenges/grammar/numbers-1-10/': typeof ChallengesGrammarNumbers110IndexRoute
+  '/challenges/grammar/numbers-11-100/': typeof ChallengesGrammarNumbers11100IndexRoute
+  '/challenges/grammar/other-particles/': typeof ChallengesGrammarOtherParticlesIndexRoute
   '/challenges/grammar/past-tense-conjugation/': typeof ChallengesGrammarPastTenseConjugationIndexRoute
   '/challenges/grammar/prepositions/': typeof ChallengesGrammarPrepositionsIndexRoute
   '/challenges/grammar/present-tense-conjugation/': typeof ChallengesGrammarPresentTenseConjugationIndexRoute
@@ -393,6 +456,7 @@ export interface FileRoutesByFullPath {
   '/challenges/grammar/relative-pronouns/': typeof ChallengesGrammarRelativePronounsIndexRoute
   '/challenges/grammar/sound-feminine-plural/': typeof ChallengesGrammarSoundFemininePluralIndexRoute
   '/challenges/grammar/sound-masculine-plural/': typeof ChallengesGrammarSoundMasculinePluralIndexRoute
+  '/challenges/grammar/spelling-rules/': typeof ChallengesGrammarSpellingRulesIndexRoute
   '/challenges/grammar/taajjub/': typeof ChallengesGrammarTaajjubIndexRoute
   '/challenges/grammar/verb-basics-faail-mafool/': typeof ChallengesGrammarVerbBasicsFaailMafoolIndexRoute
   '/challenges/grammar/weak-verbs/': typeof ChallengesGrammarWeakVerbsIndexRoute
@@ -412,11 +476,13 @@ export interface FileRoutesByTo {
   '/challenges/grammar/aakhar-ukhraa': typeof ChallengesGrammarAakharUkhraaIndexRoute
   '/challenges/grammar/adjectives-agreement': typeof ChallengesGrammarAdjectivesAgreementIndexRoute
   '/challenges/grammar/adverbs-of-place': typeof ChallengesGrammarAdverbsOfPlaceIndexRoute
+  '/challenges/grammar/adverbs-of-time-tamyiz': typeof ChallengesGrammarAdverbsOfTimeTamyizIndexRoute
   '/challenges/grammar/attached-pronouns': typeof ChallengesGrammarAttachedPronounsIndexRoute
   '/challenges/grammar/badal-vocative': typeof ChallengesGrammarBadalVocativeIndexRoute
   '/challenges/grammar/broken-plural': typeof ChallengesGrammarBrokenPluralIndexRoute
   '/challenges/grammar/case-system-overview': typeof ChallengesGrammarCaseSystemOverviewIndexRoute
   '/challenges/grammar/colors': typeof ChallengesGrammarColorsIndexRoute
+  '/challenges/grammar/comparative-superlative': typeof ChallengesGrammarComparativeSuperlativeIndexRoute
   '/challenges/grammar/conjunctions': typeof ChallengesGrammarConjunctionsIndexRoute
   '/challenges/grammar/days-months': typeof ChallengesGrammarDaysMonthsIndexRoute
   '/challenges/grammar/defective-diptotes': typeof ChallengesGrammarDefectiveDiptotesIndexRoute
@@ -429,14 +495,19 @@ export interface FileRoutesByTo {
   '/challenges/grammar/independent-pronouns': typeof ChallengesGrammarIndependentPronounsIndexRoute
   '/challenges/grammar/inna-wa-akhawatuha': typeof ChallengesGrammarInnaWaAkhawatuhaIndexRoute
   '/challenges/grammar/interrogatives-man-maa': typeof ChallengesGrammarInterrogativesManMaaIndexRoute
+  '/challenges/grammar/irab-mudaari': typeof ChallengesGrammarIrabMudaariIndexRoute
   '/challenges/grammar/ism-ishaara-far': typeof ChallengesGrammarIsmIshaaraFarIndexRoute
   '/challenges/grammar/ism-ishaara-near': typeof ChallengesGrammarIsmIshaaraNearIndexRoute
   '/challenges/grammar/kaana-wa-akhawatuha': typeof ChallengesGrammarKaanaWaAkhawatuhaIndexRoute
   '/challenges/grammar/masculine-feminine': typeof ChallengesGrammarMasculineFeminineIndexRoute
+  '/challenges/grammar/masdar-muawwal': typeof ChallengesGrammarMasdarMuawwalIndexRoute
   '/challenges/grammar/mubtada-khabar': typeof ChallengesGrammarMubtadaKhabarIndexRoute
   '/challenges/grammar/naaqisah-verbs': typeof ChallengesGrammarNaaqisahVerbsIndexRoute
   '/challenges/grammar/negation-of-past': typeof ChallengesGrammarNegationOfPastIndexRoute
+  '/challenges/grammar/negative-questions': typeof ChallengesGrammarNegativeQuestionsIndexRoute
   '/challenges/grammar/numbers-1-10': typeof ChallengesGrammarNumbers110IndexRoute
+  '/challenges/grammar/numbers-11-100': typeof ChallengesGrammarNumbers11100IndexRoute
+  '/challenges/grammar/other-particles': typeof ChallengesGrammarOtherParticlesIndexRoute
   '/challenges/grammar/past-tense-conjugation': typeof ChallengesGrammarPastTenseConjugationIndexRoute
   '/challenges/grammar/prepositions': typeof ChallengesGrammarPrepositionsIndexRoute
   '/challenges/grammar/present-tense-conjugation': typeof ChallengesGrammarPresentTenseConjugationIndexRoute
@@ -444,6 +515,7 @@ export interface FileRoutesByTo {
   '/challenges/grammar/relative-pronouns': typeof ChallengesGrammarRelativePronounsIndexRoute
   '/challenges/grammar/sound-feminine-plural': typeof ChallengesGrammarSoundFemininePluralIndexRoute
   '/challenges/grammar/sound-masculine-plural': typeof ChallengesGrammarSoundMasculinePluralIndexRoute
+  '/challenges/grammar/spelling-rules': typeof ChallengesGrammarSpellingRulesIndexRoute
   '/challenges/grammar/taajjub': typeof ChallengesGrammarTaajjubIndexRoute
   '/challenges/grammar/verb-basics-faail-mafool': typeof ChallengesGrammarVerbBasicsFaailMafoolIndexRoute
   '/challenges/grammar/weak-verbs': typeof ChallengesGrammarWeakVerbsIndexRoute
@@ -464,11 +536,13 @@ export interface FileRoutesById {
   '/challenges/grammar/aakhar-ukhraa/': typeof ChallengesGrammarAakharUkhraaIndexRoute
   '/challenges/grammar/adjectives-agreement/': typeof ChallengesGrammarAdjectivesAgreementIndexRoute
   '/challenges/grammar/adverbs-of-place/': typeof ChallengesGrammarAdverbsOfPlaceIndexRoute
+  '/challenges/grammar/adverbs-of-time-tamyiz/': typeof ChallengesGrammarAdverbsOfTimeTamyizIndexRoute
   '/challenges/grammar/attached-pronouns/': typeof ChallengesGrammarAttachedPronounsIndexRoute
   '/challenges/grammar/badal-vocative/': typeof ChallengesGrammarBadalVocativeIndexRoute
   '/challenges/grammar/broken-plural/': typeof ChallengesGrammarBrokenPluralIndexRoute
   '/challenges/grammar/case-system-overview/': typeof ChallengesGrammarCaseSystemOverviewIndexRoute
   '/challenges/grammar/colors/': typeof ChallengesGrammarColorsIndexRoute
+  '/challenges/grammar/comparative-superlative/': typeof ChallengesGrammarComparativeSuperlativeIndexRoute
   '/challenges/grammar/conjunctions/': typeof ChallengesGrammarConjunctionsIndexRoute
   '/challenges/grammar/days-months/': typeof ChallengesGrammarDaysMonthsIndexRoute
   '/challenges/grammar/defective-diptotes/': typeof ChallengesGrammarDefectiveDiptotesIndexRoute
@@ -481,14 +555,19 @@ export interface FileRoutesById {
   '/challenges/grammar/independent-pronouns/': typeof ChallengesGrammarIndependentPronounsIndexRoute
   '/challenges/grammar/inna-wa-akhawatuha/': typeof ChallengesGrammarInnaWaAkhawatuhaIndexRoute
   '/challenges/grammar/interrogatives-man-maa/': typeof ChallengesGrammarInterrogativesManMaaIndexRoute
+  '/challenges/grammar/irab-mudaari/': typeof ChallengesGrammarIrabMudaariIndexRoute
   '/challenges/grammar/ism-ishaara-far/': typeof ChallengesGrammarIsmIshaaraFarIndexRoute
   '/challenges/grammar/ism-ishaara-near/': typeof ChallengesGrammarIsmIshaaraNearIndexRoute
   '/challenges/grammar/kaana-wa-akhawatuha/': typeof ChallengesGrammarKaanaWaAkhawatuhaIndexRoute
   '/challenges/grammar/masculine-feminine/': typeof ChallengesGrammarMasculineFeminineIndexRoute
+  '/challenges/grammar/masdar-muawwal/': typeof ChallengesGrammarMasdarMuawwalIndexRoute
   '/challenges/grammar/mubtada-khabar/': typeof ChallengesGrammarMubtadaKhabarIndexRoute
   '/challenges/grammar/naaqisah-verbs/': typeof ChallengesGrammarNaaqisahVerbsIndexRoute
   '/challenges/grammar/negation-of-past/': typeof ChallengesGrammarNegationOfPastIndexRoute
+  '/challenges/grammar/negative-questions/': typeof ChallengesGrammarNegativeQuestionsIndexRoute
   '/challenges/grammar/numbers-1-10/': typeof ChallengesGrammarNumbers110IndexRoute
+  '/challenges/grammar/numbers-11-100/': typeof ChallengesGrammarNumbers11100IndexRoute
+  '/challenges/grammar/other-particles/': typeof ChallengesGrammarOtherParticlesIndexRoute
   '/challenges/grammar/past-tense-conjugation/': typeof ChallengesGrammarPastTenseConjugationIndexRoute
   '/challenges/grammar/prepositions/': typeof ChallengesGrammarPrepositionsIndexRoute
   '/challenges/grammar/present-tense-conjugation/': typeof ChallengesGrammarPresentTenseConjugationIndexRoute
@@ -496,6 +575,7 @@ export interface FileRoutesById {
   '/challenges/grammar/relative-pronouns/': typeof ChallengesGrammarRelativePronounsIndexRoute
   '/challenges/grammar/sound-feminine-plural/': typeof ChallengesGrammarSoundFemininePluralIndexRoute
   '/challenges/grammar/sound-masculine-plural/': typeof ChallengesGrammarSoundMasculinePluralIndexRoute
+  '/challenges/grammar/spelling-rules/': typeof ChallengesGrammarSpellingRulesIndexRoute
   '/challenges/grammar/taajjub/': typeof ChallengesGrammarTaajjubIndexRoute
   '/challenges/grammar/verb-basics-faail-mafool/': typeof ChallengesGrammarVerbBasicsFaailMafoolIndexRoute
   '/challenges/grammar/weak-verbs/': typeof ChallengesGrammarWeakVerbsIndexRoute
@@ -517,11 +597,13 @@ export interface FileRouteTypes {
     | '/challenges/grammar/aakhar-ukhraa/'
     | '/challenges/grammar/adjectives-agreement/'
     | '/challenges/grammar/adverbs-of-place/'
+    | '/challenges/grammar/adverbs-of-time-tamyiz/'
     | '/challenges/grammar/attached-pronouns/'
     | '/challenges/grammar/badal-vocative/'
     | '/challenges/grammar/broken-plural/'
     | '/challenges/grammar/case-system-overview/'
     | '/challenges/grammar/colors/'
+    | '/challenges/grammar/comparative-superlative/'
     | '/challenges/grammar/conjunctions/'
     | '/challenges/grammar/days-months/'
     | '/challenges/grammar/defective-diptotes/'
@@ -534,14 +616,19 @@ export interface FileRouteTypes {
     | '/challenges/grammar/independent-pronouns/'
     | '/challenges/grammar/inna-wa-akhawatuha/'
     | '/challenges/grammar/interrogatives-man-maa/'
+    | '/challenges/grammar/irab-mudaari/'
     | '/challenges/grammar/ism-ishaara-far/'
     | '/challenges/grammar/ism-ishaara-near/'
     | '/challenges/grammar/kaana-wa-akhawatuha/'
     | '/challenges/grammar/masculine-feminine/'
+    | '/challenges/grammar/masdar-muawwal/'
     | '/challenges/grammar/mubtada-khabar/'
     | '/challenges/grammar/naaqisah-verbs/'
     | '/challenges/grammar/negation-of-past/'
+    | '/challenges/grammar/negative-questions/'
     | '/challenges/grammar/numbers-1-10/'
+    | '/challenges/grammar/numbers-11-100/'
+    | '/challenges/grammar/other-particles/'
     | '/challenges/grammar/past-tense-conjugation/'
     | '/challenges/grammar/prepositions/'
     | '/challenges/grammar/present-tense-conjugation/'
@@ -549,6 +636,7 @@ export interface FileRouteTypes {
     | '/challenges/grammar/relative-pronouns/'
     | '/challenges/grammar/sound-feminine-plural/'
     | '/challenges/grammar/sound-masculine-plural/'
+    | '/challenges/grammar/spelling-rules/'
     | '/challenges/grammar/taajjub/'
     | '/challenges/grammar/verb-basics-faail-mafool/'
     | '/challenges/grammar/weak-verbs/'
@@ -568,11 +656,13 @@ export interface FileRouteTypes {
     | '/challenges/grammar/aakhar-ukhraa'
     | '/challenges/grammar/adjectives-agreement'
     | '/challenges/grammar/adverbs-of-place'
+    | '/challenges/grammar/adverbs-of-time-tamyiz'
     | '/challenges/grammar/attached-pronouns'
     | '/challenges/grammar/badal-vocative'
     | '/challenges/grammar/broken-plural'
     | '/challenges/grammar/case-system-overview'
     | '/challenges/grammar/colors'
+    | '/challenges/grammar/comparative-superlative'
     | '/challenges/grammar/conjunctions'
     | '/challenges/grammar/days-months'
     | '/challenges/grammar/defective-diptotes'
@@ -585,14 +675,19 @@ export interface FileRouteTypes {
     | '/challenges/grammar/independent-pronouns'
     | '/challenges/grammar/inna-wa-akhawatuha'
     | '/challenges/grammar/interrogatives-man-maa'
+    | '/challenges/grammar/irab-mudaari'
     | '/challenges/grammar/ism-ishaara-far'
     | '/challenges/grammar/ism-ishaara-near'
     | '/challenges/grammar/kaana-wa-akhawatuha'
     | '/challenges/grammar/masculine-feminine'
+    | '/challenges/grammar/masdar-muawwal'
     | '/challenges/grammar/mubtada-khabar'
     | '/challenges/grammar/naaqisah-verbs'
     | '/challenges/grammar/negation-of-past'
+    | '/challenges/grammar/negative-questions'
     | '/challenges/grammar/numbers-1-10'
+    | '/challenges/grammar/numbers-11-100'
+    | '/challenges/grammar/other-particles'
     | '/challenges/grammar/past-tense-conjugation'
     | '/challenges/grammar/prepositions'
     | '/challenges/grammar/present-tense-conjugation'
@@ -600,6 +695,7 @@ export interface FileRouteTypes {
     | '/challenges/grammar/relative-pronouns'
     | '/challenges/grammar/sound-feminine-plural'
     | '/challenges/grammar/sound-masculine-plural'
+    | '/challenges/grammar/spelling-rules'
     | '/challenges/grammar/taajjub'
     | '/challenges/grammar/verb-basics-faail-mafool'
     | '/challenges/grammar/weak-verbs'
@@ -619,11 +715,13 @@ export interface FileRouteTypes {
     | '/challenges/grammar/aakhar-ukhraa/'
     | '/challenges/grammar/adjectives-agreement/'
     | '/challenges/grammar/adverbs-of-place/'
+    | '/challenges/grammar/adverbs-of-time-tamyiz/'
     | '/challenges/grammar/attached-pronouns/'
     | '/challenges/grammar/badal-vocative/'
     | '/challenges/grammar/broken-plural/'
     | '/challenges/grammar/case-system-overview/'
     | '/challenges/grammar/colors/'
+    | '/challenges/grammar/comparative-superlative/'
     | '/challenges/grammar/conjunctions/'
     | '/challenges/grammar/days-months/'
     | '/challenges/grammar/defective-diptotes/'
@@ -636,14 +734,19 @@ export interface FileRouteTypes {
     | '/challenges/grammar/independent-pronouns/'
     | '/challenges/grammar/inna-wa-akhawatuha/'
     | '/challenges/grammar/interrogatives-man-maa/'
+    | '/challenges/grammar/irab-mudaari/'
     | '/challenges/grammar/ism-ishaara-far/'
     | '/challenges/grammar/ism-ishaara-near/'
     | '/challenges/grammar/kaana-wa-akhawatuha/'
     | '/challenges/grammar/masculine-feminine/'
+    | '/challenges/grammar/masdar-muawwal/'
     | '/challenges/grammar/mubtada-khabar/'
     | '/challenges/grammar/naaqisah-verbs/'
     | '/challenges/grammar/negation-of-past/'
+    | '/challenges/grammar/negative-questions/'
     | '/challenges/grammar/numbers-1-10/'
+    | '/challenges/grammar/numbers-11-100/'
+    | '/challenges/grammar/other-particles/'
     | '/challenges/grammar/past-tense-conjugation/'
     | '/challenges/grammar/prepositions/'
     | '/challenges/grammar/present-tense-conjugation/'
@@ -651,6 +754,7 @@ export interface FileRouteTypes {
     | '/challenges/grammar/relative-pronouns/'
     | '/challenges/grammar/sound-feminine-plural/'
     | '/challenges/grammar/sound-masculine-plural/'
+    | '/challenges/grammar/spelling-rules/'
     | '/challenges/grammar/taajjub/'
     | '/challenges/grammar/verb-basics-faail-mafool/'
     | '/challenges/grammar/weak-verbs/'
@@ -671,11 +775,13 @@ export interface RootRouteChildren {
   ChallengesGrammarAakharUkhraaIndexRoute: typeof ChallengesGrammarAakharUkhraaIndexRoute
   ChallengesGrammarAdjectivesAgreementIndexRoute: typeof ChallengesGrammarAdjectivesAgreementIndexRoute
   ChallengesGrammarAdverbsOfPlaceIndexRoute: typeof ChallengesGrammarAdverbsOfPlaceIndexRoute
+  ChallengesGrammarAdverbsOfTimeTamyizIndexRoute: typeof ChallengesGrammarAdverbsOfTimeTamyizIndexRoute
   ChallengesGrammarAttachedPronounsIndexRoute: typeof ChallengesGrammarAttachedPronounsIndexRoute
   ChallengesGrammarBadalVocativeIndexRoute: typeof ChallengesGrammarBadalVocativeIndexRoute
   ChallengesGrammarBrokenPluralIndexRoute: typeof ChallengesGrammarBrokenPluralIndexRoute
   ChallengesGrammarCaseSystemOverviewIndexRoute: typeof ChallengesGrammarCaseSystemOverviewIndexRoute
   ChallengesGrammarColorsIndexRoute: typeof ChallengesGrammarColorsIndexRoute
+  ChallengesGrammarComparativeSuperlativeIndexRoute: typeof ChallengesGrammarComparativeSuperlativeIndexRoute
   ChallengesGrammarConjunctionsIndexRoute: typeof ChallengesGrammarConjunctionsIndexRoute
   ChallengesGrammarDaysMonthsIndexRoute: typeof ChallengesGrammarDaysMonthsIndexRoute
   ChallengesGrammarDefectiveDiptotesIndexRoute: typeof ChallengesGrammarDefectiveDiptotesIndexRoute
@@ -688,14 +794,19 @@ export interface RootRouteChildren {
   ChallengesGrammarIndependentPronounsIndexRoute: typeof ChallengesGrammarIndependentPronounsIndexRoute
   ChallengesGrammarInnaWaAkhawatuhaIndexRoute: typeof ChallengesGrammarInnaWaAkhawatuhaIndexRoute
   ChallengesGrammarInterrogativesManMaaIndexRoute: typeof ChallengesGrammarInterrogativesManMaaIndexRoute
+  ChallengesGrammarIrabMudaariIndexRoute: typeof ChallengesGrammarIrabMudaariIndexRoute
   ChallengesGrammarIsmIshaaraFarIndexRoute: typeof ChallengesGrammarIsmIshaaraFarIndexRoute
   ChallengesGrammarIsmIshaaraNearIndexRoute: typeof ChallengesGrammarIsmIshaaraNearIndexRoute
   ChallengesGrammarKaanaWaAkhawatuhaIndexRoute: typeof ChallengesGrammarKaanaWaAkhawatuhaIndexRoute
   ChallengesGrammarMasculineFeminineIndexRoute: typeof ChallengesGrammarMasculineFeminineIndexRoute
+  ChallengesGrammarMasdarMuawwalIndexRoute: typeof ChallengesGrammarMasdarMuawwalIndexRoute
   ChallengesGrammarMubtadaKhabarIndexRoute: typeof ChallengesGrammarMubtadaKhabarIndexRoute
   ChallengesGrammarNaaqisahVerbsIndexRoute: typeof ChallengesGrammarNaaqisahVerbsIndexRoute
   ChallengesGrammarNegationOfPastIndexRoute: typeof ChallengesGrammarNegationOfPastIndexRoute
+  ChallengesGrammarNegativeQuestionsIndexRoute: typeof ChallengesGrammarNegativeQuestionsIndexRoute
   ChallengesGrammarNumbers110IndexRoute: typeof ChallengesGrammarNumbers110IndexRoute
+  ChallengesGrammarNumbers11100IndexRoute: typeof ChallengesGrammarNumbers11100IndexRoute
+  ChallengesGrammarOtherParticlesIndexRoute: typeof ChallengesGrammarOtherParticlesIndexRoute
   ChallengesGrammarPastTenseConjugationIndexRoute: typeof ChallengesGrammarPastTenseConjugationIndexRoute
   ChallengesGrammarPrepositionsIndexRoute: typeof ChallengesGrammarPrepositionsIndexRoute
   ChallengesGrammarPresentTenseConjugationIndexRoute: typeof ChallengesGrammarPresentTenseConjugationIndexRoute
@@ -703,6 +814,7 @@ export interface RootRouteChildren {
   ChallengesGrammarRelativePronounsIndexRoute: typeof ChallengesGrammarRelativePronounsIndexRoute
   ChallengesGrammarSoundFemininePluralIndexRoute: typeof ChallengesGrammarSoundFemininePluralIndexRoute
   ChallengesGrammarSoundMasculinePluralIndexRoute: typeof ChallengesGrammarSoundMasculinePluralIndexRoute
+  ChallengesGrammarSpellingRulesIndexRoute: typeof ChallengesGrammarSpellingRulesIndexRoute
   ChallengesGrammarTaajjubIndexRoute: typeof ChallengesGrammarTaajjubIndexRoute
   ChallengesGrammarVerbBasicsFaailMafoolIndexRoute: typeof ChallengesGrammarVerbBasicsFaailMafoolIndexRoute
   ChallengesGrammarWeakVerbsIndexRoute: typeof ChallengesGrammarWeakVerbsIndexRoute
@@ -809,6 +921,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ChallengesGrammarTaajjubIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/challenges/grammar/spelling-rules/': {
+      id: '/challenges/grammar/spelling-rules/'
+      path: '/challenges/grammar/spelling-rules'
+      fullPath: '/challenges/grammar/spelling-rules/'
+      preLoaderRoute: typeof ChallengesGrammarSpellingRulesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/challenges/grammar/sound-masculine-plural/': {
       id: '/challenges/grammar/sound-masculine-plural/'
       path: '/challenges/grammar/sound-masculine-plural'
@@ -858,11 +977,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ChallengesGrammarPastTenseConjugationIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/challenges/grammar/other-particles/': {
+      id: '/challenges/grammar/other-particles/'
+      path: '/challenges/grammar/other-particles'
+      fullPath: '/challenges/grammar/other-particles/'
+      preLoaderRoute: typeof ChallengesGrammarOtherParticlesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/challenges/grammar/numbers-11-100/': {
+      id: '/challenges/grammar/numbers-11-100/'
+      path: '/challenges/grammar/numbers-11-100'
+      fullPath: '/challenges/grammar/numbers-11-100/'
+      preLoaderRoute: typeof ChallengesGrammarNumbers11100IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/challenges/grammar/numbers-1-10/': {
       id: '/challenges/grammar/numbers-1-10/'
       path: '/challenges/grammar/numbers-1-10'
       fullPath: '/challenges/grammar/numbers-1-10/'
       preLoaderRoute: typeof ChallengesGrammarNumbers110IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/challenges/grammar/negative-questions/': {
+      id: '/challenges/grammar/negative-questions/'
+      path: '/challenges/grammar/negative-questions'
+      fullPath: '/challenges/grammar/negative-questions/'
+      preLoaderRoute: typeof ChallengesGrammarNegativeQuestionsIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/challenges/grammar/negation-of-past/': {
@@ -884,6 +1024,13 @@ declare module '@tanstack/react-router' {
       path: '/challenges/grammar/mubtada-khabar'
       fullPath: '/challenges/grammar/mubtada-khabar/'
       preLoaderRoute: typeof ChallengesGrammarMubtadaKhabarIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/challenges/grammar/masdar-muawwal/': {
+      id: '/challenges/grammar/masdar-muawwal/'
+      path: '/challenges/grammar/masdar-muawwal'
+      fullPath: '/challenges/grammar/masdar-muawwal/'
+      preLoaderRoute: typeof ChallengesGrammarMasdarMuawwalIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/challenges/grammar/masculine-feminine/': {
@@ -912,6 +1059,13 @@ declare module '@tanstack/react-router' {
       path: '/challenges/grammar/ism-ishaara-far'
       fullPath: '/challenges/grammar/ism-ishaara-far/'
       preLoaderRoute: typeof ChallengesGrammarIsmIshaaraFarIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/challenges/grammar/irab-mudaari/': {
+      id: '/challenges/grammar/irab-mudaari/'
+      path: '/challenges/grammar/irab-mudaari'
+      fullPath: '/challenges/grammar/irab-mudaari/'
+      preLoaderRoute: typeof ChallengesGrammarIrabMudaariIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/challenges/grammar/interrogatives-man-maa/': {
@@ -998,6 +1152,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ChallengesGrammarConjunctionsIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/challenges/grammar/comparative-superlative/': {
+      id: '/challenges/grammar/comparative-superlative/'
+      path: '/challenges/grammar/comparative-superlative'
+      fullPath: '/challenges/grammar/comparative-superlative/'
+      preLoaderRoute: typeof ChallengesGrammarComparativeSuperlativeIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/challenges/grammar/colors/': {
       id: '/challenges/grammar/colors/'
       path: '/challenges/grammar/colors'
@@ -1031,6 +1192,13 @@ declare module '@tanstack/react-router' {
       path: '/challenges/grammar/attached-pronouns'
       fullPath: '/challenges/grammar/attached-pronouns/'
       preLoaderRoute: typeof ChallengesGrammarAttachedPronounsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/challenges/grammar/adverbs-of-time-tamyiz/': {
+      id: '/challenges/grammar/adverbs-of-time-tamyiz/'
+      path: '/challenges/grammar/adverbs-of-time-tamyiz'
+      fullPath: '/challenges/grammar/adverbs-of-time-tamyiz/'
+      preLoaderRoute: typeof ChallengesGrammarAdverbsOfTimeTamyizIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/challenges/grammar/adverbs-of-place/': {
@@ -1075,6 +1243,8 @@ const rootRouteChildren: RootRouteChildren = {
     ChallengesGrammarAdjectivesAgreementIndexRoute,
   ChallengesGrammarAdverbsOfPlaceIndexRoute:
     ChallengesGrammarAdverbsOfPlaceIndexRoute,
+  ChallengesGrammarAdverbsOfTimeTamyizIndexRoute:
+    ChallengesGrammarAdverbsOfTimeTamyizIndexRoute,
   ChallengesGrammarAttachedPronounsIndexRoute:
     ChallengesGrammarAttachedPronounsIndexRoute,
   ChallengesGrammarBadalVocativeIndexRoute:
@@ -1084,6 +1254,8 @@ const rootRouteChildren: RootRouteChildren = {
   ChallengesGrammarCaseSystemOverviewIndexRoute:
     ChallengesGrammarCaseSystemOverviewIndexRoute,
   ChallengesGrammarColorsIndexRoute: ChallengesGrammarColorsIndexRoute,
+  ChallengesGrammarComparativeSuperlativeIndexRoute:
+    ChallengesGrammarComparativeSuperlativeIndexRoute,
   ChallengesGrammarConjunctionsIndexRoute:
     ChallengesGrammarConjunctionsIndexRoute,
   ChallengesGrammarDaysMonthsIndexRoute: ChallengesGrammarDaysMonthsIndexRoute,
@@ -1102,6 +1274,8 @@ const rootRouteChildren: RootRouteChildren = {
     ChallengesGrammarInnaWaAkhawatuhaIndexRoute,
   ChallengesGrammarInterrogativesManMaaIndexRoute:
     ChallengesGrammarInterrogativesManMaaIndexRoute,
+  ChallengesGrammarIrabMudaariIndexRoute:
+    ChallengesGrammarIrabMudaariIndexRoute,
   ChallengesGrammarIsmIshaaraFarIndexRoute:
     ChallengesGrammarIsmIshaaraFarIndexRoute,
   ChallengesGrammarIsmIshaaraNearIndexRoute:
@@ -1110,13 +1284,21 @@ const rootRouteChildren: RootRouteChildren = {
     ChallengesGrammarKaanaWaAkhawatuhaIndexRoute,
   ChallengesGrammarMasculineFeminineIndexRoute:
     ChallengesGrammarMasculineFeminineIndexRoute,
+  ChallengesGrammarMasdarMuawwalIndexRoute:
+    ChallengesGrammarMasdarMuawwalIndexRoute,
   ChallengesGrammarMubtadaKhabarIndexRoute:
     ChallengesGrammarMubtadaKhabarIndexRoute,
   ChallengesGrammarNaaqisahVerbsIndexRoute:
     ChallengesGrammarNaaqisahVerbsIndexRoute,
   ChallengesGrammarNegationOfPastIndexRoute:
     ChallengesGrammarNegationOfPastIndexRoute,
+  ChallengesGrammarNegativeQuestionsIndexRoute:
+    ChallengesGrammarNegativeQuestionsIndexRoute,
   ChallengesGrammarNumbers110IndexRoute: ChallengesGrammarNumbers110IndexRoute,
+  ChallengesGrammarNumbers11100IndexRoute:
+    ChallengesGrammarNumbers11100IndexRoute,
+  ChallengesGrammarOtherParticlesIndexRoute:
+    ChallengesGrammarOtherParticlesIndexRoute,
   ChallengesGrammarPastTenseConjugationIndexRoute:
     ChallengesGrammarPastTenseConjugationIndexRoute,
   ChallengesGrammarPrepositionsIndexRoute:
@@ -1131,6 +1313,8 @@ const rootRouteChildren: RootRouteChildren = {
     ChallengesGrammarSoundFemininePluralIndexRoute,
   ChallengesGrammarSoundMasculinePluralIndexRoute:
     ChallengesGrammarSoundMasculinePluralIndexRoute,
+  ChallengesGrammarSpellingRulesIndexRoute:
+    ChallengesGrammarSpellingRulesIndexRoute,
   ChallengesGrammarTaajjubIndexRoute: ChallengesGrammarTaajjubIndexRoute,
   ChallengesGrammarVerbBasicsFaailMafoolIndexRoute:
     ChallengesGrammarVerbBasicsFaailMafoolIndexRoute,
