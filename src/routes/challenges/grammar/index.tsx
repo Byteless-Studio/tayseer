@@ -68,6 +68,12 @@ const topics = [
   { n: 60, slug: 'nima-biisa', arabic: 'نِعْمَ وبِئْسَ', title: 'Praise and Blame' },
   { n: 61, slug: 'noon-tawkeed', arabic: 'نون التوكيد', title: 'The Emphatic Nūn' },
   { n: 62, slug: 'awlu-awlaat', arabic: 'أُولُو وأُولَاتُ', title: 'Possessors Of (plural)' },
+  { n: 63, slug: 'ism-makaan-zamaan', arabic: 'اسم المكان والزمان', title: 'Nouns of Place & Time' },
+  { n: 64, slug: 'ism-aalah', arabic: 'اسم الآلة', title: 'Nouns of Instrument' },
+  { n: 65, slug: 'ism-tasgheer', arabic: 'اسم التصغير', title: 'The Diminutive' },
+  { n: 66, slug: 'tahdheer-ighraa', arabic: 'التحذير والإغراء', title: 'Warning & Encouragement' },
+  { n: 67, slug: 'alaamaat-tarqeem', arabic: 'علامات الترقيم', title: 'Punctuation' },
+  { n: 68, slug: 'dual-relative-pronouns', arabic: 'الأسماء الموصولة للمثنى', title: 'Dual Relative Pronouns' },
 ] as const
 
 function GrammarHubPage() {

@@ -79,7 +79,7 @@ const quizItems: StrictQuizItem[] = [
     options: [
       'ما أجملَ الحديقةَ!\nmā ajmala l-ḥadīqata! — "How beautiful the garden is!"',
       'ما أجملُ الحديقةَ!\nmā ajmalu l-ḥadīqata!',
-      'ما أروعَ المنظرَ!\nmā rawʿa l-manẓara! — "How wonderful the view is!"',
+      'ما أروعَ المنظرَ!\nmā arwaʿa l-manẓara! — "How wonderful the view is!"',
       'أحسِنْ بأخلاقِه!\naḥsin bi-akhlāqihi! — "How excellent his character is!"',
     ],
     correctIndex: 1,

@@ -86,7 +86,7 @@ const quizItems: StrictQuizItem[] = [
     a: 'صفات الألوان على وزن أَفْعَل من الأسماء الممنوعة من الصرف، فتُجر بالفتحة لا الكسرة ولا تُنوَّن، بخلاف الصفات العادية على وزن فَعِيل ونحوه التي تُصرف بشكل طبيعي وتقبل التنوين والكسرة في الجر.\nColor adjectives on the pattern أَفْعَل are diptotes (ممنوع من الصرف): they take a fatḥah rather than a kasrah in جر, and never take تنوين — unlike ordinary adjectives on patterns like فَعِيل, which decline normally and take both تنوين and a regular kasrah in جر.',
   },
   {
-    q: 'مررتُ برجلٍ أسودَ الشعرِ — ما علامة الجر التي ستظهر على "أسودَ" هنا، ولماذا؟\nmarartu bi-rajulin aswada sh-shaʿri ("I passed by a black-haired man") — what case ending appears on "أسودَ" here, and why?',
+    q: 'مررتُ بحصانٍ أسودَ — ما علامة الجر التي تظهر على "أسودَ" هنا، ولماذا؟\nmarartu bi-ḥiṣānin aswada ("I passed by a black horse") — what case ending appears on "أسودَ" here, and why?',
     options: [
       'الكسرة الظاهرة، لأنه اسم عادي مصروف\nA visible kasrah, because it is an ordinary triptote noun',
       'الفتحة نيابة عن الكسرة، لأنه ممنوع من الصرف\nA fatḥah standing in for the kasrah, because it is a diptote',
@@ -94,7 +94,7 @@ const quizItems: StrictQuizItem[] = [
       'لا تظهر عليه أي علامة لأنه مبني\nNo case ending at all, because it is مبني',
     ],
     correctIndex: 1,
-    a: 'بما أن أسود على وزن الألوان أَفْعَل الممنوع من الصرف، فعلامة جره الفتحة نيابة عن الكسرة الأصلية، وهذا من أبرز آثار كونه ممنوعاً من الصرف.\nSince أسود is on the diptote color pattern أَفْعَل, its جر marker is a fatḥah standing in for the original kasrah — one of the clearest effects of being ممنوع من الصرف.',
+    a: 'أسود على وزن الألوان أَفْعَل، وهو ممنوع من الصرف؛ لذلك تكون علامة جره الفتحة نيابة عن الكسرة ما دام نكرة غير مضاف ولا معرّفاً بـ«ال».\nأسود is on the diptote color pattern أَفْعَل, so its genitive marker is a fatḥah in place of kasrah while it is indefinite, not in an iḍāfah construction, and not defined with ال.',
   },
 ]
 
