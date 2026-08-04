@@ -124,8 +124,8 @@ function TopicPage() {
             — Possessor Of
           </h1>
           <p className="text-muted-foreground text-base max-w-xl">
-            ذو (masc. sg. "possessor of"), ذات (fem. sg.), ذوو (masc. pl.), ذوات (fem. pl.) always
-            take a مضاف إليه and never stand alone, meaning "possessor/owner of [quality]".
+            <bdi lang="ar">ذو</bdi> (masc. sg. "possessor of"), <bdi lang="ar">ذات</bdi> (fem. sg.), <bdi lang="ar">ذوو</bdi> (masc. pl.), <bdi lang="ar">ذوات</bdi> (fem. pl.) always
+            take a <bdi lang="ar">مضاف إليه</bdi> and never stand alone, meaning "possessor/owner of [quality]".
           </p>
         </div>
       </div>

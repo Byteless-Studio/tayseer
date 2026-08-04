@@ -124,12 +124,12 @@ function TopicPage() {
             — The Implied Verbal Noun
           </h1>
           <p className="text-muted-foreground text-base max-w-xl">
-            أنْ + a مضارع verb (or أنّ + its اسم and خبر) forms a single implied مصدر that fills
+            <bdi lang="ar">أنْ</bdi> + a <bdi lang="ar">مضارع</bdi> verb (or <bdi lang="ar">أنّ</bdi> + its <bdi lang="ar">اسم</bdi> and <bdi lang="ar">خبر</bdi>) forms a single implied <bdi lang="ar">مصدر</bdi> that fills
             one grammatical slot in the sentence — subject, object, or the object of a
-            preposition. Common after أريد أن..., أظنّ أنّ..., يسرّني أنّ...: أريد أن أنجحَ =
-            أريد النجاحَ. أنّ (فتح) is used exactly where this مصدر تأويل is possible (after
-            verbs like علمتُ، أظنّ); إنّ (كسر) is not — it opens an independent quoted clause,
-            as after القول, and never forms a مصدر مؤول.
+            preposition. Common after <bdi lang="ar">أريد أن</bdi>..., <bdi lang="ar">أظنّ أنّ</bdi>..., <bdi lang="ar">يسرّني أنّ...: أريد أن أنجحَ</bdi> =
+            <bdi lang="ar">أريد النجاحَ. أنّ</bdi> (<bdi lang="ar">فتح</bdi>) is used exactly where this <bdi lang="ar">مصدر تأويل</bdi> is possible (after
+            verbs like <bdi lang="ar">علمتُ، أظنّ</bdi>); <bdi lang="ar">إنّ</bdi> (<bdi lang="ar">كسر</bdi>) is not — it opens an independent quoted clause,
+            as after <bdi lang="ar">القول</bdi>, and never forms a <bdi lang="ar">مصدر مؤول</bdi>.
           </p>
         </div>
       </div>

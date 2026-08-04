@@ -124,12 +124,12 @@ function TopicPage() {
             — Verb Sentence Basics
           </h1>
           <p className="text-muted-foreground text-base max-w-xl">
-            Every verbal sentence rests on a فعل (verb), its فاعل (subject — always مرفوع,
+            Every verbal sentence rests on a <bdi lang="ar">فعل</bdi> (verb), its <bdi lang="ar">فاعل</bdi> (subject — always <bdi lang="ar">مرفوع</bdi>,
             appearing after the verb), and often a{' '}
-            <span className="font-medium text-foreground">مفعول به</span> (object — always منصوب).
-            Standard word order is verb-subject-object, a verb takes only ONE فاعل, and verbs
-            split into متعدٍ (transitive, takes an object) and لازم (intransitive). Every
-            conjugated form is built from a three-consonant root skeleton like ف-ع-ل.
+            <span className="font-medium text-foreground"><bdi lang="ar">مفعول به</bdi></span> (object — always <bdi lang="ar">منصوب</bdi>).
+            Standard word order is verb-subject-object, a verb takes only ONE <bdi lang="ar">فاعل</bdi>, and verbs
+            split into <bdi lang="ar">متعدٍ</bdi> (transitive, takes an object) and <bdi lang="ar">لازم</bdi> (intransitive). Every
+            conjugated form is built from a three-consonant root skeleton like <bdi lang="ar">ف</bdi>-<bdi lang="ar">ع</bdi>-<bdi lang="ar">ل</bdi>.
           </p>
         </div>
       </div>

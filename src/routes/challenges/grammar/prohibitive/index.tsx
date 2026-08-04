@@ -124,8 +124,8 @@ function TopicPage() {
             — The Prohibitive
           </h1>
           <p className="text-muted-foreground text-base max-w-xl">
-            لا + فعل مضارع مجزوم forms a prohibition (لا تَكْتُبْ = "don't write"). This is
-            distinct from لا النافية, which simply negates a present-tense statement and does NOT
+            <bdi lang="ar">لا</bdi> + <bdi lang="ar">فعل مضارع مجزوم</bdi> forms a prohibition (<bdi lang="ar">لا تَكْتُبْ</bdi> = "don't write"). This is
+            distinct from <bdi lang="ar">لا النافية</bdi>, which simply negates a present-tense statement and does NOT
             cause jazm — the same particle, but a different grammatical effect depending on
             whether it's a command or a statement.
           </p>

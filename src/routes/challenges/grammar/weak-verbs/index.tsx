@@ -124,11 +124,11 @@ function TopicPage() {
             — Weak Verbs in Practice
           </h1>
           <p className="text-muted-foreground text-base max-w-xl">
-            Weak verbs bend the rules. Hollow verbs (أجوف) like قَالَ/كَادَ turn a middle و/ي into
-            ا in الماضي and drop it in some conjugations (قُلْتُ). Hamzated verbs like
-            أَخَذَ/أَكَلَ drop their first radical ء entirely in the imperative (خُذْ، كُلْ).
-            أَرَادَ is a hollow أفعل-form verb, while ظَنَّ is a doubled-root verb from the أخوات
-            ظنّ family that enters a nominal sentence and makes both مبتدأ and خبر منصوب.
+            Weak verbs bend the rules. Hollow verbs (<bdi lang="ar">أجوف</bdi>) like <bdi lang="ar">قَالَ/كَادَ</bdi> turn a middle <bdi lang="ar">و/ي</bdi> into
+            <bdi lang="ar">ا</bdi> in <bdi lang="ar">الماضي</bdi> and drop it in some conjugations (<bdi lang="ar">قُلْتُ</bdi>). Hamzated verbs like
+            <bdi lang="ar">أَخَذَ/أَكَلَ</bdi> drop their first radical <bdi lang="ar">ء</bdi> entirely in the imperative (<bdi lang="ar">خُذْ، كُلْ</bdi>).
+            <bdi lang="ar">أَرَادَ</bdi> is a hollow <bdi lang="ar">أفعل</bdi>-form verb, while <bdi lang="ar">ظَنَّ</bdi> is a doubled-root verb from the <bdi lang="ar">أخوات
+            ظنّ</bdi> family that enters a nominal sentence and makes both <bdi lang="ar">مبتدأ</bdi> and <bdi lang="ar">خبر منصوب</bdi>.
           </p>
         </div>
       </div>

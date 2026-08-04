@@ -124,10 +124,10 @@ function TopicPage() {
             — Attached Pronouns
           </h1>
           <p className="text-muted-foreground text-base max-w-xl">
-            ـي ـكَ ـكِ ـهُ ـها ـنا ـكم ـهم never stand alone — they attach directly onto the word
-            before them. Attached to a noun, they show possession (كتابي — "my book"); attached to
-            a preposition, they become its object (منه — "from him"). Either way, attaching a
-            pronoun makes the noun definite, so any تنوين or أل it carried is dropped.
+            <bdi lang="ar">ـي ـكَ ـكِ ـهُ ـها ـنا ـكم ـهم</bdi> never stand alone — they attach directly onto the word
+            before them. Attached to a noun, they show possession (<bdi lang="ar">كتابي</bdi> — "my book"); attached to
+            a preposition, they become its object (<bdi lang="ar">منه</bdi> — "from him"). Either way, attaching a
+            pronoun makes the noun definite, so any <bdi lang="ar">تنوين</bdi> or <bdi lang="ar">أل</bdi> it carried is dropped.
           </p>
         </div>
       </div>

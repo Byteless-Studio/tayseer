@@ -124,9 +124,9 @@ function TopicPage() {
             — Sound Feminine Plural
           </h1>
           <p className="text-muted-foreground text-base max-w-xl">
-            Sound feminine plural (<span className="font-medium text-foreground">جمع المؤنث السالم</span>)
-            replaces a final تاء مربوطة with ت and adds ات. Unlike most nouns, its case is marked
-            with damma in رفع but kasra — not fatha — in both نصب and جر.
+            Sound feminine plural (<span className="font-medium text-foreground"><bdi lang="ar">جمع المؤنث السالم</bdi></span>)
+            replaces a final <bdi lang="ar">تاء مربوطة</bdi> with <bdi lang="ar">ت</bdi> and adds <bdi lang="ar">ات</bdi>. Unlike most nouns, its case is marked
+            with damma in <bdi lang="ar">رفع</bdi> but kasra — not fatha — in both <bdi lang="ar">نصب</bdi> and <bdi lang="ar">جر</bdi>.
           </p>
         </div>
       </div>

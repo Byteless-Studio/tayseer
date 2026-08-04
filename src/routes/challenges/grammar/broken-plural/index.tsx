@@ -124,9 +124,9 @@ function TopicPage() {
             — Broken Plural
           </h1>
           <p className="text-muted-foreground text-base max-w-xl">
-            Broken plural (<span className="font-medium text-foreground">جمع التكسير</span>)
-            changes a noun's internal vowel pattern instead of adding a suffix — كتاب becomes كُتُب,
-            رجل becomes رجال, بيت becomes بيوت. The patterns must be memorized noun by noun. A
+            Broken plural (<span className="font-medium text-foreground"><bdi lang="ar">جمع التكسير</bdi></span>)
+            changes a noun's internal vowel pattern instead of adding a suffix — <bdi lang="ar">كتاب</bdi> becomes <bdi lang="ar">كُتُب</bdi>,
+            <bdi lang="ar">رجل</bdi> becomes <bdi lang="ar">رجال</bdi>, <bdi lang="ar">بيت</bdi> becomes <bdi lang="ar">بيوت</bdi>. The patterns must be memorized noun by noun. A
             non-human broken plural is grammatically treated as a feminine singular for agreement.
           </p>
         </div>

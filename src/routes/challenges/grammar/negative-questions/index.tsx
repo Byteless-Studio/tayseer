@@ -124,9 +124,9 @@ function TopicPage() {
             — Negative Questions & How to Answer Them
           </h1>
           <p className="text-muted-foreground text-base max-w-xl">
-            Adding همزة الاستفهام أ to لا or ليس forms a negative question: أَلَسْتَ...؟ The
-            answering rules are the core test point: بلى contradicts the negative — it asserts
-            the opposite of what the question implied ("yes, contrary to that"); نعم confirms
+            Adding <bdi lang="ar">همزة الاستفهام أ</bdi> to <bdi lang="ar">لا</bdi> or <bdi lang="ar">ليس</bdi> forms a negative question: <bdi lang="ar">أَلَسْتَ...؟</bdi> The
+            answering rules are the core test point: <bdi lang="ar">بلى</bdi> contradicts the negative — it asserts
+            the opposite of what the question implied ("yes, contrary to that"); <bdi lang="ar">نعم</bdi> confirms
             the question exactly as it was worded, whether that wording was positive or negative.
           </p>
         </div>

@@ -124,12 +124,12 @@ function TopicPage() {
             — Ism Ishaara (Near)
           </h1>
           <p className="text-muted-foreground text-base max-w-xl">
-            هذا (masculine) and هذه (feminine) point to something near, and must agree in gender
+            <bdi lang="ar">هذا</bdi> (masculine) and <bdi lang="ar">هذه</bdi> (feminine) point to something near, and must agree in gender
             with what they refer to. They work two ways: as the{' '}
-            <span className="font-medium text-foreground">مبتدأ</span> of a nominal sentence
-            followed by an indefinite خبر (هذا كتابٌ — "this is a book"), or as a demonstrative
-            adjective placed directly before a definite noun (هذا الكتابُ — "this book"). Either
-            way, both words are <span className="font-medium text-foreground">مبني</span> — their
+            <span className="font-medium text-foreground"><bdi lang="ar">مبتدأ</bdi></span> of a nominal sentence
+            followed by an indefinite <bdi lang="ar">خبر</bdi> (<bdi lang="ar">هذا كتابٌ</bdi> — "this is a book"), or as a demonstrative
+            adjective placed directly before a definite noun (<bdi lang="ar">هذا الكتابُ</bdi> — "this book"). Either
+            way, both words are <span className="font-medium text-foreground"><bdi lang="ar">مبني</bdi></span> — their
             ending never changes regardless of case.
           </p>
         </div>

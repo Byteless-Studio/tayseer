@@ -124,12 +124,12 @@ function TopicPage() {
             — Independent Pronouns
           </h1>
           <p className="text-muted-foreground text-base max-w-xl">
-            أنا نحن أنتَ أنتِ أنتما أنتم أنتنّ هو هي هما هم هنّ — the full set of independent
+            <bdi lang="ar">أنا نحن أنتَ أنتِ أنتما أنتم أنتنّ هو هي هما هم هنّ</bdi> — the full set of independent
             pronouns stands on its own as a complete word (unlike attached pronouns), most commonly
-            working as the <span className="font-medium text-foreground">مبتدأ</span> of a nominal
-            sentence. Whatever خبر follows must agree with the pronoun's person, gender, and number,
+            working as the <span className="font-medium text-foreground"><bdi lang="ar">مبتدأ</bdi></span> of a nominal
+            sentence. Whatever <bdi lang="ar">خبر</bdi> follows must agree with the pronoun's person, gender, and number,
             and like all pronouns, these words are{' '}
-            <span className="font-medium text-foreground">مبني</span> — their form never changes
+            <span className="font-medium text-foreground"><bdi lang="ar">مبني</bdi></span> — their form never changes
             with case.
           </p>
         </div>

@@ -124,11 +124,11 @@ function TopicPage() {
             — Sound Masculine Plural
           </h1>
           <p className="text-muted-foreground text-base max-w-xl">
-            Sound masculine plural (<span className="font-medium text-foreground">جمع المذكر السالم</span>)
-            is formed by adding <span className="font-medium text-foreground">ونَ</span> in رفع or{' '}
-            <span className="font-medium text-foreground">ينَ</span> in نصب/جر to masculine human
-            nouns and participles — never to non-human nouns. When the plural becomes a مضاف, its
-            نون is dropped.
+            Sound masculine plural (<span className="font-medium text-foreground"><bdi lang="ar">جمع المذكر السالم</bdi></span>)
+            is formed by adding <span className="font-medium text-foreground"><bdi lang="ar">ونَ</bdi></span> in <bdi lang="ar">رفع</bdi> or{' '}
+            <span className="font-medium text-foreground"><bdi lang="ar">ينَ</bdi></span> in <bdi lang="ar">نصب/جر</bdi> to masculine human
+            nouns and participles — never to non-human nouns. When the plural becomes a <bdi lang="ar">مضاف</bdi>, its
+            <bdi lang="ar">نون</bdi> is dropped.
           </p>
         </div>
       </div>

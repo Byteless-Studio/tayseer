@@ -124,11 +124,11 @@ function TopicPage() {
             — Yes/No Questions
           </h1>
           <p className="text-muted-foreground text-base max-w-xl">
-            Two particles turn a plain statement into a yes/no question. أ attaches directly to the
-            first word of the sentence (هذا كتابٌ → أهذا كتابٌ؟), while هل stands on its own at the
-            very start of the sentence (هل هذا كتابٌ؟). Either way, the answer is a simple{' '}
-            <span className="font-medium text-foreground">نعم</span> (yes) or{' '}
-            <span className="font-medium text-foreground">لا</span> (no).
+            Two particles turn a plain statement into a yes/no question. <bdi lang="ar">أ</bdi> attaches directly to the
+            first word of the sentence (<bdi lang="ar">هذا كتابٌ</bdi> → <bdi lang="ar">أهذا كتابٌ؟</bdi>), while <bdi lang="ar">هل</bdi> stands on its own at the
+            very start of the sentence (<bdi lang="ar">هل هذا كتابٌ؟</bdi>). Either way, the answer is a simple{' '}
+            <span className="font-medium text-foreground"><bdi lang="ar">نعم</bdi></span> (yes) or{' '}
+            <span className="font-medium text-foreground"><bdi lang="ar">لا</bdi></span> (no).
           </p>
         </div>
       </div>

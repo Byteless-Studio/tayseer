@@ -124,11 +124,11 @@ function TopicPage() {
             — Spelling Rules
           </h1>
           <p className="text-muted-foreground text-base max-w-xl">
-            همزة الوصل is dropped in connected speech — it appears with أل, the imperative of a
-            plain ثلاثي verb, and a few memorized nouns (ابن، اسم، امرؤ، اثنان); همزة القطع is
-            always pronounced. تاء مربوطة (ة) is pronounced ه in pause but ت when connected or
-            suffixed. الحروف الشمسية assimilate the ل of أل so it is written but silent
-            (الشمس = ash-shams); الحروف القمرية keep it clearly pronounced (القمر = al-qamar).
+            <bdi lang="ar">همزة الوصل</bdi> is dropped in connected speech — it appears with <bdi lang="ar">أل</bdi>, the imperative of a
+            plain <bdi lang="ar">ثلاثي</bdi> verb, and a few memorized nouns (<bdi lang="ar">ابن، اسم، امرؤ، اثنان</bdi>); <bdi lang="ar">همزة القطع</bdi> is
+            always pronounced. <bdi lang="ar">تاء مربوطة</bdi> (<bdi lang="ar">ة</bdi>) is pronounced <bdi lang="ar">ه</bdi> in pause but <bdi lang="ar">ت</bdi> when connected or
+            suffixed. <bdi lang="ar">الحروف الشمسية</bdi> assimilate the <bdi lang="ar">ل</bdi> of <bdi lang="ar">أل</bdi> so it is written but silent
+            (<bdi lang="ar">الشمس</bdi> = ash-shams); <bdi lang="ar">الحروف القمرية</bdi> keep it clearly pronounced (<bdi lang="ar">القمر</bdi> = al-qamar).
           </p>
         </div>
       </div>

@@ -124,9 +124,9 @@ function TopicPage() {
             — Another/Other
           </h1>
           <p className="text-muted-foreground text-base max-w-xl">
-            آخر (masc.), أخرى (fem.), آخرون/أخريات (plural) mean "another/other". This adjective
+            <bdi lang="ar">آخر</bdi> (masc.), <bdi lang="ar">أخرى</bdi> (fem.), <bdi lang="ar">آخرون/أخريات</bdi> (plural) mean "another/other". This adjective
             agrees like a normal adjective in gender and number, but the indefinite masculine
-            singular form آخر is itself a diptote (ممنوع من الصرف).
+            singular form <bdi lang="ar">آخر</bdi> is itself a diptote (<bdi lang="ar">ممنوع من الصرف</bdi>).
           </p>
         </div>
       </div>

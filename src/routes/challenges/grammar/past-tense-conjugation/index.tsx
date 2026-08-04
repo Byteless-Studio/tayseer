@@ -125,10 +125,10 @@ function TopicPage() {
           </h1>
           <p className="text-muted-foreground text-base max-w-xl">
             The past tense conjugates entirely by SUFFIX — the root and pattern never move. The
-            هو (3rd person masc. sg.) form is the unsuffixed base (كَتَبَ), and every other person
-            adds a suffix onto it: ت, تِ, تما, تم, تنّ, ا, وا, تا, نَ, نا across{' '}
+            <bdi lang="ar">هو</bdi> (3rd person masc. sg.) form is the unsuffixed base (<bdi lang="ar">كَتَبَ</bdi>), and every other person
+            adds a suffix onto it: <bdi lang="ar">ت</bdi>, <bdi lang="ar">تِ</bdi>, <bdi lang="ar">تما</bdi>, <bdi lang="ar">تم</bdi>, <bdi lang="ar">تنّ</bdi>, <bdi lang="ar">ا</bdi>, <bdi lang="ar">وا</bdi>, <bdi lang="ar">تا</bdi>, <bdi lang="ar">نَ</bdi>, <bdi lang="ar">نا</bdi> across{' '}
             <span className="font-medium text-foreground">
-              هو / هي / هما / هم / هنّ / أنتَ / أنتِ / أنتما / أنتم / أنتنّ / أنا / نحن
+              <bdi lang="ar">هو / هي / هما / هم / هنّ / أنتَ / أنتِ / أنتما / أنتم / أنتنّ / أنا / نحن</bdi>
             </span>
             .
           </p>

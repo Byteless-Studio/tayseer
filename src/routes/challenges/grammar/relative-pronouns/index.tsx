@@ -124,9 +124,9 @@ function TopicPage() {
             — Relative Pronouns & Clauses
           </h1>
           <p className="text-muted-foreground text-base max-w-xl">
-            الذي (masc. sg.), التي (fem. sg.), اللذان/اللتان (dual), الذين (masc. pl.), اللاتي
+            <bdi lang="ar">الذي</bdi> (masc. sg.), <bdi lang="ar">التي</bdi> (fem. sg.), <bdi lang="ar">اللذان/اللتان</bdi> (dual), <bdi lang="ar">الذين</bdi> (masc. pl.), <bdi lang="ar">اللاتي</bdi>
             (fem. pl.) introduce a relative clause. The clause must contain a referring pronoun
-            (عائد) pointing back to the antecedent, and relative pronouns are only used after a
+            (<bdi lang="ar">عائد</bdi>) pointing back to the antecedent, and relative pronouns are only used after a
             DEFINITE antecedent.
           </p>
         </div>

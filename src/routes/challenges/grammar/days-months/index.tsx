@@ -124,8 +124,8 @@ function TopicPage() {
             — Days & Months
           </h1>
           <p className="text-muted-foreground text-base max-w-xl">
-            The days of the week (الأحد، الاثنين، الثلاثاء، الأربعاء، الخميس، الجمعة، السبت) and
-            the months of the year combine with idāfah to express dates — يوم الأحد, "Sunday"
+            The days of the week (<bdi lang="ar">الأحد، الاثنين، الثلاثاء، الأربعاء، الخميس، الجمعة، السبت</bdi>) and
+            the months of the year combine with idāfah to express dates — <bdi lang="ar">يوم الأحد</bdi>, "Sunday"
             (literally "the day of al-Aḥad"). This topic applies your idāfah and number knowledge
             to build simple date expressions.
           </p>

@@ -125,9 +125,9 @@ function TopicPage() {
           </h1>
           <p className="text-muted-foreground text-base max-w-xl">
             Idāfah glues two nouns together to mean "of/belonging to": the{' '}
-            <span className="font-medium text-foreground">مضاف</span> (first term) takes no تنوين
-            and no أل, while the <span className="font-medium text-foreground">مضاف إليه</span>{' '}
-            (second term) is always مجرور. Idāfahs can chain (بابُ بيتِ محمدٍ — "the door of
+            <span className="font-medium text-foreground"><bdi lang="ar">مضاف</bdi></span> (first term) takes no <bdi lang="ar">تنوين</bdi>
+            and no <bdi lang="ar">أل</bdi>, while the <span className="font-medium text-foreground"><bdi lang="ar">مضاف إليه</bdi></span>{' '}
+            (second term) is always <bdi lang="ar">مجرور</bdi>. Idāfahs can chain (<bdi lang="ar">بابُ بيتِ محمدٍ</bdi> — "the door of
             Muhammad's house"), and the whole phrase's definiteness follows the last term in the
             chain.
           </p>

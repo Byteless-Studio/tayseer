@@ -143,6 +143,16 @@
   to   { opacity: 1; transform: translateY(0); }
 }
 
+/* ─── Arabic inside mixed-direction text ───────────────────────────────────── */
+/* Arabic runs embedded in English prose reorder the surrounding punctuation
+   unless each run is isolated. `bdi` already isolates via the UA stylesheet;
+   this gives those runs the Naskh face and covers any dir-marked element. */
+
+[lang='ar'] {
+  font-family: 'Noto Naskh Arabic', 'Amiri', serif;
+  unicode-bidi: isolate;
+}
+
 /* ─── Transcript timestamps ─────────────────────────────────────────────────── */
 
 .transcript-ts {

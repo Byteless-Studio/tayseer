@@ -124,11 +124,11 @@ function TopicPage() {
             — Definiteness &amp; Tanwīn
           </h1>
           <p className="text-muted-foreground text-base max-w-xl">
-            Every Arabic noun is either <span className="font-medium text-foreground">نكرة</span>{' '}
-            (indefinite, "a/an ...") or <span className="font-medium text-foreground">معرفة</span>{' '}
-            (definite, "the ..."). Tanwīn — the trailing ـٌ ـً ـٍ sound — is the spoken marker of an
+            Every Arabic noun is either <span className="font-medium text-foreground"><bdi lang="ar">نكرة</bdi></span>{' '}
+            (indefinite, "a/an ...") or <span className="font-medium text-foreground"><bdi lang="ar">معرفة</bdi></span>{' '}
+            (definite, "the ..."). Tanwīn — the trailing <bdi lang="ar">ـٌ ـً ـٍ</bdi> sound — is the spoken marker of an
             indefinite noun, and it disappears the moment the noun becomes definite, whether by
-            adding أل, attaching a possessive pronoun, or being a proper noun, demonstrative,
+            adding <bdi lang="ar">أل</bdi>, attaching a possessive pronoun, or being a proper noun, demonstrative,
             pronoun, or the first term of an idāfah whose second term is definite.
           </p>
         </div>

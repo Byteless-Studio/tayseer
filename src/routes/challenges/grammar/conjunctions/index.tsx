@@ -124,11 +124,11 @@ function TopicPage() {
             — Conjunctions
           </h1>
           <p className="text-muted-foreground text-base max-w-xl">
-            و joins two words with no added meaning — the معطوف simply shares the case of the
-            معطوف عليه. ف means "then/so" with immediate succession; ثم means "then" with a gap or
-            delay. أو is a general "or"; أم is the special "or" used after همزة الاستفهام أ when
-            asking someone to pick between two named options (أمحمدٌ عندك أم عليٌّ؟) — that
-            أو-vs-أم distinction is the key test point in this topic.
+            <bdi lang="ar">و</bdi> joins two words with no added meaning — the <bdi lang="ar">معطوف</bdi> simply shares the case of the
+            <bdi lang="ar">معطوف عليه. ف</bdi> means "then/so" with immediate succession; <bdi lang="ar">ثم</bdi> means "then" with a gap or
+            delay. <bdi lang="ar">أو</bdi> is a general "or"; <bdi lang="ar">أم</bdi> is the special "or" used after <bdi lang="ar">همزة الاستفهام أ</bdi> when
+            asking someone to pick between two named options (<bdi lang="ar">أمحمدٌ عندك أم عليٌّ؟</bdi>) — that
+            <bdi lang="ar">أو</bdi>-vs-<bdi lang="ar">أم</bdi> distinction is the key test point in this topic.
           </p>
         </div>
       </div>

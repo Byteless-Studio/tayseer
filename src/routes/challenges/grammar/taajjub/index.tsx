@@ -125,9 +125,9 @@ function TopicPage() {
           </h1>
           <p className="text-muted-foreground text-base max-w-xl">
             The main pattern of wonder/exclamation is{' '}
-            <span className="font-medium text-foreground">ما أَفْعَلَه!</span> ("how ...!"), as in
-            ما أجملَ السماءَ! ("How beautiful the sky is!"). ما is a مبتدأ (مبني), أفعل is a fixed
-            verb, and the following noun is مفعول به منصوب. A secondary pattern is أَفْعِلْ بِه!.
+            <span className="font-medium text-foreground"><bdi lang="ar">ما أَفْعَلَه</bdi>!</span> ("how ...!"), as in
+            <bdi lang="ar">ما أجملَ السماءَ</bdi>! ("How beautiful the sky is!"). <bdi lang="ar">ما</bdi> is a <bdi lang="ar">مبتدأ</bdi> (<bdi lang="ar">مبني</bdi>), <bdi lang="ar">أفعل</bdi> is a fixed
+            verb, and the following noun is <bdi lang="ar">مفعول به منصوب</bdi>. A secondary pattern is <bdi lang="ar">أَفْعِلْ بِه</bdi>!.
           </p>
         </div>
       </div>

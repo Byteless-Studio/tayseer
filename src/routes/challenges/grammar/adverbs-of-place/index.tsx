@@ -124,9 +124,9 @@ function TopicPage() {
             — Adverbs of Place
           </h1>
           <p className="text-muted-foreground text-base max-w-xl">
-            Place adverbs like فوق، تحت، أمام، وراء، بين، عند، يمين، يسار function as ظرف —
-            منصوب — when followed by a مضاف إليه: فوقَ الطاولةِ (فوق منصوب, الطاولة مجرور مضاف
-            إليه).
+            Place adverbs like <bdi lang="ar">فوق، تحت، أمام، وراء، بين، عند، يمين، يسار</bdi> function as <bdi lang="ar">ظرف</bdi> —
+            <bdi lang="ar">منصوب</bdi> — when followed by a <bdi lang="ar">مضاف إليه: فوقَ الطاولةِ</bdi> (<bdi lang="ar">فوق منصوب</bdi>, <bdi lang="ar">الطاولة مجرور مضاف
+            إليه</bdi>).
           </p>
         </div>
       </div>

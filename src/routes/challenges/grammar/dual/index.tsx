@@ -124,11 +124,11 @@ function TopicPage() {
             — The Dual
           </h1>
           <p className="text-muted-foreground text-base max-w-xl">
-            The dual (<span className="font-medium text-foreground">مثنى</span>) marks exactly two
-            of something. Add <span className="font-medium text-foreground">انِ</span> in رفع or{' '}
-            <span className="font-medium text-foreground">يْنِ</span> in نصب/جر to the singular —
-            the same suffix works for nouns, adjectives, and even pronouns (هما, "the two of
-            them"). A noun loses its تنوين once it is dualized.
+            The dual (<span className="font-medium text-foreground"><bdi lang="ar">مثنى</bdi></span>) marks exactly two
+            of something. Add <span className="font-medium text-foreground"><bdi lang="ar">انِ</bdi></span> in <bdi lang="ar">رفع</bdi> or{' '}
+            <span className="font-medium text-foreground"><bdi lang="ar">يْنِ</bdi></span> in <bdi lang="ar">نصب/جر</bdi> to the singular —
+            the same suffix works for nouns, adjectives, and even pronouns (<bdi lang="ar">هما</bdi>, "the two of
+            them"). A noun loses its <bdi lang="ar">تنوين</bdi> once it is dualized.
           </p>
         </div>
       </div>

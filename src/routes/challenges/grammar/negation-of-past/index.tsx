@@ -125,11 +125,11 @@ function TopicPage() {
           </h1>
           <p className="text-muted-foreground text-base max-w-xl">
             The past tense can be negated two ways. The simple form is{' '}
-            <span className="font-medium text-foreground">ما</span> + فعل ماضٍ (ما كتبَ = "he did
+            <span className="font-medium text-foreground"><bdi lang="ar">ما</bdi></span> + <bdi lang="ar">فعل ماضٍ</bdi> (<bdi lang="ar">ما كتبَ</bdi> = "he did
             not write"), with the verb unchanged. The other is{' '}
-            <span className="font-medium text-foreground">لم</span> + فعل مضارع مجزوم (لم يكتبْ) —
-            critically, لم requires the PRESENT-tense verb in the jussive (مجزوم) form, not the
-            ماضي verb itself.
+            <span className="font-medium text-foreground"><bdi lang="ar">لم</bdi></span> + <bdi lang="ar">فعل مضارع مجزوم</bdi> (<bdi lang="ar">لم يكتبْ</bdi>) —
+            critically, <bdi lang="ar">لم</bdi> requires the PRESENT-tense verb in the jussive (<bdi lang="ar">مجزوم</bdi>) form, not the
+            <bdi lang="ar">ماضي</bdi> verb itself.
           </p>
         </div>
       </div>

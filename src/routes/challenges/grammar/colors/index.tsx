@@ -125,13 +125,13 @@ function TopicPage() {
           </h1>
           <p className="text-muted-foreground text-base max-w-xl">
             Basic colors don't follow the regular adjective patterns — they're built on{' '}
-            <span className="font-medium text-foreground">أَفْعَل</span> for masculine and{' '}
-            <span className="font-medium text-foreground">فَعْلاء</span> for feminine (أحمر/حمراء,
-            أزرق/زرقاء). This pattern is <span className="font-medium text-foreground">
-              ممنوع من الصرف
+            <span className="font-medium text-foreground"><bdi lang="ar">أَفْعَل</bdi></span> for masculine and{' '}
+            <span className="font-medium text-foreground"><bdi lang="ar">فَعْلاء</bdi></span> for feminine (<bdi lang="ar">أحمر/حمراء</bdi>,
+            <bdi lang="ar">أزرق/زرقاء</bdi>). This pattern is <span className="font-medium text-foreground">
+              <bdi lang="ar">ممنوع من الصرف</bdi>
             </span>{' '}
-            (diptote) — it never takes تنوين, even when indefinite, and takes a fatḥah instead of a
-            kasrah in the جر case.
+            (diptote) — it never takes <bdi lang="ar">تنوين</bdi>, even when indefinite, and takes a fatḥah instead of a
+            kasrah in the <bdi lang="ar">جر</bdi> case.
           </p>
         </div>
       </div>

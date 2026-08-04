@@ -124,10 +124,10 @@ function TopicPage() {
             — Masculine &amp; Feminine Nouns
           </h1>
           <p className="text-muted-foreground text-base max-w-xl">
-            Arabic nouns default to <span className="font-medium text-foreground">مذكر</span>{' '}
+            Arabic nouns default to <span className="font-medium text-foreground"><bdi lang="ar">مذكر</bdi></span>{' '}
             (masculine) unless marked otherwise. The typical feminine marker is a trailing{' '}
-            <span className="font-medium text-foreground">تاء مربوطة</span> (ة), but a handful of
-            "hidden feminine" nouns — أرض، شمس، ريح, and body parts that come in natural pairs — are
+            <span className="font-medium text-foreground"><bdi lang="ar">تاء مربوطة</bdi></span> (<bdi lang="ar">ة</bdi>), but a handful of
+            "hidden feminine" nouns — <bdi lang="ar">أرض، شمس، ريح</bdi>, and body parts that come in natural pairs — are
             feminine with no visible marker at all. Whichever kind, an adjective describing the noun
             must always match its gender.
           </p>

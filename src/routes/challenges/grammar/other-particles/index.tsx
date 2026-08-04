@@ -124,11 +124,11 @@ function TopicPage() {
             — Other Particles
           </h1>
           <p className="text-muted-foreground text-base max-w-xl">
-            لأنّ ("because") is a sister of إنّ — it nasbs its اسم and rafas its خبر: لأنّ الطقسَ
-            باردٌ. فإنّ combines the ف of a conditional's جواب with إنّ for emphasis: من يجتهدْ
-            فإنّه ناجحٌ. إنما is restrictive ("only/just") — its ما is ما الكافة, which cancels
-            إنّ's grammatical effect, so what follows stays مرفوع as a normal مبتدأ: إنما العلمُ
-            نورٌ. لام التعليل (لِ + مضارع) nasbs the verb and means "in order to": ذهبتُ لأدرسَ.
+            <bdi lang="ar">لأنّ</bdi> ("because") is a sister of <bdi lang="ar">إنّ</bdi> — it nasbs its <bdi lang="ar">اسم</bdi> and rafas its <bdi lang="ar">خبر: لأنّ الطقسَ
+            باردٌ. فإنّ</bdi> combines the <bdi lang="ar">ف</bdi> of a conditional's <bdi lang="ar">جواب</bdi> with <bdi lang="ar">إنّ</bdi> for emphasis: <bdi lang="ar">من يجتهدْ
+            فإنّه ناجحٌ. إنما</bdi> is restrictive ("only/just") — its <bdi lang="ar">ما</bdi> is <bdi lang="ar">ما الكافة</bdi>, which cancels
+            <bdi lang="ar">إنّ</bdi>'s grammatical effect, so what follows stays <bdi lang="ar">مرفوع</bdi> as a normal <bdi lang="ar">مبتدأ: إنما العلمُ
+            نورٌ. لام التعليل</bdi> (<bdi lang="ar">لِ</bdi> + <bdi lang="ar">مضارع</bdi>) nasbs the verb and means "in order to": <bdi lang="ar">ذهبتُ لأدرسَ</bdi>.
           </p>
         </div>
       </div>

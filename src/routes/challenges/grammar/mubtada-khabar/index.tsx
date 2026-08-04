@@ -125,11 +125,11 @@ function TopicPage() {
           </h1>
           <p className="text-muted-foreground text-base max-w-xl">
             An Arabic sentence that starts with a noun is a{' '}
-            <span className="font-medium text-foreground">جملة اسمية</span>, built from a{' '}
-            <span className="font-medium text-foreground">مبتدأ</span> (topic, مرفوع) and a{' '}
-            <span className="font-medium text-foreground">خبر</span> (predicate, مرفوع). The most
-            common shape is a definite مبتدأ followed by an indefinite خبر (الطالبُ مجتهدٌ — "the
-            student is diligent"), and the خبر must always agree with the مبتدأ in gender and
+            <span className="font-medium text-foreground"><bdi lang="ar">جملة اسمية</bdi></span>, built from a{' '}
+            <span className="font-medium text-foreground"><bdi lang="ar">مبتدأ</bdi></span> (topic, <bdi lang="ar">مرفوع</bdi>) and a{' '}
+            <span className="font-medium text-foreground"><bdi lang="ar">خبر</bdi></span> (predicate, <bdi lang="ar">مرفوع</bdi>). The most
+            common shape is a definite <bdi lang="ar">مبتدأ</bdi> followed by an indefinite <bdi lang="ar">خبر</bdi> (<bdi lang="ar">الطالبُ مجتهدٌ</bdi> — "the
+            student is diligent"), and the <bdi lang="ar">خبر</bdi> must always agree with the <bdi lang="ar">مبتدأ</bdi> in gender and
             number.
           </p>
         </div>

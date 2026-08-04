@@ -124,12 +124,12 @@ function TopicPage() {
             — Adverbs of Time & Deeper Tamyīz
           </h1>
           <p className="text-muted-foreground text-base max-w-xl">
-            ظرف زمان (اليوم، الآن، أمس، غدًا، صباحًا) marks the time a verb happened and is
-            منصوب — سافرتُ صباحاً — except أمس, which stays مبني على الكسر. Beyond numbers,
-            تمييز also resolves ambiguity two other ways: تمييز الجملة is an indefinite singular
-            منصوب noun clarifying an otherwise-vague sentence (طاب زيدٌ نفساً), while تمييز الذات
-            after a unit of measure (كيلو، رطل، متر) is normally مجرور بالإضافة (كيلو تمرٍ),
-            though نصب is also valid when it isn't phrased as an إضافة.
+            <bdi lang="ar">ظرف زمان</bdi> (<bdi lang="ar">اليوم، الآن، أمس، غدًا، صباحًا</bdi>) marks the time a verb happened and is
+            <bdi lang="ar">منصوب</bdi> — <bdi lang="ar">سافرتُ صباحاً</bdi> — except <bdi lang="ar">أمس</bdi>, which stays <bdi lang="ar">مبني على الكسر</bdi>. Beyond numbers,
+            <bdi lang="ar">تمييز</bdi> also resolves ambiguity two other ways: <bdi lang="ar">تمييز الجملة</bdi> is an indefinite singular
+            <bdi lang="ar">منصوب</bdi> noun clarifying an otherwise-vague sentence (<bdi lang="ar">طاب زيدٌ نفساً</bdi>), while <bdi lang="ar">تمييز الذات</bdi>
+            after a unit of measure (<bdi lang="ar">كيلو، رطل، متر</bdi>) is normally <bdi lang="ar">مجرور بالإضافة</bdi> (<bdi lang="ar">كيلو تمرٍ</bdi>),
+            though <bdi lang="ar">نصب</bdi> is also valid when it isn't phrased as an <bdi lang="ar">إضافة</bdi>.
           </p>
         </div>
       </div>

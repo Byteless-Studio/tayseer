@@ -124,11 +124,11 @@ function TopicPage() {
             — Comparative & Superlative
           </h1>
           <p className="text-muted-foreground text-base max-w-xl">
-            أفعل التفضيل (أكبر، أجمل) is built from most triliteral adjectives. Comparative use:
-            أفعل + من (أكبرُ من). Superlative use: أفعل in إضافة to a definite plural (أفضلُ
-            الطلابِ) or an indefinite singular (أفضلُ رجلٍ), or with أل, matching the noun fully
-            (الأكبر، الكبرى، الأكبرون). In its bare comparative form (no أل, no إضافة), أفعل
-            التفضيل is diptote — no تنوين, and فتحة instead of كسرة in الجر.
+            <bdi lang="ar">أفعل التفضيل</bdi> (<bdi lang="ar">أكبر، أجمل</bdi>) is built from most triliteral adjectives. Comparative use:
+            <bdi lang="ar">أفعل</bdi> + <bdi lang="ar">من</bdi> (<bdi lang="ar">أكبرُ من</bdi>). Superlative use: <bdi lang="ar">أفعل</bdi> in <bdi lang="ar">إضافة</bdi> to a definite plural (<bdi lang="ar">أفضلُ
+            الطلابِ</bdi>) or an indefinite singular (<bdi lang="ar">أفضلُ رجلٍ</bdi>), or with <bdi lang="ar">أل</bdi>, matching the noun fully
+            (<bdi lang="ar">الأكبر، الكبرى، الأكبرون</bdi>). In its bare comparative form (no <bdi lang="ar">أل</bdi>, no <bdi lang="ar">إضافة</bdi>), <bdi lang="ar">أفعل
+            التفضيل</bdi> is diptote — no <bdi lang="ar">تنوين</bdi>, and <bdi lang="ar">فتحة</bdi> instead of <bdi lang="ar">كسرة</bdi> in <bdi lang="ar">الجر</bdi>.
           </p>
         </div>
       </div>

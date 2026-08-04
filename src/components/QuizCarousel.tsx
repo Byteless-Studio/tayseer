@@ -2,6 +2,47 @@ import { useState } from 'react'
 import type { QuizItem } from '#/routes/arabic-with-mufti-saim/-arabic-101.types'
 import { Button } from '#/components/ui/button'
 
+const NASKH = "'Noto Naskh Arabic', 'Amiri', serif"
+
+// A run of Arabic: starts and ends on an Arabic letter, and may span whitespace
+// and Arabic punctuation in between. Latin punctuation is deliberately excluded
+// so "مضاف إليه (genitive)" splits at the paren rather than swallowing it.
+const ARABIC_RUN =
+  /[؀-ۿݐ-ݿࢠ-ࣿﭐ-﷿ﹰ-﻿](?:[؀-ۿݐ-ݿࢠ-ࣿﭐ-﷿ﹰ-﻿\s،؛؟.!:]*[؀-ۿݐ-ݿࢠ-ࣿﭐ-﷿ﹰ-﻿])?/g
+
+// Mixed Arabic/Latin text reorders badly under the Unicode bidi algorithm —
+// parentheses, quotes and digits next to a direction change get shuffled. Wrap
+// every run in its own <bdi> so each is isolated and the surrounding text keeps
+// its own direction. Arabic runs also pick up the Naskh face wherever they sit,
+// including inside an English sentence.
+function BidiText({ text }: { text: string }) {
+  const parts: Array<{ ar: boolean; t: string }> = []
+  let last = 0
+  for (const m of text.matchAll(ARABIC_RUN)) {
+    const i = m.index ?? 0
+    if (i > last) parts.push({ ar: false, t: text.slice(last, i) })
+    parts.push({ ar: true, t: m[0] })
+    last = i + m[0].length
+  }
+  if (last < text.length) parts.push({ ar: false, t: text.slice(last) })
+
+  return (
+    <>
+      {parts.map((p, i) =>
+        p.ar ? (
+          <bdi key={i} dir="rtl" lang="ar" style={{ fontFamily: NASKH }}>
+            {p.t}
+          </bdi>
+        ) : (
+          <bdi key={i} dir="ltr">
+            {p.t}
+          </bdi>
+        ),
+      )}
+    </>
+  )
+}
+
 // Quiz strings are authored bilingually as "<arabic>\n<english>". Render the
 // Arabic line RTL in the Naskh face and the English gloss smaller beneath it,
 // using opacity rather than a fixed color so the answer states still tint both.
@@ -22,14 +63,14 @@ function Bilingual({
       <span
         dir="rtl"
         lang="ar"
-        style={{ fontFamily: "'Noto Naskh Arabic', 'Amiri', serif" }}
+        style={{ fontFamily: NASKH }}
         className={`block leading-relaxed ${arClass}`}
       >
-        {ar}
+        <BidiText text={ar} />
       </span>
       {en && (
         <span dir="ltr" className={`block leading-snug opacity-70 mt-1 ${enClass}`}>
-          {en}
+          <BidiText text={en} />
         </span>
       )}
     </span>

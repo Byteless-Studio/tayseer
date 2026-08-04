@@ -124,10 +124,10 @@ function TopicPage() {
             — Defective Nouns & Diptotes
           </h1>
           <p className="text-muted-foreground text-base max-w-xl">
-            الاسم المنقوص ends in ي preceded by kasra (القاضي) — it drops the ي in indefinite
-            رفع/جر (قاضٍ) but keeps it in نصب (قاضياً) and always when definite. الممنوع من الصرف
-            takes no تنوين and fatha instead of kasra in indefinite جر — categories: أفعل-pattern
-            colors/elatives, certain proper names, and plurals on مفاعل/مفاعيل.
+            <bdi lang="ar">الاسم المنقوص</bdi> ends in <bdi lang="ar">ي</bdi> preceded by kasra (<bdi lang="ar">القاضي</bdi>) — it drops the <bdi lang="ar">ي</bdi> in indefinite
+            <bdi lang="ar">رفع/جر</bdi> (<bdi lang="ar">قاضٍ</bdi>) but keeps it in <bdi lang="ar">نصب</bdi> (<bdi lang="ar">قاضياً</bdi>) and always when definite. <bdi lang="ar">الممنوع من الصرف</bdi>
+            takes no <bdi lang="ar">تنوين</bdi> and fatha instead of kasra in indefinite <bdi lang="ar">جر</bdi> — categories: <bdi lang="ar">أفعل</bdi>-pattern
+            colors/elatives, certain proper names, and plurals on <bdi lang="ar">مفاعل/مفاعيل</bdi>.
           </p>
         </div>
       </div>

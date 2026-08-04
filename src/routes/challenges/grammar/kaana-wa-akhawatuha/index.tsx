@@ -124,11 +124,11 @@ function TopicPage() {
             — Kāna and Her Sisters, Continued
           </h1>
           <p className="text-muted-foreground text-base max-w-xl">
-            كان conjugates fully across persons (كنتُ، كنتَ، كنتِ، كان، كانت، كنّا، كنتم، كنّ،
-            كانوا) and is negated in the present with لم يكن. Beyond the basics, her sisters carry
-            distinct nuances: أصبح/أضحى/بات mark becoming at a time of day, ظلّ marks continuing
-            all day, صار marks transformation, and ما زال/ما دام mark ongoing continuation
-            ("still" / "as long as") — all still raising the اسم and putting the خبر in النصب.
+            <bdi lang="ar">كان</bdi> conjugates fully across persons (<bdi lang="ar">كنتُ، كنتَ، كنتِ، كان، كانت، كنّا، كنتم، كنّ،
+            كانوا</bdi>) and is negated in the present with <bdi lang="ar">لم يكن</bdi>. Beyond the basics, her sisters carry
+            distinct nuances: <bdi lang="ar">أصبح/أضحى/بات</bdi> mark becoming at a time of day, <bdi lang="ar">ظلّ</bdi> marks continuing
+            all day, <bdi lang="ar">صار</bdi> marks transformation, and <bdi lang="ar">ما زال/ما دام</bdi> mark ongoing continuation
+            ("still" / "as long as") — all still raising the <bdi lang="ar">اسم</bdi> and putting the <bdi lang="ar">خبر</bdi> in <bdi lang="ar">النصب</bdi>.
           </p>
         </div>
       </div>

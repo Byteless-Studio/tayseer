@@ -124,11 +124,11 @@ function TopicPage() {
             — Introducing Kāna and Her Sisters
           </h1>
           <p className="text-muted-foreground text-base max-w-xl">
-            كان وأخواتها (كان، أصبح، أمسى، ظلّ، بات، صار، ليس، ما زال...) enter a nominal sentence
-            and make the خبر منصوب while اسم كان stays مرفوع — the opposite pattern from a normal
-            nominal sentence. ليس means "is not" despite its ماضي shape. A related but distinct
-            family, كاد وأخواتها (أفعال المقاربة), expects a مضارع خبر clause instead of a single
-            noun — كاد itself means "almost/nearly did" and usually skips أن before that clause.
+            <bdi lang="ar">كان وأخواتها</bdi> (<bdi lang="ar">كان، أصبح، أمسى، ظلّ، بات، صار، ليس، ما زال</bdi>...) enter a nominal sentence
+            and make the <bdi lang="ar">خبر منصوب</bdi> while <bdi lang="ar">اسم كان</bdi> stays <bdi lang="ar">مرفوع</bdi> — the opposite pattern from a normal
+            nominal sentence. <bdi lang="ar">ليس</bdi> means "is not" despite its <bdi lang="ar">ماضي</bdi> shape. A related but distinct
+            family, <bdi lang="ar">كاد وأخواتها</bdi> (<bdi lang="ar">أفعال المقاربة</bdi>), expects a <bdi lang="ar">مضارع خبر</bdi> clause instead of a single
+            noun — <bdi lang="ar">كاد</bdi> itself means "almost/nearly did" and usually skips <bdi lang="ar">أن</bdi> before that clause.
           </p>
         </div>
       </div>

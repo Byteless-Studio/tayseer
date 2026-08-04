@@ -124,10 +124,10 @@ function TopicPage() {
             — Present Tense Full Conjugation
           </h1>
           <p className="text-muted-foreground text-base max-w-xl">
-            Unlike the past tense, the present tense is marked by a PREFIX — one of أ / ن / ي / ت
-            — plus sometimes a suffix. The default مرفوع ending is a ـُ (or ثبوت النون for the
-            five-verb forms). The prefix follows the person: أ=أنا, ن=نحن, ي=هو/هم/هنّ, and
-            ت=أنتَ/أنتِ/هي and the rest of the "you" forms.
+            Unlike the past tense, the present tense is marked by a PREFIX — one of <bdi lang="ar">أ / ن / ي / ت</bdi>
+            — plus sometimes a suffix. The default <bdi lang="ar">مرفوع</bdi> ending is a <bdi lang="ar">ـُ</bdi> (or <bdi lang="ar">ثبوت النون</bdi> for the
+            five-verb forms). The prefix follows the person: <bdi lang="ar">أ</bdi>=<bdi lang="ar">أنا</bdi>, <bdi lang="ar">ن</bdi>=<bdi lang="ar">نحن</bdi>, <bdi lang="ar">ي</bdi>=<bdi lang="ar">هو/هم/هنّ</bdi>, and
+            <bdi lang="ar">ت</bdi>=<bdi lang="ar">أنتَ/أنتِ/هي</bdi> and the rest of the "you" forms.
           </p>
         </div>
       </div>

@@ -124,11 +124,11 @@ function TopicPage() {
             — Adjective Agreement
           </h1>
           <p className="text-muted-foreground text-base max-w-xl">
-            An Arabic adjective (نعت) must agree with the noun it describes (منعوت) on all four
+            An Arabic adjective (<bdi lang="ar">نعت</bdi>) must agree with the noun it describes (<bdi lang="ar">منعوت</bdi>) on all four
             fronts at once — gender, number, definiteness, <span className="italic">and</span>{' '}
-            case — which is why it's classed as a تابع ("follower") rather than something with its
+            case — which is why it's classed as a <bdi lang="ar">تابع</bdi> ("follower") rather than something with its
             own independent case. Word order is fixed too: the noun always comes first, the
-            adjective right after (طالبٌ مجتهدٌ — "a diligent student", never the reverse).
+            adjective right after (<bdi lang="ar">طالبٌ مجتهدٌ</bdi> — "a diligent student", never the reverse).
           </p>
         </div>
       </div>

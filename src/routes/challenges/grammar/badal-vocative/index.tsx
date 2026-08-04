@@ -124,10 +124,10 @@ function TopicPage() {
             — Apposition & Vocative
           </h1>
           <p className="text-muted-foreground text-base max-w-xl">
-            بدل renames or restates the preceding noun and takes the SAME case as it — not a
-            fixed case. يا + vocative noun: the noun is مبني على الضم if it's a definite single
-            name (يا محمدُ) or a specific-but-unnamed addressee (نكرة مقصودة), and منصوب if it's
-            an idāfah (يا طالبَ العلمِ) or a non-specific indefinite call.
+            <bdi lang="ar">بدل</bdi> renames or restates the preceding noun and takes the SAME case as it — not a
+            fixed case. <bdi lang="ar">يا</bdi> + vocative noun: the noun is <bdi lang="ar">مبني على الضم</bdi> if it's a definite single
+            name (<bdi lang="ar">يا محمدُ</bdi>) or a specific-but-unnamed addressee (<bdi lang="ar">نكرة مقصودة</bdi>), and <bdi lang="ar">منصوب</bdi> if it's
+            an idāfah (<bdi lang="ar">يا طالبَ العلمِ</bdi>) or a non-specific indefinite call.
           </p>
         </div>
       </div>

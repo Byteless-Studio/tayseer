@@ -124,12 +124,12 @@ function TopicPage() {
             — Numbers 11–100
           </h1>
           <p className="text-muted-foreground text-base max-w-xl">
-            11–19 are compound numbers mostly مبني on فتح — the counted noun is singular منصوب
-            (تمييز): أحدَ عشرَ كتاباً. 12 is the exception: its first part declines like the dual
-            (اثنا عشرَ / اثني عشرَ). The tens (عشرون، ثلاثون...) decline like a sound masculine
-            plural — رفعاً بالواو, نصباً وجراً بالياء — with the same singular منصوب counted noun.
-            مائة and ألف are ordinary singular nouns that take their counted noun as a مضاف إليه:
-            مائةُ كتابٍ.
+            11–19 are compound numbers mostly <bdi lang="ar">مبني</bdi> on <bdi lang="ar">فتح</bdi> — the counted noun is singular <bdi lang="ar">منصوب</bdi>
+            (<bdi lang="ar">تمييز</bdi>): <bdi lang="ar">أحدَ عشرَ كتاباً</bdi>. 12 is the exception: its first part declines like the dual
+            (<bdi lang="ar">اثنا عشرَ / اثني عشرَ</bdi>). The tens (<bdi lang="ar">عشرون، ثلاثون</bdi>...) decline like a sound masculine
+            plural — <bdi lang="ar">رفعاً بالواو</bdi>, <bdi lang="ar">نصباً وجراً بالياء</bdi> — with the same singular <bdi lang="ar">منصوب</bdi> counted noun.
+            <bdi lang="ar">مائة</bdi> and <bdi lang="ar">ألف</bdi> are ordinary singular nouns that take their counted noun as a <bdi lang="ar">مضاف إليه:
+            مائةُ كتابٍ</bdi>.
           </p>
         </div>
       </div>

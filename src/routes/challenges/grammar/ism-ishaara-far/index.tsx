@@ -124,10 +124,10 @@ function TopicPage() {
             — Ism Ishaara (Far)
           </h1>
           <p className="text-muted-foreground text-base max-w-xl">
-            ذلك (masculine) and تلك (feminine) point to something distant, running exactly parallel
-            to هذا/هذه — same مبني nature, same مبتدأ/صفة-إشارية roles — only shifted from near to
-            far. They combine naturally with an idāfah phrase acting as their خبر, as in{' '}
-            <span className="font-medium text-foreground">ذلك كتابُ زيدٍ</span> ("that is Zayd's
+            <bdi lang="ar">ذلك</bdi> (masculine) and <bdi lang="ar">تلك</bdi> (feminine) point to something distant, running exactly parallel
+            to <bdi lang="ar">هذا/هذه</bdi> — same <bdi lang="ar">مبني</bdi> nature, same <bdi lang="ar">مبتدأ/صفة</bdi>-<bdi lang="ar">إشارية</bdi> roles — only shifted from near to
+            far. They combine naturally with an idāfah phrase acting as their <bdi lang="ar">خبر</bdi>, as in{' '}
+            <span className="font-medium text-foreground"><bdi lang="ar">ذلك كتابُ زيدٍ</bdi></span> ("that is Zayd's
             book").
           </p>
         </div>

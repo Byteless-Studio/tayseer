@@ -124,11 +124,11 @@ function TopicPage() {
             — Case System Overview
           </h1>
           <p className="text-muted-foreground text-base max-w-xl">
-            Every noun in Arabic carries one of three cases: رفع (ـُ, typically the subject or
-            مبتدأ), نصب (ـَ, typically the object), or جر (ـِ, after a preposition or as a مضاف
-            إليه). Words ending in ا or ى (like الفتى) can't physically carry these vowels, so the
-            case is <span className="font-medium text-foreground">مقدّرة</span> — estimated, not
-            pronounced. And مبني words like demonstratives and pronouns sit outside the system
+            Every noun in Arabic carries one of three cases: <bdi lang="ar">رفع</bdi> (<bdi lang="ar">ـُ</bdi>, typically the subject or
+            <bdi lang="ar">مبتدأ</bdi>), <bdi lang="ar">نصب</bdi> (<bdi lang="ar">ـَ</bdi>, typically the object), or <bdi lang="ar">جر</bdi> (<bdi lang="ar">ـِ</bdi>, after a preposition or as a <bdi lang="ar">مضاف
+            إليه</bdi>). Words ending in <bdi lang="ar">ا</bdi> or <bdi lang="ar">ى</bdi> (like <bdi lang="ar">الفتى</bdi>) can't physically carry these vowels, so the
+            case is <span className="font-medium text-foreground"><bdi lang="ar">مقدّرة</bdi></span> — estimated, not
+            pronounced. And <bdi lang="ar">مبني</bdi> words like demonstratives and pronouns sit outside the system
             entirely: their ending never changes no matter what role they play.
           </p>
         </div>

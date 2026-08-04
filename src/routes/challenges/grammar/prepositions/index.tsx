@@ -124,12 +124,12 @@ function TopicPage() {
             — Prepositions
           </h1>
           <p className="text-muted-foreground text-base max-w-xl">
-            من إلى في على بـ لـ عن مع — Arabic's core prepositions each carry their own shade of
+            <bdi lang="ar">من إلى في على بـ لـ عن مع</bdi> — Arabic's core prepositions each carry their own shade of
             meaning (from, to, in, on, with, for, about, with-together), but they share one iron
             rule: whatever noun follows a preposition is always{' '}
-            <span className="font-medium text-foreground">مجرور</span>, forming a{' '}
-            <span className="font-medium text-foreground">جار ومجرور</span>. When a pronoun takes
-            the noun's place (منه، له، به), that same جر case is still there — just hidden, since
+            <span className="font-medium text-foreground"><bdi lang="ar">مجرور</bdi></span>, forming a{' '}
+            <span className="font-medium text-foreground"><bdi lang="ar">جار ومجرور</bdi></span>. When a pronoun takes
+            the noun's place (<bdi lang="ar">منه، له، به</bdi>), that same <bdi lang="ar">جر</bdi> case is still there — just hidden, since
             attached pronouns show no visible case ending.
           </p>
         </div>

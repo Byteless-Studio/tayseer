@@ -124,10 +124,10 @@ function TopicPage() {
             — I'rāb of the Present Tense
           </h1>
           <p className="text-muted-foreground text-base max-w-xl">
-            مضارع مرفوع is the default state — ends in ـُ, or keeps its نون for the five-verb
-            forms. النواصب (أن، لن، كي، لام التعليل، إذن) trigger مضارع منصوب — ends in ـَ, or
-            drops the نون. الجوازم (لم، لمّا، لا الناهية، لام الأمر, and the شرط إن) trigger
-            مضارع مجزوم — ends in سكون, drops a weak letter, or drops the نون.
+            <bdi lang="ar">مضارع مرفوع</bdi> is the default state — ends in <bdi lang="ar">ـُ</bdi>, or keeps its <bdi lang="ar">نون</bdi> for the five-verb
+            forms. <bdi lang="ar">النواصب</bdi> (<bdi lang="ar">أن، لن، كي، لام التعليل، إذن</bdi>) trigger <bdi lang="ar">مضارع منصوب</bdi> — ends in <bdi lang="ar">ـَ</bdi>, or
+            drops the <bdi lang="ar">نون. الجوازم</bdi> (<bdi lang="ar">لم، لمّا، لا الناهية، لام الأمر</bdi>, and the <bdi lang="ar">شرط إن</bdi>) trigger
+            <bdi lang="ar">مضارع مجزوم</bdi> — ends in <bdi lang="ar">سكون</bdi>, drops a weak letter, or drops the <bdi lang="ar">نون</bdi>.
           </p>
         </div>
       </div>

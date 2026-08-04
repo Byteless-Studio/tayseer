@@ -124,10 +124,10 @@ function TopicPage() {
             — Inna and Her Sisters
           </h1>
           <p className="text-muted-foreground text-base max-w-xl">
-            إنّ أنّ لكنّ كأنّ لعلّ ليت enter a nominal sentence and make اسمها منصوب while خبرها
-            stays مرفوع — the exact opposite of كان's family. إنّ means "indeed" (emphasis), أنّ
-            subordinates a clause into "that", لكنّ means "but", كأنّ means "as if", لعلّ means
-            "perhaps", and ليت means "I wish" (for something unlikely or impossible).
+            <bdi lang="ar">إنّ أنّ لكنّ كأنّ لعلّ ليت</bdi> enter a nominal sentence and make <bdi lang="ar">اسمها منصوب</bdi> while <bdi lang="ar">خبرها</bdi>
+            stays <bdi lang="ar">مرفوع</bdi> — the exact opposite of <bdi lang="ar">كان</bdi>'s family. <bdi lang="ar">إنّ</bdi> means "indeed" (emphasis), <bdi lang="ar">أنّ</bdi>
+            subordinates a clause into "that", <bdi lang="ar">لكنّ</bdi> means "but", <bdi lang="ar">كأنّ</bdi> means "as if", <bdi lang="ar">لعلّ</bdi> means
+            "perhaps", and <bdi lang="ar">ليت</bdi> means "I wish" (for something unlikely or impossible).
           </p>
         </div>
       </div>

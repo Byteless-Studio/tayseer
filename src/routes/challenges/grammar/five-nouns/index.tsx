@@ -124,8 +124,8 @@ function TopicPage() {
             — The Five Nouns
           </h1>
           <p className="text-muted-foreground text-base max-w-xl">
-            أب، أخ، حم، فو، ذو ("possessor of") take و in رفع, ا in نصب, ي in جر — but ONLY when
-            مضاف to something other than ياء المتكلم ("my").
+            <bdi lang="ar">أب، أخ، حم، فو، ذو</bdi> ("possessor of") take <bdi lang="ar">و</bdi> in <bdi lang="ar">رفع</bdi>, <bdi lang="ar">ا</bdi> in <bdi lang="ar">نصب</bdi>, <bdi lang="ar">ي</bdi> in <bdi lang="ar">جر</bdi> — but ONLY when
+            <bdi lang="ar">مضاف</bdi> to something other than <bdi lang="ar">ياء المتكلم</bdi> ("my").
           </p>
         </div>
       </div>

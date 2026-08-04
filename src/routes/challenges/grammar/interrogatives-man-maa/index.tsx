@@ -125,11 +125,11 @@ function TopicPage() {
           </h1>
           <p className="text-muted-foreground text-base max-w-xl">
             Two of the most basic question words split Arabic nouns along one line: whether they're{' '}
-            <span className="font-medium text-foreground">عاقل</span> (rational/human) or not.{' '}
-            من asks "who" about a person (مَن هذا؟), while ما asks "what" about a thing (ما هذا؟).
-            Both are <span className="font-medium text-foreground">مبني</span> — indeclinable words
+            <span className="font-medium text-foreground"><bdi lang="ar">عاقل</bdi></span> (rational/human) or not.{' '}
+            <bdi lang="ar">من</bdi> asks "who" about a person (<bdi lang="ar">مَن هذا؟</bdi>), while <bdi lang="ar">ما</bdi> asks "what" about a thing (<bdi lang="ar">ما هذا؟</bdi>).
+            Both are <span className="font-medium text-foreground"><bdi lang="ar">مبني</bdi></span> — indeclinable words
             whose ending never changes, even though they still hold a grammatical position (like
-            مبتدأ) in the sentence.
+            <bdi lang="ar">مبتدأ</bdi>) in the sentence.
           </p>
         </div>
       </div>

@@ -124,11 +124,11 @@ function TopicPage() {
             — The Imperative
           </h1>
           <p className="text-muted-foreground text-base max-w-xl">
-            The imperative is derived from المضارع المجزوم by dropping the person-prefix and
-            adjusting the ending. It exists ONLY for 2nd-person forms (أنتَ/أنتِ/أنتما/أنتم/أنتنّ),
-            ending in سكون, or dropping the نون for the five-verb forms, or dropping a weak letter.
-            A همزة الوصل is added whenever the resulting form would start with a bare consonant
-            cluster (اُكْتُبْ).
+            The imperative is derived from <bdi lang="ar">المضارع المجزوم</bdi> by dropping the person-prefix and
+            adjusting the ending. It exists ONLY for 2nd-person forms (<bdi lang="ar">أنتَ/أنتِ/أنتما/أنتم/أنتنّ</bdi>),
+            ending in <bdi lang="ar">سكون</bdi>, or dropping the <bdi lang="ar">نون</bdi> for the five-verb forms, or dropping a weak letter.
+            A <bdi lang="ar">همزة الوصل</bdi> is added whenever the resulting form would start with a bare consonant
+            cluster (<bdi lang="ar">اُكْتُبْ</bdi>).
           </p>
         </div>
       </div>

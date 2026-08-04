@@ -125,9 +125,9 @@ function TopicPage() {
           </h1>
           <p className="text-muted-foreground text-base max-w-xl">
             Numbers 3–10 take the OPPOSITE gender of the noun they count (gender polarity) —
-            ثلاثةُ رجالٍ but ثلاثُ نساءٍ. Numbers 1 and 2 agree in gender normally and usually
-            follow the noun. The counted noun (معدود) after 3–10 is plural and مجرور as مضاف
-            إليه.
+            <bdi lang="ar">ثلاثةُ رجالٍ</bdi> but <bdi lang="ar">ثلاثُ نساءٍ</bdi>. Numbers 1 and 2 agree in gender normally and usually
+            follow the noun. The counted noun (<bdi lang="ar">معدود</bdi>) after 3–10 is plural and <bdi lang="ar">مجرور</bdi> as <bdi lang="ar">مضاف
+            إليه</bdi>.
           </p>
         </div>
       </div>
