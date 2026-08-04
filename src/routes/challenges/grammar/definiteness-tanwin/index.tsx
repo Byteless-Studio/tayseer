@@ -44,10 +44,10 @@ const quizItems: StrictQuizItem[] = [
   {
     q: 'كتابٌ + ياء المتكلم (my) → ___ (fill in the blank)\nكتابٌ + the 1st-person possessive ياء ("my") → ___ (fill in the blank)',
     options: [
-      'كتابٌي\nkitābun-ī (incorrect — keeps the تنوين)',
+      'كتابٌي\nkitābun-ī',
       'كتابي\nkitābī — "my book"',
-      'كتابٍي\nkitābin-ī (incorrect — keeps the تنوين)',
-      'كِتاباً ي\nkitāban-ī (incorrect — keeps the تنوين)',
+      'كتابٍي\nkitābin-ī',
+      'كِتاباً ي\nkitāban-ī',
     ],
     correctIndex: 1,
     a: 'إضافة ضمير متصل مثل ياء المتكلم تجعل الاسم معرفة بالإضافة إلى الضمير، فيسقط التنوين تماماً: كتابي = "my book" بلا تنوين، تماماً كما يسقط عند دخول أل.\nAttaching a pronoun like ياء المتكلم makes the noun definite through idāfah to the pronoun, so the تنوين drops completely: كتابي = "my book," with no تنوين — exactly as it drops when أل is added.',
@@ -56,7 +56,7 @@ const quizItems: StrictQuizItem[] = [
     q: 'أيّ من هذه الجمل بها خطأ نحوي متعلق بالتنوين والتعريف؟\nWhich of these sentences contains a grammar mistake related to تنوين and definiteness?',
     options: [
       'رأيتُ كتاباً جديداً\nra\'aytu kitāban jadīdan — "I saw a new book"',
-      'رأيتُ الكتابٌ الجديدُ\nra\'aytu al-kitābun al-jadīdu (incorrect — mixes أل with تنوين)',
+      'رأيتُ الكتابٌ الجديدُ\nra\'aytu al-kitābun al-jadīdu',
       'هذا كتابُ محمدٍ\nhādhā kitābu Muḥammadin — "This is Muhammad\'s book"',
       'رأيتُ الكتابَ الجديدَ\nra\'aytu al-kitāba al-jadīda — "I saw the new book"',
     ],

@@ -23,8 +23,8 @@ const quizItems: StrictQuizItem[] = [
     q: 'ما جمع كلمة "كتاب" جمع تكسير؟\nWhat is the broken plural of "كتاب" ("book")?',
     options: [
       'كُتُب\nkutub — "books"',
-      'كتابونَ\nkitābūna — invalid, sound masculine plural pattern misapplied',
-      'كتاباتٌ\nkitābātun — invalid form',
+      'كتابونَ\nkitābūna',
+      'كتاباتٌ\nkitābātun',
       'كتابانِ\nkitābāni — dual, "two books"',
     ],
     correctIndex: 0,
@@ -34,8 +34,8 @@ const quizItems: StrictQuizItem[] = [
     q: 'ما جمع كلمة "بيت" جمع تكسير؟\nWhat is the broken plural of "بيت" ("house")?',
     options: [
       'بيوت\nbuyūt — "houses"',
-      'بيتاتٌ\nbaytātun — invalid form',
-      'بيتينَ\nbaytīna — invalid form',
+      'بيتاتٌ\nbaytātun',
+      'بيتينَ\nbaytīna',
       'بيتانِ\nbaytāni — dual, "two houses"',
     ],
     correctIndex: 0,
@@ -78,8 +78,8 @@ const quizItems: StrictQuizItem[] = [
     q: 'ما جمع كلمة "رجل" جمع تكسير؟\nWhat is the broken plural of "رجل" ("man")?',
     options: [
       'رجال\nrijāl — "men"',
-      'رجلونَ\nrajulūna — invalid form',
-      'رجلاتٌ\nrajulātun — invalid form',
+      'رجلونَ\nrajulūna',
+      'رجلاتٌ\nrajulātun',
       'رجلانِ\nrajulāni — dual, "two men"',
     ],
     correctIndex: 0,

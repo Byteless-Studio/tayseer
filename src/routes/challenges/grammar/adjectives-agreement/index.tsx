@@ -44,10 +44,10 @@ const quizItems: StrictQuizItem[] = [
   {
     q: 'أكمل: رأيتُ الطالبَ ___ (the diligent student, as a definite object)\nComplete: raʾaytu ṭ-ṭāliba ___ ("I saw the diligent student," as a definite object)',
     options: [
-      'مجتهدٌ\nmujtahidun — wrong: مرفوع and indefinite',
-      'مجتهداً\nmujtahidan — wrong: indefinite, should be definite',
+      'مجتهدٌ\nmujtahidun',
+      'مجتهداً\nmujtahidan',
       'المجتهدَ\nal-mujtahida — "the diligent"',
-      'مجتهدةً\nmujtahidatan — wrong: feminine and indefinite',
+      'مجتهدةً\nmujtahidatan',
     ],
     correctIndex: 2,
     a: 'الطالبَ هنا مفعول به معرفة منصوب، فيجب أن يطابقه النعت في التعريف (بأل) والنصب معاً: "المجتهدَ" — لا "مجتهداً" (نكرة) ولا "مجتهدٌ" (مرفوع).\nالطالبَ here is a definite direct object in منصوب, so the نعت must match it in both definiteness (with أل) and case: "المجتهدَ" — not "مجتهداً" (indefinite) and not "مجتهدٌ" (مرفوع).',
@@ -80,7 +80,7 @@ const quizItems: StrictQuizItem[] = [
       'نعت مرفوع وعلامة رفعه الضمة، تابع لمنعوته "كتابٌ" في الرفع والتنكير والتذكير والإفراد\nA نعت, مرفوع with a ḍammah, following its منعوت "كتابٌ" in case, indefiniteness, gender, and number',
       'خبر مرفوع لمبتدأ محذوف\nA مرفوع predicate (خبر) for an omitted subject (مبتدأ)',
       'مفعول به منصوب\nA منصوب direct object (مفعول به)',
-      'مضاف إليه مجرور\nA مجرور مضاف إليه',
+      'مضاف إليه مجرور\nA مضاف إليه (genitive)',
     ],
     correctIndex: 0,
     a: 'مفيدٌ نعت لـ"كتابٌ"، وهو مرفوع تبعاً له لأن كتابٌ خبر مرفوع، ويطابقه أيضاً في التنكير والتذكير والإفراد — أربعة أوجه من المطابقة مجتمعة.\nمفيدٌ is the نعت of "كتابٌ." It is مرفوع because it follows كتابٌ, which is the مرفوع خبر, and it also matches it in indefiniteness, gender, and number — all four agreements at once.',

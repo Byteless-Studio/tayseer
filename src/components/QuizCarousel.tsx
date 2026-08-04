@@ -79,12 +79,17 @@ export function QuizCarousel({ items }: { items: QuizItem[] }) {
           {items.map((it, i) => {
             const ci = it.correctIndex ?? 0
             const ua = answers[i]
+            const skipped = ua === undefined
             const correct = ua === ci
             return (
               <div
                 key={i}
                 className={`rounded-lg border p-3 text-xs ${
-                  correct ? 'border-brand/30 bg-brand/5' : 'border-red-200 bg-red-50'
+                  correct
+                    ? 'border-brand/30 bg-brand/5'
+                    : skipped
+                    ? 'border-border bg-muted/40'
+                    : 'border-red-200 bg-red-50'
                 }`}
               >
                 <div className="font-medium text-foreground mb-2 flex items-start gap-1.5">
@@ -93,7 +98,12 @@ export function QuizCarousel({ items }: { items: QuizItem[] }) {
                     <Bilingual text={it.q} arClass="text-sm" enClass="text-xs" />
                   </span>
                 </div>
-                {!correct && ua !== undefined && it.options?.[ua] && (
+                {skipped && (
+                  <p className="text-muted-foreground mb-1.5 text-[0.65rem] uppercase tracking-wide">
+                    Not answered
+                  </p>
+                )}
+                {!correct && !skipped && it.options?.[ua] && (
                   <div className="text-red-500 mb-1.5">
                     <span className="block text-[0.65rem] uppercase tracking-wide opacity-70 mb-0.5">
                       Your answer
@@ -151,9 +161,9 @@ export function QuizCarousel({ items }: { items: QuizItem[] }) {
           <div className="flex flex-col gap-2">
             {item.options.map((opt, j) => {
               let cls =
-                'text-left w-full rounded-lg border px-3 py-2.5 transition-colors cursor-pointer flex items-start gap-2.5 '
+                'text-left w-full rounded-lg border px-3 py-2.5 transition-colors flex items-start gap-2.5 '
               if (!hasAnswered) {
-                cls += 'border-border text-foreground hover:border-brand hover:bg-brand/5'
+                cls += 'cursor-pointer border-border text-foreground hover:border-brand hover:bg-brand/5'
               } else if (j === correctIdx) {
                 cls += 'border-brand bg-brand/10 text-brand font-medium cursor-default'
               } else if (j === selected) {
@@ -199,6 +209,8 @@ export function QuizCarousel({ items }: { items: QuizItem[] }) {
               type="button"
               key={i}
               onClick={() => setCurrent(i)}
+              aria-label={`Question ${i + 1}`}
+              aria-current={i === current}
               className={`rounded-full transition-all cursor-pointer ${
                 i === current
                   ? 'w-4 h-2 bg-brand'

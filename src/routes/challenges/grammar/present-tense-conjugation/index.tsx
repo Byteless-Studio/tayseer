@@ -77,10 +77,10 @@ const quizItems: StrictQuizItem[] = [
   {
     q: 'أي من هذه الصيغ خطأ في تصريف مضارع "كتب" مع الضمير المذكور؟\nWhich of these forms is WRONG for the pronoun given, when conjugating the present-tense verb كتب?',
     options: [
-      'هو يَكْتُبُ\nhuwa yaktubu — he writes (correct)',
-      'هم يَكْتُبُونَ\nhum yaktubūna — they (m. pl.) write (correct)',
-      'أنتم تَكْتُبُ\nantum taktubu (as written — wrong)',
-      'هنّ يَكْتُبْنَ\nhunna yaktubna — they (f. pl.) write (correct)',
+      'هو يَكْتُبُ\nhuwa yaktubu — he writes',
+      'هم يَكْتُبُونَ\nhum yaktubūna — they (m. pl.) write',
+      'أنتم تَكْتُبُ\nantum taktubu (as written',
+      'هنّ يَكْتُبْنَ\nhunna yaktubna — they (f. pl.) write',
     ],
     correctIndex: 2,
     a: '"أنتم" (جمع المخاطبين) تأخذ صيغة "تَكْتُبُونَ" من الأفعال الخمسة، لا "تَكْتُبُ" التي هي صيغة المخاطب المفرد "أنتَ".\nأنتم (2nd person masc. pl.) takes the form تَكْتُبُونَ, one of الأفعال الخمسة — not تَكْتُبُ, which is the form for the singular أنتَ.',

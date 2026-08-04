@@ -35,8 +35,8 @@ const quizItems: StrictQuizItem[] = [
     options: [
       'الاثنينِ\nal-Ithnayni — genitive',
       'الاثنانِ\nal-Ithnāni — nominative dual form',
-      'الاثنينُ\nal-Ithnaynu — nominative-marked, incorrect here',
-      'الاثنون\nal-Ithnūn — incorrect form',
+      'الاثنينُ\nal-Ithnaynu — nominative-marked',
+      'الاثنون\nal-Ithnūn',
     ],
     correctIndex: 0,
     a: '"يومَ" هنا ظرف منصوب مضاف، و"الاثنين" مضاف إليه مجرور، ويُجر بالكسرة الظاهرة على النون: "يومَ الاثنينِ".\n"يومَ" here is an accusative adverb and a مضاف, and "الاثنين" is its مضاف إليه in the genitive, marked by a visible kasra on the ن: "يومَ الاثنينِ" ("on Monday").',
@@ -45,9 +45,9 @@ const quizItems: StrictQuizItem[] = [
     q: 'كيف نقول "اليوم هو يوم الجمعة" بأقصر صياغة صحيحة؟\nWhat is the shortest correct way to say "Today is Friday"?',
     options: [
       'اليومُ يومُ الجمعةِ\n"al-yawmu yawmu l-jumʿati" — "Today is Friday"',
-      'اليومَ يومِ الجمعةِ\nWrong case endings throughout',
-      'اليومُ يومَ الجمعةَ\nWrong case on the predicate and the مضاف إليه',
-      'الجمعةُ يومَ اليومِ\nIncorrectly reverses subject and predicate',
+      'اليومَ يومِ الجمعةِ\nal-yawma yawmi l-jumʿati',
+      'اليومُ يومَ الجمعةَ\nal-yawmu yawma l-jumʿata',
+      'الجمعةُ يومَ اليومِ\nal-jumʿatu yawma l-yawmi',
     ],
     correctIndex: 0,
     a: '"اليومُ" مبتدأ مرفوع، و"يومُ الجمعةِ" خبر مرفوع وهو تركيب إضافي ("يوم" مضاف مرفوع و"الجمعة" مضاف إليه مجرور): "اليومُ يومُ الجمعةِ".\n"اليومُ" is the subject (مبتدأ) in the nominative, and "يومُ الجمعةِ" is the predicate (خبر), itself an idāfah — "يوم" is the مضاف, nominative, and "الجمعة" is the مضاف إليه, genitive: "اليومُ يومُ الجمعةِ".',
@@ -55,8 +55,8 @@ const quizItems: StrictQuizItem[] = [
   {
     q: 'أيّ من هذه الجمل بها خطأ نحوي؟\nWhich of these sentences contains a grammatical error?',
     options: [
-      'قابلتُه يومَ الخميسِ\n"I met him on Thursday" — يوم correctly accusative',
-      'قابلتُه يومُ الخميسِ\n"I met him on Thursday" — يوم wrongly in the nominative',
+      'قابلتُه يومَ الخميسِ\n"I met him on Thursday" — يوم in the accusative',
+      'قابلتُه يومُ الخميسِ\n"I met him on Thursday" — يوم in the nominative',
       'الاجتماعُ يومَ الثلاثاءِ\n"The meeting is on Tuesday"',
       'سأزورُك يومَ السبتِ\n"I will visit you on Saturday"',
     ],
@@ -66,10 +66,10 @@ const quizItems: StrictQuizItem[] = [
   {
     q: 'كيف نقول "بعد ثلاثةِ أيامٍ" مطبّقين قاعدة مخالفة الجنس مع العدد ٣؟\nHow do we say "after three days", applying the gender-reversal rule with the number 3?',
     options: [
-      'بعد ثلاثةِ أيامٍ\n"baʿda thalāthati ayyāmin" — "after three days" (correct)',
-      'بعد ثلاثِ أيامٍ\nWrong: drops the ة, but "يوم" is masculine so the number needs it',
-      'بعد ثلاثةِ يومٍ\nWrong: the counted noun should be plural (أيامٍ), not singular',
-      'بعد ثلاثُ يومِ\nWrong on both the number\'s case and the counted noun\'s form',
+      'بعد ثلاثةِ أيامٍ\n"baʿda thalāthati ayyāmin" — "after three days"',
+      'بعد ثلاثِ أيامٍ\nbaʿda thalāthi ayyāmin — the number without ة',
+      'بعد ثلاثةِ يومٍ\nbaʿda thalāthati yawmin — with a singular counted noun',
+      'بعد ثلاثُ يومِ\nbaʿda thalāthu yawmi — number in the nominative, counted noun singular',
     ],
     correctIndex: 0,
     a: '"أيام" جمع مذكر ("يوم" مذكر)، فيوافق العدد ٣ هذا الأصل بأخذ تاء التأنيث طبقاً لمخالفة الجنس: "ثلاثةُ أيامٍ"، والمعدود "أيامٍ" مجرور مضاف إليه.\n"أيام" is a masculine plural (its singular "يوم" is masculine), so the number 3 takes the تاء التأنيث, following the rule that numbers 3–10 take the OPPOSITE gender marking from the counted noun: "ثلاثةُ أيامٍ" — and the counted noun "أيامٍ" is the مضاف إليه, in the genitive.',

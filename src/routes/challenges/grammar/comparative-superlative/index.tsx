@@ -44,10 +44,10 @@ const quizItems: StrictQuizItem[] = [
   {
     q: 'مررتُ برجلٍ ___ من أخيه سناً (اسم مجرور، ممنوع من الصرف فلا يُنوَّن ويُجر بالفتحة)\nمررتُ برجلٍ ___ من أخيه سناً (a genitive noun, diptote, so it takes no تنوين and is مجرور with فتحة)',
     options: [
-      'أكبرَ\nakbara — diptote, مجرور with فتحة (correct here)',
-      'أكبرٍ\nakbarin — with تنوين kasra (wrong: diptotes take no تنوين)',
-      'أكبرُ\nakbaru — مرفوع (nominative), wrong case here',
-      'أكبراً\nakbaran — with تنوين fatḥa, منصوب form (wrong here)',
+      'أكبرَ\nakbara — diptote, مجرور with فتحة',
+      'أكبرٍ\nakbarin — with تنوين kasra',
+      'أكبرُ\nakbaru — مرفوع (nominative)',
+      'أكبراً\nakbaran — with تنوين fatḥa, منصوب form',
     ],
     correctIndex: 0,
     a: '"أكبر" هنا نكرة مجردة من أل والإضافة (صيغة مقارنة)، وهي ممنوعة من الصرف فلا تُنوَّن، وتُجر بالفتحة نيابة عن الكسرة: "مررتُ برجلٍ أكبرَ من أخيه سناً".\nأكبر here is indefinite, free of أل and not in idāfah (the bare comparative form). It is diptote (ممنوع من الصرف), so it takes no تنوين and is مجرور with فتحة instead of كسرة: "مررتُ برجلٍ أكبرَ من أخيه سناً" — "I passed by a man older than his brother."',
@@ -68,7 +68,7 @@ const quizItems: StrictQuizItem[] = [
     options: [
       'هو أفضلُ رجلٍ في الفريقِ\nHe is the best man on the team',
       'هي أجملُ امرأةٍ رأيتُها\nShe is the most beautiful woman I have ever seen',
-      'هي أجملةُ امرأةٍ رأيتُها\nIncorrect: a feminine تاء was wrongly added to أفعل التفضيل',
+      'هي أجملةُ امرأةٍ رأيتُها\nwith a feminine تاء added to أفعل التفضيل',
       'هو أذكى رجلٍ عرفتُه\nHe is the smartest man I have known',
     ],
     correctIndex: 2,
@@ -80,7 +80,7 @@ const quizItems: StrictQuizItem[] = [
       'هو أفضلُ رجلٍ في القريةِ\nHe is the best man in the village',
       'هي أجملُ امرأةٍ في المدينةِ\nShe is the most beautiful woman in the city',
       'هم أنشطُ الطلابِ في الفصلِ\nThey are the most active students in the class',
-      'هو أفضلُ رجلٌ في القريةِ\nIncorrect: رجلٌ should be مجرور (رجلٍ), not مرفوع',
+      'هو أفضلُ رجلٌ في القريةِ\nرجلٌ should be مجرور (رجلٍ), not مرفوع',
     ],
     correctIndex: 3,
     a: 'الجملة الرابعة خطأ لأن "رجل" مضاف إليه بعد أفعل التفضيل "أفضل"، والمضاف إليه يجب أن يكون مجروراً: الصواب "أفضلُ رجلٍ" لا "أفضلُ رجلٌ".\nThe fourth sentence is wrong because رجل is the مضاف إليه after أفعل التفضيل أفضل, and the مضاف إليه must be مجرور: the correct form is "أفضلُ رجلٍ", not "أفضلُ رجلٌ".',

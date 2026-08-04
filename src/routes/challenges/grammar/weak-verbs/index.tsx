@@ -22,9 +22,9 @@ const quizItems: StrictQuizItem[] = [
   {
     q: 'أكمل: أنا ___ الحقيقةَ (تصريف "قال" مع ضمير المتكلم، حيث يُحذف حرف العلة)\nComplete: أنا ___ الحقيقةَ (conjugating قال with the 1st person pronoun, where the weak letter is dropped)',
     options: [
-      'قَالْتُ\nqāltu (as written — wrong)',
-      'قُلْتُ\nqultu — I said (correct)',
-      'قَوَلْتُ\nqawaltu (as written — wrong)',
+      'قَالْتُ\nqāltu (as written',
+      'قُلْتُ\nqultu — I said',
+      'قَوَلْتُ\nqawaltu (as written',
       'أَقُولُ\naqūlu — I say (present tense, not past)',
     ],
     correctIndex: 1,
@@ -44,10 +44,10 @@ const quizItems: StrictQuizItem[] = [
   {
     q: 'ما فعل الأمر الصحيح من "أخذ" مخاطباً مفرداً؟\nWhat is the correct imperative of أخذ, addressing a single person?',
     options: [
-      'اؤخُذْ\nu\'khudh (as written — wrong)',
-      'أُخُذْ\nukhudh (as written — wrong)',
-      'خُذْ\nkhudh — take! (correct)',
-      'آخُذْ\nākhudh (as written — wrong)',
+      'اؤخُذْ\nu\'khudh (as written',
+      'أُخُذْ\nukhudh (as written',
+      'خُذْ\nkhudh — take!',
+      'آخُذْ\nākhudh (as written',
     ],
     correctIndex: 2,
     a: 'فعل الأمر من "أخذ" هو "خُذْ" بحذف الهمزة الأصلية كلياً، وهذا حذف سماعي خاص بهذا النوع من الأفعال المهموزة الفاء.\nThe imperative of أخذ is خُذْ, with the original hamza dropped entirely — an irregular, convention-based deletion specific to this class of hamza-initial verbs.',
@@ -88,10 +88,10 @@ const quizItems: StrictQuizItem[] = [
   {
     q: 'أكمل: ظننتُ الامتحانَ ___ (سهلاً، مفعول به ثانٍ منصوب)\nComplete: ظننتُ الامتحانَ ___ (سهلاً, the accusative second object)',
     options: [
-      'سهلٌ\nsahlun (nominative — wrong)',
-      'سهلاً\nsahlan (accusative — correct)',
-      'سهلٍ\nsahlin (genitive — wrong)',
-      'سهلُ\nsahlu (no tanwīn — wrong)',
+      'سهلٌ\nsahlun (nominative',
+      'سهلاً\nsahlan (accusative',
+      'سهلٍ\nsahlin (genitive',
+      'سهلُ\nsahlu (no tanwīn',
     ],
     correctIndex: 1,
     a: 'المفعول به الثاني لـ"ظنّ" (وهو خبر الجملة الاسمية أصلاً) يكون منصوباً: "ظننتُ الامتحانَ سهلاً" — كلا المفعولين (الامتحانَ وسهلاً) منصوبان.\nThe second object of ظنّ (originally the خبر of the nominal sentence) is منصوب: ظننتُ الامتحانَ سهلاً ("I thought the exam [was] easy") — both objects, الامتحانَ and سهلاً, are منصوب.',

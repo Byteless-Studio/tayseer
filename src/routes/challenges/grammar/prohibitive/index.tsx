@@ -22,10 +22,10 @@ const quizItems: StrictQuizItem[] = [
   {
     q: 'أكمل: لا ___ على الجدارِ! (نهي بـ"لا الناهية")\nComplete: لا ___ على الجدارِ! (a prohibition with لا الناهية)',
     options: [
-      'تَكْتُبُ\ntaktubu (indicative — wrong)',
-      'تَكْتُبَ\ntaktuba (subjunctive — wrong)',
+      'تَكْتُبُ\ntaktubu (indicative',
+      'تَكْتُبَ\ntaktuba (subjunctive',
       'تَكْتُبْ\ntaktub — write! [prohibited] (correct, jussive)',
-      'كَتَبْتَ\nkatabta (past tense — wrong)',
+      'كَتَبْتَ\nkatabta — past tense',
     ],
     correctIndex: 2,
     a: 'بعد "لا الناهية" يُجزم الفعل المضارع بحذف حركة الإعراب: "لا تَكْتُبْ على الجدارِ" (don\'t write on the wall) لا "لا تَكْتُبُ" ولا "لا تَكْتُبَ".\nAfter لا الناهية the present-tense verb is مجزوم, dropping its case ending: لا تَكْتُبْ على الجدارِ ("don\'t write on the wall") — never لا تَكْتُبُ nor لا تَكْتُبَ.',
@@ -55,10 +55,10 @@ const quizItems: StrictQuizItem[] = [
   {
     q: 'أكمل: لا ___ بعيداً! (نهي، من فعل "ذهب")\nComplete: لا ___ بعيداً! (a prohibition, from the verb ذهب)',
     options: [
-      'تَذْهَبُ\ntadhhabu (indicative — wrong)',
+      'تَذْهَبُ\ntadhhabu (indicative',
       'تَذْهَبْ\ntadhhab — go! [prohibited] (correct, jussive)',
-      'تَذْهَبَ\ntadhhaba (subjunctive — wrong)',
-      'ذَهَبْتَ\ndhahabta (past tense — wrong)',
+      'تَذْهَبَ\ntadhhaba — subjunctive',
+      'ذَهَبْتَ\ndhahabta — past tense',
     ],
     correctIndex: 1,
     a: 'النهي يقتضي جزم الفعل المضارع: "لا تَذْهَبْ بعيداً!" (Don\'t go far!).\nA prohibition requires the present-tense verb to be مجزوم: لا تَذْهَبْ بعيداً! ("Don\'t go far!").',
@@ -78,9 +78,9 @@ const quizItems: StrictQuizItem[] = [
     q: 'هل الجملة "لا تَلْعَبِي بالنارِ" صحيحة لمخاطبة مؤنثة؟\nIs the sentence لا تَلْعَبِي بالنارِ correct for a feminine addressee?',
     options: [
       'صحيح، والفعل مجزوم بحذف النون لأنه من الأفعال الخمسة\nCorrect — the verb is مجزوم by dropping the نون because it is one of الأفعال الخمسة',
-      'خطأ، الصواب لا تَلْعَبِينَ بالنار\nWrong — the correct form is لا تَلْعَبِينَ بالنار',
+      'خطأ، الصواب لا تَلْعَبِينَ بالنار\nkhaṭaʾ — "wrong; it should be لا تَلْعَبِينَ بالنار"',
       'خطأ، لا يوجد نهي للمؤنث\nWrong — there is no prohibitive form for the feminine',
-      'خطأ، الصواب لا تَلْعَبُ بالنار\nWrong — the correct form is لا تَلْعَبُ بالنار',
+      'خطأ، الصواب لا تَلْعَبُ بالنار\nkhaṭaʾ — "wrong; it should be لا تَلْعَبُ بالنار"',
     ],
     correctIndex: 0,
     a: '"لا تَلْعَبِي بالنارِ" صحيح: الفعل "تَلْعَبِينَ" من الأفعال الخمسة، وعلامة جزمه حذف النون، فتصبح "تَلْعَبِي" بعد دخول "لا" الناهية.\nلا تَلْعَبِي بالنارِ is correct: the verb تَلْعَبِينَ is one of الأفعال الخمسة, and its جزم marker is dropping the نون, giving تَلْعَبِي once لا الناهية attaches.',

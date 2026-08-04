@@ -44,10 +44,10 @@ const quizItems: StrictQuizItem[] = [
   {
     q: 'أكمل: هذه وردةٌ ___ (a yellow rose, fem.)\nComplete: hādhihi wardatun ___ ("This is a yellow rose")',
     options: [
-      'أصفرُ\naṣfaru — masculine form, wrong here',
+      'أصفرُ\naṣfaru — masculine form',
       'صفراءُ\nṣafrāʾu — "yellow" (fem.)',
-      'صفراً\nṣafran — wrong form',
-      'أصفرٍ\naṣfarin — wrong: masculine and wrong case',
+      'صفراً\nṣafran',
+      'أصفرٍ\naṣfarin',
     ],
     correctIndex: 1,
     a: 'وردة اسم مؤنث، فيجب أن يطابقها النعت في التأنيث، فتُستخدم الصيغة المؤنثة صفراءُ لا الصيغة المذكرة أصفرُ.\nوردة is feminine, so the adjective must agree with it in gender — the feminine form صفراءُ is used, not the masculine أصفرُ.',
@@ -68,7 +68,7 @@ const quizItems: StrictQuizItem[] = [
     options: [
       'رأيتُ رجلاً طويلاً\nraʾaytu rajulan ṭawīlan — "I saw a tall man"',
       'رأيتُ قميصاً أحمرَ\nraʾaytu qamīṣan aḥmara — "I saw a red shirt"',
-      'رأيتُ قميصاً أحمراً\nraʾaytu qamīṣan aḥmaran — wrong: تنوين added to a diptote',
+      'رأيتُ قميصاً أحمراً\nraʾaytu qamīṣan aḥmaran',
       'اشتريتُ سيارةً زرقاءَ\nishtaraytu sayyāratan zarqāʾa — "I bought a blue car"',
     ],
     correctIndex: 2,

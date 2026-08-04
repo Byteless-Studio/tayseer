@@ -113,7 +113,7 @@ const quizItems: StrictQuizItem[] = [
     q: 'باستخدام الوزن السببي أَفْعَلَ على الجذر د-خ-ل (يدخل)، ما الفعل الناتج وما معناه؟\nUsing the causative pattern أَفْعَلَ on the root د-خ-ل (to enter), what verb results and what does it mean?',
     options: [
       'دَخَلَ\ndakhala — "he entered"',
-      'أَدْخَلَ\nadkhala — "he caused to enter/brought in" — correct, on وزن أَفْعَلَ',
+      'أَدْخَلَ\nadkhala — "he caused to enter/brought in"',
       'تَدَاخَلَ\ntadākhala — "it intermingled"',
       'اِسْتَدْخَلَ\nistadkhala — "he sought to bring in"',
     ],
@@ -157,7 +157,7 @@ const quizItems: StrictQuizItem[] = [
     q: 'ما هي ك-س-ر على وزن تَفَعَّلَ، وما معناها؟\nWhat is ك-س-ر on the pattern تَفَعَّلَ, and what does it mean?',
     options: [
       'كَسَّرَ\nkassara — "he smashed it" (Form II, intensive)',
-      'تَكَسَّرَ\ntakassara — "it shattered/broke into pieces (by itself)" — correct, on وزن تَفَعَّلَ',
+      'تَكَسَّرَ\ntakassara — "it shattered/broke into pieces (by itself)"',
       'اِنْكَسَرَ\ninkasara — "it got broken" (Form VII, passive/reflexive)',
       'كَاسَرَ\nkāsara — not a standard form here',
     ],
@@ -181,7 +181,7 @@ const quizItems: StrictQuizItem[] = [
       'دَرَسَ\ndarasa — "he studied"',
       'دَرَّسَ\ndarrasa — "he taught"',
       'اِسْتَدْرَسَ\nistadrasa — not a standard form here',
-      'تَدَارَسَ\ntadārasa — "they studied together/reviewed with one another" — correct, on وزن تَفَاعَلَ',
+      'تَدَارَسَ\ntadārasa — "they studied together/reviewed with one another"',
     ],
     correctIndex: 3,
     a: 'تَدَارَسَ هي د-ر-س على وزن تَفَاعَلَ — الوزن التبادلي يحوّل الدراسة الفردية (دَرَسَ) إلى نشاط مشترك: "يدرسون/يراجعون معاً، يسائل بعضهم بعضاً".\nتَدَارَسَ is د-ر-س on وزن تَفَاعَلَ — the reciprocal pattern turns solitary "studying" (دَرَسَ) into a shared activity: "to study/review together, quizzing one another".',
@@ -201,7 +201,7 @@ const quizItems: StrictQuizItem[] = [
     q: 'ما هي ف-ت-ح على وزن اِنْفَعَلَ، وما معناها؟\nWhat is ف-ت-ح on the pattern اِنْفَعَلَ, and what does it mean?',
     options: [
       'فَتَحَ\nfataḥa — "he opened it"',
-      'اِنْفَتَحَ\ninfataḥa — "it opened (by itself/became open)" — correct, on وزن اِنْفَعَلَ',
+      'اِنْفَتَحَ\ninfataḥa — "it opened (by itself/became open)"',
       'فَتَّحَ\nfattaḥa — "he opened it repeatedly"',
       'اِفْتَتَحَ\niftataḥa — "he inaugurated it"',
     ],
@@ -245,7 +245,7 @@ const quizItems: StrictQuizItem[] = [
     q: 'ما هي ف-ت-ح على وزن اِسْتَفْعَلَ، وماذا تعني عادة؟\nWhat is ف-ت-ح on the pattern اِسْتَفْعَلَ, and what does it typically mean?',
     options: [
       'فَتَحَ\nfataḥa — "he opened it"',
-      'اِسْتَفْتَحَ\nistaftaḥa — "to seek an opening/ask for victory" (e.g. to open a recitation, or pray for victory) — correct, on وزن اِسْتَفْعَلَ',
+      'اِسْتَفْتَحَ\nistaftaḥa — "to seek an opening/ask for victory" (e.g. to open a recitation, or pray for victory)',
       'فَتَّحَ\nfattaḥa — "he opened it repeatedly"',
       'اِنْفَتَحَ\ninfataḥa — "it opened by itself"',
     ],
@@ -271,7 +271,7 @@ const quizItems: StrictQuizItem[] = [
       'مَنْصُور\nmanṣūr — "one who is helped"',
       'نَصْر\nnaṣr — "help/victory" (noun)',
       'مِنْصَار\nminṣār — not a real standard word here',
-      'نَاصِر\nnāṣir — "helper/supporter" (one who helps) — correct, on وزن فَاعِل',
+      'نَاصِر\nnāṣir — "helper/supporter" (one who helps)',
     ],
     correctIndex: 3,
     a: 'نَاصِر هي ن-ص-ر على وزن فَاعِل، وزن اسم الفاعل — بمعنى "مُساعِد/مؤيد"، فاعل النَصْر (المساعدة/النصر).\nنَاصِر is ن-ص-ر on وزن فَاعِل, the active-participle pattern — "helper, one who supports/aids", the doer of the نَصْر (help/victory).',
@@ -291,7 +291,7 @@ const quizItems: StrictQuizItem[] = [
     q: 'ما هي ن-ص-ر على وزن مَفْعُول، وما معناها؟\nWhat is ن-ص-ر on the pattern مَفْعُول, and what does it mean?',
     options: [
       'نَاصِر\nnāṣir — "a helper"',
-      'مَنْصُور\nmanṣūr — "one who has been helped/made victorious" — correct, on وزن مَفْعُول',
+      'مَنْصُور\nmanṣūr — "one who has been helped/made victorious"',
       'نَصَرَ\nnaṣara — "he helped"',
       'نُصْرَة\nnuṣrah — "the act of helping"',
     ],
@@ -379,7 +379,7 @@ const quizItems: StrictQuizItem[] = [
     q: 'دُخُول، على وزن المصدر فُعُول، مشتقة من الجذر د-خ-ل. ما معناها؟\nدُخُول, on the مصدر pattern فُعُول, comes from root د-خ-ل. What does it mean?',
     options: [
       'دَاخِل\ndākhil — "one who enters"',
-      'دُخُول\ndukhūl — "entering" (the abstract act of entering) — correct, the مصدر',
+      'دُخُول\ndukhūl — "entering" (the abstract act of entering)',
       'مَدْخَل\nmadkhal — "the entrance" (place)',
       'أَدْخَلَ\nadkhala — "he brought in"',
     ],
@@ -391,7 +391,7 @@ const quizItems: StrictQuizItem[] = [
     options: [
       'عَالِم\nʿālim — "one who knows/scholar"',
       'مُعَلِّم\nmuʿallim — "teacher" (the doer)',
-      'تَعْلِيم\ntaʿlīm — "teaching" (the abstract act of teaching) — correct, the مصدر',
+      'تَعْلِيم\ntaʿlīm — "teaching" (the abstract act of teaching)',
       'تَعَلُّم\ntaʿallum — "learning" (reflexive act)',
     ],
     correctIndex: 2,
@@ -405,7 +405,7 @@ const quizItems: StrictQuizItem[] = [
       'م-ك-ت\nNot a real root — just reshuffled letters',
       'ك-ت-ة\nNot a real root — ة is not a root letter',
       'ب-ت-ك\nNot a real root — just reshuffled letters',
-      'ك-ت-ب\nk-t-b — "to write" — correct, the real root',
+      'ك-ت-ب\nk-t-b — "to write"',
     ],
     correctIndex: 3,
     a: 'مَكْتَبَة تُختزل إلى الجذر ك-ت-ب (كتب) — أما التوليفات الأخرى فهي مجرد أحرف معاد ترتيبها، وليست جذوراً حقيقية. مَكْتَبَة، على وزن اسم المكان مَفْعَلة، تعني "مكان الكتب/الكتابة" — أي المكتبة.\nمَكْتَبَة strips down to the root ك-ت-ب (write) — the other letter combinations are just reshuffled letters, not real roots. مَكْتَبَة, on the place-noun pattern مَفْعَلة, means "place of books/writing" — a library.',
@@ -437,7 +437,7 @@ const quizItems: StrictQuizItem[] = [
     options: [
       'خَارِج\nkhārij — "outside" (active participle)',
       'إِخْرَاج\nikhrāj — "producing/directing" (مصدر of Form IV)',
-      'مَخْرَج\nmakhraj — "exit/place of going out" — correct, on وزن مَفْعَل',
+      'مَخْرَج\nmakhraj — "exit/place of going out"',
       'مُخْرِج\nmukhrij — "director/producer" (active participle of Form IV)',
     ],
     correctIndex: 2,
@@ -457,7 +457,7 @@ const quizItems: StrictQuizItem[] = [
   {
     q: "قارن بين فَاتِح ومَفْتُوح، وكلاهما من الجذر ف-ت-ح. أيّهما اسم الفاعل (الفاتح/الغازي) وأيّهما اسم المفعول (المفتوح)؟\nCompare فَاتِح and مَفْتُوح, both from root ف-ت-ح. Which is the active participle ('opener/conqueror') and which is the passive participle ('opened')?",
     options: [
-      'فَاتِح = فاعل (فاتح)، مَفْتُوح = مفعول (مفتوح)\nفَاتِح = active (opener), مَفْتُوح = passive (opened) — correct',
+      'فَاتِح = فاعل (فاتح)، مَفْتُوح = مفعول (مفتوح)\nفَاتِح = active (opener), مَفْتُوح = passive (opened)',
       'فَاتِح = مفعول، مَفْتُوح = فاعل\nفَاتِح = passive, مَفْتُوح = active',
       'كلاهما اسم فاعل\nBoth are active',
       'كلاهما اسم مفعول\nBoth are passive',

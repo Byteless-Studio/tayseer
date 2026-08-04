@@ -79,7 +79,7 @@ const quizItems: StrictQuizItem[] = [
     options: [
       'مفعول به منصوب، وهو مضاف\nDirect object (منصوب), and simultaneously a مضاف',
       'فاعل مرفوع\nSubject of the verb (مرفوع)',
-      'مضاف إليه مجرور\nمضاف إليه (مجرور)',
+      'مضاف إليه مجرور\nمضاف إليه (genitive)',
       'خبر مرفوع\nPredicate (مرفوع)',
     ],
     correctIndex: 0,

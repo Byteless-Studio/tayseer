@@ -24,7 +24,7 @@ const quizItems: StrictQuizItem[] = [
     options: [
       'بالفتحة كسائر الأسماء\nFatḥa, like most nouns',
       'بالكسرة نيابة عن الفتحة\nKasra, standing in for fatḥa',
-      'بالياء\nي (yā\')',
+      'بالياء\nwith the letter yāʾ (ي)',
       'بحذف النون\nDropping the نون',
     ],
     correctIndex: 1,
@@ -46,7 +46,7 @@ const quizItems: StrictQuizItem[] = [
     options: [
       'الطالباتِ\naṭ-ṭālibāti — نصب form (kasra, not fatḥa)',
       'الطالباتُ\naṭ-ṭālibātu — رفع form',
-      'الطالباتَ\naṭ-ṭālibāta — fatḥa, the wrong marker here',
+      'الطالباتَ\naṭ-ṭālibāta — with fatḥa',
       'الطالبونَ\naṭ-ṭālibūna — masculine plural',
     ],
     correctIndex: 0,
@@ -79,7 +79,7 @@ const quizItems: StrictQuizItem[] = [
     options: [
       'المعلماتِ\nal-muʿallimāti — جر form',
       'المعلماتُ\nal-muʿallimātu — رفع form',
-      'المعلماتَ\nal-muʿallimāta — نصب form (wrong marker anyway)',
+      'المعلماتَ\nal-muʿallimāta — نصب form',
       'المعلمينَ\nal-muʿallimīna — masculine plural',
     ],
     correctIndex: 0,

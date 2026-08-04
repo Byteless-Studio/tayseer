@@ -33,10 +33,10 @@ const quizItems: StrictQuizItem[] = [
   {
     q: 'كتابٌ (masc.) بعيد عن المتكلم. أيّ جملة صحيحة للإشارة إليه؟\nكتابٌ (masc.) is far from the speaker. Which sentence correctly points to it?',
     options: [
-      'هذا كتابٌ\nhādhā kitābun (incorrect — near, but the book is distant)',
-      'تلك كتابٌ\ntilka kitābun (incorrect — feminine تلك with masculine كتاب)',
-      'ذلك كتابٌ\ndhālika kitābun — "That is a book" (correct)',
-      'هذه كتابٌ\nhādhihi kitābun (incorrect — near and feminine, but the book is distant and masculine)',
+      'هذا كتابٌ\nhādhā kitābun',
+      'تلك كتابٌ\ntilka kitābun',
+      'ذلك كتابٌ\ndhālika kitābun — "That is a book"',
+      'هذه كتابٌ\nhādhihi kitābun',
     ],
     correctIndex: 2,
     a: 'كتاب اسم مذكر، والمشار إليه بعيد، فالأداة الصحيحة هي ذلك (المذكر البعيد): "ذلك كتابٌ" = "That is a book."\nكتاب is masculine and the referent is distant, so the correct word is ذلك (masculine, distant): "ذلك كتابٌ" = "That is a book."',
@@ -44,10 +44,10 @@ const quizItems: StrictQuizItem[] = [
   {
     q: 'مدرسةٌ (fem.) بعيدة عن المتكلم. أيّ جملة صحيحة للإشارة إليها؟\nمدرسةٌ (fem.) is far from the speaker. Which sentence correctly points to it?',
     options: [
-      'ذلك مدرسةٌ\ndhālika madrasatun (incorrect — masculine ذلك with feminine مدرسة)',
-      'هذه مدرسةٌ\nhādhihi madrasatun (incorrect — near, but the school is distant)',
-      'تلك مدرسةٌ\ntilka madrasatun — "That is a school" (correct)',
-      'هذا مدرسةٌ\nhādhā madrasatun (incorrect — near and masculine, but the school is distant and feminine)',
+      'ذلك مدرسةٌ\ndhālika madrasatun',
+      'هذه مدرسةٌ\nhādhihi madrasatun',
+      'تلك مدرسةٌ\ntilka madrasatun — "That is a school"',
+      'هذا مدرسةٌ\nhādhā madrasatun',
     ],
     correctIndex: 2,
     a: 'مدرسة اسم مؤنث، والمشار إليه بعيد، فالأداة الصحيحة هي تلك (المؤنث البعيد): "تلك مدرسةٌ" = "That is a school."\nمدرسة is feminine and the referent is distant, so the correct word is تلك (feminine, distant): "تلك مدرسةٌ" = "That is a school."',
@@ -55,10 +55,10 @@ const quizItems: StrictQuizItem[] = [
   {
     q: 'أيّ من هذه الجمل بها خطأ في مطابقة اسم الإشارة البعيد لجنس المشار إليه؟\nWhich of these sentences has an error in matching the distant demonstrative to the gender of what it refers to?',
     options: [
-      'ذلك رجلٌ\ndhālika rajulun — "That is a man" (correct)',
-      'تلك امرأةٌ\ntilka imra\'atun — "That is a woman" (correct)',
-      'ذلك سيارةٌ\ndhālika sayyāratun (incorrect — masculine ذلك with feminine سيارة)',
-      'تلك حديقةٌ\ntilka ḥadīqatun — "That is a garden" (correct)',
+      'ذلك رجلٌ\ndhālika rajulun — "That is a man"',
+      'تلك امرأةٌ\ntilka imra\'atun — "That is a woman"',
+      'ذلك سيارةٌ\ndhālika sayyāratun',
+      'تلك حديقةٌ\ntilka ḥadīqatun — "That is a garden"',
     ],
     correctIndex: 2,
     a: '"ذلك سيارةٌ" خطأ لأن سيارة اسم مؤنث، فيجب استخدام تلك لا ذلك؛ الصواب "تلك سيارةٌ".\n"ذلك سيارةٌ" is wrong because سيارة is feminine, so تلك must be used instead of ذلك; the correct form is "تلك سيارةٌ".',

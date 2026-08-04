@@ -88,8 +88,8 @@ const quizItems: StrictQuizItem[] = [
   {
     q: 'أيّ من هذه الجمل بها خطأ نحوي؟\nWhich of these sentences contains a grammatical error?',
     options: [
-      'صلّيتُ في مساجدَ جميلةٍ\n"I prayed in beautiful mosques" — مساجدَ correctly without تنوين',
-      'صلّيتُ في مساجدٍ جميلةٍ\n"I prayed in beautiful mosques" — مساجدٍ wrongly given تنوين',
+      'صلّيتُ في مساجدَ جميلةٍ\n"I prayed in beautiful mosques" — مساجدَ without تنوين',
+      'صلّيتُ في مساجدٍ جميلةٍ\n"I prayed in beautiful mosques" — مساجدٍ with تنوين',
       'قابلتُ رجلاً أفضلَ مني\n"I met a man better than me"',
       'مررتُ بمصابيحَ مضيئةٍ\n"I passed by lit lamps"',
     ],

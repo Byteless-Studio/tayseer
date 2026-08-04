@@ -34,9 +34,9 @@ const quizItems: StrictQuizItem[] = [
     q: 'ما صيغة الأمر الصحيحة من الفعل "كتب" للمخاطب المفرد المذكر (أنتَ)؟\nWhat is the correct imperative form of كتب for the masculine singular addressee (أنتَ)?',
     options: [
       'تَكْتُبْ\ntaktub (the jussive present, before deriving the imperative)',
-      'اُكْتُبْ\nuktub — write! (correct)',
-      'كَتَبْ\nkatab (the bare past stem — wrong)',
-      'يَكْتُبْ\nyaktub (3rd person jussive — wrong)',
+      'اُكْتُبْ\nuktub — write!',
+      'كَتَبْ\nkatab (the bare past stem',
+      'يَكْتُبْ\nyaktub (3rd person jussive',
     ],
     correctIndex: 1,
     a: 'صيغة الأمر من "كتب" مع "أنتَ" هي "اُكْتُبْ": حُذف حرف المضارعة (التاء) من "تَكْتُبْ"، وأُضيفت همزة وصل مضمومة لأن الحرف الثالث من المضارع (يَكْتُبُ) مضموم العين.\nThe imperative of كتب with أنتَ is اُكْتُبْ: the present-tense prefix (ت) is dropped from تَكْتُبْ, and a ḍamma-vowelled همزة الوصل is added because the middle radical of the present tense (يَكْتُبُ) carries a ḍamma.',
@@ -55,10 +55,10 @@ const quizItems: StrictQuizItem[] = [
   {
     q: 'ما صيغة الأمر من "جلس" (يَجْلِسُ) للمخاطب المفرد؟\nWhat is the imperative of جلس (present tense يَجْلِسُ) for the singular addressee?',
     options: [
-      'اُجْلِسْ\nujlis (ḍamma hamza — wrong pattern here)',
-      'اِجْلِسْ\nijlis — sit! (correct)',
-      'أَجْلِسْ\najlis (fatḥa hamza — wrong)',
-      'جَلَسْ\njalas (bare past stem — wrong)',
+      'اُجْلِسْ\nujlis (ḍamma hamza',
+      'اِجْلِسْ\nijlis — sit!',
+      'أَجْلِسْ\najlis (fatḥa hamza',
+      'جَلَسْ\njalas (bare past stem',
     ],
     correctIndex: 1,
     a: 'مضارع "جلس" هو "يَجْلِسُ" مكسور العين، فتكون همزة الوصل في الأمر مكسورة أيضاً: "اِجْلِسْ" — تتبع حركة همزة الوصل حركة عين المضارع.\nThe present tense of جلس is يَجْلِسُ, with a kasra on the middle radical, so the همزة الوصل in the imperative is also kasra-vowelled: اِجْلِسْ — the vowel on همزة الوصل follows the vowel of the present tense\'s middle radical.',
@@ -77,9 +77,9 @@ const quizItems: StrictQuizItem[] = [
   {
     q: 'أي من هذه الصيغ خطأ في صياغة الأمر من "كتب"؟\nWhich of these forms is WRONG when forming the imperative of كتب?',
     options: [
-      '(أنتَ) اُكْتُبْ\n(anta) uktub — write! (correct)',
-      '(أنتِ) اُكْتُبِي\n(anti) uktubī — write! (correct)',
-      '(أنتم) اُكْتُبُونَ\n(antum) uktubūna (as written — wrong)',
+      '(أنتَ) اُكْتُبْ\n(anta) uktub — write!',
+      '(أنتِ) اُكْتُبِي\n(anti) uktubī — write!',
+      '(أنتم) اُكْتُبُونَ\n(antum) uktubūna (as written',
       '(أنتما) اُكْتُبَا\n(antumā) uktubā — write! [dual] (correct)',
     ],
     correctIndex: 2,

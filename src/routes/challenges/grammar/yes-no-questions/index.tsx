@@ -34,7 +34,7 @@ const quizItems: StrictQuizItem[] = [
     q: 'أيّ من هذه الجمل مكتوبة بالشكل الصحيح لأداة الاستفهام؟\nWhich of these sentences uses the question particle correctly?',
     options: [
       'هل أنتَ مدرّسٌ؟\nhal anta mudarrisun? — "Are you a teacher?"',
-      'أ نتَ مدرّسٌ؟\nʾa nta mudarrisun? — أ wrongly separated from the word it attaches to',
+      'أ نتَ مدرّسٌ؟\nʾa nta mudarrisun? — أ written separately from the following word',
       'أنتَ هل مدرّسٌ؟\nʾanta hal mudarrisun? — هل misplaced mid-sentence',
       'مدرّسٌ هل أنتَ؟\nmudarrisun hal anta? — word order scrambled',
     ],
@@ -46,7 +46,7 @@ const quizItems: StrictQuizItem[] = [
     options: [
       'هل هذا كتابٌ؟\nhal hādhā kitābun? — uses هل instead of أ',
       'أهذا كتابٌ؟\nʾa-hādhā kitābun? — "Is this a book?"',
-      'أ هذا كتابٌ ؟ (منفصلة)\nʾa hādhā kitābun? — أ wrongly written as a separate word',
+      'أ هذا كتابٌ ؟ (منفصلة)\nʾa hādhā kitābun? — أ written as a separate word',
       'كتابٌ أهذا؟\nkitābun ʾa-hādhā? — word order scrambled',
     ],
     correctIndex: 1,
@@ -57,7 +57,7 @@ const quizItems: StrictQuizItem[] = [
     options: [
       'هل ذهبتَ إلى المدرسةِ؟\nhal dhahabta ilā l-madrasati? — "Did you go to school?"',
       'أذهبتَ إلى المدرسةِ؟\nʾa-dhahabta ilā l-madrasati? — same meaning, using أ instead',
-      'هلذهبتَ إلى المدرسةِ؟\nhal-dhahabta... — هل wrongly fused onto ذهبتَ',
+      'هلذهبتَ إلى المدرسةِ؟\nhal-dhahabta... — هل joined onto ذهبتَ',
       'أطالبٌ أنتَ؟\nʾa-ṭālibun anta? — "Are you a student?"',
     ],
     correctIndex: 2,

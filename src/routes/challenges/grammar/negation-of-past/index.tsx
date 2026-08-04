@@ -44,8 +44,8 @@ const quizItems: StrictQuizItem[] = [
   {
     q: 'أكمل: ما ___ الولدُ إلى المدرسةِ (نفي "ذهب" بأسلوب "ما")\nComplete: ما ___ الولدُ إلى المدرسةِ (negating ذهب with ما)',
     options: [
-      'يذهبْ\nyadhhab (jussive present — wrong pattern for ما)',
-      'ذهبَ\ndhahaba — he went (correct: past form, unchanged)',
+      'يذهبْ\nyadhhab (jussive present',
+      'ذهبَ\ndhahaba — he went',
       'يذهبُ\nyadhhabu (indicative present)',
       'اذهبْ\nidhhab (imperative — go!)',
     ],
@@ -55,10 +55,10 @@ const quizItems: StrictQuizItem[] = [
   {
     q: 'أي من الجمل التالية بها خطأ في استخدام "لم"؟\nWhich of the following sentences has an error in its use of لم?',
     options: [
-      'لم يذهبْ الولدُ\nlam yadhhab al-waladu — the boy did not go (correct)',
-      'لم ذهبَ الولدُ\nlam dhahaba al-waladu (as written — wrong)',
-      'لم يكتبْ الطالبُ\nlam yaktub aṭ-ṭālibu — the student did not write (correct)',
-      'لم يشربْ الطفلُ\nlam yashrab aṭ-ṭiflu — the child did not drink (correct)',
+      'لم يذهبْ الولدُ\nlam yadhhab al-waladu — the boy did not go',
+      'لم ذهبَ الولدُ\nlam dhahaba al-waladu (as written',
+      'لم يكتبْ الطالبُ\nlam yaktub aṭ-ṭālibu — the student did not write',
+      'لم يشربْ الطفلُ\nlam yashrab aṭ-ṭiflu — the child did not drink',
     ],
     correctIndex: 1,
     a: '"لم ذهبَ الولدُ" خطأ لأن "لم" تدخل على المضارع المجزوم لا على الماضي مباشرة؛ الصواب "لم يذهبْ الولدُ" بتحويل الفعل إلى صيغة المضارع المجزوم.\n"لم ذهبَ الولدُ" is wrong because لم attaches to the jussive present, not directly to the past; the correct form is لم يذهبْ الولدُ, converting the verb to the jussive present.',
@@ -77,10 +77,10 @@ const quizItems: StrictQuizItem[] = [
   {
     q: 'عند نفي "شرب الطفلُ الحليبَ" بأسلوب "لم"، ما الصيغة الصحيحة؟\nWhen negating شرب الطفلُ الحليبَ with لم, what is the correct form?',
     options: [
-      'لم شرب الطفلُ الحليبَ\nlam shariba aṭ-ṭiflu al-ḥalība (as written — wrong)',
-      'لم يشربُ الطفلُ الحليبَ\nlam yashrabu aṭ-ṭiflu al-ḥalība (indicative — wrong)',
-      'لم يشربْ الطفلُ الحليبَ\nlam yashrab aṭ-ṭiflu al-ḥalība — the child did not drink the milk (correct, jussive)',
-      'لم يشربَ الطفلُ الحليبَ\nlam yashraba aṭ-ṭiflu al-ḥalība (subjunctive — wrong)',
+      'لم شرب الطفلُ الحليبَ\nlam shariba aṭ-ṭiflu al-ḥalība (as written',
+      'لم يشربُ الطفلُ الحليبَ\nlam yashrabu aṭ-ṭiflu al-ḥalība (indicative',
+      'لم يشربْ الطفلُ الحليبَ\nlam yashrab aṭ-ṭiflu al-ḥalība — the child did not drink the milk',
+      'لم يشربَ الطفلُ الحليبَ\nlam yashraba aṭ-ṭiflu al-ḥalība (subjunctive',
     ],
     correctIndex: 2,
     a: 'الصواب "لم يشربْ الطفلُ الحليبَ": يتحول الفعل الماضي "شربَ" إلى المضارع المجزوم "يشربْ" بعد دخول أداة الجزم "لم".\nThe correct form is لم يشربْ الطفلُ الحليبَ: the past verb شربَ converts to the jussive present يشربْ once the jussive particle لم attaches.',

@@ -45,7 +45,7 @@ const quizItems: StrictQuizItem[] = [
     q: 'أيّ من هذه الجمل بها خطأ نحوي في حالة الاسم بعد حرف الجر؟\nWhich of these sentences has a grammar error in the case of the noun after the preposition?',
     options: [
       'ذهبتُ إلى المسجدِ\ndhahabtu ilā l-masjidi — "I went to the mosque"',
-      'ذهبتُ إلى المسجدُ\ndhahabtu ilā l-masjidu — wrong: noun after إلى shown as مرفوع',
+      'ذهبتُ إلى المسجدُ\ndhahabtu ilā l-masjidu',
       'صلّيتُ في المسجدِ\nṣallaytu fī l-masjidi — "I prayed in the mosque"',
       'خرجتُ من المسجدِ\nkharajtu min al-masjidi — "I left the mosque"',
     ],

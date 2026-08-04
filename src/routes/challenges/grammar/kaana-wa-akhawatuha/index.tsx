@@ -88,8 +88,8 @@ const quizItems: StrictQuizItem[] = [
   {
     q: 'أعرب "بارداً" في الجملة: ظلَّ الجوُّ بارداً طوال اليوم.\nParse "بارداً" in the sentence: ظلَّ الجوُّ بارداً طوال اليوم — "The weather stayed cold all day."',
     options: [
-      'خبر ظلّ منصوب\nخبر ظلّ, منصوب',
-      'اسم ظلّ مرفوع\nاسم ظلّ, مرفوع',
+      'خبر ظلّ منصوب\nThe خبر of ظلّ, منصوب (accusative)',
+      'اسم ظلّ مرفوع\nThe اسم of ظلّ, مرفوع (nominative)',
       'مفعول به لفعل محذوف\nDirect object (مفعول به) of an omitted verb',
       'حال منصوبة لا علاقة لها بظلّ\nAn منصوب حال unrelated to ظلّ',
     ],

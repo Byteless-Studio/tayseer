@@ -23,9 +23,9 @@ const quizItems: StrictQuizItem[] = [
     q: 'كتابٌ + ـي (my) → ___\nكتابٌ ("a book") + ـي ("my") → ___',
     options: [
       'كتابي\nkitābī — "my book"',
-      'كتابُي\nkitābuy — incorrect: تنوين/case ending kept before the pronoun',
-      'كتابٌي\nkitābuny — incorrect: تنوين kept before the pronoun',
-      'كتاباي\nkitābāy — incorrect form',
+      'كتابُي\nkitābuy',
+      'كتابٌي\nkitābuny',
+      'كتاباي\nkitābāy',
     ],
     correctIndex: 0,
     a: 'حين يتصل الضمير ـي باسم، يفيد الملكية: كتابي = "my book". لاحظ سقوط التنوين من "كتاب" لأن اتصال الضمير جعله معرفة.\nWhen the pronoun ـي attaches to a noun it shows possession: كتابي = "my book." Notice تنوين drops from كتاب, because attaching the pronoun makes the noun definite.',
@@ -56,7 +56,7 @@ const quizItems: StrictQuizItem[] = [
     q: 'أيّ من هذه الجمل بها خطأ نحوي متعلق بالتنوين مع الضمير المتصل؟\nWhich of these sentences has a grammar error involving تنوين with an attached pronoun?',
     options: [
       'هذا كتابي\nhādhā kitābī — "This is my book"',
-      'هذا كتابٌي\nhādhā kitābuny — تنوين wrongly kept before the pronoun',
+      'هذا كتابٌي\nhādhā kitābuny — with تنوين before the pronoun',
       'هذا بيتُنا\nhādhā baytunā — "This is our house"',
       'هذه سيارتُها\nhādhihi sayyāratuhā — "This is her car"',
     ],

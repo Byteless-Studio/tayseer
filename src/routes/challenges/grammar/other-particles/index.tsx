@@ -44,7 +44,7 @@ const quizItems: StrictQuizItem[] = [
   {
     q: 'من يجتهدْ ___ ناجحٌ (اختر الأنسب لربط جواب الشرط الاسمي بالشرط مع التوكيد)\nman yajtahid ___ nājiḥun — choose the best fit to link the nominal جواب الشرط to the شرط, with emphasis',
     options: [
-      'فإنّه\nfa-innahu — the correct combination',
+      'فإنّه\nfa-innahu',
       'لأنّه\nli-annahu — "because he" (causal, not a linker for جواب الشرط)',
       'إنما\ninnamā — "only/just" (restrictive)',
       'أنّه\nannahu — "that he," without the linking ف',
@@ -77,9 +77,9 @@ const quizItems: StrictQuizItem[] = [
   {
     q: 'ذهبتُ إلى المكتبةِ ___ دراسةً جادةً (أدرس، بلام التعليل الناصبة للمضارع، بمعنى "لكي أدرس")\ndhahabtu ilā l-maktabati ___ dirāsatan jāddatan — "I went to the library in order to study seriously" (fill in أدرس with the accusative-marking لام التعليل)',
     options: [
-      'لأدرسَ\nli-adrusa — accusative (منصوب), correct with لام التعليل',
-      'لأدرسُ\nli-adrusu — nominative form, incorrect here',
-      'لأدرسْ\nli-adrus — jussive form, incorrect here',
+      'لأدرسَ\nli-adrusa — accusative (منصوب)',
+      'لأدرسُ\nli-adrusu — nominative form',
+      'لأدرسْ\nli-adrus — jussive form',
       'أدرسُ\nadrusu — nominative, with no لام at all',
     ],
     correctIndex: 0,

@@ -22,8 +22,8 @@ const quizItems: StrictQuizItem[] = [
   {
     q: 'عندي ___ كتاباً (١١، مع معدود مذكر)\nعندي ___ كتاباً (11, with a masculine counted noun)',
     options: [
-      'أحدَ عشرَ\naḥada ʿashara — 11, masculine form (correct here)',
-      'إحدى عشرةَ\niḥdā ʿashrata — 11, feminine form (wrong gender here)',
+      'أحدَ عشرَ\naḥada ʿashara — 11, masculine form',
+      'إحدى عشرةَ\niḥdā ʿashrata — 11, feminine form',
       'اثنا عشرَ\nithnā ʿashara — 12, masculine nominative-style form',
       'ثلاثةَ عشرَ\nthalāthata ʿashara — 13, masculine form',
     ],
@@ -33,10 +33,10 @@ const quizItems: StrictQuizItem[] = [
   {
     q: 'عندي ___ طالبةً (١١، مع معدود مؤنث)\nعندي ___ طالبةً (11, with a feminine counted noun)',
     options: [
-      'إحدى عشرةَ\niḥdā ʿashrata — 11, feminine form (correct here)',
-      'أحدَ عشرَ\naḥada ʿashara — 11, masculine form (wrong gender here)',
+      'إحدى عشرةَ\niḥdā ʿashrata — 11, feminine form',
+      'أحدَ عشرَ\naḥada ʿashara — 11, masculine form',
       'اثنتا عشرةَ\nithnatā ʿashrata — 12, feminine nominative-style form',
-      'إحدى عشرَ\niḥdā ʿashara — mismatched: feminine إحدى but masculine عشر (wrong)',
+      'إحدى عشرَ\niḥdā ʿashara — mismatched: feminine إحدى but masculine عشر',
     ],
     correctIndex: 0,
     a: 'مع المعدود المؤنث "طالبةً"، يُستخدم "إحدى عشرةَ" (تأنيث الجزأين معاً)، والمعدود مفرد منصوب على التمييز: "إحدى عشرةَ طالبةً".\nWith the feminine counted noun طالبةً, إحدى عشرةَ is used (both parts made feminine together), and the counted noun is singular, accusative as تمييز: "إحدى عشرةَ طالبةً" — "eleven female students."',
@@ -55,10 +55,10 @@ const quizItems: StrictQuizItem[] = [
   {
     q: 'حضر ___ طالباً (٢٠، فاعل مرفوع؛ العقود تُعرب إعراب جمع المذكر السالم)\nحضر ___ طالباً (20, فاعل/nominative; the tens decline like the sound masculine plural)',
     options: [
-      'عشرونَ\nʿishrūna — 20, nominative form (correct here, with و)',
-      'عشرينَ\nʿishrīna — 20, accusative/genitive form (with ي, wrong case here)',
-      'عشرةٌ\nʿasharatun — 10, indefinite nominative (wrong number)',
-      'عشرونٌ\nʿishrūnun — invalid: تنوين is never added to the sound masculine plural ending',
+      'عشرونَ\nʿishrūna — 20, nominative form',
+      'عشرينَ\nʿishrīna — 20, accusative/genitive form (with ي',
+      'عشرةٌ\nʿasharatun — 10, indefinite nominative',
+      'عشرونٌ\nʿishrūnun',
     ],
     correctIndex: 0,
     a: 'العقود (عشرون، ثلاثون...) تُعرب إعراب جمع المذكر السالم: رفعاً بالواو، ونصباً وجراً بالياء؛ وبما أن "عشرون" هنا فاعل مرفوع فتُرفع بالواو: "حضر عشرونَ طالباً" — والمعدود بعدها مفرد منصوب على التمييز.\nThe tens (عشرون، ثلاثون...) decline like the sound masculine plural: nominative with و, accusative and genitive with ي. Since عشرون here is the فاعل (nominative), it takes و: "حضر عشرونَ طالباً" — "twenty students came" — and the counted noun after it is singular, accusative as تمييز.',
@@ -66,10 +66,10 @@ const quizItems: StrictQuizItem[] = [
   {
     q: 'رأيتُ ___ طالباً (٣٠، مفعول به منصوب؛ العقود تُنصب بالياء)\nرأيتُ ___ طالباً (30, direct object/accusative; the tens take ي in the accusative)',
     options: [
-      'ثلاثينَ\nthalāthīna — 30, accusative/genitive form (correct here, with ي)',
-      'ثلاثونَ\nthalāthūna — 30, nominative form (with و, wrong case here)',
-      'ثلاثةً\nthalāthatan — 3, indefinite accusative (wrong number)',
-      'ثلاثمائةَ\nthalāthumiʾata — 300 (wrong number)',
+      'ثلاثينَ\nthalāthīna — 30, accusative/genitive form',
+      'ثلاثونَ\nthalāthūna — 30, nominative form (with و',
+      'ثلاثةً\nthalāthatan — 3, indefinite accusative',
+      'ثلاثمائةَ\nthalāthumiʾata — 300',
     ],
     correctIndex: 0,
     a: '"ثلاثون" في موضع نصب (مفعول به) تُعرب بالياء نيابة عن الواو: "رأيتُ ثلاثينَ طالباً"، والمعدود بعدها مفرد منصوب على التمييز.\nثلاثون in the accusative position (direct object) is marked with ي instead of و: "رأيتُ ثلاثينَ طالباً" — "I saw thirty students" — and the counted noun after it is singular, accusative as تمييز.',
@@ -91,7 +91,7 @@ const quizItems: StrictQuizItem[] = [
       'عندي أحدَ عشرَ كتاباً\nI have eleven books',
       'في الفصل عشرونَ طالبةً\nThere are twenty female students in the class',
       'اشتريتُ مائةَ كتابٍ\nI bought a hundred books',
-      'عندي ثلاثةَ عشرةَ طالبةً\nIncorrect: with a feminine noun, the units part should be ثلاثَ, not ثلاثةَ',
+      'عندي ثلاثةَ عشرةَ طالبةً\nwith a feminine noun, the units part should be ثلاثَ, not ثلاثةَ',
     ],
     correctIndex: 3,
     a: 'الجملة الرابعة خطأ لأن المعدود "طالبةً" مؤنث، فيجب أن يخالفه جزء الآحاد في الجنس (فيصبح "ثلاثَ" بلا تاء) بينما يوافقه "عشرة" بالتأنيث: الصواب "ثلاثَ عشرةَ طالبةً" لا "ثلاثةَ عشرةَ".\nThe fourth sentence is wrong because the counted noun طالبةً is feminine, so the units part must disagree with it in gender (becoming ثلاثَ, without ة), while عشرة agrees with it as feminine: the correct form is "ثلاثَ عشرةَ طالبةً", not "ثلاثةَ عشرةَ".',

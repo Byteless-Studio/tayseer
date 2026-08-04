@@ -57,7 +57,7 @@ const quizItems: StrictQuizItem[] = [
     options: [
       'الطالبةُ مجتهدةٌ\naṭ-ṭālibatu mujtahidatun — "The [female] student is diligent" (correct)',
       'الطالبانِ مجتهدانِ\naṭ-ṭālibāni mujtahidāni — "The two students are diligent" (correct, dual)',
-      'الطالباتُ مجتهدةٌ\naṭ-ṭālibātu mujtahidatun (incorrect — plural مبتدأ with singular خبر)',
+      'الطالباتُ مجتهدةٌ\naṭ-ṭālibātu mujtahidatun',
       'الطلابُ مجتهدونَ\naṭ-ṭullābu mujtahidūna — "The students are diligent" (correct, masculine plural)',
     ],
     correctIndex: 2,
@@ -77,10 +77,10 @@ const quizItems: StrictQuizItem[] = [
   {
     q: 'أكمل الجملة بخبر مرفوع يطابق المبتدأ في التذكير: البابُ ___\nComplete the sentence with a مرفوع خبر that matches the مبتدأ in gender: البابُ ___',
     options: [
-      'مفتوحةٌ\nmaftūḥatun (incorrect — feminine, but الباب is masculine)',
-      'مفتوحٌ\nmaftūḥun — "open" (correct, masculine مرفوع)',
-      'مفتوحاً\nmaftūḥan (incorrect — accusative, not مرفوع)',
-      'مفتوحِ\nmaftūḥi (incorrect — genitive, not مرفوع)',
+      'مفتوحةٌ\nmaftūḥatun',
+      'مفتوحٌ\nmaftūḥun — "open"',
+      'مفتوحاً\nmaftūḥan',
+      'مفتوحِ\nmaftūḥi',
     ],
     correctIndex: 1,
     a: 'الباب اسم مذكر، فيجب أن يطابقه الخبر في التذكير والرفع: "البابُ مفتوحٌ" — لا "مفتوحةٌ" (مؤنث) ولا "مفتوحاً" (منصوب).\nالباب is masculine, so the خبر must match it in gender and case: "البابُ مفتوحٌ" — not "مفتوحةٌ" (feminine) and not "مفتوحاً" (accusative).',

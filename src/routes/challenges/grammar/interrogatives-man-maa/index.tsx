@@ -44,10 +44,10 @@ const quizItems: StrictQuizItem[] = [
   {
     q: 'أيّ من هذه الأسئلة به خطأ في اختيار أداة الاستفهام المناسبة؟\nWhich of these questions uses the wrong interrogative word?',
     options: [
-      'مَن هذا الرجلُ؟\nman hādhā ar-rajulu? — "Who is this man?" (correct)',
-      'ما هذا الكتابُ؟\nmā hādhā al-kitābu? — "What is this book?" (correct)',
-      'مَن هذا الكتابُ؟\nman hādhā al-kitābu? (incorrect — مَن used for a non-rational thing)',
-      'ما هذه السيارةُ؟\nmā hādhihi as-sayyāratu? — "What is this car?" (correct)',
+      'مَن هذا الرجلُ؟\nman hādhā ar-rajulu? — "Who is this man?"',
+      'ما هذا الكتابُ؟\nmā hādhā al-kitābu? — "What is this book?"',
+      'مَن هذا الكتابُ؟\nman hādhā al-kitābu?',
+      'ما هذه السيارةُ؟\nmā hādhihi as-sayyāratu? — "What is this car?"',
     ],
     correctIndex: 2,
     a: '"مَن هذا الكتابُ؟" خطأ لأن الكتاب غير عاقل، فيجب استخدام ما لا مَن؛ الصواب "ما هذا الكتابُ؟".\n"مَن هذا الكتابُ؟" is wrong because a book is non-rational, so ما must be used instead of مَن; the correct form is "ما هذا الكتابُ؟".',
@@ -88,10 +88,10 @@ const quizItems: StrictQuizItem[] = [
   {
     q: 'أيّ زوج من الجمل يوضح الاستخدام الصحيح لـ من وما حسب قاعدة العاقل/غير العاقل؟\nWhich pair of sentences shows the correct use of مَن and ما according to the rational/non-rational rule?',
     options: [
-      'ما هذا الطفلُ؟ / مَن هذا القلمُ؟\nmā hādhā aṭ-ṭiflu? / man hādhā al-qalamu? (both incorrect — swapped)',
-      'مَن هذا الطفلُ؟ / ما هذا القلمُ؟\nman hādhā aṭ-ṭiflu? / mā hādhā al-qalamu? (both correct)',
-      'مَن هذا الطفلُ؟ / مَن هذا القلمُ؟\nman hādhā aṭ-ṭiflu? / man hādhā al-qalamu? (second is incorrect)',
-      'ما هذا الطفلُ؟ / ما هذا القلمُ؟\nmā hādhā aṭ-ṭiflu? / mā hādhā al-qalamu? (first is incorrect)',
+      'ما هذا الطفلُ؟ / مَن هذا القلمُ؟\nmā hādhā aṭ-ṭiflu? / man hādhā al-qalamu?',
+      'مَن هذا الطفلُ؟ / ما هذا القلمُ؟\nman hādhā aṭ-ṭiflu? / mā hādhā al-qalamu?',
+      'مَن هذا الطفلُ؟ / مَن هذا القلمُ؟\nman hādhā aṭ-ṭiflu? / man hādhā al-qalamu?',
+      'ما هذا الطفلُ؟ / ما هذا القلمُ؟\nmā hādhā aṭ-ṭiflu? / mā hādhā al-qalamu?',
     ],
     correctIndex: 1,
     a: 'الطفل عاقل فيُسأل عنه بـ مَن (مَن هذا الطفلُ؟)، والقلم غير عاقل فيُسأل عنه بـ ما (ما هذا القلمُ؟) — تطبيق مباشر لقاعدة العاقل مقابل غير العاقل.\nA child (الطفل) is rational, so مَن is used (مَن هذا الطفلُ؟); a pen (القلم) is non-rational, so ما is used (ما هذا القلمُ؟) — a direct application of the rational vs. non-rational rule.',

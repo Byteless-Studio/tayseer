@@ -77,10 +77,10 @@ const quizItems: StrictQuizItem[] = [
   {
     q: 'أيّ من هذه الجمل بها خطأ في اختيار الحالة الإعرابية المناسبة للسبب النحوي المذكور؟\nWhich of these has the wrong case paired with the grammatical reason given?',
     options: [
-      'الطالبُ (فاعل) → رفع\nالطالبُ (subject) → رفع — correct',
-      'الكتابَ (مفعول به) → نصب\nالكتابَ (direct object) → نصب — correct',
-      'الطالبِ (مضاف إليه) → رفع\nالطالبِ (مضاف إليه) → رفع — wrong: a مضاف إليه is always مجرور',
-      'المسجدِ (بعد حرف جر) → جر\nالمسجدِ (after a preposition) → جر — correct',
+      'الطالبُ (فاعل) → رفع\nالطالبُ (subject) → رفع',
+      'الكتابَ (مفعول به) → نصب\nالكتابَ (direct object) → نصب',
+      'الطالبِ (مضاف إليه) → رفع\nالطالبِ (مضاف إليه) → رفع (nominative)',
+      'المسجدِ (بعد حرف جر) → جر\nالمسجدِ (after a preposition) → جر',
     ],
     correctIndex: 2,
     a: 'المضاف إليه يكون مجروراً دائماً لا مرفوعاً؛ فالخيار "الطالبِ (مضاف إليه) → رفع" خطأ، والصواب أن يكون مجروراً كما في "كتابُ الطالبِ".\nA مضاف إليه is always مجرور, never مرفوع — so "الطالبِ (مضاف إليه) → رفع" is wrong; it should be مجرور, as in "كتابُ الطالبِ."',

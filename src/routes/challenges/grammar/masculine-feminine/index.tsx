@@ -66,10 +66,10 @@ const quizItems: StrictQuizItem[] = [
   {
     q: 'أيّ جملة فيها خطأ في مطابقة الصفة للموصوف من حيث التذكير والتأنيث؟\nWhich sentence has an error in matching the adjective to the noun\'s gender?',
     options: [
-      'الشمسُ حارّةٌ اليوم\nash-shamsu ḥārratun al-yawm — "The sun is hot today" (correct)',
-      'الشمسُ حارٌّ اليوم\nash-shamsu ḥārrun al-yawm (incorrect — masculine adjective with feminine شمس)',
-      'العينُ جميلةٌ\nal-ʿaynu jamīlatun — "The eye is beautiful" (correct)',
-      'الأرضُ واسعةٌ\nal-arḍu wāsiʿatun — "The earth is vast" (correct)',
+      'الشمسُ حارّةٌ اليوم\nash-shamsu ḥārratun al-yawm — "The sun is hot today"',
+      'الشمسُ حارٌّ اليوم\nash-shamsu ḥārrun al-yawm',
+      'العينُ جميلةٌ\nal-ʿaynu jamīlatun — "The eye is beautiful"',
+      'الأرضُ واسعةٌ\nal-arḍu wāsiʿatun — "The earth is vast"',
     ],
     correctIndex: 1,
     a: '"الشمسُ حارٌّ" خطأ لأن شمس اسم مؤنث سماعاً، فيجب أن تطابقه الصفة في التأنيث: الصواب "الشمسُ حارّةٌ".\n"الشمسُ حارٌّ" is wrong because شمس is feminine by usage, so its adjective must also be feminine: the correct form is "الشمسُ حارّةٌ".',

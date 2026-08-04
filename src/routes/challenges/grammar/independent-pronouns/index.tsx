@@ -66,10 +66,10 @@ const quizItems: StrictQuizItem[] = [
   {
     q: 'أيّ من هذه الجمل بها خطأ في مطابقة الخبر لضمير المبتدأ؟\nWhich of these sentences has an error in matching the خبر to the pronoun مبتدأ?',
     options: [
-      'هي مجتهدةٌ\nhiya mujtahidatun — "She is diligent" (correct)',
-      'هم مجتهدونَ\nhum mujtahidūna — "They are diligent" (correct, masculine plural)',
-      'هنّ مجتهدٌ\nhunna mujtahidun (incorrect — feminine plural pronoun with singular خبر)',
-      'أنتِ مجتهدةٌ\nanti mujtahidatun — "You are diligent" (correct, feminine singular)',
+      'هي مجتهدةٌ\nhiya mujtahidatun — "She is diligent"',
+      'هم مجتهدونَ\nhum mujtahidūna — "They are diligent"',
+      'هنّ مجتهدٌ\nhunna mujtahidun',
+      'أنتِ مجتهدةٌ\nanti mujtahidatun — "You are diligent"',
     ],
     correctIndex: 2,
     a: '"هنّ مجتهدٌ" خطأ لأن هنّ ضمير لجمع الإناث الغائبات، ويحتاج خبراً بصيغة جمع المؤنث السالم؛ الصواب "هنّ مجتهداتٌ".\n"هنّ مجتهدٌ" is wrong because هنّ is the pronoun for a group of absent women and needs a خبر in the sound feminine plural form; the correct form is "هنّ مجتهداتٌ".',

@@ -23,9 +23,9 @@ const quizItems: StrictQuizItem[] = [
     q: 'يسرّني أنّ الحقَّ ___ (أكمل بخبر "أنّ"، مرفوع، بمعنى "منتصر")\nyasurrunī anna l-ḥaqqa ___ — "It pleases me that the truth is triumphant" (complete with the nominative خبر of أنّ, meaning "triumphant")',
     options: [
       'منتصرٌ\nmuntaṣirun — nominative (مرفوع)',
-      'منتصراً\nmuntaṣiran — accusative form, incorrect here',
-      'منتصرٍ\nmuntaṣirin — genitive form, incorrect here',
-      'منتصرَ\nmuntaṣira — an incorrect vowel ending',
+      'منتصراً\nmuntaṣiran — accusative form',
+      'منتصرٍ\nmuntaṣirin — genitive form',
+      'منتصرَ\nmuntaṣira',
     ],
     correctIndex: 0,
     a: '"أنّ" تنصب اسمها ("الحقَّ") وترفع خبرها ("منتصرٌ")؛ والجملة كلها (أنّ الحقَّ منتصرٌ) في تأويل مصدر مرفوع فاعل لـ"يسرّني" (بمعنى: يسرّني انتصارُ الحق).\nأنّ makes its اسم (الحقَّ) accusative and keeps its خبر (منتصرٌ) nominative; the whole clause (أنّ الحقَّ منتصرٌ) is interpreted as a nominative مصدر functioning as the subject (فاعل) of يسرّني — meaning يسرّني انتصارُ الحق ("the triumph of the truth pleases me").',
@@ -33,10 +33,10 @@ const quizItems: StrictQuizItem[] = [
   {
     q: 'أريد ___ في الامتحانِ (اكتب المصدر المؤول الصحيح من "أن" و"أنجح")\nurīdu ___ fī l-imtiḥāni — "I want to succeed in the exam" (write the correct implied verbal noun from أن and أنجح)',
     options: [
-      'أن أنجحَ\nan anjaḥa — أن + accusative present-tense verb (correct)',
-      'أن أنجحُ\nan anjaḥu — أن + nominative present-tense verb (incorrect)',
-      'أنّي أنجحَ\nannī anjaḥa — the wrong particle (أنّي instead of أن)',
-      'إنْ أنجحْ\nin anjaḥ — conditional إنْ with a jussive verb, the wrong meaning',
+      'أن أنجحَ\nan anjaḥa — أن + accusative present-tense verb',
+      'أن أنجحُ\nan anjaḥu — أن + nominative present-tense verb',
+      'أنّي أنجحَ\nannī anjaḥa',
+      'إنْ أنجحْ\nin anjaḥ — conditional إنْ with a jussive verb',
     ],
     correctIndex: 0,
     a: 'يُبنى المصدر المؤول هنا من "أنْ" الناصبة + المضارع المنصوب: "أريد أن أنجحَ" (بمعنى: أريد النجاحَ)، وهو في محل نصب مفعول به.\nThe implied verbal noun here is built from accusative-marking أنْ + the accusative present-tense verb: أريد أن أنجحَ (meaning أريد النجاحَ — "I want success"), and it is in the accusative position as a direct object (مفعول به).',
@@ -55,10 +55,10 @@ const quizItems: StrictQuizItem[] = [
   {
     q: 'حوّل "يعجبني اجتهادُ الطالبِ" إلى مصدر مؤول: يعجبني ___ الطالبُ\nConvert يعجبني اجتهادُ الطالبِ ("The diligence of the student pleases me") into an implied verbal noun: يعجبني ___ الطالبُ',
     options: [
-      'أن يجتهدَ\nan yajtahida — أن + accusative present-tense verb (correct)',
-      'أن يجتهدُ\nan yajtahidu — أن + nominative present-tense verb (incorrect)',
-      'أنّ يجتهدَ\nanna yajtahida — the wrong particle (أنّ governs a noun, not a verb, directly)',
-      'إنْ يجتهدْ\nin yajtahid — conditional إنْ with a jussive verb, the wrong meaning',
+      'أن يجتهدَ\nan yajtahida — أن + accusative present-tense verb',
+      'أن يجتهدُ\nan yajtahidu — أن + nominative present-tense verb',
+      'أنّ يجتهدَ\nanna yajtahida',
+      'إنْ يجتهدْ\nin yajtahid — conditional إنْ with a jussive verb',
     ],
     correctIndex: 0,
     a: 'يُصاغ المصدر المؤول من "أنْ" (المصدرية الناصبة) + الفعل المضارع منصوباً: "يعجبني أن يجتهدَ الطالبُ" بمعنى "يعجبني اجتهادُ الطالب".\nThe implied verbal noun is formed from أنْ (المصدرية, accusative-marking) + the present-tense verb, accusative: يعجبني أن يجتهدَ الطالبُ, meaning يعجبني اجتهادُ الطالب ("the diligence of the student pleases me").',

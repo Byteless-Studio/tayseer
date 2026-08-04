@@ -67,7 +67,7 @@ const quizItems: StrictQuizItem[] = [
     q: 'أيّ من هذه الجمل بها خطأ نحوي؟\nWhich of these sentences contains a grammatical error?',
     options: [
       'جلستُ أمامَ المعلمِ\n"I sat in front of the teacher"',
-      'وقفَ وراءُ البابِ\n"He stood behind the door" — with وراء wrongly left in the nominative',
+      'وقفَ وراءُ البابِ\n"He stood behind the door" — with وراء in the nominative',
       'المسجدُ بينَ البيتينِ\n"The mosque is between the two houses"',
       'جلسَ عن يمينِ الإمامِ\n"He sat to the right of the imam"',
     ],

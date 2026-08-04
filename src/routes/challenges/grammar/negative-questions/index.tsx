@@ -33,8 +33,8 @@ const quizItems: StrictQuizItem[] = [
   {
     q: 'أَلَمْ تُخبِرْني بالحقيقةِ؟ / والجواب يثبت أنه أخبرك فعلاً (تكذيب للنفي): ___، أخبرتُك\nأَلَمْ تُخبِرْني بالحقيقةِ؟ ("Didn\'t you tell me the truth?") — the answer confirms he did tell you (contradicting the negation): ___, أخبرتُك',
     options: [
-      'بلى\nbalā — contradicts the negation, asserts the opposite (correct here)',
-      'نعم\nnaʿam — confirms the negation as worded (wrong here)',
+      'بلى\nbalā — contradicts the negation, asserts the opposite',
+      'نعم\nnaʿam — confirms the negation as worded',
       'لا\nlā — "no" (not the answer word for this context)',
       'كلا\nkallā — "certainly not" (not the answer word for this context)',
     ],
@@ -47,7 +47,7 @@ const quizItems: StrictQuizItem[] = [
       'هل حضرتَ الاجتماعَ؟ — نعم، حضرتُ\nDid you attend the meeting? — Yes, I attended',
       'هل أنتَ طالبٌ؟ — نعم أنا طالبٌ\nAre you a student? — Yes, I am a student',
       'أتحبُّ القراءةَ؟ — نعم أحبها\nDo you love reading? — Yes, I love it',
-      'هل سافرتَ أمس؟ — بلى، سافرتُ\nIncorrect: بلى only answers negative questions; this question is positive, so it should be نعم',
+      'هل سافرتَ أمس؟ — بلى، سافرتُ\nبلى only answers negative questions; this question is positive, so it should be نعم',
     ],
     correctIndex: 3,
     a: 'الحوار الرابع خاطئ لأن "بلى" لا تُستخدم إلا رداً على سؤال منفٍ لتكذيب نفيه، أما هذا السؤال ("هل سافرتَ أمس؟") فمثبت غير منفيّ، فيجب الرد بـ"نعم": "نعم، سافرتُ".\nThe fourth exchange is wrong because بلى is used only to answer a negative question by contradicting its negation, but this question (هل سافرتَ أمس؟) is positive, not negative, so the answer must be نعم: "نعم، سافرتُ."',
@@ -69,7 +69,7 @@ const quizItems: StrictQuizItem[] = [
       'أَلستَ طالباً؟ — بلى أنا طالبٌ\nAren\'t you a student? — Yes I am, I\'m a student',
       'هل أنتَ طالبٌ؟ — نعم أنا طالبٌ\nAre you a student? — Yes, I am a student',
       'أَلَمْ تحضرْ الدرسَ؟ — بلى، حضرتُه\nDidn\'t you attend the lesson? — Yes I did, I attended it',
-      'أَلستَ مخطئاً؟ — نعم، أنا مخطئٌ\nIncorrect: the speaker asserts he IS mistaken, contradicting the negation, so بلى is needed, not نعم',
+      'أَلستَ مخطئاً؟ — نعم، أنا مخطئٌ\nthe speaker asserts he IS mistaken, contradicting the negation, so بلى is needed, not نعم',
     ],
     correctIndex: 3,
     a: 'الحوار الرابع خاطئ؛ فالمتحدث يثبت أنه مخطئ، أي يكذّب النفي الوارد في السؤال ("ألستَ مخطئاً؟")، فيجب أن يستخدم "بلى" لا "نعم": الصواب "بلى، أنا مخطئٌ".\nThe fourth exchange is wrong: the speaker is asserting that he is mistaken, which contradicts the negation in the question (ألستَ مخطئاً؟), so he must use بلى, not نعم: the correct answer is "بلى، أنا مخطئٌ."',
@@ -77,8 +77,8 @@ const quizItems: StrictQuizItem[] = [
   {
     q: 'أَلا تعرفُ الجوابَ؟ (وأنت في الحقيقة تعرفه) — الجواب الصحيح: ___، أعرفه\nأَلا تعرفُ الجوابَ؟ ("Don\'t you know the answer?") — and you actually do know it — the correct answer: ___, أعرفه',
     options: [
-      'بلى\nbalā — contradicts the negation, asserts the opposite (correct here)',
-      'نعم\nnaʿam — confirms the negation as worded (wrong here)',
+      'بلى\nbalā — contradicts the negation, asserts the opposite',
+      'نعم\nnaʿam — confirms the negation as worded',
       'لا\nlā — "no" (not the answer word for this context)',
       'ربما\nrubbamā — "maybe" (not a valid answer word for a yes/no negative question)',
     ],

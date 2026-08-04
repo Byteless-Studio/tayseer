@@ -33,10 +33,10 @@ const quizItems: StrictQuizItem[] = [
   {
     q: 'أيّ الأفعال التالية كُتبت بخطأ في نوع الهمزة؟\nWhich of the following verbs has an error in the type of hamza used?',
     options: [
-      'اكتبْ\nuktub — "write!" (correctly begins with همزة وصل)',
-      'اجلسْ\nijlis — "sit!" (correctly begins with همزة وصل)',
-      'أكرمْ\nakrim — "honor!" (correctly begins with همزة قطع, from quadriliteral أكرم)',
-      'إذهبْ\nIncorrect: should be اذهبْ with همزة وصل, not إذهبْ with همزة قطع',
+      'اكتبْ\nuktub — "write!" (begins with همزة وصل)',
+      'اجلسْ\nijlis — "sit!" (begins with همزة وصل)',
+      'أكرمْ\nakrim — "honor!" (begins with همزة قطع, from أكرم)',
+      'إذهبْ\nshould be اذهبْ with همزة وصل, not إذهبْ with همزة قطع',
     ],
     correctIndex: 3,
     a: 'الكلمة الرابعة خطأ: "اذهب" أمر من الفعل الثلاثي "ذهب"، فهمزته همزة وصل تُكتب ألفاً بلا رأس همزة (ا)، فكتابتها "إذهبْ" بهمزة قطع تحتها خطأ إملائي شائع؛ أما "أكرمْ" فأمرها من الرباعي "أكرم" الذي همزته قطع أصلاً.\nThe fourth word is wrong: اذهب is the imperative of the triliteral verb ذهب, so its hamza is a همزة وصل, written as a bare alif with no hamza mark (ا). Writing it as إذهبْ with a همزة قطع (hamza under the alif) is a common spelling mistake. أكرمْ, however, is the imperative of the quadriliteral أكرم, whose hamza is genuinely a همزة قطع.',
@@ -91,7 +91,7 @@ const quizItems: StrictQuizItem[] = [
       'ذهبَ الطالبُ إلى المدرسةِ\nThe student went to school',
       'اكتبْ درسَك بخط واضح\nWrite your lesson in clear handwriting',
       'هذا ابنُ عمّي\nThis is my cousin (my paternal uncle\'s son)',
-      'قرأتُ الكتابَ في المدرسه\nIncorrect: المدرسه should end in تاء مربوطة (المدرسةِ), not هاء',
+      'قرأتُ الكتابَ في المدرسه\nالمدرسه should end in تاء مربوطة (المدرسةِ), not هاء',
     ],
     correctIndex: 3,
     a: 'الجملة الرابعة بها خطأ إملائي: يجب أن تُكتب "المدرسةِ" بتاء مربوطة لا هاء؛ فالهاء تمثل النطق الوقفي فقط ولا تُستخدم في الكتابة المتصلة بالجملة.\nThe fourth sentence has a spelling error: المدرسةِ must be written with تاء مربوطة, not هاء. The هاء only represents the pause pronunciation and is never used in writing when connected within a sentence.',

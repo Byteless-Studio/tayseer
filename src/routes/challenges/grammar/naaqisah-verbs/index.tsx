@@ -22,10 +22,10 @@ const quizItems: StrictQuizItem[] = [
   {
     q: 'أكمل: كانَ الجوُّ ___ (جميلاً، خبر كان منصوب)\nComplete: كانَ الجوُّ ___ (جميلاً, the accusative خبر of كان)',
     options: [
-      'جميلٌ\njamīlun (nominative — wrong)',
-      'جميلاً\njamīlan (accusative — correct)',
-      'جميلٍ\njamīlin (genitive — wrong)',
-      'جميلُ\njamīlu (no tanwīn — wrong)',
+      'جميلٌ\njamīlun (nominative',
+      'جميلاً\njamīlan (accusative',
+      'جميلٍ\njamīlin (genitive',
+      'جميلُ\njamīlu (no tanwīn',
     ],
     correctIndex: 1,
     a: 'خبر "كان" منصوب دائماً: "كانَ الجوُّ جميلاً" — "الجوُّ" اسم كان مرفوع، و"جميلاً" خبرها منصوب.\nThe خبر of كان is always منصوب: كانَ الجوُّ جميلاً ("The weather was beautiful") — الجوُّ is اسم كان, مرفوع, and جميلاً is خبرها, منصوب.',
@@ -44,10 +44,10 @@ const quizItems: StrictQuizItem[] = [
   {
     q: 'أي من هذه الجمل بها خطأ في تطبيق عمل "كان" وأخواتها؟\nWhich of these sentences has an error in applying the grammatical effect of كان and her sisters?',
     options: [
-      'أصبحَ الجوُّ بارداً\naṣbaḥa al-jawwu bāridan — the weather became cold (correct)',
-      'ظلَّ الطالبُ مجتهداً\nẓalla ṭ-ṭālibu mujtahidan — the student remained diligent (correct)',
-      'صارَ الماءُ جليدٌ\nṣāra al-māʾu jalīdun (as written — wrong)',
-      'باتَ الطفلُ نائماً\nbāta aṭ-ṭiflu nāʾiman — the child ended up asleep (correct)',
+      'أصبحَ الجوُّ بارداً\naṣbaḥa al-jawwu bāridan — the weather became cold',
+      'ظلَّ الطالبُ مجتهداً\nẓalla ṭ-ṭālibu mujtahidan — the student remained diligent',
+      'صارَ الماءُ جليدٌ\nṣāra al-māʾu jalīdun (as written',
+      'باتَ الطفلُ نائماً\nbāta aṭ-ṭiflu nāʾiman — the child ended up asleep',
     ],
     correctIndex: 2,
     a: '"صارَ الماءُ جليدٌ" خطأ لأن خبر "صار" (من أخوات كان) يجب أن يكون منصوباً: الصواب "صارَ الماءُ جليداً".\nصارَ الماءُ جليدٌ is wrong because the خبر of صار (one of أخوات كان) must be منصوب: the correct form is صارَ الماءُ جليداً ("The water turned into ice").',
@@ -66,10 +66,10 @@ const quizItems: StrictQuizItem[] = [
   {
     q: 'أكمل: ليس الطعامُ ___ (لذيذاً، خبر ليس منصوب)\nComplete: ليس الطعامُ ___ (لذيذاً, the accusative خبر of ليس)',
     options: [
-      'لذيذٌ\nladhīdhun (nominative — wrong)',
-      'لذيذاً\nladhīdhan (accusative — correct)',
-      'لذيذٍ\nladhīdhin (genitive — wrong)',
-      'لذيذُ\nladhīdhu (no tanwīn — wrong)',
+      'لذيذٌ\nladhīdhun (nominative',
+      'لذيذاً\nladhīdhan (accusative',
+      'لذيذٍ\nladhīdhin (genitive',
+      'لذيذُ\nladhīdhu (no tanwīn',
     ],
     correctIndex: 1,
     a: '"ليس" تعمل عمل "كان" فتنصب خبرها: "ليس الطعامُ لذيذاً" (the food is not delicious) — "الطعامُ" اسمها مرفوع و"لذيذاً" خبرها منصوب.\nليس functions like كان, making its خبر منصوب: ليس الطعامُ لذيذاً ("the food is not delicious") — الطعامُ is اسمها, مرفوع, and لذيذاً is خبرها, منصوب.',
