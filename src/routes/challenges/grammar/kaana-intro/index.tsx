@@ -2,7 +2,7 @@ import { createFileRoute, Link } from '@tanstack/react-router'
 import { QuizCarousel } from '#/components/QuizCarousel'
 import type { StrictQuizItem } from '#/routes/challenges/-quiz-types'
 
-export const Route = createFileRoute('/challenges/grammar/naaqisah-verbs/')({
+export const Route = createFileRoute('/challenges/grammar/kaana-intro/')({
   head: () => ({ meta: [{ title: 'Introducing Kāna and Her Sisters — Grammar — Tayseer' }] }),
   component: TopicPage,
 })
@@ -110,7 +110,7 @@ function TopicPage() {
             ← All grammar topics
           </Link>
           <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-3">
-            Topic 36 of 47
+            Topic 36 of 62
           </p>
           <h1 className="font-serif tracking-[-0.02em] text-3xl font-bold text-foreground leading-tight mb-3">
             <span

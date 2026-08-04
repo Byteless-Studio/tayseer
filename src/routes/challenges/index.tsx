@@ -36,7 +36,7 @@ function ChallengesPage() {
             to="/challenges/grammar"
             arabic="القواعد"
             title="Grammar — Arabic Structures"
-            description="47 topics in learning order, from demonstratives and idāfah through kāna and her sisters."
+            description="62 topics in learning order, from demonstratives and idāfah through the passive, الحال, and the accusatives."
           />
         </div>
       </div>

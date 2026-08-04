@@ -110,7 +110,7 @@ function TopicPage() {
             ← All grammar topics
           </Link>
           <p className="text-[0.7rem] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-3">
-            Topic 11 of 47
+            Topic 11 of 62
           </p>
           <h1 className="font-serif tracking-[-0.02em] text-3xl font-bold text-foreground leading-tight mb-3">
             <span

@@ -96,7 +96,7 @@ function HomePage() {
             <ToolCard
               to="/challenges"
               title="Challenges"
-              description="Reinforce what you've learned with vocabulary drills on roots and patterns, plus 47 grammar topics drawn from the Medina series."
+              description="Reinforce what you've learned with vocabulary drills on roots and patterns, plus 62 grammar topics drawn from the Medina series."
               badge=""
             />
           </div>
